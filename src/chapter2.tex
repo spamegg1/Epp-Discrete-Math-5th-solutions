@@ -1,0 +1,2253 @@
+\documentclass[14pt]{extarticle}
+
+\usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref,cancel,tcolorbox}
+\usepackage{wasysym,geometry,latexsym,parskip,bookmark,mathtools,float}
+
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\dps}{\displaystyle}
+\newcommand{\fbl}{\underline{\hspace{1cm}}\,\,}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\from}{\leftarrow}
+\newcommand{\true}{{\bf t}}
+\newcommand{\false}{{\bf c}}
+\newcommand{\bic}{\leftrightarrow}
+
+\hypersetup{colorlinks, allcolors=blue, linktoc=all}
+\geometry{a4paper}
+\geometry{margin=1.1cm}
+
+\title{Chapter 2 Solutions, Susanna Epp Discrete Math 5th Edition}
+
+\author{https://github.com/spamegg1}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section {Exercise Set 2.1}
+{\bf In each of $1-4$ represent the common form of each argument using letters to stand for component sentences, and fill in the blanks so that the argument in part (b) has the same logical form as the argument in part (a).}
+
+\subsection{Problem 1}
+\subsubsection{(a)}
+If all integers are rational, then the number 1 is rational.
+
+All integers are rational.
+
+Therefore, the number 1 is rational.
+
+\begin{proof}
+Common form: 1) If $p$ then $q$. 2) $p$. 3) Therefore, $q$.
+\end{proof}
+
+\subsubsection{(b)}
+If all algebraic expressions can be written in prefix notation, then \fbl.
+
+Therefore, $(a + 2b)(a^2 - b)$ can be written in prefix notation.
+
+\begin{proof}
+If all algebraic expressions can be written in prefix notation, then \\
+\underline{$(a + 2b)(a^2 - b)$ can be written in prefix notation.} (If $p$, then $q$.)
+
+All algebraic expressions can be written in prefix notation. ($p$.)
+
+Therefore, $(a + 2b)(a^2 - b)$ can be written in prefix notation. (Therefore, $q$.)
+\end{proof}
+
+\subsection{Problem 2}
+\subsubsection{(a)}
+If all computer programs contain errors, then this program contains an error.
+
+This program does not contain an error.
+
+Therefore, it is not the case that all computer programs contain errors.
+
+\begin{proof}
+Common form: 1) If $p$ then $q$. 2) $\sim q$. 3) Therefore, $\sim p$.
+\end{proof}
+
+\subsubsection{(b)}
+If \fbl then \fbl.
+
+$2$ is not odd.
+
+Therefore, it is not the case that all prime numbers are odd.
+
+\begin{proof}
+If \underline{all prime numbers are odd} then \underline{2 is odd}. (If $p$ then $q$.)
+
+$2$ is not odd. ($\sim q$.)
+
+Therefore, it is not the case that all prime numbers are odd.
+(Therefore, $\sim p$.)
+\end{proof}
+
+\subsection{Problem 3}
+\subsubsection{(a)}
+This number is even or this number is odd.
+
+This number is not even.
+
+Therefore, this number is odd.
+
+\begin{proof}
+Common form: 1) $p \vee q$. 2) $\sim p$. 3) Therefore, $q$.
+\end{proof}
+
+\subsubsection{(b)}
+\fbl or logic is confusing.
+
+My mind is not shot.
+
+Therefore, \fbl.
+
+\begin{proof}
+\underline{My mind is shot} or logic is confusing. ($p \vee q$.)
+
+My mind is not shot. ($\sim p$.)
+
+Therefore, \underline{logic is confusing}. (Therefore, $q$.)
+\end{proof}
+
+\subsection{Problem 4}
+\subsubsection{(a)}
+If the program syntax is faulty, then the computer will generate an error message.
+
+If the computer generates an error message, then the program will not run.
+
+Therefore, if the program syntax is faulty, then the program will not run.
+
+\begin{proof}
+Common form: 1) If $p$ then $q$. 2) If $q$ then $r$. 3) Therefore, if $p$ then $r$.
+\end{proof}
+
+\subsubsection{(b)}
+If this simple graph \fbl, then it is complete.
+
+If this graph \fbl, then any two of its vertices can be joined by a path.
+
+Therefore, if this simple graph has 4 vertices and 6 edges, then \fbl.
+
+\begin{proof}
+If this simple graph \underline{has 4 vertices and 6 edges}, then it is complete.
+
+If this graph \underline{is complete}, then any two of its vertices can be joined by a path.
+
+Therefore, if this simple graph has 4 vertices and 6 edges, then
+\underline{any two of its vertices} \underline{can be joined by a path}.
+\end{proof}
+
+\subsection{Problem 5}
+Indicate which of the following sentences are statements.
+
+\subsubsection{(a)}
+1,024 is the smallest four-digit number that is a perfect square.
+
+\begin{proof}
+It is a statement because it is a true sentence. 1,024 is a perfect square because $1,024 = 32^2$, and the next smaller perfect square is $31^2 = 961$, which has fewer than four digits.
+\end{proof}
+
+\subsubsection{(b)}
+She is a mathematics major.
+
+\begin{proof}
+It is not a statement because its truth value depends on the ``She''. (Here ``She'' can be thought of as a variable, like $x$.)
+\end{proof}
+
+\subsubsection{(c)}
+$128 = 2^6$
+
+\begin{proof}
+It is a statement because it is false: $2^6 = 64 \neq 128$.
+\end{proof}
+
+\subsubsection{(d)}
+$x = 2^6$
+
+\begin{proof}
+Not a statement, because its truth depends on the value of $x$.
+\end{proof}
+
+{\bf Write the statements in $6-9$ in symbolic form using the symbols $\sim$, $\vee$ and $\wedge$ and the indicated letters to represent component statements.}
+
+\subsection{Problem 6}
+Let $s =$ “stocks are increasing” and $i =$ “interest rates are steady.”
+
+\subsubsection{(a)}
+Stocks are increasing but interest rates are steady.
+
+\begin{proof}
+$s \wedge i$.
+
+(Notice that the ``but'' makes it sound like there should be a
+negation involved, but that's just a quirk of English. In this case, ``but'' has the same meaning as ``and''.
+
+We have an intuitive expectation that there should be some ``causal link'' between stocks and interest rates, like: ``stocks are increasing, that should affect interest rates'', so if the interest rates are remaining steady, it's as if they are remaining steady DESPITE the fact that stocks are increasing, hence the ``but'' being used.)
+\end{proof}
+
+\subsubsection{(b)}
+Neither are stocks increasing nor are interest rates steady.
+
+\begin{proof}
+${\sim s} \wedge {\sim i}$.
+
+(Another quirk of English: when ``neither nor'' is used, even though ``nor'' sounds like there should be an OR involved, it's actually AND and negation.)
+\end{proof}
+
+\subsection{Problem 7}
+Juan is a math major but not a computer science major. ($m =$ “Juan is a math major,” $c =$ “Juan is a computer science major”)
+
+\begin{proof}
+$m \wedge {\sim c}$
+\end{proof}
+
+\subsection{Problem 8}
+Let $h =$ “John is healthy,” $w =$ “John is wealthy,” and
+$s =$ “John is wise.”
+
+\subsubsection{(a)}
+John is healthy and wealthy but not wise.
+
+\begin{proof}
+$h \wedge w \wedge {\sim s}$.
+\end{proof}
+
+\subsubsection{(b)}
+John is not wealthy but he is healthy and wise.
+
+\begin{proof}
+${\sim w} \wedge h \wedge s$.
+\end{proof}
+
+\subsubsection{(c)}
+John is neither healthy, wealthy, nor wise.
+
+\begin{proof}
+${\sim h} \wedge {\sim w} \wedge {\sim s}$.
+\end{proof}
+
+\subsubsection{(d)}
+John is neither wealthy nor wise, but he is healthy.
+
+\begin{proof}
+$({\sim w} \wedge {\sim s}) \wedge h$.
+\end{proof}
+
+\subsubsection{(e)}
+John is wealthy, but he is not both healthy and wise.
+
+\begin{proof}
+$w \wedge {\sim (h \wedge s)}$.
+\end{proof}
+
+\subsection{Problem 9}
+Let $p =$ “$x > 5$,” $q =$ “$x = 5$,” and $r =$ “$10 > x$.”
+
+\subsubsection{(a)}
+$x \geq 5$
+
+\begin{proof}
+$x \geq 5$ means $x > 5$ or $x = 5$. So: $p \vee q$.
+\end{proof}
+
+\subsubsection{(b)}
+$10 > x > 5$
+
+\begin{proof}
+$10 > x > 5$ means $10 > x$ and $x > 5$. So: $r \wedge p$.
+\end{proof}
+
+\subsubsection{(c)}
+$10 > x \geq 5$
+
+\begin{proof}
+$10 > x \geq 5$ means $10 > x$ and $x \geq 5$, i.e. $10 > x$ and
+($x > 5$ or $x = 5$).
+
+So: $r \wedge (p \vee q)$.
+\end{proof}
+
+\subsection{Problem 10}
+Let $p$ be the statement “DATAENDFLAG is off,” $q$ the statement “ERROR equals 0,” and $r$ the statement “SUM is less than 1,000.” Express the following sentences in symbolic notation.
+
+\subsubsection{(a)}
+DATAENDFLAG is off, ERROR equals 0, and SUM is less than 1,000.
+
+\begin{proof}
+$p \wedge q \wedge r$.
+\end{proof}
+
+\subsubsection{(b)}
+DATAENDFLAG is off but ERROR is not equal to 0.
+
+\begin{proof}
+$p \wedge {\sim q}$.
+\end{proof}
+
+\subsubsection{(c)}
+DATAENDFLAG is off; however, ERROR is not 0 or SUM is greater than or equal to 1,000.
+
+\begin{proof}
+$p \wedge ({\sim q} \vee {\sim r})$.
+\end{proof}
+
+\subsubsection{(d)}
+DATAENDFLAG is on and ERROR equals 0 but SUM is greater than or equal to 1,000.
+
+\begin{proof}
+${\sim p} \wedge q \wedge {\sim r}$.
+\end{proof}
+
+\subsubsection{(e)}
+Either DATAENDFLAG is on or it is the case that both ERROR equals 0 and SUM is less than 1,000.
+
+\begin{proof}
+${\sim p} \vee (q \wedge r)$.
+\end{proof}
+
+\subsection{Problem 11}
+In the following sentence, is the word ``or'' used in its inclusive or exclusive sense? A team wins the playoffs if it wins two games in a row or a total of three games.
+
+\begin{proof}
+Inclusive or. For instance, a team could win the playoff by winning games 1, 3, and 4 and losing game 2. Such an outcome would satisfy both conditions.
+\end{proof}
+
+{\bf Write truth tables for the statement forms in $12-15$.}
+
+\subsection{Problem 12}
+${\sim p} \wedge q$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & {\sim p} & {\sim p} \wedge q \\
+\hline
+T & T & F & F \\
+\hline
+T & F & F & F \\
+\hline
+F & T & T & T \\
+\hline
+F & F & T & F \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 13}
+${\sim(p \wedge q)} \vee (p \vee q)$
+
+\begin{proof}
+This is a tautology:
+$$
+\begin{array}{|cc|c|c|c|c|c|}
+\hline
+p & q & p \wedge q & {\sim (p \wedge q)} & p \vee q & {\sim(p \wedge q)} \vee
+(p \vee q) \\
+\hline
+T & T & T & F & T & T \\
+\hline
+T & F & F & T & T & T \\
+\hline
+F & T & F & T & T & T \\
+\hline
+F & F & F & T & F & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 14}
+$p \wedge (q \wedge r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|}
+\hline
+p & q & r & p \wedge q \wedge r \\
+\hline
+T & T & T & T \\
+\hline
+T & T & F & F \\
+\hline
+T & F & T & F \\
+\hline
+T & F & F & F \\
+\hline
+F & T & T & F \\
+\hline
+F & T & F & F \\
+\hline
+F & F & T & F \\
+\hline
+F & F & F & F \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 15}
+$p \wedge ({\sim q} \vee r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|}
+\hline
+p & q & r & {\sim q} \vee r & p \wedge ({\sim q} \vee r) \\
+\hline
+T & T & T & T & T \\
+\hline
+T & T & F & F & F \\
+\hline
+T & F & T & T & T \\
+\hline
+T & F & F & T & T \\
+\hline
+F & T & T & T & F \\
+\hline
+F & T & F & F & F \\
+\hline
+F & F & T & T & F \\
+\hline
+F & F & F & T & F \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+{\bf Determine whether the statement forms in $16-24$ are logically equivalent. In each case, construct a truth table and include a sentence justifying your answer. Your sentence should show that you understand the meaning of logical equivalence.}
+
+\subsection{Problem 16}
+$p \vee (p \wedge q)$ and $p$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & p \wedge q & p \vee (p \wedge q) \\
+\hline
+T & T & T & T \\
+\hline
+T & F & F & T \\
+\hline
+F & T & F & F \\
+\hline
+F & F & F & F \\
+\hline
+\end{array}
+$$
+
+$p \vee (p \wedge q)$ and $p$ always have the same truth values, so they are logically equivalent. (This proves one of the absorption laws.)
+\end{proof}
+
+\subsection{Problem 17}
+${\sim(p \wedge q)}$ and ${\sim p} \wedge {\sim q}$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & {\sim(p \wedge q)} & {\sim p} \wedge {\sim q} \\
+\hline
+T & T & F & F \\
+\hline
+T & F & T & F \\
+\hline
+F & T & T & F \\
+\hline
+F & F & T & T \\
+\hline
+\end{array}
+$$
+Not logically equivalent. When $p = T$ and $q = F$ we have
+
+${\sim (p \wedge q)} \equiv {\sim (T \wedge F)} \equiv {\sim F} \equiv T$, but
+
+${\sim p} \wedge {\sim q} \equiv {\sim T \wedge {\sim F}} \equiv
+F \wedge T \equiv F$.
+\end{proof}
+
+\subsection{Problem 18}
+$p \vee \true$ and \true
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|}
+\hline
+p & \true & p \vee \true \\
+\hline
+T & T & T \\
+\hline
+F & T & T \\
+\hline
+\end{array}
+$$
+
+$\true$ and $p \vee \true$ always have the same truth values, so they are logically equivalent. (This proves one of the universal bound laws.)
+
+\end{proof}
+
+\subsection{Problem 19}
+$p \wedge \true$ and $p$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|}
+\hline
+p & \true & p \wedge \true \\
+\hline
+T & T & T \\
+\hline
+F & T & F \\
+\hline
+\end{array}
+$$
+
+$p \wedge \true$ and $p$ always have the same truth values, so they are logically equivalent.
+\end{proof}
+
+\subsection{Problem 20}
+$p \wedge \false$ and $p \vee \false$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & \false & p \wedge \false & p \vee \false \\
+\hline
+T & F & F & T \\
+\hline
+F & F & F & F \\
+\hline
+\end{array}
+$$
+
+$p \wedge \false$ and $p \vee \false$ are not logically equivalent.
+\end{proof}
+
+\subsection{Problem 21}
+$(p \wedge q) \wedge r$ and $p \wedge (q \wedge r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|}
+\hline
+p & q & r & p \wedge q & q \wedge r & (p \wedge q) \wedge r &
+p \wedge (q \wedge r) \\
+\hline
+T & T & T & T & T & T & T \\
+\hline
+T & T & F & T & F & F & F \\
+\hline
+T & F & T & F & F & F & F \\
+\hline
+T & F & F & F & F & F & F \\
+\hline
+F & T & T & F & T & F & F \\
+\hline
+F & T & F & F & F & F & F \\
+\hline
+F & F & T & T & F & F & F \\
+\hline
+F & F & F & F & F & F & F \\
+\hline
+\end{array}
+$$
+
+$(p \wedge q) \wedge r$ and $p \wedge (q \wedge r)$ always have the same truth values, so they are logically equivalent. (This proves the associative law for $\wedge$.)
+\end{proof}
+
+\subsection{Problem 22}
+$p \wedge (q \vee r)$ and $(p \wedge q) \vee (p \wedge r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|c|}
+\hline
+p & q & r & p \wedge q & p \wedge r & q \vee r & p \wedge (q \vee r) &
+(p \wedge q) \vee (p \wedge r) \\
+\hline
+T & T & T & T & T & T & T & T \\
+\hline
+T & T & F & T & F & T & T & T \\
+\hline
+T & F & T & F & T & T & T & T \\
+\hline
+T & F & F & F & F & F & F & F \\
+\hline
+F & T & T & F & F & T & F & F \\
+\hline
+F & T & F & F & F & T & F & F \\
+\hline
+F & F & T & F & F & T & F & F \\
+\hline
+F & F & F & F & F & F & F & F \\
+\hline
+\end{array}
+$$
+
+$p \wedge (q \vee r)$ and $(p \wedge q) \vee (p \wedge r)$ always have the same truth values, so they are logically equivalent. (This proves one of the distributive laws for $\wedge$.)
+\end{proof}
+
+\subsection{Problem 23}
+$(p \wedge q) \vee r$ and $p \wedge (q \vee r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|}
+\hline
+p & q & r & p \wedge q & q \vee r & (p \wedge q) \vee r & p \wedge (q \vee r)
+\\\hline
+T & T & T & T & T & T & T \\
+\hline
+T & T & F & T & T & T & T \\
+\hline
+T & F & T & F & T & T & T \\
+\hline
+T & F & F & F & F & F & F \\
+\hline
+F & T & T & F & T & T & F \\
+\hline
+F & T & F & F & T & F & F \\
+\hline
+F & F & T & F & T & T & F \\
+\hline
+F & F & F & F & F & F & F \\
+\hline
+\end{array}
+$$
+
+$(p \wedge q) \vee r$ and $p \wedge (q \vee r)$ have different truth values in the fifth and seventh rows, so they are not logically equivalent. (This proves that parentheses are needed with $\wedge$ and $\vee$.)
+\end{proof}
+
+\subsection{Problem 24}
+$(p \vee q) \vee (p \wedge r)$ and $(p \vee q) \wedge r$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|}
+\hline
+p & q & r & p \vee q & p \wedge r & (p \vee q) \vee (p \wedge r) &
+(p \vee q) \wedge r \\
+\hline
+T & T & T & T & T & T & T \\
+\hline
+T & T & F & T & F & T & F \\
+\hline
+T & F & T & T & T & T & T \\
+\hline
+T & F & F & T & F & T & F \\
+\hline
+F & T & T & T & F & T & T \\
+\hline
+F & T & F & T & F & T & F \\
+\hline
+F & F & T & F & F & F & F \\
+\hline
+F & F & F & F & F & F & F \\
+\hline
+\end{array}
+$$
+
+$(p \vee q) \vee (p \wedge r)$ and $(p \vee q) \wedge r$ have different truth values in the fifth and seventh rows, so they are not logically equivalent.
+\end{proof}
+
+{\bf Use De Morgan’s laws to write negations for the statements in $25-30$.}
+
+\subsection{Problem 25}
+Hal is a math major and Hal’s sister is a computer science major.
+
+\begin{proof}
+$p =$ Hal is a math major, $q =$ Hal’s sister is a computer science major
+
+The statement is $p \wedge q$. By De Morgan's laws, the negation is $\sim(p \wedge q) \equiv {\sim p} \vee {\sim q}$:
+
+Hal is not a math major, or Hal's sister is not a computer science major.
+\end{proof}
+
+\subsection{Problem 26}
+Sam is an orange belt and Kate is a red belt.
+
+\begin{proof}
+$p =$ Sam is an orange belt, $q =$ Kate is a red belt.
+
+The statement is $p \wedge q$. By De Morgan's laws, the negation is $\sim(p \wedge q) \equiv {\sim p} \vee {\sim q}$:
+
+Sam is not an orange belt, or Kate is not a red belt.
+\end{proof}
+
+\subsection{Problem 27}
+The connector is loose or the machine is unplugged.
+
+\begin{proof}
+$p =$ The connector is loose, $q =$ the machine is unplugged.
+
+The statement is $p \vee q$. By De Morgan's laws, the negation is $\sim(p \vee q) \equiv {\sim p} \wedge {\sim q}$:
+
+The connector is not loose and the machine is not unplugged.
+\end{proof}
+
+\subsection{Problem 28}
+The train is late or my watch is fast.
+
+\begin{proof}
+$p =$ The train is late, $q =$ my watch is fast.
+
+The statement is $p \vee q$. By De Morgan's laws, the negation is $\sim(p \vee q) \equiv {\sim p} \wedge {\sim q}$:
+
+The train is not late and my watch is not fast.
+\end{proof}
+
+\subsection{Problem 29}
+This computer program has a logical error in the first ten lines or it is being run with an incomplete data set.
+
+\begin{proof}
+$p =$ This computer program has a logical error in the first ten lines,
+
+$q =$ it (this computer) is being run with an incomplete data set.
+
+The statement is $p \vee q$. By De Morgan's laws, the negation is $\sim(p \vee q) \equiv {\sim p} \wedge {\sim q}$:
+
+This computer program does not have a logical error in the first ten lines and it is not being run with an incomplete data set.
+\end{proof}
+
+\subsection{Problem 30}
+The dollar is at an all-time high and the stock market is at a record low.
+
+\begin{proof}
+$p =$ The dollar is at an all-time high, $q =$ the stock market is at a record low.
+
+The statement is $p \wedge q$. By De Morgan's laws, the negation is $\sim(p \wedge q) \equiv {\sim p} \vee {\sim q}$:
+
+The dollar is not at an all-time high or the stock market is not at a record low.
+\end{proof}
+
+\subsection{Problem 31}
+Let $s$ be a string of length $2$ with characters from $\{0, 1, 2\}$, and define statements $a, b, c$, and $d$ as follows:
+
+\begin{itemize}
+\item $a = $ ``the first character of $s$ is $0$''
+\item $b = $ ``the first character of $s$ is $1$''
+\item $c = $ ``the second character of $s$ is $1$''
+\item $d = $ ``the second character of $s$ is $2$''
+\end{itemize}
+
+Describe the set of all strings for which each of the following is true.
+
+(Here are all the possible length 2 strings: 00, 01, 02, 10, 11, 12, 20, 21, 22)
+
+\subsubsection{(a)}
+$(a \vee b) \wedge (c \vee d)$
+
+\begin{proof}
+This translates to: ``the first character is 0 or 1, and the second character is1 or 2''. So the answer is: 01, 02, 11, 12
+\end{proof}
+
+\subsubsection{(b)}
+$({\sim(a \vee b)}) \wedge (c \vee d)$
+
+\begin{proof}
+This translates to: ``the first character is not 0 or 1, and the second character is 1 or 2''. So the answer is: 21, 22
+\end{proof}
+
+\subsubsection{(c)}
+$(({\sim a}) \vee b) \wedge (c \vee ({\sim d}))$
+
+\begin{proof}
+This translates to: ``the first character is not 0 or it is 1, and the second character is 1 or is not 2''.
+
+So the first character can be 1 or 2, and the second character can be 0 or 1.
+
+So the answer is: 10, 11, 20, 21
+\end{proof}
+
+{\bf Assume $x$ is a particular real number and use De Morgan’s laws to write negations for the statements in $32-37$.}
+
+\subsection{Problem 32}
+$-2 < x < 7$
+
+\begin{proof}
+This is $(-2 < x) \wedge (x < 7)$. Keep in mind that the negation of $<$ is $\geq$. By De Morgan, the negation is
+
+$\sim((-2 < x) \wedge (x < 7)) \equiv {\sim(-2 < x)} \vee {\sim(x < 7)} \equiv (-2 \geq x) \vee (x \geq 7)$
+
+The answer is: $-2 \geq x$ or $x \geq 7$.
+\end{proof}
+
+\subsection{Problem 33}
+$-10 < x < 2$
+
+\begin{proof}
+Similar to 32, the answer is: $-10 \geq x$ or $x \geq 2$.
+\end{proof}
+
+\subsection{Problem 34}
+$x < 2$ or $x > 5$
+
+\begin{proof}
+The negation of $>$ is $\leq$. By De Morgan, the negation is:
+
+${\sim(x < 2 \vee x > 5)} \equiv {\sim (x < 2)} \wedge {\sim (x > 5)} \equiv (x \geq 2) \wedge (x \leq 5)$
+
+The answer is: $2 \leq x \leq 5$.
+\end{proof}
+
+\subsection{Problem 35}
+$x \leq -1$ or $x > 1$
+
+\begin{proof}
+Similar to 34. The answer is: $-1 < x \leq 1$.
+\end{proof}
+
+\subsection{Problem 36}
+$1 > x \geq -3$
+
+\begin{proof}
+Rewriting this as $-3 \leq x < 1$, we see that it is similar to 32 and 33.
+
+The answer is: $-3 > x$ or $x \geq 1$. In other words: $1 \leq x$ or $x < -3$.
+\end{proof}
+
+\subsection{Problem 37}
+$0 > x \geq -7$
+
+\begin{proof}
+This is just like 36. The answer is: $0 \leq x$ or $x < -7$.
+\end{proof}
+
+{\bf In 38 and 39, imagine that {\it num\_orders} and {\it num\_instock} are particular values, such as might occur during execution of a computer program. Write negations for the following statements.}
+
+\subsection{Problem 38}
+$(num\_orders > 100$ and $num\_instock \leq 500)$ or $num\_instock < 200$
+
+\begin{proof}
+This statement’s logical form is $(p \wedge q) \vee r$, so its negation has the form
+
+$$
+{\sim((p \wedge q) \vee r)} \equiv {\sim (p \wedge q)} \wedge {\sim r}
+\equiv ({\sim p} \vee {\sim q}) \wedge {\sim r}
+$$
+
+Thus a negation for the statement is:
+
+$(num\_orders \leq 100$ or $num\_instock > 500)$ and $num\_instock \geq 200$.
+\end{proof}
+
+\subsection{Problem 39}
+$(num\_orders < 50$ and $num\_instock > 300)$ or
+
+$(50 \leq num\_orders < 75$ and $num\_instock > 500)$
+
+\begin{proof}
+This statement’s logical form is $(p \wedge q) \vee ({\sim p} \wedge r \wedge s)$, so its negation has the form
+
+$$
+{\sim((p \wedge q) \vee ({\sim p} \wedge r \wedge s))} \equiv
+{\sim(p \wedge q)} \wedge {\sim({\sim p} \wedge r \wedge s)} \equiv
+({\sim p} \vee {\sim q}) \wedge (p \vee {\sim r} \vee {\sim s})
+$$
+
+Thus a negation for the statement is:
+
+$(num\_orders \geq 50$ or $num\_instock \leq 300)$ and
+
+($num\_orders < 50$ or $num\_orders \geq 75$ or $num\_instock \leq 500$).
+\end{proof}
+
+{\bf Use truth tables to establish which of the statement forms in $40-43$ are tautologies and which are contradictions.}
+
+\subsection{Problem 40}
+$(p \wedge q) \vee ({\sim p} \vee (p \wedge {\sim q}))$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|c|c|c|}
+\hline
+p & q & {\sim p} & {\sim q} & p \wedge q & p \wedge {\sim q} &
+{\sim p} \vee (p \wedge {\sim q}) &
+(p \wedge q) \vee ({\sim p} \vee (p \wedge {\sim q})) \\
+\hline
+T & T & F & F & T & F & F & T \\
+\hline
+T & F & F & T & F & T & T & T \\
+\hline
+F & T & T & F & F & F & T & T \\
+\hline
+F & F & T & T & F & F & T & T \\
+\hline
+\end{array}
+$$
+We see that $(p \wedge q) \vee ({\sim p} \vee (p \wedge {\sim q}))$ is a tautology.
+\end{proof}
+
+\subsection{Problem 41}
+$(p \wedge {\sim q}) \wedge ({\sim p} \vee q))$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|c|c|}
+\hline
+p & q & {\sim p} & {\sim q} & p \wedge {\sim q} & {\sim p} \vee q &
+(p \wedge {\sim q}) \wedge ({\sim p} \vee q) \\
+\hline
+T & T & F & F & F & T & F  \\
+\hline
+T & F & F & T & T & F & F  \\
+\hline
+F & T & T & F & F & T & F  \\
+\hline
+F & F & T & T & F & T & F  \\
+\hline
+\end{array}
+$$
+\end{proof}
+$(p \wedge {\sim q}) \wedge ({\sim p} \vee q)$ is always false, so it is a contradiction.
+
+
+\subsection{Problem 42}
+$(({\sim p} \wedge q) \wedge (q \wedge r))) \wedge {\sim q}$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|}
+\hline
+p & q & r & {\sim p} \vee q & q \wedge r & ({\sim p} \vee q) \wedge (q \wedge
+r)& (({\sim p} \wedge q) \wedge (q \wedge r))) \wedge {\sim q} \\
+\hline
+T & T & T & T & T & T & F \\
+\hline
+T & T & F & T & F & F & F \\
+\hline
+T & F & T & F & F & F & F \\
+\hline
+T & F & F & F & F & F & F \\
+\hline
+F & T & T & T & T & T & F \\
+\hline
+F & T & F & T & F & F & F \\
+\hline
+F & F & T & T & F & F & F \\
+\hline
+F & F & F & T & F & F & F \\
+\hline
+\end{array}
+$$
+$(({\sim p} \wedge q) \wedge (q \wedge r))) \wedge {\sim q}$ is a contradiction.
+
+\end{proof}
+
+\subsection{Problem 43}
+$({\sim p} \vee q) \vee (p \wedge {\sim q})$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|c|c|}
+\hline
+p & q & {\sim p} & {\sim q} & {\sim p} \vee q & p \wedge {\sim q} &
+({\sim p} \vee q) \vee (p \wedge {\sim q}) \\
+\hline
+T & T & F & F & T & F & T \\
+\hline
+T & F & F & T & F & T & T \\
+\hline
+F & T & T & F & T & F & T \\
+\hline
+F & F & T & T & T & F & T \\
+\hline
+\end{array}
+$$
+We see that $({\sim p} \vee q) \vee (p \wedge {\sim q})$ is a tautology.
+\end{proof}
+
+\subsection{Problem 44}
+Recall that $a < x < b$ means that $a < x$ and $x < b$. Also $a \leq b$ means that $a < b$ or $a = b$. Find all real numbers $x$ that satisfy the following inequalities.
+
+\subsubsection{(a)}
+$2 < x \leq 0$
+
+\begin{proof}
+No real numbers satisfy this inequality. If $x > 2$ then $x > 2 > 0$ so $x > 0$.Therefore $x \leq 0$ cannot be true at the same time.
+\end{proof}
+
+\subsubsection{(b)}
+$1 \leq x < -1$
+
+\begin{proof}
+Similar to (a). no real numbers satisfy this inequality.
+\end{proof}
+
+\subsection{Problem 45}
+Determine whether the statements in (a) and (b) are logically equivalent.
+
+(a)
+Bob is both a math and computer science major and Ann is a math major, but Ann is not both a math and computer science major.
+
+(b)
+It is not the case that both Bob and Ann are both math and computer science majors, but it is the case that Ann is a math major and Bob is both a math and computer science major.
+
+\begin{proof}
+Define
+\begin{enumerate}
+\item $p$: Bob is a math major.
+\item $q$: Bob is a CS major.
+\item $r$: Ann is a math major.
+\item $s$: Ann is a CS major.
+\end{enumerate}
+
+The statement in (a) has the form:
+$(p \wedge q \wedge r) \wedge {\sim (r \wedge s)}$
+
+The statement in (b) has the form:
+${\sim (p \wedge q \wedge r \wedge s)} \wedge (r \wedge p \wedge q)$
+
+We could write down the entire truth table with $2^4 = 16$ rows, but let's try to take some shortcuts.
+
+If we look at the two expressions, they both have the form
+$(p \wedge q \wedge r) \wedge Z$. Such an expression is true when $(p \wedge q \wedge r)$ and $Z$ are both true, and it is false otherwise.
+
+Therefore, when evaluating $Z$, we can concentrate only on the rows of the truth table where $(p \wedge q \wedge r)$ is true. We can disregard $Z$ on the other rows (because both (a) and (b) are false for those rows).
+
+$(p \wedge q \wedge r)$ is true only when all 3 of $p, q, r$ are true. When this is the case, we only need to consider the possibilities for $s$. This gives us 2 rows only:
+$$
+\begin{array}{|c|c|c|}
+\hline
+s & {\sim (r \wedge s)} & {\sim (p \wedge q \wedge r \wedge s)} \\
+\hline
+T & F & F \\
+\hline
+F & T & T \\
+\hline
+\end{array}
+$$
+
+The two $Z$ expressions have the same truth values in all cases. Therefore (a) and (b) are logically equivalent.
+\end{proof}
+
+\subsection{Problem 46}
+Let the symbol $\oplus$ denote {\it exclusive or}; so $p \oplus q \equiv (p \vee q) \wedge {\sim(p \wedge q)}$. Hence the truth table for $p \oplus q$ is as follows:
+
+\begin{center}
+\begin{tabular}{|cc|c|}
+\hline
+$p$ & $q$ & $p \oplus q$ \\
+\hline
+T & T & F \\
+\hline
+T & F & T \\
+\hline
+F & T & T \\
+\hline
+F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{(a)}
+Find simpler statement forms that are logically equivalent to $p \oplus p$ and $(p \oplus p) \oplus p$.
+
+\begin{proof}
+The meaning of the exclusive or $\oplus$ is that, it returns true when the two operands have different truth values; otherwise it returns false.
+
+In $p \oplus p$, the two operands $p$ and $p$ always have the same truth value. Therefore $p \oplus p$ is a contradiction: $p \oplus p \equiv \false$.
+
+So we have $(p \oplus p) \oplus p \equiv \false \oplus p$. This is true only when $p$ and $\false$ have different truth values, in other words, when $p$ is true. Therefore $\false \oplus p$ is logically equivalent to $p$.
+\end{proof}
+
+\subsubsection{(b)}
+Is $(p \oplus q) \oplus r \equiv p \oplus (q \oplus r)$? Justify your answer.
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|}
+\hline
+p & q & r & p \oplus q & q \oplus r & (p \oplus q) \oplus r & 
+p \oplus (q \oplus r) \\
+\hline
+T & T & T & F & F & T & T \\
+\hline
+T & T & F & F & T & F & F \\
+\hline
+T & F & T & T & T & F & F \\
+\hline
+T & F & F & T & F & T & T \\
+\hline
+F & T & T & T & F & F & F \\
+\hline
+F & T & F & T & T & T & T \\
+\hline
+F & F & T & F & T & T & T \\
+\hline
+F & F & F & F & F & F & F \\
+\hline
+\end{array}
+$$
+They are logically equivalent.
+\end{proof}
+
+\subsubsection{(c)}
+Is $(p \oplus q) \wedge r \equiv (p \wedge r) \oplus (q \wedge r)$? Justify your answer.
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|c|}
+\hline
+p & q & r & p \oplus q & p \wedge r & q \wedge r & 
+(p \oplus q) \wedge r & (p \wedge r) \oplus (q \wedge r) \\
+\hline
+T & T & T & F & T & T & F & T \\
+\hline
+T & T & F & F & F & F & F & T \\
+\hline
+T & F & T & T & T & F & T & T \\
+\hline
+T & F & F & T & F & F & F & T \\
+\hline
+F & T & T & T & F & T & T & F \\
+\hline
+F & T & F & T & F & F & F & F \\
+\hline
+F & F & T & F & F & F & F & F \\
+\hline
+F & F & F & F & F & F & F & F \\
+\hline
+\end{array}
+$$
+They are NOT logically equivalent.
+\end{proof}
+
+\subsection{Problem 47}
+In logic and in standard English, a double negative is equivalent to a positive.There is one fairly common English usage in which a “double positive” is equivalent to a negative. What is it? Can you think of others?
+
+\begin{proof}
+There is a famous story about a philosopher who once gave a talk in which he observed that whereas in English and many other languages a double negative is equivalent to a positive, there is no language in which a double positive is equivalent to a negative. To this, another philosopher, Sidney Morgenbesser,
+responded sarcastically, “Yeah, yeah.”
+
+{\it [Strictly speaking, sarcasm functions like negation. When spoken sarcastically, the words “Yeah, yeah” are not a true double positive; they just mean “no.”]}
+\end{proof}
+
+In 48 and 49 below, a logical equivalence is derived from Theorem 2.1.1. Supply a reason for each step.
+
+\subsection{Problem 48}
+$$
+\begin{array}{rcll}
+(p \wedge {\sim q}) \vee (p \wedge q) & \equiv & 
+ p \wedge ({\sim q} \vee q) & \text{by (a)} \\
+& \equiv & p \wedge (q \vee {\sim q}) & \text{by (b)} \\
+& \equiv & p \wedge \true & \text{by (c)} \\
+& \equiv & p & \text{by (d)} \\
+\end{array}
+$$
+
+Therefore, $(p \wedge {\sim q}) \vee (p \wedge q) \equiv p$.
+
+\begin{proof}
+(a) is the distributive law. (b) is the commutative law for $\vee$. (c) is the negation law for $\vee$. (d) is the identity law for $\wedge$.
+\end{proof}
+
+\subsection{Problem 49}
+$$
+\begin{array}{rcll}
+(p \vee {\sim q}) \wedge ({\sim p} \vee {\sim q}) & \equiv &
+({\sim q} \vee p) \wedge ({\sim q} \vee {\sim p}) & \text{by (a)} \\
+& \equiv & {\sim q} \vee (p \wedge {\sim p}) & \text{by (b)} \\
+& \equiv & {\sim q} \vee \false & \text{by (c)} \\
+& \equiv & {\sim q} & \text{by (d)} \\
+\end{array}
+$$
+
+Therefore, $(p \vee {\sim q}) \wedge ({\sim p} \vee {\sim q}) \equiv {\sim q}$.
+
+\begin{proof}
+(a) is the commutative law for $\vee$. (b) is the distributive law. (c) is the negation law for $\wedge$. (d) is the identity law for $\vee$.
+\end{proof}
+
+{\bf Use Theorem 2.1.1 to verify the logical equivalences in $50-54$. Supply a reason for each step.}
+
+\subsection{Problem 50}
+$(p \wedge {\sim q}) \vee p \equiv p$
+
+\begin{proof}
+$(p \wedge {\sim q}) \vee p$
+
+\begin{tabular}{rclr}
+ & $\equiv$ & $p \vee (p \wedge {\sim q})$ & (by the commutative law for $\vee$) \\
+ & $\equiv$ & $p$ & (by the absorption law for $\vee$) \\
+\end{tabular}
+\end{proof}
+
+\subsection{Problem 51}
+$p \wedge ({\sim q} \vee p) \equiv p$
+
+\begin{proof}
+$p \wedge ({\sim q} \vee p)$
+
+\begin{tabular}{rclr}
+ & $\equiv$ & $p \wedge (p \vee {\sim q})$ & (by the commutative law for $\vee$) \\
+ & $\equiv$ & $p$ & (by the absorption law for $\wedge$) \\
+\end{tabular}
+\end{proof}
+
+\subsection{Problem 52}
+${\sim (p \vee {\sim q})} \vee ({\sim p} \wedge {\sim q}) \equiv {\sim p}$
+
+\begin{proof}
+${\sim (p \vee {\sim q})} \vee ({\sim p} \wedge {\sim q})$ 
+
+\begin{tabular}{rcll}
+ & $\equiv$ & $({\sim p} \wedge q) \vee ({\sim p} \wedge {\sim q})$ & (by De Morgan laws) \\
+ & $\equiv$ & ${\sim p} \wedge (q \vee {\sim q})$ & (by distributive law for $\wedge$) \\
+ & $\equiv$ & ${\sim p} \wedge \true$ & (by negation law for $\vee$) \\
+ & $\equiv$ & ${\sim p}$ & (by identity law for $\wedge$) \\
+\end{tabular}
+\end{proof}
+
+\subsection{Problem 53}
+$\sim(({\sim p} \wedge q) \vee ({\sim p} \wedge {\sim q})) \vee (p \wedge q) \equiv p$
+
+\begin{proof}
+$\sim(({\sim p} \wedge q) \vee ({\sim p} \wedge {\sim q})) \vee (p \wedge q)$
+
+\begin{tabular}{rcll}
+ & $\equiv$ & $\sim({\sim p} \wedge (q \vee {\sim q})) \vee (p \wedge q)$ & (by the distributive law) \\
+ & $\equiv$ & $\sim({\sim p} \wedge \true) \vee (p \wedge q)$ &
+(by the negation law for $\vee$) \\
+ & $\equiv$ & $\sim({\sim p}) \vee (p \wedge q)$ & (by the identity law for $\vee$) \\
+ & $\equiv$ & $p \vee (p \wedge q)$ & (by the double negative law) \\
+ & $\equiv$ & $p$ & (by the absorption law) \\
+\end{tabular}
+\end{proof}
+
+\subsection{Problem 54}
+$(p \wedge ({\sim ({\sim p} \vee q)})) \vee (p \wedge q) \equiv p$
+
+\begin{proof}
+$(p \wedge ({\sim ({\sim p} \vee q)})) \vee (p \wedge q)$
+
+\begin{tabular}{rcll}
+ & $\equiv$ & 
+$(p \wedge (p \wedge {\sim q})) \vee (p \wedge q)$ & (by De Morgan law) \\
+ & $\equiv$ & $((p \wedge p) \wedge {\sim q}) \vee (p \wedge q)$ & (by the associative law) \\
+ & $\equiv$ & $(p \wedge {\sim q}) \vee (p \wedge q)$ & (by the idempotent law) \\
+ & $\equiv$ & $p \wedge ({\sim q} \vee q)$ & (by the distributive law) \\
+ & $\equiv$ & $p \wedge \true$ & (by the negation law) \\
+ & $\equiv$ & $p$ & (by the identity law) \\
+\end{tabular}
+\end{proof}
+
+\section{Exercise Set 2.2}
+{\bf Rewrite the statements in $1-4$ in if-then form.}
+
+\subsection{Problem 1}
+This loop will repeat exactly $N$ times if it does not contain a stop or a go to.
+
+\begin{proof}
+If this loop does not contain a stop or a go to, then it will repeat exactly $N$ times.
+\end{proof}
+
+\subsection{Problem 2}
+I am on time for work if I catch the 8:05 bus.
+
+\begin{proof}
+If I catch the 8:05 bus then I am on time for work.
+\end{proof}
+
+\subsection{Problem 3}
+Freeze or I’ll shoot.
+
+\begin{proof}
+If you do not freeze, then I’ll shoot.
+\end{proof}
+
+\subsection{Problem 4}
+Fix my ceiling or I won’t pay my rent.
+
+\begin{proof}
+If you do not fix my ceiling then I won't pay my rent.
+\end{proof}
+
+{\bf Construct truth tables for the statement forms in $5-11$.}
+
+\subsection{Problem 5}
+${\sim p} \vee q \to {\sim q}$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|c|}
+\hline
+p & q & {\sim p} & {\sim q} & {\sim p} \vee q & {\sim p} \vee q \to {\sim q} \\
+\hline
+T & T & F & F & T & F \\
+\hline
+T & F & F & T & F & T \\
+\hline
+F & T & T & F & T & F \\
+\hline
+F & F & T & T & T & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 6}
+$(p \vee q) \vee ({\sim p} \wedge q) \to q$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|c|c|}
+\hline
+p & q & {\sim p} & p \vee q & {\sim p} \wedge q & (p \vee q) \vee ({\sim p} \wedge q) & (p \vee q) \vee ({\sim p} \wedge q) \to q \\
+\hline
+T & T & F & T & F & T & T \\
+\hline
+T & F & F & T & F & T & F \\
+\hline
+F & T & T & T & T & T & T \\
+\hline
+F & F & T & F & F & F & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 7}
+$p \wedge {\sim q} \to r$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|}
+\hline
+p & q & r & {\sim q} & p \wedge {\sim q} & p \wedge {\sim q} \to r \\
+\hline
+T & T & T & F & F & T \\
+\hline
+T & T & F & F & F & T \\
+\hline
+T & F & T & T & T & T \\
+\hline
+T & F & F & T & T & F \\
+\hline
+F & T & T & F & F & T \\
+\hline
+F & T & F & F & F & T \\
+\hline
+F & F & T & T & F & T \\
+\hline
+F & F & F & T & F & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 8}
+${\sim p} \vee q \to r$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|}
+\hline
+p & q & r & {\sim p} & {\sim p} \vee q & {\sim p} \vee q \to r \\
+\hline
+T & T & T & F & T & T \\
+\hline
+T & T & F & F & T & F \\
+\hline
+T & F & T & F & F & T \\
+\hline
+T & F & F & F & F & T \\
+\hline
+F & T & T & T & T & T \\
+\hline
+F & T & F & T & T & F \\
+\hline
+F & F & T & T & T & T \\
+\hline
+F & F & F & T & T & F \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 9}
+$p \wedge {\sim r} \bic q \vee r$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|c|}
+\hline
+p & q & r & {\sim r} & p \wedge {\sim r} & q \vee r & p \wedge {\sim r} \bic q \vee r \\
+\hline
+T & T & T & F & F & T & F \\
+\hline
+T & T & F & T & T & T & T \\
+\hline
+T & F & T & F & F & T & F \\
+\hline
+T & F & F & T & T & F & F \\
+\hline
+F & T & T & F & F & T & F \\
+\hline
+F & T & F & T & F & T & F \\
+\hline
+F & F & T & F & F & T & F \\
+\hline
+F & F & F & T & F & F & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 10}
+$(p \to r) \bic (q \to r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|}
+\hline
+p & q & r & p \to r & q \to r & (p \to r) \bic (q \to r) \\
+\hline
+T & T & T & T & T & T \\
+\hline
+T & T & F & F & F & T \\
+\hline
+T & F & T & T & T & T \\
+\hline
+T & F & F & F & T & F \\
+\hline
+F & T & T & T & T & T \\
+\hline
+F & T & F & T & F & F \\
+\hline
+F & F & T & T & T & T \\
+\hline
+F & F & F & T & T & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 11}
+$(p \to (q \to r)) \bic ((p \wedge q) \to r)$
+
+\begin{proof}
+$$
+\begin{array}{|ccc|c|c|c|}
+\hline
+p & q & r & p \to r & q \to r & (p \to r) \bic (q \to r) \\
+\hline
+T & T & T & T & T & T \\
+\hline
+T & T & F & F & F & T \\
+\hline
+T & F & T & T & T & T \\
+\hline
+T & F & F & F & T & F \\
+\hline
+F & T & T & T & T & T \\
+\hline
+F & T & F & T & F & F \\
+\hline
+F & F & T & T & T & T \\
+\hline
+F & F & F & T & T & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 12}
+Use the logical equivalence established in Example 2.2.3, $p \vee q \to r \equiv (p \to r) \wedge (q \to r)$, to rewrite the following statement. (Assume that $x$ represents a fixed real number.)
+
+\begin{center}
+If $x > 2$ or $x < -2$ then $x^2 > 4$.
+\end{center}
+
+\begin{proof}
+If $x > 2$ then $x^2 > 4$, and if $x < -2$ then $x^2 < 4$.
+\end{proof}
+
+\subsection{Problem 13}
+Use truth tables to verify the following logical equivalences. Include a few words of explanation with your answers.
+
+\subsubsection{(a)}
+$p \to q \equiv {\sim p} \vee q$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|}
+\hline
+p & q & {\sim p} & p \to q & {\sim p} \vee q \\
+\hline
+T & T & F & T & T \\
+\hline
+T & F & F & F & F \\
+\hline
+F & T & T & T & T \\
+\hline
+F & F & T & T & T \\
+\hline
+\end{array}
+$$
+$p \to q$ and ${\sim p} \vee q$ always have the same truth values, therefore they are logically equivalent.
+\end{proof}
+
+\subsubsection{(b)}
+${\sim (p \to q)} \equiv p \wedge {\sim q}$
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|c|}
+\hline
+p & q & {\sim q} & {\sim (p \to q)} & p \wedge {\sim q} \\
+\hline
+T & T & F & F & F \\
+\hline
+T & F & T & T & T \\
+\hline
+F & T & F & F & F \\
+\hline
+F & F & T & F & F \\
+\hline
+\end{array}
+$$
+${\sim (p \to q)}$ and $p \wedge {\sim q}$ always have the same truth values, therefore they are logically equivalent.
+\end{proof}
+
+\subsection{Problem 14}
+\subsubsection{(a)}
+Show that the following statement forms are all logically equivalent:
+
+$p \to q \vee r$, \,\,\, $p \wedge {\sim q} \to r$, and $p \wedge {\sim r} \to q$
+
+\begin{proof}
+Repeatedly using the fact that $A \to B \equiv {\sim A} \vee B$, De Morgan laws and the double negation law:
+
+$p \to q \vee r \equiv {\sim p} \vee (q \vee r)$.
+
+$p \wedge {\sim q} \to r \equiv {\sim (p \wedge {\sim q}) \vee r} \equiv ({\sim p} \vee {\sim {\sim q}}) \vee r \equiv ({\sim p} \vee q) \vee r$.
+
+$p \wedge {\sim r} \to q \equiv {\sim (p \wedge {\sim r}) \vee q} \equiv ({\sim p} \vee {\sim {\sim r}}) \vee q \equiv ({\sim p} \vee r) \vee q$ .
+
+These three are equivalent by the commutative and associative laws for $\vee$.
+\end{proof}
+
+\subsubsection{(b)}
+Use the logical equivalences established in part (a) to rewrite the following sentence in two different ways. (Assume that $n$ represents a fixed integer.)
+
+\begin{center}
+If $n$ is prime, then $n$ is odd or $n$ is 2.
+\end{center}
+
+\begin{proof}
+Here $p$: ``$n$ is prime'', $q$: ``$n$ is odd'', $r$: ``$n$ is 2''.
+
+So the statement is $p \to q \vee r$.
+
+By part (a) this is equivalent to both $p \wedge {\sim q} \to r$ and to $p \wedge {\sim r} \to q$:
+
+If $n$ is prime and $n$ is not odd, then $n$ is 2.
+
+If $n$ is prime and $n$ is not 2, then $n$ is odd.
+\end{proof}
+
+\subsection{Problem 15}
+Determine whether the following statement forms are logically equivalent:
+
+$p \to (q \to r)$ and $(p \to q) \to r$
+
+\begin{proof}
+No. When all three are false, we have
+
+$p \to (q \to r) \equiv F \to (F \to F) \equiv F \to T \equiv T$
+
+however, we have $(p \to q) \to r \equiv (F \to F) \to F \equiv T \to F \equiv F$.
+\end{proof}
+
+{\bf In 16 and 17, write each of the two statements in symbolic form and determine whether they are logically equivalent. Include a truth table and a few words of explanation to show that you understand what it means for statements to be logically equivalent.}
+
+\subsection{Problem 16}
+If you paid full price, you didn’t buy it at Crown Books. You didn’t buy it at Crown Books or you paid full price.
+
+\begin{proof}
+Let $p$ represent “You paid full price” and $q$ represent “You didn’t buy it at Crown Books.” Thus, “If you paid full price, you didn’t buy it at Crown Books” has the form $p \to q$. And “You didn’t buy it at Crown Books or you paid full price” has the form $q \vee p$.
+
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & p \to q & q \vee p \\
+\hline
+T & T & T & T \\
+\hline
+T & F & F & T \\
+\hline
+F & T & T & T \\
+\hline
+F & F & T & F \\
+\hline
+\end{array}
+$$
+
+These two statements are not logically equivalent because their forms have different truth values in rows 2 and 4.
+
+(An alternative representation for the forms of the two statements is $p \to {\sim q}$ and ${\sim q} \vee p$. In this case, the truth values differ in rows 1 and 3.)
+\end{proof}
+
+\subsection{Problem 17}
+If 2 is a factor of $n$ and 3 is a factor of $n$, then 6 is a factor of $n$. 2 is not a factor of $n$ or 3 is not a factor of $n$ or 6 is a factor of $n$.
+
+\begin{proof}
+Let $p$ represent “2 is a factor of $n$” and $q$ represent “3 is a factor of $n$” and $r$ represent ``6 is a factor of $n$''. 
+
+So the two statements have the forms: $p \wedge q \to r$ and ${\sim p} \vee {\sim q} \vee r$.
+
+$$
+\begin{array}{|ccc|c|c|c|}
+\hline
+p & q & r & p \wedge q & p \wedge q \to r & {\sim p} \vee {\sim q} \vee r \\
+\hline
+T & T & T & T & T & T \\
+\hline
+T & T & F & T & F & F \\
+\hline
+T & F & T & F & T & T \\
+\hline
+T & F & F & F & T & T \\
+\hline
+F & T & T & F & T & T \\
+\hline
+F & T & F & F & T & T \\
+\hline
+F & F & T & F & T & T \\
+\hline
+F & F & F & F & T & T \\
+\hline
+\end{array}
+$$
+
+These two statements are logically equivalent. We can also see this without the truth table: $p \wedge q \to r \equiv {\sim (p \wedge q)} \vee r \equiv ({\sim p} \vee {\sim q}) \vee r$. Here we used $A \to B \equiv {\sim A} \vee B$ and De Morgan laws.
+\end{proof}
+
+\subsection{Problem 18}
+Write each of the following three statements in symbolic form and determine which pairs are logically equivalent. Include truth tables and a few words of explanation.
+
+If it walks like a duck and it talks like a duck, then it is a duck.
+
+Either it does not walk like a duck or it does not talk like a duck, or it is a duck.
+
+If it does not walk like a duck and it does not talk like a duck, then it is not a duck.
+
+\begin{proof}
+They are: $p \wedge q \to r$ and ${\sim p} \vee {\sim q} \vee r$ and ${\sim p} \wedge {\sim q} \to {\sim r}$.
+
+The first two are equivalent by Problem 17. The last is not equivalent to the first two: when $p$ is true, $q$ is true and $r$ is false, we have 
+
+$p \wedge q \to r \equiv T \wedge T \to F \equiv T \to F \equiv F$, but 
+
+${\sim p} \wedge {\sim q} \to {\sim r} \equiv F \wedge F \to T \equiv F \to T \equiv T$.
+\end{proof}
+
+\subsection{Problem 19}
+True or false? The negation of “If Sue is Luiz’s mother, then Ali is his cousin” is “If Sue is Luiz’s mother, then Ali is not his cousin.”
+
+\begin{proof}
+False. The negation of an if-then statement is not an if-then statement. It is an and statement.
+\end{proof}
+
+\subsection{Problem 20}
+Write negations for each of the following statements. (Assume that all variables represent fixed quantities or entities, as appropriate.)
+
+\subsubsection{(a)}
+If $P$ is a square, then $P$ is a rectangle.
+
+\begin{proof}
+$P$ is a square and $P$ is not a rectangle.
+\end{proof}
+
+\subsubsection{(b)}
+If today is New Year’s Eve, then tomorrow is January.
+
+\begin{proof}
+Today is New Year’s Eve and tomorrow is not January.
+\end{proof}
+
+\subsubsection{(c)}
+If the decimal expansion of $r$ is terminating, then $r$ is rational.
+
+\begin{proof}
+The decimal expansion of $r$ is terminating and $r$ is not rational.
+\end{proof}
+
+\subsubsection{(d)}
+If $n$ is prime, then $n$ is odd or $n$ is 2.
+
+\begin{proof}
+$n$ is prime and both $n$ is not odd and $n$ is not 2. Or: $n$ is prime and $n$ is neither odd nor 2.
+\end{proof}
+
+\subsubsection{(e)}
+If $x$ is nonnegative, then $x$ is positive or $x$ is 0.
+
+\begin{proof}
+$x$ is nonnegative and $x$ is not positive and $x$ is not 0.
+\end{proof}
+
+\subsubsection{(f)}
+If Tom is Ann’s father, then Jim is her uncle and Sue is her aunt.
+
+\begin{proof}
+Tom is Ann’s father and either Jim is not her uncle or Sue is not her aunt.
+\end{proof}
+
+\subsubsection{(g)}
+If $n$ is divisible by 6, then $n$ is divisible by 2 and $n$ is divisible by 3.
+
+\begin{proof}
+$n$ is divisible by 6 and, either $n$ is not divisible by 2 or $n$ is not divisible by 3.
+\end{proof}
+
+\subsection{Problem 21}
+Suppose that $p$ and $q$ are statements so that $p \to q$ is false. Find the truth values of each of the following:
+
+\subsubsection{(a)}
+${\sim p} \to q$
+
+\begin{proof}
+Because $p \to q$ is false, $p$ is true and $q$ is false. Hence ${\sim p}$ is false, and so ${\sim p} \to q$ is true.
+\end{proof}
+
+\subsubsection{(b)}
+$p \vee q$
+
+\begin{proof}
+Again, $p$ is true and $q$ is false. So $p \vee q$ is true.
+\end{proof}
+
+\subsubsection{(c)}
+$q \to p$
+
+\begin{proof}
+Again, $p$ is true and $q$ is false. So $q \to p$ is true.
+\end{proof}
+
+\subsection{Problem 22}
+Write contrapositives for the statements of exercise 20.
+
+\begin{proof}
+(a) If $P$ is not a rectangle, then $P$ is not a square.
+
+(b) If tomorrow is not January, then today is not New Year’s Eve.
+
+(c) If $r$ is not rational, then the decimal expansion of $r$ is not terminating.
+
+(d) If $n$ is not odd and $n$ is not 2, then $n$ is not prime.
+
+(e) If $x$ is not positive and $x$ is not 0, then $x$ is not nonnegative.
+
+(f) If either Jim is not Ann’s uncle or Sue is not her aunt, then Tom is not her father.
+
+(g) If $n$ is not divisible by 2 or $n$ is not divisible by 3, then $n$ is not divisible by 6.
+\end{proof}
+
+\subsection{Problem 23}
+Write the converse and inverse for each statement of exercise 20.
+
+\begin{proof}
+(a) Converse: If $P$ is a rectangle, then $P$ is a square.
+
+Inverse: If $P$ is not a square, then $P$ is not a rectangle.
+
+(b) Converse: If tomorrow is January, then today is New Year’s Eve.
+
+Inverse: If today is not New Year’s Eve, then tomorrow is not January.
+
+(c) Converse: If $r$ is rational, then the decimal expansion of $r$ is terminating.
+
+Inverse: If the decimal expansion of $r$ is not terminating, then $r$ is not rational.
+
+(d) Converse: If $n$ is odd or $n$ is 2, then $n$ is prime.
+
+Inverse: If $n$ is not prime, then $n$ is not odd and $n$ is not 2.	
+
+(e) Converse: If $x$ is positive or $x$ is 0, then $x$ is nonnegative.
+
+Inverse: If $x$ is not nonnegative, then $x$ is not positive and $x$ is not 0.
+
+(f) Converse: If Jim is Ann’s uncle and Sue is her aunt, then Tom is her father.
+
+Inverse: If Tom is not Ann’s father, then Jim is not her uncle or Sue is not her aunt.
+
+(g) Converse: If $n$ is divisible by 2 and $n$ is divisible by 3, then $n$ is divisible by 6.
+
+Inverse: If $n$ is not divisible by 6, then $n$ is not divisible by 2 or $n$ is not divisible by 3.
+\end{proof}
+
+{\bf Use truth tables to establish the truth of each statement
+in $24-27$.}
+
+\subsection{Problem 24}
+A conditional statement is not logically equivalent to its converse.
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & p \to q & q \to p \\
+\hline
+T & T & T & T \\
+\hline
+T & F & F & T \\
+\hline
+F & T & T & F \\
+\hline
+F & F & T & T \\
+\hline
+\end{array}
+$$
+They have different truth values in the second and third rows, so they are not logically equivalent.
+\end{proof}
+
+\subsection{Problem 25}
+A conditional statement is not logically equivalent to its inverse.
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & p \to q & {\sim p} \to {\sim q} \\
+\hline
+T & T & T & T \\
+\hline
+T & F & F & T \\
+\hline
+F & T & T & F \\
+\hline
+F & F & T & T \\
+\hline
+\end{array}
+$$
+They have different truth values in the second and third rows, so they are not logically equivalent.
+\end{proof}
+
+\subsection{Problem 26}
+A conditional statement and its contrapositive are logically equivalent to each other.
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & p \to q & {\sim q} \to {\sim p} \\
+\hline
+T & T & T & T \\
+\hline
+T & F & F & F \\
+\hline
+F & T & T & T \\
+\hline
+F & F & T & T \\
+\hline
+\end{array}
+$$
+They have the same truth values, so they are logically equivalent.
+\end{proof}
+
+\subsection{Problem 27}
+The converse and inverse of a conditional statement are logically equivalent to each other.
+
+\begin{proof}
+$$
+\begin{array}{|cc|c|c|}
+\hline
+p & q & q \to p & {\sim p} \to {\sim q} \\
+\hline
+T & T & T & T \\
+\hline
+T & F & T & T \\
+\hline
+F & T & F & F \\
+\hline
+F & F & T & T \\
+\hline
+\end{array}
+$$
+They have the same truth values, so they are logically equivalent.
+\end{proof}
+
+\subsection{Problem 28}
+“Do you mean that you think you can find out the answer to it?” said the March Hare.
+
+“Exactly so,” said Alice.
+
+“Then you should say what you mean,” the March Hare went on.
+
+“I do,” Alice hastily replied; “at least—at least I mean what I say—that’s the same thing, you know.”
+
+“Not the same thing a bit!” said the Hatter.
+
+“Why, you might just as well say that ‘I see what I eat’ is the same thing as ‘I eat what I see’!”
+
+—from “A Mad Tea-Party” in Alice in Wonderland, by Lewis Carroll
+
+The Hatter is right. “I say what I mean” is not the same thing as “I mean what I say.” Rewrite each of these two sentences in if-then form and explain the logical relation between them. (This exercise is referred to in the introduction to Chapter 4.)
+
+\begin{proof}
+“I say what I mean” is: ``If I believe $X$ is true, then I will say it.'' (I won't hide it, stay quiet, or say something else; I will speak precisely about my belief in $X$.)
+
+“I mean what I say” is: ``If I say that $X$ is true, then I believe it.'' (I don't say ``$X$ is true'' as a lie. I genuinely, sincerely believe that $X$ is true.)
+
+They are converses of each other, therefore not logically equivalent.
+\end{proof}
+
+{\bf If statement forms $P$ and $Q$ are logically equivalent, then $P \bic Q$ is a tautology. Conversely, if $P \bic Q$ is a tautology, then $P$ and $Q$ are logically equivalent. Use $\bic$ to convert each of the logical equivalences in $29-31$ to a tautology. Then use a truth table to verify each tautology.}
+
+\subsection{Problem 29}
+$p \to (q \vee r) \equiv (p \wedge {\sim q}) \to r$
+
+\begin{proof}
+The tautology is $(p \to (q \vee r)) \bic ((p \wedge {\sim q}) \to r)$.
+$$
+\begin{array}{|ccc|c|c|c|c|c|c|}
+\hline
+p & q & r &  q \vee r & p \wedge {\sim q} & p \to (q \vee r) & p \wedge {\sim q} \to r & (p \to (q \vee r)) \bic ((p \wedge {\sim q}) \to r) \\
+\hline
+T & T & T & T & F & T & T & T \\
+\hline
+T & T & F & T & F & T & T & T \\
+\hline
+T & F & T & T & T & T & T & T \\
+\hline
+T & F & F & F & T & F & F & T \\
+\hline
+F & T & T & T & F & T & T & T \\
+\hline
+F & T & F & T & F & T & T & T \\
+\hline
+F & F & T & T & F & T & T & T \\
+\hline
+F & F & F & F & F & T & T & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 30}
+$p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$
+
+\begin{proof}
+The tautology is $Z: (p \wedge (q \vee r)) \bic ((p \wedge q) \vee (p \wedge r))$. (It's abbreviated in the truth table below, because it does not fit the screen.)
+$$
+\begin{array}{|ccc|c|c|c|c|c|c|}
+\hline
+p & q & r & q \vee r & p \wedge q & p \wedge r & p \wedge (q \vee r) & (p \wedge q) \vee (p \wedge r) & Z \\
+\hline
+T & T & T & T & T & T & T & T & T \\
+\hline
+T & T & F & T & T & F & T & T & T \\
+\hline
+T & F & T & T & F & T & T & T & T \\
+\hline
+T & F & F & F & F & F & F & F & T \\
+\hline
+F & T & T & T & F & F & F & F & T \\
+\hline
+F & T & F & T & F & F & F & F & T \\
+\hline
+F & F & T & T & F & F & F & F & T \\
+\hline
+F & F & F & F & F & F & F & F & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 31}
+$p \to (q \to r) \equiv (p \wedge q) \to r$
+
+\begin{proof}
+The tautology is $(p \to (q \to r)) \bic ((p \wedge q) \to r)$.
+$$
+\begin{array}{|ccc|c|c|c|c|c|}
+\hline
+p & q & r & q \to r & p \wedge q & p \to (q \to r) & (p \wedge q) \to r & (p \to (q \to r)) \bic ((p \wedge q) \to r) \\
+\hline
+T & T & T & T & T & T & T & T \\
+\hline
+T & T & F & F & T & F & F & T \\
+\hline
+T & F & T & T & F & T & T & T \\
+\hline
+T & F & F & T & F & T & T & T \\
+\hline
+F & T & T & T & F & T & T & T \\
+\hline
+F & T & F & F & F & T & T & T \\
+\hline
+F & F & T & T & F & T & T & T \\
+\hline
+F & F & F & T & F & T & T & T \\
+\hline
+\end{array}
+$$
+\end{proof}
+
+{\bf Rewrite each of the statements in 32 and 33 as a conjunction of two if-then statements.}
+
+\subsection{Problem 32}
+This quadratic equation has two distinct real roots if, and only if, its discriminant is greater than zero.
+
+\begin{proof}
+If this quadratic equation has two distinct real roots then its discriminant is greater than zero, and, if the discriminant of this quadratic equation is greater than zero then it has two distinct real roots.
+\end{proof}
+
+\subsection{Problem 33}
+This integer is even if, and only if, it equals twice some integer.
+
+\begin{proof}
+If this integer is even then it equals twice some integer, and, if this integer equals twice some integer then it is even.
+\end{proof}
+
+{\bf Rewrite the statements in 34 and 35 in if-then form in two ways, one of which is the contrapositive of the other. Use the formal definition of “only if.”}
+
+\subsection{Problem 34}
+The Cubs will win the pennant only if they win tomorrow’s game.
+
+\begin{proof}
+If the Cubs win the pennant, then they will have won tomorrow’s game.
+
+If the Cubs don't win tomorrow's game, then they won't win the pennant.
+\end{proof}
+
+\subsection{Problem 35}
+Sam will be allowed on Signe’s racing boat only if he is an expert sailor.
+
+\begin{proof}
+If Sam is be allowed on Signe’s racing boat, then he is an expert sailor.
+
+If Sam is not an expert sailor, then he won't be allowed on Signe’s racing boat.
+\end{proof}
+
+\subsection{Problem 36}
+Taking the long view on your education, you go to the Prestige Corporation and ask what you should do in college to be hired when you graduate. The personnel director replies that you will be hired only if you major in mathematics or computer science, get a B average or better, and take accounting. You do, in fact, become a math major, get a B+ average, and take accounting. You return to Prestige Corporation, make a formal application, and are turned down. Did the personnel director lie to you?
+
+\begin{proof}
+``you will be hired only if you major in mathematics or computer science, get a B average or better, and take accounting'' can be written as:
+
+If you are hired, then you must have majored in mathematics or computer science, gotten a B average or better, and taken accounting.
+
+This means that the ``then ...'' portion of the statement is a necessary condition for being hired, but it's not a sufficient condition. They didn't lie to you.
+\end{proof}
+
+{\bf Some programming languages use statements of the form
+“$r$ unless $s$” to mean that as long as $s$ does not happen,
+then $r$ will happen. More formally:}
+
+\begin{tcolorbox}[colframe=cyan,colback=white]
+\begin{defn}
+If $r$ and $s$ are statements,
+\begin{center}
+{\bf r unless s} means if ${\sim s}$ then $r$.
+\end{center}
+\end{defn}
+\end{tcolorbox}
+
+{\bf In $37-39$, rewrite the statements in if-then form.}
+
+\subsection{Problem 37}
+Payment will be made on fifth unless a new hearing is granted.
+
+\begin{proof}
+If a new hearing is not granted, payment will be made on the fifth.
+\end{proof}
+
+\subsection{Problem 38}
+Ann will go unless it rains.
+
+\begin{proof}
+It if does not rain, Ann will go.
+\end{proof}
+
+\subsection{Problem 39}
+This door will not open unless a security code is entered.
+
+\begin{proof}
+If a security code is not entered, this door will not open.
+\end{proof}
+
+{\bf Rewrite the statements in 40 and 41 in if-then form.}
+
+\subsection{Problem 40}
+Catching the 8:05 bus is a sufficient condition for my being on time for work.
+
+\begin{proof}
+If I catch the 8:05 bus, then I am on time for work.
+\end{proof}
+
+\subsection{Problem 41}
+Having two 45° angles is a sufficient condition for this triangle to be a right triangle.
+
+\begin{proof}
+If this triangle has two 45° angles, then it is a right triangle.
+\end{proof}
+
+{\bf Use the contrapositive to rewrite the statements in 42 and 43 in if-then form in two ways.}
+
+\subsection{Problem 42}
+Being divisible by 3 is a necessary condition for this number to be divisible by 9.
+
+\begin{proof}
+If this number is not divisible by 3, then it is not
+divisible by 9.
+
+If this number is divisible by 9, then it is divisible by 3.
+\end{proof}
+
+\subsection{Problem 43}
+Doing homework regularly is a necessary condition for Jim to pass the course.
+
+\begin{proof}
+If Jim does not do his homework regularly, he will not pass the course.
+
+If Jim passes course, then he must have done his homework regularly.
+\end{proof}
+
+{\bf Note that “a sufficient condition for $s$ is $r$” means $r$
+is a sufficient condition for $s$ and that “a necessary condition for $s$ is $r$” means $r$ is a necessary condition for $s$. Rewrite the statements in 44 and 45 in if-then form.}
+
+\subsection{Problem 44}
+A sufficient condition for Jon’s team to win the championship is that it win the rest of its games.
+
+\begin{proof}
+If Jon’s team wins the rest of its games, then it will win the championship.
+\end{proof}
+
+\subsection{Problem 45}
+A necessary condition for this computer program to be correct is that it not produce error messages during translation.
+
+\begin{proof}
+If this computer program is correct, then it does not produce error messages during translation.
+\end{proof}
+
+\subsection{Problem 46}
+“If compound $X$ is boiling, then its temperature must be at least 150°C.” Assuming that this statement is true, which of the following must also be true?
+
+\subsubsection{(a)}
+If the temperature of compound $X$ is at least 150°C, then compound $X$ is boiling.
+
+\begin{proof}
+This statement is the converse of the given statement, and so it is not necessarily true. For instance, if the actual boiling point of compound $X$ were 200°C, then the given statement would be true but this statement would be false.
+\end{proof}
+
+\subsubsection{(b)}
+If the temperature of compound $X$ is less than 150°C, then compound $X$ is not boiling.
+
+\begin{proof}
+This statement must be true. It is the contrapositive of the given statement.
+\end{proof}
+
+\subsubsection{(c)}
+Compound $X$ will boil only if its temperature is at least 150°C.
+
+\begin{proof}
+True. This is the same as the given statement, written differently: instead of if-then form, it's written in only if form. ``$s$ only if $r$'' means ``if $s$ then $r$.''
+\end{proof}
+
+\subsubsection{(d)}
+If compound $X$ is not boiling, then its temperature is less than 150°C.
+
+\begin{proof}
+Not necessarily true. This is the inverse of the given statement.
+\end{proof}
+
+\subsubsection{(e)}
+A necessary condition for compound X to boil is that its temperature be at least 150°C.
+
+\begin{proof}
+True, this translates to the given statement. ``A necessary condition for $s$ is $r$'' means ``if $s$ then $r$''.
+\end{proof}
+
+\subsubsection{(f)}
+A sufficient condition for compound $X$ to boil is that its temperature be at least 150°C.
+
+\begin{proof}
+``A sufficient condition for $s$ is $r$'' means ``if $r$ then $s$''. So this is equivalent to the converse of the given statement, therefore is not necessarily true. 
+\end{proof}
+
+{\bf In $47-50$ (a) use the logical equivalences $p \to q \equiv {\sim p} \vee q$ and $p \bic q \equiv ({\sim p} \vee q) \wedge ({\sim q} \vee p)$ to rewrite the given statement forms without using the symbol $\to$ or $\bic$, and (b) use the logical equivalence $p \vee q \equiv {\sim({\sim p} \wedge {\sim q})}$ to rewrite each statement form using only $\wedge$ and $\sim$.}
+
+\subsection{Problem 47}
+$p \wedge {\sim q} \to r$
+
+\begin{proof}
+(a) $p \wedge {\sim q} \to r \equiv {\sim(p \wedge {\sim q})} \vee r$
+
+(b) ${\sim(p \wedge {\sim q})} \vee r \equiv {\sim ({\sim ({\sim(p \wedge {\sim q})})} \wedge {\sim r})} \equiv {\sim (p \wedge {\sim q} \wedge {\sim r})}$
+\end{proof}
+
+\subsection{Problem 48}
+$p \vee {\sim q} \to r \vee q$
+
+\begin{proof}
+(a) $p \vee {\sim q} \to r \vee q \equiv {\sim (p \vee {\sim q})} \vee (r \vee q)$
+
+(b) 
+$$
+\begin{array}{rcl}
+{\sim (p \vee {\sim q})} \vee (r \vee q) & \equiv & {\sim ({\sim ({\sim (p \vee {\sim q})})} \wedge {\sim (r \vee q)})} \\
+& \equiv &  {\sim((p \vee {\sim q}) \wedge ({\sim r} \wedge {\sim q}))} \\
+& \equiv & {\sim({\sim ({\sim p} \wedge q)} \wedge ({\sim r} \wedge {\sim q}))} \\
+\end{array}
+$$
+\end{proof}
+
+\subsection{Problem 49}
+$(p \to r) \bic (q \to r)$
+
+\begin{proof}
+(a) $(p \to r) \bic (q \to r) \equiv ({\sim p} \vee r) \bic ({\sim q} \vee r) \equiv$
+
+$(({\sim p} \vee r) \to ({\sim q} \vee r)) \wedge (({\sim q} \vee r) \to ({\sim p} \vee r)) \equiv$
+
+$({\sim ({\sim p} \vee r)} \vee ({\sim q} \vee r)) \wedge ({\sim ({\sim q} \vee r)} \vee ({\sim p} \vee r))$
+
+(b) $({\sim ({\sim p} \vee r)} \vee ({\sim q} \vee r)) \wedge ({\sim ({\sim q} \vee r)} \vee ({\sim p} \vee r)) \equiv$
+
+${\sim (({\sim p} \vee r) \wedge {\sim ({\sim q} \vee r)})} \wedge {\sim (({\sim q} \vee r) \wedge {\sim ({\sim p} \vee r)})} \equiv$
+
+${\sim ({\sim (p \wedge {\sim r})} \wedge (q \wedge {\sim r}))} \wedge {\sim ({\sim (q \wedge {\sim r})} \wedge (p \wedge {\sim r}))}$
+\end{proof}
+
+\subsection{Problem 50}
+$(p \to (q \to r)) \bic ((p \wedge q) \to r)$
+\begin{proof}
+(a) $(p \to (q \to r)) \bic ((p \wedge q) \to r) \equiv $
+
+$[(p \to (q \to r)) \to ((p \wedge q) \to r)] \wedge [((p \wedge q) \to r) \to (p \to (q \to r))] \equiv$
+
+$[(p \to ({\sim q} \vee r)) \to ({\sim (p \wedge q)} \vee r)] \wedge [({\sim (p \wedge q)} \vee r) \to (p \to ({\sim q} \vee r))] \equiv$
+
+$[({\sim p} \vee ({\sim q} \vee r)) \to ({\sim (p \wedge q)} \vee r)] \wedge [({\sim (p \wedge q)} \vee r) \to ({\sim p} \vee ({\sim q} \vee r))] \equiv$
+
+$[{\sim ({\sim p} \vee ({\sim q} \vee r))} \vee ({\sim (p \wedge q)} \vee r)] \wedge [{\sim ({\sim (p \wedge q)} \vee r)} \vee ({\sim p} \vee ({\sim q} \vee r))]$
+
+(b) Simplifying the above with De Morgan laws, we get
+
+$\equiv [(p \wedge (q \wedge {\sim r})) \vee ({\sim (p \wedge q)} \vee r)] \wedge [((p \wedge q) \wedge {\sim r}) \vee ({\sim p} \vee ({\sim q} \vee r))]$
+
+Converting the $\vee$s we get
+
+$\equiv [(p \wedge (q \wedge {\sim r})) \vee {\sim((p \wedge q) \wedge {\sim r})}] \wedge [((p \wedge q) \wedge {\sim r}) \vee {\sim(p \wedge (q \wedge {\sim r}))}]$
+
+$\equiv \sim[{\sim (p \wedge (q \wedge {\sim r}))} \wedge ((p \wedge q) \wedge {\sim r})] \wedge \sim[{\sim ((p \wedge q) \wedge {\sim r})} \wedge (p \wedge (q \wedge {\sim r}))]$
+\end{proof}
+
+\subsection{Problem 51}
+Given any statement form, is it possible to find a logically equivalent form that uses only $\wedge$ and $\sim$? Justify your answer.
+
+\begin{proof}
+Yes. We can follow the procedure in exercises 47-50. It's always possible.
+\end{proof}
+
+\end{document}
