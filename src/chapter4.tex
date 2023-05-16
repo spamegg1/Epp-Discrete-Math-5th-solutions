@@ -19,6 +19,8 @@
 \newcommand{\bic}{\leftrightarrow}
 \newcommand{\base}[1]{{\color{cyan}#1}}
 \newcommand{\da}{\downarrow}
+\newcommand{\fa}{\forall}
+\newcommand{\te}{\exists}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -66,223 +68,454 @@ Assume that $c$ is a particular integer.
 Is $-6c$ an even integer?
 
 \begin{proof}
-
+Yes, because $-6c = 2 \cdot (-3c) = 2k$ where $k = -3c$ is an integer.
 \end{proof}
 
 \subsubsection{(b)}
 Is $8c + 5$ an odd integer?
 
 \begin{proof}
-
+Yes, because $8c + 5 = 2(4c + 2) + 1$ and $k = 4k+2$ is an integer.
 \end{proof}
 
 \subsubsection{(c)}
 Is $(c^2 + 1) - (c^2 - 1) - 2$ an even integer?
 
 \begin{proof}
-
+Yes, because it equals 0: $(c^2 + 1) - (c^2 - 1) - 2 = c^2 + 1 - c^2 + 1 - 2 = 2 - 2 = 0$.
 \end{proof}
 
 \subsection{Exercise 3}
+Assume that $m$ and $n$ are particular integers.
 
 \subsubsection{(a)}
+Is $6m + 8n$ even?
 
 \begin{proof}
-
+Yes: $6m + 8n = 2(3m + 4n)$ and $(3m + 4n)$ is an integer because $3, 4, m$, and $n$ are integers, and products and sums of integers are integers.
 \end{proof}
 
 \subsubsection{(b)}
+Is $10mn + 7$ odd?
 
 \begin{proof}
-
+Yes: $10mn + 7 = 2(5mn + 3) + 1$ and $5mn + 3$ is an integer because $3, 5, m$, and $n$ are integers, and products and sums of integers are integers.
 \end{proof}
 
 \subsubsection{(c)}
+If $m > n > 0$, is $m^2 - n^2$ composite?
 
 \begin{proof}
-
+Not necessarily. For instance, if $m = 3$ and $n = 2$, then $m^2 - n^2 = 9 - 4 = 5$, which is prime. (However, $m^2 - n^2$ is composite for many values of $m$ and $n$ because of the identity $m^2 - n^2 = (m - n)(m + n)$.)
 \end{proof}
 
 \subsection{Exercise 4}
+Assume that $r$ and $s$ are particular integers.
 
 \subsubsection{(a)}
+Is $4rs$ even?
 
 \begin{proof}
-
+Yes: $4rs = 2(2rs)$ and $2rs$ is an integer because $2, r, s$ are integers, and products of integers are integers.
 \end{proof}
 
 \subsubsection{(b)}
+Is $6r + 4s^2 + 3$ odd?
 
 \begin{proof}
-
+Yes: $6r + 4s^2 + 3 = 2(3r + 2s^2 + 1) + 1$ and $3r + 2s^2 + 1$ is an integer because $3, r, 2, s, 1$ are integers and products and sums of integers are integers.
 \end{proof}
 
 \subsubsection{(c)}
+If $r$ and $s$ are both positive, is $r^2 + 2rs + s^2$ composite?
 
 \begin{proof}
-
+Yes: $r^2 + 2rs + s^2 = (r+s)(r+s)$ and $r + s \geq 2$, therefore $r^2 + 2rs + s^2$ is a product of two integers both of which are greater than 1.
 \end{proof}
 
+{\bf \color{cyan} Prove the statements in 5–11.}
+
 \subsection{Exercise 5}
+There are integers $m$ and $n$ such that $m > 1$ and $n > 1$ and $\frac{1}{m} + \frac{1}{n}$ is an integer.
 
 \begin{proof}
-
+For example, let $m = n = 2$. Then $m$ and $n$ are integers such that $m > 1$ and $n > 1$ and $\frac{1}{m} + \frac{1}{n} = \frac{1}{2} + \frac{1}{2} = 1$ which is an integer.
 \end{proof}
 
 \subsection{Exercise 6}
+There are distinct integers $m$ and $n$ such that $\frac{1}{m} + \frac{1}{n}$ is an integer.
 
 \begin{proof}
-
+For example, let $m = 1, n = -1$. Then $m$ and $n$ are integers such that $\frac{1}{m} + \frac{1}{n} = \frac{1}{1} - \frac{1}{1} = 0$ which is an integer.
 \end{proof}
 
 \subsection{Exercise 7}
+There are real numbers $a$ and $b$ such that $\sqrt{a+b} = \sqrt{a} \sqrt{b}$.
 
 \begin{proof}
+For example, let $a = 0, b = 0$. Then $a$ and $b$ are real numbers such that 
 
+$\sqrt{a+b} = \sqrt{0+0} = 0 = \sqrt{0} + \sqrt{0} = \sqrt{a} + \sqrt{b}$.
 \end{proof}
 
 \subsection{Exercise 8}
+There is an integer $n > 5$ such that $2^n - 1$ is prime.
 
 \begin{proof}
-
+For example, let $n = 7$. Then $n$ is an integer such that
+$n > 5$ and $2^n - 1 = 127$, which is prime.
 \end{proof}
 
 \subsection{Exercise 9}
+There is a real number $x$ such that $x > 1$ and $2^x > x^{10}$.
 
 \begin{proof}
+For example, take $x = 80$. Then 
 
+$x^{10} = 80^{10} = 8^{10} \cdot 10^{10} = (2^3)^{10} \cdot 10^{10} = 2^{30} \cdot 10^{10}$.
+
+We have $2^{50} \approx 1,125899907 \cdot 10^{15} > 10^{10}$. So $2^{80} = 2^{30} \cdot 2^{50} > 2^{30} \cdot 10^{10} = 80^{10}$.
+
+Therefore $x = 80$ is a real number such that $x > 1$ and $2^x > x^{10}$.
 \end{proof}
 
+\begin{tcolorbox}[colframe=cyan]
+{\bf \color{cyan} Definition:} An integer $n$ is called a {\bf perfect square} if, and only if, $n = k^2$ for some integer $k$.
+\end{tcolorbox}
+
 \subsection{Exercise 10}
+There is a perfect square that can be written as the sum of two other perfect squares.
 
 \begin{proof}
-
+For example, 25, 9, and 16 are all perfect squares, because $25 = 5^2, 9 = 3^2$, and $16 = 4^2$, and $25 = 9 + 16$. Thus 25 is a perfect square that can be written as a sum of two other perfect squares.
 \end{proof}
 
 \subsection{Exercise 11}
+There is an integer $n$ such that $2n^2 - 5n + 2$ is prime.
 
 \begin{proof}
-
+For example, take $n = 3$. Then $2n^2 - 5n + 2 = 18 - 15 + 2 = 5$ is prime. (You can find this value of $n$ by either starting at $n = 1$ and using trial and error, or noticing that $2n^2 - 5n + 2 = (2n - 1)(n - 2)$, so, for this to be prime, one of the factors has to be 1.)
 \end{proof}
 
+{\bf \color{cyan} In $12-13$, (a) write a negation for the given statement, and (b) use a counterexample to disprove the given statement. explain how the counterexample actually shows that the given statement is false.}
+
 \subsection{Exercise 12}
+For all real numbers $a$ and $b$, if $a < b$ then $a^2 < b^2$.
 
 \begin{proof}
+a. {\it Negation for the statement:} There exist real numbers $a$ and $b$ such that $a < b$ and $a^2 \nless b^2$.
 
+b. {\it Counterexample for the statement:} Let $a = -2$ and
+$b = -1$. Then $a < b$ because $-2 < -1$, but $a^2 \nless b^2$ because $(-2)^2 = 4$ and $(-1)^2 = 1$ and $4 \nless 1$. {\it [So the hypothesis of the statement is true and its conclusion is false.]}
 \end{proof}
 
 \subsection{Exercise 13}
+For every integer $n$, if $n$ is odd then $\frac{n-1}{2}$ is odd.
 
 \begin{proof}
+a. {\it Negation for the statement:} There exists an integer $n$ such that $n$ is odd and $\frac{n-1}{2}$ is not odd.
 
+b. {\it Counterexample for the statement:} Let $n = 5$. Then $n$ is odd because $5 = 2 \cdot 2 + 1$, but $\frac{n-1}{2}$ is not odd because $\frac{5-1}{2} = 2 = 2 \cdot 1$ is even. {\it [So the hypothesis of the statement is true and its conclusion is false.]}
 \end{proof}
 
+{\bf \color{cyan} Disprove each of the statements in $14-16$ by giving a counterexample. In each case explain how the counterexample actually disproves the statement.}
+
 \subsection{Exercise 14}
+For all integers $m$ and $n$, if $2m + n$ is odd then $m$ and $n$ are both odd.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $m = 2$ and $n = 1$. Then $2m + n = 2 \cdot 2 + 1 = 5$, which is odd. But $m$ is not odd, and so it is false that both $m$ and $n$ are odd. {\it [This is one counterexample among many.]}
 \end{proof}
 
 \subsection{Exercise 15}
+For every integer $p$, if $p$ is prime then $p^2 - 1$ is even.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $p = 2$ which is prime, but $p^2 - 1 = 2^2 - 1 = 4 - 1 = 3$ is not even. {\it [This is the only counterexample! For every other prime $p$, $p^2 - 1$ is even.]}
 \end{proof}
 
 \subsection{Exercise 16}
+For every integer $n$, if $n$ is even then $n^2 + 1$ is prime.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $n = 8$. Then $n$ is even. But $n^2 + 1 = 65 = 13 \cdot 5$ is not prime. {\it [This is one counterexample among many.]}
 \end{proof}
 
+{\bf \color{cyan} In $17-20$, determine whether the property is true for all integers, true for no integers, or true for some integers and false for other integers. Justify your answers.}
+
 \subsection{Exercise 17}
+$(a+b)^2 = a^2 + b^2$
 
 \begin{proof}
-
+This property is true for some integers and false for other integers. For instance, if $a = 0$ and $b = 1$, the property is true because $(0 + 1)^2 = 0^2 + 1^2$, but if $a = 1$ and $b = 1$, the property is false because $(1 + 1)^2 = 4$ and $1^2 + 1^2 = 2$ and $4 \neq 2$.
 \end{proof}
 
 \subsection{Exercise 18}
+$\dps \frac{a}{b} + \frac{c}{d} = \frac{a+c}{b+d}$
 
 \begin{proof}
+True for some integers, false for others. For example, if $a = c = 0$ and $b = d = 1$ then $\dps \frac{0}{1} + \frac{0}{1} = 0 = \frac{0+0}{1+1}$ is true. But if $a = 1, b = 2, c = 3$ and $d = 4$ then 
 
+$\dps \frac{a}{b} + \frac{c}{d} = \frac{1}{2} + \frac{3}{4} = \frac{5}{4} \neq \frac{4}{6} = \frac{1+3}{2+4} = \frac{a+c}{b+d}$.
 \end{proof}
 
 \subsection{Exercise 19}
+$-a^n = (-a)^n$
+
+{\it Hint:} This property is true for some integers and false for other integers. To justify this answer you need to find examples of both.
 
 \begin{proof}
-
+True for some integers: let $a = 0, n = 1$. Then $-0^1 = -0 = 0$ and $(-0)^1 = 0^1 = 0$ so the equality holds. When $a = n = 2$ it is false: $-2^2 = -4$ but $(-2)^2 = 4$ and $-4 \neq 4$.
 \end{proof}
 
 \subsection{Exercise 20}
+The average of any two odd integers is odd.
 
 \begin{proof}
-
+True for some, false for others. For example, 3 and 7 are both odd, and their average $(3+7)/2 = 5$ is odd. But 3 and 5 are both odd, and their average is $(3 + 5) / 2 = 4$ is even.
 \end{proof}
 
+{\bf \color{cyan} Prove the statement in 21 and 22 by the method of exhaustion.}
+
 \subsection{Exercise 21}
+Every positive even integer less than 26 can be expressed as a sum of three of fewer perfect squares. (For instance, $10 = 1^2 + 3^2$ and $16 = 4^2$.)
 
 \begin{proof}
+$2 = 1^2 + 1^2$
 
+$4 = 2^2$
+
+$6 = 2^2 + 1^2 + 1^2$
+
+$8 = 2^2 + 2^2$
+
+$10 = 1^2 + 3^2$
+
+$12 = 2^2 + 2^2 + 2^2$
+
+$16 = 4^2$
+
+$18 = 4^2 + 1^2 + 1^2$
+
+$20 = 4^2 + 2^2$
+
+$22 = 2^2 + 2^2 + 3^2$
+
+$24 = 4^2 + 2^2 + 2^2$
 \end{proof}
 
 \subsection{Exercise 22}
+For each integer $n$ with $1 \leq n \leq 10$, $n^2 - n + 11$ is a prime number.
 
 \begin{proof}
+$1^2 - 1 + 11 = 11$ is prime.
 
+$2^2 - 2 + 11 = 13$ is prime.
+
+$3^2 - 3 + 11 = 17$ is prime.
+
+$4^2 - 4 + 11 = 23$ is prime.
+
+$5^2 - 5 + 11 = 31$ is prime.
+
+$6^2 - 6 + 11 = 41$ is prime.
+
+$7^2 - 7 + 11 = 53$ is prime.
+
+$8^2 - 8 + 11 = 67$ is prime.
+
+$9^2 - 9 + 11 = 83$ is prime.
+
+$10^2 - 10 + 11 = 101$ is prime.
 \end{proof}
 
+{\bf \color{cyan} Each of the statements in $23-26$ is true. For each, (a) rewrite the statement with the quantification implicit as If \fbl, then \fbl, and (b) write the first sentence of a proof (the “starting point”) and the last sentence of a proof (the “conclusion to be shown”). (Note that you do not need to understand the statements in order to be able to do these exercises.)}
+
 \subsection{Exercise 23}
+For every integer $m$, if $m > 1$ then $0 < \frac{1}{m} < 1$.
 
 \begin{proof}
+a. If an integer is greater than 1, then its reciprocal is
+between 0 and 1.
 
+b. {\it Start of proof:} Suppose $m$ is any integer such that $m > 1$. {\it Conclusion to be shown:} $0 < 1/m < 1$.
 \end{proof}
 
 \subsection{Exercise 24}
+For every real number $x$, if $x > 1$ then $x^2 > x$.
 
 \begin{proof}
+a. If a real number is greater than 1, then its square is greater than itself.
 
+b. {\it Start of proof:} Suppose $x$ is any real number such that $x > 1$. {\it Conclusion to be shown:} $x^2 > x$.
 \end{proof}
 
 \subsection{Exercise 25}
+For all integers $m$ and $n$, if $mn = 1$ then $m = n = 1$ or $m = n = -1$.
 
 \begin{proof}
+a. If the product of two integers is 1, then either both are 1 or both are $-1$.
 
+b. {\it Start of proof:} Suppose $m$ and $n$ are any integers with $mn = 1$. {\it Conclusion to be shown:} $m = n = 1$ or $m = n = -1$.
 \end{proof}
 
 \subsection{Exercise 26}
+For every real number $x$, if $0 < x < 1$ then $x^2 < x$.
 
 \begin{proof}
+a. If a real number is strictly between 0 and 1, then its square is less than itself.
 
+b. {\it Start of proof:} Suppose $x$ is any real number such that $0 < x < 1$. {\it Conclusion to be shown:} $x^2 < x$.
 \end{proof}
 
 \subsection{Exercise 27}
+Fill in the blanks in the following proof.
+
+{\bf Theorem:} For every odd integer $n$, $n^2$ is odd.
+
+{\bf Proof:} Suppose $n$ is any {\color{cyan}(a)} \fbl. By definition of odd, $n = 2k + 1$ for some integer $k$. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+$n^2$ & = & {\color{cyan}(b)} $(\fbl)^2$ & \color{cyan} by substitution \\
+& = & $4k^2 + 4k + 1$ & \color{cyan} by multiplying \\
+& = & $2(2k^2 + 2k) + 1$ & \color{cyan} by factoring out a 2 \\
+\end{tabular}
+\end{center}
+
+Now $2k^2 + 2k$ is an integer because it is a sum of products of integers. Therefore, $n^2$ equals $2\cdot$ (an integer) $+ 1$, and so {\color{cyan}(c)} \fbl is odd by definition of odd.
+
+Because we have not assumed anything about $n$ except that it is an odd integer, it follows from the principle of {\color{cyan}(d)} \fbl that for every odd integer $n$, $n^2$ is odd.
 
 \begin{proof}
-
+(a) particular but arbitrarily chosen odd integer 
+(b) $2k + 1$ (c) $n^2$ (d) universal generalization
 \end{proof}
 
+{\bf \color{cyan} In each of $28-31$: \\ 
+a. Rewrite the theorem in three different ways: as $\fa$ \fbl, if \fbl, then \fbl; as $\fa$ \fbl, \fbl (without using the words if or then), and as If \fbl, then \fbl (without using an explicit universal quantifier). \\
+b. Fill in the blanks in the proof of the theorem.}
+
 \subsection{Exercise 28}
+{\bf Theorem:} The sum of any two odd integers is even.
+
+{\bf Proof:} Suppose $m$ and $n$ are any {\it [particular but arbitrarily chosen]} odd integers. 
+
+{\it [We must show that $m + n$ is even.]}
+
+By {\color{cyan}(a)} \fbl, $m = 2r + 1$ and $n = 2s + 1$ for some integers $r$ and $s$. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+$m+n$ & = & $(2r+1) + (2s+1)$ & {\color{cyan} by (b)} \fbl \\
+& = & $2r + 2s + 2$ & \\
+& = & $2(r+s+1)$ & \color{cyan} by algebra \\
+\end{tabular}
+\end{center}
+
+Let $u = r + s + 1$. Then $u$ is an integer because $r, s$ and 1 are integers and because {\color{cyan}(c)} \fbl. 
+
+Hence $m + n = 2u$, where $u$ is an integer, and so, by {\color{cyan}(d)} \fbl, $m + n$ is even {\it [as was to be shown]}.
 
 \begin{proof}
+a. $\fa$ integers $m$ and $n$, if $m$ and $n$ are odd then $m + n$ is even.
 
+$\fa$ odd integers $m$ and $n$, $m + n$ is even.
+
+If $m$ and $n$ are any odd integers, then $m + n$ is even.
+
+b. (a) definition of odd, (b) substitution, (c) any sum of
+integers is an integer, (d) definition of even
 \end{proof}
 
 \subsection{Exercise 29}
+{\bf Theorem:} The negative of any even integer is even.
+
+{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} even integer. 
+
+{\it [We must show that $-n$ is even.]}
+
+By {\color{cyan}(a)} \fbl, $n = 2k$ for some integer $k$.
+
+Then
+
+\begin{center}
+\begin{tabular}{rcll}
+$-n$ & = & $-(2k)$ & \color{cyan} by (b) \fbl \\
+& = & $2(-k)$ & \color{cyan} by algebra \\
+\end{tabular}
+\end{center}
+
+Let $r = -k$. Then $r$ is an integer because $-1$ and $k$ are integers and {\color{cyan}(c)} \fbl. 
+
+Hence $-n = 2r$, where $r$ is an integer, and so $-n$ is even by {\color{cyan}(d)} \fbl {\it [as was to be shown]}.
 
 \begin{proof}
+a. $\fa$ integer $n$, if $n$ is even then $-n$ is even.
 
+$\fa$ even integer $n$, $-n$ is even.
+
+If $n$ is any even integer, then $-n$ is even.
+
+b. (a) definition of even, (b) substitution, (c) any product of integers is an integer, (d) definition of even
 \end{proof}
 
 \subsection{Exercise 30}
+{\bf Theorem:} The sum of any even integer and any odd integer is odd.
+
+{\bf Proof:} Suppose $m$ is any even integer and $n$ is any {\color{cyan}(a)} \fbl. By definition of even, $m = 2r$ for some {\color{cyan}(b)} \fbl, and by definition of odd, $n = 2s + 1$ for some integer $s$. By substitution and algebra,
+
+\begin{center}
+\begin{tabular}{ccccc}
+$m+n$ & = & {\color{cyan}(c)} \fbl & = & $2(r+s)+1$ \\
+\end{tabular}
+\end{center}
+
+Since $r$ and $s$ are integers, so is their sum $r+s$. Hence $m+n$ has the form twice some integer plus one, and so, by {\color{cyan}(d)} \fbl by definition of odd.
 
 \begin{proof}
+a. $\fa$ integers $m$ and $n$, if $m$ is even and $n$ is odd, then $m + n$ is odd.
 
+$\fa$ even integers $m$ and odd integers $n$, $m + n$ is odd.
+
+If $m$ is any even integer and $n$ is any odd integer,
+then $m + n$ is odd.
+
+b. (a) any odd integer (b) integer $r$ (c) $2r + (2s + 1)$ (d) $m + n$ is odd
 \end{proof}
 
 \subsection{Exercise 31}
+{\bf Theorem:} Whenever $n$ is an odd integer, $5n^2 + 7$ is even.
+
+{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} odd integer. 
+
+{\it [We must show that $5n^2 + 7$ is even.]}
+
+By definition of odd, $n = $ {\color{cyan}(a)} \fbl, for some integer $k$. 
+
+Then
+
+\begin{center}
+\begin{tabular}{rcll}
+$5n^2 + 7$ & = & {\color{cyan} (b)} \fbl & \color{cyan} substitution \\
+& = & $5(4k^2 + 4k + 1) + 7$ & \\
+& = & $20k^2 + 20k + 12$ & \\
+& = & $2(10k^2 + 10k + 6)$ & \color{cyan} by algebra \\
+\end{tabular}
+\end{center}
+
+Let $t = $ {\color{cyan} (c)} \fbl. Then $t$ is an integer because products and sums of integers are integers. 
+
+Hence $5n^2 + 7 = 2t$, where $t$ is an integer, and thus {\color{cyan}(d)} \fbl by definition of even {\it [as was to be shown]}.
 
 \begin{proof}
+a. $\fa$ integer $n$, if $n$ is odd, then $5n^2+7$ is even.
 
+$\fa$ odd integer $n$, $5n^2+7$ is even.
+
+If $n$ is any odd integer, then $5n^2+7$ is even.
+
+b. (a) $2k+1$ (b) $5(2k+1)^2 + 7$ (c) $10k^2 + 10k + 6$ (d) $5n^2+7$ is even
 \end{proof}
 
 \section{Exercise Set 4.2}
