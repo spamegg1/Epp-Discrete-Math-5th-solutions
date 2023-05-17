@@ -611,112 +611,94 @@ Hence $2n-1 = 2(n-1) + 1 = 2k + 1$ where $k$ is an integer, and thus by definiti
 The difference of any even integer minus any odd integer is odd.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $a$ is any even integer and $b$ is any odd integer. 
+{\it [We must show that $a - b$ is odd.]} By definition of even and odd, $a = 2r$ and $b = 2s + 1$, for some integers $r, s$. By substitution and algebra,
+$$
+a-b = 2r - (2s+1) = 2r-2s-1 = 2r-2s-2+2-1 = 2(r-s-1)+1
+$$
 
-{\it [We must show that ???.]}
 
-By definition of ???, $n = ???$, for some ???. 
+Let $t = r-s-1$. Then $t$ is an integer because differences of integers are integers. 
 
-Then
-
-\begin{center}
-\begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
-\end{tabular}
-\end{center}
-
-Let $k = ???$. 
-
-Then $k$ is an integer because ??? are integers. 
-
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Thus $a-b = 2t+1$ where $t$ is an integer, and so by definition of odd $a-b$ is odd {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 5}
 If $a$ and $b$ are any odd integers, then $a^2 + b^2$ is even.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $a,b$ are any {\it [particular but arbitrarily chosen]} odd integers. 
 
-{\it [We must show that ???.]}
+{\it [We must show that $a^2+b^2$ is even.]}
 
-By definition of ???, $n = ???$, for some ???. 
+By definition of odd, $a = 2r+1$ and $b = 2s+1$, for some integers $r,s$. 
 
 Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
+$a^2+b^2$ & = & $(2r+1)^2 + (2s+1)^2$ & \color{cyan} by substitution \\
+& = & $(4r^2 + 4r + 1) + (4s^2 + 4s + 1)$ & \color{cyan} by multiplying \\
+& = & $4r^2 + 4r + 4s^2 + 4s + 2$ & \color{cyan} by adding \\
+& = & $2(2r^2+2r+2s^2+2s+1)$ & \color{cyan} by factoring out \\
 \end{tabular}
 \end{center}
 
-Let $k = ???$. 
+Let $k = 2r^2+2r+2s^2+2s+1$. 
 
-Then $k$ is an integer because ??? are integers. 
+Then $k$ is an integer because squares, products and sums of integers are integers. 
 
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Hence $a^2+b^2 = 2k$ where $k$ is an integer, and thus by definition of even $a^2+b^2$ is even {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 6}
 If $k$ is any odd integer and $m$ is any even integer, then $k^2 + m^2$ is odd.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $k$ is any odd integer and $m$ is any even integer. 
 
-{\it [We must show that ???.]}
+{\it [We must show that $k^2 + m^2$ is odd.]}
 
-By definition of ???, $n = ???$, for some ???. 
-
-Then
+By definition of odd and even, $k = 2a+1$ and $m = 2b$, for some integers $a, b$. Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
+$k^2+m^2$ & = & $(2a+1)^2+(2b)^2$ & \color{cyan} by substitution \\
+& = & $4a^2+4a+1+4b^2$ & \\
+& = & $4(a^2+a+b^2)+1$ & \\
+& = & $2(2a^2+2a+2b^2)+1$ & \color{cyan} by algebra \\
 \end{tabular}
 \end{center}
 
-Let $k = ???$. 
-
-Then $k$ is an integer because ??? are integers. 
-
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+But $2a^2+2a+2b^2$ is an integer because it is a sum of products of integers. Thus $k^2+m^2$ is twice an integer plus 1, and so $k^2+m^2$ is odd {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 7}
 The difference between the squares of any two consecutive integers is odd.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $m$ and $n$ are any {\it [particular but arbitrarily chosen]} two consecutive integers. 
 
-{\it [We must show that ???.]}
+{\it [We must show that $m^2-n^2$ (or $n^2-m^2$) is odd.]}
 
-By definition of ???, $n = ???$, for some ???. 
+By definition of consecutive, $m = k$ and $n = k+1$, for some integer $k$. 
 
 Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
+$m^2-n^2$ & = & $k^2 - (k+1)^2$ & \color{cyan} by substitution \\
+& = & $k^2 - (k^2 + 2k + 1)$ & \\
+& = & $k^2 - k^2 - 2k - 1$ & \\
+& = & $-2k-1$ & \\
+& = & $-2k-2+2-1$ & \\
+& = & $2(-k-1)+1$ & \color{cyan} by algebra \\
 \end{tabular}
 \end{center}
 
-Let $k = ???$. 
+Let $r = -k-1$. Then $r$ is an integer because it is a difference of integers. 
 
-Then $k$ is an integer because ??? are integers. 
-
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Hence $m^2 - n^2 = 2r+1$ where $r$ is an integer, and thus by definition of odd $m^2-n^2$ is odd {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 8}
@@ -724,112 +706,82 @@ For any integers $m$ and $n$, if $m$ is even and $n$ is odd
 then $5m + 3n$ is odd.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $m$ is any even integer and $n$ is any odd integer.  
 
-{\it [We must show that ???.]}
+{\it [We must show that $5m+3n$ is odd.]}
 
-By definition of ???, $n = ???$, for some ???. 
+By definition of even and odd, $m = 2r$ and $n = 2s+1$, for some integers $r, s$. 
 
 Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
+$5m+3n$ & = & $5(2r)+3(2s+1)$ & \color{cyan} by substitution \\
+& = & $10r+6s+3$ & \\
+& = & $10r+6s+2+1$ & \\
+& = & $2(5r+3s+1)+1$ & \color{cyan} by algebra \\
 \end{tabular}
 \end{center}
 
-Let $k = ???$. 
+Let $k = 5r+3s+1$. 
 
-Then $k$ is an integer because ??? are integers. 
+Then $k$ is an integer because it is a sum of products of integers. 
 
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Hence $5m+3n = 2k+1$ where $k$ is an integer, and thus by definition of odd $5m+3n$ is odd {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 9}
 If an integer greater than 4 is a perfect square, then the immediately preceding integer is not prime.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $n$ is any integer greater than 4 that is a perfect square. 
 
-{\it [We must show that ???.]}
+{\it [We must show that $n-1$ is not prime, in other words, $n-1$ is composite.]}
 
-By definition of ???, $n = ???$, for some ???. 
+By definition of perfect square, $n = k^2$, for some integer $k$. 
+
+Without loss of generality, we may assume $k > 0$, because $n = k^2 = (-k)^2$, and if $k$ is negative, we can replace it with $-k$ which is positive.
+
+Since $n > 4$ we have $n - 4 > 0$. So $k^2 - 4 > 0$. So $(k-2)(k+2) > 0$. So either $k-2$ and $k+2$ are both negative, or they are both positive. Since $k > 0$, $k+2>2>0$, so they have to be both positive. Therefore, $k - 2 > 0$ so $k > 2$.
 
 Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
+$n-1$ & = & $k^2-1$ & \color{cyan} by substitution \\
+& = & $(k-1)(k+1)$ & \color{cyan} by algebra \\
 \end{tabular}
 \end{center}
 
-Let $k = ???$. 
+Since $k>2$ we have both $k-1>1$ and $k+1>3>1$.
 
-Then $k$ is an integer because ??? are integers. 
-
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Hence $n-1$ is a product of two positive integers both greater than 1, and thus by definition of composite $n-1$ is composite {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 10}
 If $n$ is any even integer, then $(-1)^n = 1$.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $n$ is any even integer. {\it [We must show that $(-1)^n = 1$.]}
 
-{\it [We must show that ???.]}
+By definition of even, $n = 2k$, for some integer $k$. 
 
-By definition of ???, $n = ???$, for some ???. 
-
-Then
-
-\begin{center}
-\begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
-\end{tabular}
-\end{center}
-
-Let $k = ???$. 
-
-Then $k$ is an integer because ??? are integers. 
-
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Then by the laws of exponents from algebra $(-1)^n = (-1)^{2k} = ((-1)^2)^k = 1^k = 1$, {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 11}
 If $n$ is any odd integer, then $(-1)^n = -1$.
 
 \begin{proof}
-{\bf Proof:} Suppose $n$ is any {\it [particular but arbitrarily chosen]} ???. 
+Suppose $n$ is any odd integer. {\it [We must show that $(-1)^n = -1$.]}
 
-{\it [We must show that ???.]}
+By definition of even, $n = 2k+1$, for some integer $k$. 
 
-By definition of ???, $n = ???$, for some ???. 
-
-Then
-
-\begin{center}
-\begin{tabular}{rcll}
-$???$ & = & $???$ & \color{cyan} by substitution \\
-& = & $???$ & \\
-& = & $???$ & \\
-& = & $???$ & \color{cyan} by algebra \\
-\end{tabular}
-\end{center}
-
-Let $k = ???$. 
-
-Then $k$ is an integer because ??? are integers. 
-
-Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ??? {\it [as was to be shown]}.
+Then by the laws of exponents from algebra 
+$$
+(-1)^n = (-1)^{2k+1} = (-1)^{2k}\cdot(-1) = ((-1)^2)^k\cdot(-1) = 1^k\cdot(-1) = 1\cdot(-1) = -1
+$$ 
+{\it [as was to be shown]}.
 \end{proof}
 
 {\bf \color{cyan} Prove that the statements in $12-14$ are false.}
@@ -838,185 +790,404 @@ Hence $??? = ???$ where $k$ is an integer, and thus by definition of ??? it is ?
 There exists an integer $m \geq 3$ such that $m^2 - 1$ is prime.
 
 \begin{proof}
+To prove the given statement is false, we prove that its
+negation is true.
 
+The negation of the statement is “For every integer $m \geq 3$, $m^2 - 1$ is not prime.”
+
+{\it Proof of the negation:} Suppose $m$ is any integer with $m \geq 3$. 
+
+By basic algebra, $m^2 - 1 = (m - 1)(m + 1)$. 
+
+Because $m \geq 3$, both $m - 1$ and $m + 1$ are positive integers greater than 1, and each is smaller than $m^2 - 1$. 
+
+So $m^2 - 1$ is a product of two smaller positive integers, each greater than 1, and hence $m^2 - 1$ is not prime.
 \end{proof}
 
 \subsection{Exercise 13}
 There exists an integer $n$ such that $6n + 27$ is prime.
 
 \begin{proof}
+To prove the given statement is false, we prove that its
+negation is true.
 
+The negation of the statement is “For every integer $n$, $6n+27$ is not prime. In other words, $6n+27$ is composite.”
+
+{\it Proof of the negation:} Suppose $n$ is any integer. 
+By basic algebra, $6n + 27 = 3(2n + 9)$. 
+
+Hence $6n+27$ is the product of two integers greater than 1. Therefore by definition of composite, $6n+27$ is composite.
 \end{proof}
 
 \subsection{Exercise 14}
 There exists an integer $k \geq 4$ such that $2k^2 - 5k + 2$ is prime.
 
 \begin{proof}
+To prove the given statement is false, we prove that its
+negation is true.
 
+The negation of the statement is “For every integer $k \geq 4$, $2k^2 - 5k + 2$ is composite.”
+
+{\it Proof of the negation:} Suppose $k$ is any integer. 
+
+By basic algebra, $2k^2 - 5k + 2 = (2k-1)(k-2)$. 
+
+Because $k \geq 4$, $2k - 1 \geq 7$ and $k - 2 \geq 2$. So both $2k-1$ and $k-2$ are integers greater than 1. 
+
+Hence $2k^2 - 5k + 2$ is the product of two integers greater than 1. Therefore by definition of composite, $2k^2 - 5k + 2$ is composite.
 \end{proof}
 
 {\bf \color{cyan} Find the mistakes in the “proofs” shown in $15-19$.}
 
 \subsection{Exercise 15}
+{\bf Theorem:} For every integer $k$, if $k > 0$ then $k^2 + 2k + 1$ is composite.
+
+“{\bf Proof:} For $k = 2$, $k > 0$ and $k^2 + 2k + 1 = 2^2 + 2\cdot2 + 1 = 9$. And since $9 = 3\cdot3$, then 9 is composite. Hence the theorem is true.”
 
 \begin{proof}
-
+The incorrect proof just shows the theorem to be true in
+the one case where $k = 2$. A real proof must show that it
+is true for {\it every} integer $k > 0$.
 \end{proof}
 
 \subsection{Exercise 16}
+{\bf Theorem:} The difference between any odd integer and any even integer is odd.
+
+“{\bf Proof:} Suppose $n$ is any odd integer, and $m$ is any even integer. By definition of odd, $n = 2k + 1$ where $k$ is an integer, and by definition of even, $m = 2k$ where $k$ is an integer. Then $n - m = (2k + 1) - 2k = 1$, and 1 is odd. Therefore, the difference between any odd integer and any even integer is odd.”
 
 \begin{proof}
-
+The mistake in the “proof” is that the same symbol, $k$, is used to represent two different quantities. By setting $m = 2k$ and $n = 2k + 1$, the proof implies that $n = m + 1$, and thus it deduces the conclusion only for this one situation. When $m = 4$ and $n = 17$, for instance, the computations in the proof indicate that $n - m = 1$, but actually $n - m = 13$. In other words, the proof does not deduce the conclusion for an arbitrarily chosen even integer $m$ and odd integer $n$, and hence it is invalid.
 \end{proof}
 
 \subsection{Exercise 17}
+{\bf Theorem:} For every integer $k$, if $k > 0$ then $k^2 + 2k + 1$ is composite.
+
+{\bf Proof:} Suppose $k$ is any integer such that $k > 0$. If $k^2 + 2k + 1$ is composite, then $k^2 + 2k + 1 = rs$
+for some integers $r$ and $s$ such that 
+
+$1 < r < k^2 + 2k + 1$ and $1 < s < k^2 + 2k + 1$.
+
+Since $k^2 + 2k + 1 = rs$ and both $r$ and $s$ are strictly between 1 and $k^2 + 2k + 1$, then $k^2 + 2k + 1$ is not prime. So $k^2 + 2k + 1$ is composite as was to be shown.
 
 \begin{proof}
-
+This incorrect proof assumes what is to be proved. The word since in the third sentence is completely unjustified. The second sentence tells only what happens if $k^2 + 2k = 1$ is composite. But at that point in the proof, it has not been established that $k^2 + 2k + 1$ is composite. In fact, that is exactly what is to be proved.
 \end{proof}
 
 \subsection{Exercise 18}
+{\bf Theorem:} The product of any even integer and any odd integer is even.
+
+“{\bf Proof:} Suppose $m$ is any even integer and $n$ is any odd integer. If $m\cdot n$ is even, then by definition of even there exists an integer $r$ such that $m\cdot n = 2r$. 
+
+Also since $m$ is even, there exists an integer $p$ such that $m = 2p$, and since $n$ is odd there exists an integer $q$ such that $n = 2q + 1$. 
+
+Thus $mn = (2p)(2q + 1) = 2r$, where $r$ is an integer. By definition of even, then, $m\cdot n$ is even, as was to be shown.”
 
 \begin{proof}
+The issue is just like in Exercise 17. The proof uses the $r$ value without establishing the existence of $r$ first. 
 
+``If $m \cdot n$ is even...'' has an unjustified assumption because we haven't proved that $m \cdot n$ is even yet (that's what we are {\it trying to prove}), so its conclusion ``...$m\cdot n = 2r$'' has not been proven.
+
+Therefore the part ``$mn = (2p)(2q + 1) = 2r$, where $r$ is an integer'' is unjustified as well.
+
+{\bf Discussion:}
+
+This is a fairly common form of circular reasoning: assuming what we have to prove. It happens because, at the beginning of the proof, we want to mention to the reader what we want to prove. 
+
+What we want to prove has a short, condensed definition (in this case ``being even''), so we write out the full definition of what it is that we are {\it trying to prove} (in this case ``the existence of an integer $r$ such that $\ldots = 2r$''). Again, the purpose of this is to articulate to the reader what we are {\it trying to prove}.
+
+But then we forget that and continue as if that was already an established fact. The act of writing out the full definition of what we are trying to prove is not the same as actually having proved it.
+
+Using ``if $m\cdot n$ is even...'' in this case is the problem; it has the {\it feeling} of using modus ponens on an already established implication with an established premise. But we are just writing out the full definition, instead of using modus ponens.
+
+So it would be better to write: ``{\it We want to prove that $m\cdot n$ is even. In other words, we want to prove that there is an integer $r$ such that $m \cdot n = 2r$.}'' Using the words ``We want to prove that...'' instead of ``If...'' goes a long way to avoid this common mistake. This way we can ``unpack'' the definition of what we are trying to prove without assuming it.
+
+Another related problem is to first unpack the definition of what we are trying to prove, then try to ``prove backwards''. Say we want to prove $A$, and we unpack the definition to B. So we have to prove $B$. But instead, we start by assuming $B$ is true, and apply some algebra or logic to it, to arrive at something else, say $E$, that is true:
+$$
+A \to \text{unpack definition} \to B \to \text{middle steps} \to C \to D \to E = \text{something true!}
+$$
+But this would only prove that $B$ implies $E$. In order to establish the truth of $B$ (and hence of $A$), we would actually have to prove that $E$ implies $B$! So all the ``steps'' from $B$ to $E$ would have to be ``reversible'', in other words, logical equivalences (biconditionals):
+$$
+A \bic \text{unpack definition} \bic B \bic \text{middle steps} \bic C \bic D \bic E = \text{something true!}
+$$
+But that is rarely the case!
 \end{proof}
 
 \subsection{Exercise 19}
+{\bf Theorem:} The sum of any two even integers equals $4k$ for some integer $k$.
+
+“{\bf Proof:} Suppose $m$ and $n$ are any two even integers. By definition of even, $m = 2k$ for some integer $k$ and $n = 2k$ for some integer $k$. By substitution, 
+$$
+m + n = 2k + 2k = 4k.
+$$
+This is what was to be shown.”
 
 \begin{proof}
+The problem here is the same as in Exercise 16. The mistake in the “proof” is that the same symbol, $k$, is used to represent two different quantities. By setting $m = 2k$ and $n = 2k$, the proof implies that $n = m$, and thus it deduces the conclusion only for this one situation. 
 
+When $m = 4$ and $n = 20$, for instance, the proof indicates that $n = m = 4$, but actually $n = 20$. In other words, the proof does not deduce the conclusion for an arbitrarily chosen even integer $m$ and an arbitrarily chosen even integer $n$, and hence it is invalid.
 \end{proof}
 
+{\bf \color{cyan} In $20-38$ determine whether the statement is true or false. Justify your answer with a proof or a counterexample, as appropriate. In each case use only the definitions of the terms and the assumptions listed on page 161, not any previously established properties.}
+
 \subsection{Exercise 20}
+The product of any two odd integers is odd.
 
 \begin{proof}
+True. Suppose $m$ and $n$ are any odd integers. {\it [We must show that $mn$ is odd.]} By definition of odd, $n = 2r + 1$ and $m = 2s + 1$ for some integers $r$ and $s$.
 
+Then
+
+\begin{center}
+\begin{tabular}{rcll}
+$mn$ & = & $(2r+1)(2s+1)$ & \color{cyan} by substitution \\
+& = & $4rs + 2r + 2s + 1$ & \\
+& = & $2(2rs + r + s) + 1$ & \color{cyan} by algebra \\
+\end{tabular}
+\end{center}
+
+Now $2rs + r + s$ is an integer because products and sums
+of integers are integers and $2$, $r$, and $s$ are all integers. Hence $mn = 2\cdot \text{(some integer)} + 1$, and so, by definition of odd, $mn$ is odd.
 \end{proof}
 
 \subsection{Exercise 21}
+The negative of any odd integer is odd.
 
 \begin{proof}
+True. Assume $n$ is any odd integer. {\it We want to prove $-n$ is odd.}
 
+By definition of odd, $n = 2r + 1$ for some integer $r$. 
+
+Then $-n = -(2r+1) = -2r-1 = -2r-2+2-1 = 2(-r-1) + 1$.
+
+Let $k = -r-1$. Then $k$ is an integer because it is the difference of two integers.
+
+Therefore $-n = 2k+1$ where $k$ is an integer, hence by definition of odd, $-n$ is odd.
 \end{proof}
 
 \subsection{Exercise 22}
+For all integers $a$ and $b$, $4a + 5b + 3$ is even.
 
 \begin{proof}
+False. \underline{Counterexample:} Let $a = 1$ and $b = 0$. 
 
+Then $4a + 5b + 3 = 4\cdot 1 + 5\cdot 0 + 3 = 7$, which is odd. 
+
+{\it [This is one counterexample among many. Can you find a way to characterize all counterexamples?]}
 \end{proof}
 
 \subsection{Exercise 23}
+The product of any even integer and any integer is even.
 
 \begin{proof}
+True. Suppose $m$ is any even integer and $n$ is any integer. {\it [We want to prove $m \cdot n$ is even.]}
 
+By definition of even, $m = 2k$ for some integer $k$.
+
+Then, $m \cdot n = (2k) \cdot n = 2kn = 2(kn)$.
+
+Let $r = kn$. Then $r$ is an integer because it is the product of two integers.
+
+Therefore $m\cdot n = 2r$ where $r$ is an integer. So by definition of even, $m \cdot n$ is even.
 \end{proof}
 
 \subsection{Exercise 24}
+If a sum of two integers is even, then one of the summands is even. (In the expression $a + b$, $a$ and $b$ are called {\bf summands}.)
 
 \begin{proof}
+False. \underline{Counterexample:} Let $m = 1$ and $n = 3$. 
 
+Then $m + n = 4$ is even, but neither summand $m$ nor summand $n$ is even.
 \end{proof}
 
 \subsection{Exercise 25}
+The difference of any two even integers is even.
 
 \begin{proof}
+True. Assume $m$ and $n$ are any two even integers. {\it [We want to prove $m-n$ is even.]}
 
+By definition of even, $m = 2r$ and $n = 2s$ for some integers $r, s$.
+
+Then $m - n = 2r - 2s = 2(r-s)$. Let $k = r-s$. Then $k$ is an integer because it is the difference of two integers.
+
+Therefore $m - n = 2k$ where $k$ is an integer. So $m-n$ is even by definition of even.
 \end{proof}
 
 \subsection{Exercise 26}
+For all integers $a, b$, and $c$, if $a, b$, and $c$ are consecutive, then $a + b + c$ is even.
 
 \begin{proof}
-
+False. \underline{Counterexample:} Let $a = 2, b = 3, c = 4$. They are consecutive integers but $a+b+c = 9$ which is not even.
 \end{proof}
 
 \subsection{Exercise 27}
+The difference of any two odd integers is even.
 
 \begin{proof}
+True. Assume $m, n$ are any two odd integers. {\it [We want to prove $m - n$ is even.]}
 
+By definition of odd, $m = 2r+1, n = 2s+1$ for some integers $r,s$.
+
+Then $m-n = 2r+1 - (2s+1) = 2r+1 - 2s - 1 = 2r - 2s = 2(r-s)$.
+
+Let $k = r-s$. Then $k$ is an integer because it is the difference of two integers.
+
+So $m-n = 2k$ where $k$ is an integer. Hence $m-n$ is even by definition of even.
 \end{proof}
 
 \subsection{Exercise 28}
+For all integers $n$ and $m$, if $n - m$ is even then $n^3 - m^3$ is even.
 
 \begin{proof}
+True. Assume $n, m$ are any integers such that $n - m$ is even. {\it [Want to prove that $n^3 - m^3$ is even.]}
 
+By definition of even, $n-m = 2r$ for some integer $r$. By algebra, 
+
+$n^3 - m^3 = (n-m)(n^2 + nm + m^2) = 2r(n^2 + nm + m^2) = 2(r(n^2 + nm + m^2))$.
+
+Let $k = r(n^2 + nm + m^2)$. Then $r$ is an integer because it is a sum and product of integers.
+
+So $n^3 - m^3 = 2k$ where $k$ is an integer. So by definition of even, $n^3 - m^3$ is even.
 \end{proof}
 
 \subsection{Exercise 29}
+For every integer $n$, if $n$ is prime then $(-1)^n = -1$.
 
 \begin{proof}
+False. \underline{Counterexample:} Let $n=2$. 
 
+Then $n$ is prime, but $(-1)^n = (-1)^2 = 1 \neq -1$.
 \end{proof}
 
 \subsection{Exercise 30}
+For every integer $m$, if $m > 2$ then $m^2 - 4$ is composite.
 
 \begin{proof}
-
+False. \underline{Counterexample:} Let $m = 3$. Then $m^2 - 4 = 3^2 - 4 = 9 - 4 = 5$ is prime. not composite.
 \end{proof}
 
 \subsection{Exercise 31}
+For every integer $n$, $n^2 - n + 11$ is a prime number.
 
 \begin{proof}
-
+False. Let $n = 11$. Then $n^2 - n + 11 = 11^2 - 11 + 11 = 11^2$ is not prime.
 \end{proof}
 
 \subsection{Exercise 32}
+For every integer $n$, $4(n^2 + n + 1) - 3n^2$ is a perfect square.
 
 \begin{proof}
-
+True. Suppose $n$ is any integer. Then by algebra
+$$
+4(n^2 + n + 1) - 3n^2 = 4n^2 + 4n + 4 - 3n^2 = n^2 + 4n + 4 = (n + 2)^2
+$$
+Now $(n + 2)^2$ is a perfect square because $n + 2$ is an integer (being a sum of $n$ and $2$). Hence $4(n^2 + n + 1) - 3n^2$ is a perfect square, as was to be shown.
 \end{proof}
 
 \subsection{Exercise 33}
+Every positive integer can be expressed as a sum of three or fewer perfect squares.
 
 \begin{proof}
-
+False. \underline{Counterexample:} 7 cannot be written as a sum of three of fewer perfect squares: $7 = 2^2 + 1^2 + 1^2 + 1^2$.
 \end{proof}
 
 \subsection{Exercise 34}
+(Two integers are {\bf consecutive} if, and only if, one is one more than the other.) Any product of four consecutive integers is one less than a perfect square.
 
 \begin{proof}
+True. Suppose $a, b, c, d$ are any four consecutive integers. {\it [Want to prove: there is an integer $k$ such that $abcd = k^2 - 1$.]}
 
+By definition of consecutive, there is an integer $n$ such that $a = n, b = n+1, c = n+2, d = n+3$. Then
+$$
+abcd = n(n+1)(n+2)(n+3) = n(n+3)(n+1)(n+2) = (n^2+3n)(n^2+3n+2)
+$$
+{\it [Here we notice a pattern. The two factors differ by 2. So it is reminiscent of $(x-1)(x+1) = x^2 - 1^2$ isn't it?]}
+
+By some more algebra,
+$$
+(n^2+3n)(n^2+3n+2) = (n^2+3n+1-1)(n^2+3n+1+1) = (n^2+3n+1)^2-1^2
+$$
+Let $k = n^2+3n+1$. Then $k$ is an integer because it is a sum and product of integers. Therefore $abcd = k^2 - 1$ where $k$ is an integer, {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 35}
+If $m$ and $n$ are any positive integers and $mn$ is a perfect square, then $m$ and $n$ are perfect squares. 
 
 \begin{proof}
-
+False. \underline{Counterexample:} let $m = n = 2$. Then $mn = 2^2$ is a perfect square. But neither $m$ nor $n$ is a perfect square.
 \end{proof}
 
 \subsection{Exercise 36}
+The difference of the squares of any two consecutive integers is odd.
 
 \begin{proof}
+True. Assume $a,b$ are any two consecutive integers. 
 
+By definition of consecutive, $a = n$ and $b = n+1$ for some integer $n$.
+
+Then $b^2 - a^2 = (n+1)^2 - n^2 = n^2+2n+1-n^2 = 2n+1$.
+
+So $b^2 - a^2 = 2k+1$ where $n$ is an integer. Therefore by definition of odd, $b^2-a^2$ is odd.
 \end{proof}
 
 \subsection{Exercise 37}
+For all nonnegative real numbers $a$ and $b$, $\sqrt{ab} = \sqrt{a}\sqrt{b}$. (Note that if $x$ is a nonnegative real number, then there is a unique nonnegative real number $y$, denoted $\sqrt{x}$, such that $y^2 = x$.)
 
 \begin{proof}
+True. Assume $a$ and $b$ are any two nonnegative real numbers. By the information given to us in the parentheses: 
 
+1. There is a unique nonnegative real number denoted $\sqrt{ab}$ such that $(\sqrt{ab})^2 = ab$.
+
+2. There is a unique nonnegative real number denoted $\sqrt{a}$ such that $(\sqrt{a})^2 = a$.
+
+3. There is a unique nonnegative real number denoted $\sqrt{b}$ such that $(\sqrt{b})^2 = b$.
+
+Since $ab = a \cdot b$, we have by substitution: $(\sqrt{ab})^2 = (\sqrt{a})^2 \cdot (\sqrt{b})^2$.
+
+By algebra, $(\sqrt{ab})^2 = [(\sqrt{a}) \cdot (\sqrt{b})]^2 = (\sqrt{a}\sqrt{b})^2$. Therefore $(\sqrt{ab})^2 - (\sqrt{a}\sqrt{b})^2 = 0$.
+
+By factoring we get $(\sqrt{ab} - \sqrt{a}\sqrt{b})(\sqrt{ab} + \sqrt{a}\sqrt{b}) = 0$.
+
+So: either $\sqrt{ab} - \sqrt{a}\sqrt{b} = 0$, or $\sqrt{ab} + \sqrt{a}\sqrt{b} = 0$.
+
+If $\sqrt{ab} - \sqrt{a}\sqrt{b} = 0$, then $\sqrt{ab} = \sqrt{a}\sqrt{b}$ {\it [as was to be shown.]}
+
+If $\sqrt{ab} + \sqrt{a}\sqrt{b} = 0$, then since both $\sqrt{ab}$ and $\sqrt{a}\sqrt{b}$ are nonnegative, they must be both 0, hence $\sqrt{ab} = \sqrt{a}\sqrt{b}$ again {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 38}
+For all nonnegative real numbers $a$ and $b$, $\sqrt{a + b} = \sqrt{a} + \sqrt{b}$.
 
 \begin{proof}
-
+False. \underline{Counterexample:} Let $a = b = 1$. Then 
+$$
+\sqrt{a+b} = \sqrt{1+1} = \sqrt{2} \neq 2 = 1 + 1 = \sqrt{1} + \sqrt{1} = \sqrt{a} + \sqrt{b}
+$$
 \end{proof}
 
 \subsection{Exercise 39}
+Suppose that integers $m$ and $n$ are perfect squares. Then $m + n + 2\sqrt{mn}$ is also a perfect square. Why?
 
 \begin{proof}
+Assume $m$ and $n$ are perfect squares (so they are nonnegative real numbers). By definition of perfect square, $m = r^2$ and $n = s^2$ for some integers $r, s$. Using Exercise 37 $\sqrt{mn} = \sqrt{m}\sqrt{n}$, we get:
+
+$m + n + 2\sqrt{mn} = r^2 + s^2 + 2\sqrt{m}\sqrt{n} = r^2 + s^2 + 2rs = (r+s)^2$.
+
+Let $k = r+s$. $k$ is an integer because it is a sum of integers. So $m + n + 2\sqrt{mn} = k^2$ where $k$ is an integer, therefore $m + n + 2\sqrt{mn}$ is a perfect square by definition.
 
 \end{proof}
 
 \subsection{Exercise 40}
+If $p$ is a prime number, must $2^p - 1$ also be prime? Prove or give a counterexample.
 
 \begin{proof}
-
+No. \underline{Counterexample:} $p = 11$ is prime, but $2^p - 1 = 2^{11} - 1 = 2047 = 13 \cdot 89$ is not prime.
 \end{proof}
 
 \subsection{Exercise 41}
+If $n$ is a nonnegative integer, must $2^{2n} + 1$ be prime? Prove or give a counterexample.
 
 \begin{proof}
-
+No. \underline{Counterexample:} Let $n = 3$. Then $2^{2n} + 1 = 2^{6} + 1 = 65 = 13 \cdot 5$ is not prime.
 \end{proof}
 
 \section{Exercise Set 4.3}
