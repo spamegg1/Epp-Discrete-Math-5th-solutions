@@ -21,6 +21,7 @@
 \newcommand{\da}{\downarrow}
 \newcommand{\fa}{\forall}
 \newcommand{\te}{\exists}
+\newcommand{\cy}{\color{cyan}}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -133,7 +134,7 @@ If $r$ and $s$ are both positive, is $r^2 + 2rs + s^2$ composite?
 Yes: $r^2 + 2rs + s^2 = (r+s)(r+s)$ and $r + s \geq 2$, therefore $r^2 + 2rs + s^2$ is a product of two integers both of which are greater than 1.
 \end{proof}
 
-{\bf \color{cyan} Prove the statements in 5–11.}
+{\bf \cy Prove the statements in 5–11.}
 
 \subsection{Exercise 5}
 There are integers $m$ and $n$ such that $m > 1$ and $n > 1$ and $\frac{1}{m} + \frac{1}{n}$ is an integer.
@@ -180,7 +181,7 @@ Therefore $x = 80$ is a real number such that $x > 1$ and $2^x > x^{10}$.
 \end{proof}
 
 \begin{tcolorbox}[colframe=cyan]
-{\bf \color{cyan} Definition:} An integer $n$ is called a {\bf perfect square} if, and only if, $n = k^2$ for some integer $k$.
+{\bf \cy Definition:} An integer $n$ is called a {\bf perfect square} if, and only if, $n = k^2$ for some integer $k$.
 \end{tcolorbox}
 
 \subsection{Exercise 10}
@@ -197,7 +198,7 @@ There is an integer $n$ such that $2n^2 - 5n + 2$ is prime.
 For example, take $n = 3$. Then $2n^2 - 5n + 2 = 18 - 15 + 2 = 5$ is prime. (You can find this value of $n$ by either starting at $n = 1$ and using trial and error, or noticing that $2n^2 - 5n + 2 = (2n - 1)(n - 2)$, so, for this to be prime, one of the factors has to be 1.)
 \end{proof}
 
-{\bf \color{cyan} In $12-13$, (a) write a negation for the given statement, and (b) use a counterexample to disprove the given statement. explain how the counterexample actually shows that the given statement is false.}
+{\bf \cy In $12-13$, (a) write a negation for the given statement, and (b) use a counterexample to disprove the given statement. explain how the counterexample actually shows that the given statement is false.}
 
 \subsection{Exercise 12}
 For all real numbers $a$ and $b$, if $a < b$ then $a^2 < b^2$.
@@ -218,7 +219,7 @@ a. {\it Negation for the statement:} There exists an integer $n$ such that $n$ i
 b. {\it Counterexample for the statement:} Let $n = 5$. Then $n$ is odd because $5 = 2 \cdot 2 + 1$, but $\frac{n-1}{2}$ is not odd because $\frac{5-1}{2} = 2 = 2 \cdot 1$ is even. {\it [So the hypothesis of the statement is true and its conclusion is false.]}
 \end{proof}
 
-{\bf \color{cyan} Disprove each of the statements in $14-16$ by giving a counterexample. In each case explain how the counterexample actually disproves the statement.}
+{\bf \cy Disprove each of the statements in $14-16$ by giving a counterexample. In each case explain how the counterexample actually disproves the statement.}
 
 \subsection{Exercise 14}
 For all integers $m$ and $n$, if $2m + n$ is odd then $m$ and $n$ are both odd.
@@ -241,7 +242,7 @@ For every integer $n$, if $n$ is even then $n^2 + 1$ is prime.
 \underline{Counterexample:} Let $n = 8$. Then $n$ is even. But $n^2 + 1 = 65 = 13 \cdot 5$ is not prime. {\it [This is one counterexample among many.]}
 \end{proof}
 
-{\bf \color{cyan} In $17-20$, determine whether the property is true for all integers, true for no integers, or true for some integers and false for other integers. Justify your answers.}
+{\bf \cy In $17-20$, determine whether the property is true for all integers, true for no integers, or true for some integers and false for other integers. Justify your answers.}
 
 \subsection{Exercise 17}
 $(a+b)^2 = a^2 + b^2$
@@ -275,7 +276,7 @@ The average of any two odd integers is odd.
 True for some, false for others. For example, 3 and 7 are both odd, and their average $(3+7)/2 = 5$ is odd. But 3 and 5 are both odd, and their average is $(3 + 5) / 2 = 4$ is even.
 \end{proof}
 
-{\bf \color{cyan} Prove the statement in 21 and 22 by the method of exhaustion.}
+{\bf \cy Prove the statement in 21 and 22 by the method of exhaustion.}
 
 \subsection{Exercise 21}
 Every positive even integer less than 26 can be expressed as a sum of three of fewer perfect squares. (For instance, $10 = 1^2 + 3^2$ and $16 = 4^2$.)
@@ -329,7 +330,7 @@ $9^2 - 9 + 11 = 83$ is prime.
 $10^2 - 10 + 11 = 101$ is prime.
 \end{proof}
 
-{\bf \color{cyan} Each of the statements in $23-26$ is true. For each, (a) rewrite the statement with the quantification implicit as If \fbl, then \fbl, and (b) write the first sentence of a proof (the “starting point”) and the last sentence of a proof (the “conclusion to be shown”). (Note that you do not need to understand the statements in order to be able to do these exercises.)}
+{\bf \cy Each of the statements in $23-26$ is true. For each, (a) rewrite the statement with the quantification implicit as If \fbl, then \fbl, and (b) write the first sentence of a proof (the “starting point”) and the last sentence of a proof (the “conclusion to be shown”). (Note that you do not need to understand the statements in order to be able to do these exercises.)}
 
 \subsection{Exercise 23}
 For every integer $m$, if $m > 1$ then $0 < \frac{1}{m} < 1$.
@@ -373,26 +374,26 @@ Fill in the blanks in the following proof.
 
 {\bf Theorem:} For every odd integer $n$, $n^2$ is odd.
 
-{\bf Proof:} Suppose $n$ is any {\color{cyan}(a)} \fbl. By definition of odd, $n = 2k + 1$ for some integer $k$. Then
+{\bf Proof:} Suppose $n$ is any {\cy (a)} \fbl. By definition of odd, $n = 2k + 1$ for some integer $k$. Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$n^2$ & = & {\color{cyan}(b)} $(\fbl)^2$ & \color{cyan} by substitution \\
-& = & $4k^2 + 4k + 1$ & \color{cyan} by multiplying \\
-& = & $2(2k^2 + 2k) + 1$ & \color{cyan} by factoring out a 2 \\
+$n^2$ & = & {\cy (b)} $(\fbl)^2$ & \cy by substitution \\
+& = & $4k^2 + 4k + 1$ & \cy by multiplying \\
+& = & $2(2k^2 + 2k) + 1$ & \cy by factoring out a 2 \\
 \end{tabular}
 \end{center}
 
-Now $2k^2 + 2k$ is an integer because it is a sum of products of integers. Therefore, $n^2$ equals $2\cdot$ (an integer) $+ 1$, and so {\color{cyan}(c)} \fbl is odd by definition of odd.
+Now $2k^2 + 2k$ is an integer because it is a sum of products of integers. Therefore, $n^2$ equals $2\cdot$ (an integer) $+ 1$, and so {\cy (c)} \fbl is odd by definition of odd.
 
-Because we have not assumed anything about $n$ except that it is an odd integer, it follows from the principle of {\color{cyan}(d)} \fbl that for every odd integer $n$, $n^2$ is odd.
+Because we have not assumed anything about $n$ except that it is an odd integer, it follows from the principle of {\cy (d)} \fbl that for every odd integer $n$, $n^2$ is odd.
 
 \begin{proof}
 (a) particular but arbitrarily chosen odd integer 
 (b) $2k + 1$ (c) $n^2$ (d) universal generalization
 \end{proof}
 
-{\bf \color{cyan} In each of $28-31$: \\ 
+{\bf \cy In each of $28-31$: \\ 
 a. Rewrite the theorem in three different ways: as $\fa$ \fbl, if \fbl, then \fbl; as $\fa$ \fbl, \fbl (without using the words if or then), and as If \fbl, then \fbl (without using an explicit universal quantifier). \\
 b. Fill in the blanks in the proof of the theorem.}
 
@@ -403,19 +404,19 @@ b. Fill in the blanks in the proof of the theorem.}
 
 {\it [We must show that $m + n$ is even.]}
 
-By {\color{cyan}(a)} \fbl, $m = 2r + 1$ and $n = 2s + 1$ for some integers $r$ and $s$. Then
+By {\cy (a)} \fbl, $m = 2r + 1$ and $n = 2s + 1$ for some integers $r$ and $s$. Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$m+n$ & = & $(2r+1) + (2s+1)$ & {\color{cyan} by (b)} \fbl \\
+$m+n$ & = & $(2r+1) + (2s+1)$ & {\cy by (b)} \fbl \\
 & = & $2r + 2s + 2$ & \\
-& = & $2(r+s+1)$ & \color{cyan} by algebra \\
+& = & $2(r+s+1)$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
-Let $u = r + s + 1$. Then $u$ is an integer because $r, s$ and 1 are integers and because {\color{cyan}(c)} \fbl. 
+Let $u = r + s + 1$. Then $u$ is an integer because $r, s$ and 1 are integers and because {\cy (c)} \fbl. 
 
-Hence $m + n = 2u$, where $u$ is an integer, and so, by {\color{cyan}(d)} \fbl, $m + n$ is even {\it [as was to be shown]}.
+Hence $m + n = 2u$, where $u$ is an integer, and so, by {\cy (d)} \fbl, $m + n$ is even {\it [as was to be shown]}.
 
 \begin{proof}
 a. $\fa$ integers $m$ and $n$, if $m$ and $n$ are odd then $m + n$ is even.
@@ -435,20 +436,20 @@ integers is an integer, (d) definition of even
 
 {\it [We must show that $-n$ is even.]}
 
-By {\color{cyan}(a)} \fbl, $n = 2k$ for some integer $k$.
+By {\cy (a)} \fbl, $n = 2k$ for some integer $k$.
 
 Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$-n$ & = & $-(2k)$ & \color{cyan} by (b) \fbl \\
-& = & $2(-k)$ & \color{cyan} by algebra \\
+$-n$ & = & $-(2k)$ & \cy by (b) \fbl \\
+& = & $2(-k)$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
-Let $r = -k$. Then $r$ is an integer because $-1$ and $k$ are integers and {\color{cyan}(c)} \fbl. 
+Let $r = -k$. Then $r$ is an integer because $-1$ and $k$ are integers and {\cy (c)} \fbl. 
 
-Hence $-n = 2r$, where $r$ is an integer, and so $-n$ is even by {\color{cyan}(d)} \fbl {\it [as was to be shown]}.
+Hence $-n = 2r$, where $r$ is an integer, and so $-n$ is even by {\cy (d)} \fbl {\it [as was to be shown]}.
 
 \begin{proof}
 a. $\fa$ integer $n$, if $n$ is even then $-n$ is even.
@@ -463,15 +464,15 @@ b. (a) definition of even, (b) substitution, (c) any product of integers is an i
 \subsection{Exercise 30}
 {\bf Theorem:} The sum of any even integer and any odd integer is odd.
 
-{\bf Proof:} Suppose $m$ is any even integer and $n$ is any {\color{cyan}(a)} \fbl. By definition of even, $m = 2r$ for some {\color{cyan}(b)} \fbl, and by definition of odd, $n = 2s + 1$ for some integer $s$. By substitution and algebra,
+{\bf Proof:} Suppose $m$ is any even integer and $n$ is any {\cy (a)} \fbl. By definition of even, $m = 2r$ for some {\cy (b)} \fbl, and by definition of odd, $n = 2s + 1$ for some integer $s$. By substitution and algebra,
 
 \begin{center}
 \begin{tabular}{ccccc}
-$m+n$ & = & {\color{cyan}(c)} \fbl & = & $2(r+s)+1$ \\
+$m+n$ & = & {\cy (c)} \fbl & = & $2(r+s)+1$ \\
 \end{tabular}
 \end{center}
 
-Since $r$ and $s$ are integers, so is their sum $r+s$. Hence $m+n$ has the form twice some integer plus one, and so, by {\color{cyan}(d)} \fbl by definition of odd.
+Since $r$ and $s$ are integers, so is their sum $r+s$. Hence $m+n$ has the form twice some integer plus one, and so, by {\cy (d)} \fbl by definition of odd.
 
 \begin{proof}
 a. $\fa$ integers $m$ and $n$, if $m$ is even and $n$ is odd, then $m + n$ is odd.
@@ -491,22 +492,22 @@ b. (a) any odd integer (b) integer $r$ (c) $2r + (2s + 1)$ (d) $m + n$ is odd
 
 {\it [We must show that $5n^2 + 7$ is even.]}
 
-By definition of odd, $n = $ {\color{cyan}(a)} \fbl, for some integer $k$. 
+By definition of odd, $n = $ {\cy (a)} \fbl, for some integer $k$. 
 
 Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$5n^2 + 7$ & = & {\color{cyan} (b)} \fbl & \color{cyan} substitution \\
+$5n^2 + 7$ & = & {\cy (b)} \fbl & \cy substitution \\
 & = & $5(4k^2 + 4k + 1) + 7$ & \\
 & = & $20k^2 + 20k + 12$ & \\
-& = & $2(10k^2 + 10k + 6)$ & \color{cyan} by algebra \\
+& = & $2(10k^2 + 10k + 6)$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
-Let $t = $ {\color{cyan} (c)} \fbl. Then $t$ is an integer because products and sums of integers are integers. 
+Let $t = $ {\cy (c)} \fbl. Then $t$ is an integer because products and sums of integers are integers. 
 
-Hence $5n^2 + 7 = 2t$, where $t$ is an integer, and thus {\color{cyan}(d)} \fbl by definition of even {\it [as was to be shown]}.
+Hence $5n^2 + 7 = 2t$, where $t$ is an integer, and thus {\cy (d)} \fbl by definition of even {\it [as was to be shown]}.
 
 \begin{proof}
 a. $\fa$ integer $n$, if $n$ is odd, then $5n^2+7$ is even.
@@ -520,7 +521,7 @@ b. (a) $2k+1$ (b) $5(2k+1)^2 + 7$ (c) $10k^2 + 10k + 6$ (d) $5n^2+7$ is even
 
 \section{Exercise Set 4.2}
 
-{\bf \color{cyan} Prove the statements in $1-11$. In each case use only the definitions of the terms and the assumptions listed on page 161, not any previously established properties of odd and even integers. Follow the directions given in this section for writing proofs of universal statements.}
+{\bf \cy Prove the statements in $1-11$. In each case use only the definitions of the terms and the assumptions listed on page 161, not any previously established properties of odd and even integers. Follow the directions given in this section for writing proofs of universal statements.}
 
 \subsection{Exercise 1}
 For every integer $n$, if $n$ is odd then $3n + 5$ is even.
@@ -536,10 +537,10 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$3n + 5$ & = & $3(2r + 1) + 5$ & \color{cyan} by substitution \\
+$3n + 5$ & = & $3(2r + 1) + 5$ & \cy by substitution \\
 & = & $6r + 3 + 5$ & \\
 & = & $6r + 8$ & \\
-& = & $2(3r + 4)$ & \color{cyan} by algebra \\
+& = & $2(3r + 4)$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -566,10 +567,10 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$3m + 5$ & = & $3(2r) + 5$ & \color{cyan} by substitution \\
+$3m + 5$ & = & $3(2r) + 5$ & \cy by substitution \\
 & = & $6r + 5$ & \\
 & = & $6r + 4 + 1$ & \\
-& = & $2(3r + 2) + 1$ & \color{cyan} by algebra \\
+& = & $2(3r + 2) + 1$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -594,9 +595,9 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$2n-1$ & = & $2n - 2 + 2 - 1$ & \color{cyan} because $-2 + 2 = 0$ \\
+$2n-1$ & = & $2n - 2 + 2 - 1$ & \cy because $-2 + 2 = 0$ \\
 & = & $2(n-1) + 2 - 1$ & \\
-& = & $2(n-1) + 1$ & \color{cyan} by algebra \\
+& = & $2(n-1) + 1$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -637,10 +638,10 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$a^2+b^2$ & = & $(2r+1)^2 + (2s+1)^2$ & \color{cyan} by substitution \\
-& = & $(4r^2 + 4r + 1) + (4s^2 + 4s + 1)$ & \color{cyan} by multiplying \\
-& = & $4r^2 + 4r + 4s^2 + 4s + 2$ & \color{cyan} by adding \\
-& = & $2(2r^2+2r+2s^2+2s+1)$ & \color{cyan} by factoring out \\
+$a^2+b^2$ & = & $(2r+1)^2 + (2s+1)^2$ & \cy by substitution \\
+& = & $(4r^2 + 4r + 1) + (4s^2 + 4s + 1)$ & \cy by multiplying \\
+& = & $4r^2 + 4r + 4s^2 + 4s + 2$ & \cy by adding \\
+& = & $2(2r^2+2r+2s^2+2s+1)$ & \cy by factoring out \\
 \end{tabular}
 \end{center}
 
@@ -663,10 +664,10 @@ By definition of odd and even, $k = 2a+1$ and $m = 2b$, for some integers $a, b$
 
 \begin{center}
 \begin{tabular}{rcll}
-$k^2+m^2$ & = & $(2a+1)^2+(2b)^2$ & \color{cyan} by substitution \\
+$k^2+m^2$ & = & $(2a+1)^2+(2b)^2$ & \cy by substitution \\
 & = & $4a^2+4a+1+4b^2$ & \\
 & = & $4(a^2+a+b^2)+1$ & \\
-& = & $2(2a^2+2a+2b^2)+1$ & \color{cyan} by algebra \\
+& = & $2(2a^2+2a+2b^2)+1$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -687,12 +688,12 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$m^2-n^2$ & = & $k^2 - (k+1)^2$ & \color{cyan} by substitution \\
+$m^2-n^2$ & = & $k^2 - (k+1)^2$ & \cy by substitution \\
 & = & $k^2 - (k^2 + 2k + 1)$ & \\
 & = & $k^2 - k^2 - 2k - 1$ & \\
 & = & $-2k-1$ & \\
 & = & $-2k-2+2-1$ & \\
-& = & $2(-k-1)+1$ & \color{cyan} by algebra \\
+& = & $2(-k-1)+1$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -716,10 +717,10 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$5m+3n$ & = & $5(2r)+3(2s+1)$ & \color{cyan} by substitution \\
+$5m+3n$ & = & $5(2r)+3(2s+1)$ & \cy by substitution \\
 & = & $10r+6s+3$ & \\
 & = & $10r+6s+2+1$ & \\
-& = & $2(5r+3s+1)+1$ & \color{cyan} by algebra \\
+& = & $2(5r+3s+1)+1$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -748,8 +749,8 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$n-1$ & = & $k^2-1$ & \color{cyan} by substitution \\
-& = & $(k-1)(k+1)$ & \color{cyan} by algebra \\
+$n-1$ & = & $k^2-1$ & \cy by substitution \\
+& = & $(k-1)(k+1)$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -784,7 +785,7 @@ $$
 {\it [as was to be shown]}.
 \end{proof}
 
-{\bf \color{cyan} Prove that the statements in $12-14$ are false.}
+{\bf \cy Prove that the statements in $12-14$ are false.}
 
 \subsection{Exercise 12}
 There exists an integer $m \geq 3$ such that $m^2 - 1$ is prime.
@@ -837,7 +838,7 @@ Because $k \geq 4$, $2k - 1 \geq 7$ and $k - 2 \geq 2$. So both $2k-1$ and $k-2$
 Hence $2k^2 - 5k + 2$ is the product of two integers greater than 1. Therefore by definition of composite, $2k^2 - 5k + 2$ is composite.
 \end{proof}
 
-{\bf \color{cyan} Find the mistakes in the “proofs” shown in $15-19$.}
+{\bf \cy Find the mistakes in the “proofs” shown in $15-19$.}
 
 \subsection{Exercise 15}
 {\bf Theorem:} For every integer $k$, if $k > 0$ then $k^2 + 2k + 1$ is composite.
@@ -927,7 +928,7 @@ The problem here is the same as in Exercise 16. The mistake in the “proof” i
 When $m = 4$ and $n = 20$, for instance, the proof indicates that $n = m = 4$, but actually $n = 20$. In other words, the proof does not deduce the conclusion for an arbitrarily chosen even integer $m$ and an arbitrarily chosen even integer $n$, and hence it is invalid.
 \end{proof}
 
-{\bf \color{cyan} In $20-38$ determine whether the statement is true or false. Justify your answer with a proof or a counterexample, as appropriate. In each case use only the definitions of the terms and the assumptions listed on page 161, not any previously established properties.}
+{\bf \cy In $20-38$ determine whether the statement is true or false. Justify your answer with a proof or a counterexample, as appropriate. In each case use only the definitions of the terms and the assumptions listed on page 161, not any previously established properties.}
 
 \subsection{Exercise 20}
 The product of any two odd integers is odd.
@@ -939,9 +940,9 @@ Then
 
 \begin{center}
 \begin{tabular}{rcll}
-$mn$ & = & $(2r+1)(2s+1)$ & \color{cyan} by substitution \\
+$mn$ & = & $(2r+1)(2s+1)$ & \cy by substitution \\
 & = & $4rs + 2r + 2s + 1$ & \\
-& = & $2(2rs + r + s) + 1$ & \color{cyan} by algebra \\
+& = & $2(2rs + r + s) + 1$ & \cy by algebra \\
 \end{tabular}
 \end{center}
 
@@ -1192,7 +1193,7 @@ No. \underline{Counterexample:} Let $n = 3$. Then $2^{2n} + 1 = 2^{6} + 1 = 65 =
 
 \section{Exercise Set 4.3}
 
-{\bf \color{cyan} The numbers in $1-7$ are all rational. Write each number as a ratio of two integers.}
+{\bf \cy The numbers in $1-7$ are all rational. Write each number as a ratio of two integers.}
 
 \subsection{Exercise 1}
 $\dps-\frac{35}{6}$
@@ -1380,7 +1381,7 @@ Now since $a, b$ are integers, so are $a^3$ and $b^3$ (being the products of $a$
 Hence $r^3$ is a quotient of integers with a nonzero denominator, and so $r^3$ is rational {\it [as was to be shown]}.
 \end{proof}
 
-{\bf \color{cyan} Determine which of the statements in $15-19$ are true and which are false. prove each true statement directly from the definitions, and give a counterexample for each false statement. For a statement that is false, determine whether a small change would make it true. If so, make the change and prove the new statement. Follow the directions for writing proofs on page 173.}
+{\bf \cy Determine which of the statements in $15-19$ are true and which are false. prove each true statement directly from the definitions, and give a counterexample for each false statement. For a statement that is false, determine whether a small change would make it true. If so, make the change and prove the new statement. Follow the directions for writing proofs on page 173.}
 
 \subsection{Exercise 15}
 The product of any two rational numbers is a rational number.
@@ -1458,7 +1459,7 @@ Assume $r$ and $s$ are any two rational numbers with $r < s$. {\it [Want to prov
 Let $t = \frac{a+b}{2}$. By Exercise 18, $t$ is a rational number. By Exercise 19, $r < t < s$, {\it [as was to be shown.]}
 \end{proof}
 
-{\bf \color{cyan} Use the properties of even and odd integers that are listed in Example 4.3.3 to do exercises $21-23$. Indicate which properties you use to justify your reasoning.}
+{\bf \cy Use the properties of even and odd integers that are listed in Example 4.3.3 to do exercises $21-23$. Indicate which properties you use to justify your reasoning.}
 
 \subsection{Exercise 21}
 True or false? If $m$ is any even integer and $n$ is any
@@ -1502,7 +1503,7 @@ $(k + 2)^2 - (m - 1)^2 = (k+2-(m-1))(k+2+m-1) = (k-m+3)(k+m+1)$
 Now $k-m+3$ is even $-$ odd $+$ odd = even. Even times anything is even, therefore $(k-m+3)(k+m+1)$ is even. So $(k + 2)^2 - (m - 1)^2$ is even.
 \end{proof}
 
-{\bf \color{cyan} Derive the statements in $24-26$ as corollaries of theorems 4.3.1, 4.3.2, and the results of exercises 12, 13, 14, 15, and 17.}
+{\bf \cy Derive the statements in $24-26$ as corollaries of theorems 4.3.1, 4.3.2, and the results of exercises 12, 13, 14, 15, and 17.}
 
 \subsection{Exercise 24}
 For any rational numbers $r$ and $s$, $2r + 3s$ is rational.
@@ -1662,7 +1663,7 @@ where $n_3, n_2, n_1, n_0$ are all integers, {\it [as was to be shown.]}
 \end{proof}
 
 \begin{tcolorbox}[colframe=cyan]
-{\bf \color{cyan} Definition:} A number $c$ is called a {\bf root} of a polynomial $p(x)$ if, and only if, $p(c) = 0$.
+{\bf \cy Definition:} A number $c$ is called a {\bf root} of a polynomial $p(x)$ if, and only if, $p(c) = 0$.
 \end{tcolorbox}
 
 \subsection{Exercise 32}
@@ -1688,7 +1689,7 @@ $$
 where $q(x)$ has all integer coefficients, {\it [as was to be shown.]}
 \end{proof}
 
-{\bf \color{cyan} Use the properties of even and odd integers that are listed in example 4.3.3 to do exercises 33 and 34.}
+{\bf \cy Use the properties of even and odd integers that are listed in example 4.3.3 to do exercises 33 and 34.}
 
 \subsection{Exercise 33}
 When expressions of the form $(x - r)(x - s)$ are multiplied out, a quadratic polynomial is obtained. For instance, $(x - 2)(x - (-7)) = (x - 2)(x + 7) = x^2 + 5x - 14$.
@@ -1746,7 +1747,7 @@ If exactly two of them are even, then the constant coefficient would have to be 
 So it's impossible for $r,s,t$ to be all integers.
 \end{proof}
 
-{\bf \color{cyan} In $35-39$ find the mistakes in the “proofs” that the sum of any two rational numbers is a rational number.}
+{\bf \cy In $35-39$ find the mistakes in the “proofs” that the sum of any two rational numbers is a rational number.}
 
 \subsection{Exercise 35}
 “{\bf Proof:} Any two rational numbers produce a rational number when added together. So if $r$ and $s$ are particular but arbitrarily chosen rational numbers, then $r + s$ is rational.”
@@ -1798,396 +1799,648 @@ This ``proof'' assumes what is to be proved.
 
 \section{Exercise Set 4.4}
 
+{\bf \cy Give a reason for your answer in each of $1-13$. assume that all variables represent integers.}
+
 \subsection{Exercise 1}
+Is 52 divisible by 13?
 
 \begin{proof}
-
+Yes, $52 = 13 \cdot 4$
 \end{proof}
 
 \subsection{Exercise 2}
+Does $7 \mid 56$?
 
 \begin{proof}
-
+Yes, $56 = 7 \cdot 8$
 \end{proof}
 
 \subsection{Exercise 3}
+Does $5 \mid 0$?
 
 \begin{proof}
-
+Yes, $0 = 5 \cdot 0$
 \end{proof}
 
 \subsection{Exercise 4}
+Does 3 divide $(3k + 1)(3k + 2)(3k + 3)$?
 
 \begin{proof}
-
+Yes, $(3k + 1)(3k + 2)(3k + 3) = 3[(3k + 1)(3k + 2)
+(k + 1)]$, and $(3k + 1)(3k + 2)(k + 1)$ is an integer because $k$ is an integer and sums and products of integers
+are integers.
 \end{proof}
 
 \subsection{Exercise 5}
+Is $6m(2m + 10)$ divisible by 4?
 
 \begin{proof}
-
+Yes: $6m(2m + 10) = (2(3m))(2(m + 5)) = 4(3m)(m + 5)$, and $(3m)(m + 5)$ is an integer because $m$ is an integer and sums and products of integers are integers.
 \end{proof}
 
 \subsection{Exercise 6}
+Is 29 a multiple of 3?
 
 \begin{proof}
-
+No, $29/3 \approx 9.67$, which is not an integer.
 \end{proof}
 
 \subsection{Exercise 7}
+Is $-3$ a factor of 66?
 
 \begin{proof}
-
+Yes, $66 = (-3)(-22)$.
 \end{proof}
 
 \subsection{Exercise 8}
+Is $6a(a + b)$ a multiple of $3a$?
 
 \begin{proof}
-
+Yes, $6a(a + b) = 3a[2(a + b)]$, and $2(a + b)$ is an integer because $a$ and $b$ are integers and sums and products of integers are integers.
 \end{proof}
 
 \subsection{Exercise 9}
+Is 4 a factor of $2a\cdot 34b$?
 
 \begin{proof}
-
+Yes: $2a\cdot 34b = 2a \cdot (2\cdot(17b)) = 4(a\cdot(17b))$
 \end{proof}
 
 \subsection{Exercise 10}
+Does $7 \mid 34$?
 
 \begin{proof}
-
+No, $34/7 \approx 4.86$, which is not an integer.
 \end{proof}
 
 \subsection{Exercise 11}
+Does $13 \mid 73$?
 
 \begin{proof}
-
+No, $73/13 \approx 5.61$, which is not an integer.
 \end{proof}
 
 \subsection{Exercise 12}
+If $n = 4k + 1$, does 8 divide $n^2 - 1$?
 
 \begin{proof}
-
+Yes, $n^2 - 1 = (4k + 1)^2 - 1 = (16k^2 + 8k + 1) - 1 =
+16k^2 + 8k = 8(2k^2 + k)$, and $2k^2 + k$ is an integer because $k$ is an integer and sums and products of integers are integers.
 \end{proof}
 
 \subsection{Exercise 13}
+If $n = 4k + 3$, does 8 divide $n^2 - 1$?
 
 \begin{proof}
-
+Yes, $n^2 - 1 = (4k + 3)^2 - 1 = (16k^2 + 24k + 9) - 1 =
+16k^2 + 24k + 8 = 8(2k^2 + 3k + 1)$, and $2k^2 + 3k + 1$ is an integer because $k$ is an integer and sums and products of integers are integers.
 \end{proof}
 
 \subsection{Exercise 14}
+Fill in the blanks in the following proof that for all integers $a$ and $b$, if $a \mid b$ then $a \mid (-b)$.
+
+{\bf Proof:} Suppose $a$ and $b$ are any integers such that
+{\cy (a)} \fbl. By definition of divisibility, there exists an integer $r$ such that {\cy (b)} \fbl. By substitution, 
+$$
+-b = -(ar) = a(-r).
+$$
+Let $t = $ {\cy(c)} \fbl. Then $t$ is an integer because $t = (-1)\cdot r$, and both $-1$ and $r$ are integers. Thus, by substitution, $-b = at$, where $t$ is an integer, and so by definition of divisibility, {\cy (d)} \fbl, as was to be shown.
 
 \begin{proof}
-
+(a) $a \mid b$ (b) $b = a \cdot r$ (c) $-r$ (d) $a \mid (-b)$
 \end{proof}
 
+{\bf \cy Prove statements $15-17$ directly from the definition of divisibility.}
+
 \subsection{Exercise 15}
+For all integers $a, b$, and $c$, if $a \mid b$ and $a \mid c$ then $a \mid (b + c)$.
 
 \begin{proof}
+Suppose $a, b$, and $c$ are any integers such that $a\mid b$ and $a \mid c$. {\it [We must show that $a \mid (b + c)$.]} 
 
+By definition of divides, $b = ar$ and $c = as$ for some integers $r$ and $s$. Then $b + c = ar + as = a(r + s)$ by algebra.
+
+Let $t = r + s$. Then $t$ is an integer (being a sum of integers), and thus $b + c = at$ where $t$ is an integer. By definition of divides, then, $a \mid (b + c)$ {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 16}
+For all integers $a, b$, and $c$, if $a \mid b$ and $a \mid c$ then $a \mid (b - c)$.
 
 \begin{proof}
+Suppose $a, b$, and $c$ are any integers such that $a\mid b$ and $a \mid c$. {\it [We must show that $a \mid (b - c)$.]} 
 
+By definition of divides, $b = ar$ and $c = as$ for some integers $r$ and $s$. Then $b - c = ar - as = a(r - s)$ by algebra.
+
+Let $t = r - s$. Then $t$ is an integer (being a sum of integers), and thus $b - c = at$ where $t$ is an integer. By definition of divides, then, $a \mid (b - c)$ {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 17}
+For all integers $a, b, c$, and $d$, if $a \mid c$ and $b \mid d$ then $ab \mid cd$.
 
 \begin{proof}
+Suppose $a, b, c$, and $d$ are any integers such that $a \mid c$ and $b \mid d$. {\it [We must show that $ab \mid cd $.]} 
 
+By definition of divides, $c = ar$ and $d = bs$ for some integers $r$ and $s$. Then $cd = (ar)(bs) = ab(rs)$ by algebra.
+
+Let $t = rs$. Then $t$ is an integer (being a product of integers), and thus $cd = abt$ where $t$ is an integer. By definition of divides, then, $ab \mid cd)$ {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 18}
+Consider the following statement: The negative of any multiple of 3 is a multiple of 3.
 
 \subsubsection{(a)}
+Write the statement formally using a quantifier and a variable.
 
 \begin{proof}
-
+$\fa$ integers $n$ if $n$ is a multiple of 3 then $-n$ is a multiple of 3.
 \end{proof}
 
 \subsubsection{(b)}
+Determine whether the statement is true or false and justify your answer.
 
 \begin{proof}
+The statement is true. Suppose $n$ is any integer that is a multiple of 3. {\it [We must show that $-n$ is a multiple of 3.]} 
 
+By definition of multiple, $n = 3k$ for some integer $k$. Then $-n = -(3k) = 3(-k)$ by substitution and by algebra.
+
+Now $-k$ is an integer because $k$ is. Hence, by definition of multiple, $-n$ is a multiple of 3 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 19}
+Show that the following statement is false: For all integers $a$ and $b$, if $3\mid (a + b)$ then $3 \mid (a - b)$.
 
 \begin{proof}
+\underline{Counterexample:} Let $a = 2$ and $b = 1$. Then
+$a + b = 2 + 1 = 3$, and so $3 \mid (a + b)$ because $3 = 3\cdot 1$.
 
+On the other hand, $a - b = 2 - 1 = 1$, and $3 \nmid 1$ because $1/3$ is not an integer. Thus $3 \nmid (a - b)$. {\it [So the hypothesis of the statement is true and its conclusion is false.]}
 \end{proof}
 
+{\bf \cy For each statement in $20-31$, determine whether the statement is true or false. prove the statement directly from the definitions if it is true, and give a counterexample if it is false.}
+
 \subsection{Exercise 20}
+The sum of any three consecutive integers is divisible by 3.
 
 \begin{proof}
-
+True. Assume $a,b,c$ are any three consecutive integers. By definition of consecutive, $a = n, b = n+1, c = n+2$ for some integer $n$. Then $a+b+c = n+n+1+n+2 = 3n+6 = 3(n+2)$. Let $t = n+2$. Then $t$ is an integer (being a sum of integers). So $a+b+c = 3t$ where $t$ is an integer. So by definition of divisibility, $a+b+c$ is divisible by 3.
 \end{proof}
 
 \subsection{Exercise 21}
+The product of any two even integers is a multiple of 4.
 
 \begin{proof}
-
+True. Assume $a,b$ are any two integers. By definition of even, $a = 2r$ and $b = 2s$ for some integers $r,s$. Then $ab = (2r)(2s) = 4rs$. Let $t = rs$. Then $t$ is an integer (being a product of integers). So $ab = 4t$ where $t$ is an integer. So $ab$ is a multiple of 4.
 \end{proof}
 
 \subsection{Exercise 22}
+A necessary condition for an integer to be divisible by 6 is that it be divisible by 2.
 
 \begin{proof}
+Rewriting the statement, we get:
 
+$\fa$ integers $n$, if $n$ is divisible by 6 then $n$ is divisible by 2.
+
+True. Assume $n$ is any integer divisible by 6. By definition of divisibility, $n = 6m$ for some integer $m$. Then $n = 6m = 2(3m)$. Let $t = 3m$. Then $t$ is an integer because it is a product of integers. So $n = 2t$ where $t$ is an integer, therefore $n$ is divisible by 2 by the definition of divisibility.
 \end{proof}
 
 \subsection{Exercise 23}
+A sufficient condition for an integer to be divisible by 8 is that it be divisible by 16.
 
 \begin{proof}
+Rewriting the statement, we get:
 
+$\fa$ integers $n$, if $n$ is divisible by 16 then $n$ is divisible by 8.
+
+True. Assume $n$ is any integer divisible by 16. By definition of divisibility, $n = 16m$ for some integer $m$. Then $n = 16m = 8(2m)$. Let $t = 2m$. Then $t$ is an integer because it is a product of integers. So $n = 8t$ where $t$ is an integer, therefore $n$ is divisible by 8 by the definition of divisibility.
 \end{proof}
 
 \subsection{Exercise 24}
+For all integers $a, b$, and $c$, if $a \mid b$ and $a \mid c$ then $a \mid (2b - 3c)$.
 
 \begin{proof}
+The statement is true. Suppose $a, b$, and $c$ are any integers such that $a\mid b$ and $a\mid c$. {\it [We must show that $a\mid (2b - 3c)$.]} 
 
+By definition of divisibility, we know that $b = am$ and $c = an$ for some integers $m$ and $n$. 
+
+It follows that $2b - 3c = 2(am) - 3(an)$ (by substitution) $= a(2m - 3n)$ (by basic algebra). 
+
+Let $t = 2m - 3n$. Then $t$ is an integer because it is a difference of products of integers. Hence $2b - 3c = at$, where $t$ is an integer, and so $a\mid (2b - 3c)$ by definition of divisibility {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 25}
+For all integers $a, b$, and $c$, if $a$ is a factor of $c$ and $b$ is a factor of $c$ then $ab$ is a factor of $c$.
 
 \begin{proof}
-
+The statement is false. \underline{Counterexample:} Let
+$a = 2, b = 8$, and $c = 8$. Then $a$ is a factor of $c$ because $8 = 2\cdot 4$ and $b$ is a factor of $c$ because $8 = 1\cdot8$, but $ab = 16$ and 16 is not a factor of 8 because $8 \neq 16\cdot k$ for any integer $k$ since $8/16 = 1/2$.
 \end{proof}
 
 \subsection{Exercise 26}
+For all integers $a, b$, and $c$, if $ab \mid c$ then $a \mid c$ and $b \mid c$.
 
 \begin{proof}
-
+True. Assume $a,b,c$ are any three integers such that $ab \mid c$. By definition of divides, $abm = c$ for some integer $m$. Let $t = bm$ and $s = am$. Then $t$ and $s$ are integers (being products of integers). So $c = at$ and $c = bs$ where $t$ and $s$ are integers. Therefore by definition of divides, $a \mid c$ and $b \mid c$.
 \end{proof}
 
 \subsection{Exercise 27}
+For all integers $a, b$, and $c$, if $a\mid (b + c)$ then $a \mid b$ or $a\mid c$.
 
 \begin{proof}
-
+False \underline{Counterexample:} Let $a=6,b=2,c=4$. Then $b+c = 6$ and so $b+c = 6 = 6 \cdot 1 = a \cdot 1$ therefore $a \mid (b+c)$. However, $a \nmid b$ because $6 \nmid 2$ because 2/6 is not an integer; similarly $a \nmid c$ because $6 \nmid 4$ because 4/6 is not an integer.
 \end{proof}
 
 \subsection{Exercise 28}
+For all integers $a, b$, and $c$, if $a\mid bc$ then $a\mid b$ or $a\mid c$.
 
 \begin{proof}
-
+False \underline{Counterexample:} Let $a=6,b=2,c=3$. Then $bc = 6$ and so $bc = 6 = 6 \cdot 1 = a \cdot 1$ therefore $a \mid bc$. However, $a \nmid b$ because $6 \nmid 2$ because 2/6 is not an integer; similarly $a \nmid c$ because $6 \nmid 3$ because 3/6 is not an integer.
 \end{proof}
 
 \subsection{Exercise 29}
+For all integers $a$ and $b$, if $a\mid b$ then $a^2 \mid b^2$.
 
 \begin{proof}
-
+True. Suppose $a,b$ are any two integers such that $a \mid b$. By definition of divides, $b = ac$ for some integer $c$. Then $b^2 = (ac)^2 = a^2c^2$. Let $t = c^2$. Then $t$ is an integer (being the square of an integer). So $b^2 = a^2 \cdot t$ where $t$ is an integer. So by definition of divides, $a^2 \mid b^2$.
 \end{proof}
 
 \subsection{Exercise 30}
+For all integers $a$ and $n$, if $a\mid n^2$ and $a \leq n$ then $a \mid n$.
 
 \begin{proof}
-
+False. \underline{Counterexample:} Let $a = 4, n = 6$. Then $n^2 = 36$, so $a \mid n^2$ because $4 \mid 36$ because $36 = 4 \cdot 9$. But $a \nmid n$ because $4 \nmid 6$ because 6/4 is not an integer.
 \end{proof}
 
 \subsection{Exercise 31}
+For all integers $a$ and $b$, if $a\mid 10b$ then $a\mid 10$ or $a\mid b$.
 
 \begin{proof}
-
+False. \underline{Counterexample:} Let $a = 15, b = 3$. Then $10b = 30$, so $a \mid 10b$ because $15 \mid 30$ because $30 = 15 \cdot 2$. But $a \nmid 10$ because $15 \nmid 10$ because 10/15 is not an integer; similarly $a \nmid b$ because $15 \nmid 3$ because 3/15 is not an integer.
 \end{proof}
 
 \subsection{Exercise 32}
+A fast-food chain has a contest in which a card with numbers on it is given to each customer who makes a purchase. If some of the numbers on the card add up to 100, then the customer wins \$100. A certain customer receives a card containing the numbers 
+\begin{center}
+72, 21, 15, 36, 69, 81, 9, 27, 42, and 63. 
+\end{center}
+Will the customer win \$100? Why or why not?
 
 \begin{proof}
-
+Each of these numbers is divisible by 3, and so their sum is also divisible by 3. But 100 is not divisible by 3. Thus the sum cannot equal \$100.
 \end{proof}
 
 \subsection{Exercise 33}
+Is it possible to have a combination of nickels, dimes, and quarters that add up to \$4.72? Explain.
 
 \begin{proof}
-
+Impossible. Nickels are 5 cents, dimes are 10 cents, quarters are 25 cents. These are all divisible by 5. Therefore the cents value any combination of nickels, dimes, and quarters is also divisible by 5. But the cents value of \$4.72 is 472, which is not divisible by 5 (it does not end in 0 or 5).
 \end{proof}
 
 \subsection{Exercise 34}
+Consider a string consisting of $a$’s, $b$’s, and $c$’s where the number of $b$’s is three times the number of $a$’s and the number of $c$’s is five times the number of $a$’s. Prove that the length of the string is divisible by 3.
 
 \begin{proof}
+Suppose that the number of $a$'s in the string $S$ is $n$ where $n$ is some integer. Then the number of $b$'s is $3n$, and the number of $c$'s is $5n$.
 
+The total length of the string is: number of $a$'s + number of $b$'s + number of $c$'s = $n + 3n + 5n = 9n$. Since $9n = 3(3n)$ and $3n$ is an integer, $9n$ is divisible by 3.
 \end{proof}
 
 \subsection{Exercise 35}
+Two athletes run a circular track at a steady pace so that the first completes one round in 8 minutes and the second in 10 minutes. If they both start from the same spot at 4 p.m., when will be the first time they return to the start
+together?
 
 \begin{proof}
-
+The length of time needed is the least common multiple of 8 and 10, which is 40 minutes. So they will be back at the start together again for the first time at 4:40 p.m.
 \end{proof}
 
 \subsection{Exercise 36}
+It can be shown (see exercises $44-48$) that an integer is divisible by 3 if, and only if, the sum of its digits is divisible by 3; an integer is divisible by 9 if, and only if, the sum of its digits is divisible by 9; an integer is divisible by 5 if, and only if, its right-most digit is a 5 or a 0; and an integer is divisible by 4 if, and only if, the number formed by its right-most two digits is divisible by 4. Check the following integers for divisibility by 3, 4, 5, and 9.
 
 \subsubsection{(a)}
+637,425,403,705,125
 
 \begin{proof}
-
+The sum of the digits is 54, which is divisible by 9. Therefore, 637,425,403,705,125 is divisible by 9 and hence also divisible by 3 (by transitivity of divisibility). Because the rightmost digit is 5, then 637,425,403,705,125 is divisible by 5. And because the two rightmost digits are 25, which is not divisible by 4, then 637,425,403,705,125 is not divisible by 4.
 \end{proof}
 
 \subsubsection{(b)}
+12,858,306,120,312
 
 \begin{proof}
+$1+2+8+5+8+3+0+6+1+2+0+3+1+2=42$. It is divisible by 3 (because $42 / 3 = 14$ is an integer), not divisible by 9 (because $42/9 \approx 4.67$ which is not an integer).
 
+Last 2 digits are 12, so it's divisible by 4 (because $12/4 = 3 $ is an integer) and not divisible by 5 (because $2 \neq 0$ or $5$).
 \end{proof}
 
 \subsubsection{(c)}
+517,924,440,926,512
 
 \begin{proof}
-
+Last two digits are 12, so divisible by 4, not divisible by 5. Sum of digits is 61, so not divisible by 3 or 9.
 \end{proof}
 
 \subsubsection{(d)}
+14,328,083,360,232
 
 \begin{proof}
-
+Last two digits are 32, so divisible by 4, not divisible by 5. Sum of digits is 45, so divisible by 3 and 9.
 \end{proof}
 
 \subsection{Exercise 37}
+Use the unique factorization theorem to write the following integers in standard factored form.
 
 \subsubsection{(a)}
+1,176
 
 \begin{proof}
-
+$1,176 = 2^3 \cdot 3 \cdot 7^2$
 \end{proof}
 
 \subsubsection{(b)}
+5,733
 
 \begin{proof}
-
+$5,733 = 3^2 \cdot 7^2 \cdot 13$
 \end{proof}
 
 \subsubsection{(c)}
+3,675
 
 \begin{proof}
-
+$3,675 = 3 \cdot 5^2 \cdot 7^2$
 \end{proof}
 
 \subsection{Exercise 38}
+Let $n = 8,424$.
 
 \subsubsection{(a)}
+Write the prime factorization for $n$.
 
 \begin{proof}
-
+$8,424 = 2^3 \cdot 3^4 \cdot 13$
 \end{proof}
 
 \subsubsection{(b)}
+Write the prime factorization for $n^5$.
 
 \begin{proof}
-
+$8,424^5 = (2^3 \cdot 3^4 \cdot 13)^5 = 2^{15} \cdot 3^{20} \cdot 13^5$
 \end{proof}
 
 \subsubsection{(c)}
+Is $n^5$ divisible by 20? Explain.
 
 \begin{proof}
-
+The answer is no. $20 = 2^2 \cdot 5$. So if $n^5$ is divisible by 20, it is divisible by 5. But 5 is not a factor of $n^5$, so it is not divisible by 5.
 \end{proof}
 
 \subsubsection{(d)}
+What is the least positive integer $m$ so that $8,424\cdot m$ is a perfect square?
 
 \begin{proof}
+The answer is 26. 
 
+In order for $8,424 \cdot m$ to be a perfect square, each prime factor must be raised to an even power.
+
+$8,424 = 2^3 \cdot 3^4 \cdot 13$. The prime factor $3$ already has an even power of 4. The prime factor $2$ has an odd power of 3, the closest even power is 4. The prime factor $13$ has an odd power of 1, the closest even power is 2. 
+
+So let $m = 2 \cdot 13 = 26$. Then $8,424 \cdot m = 2^3 \cdot 3^4 \cdot 13 \cdot (2 \cdot 13) = 2^4 \cdot 3^4 \cdot 13^2 = (2^2 \cdot 3^2 \cdot 13^1)^2$ is a perfect square. 
+
+$m = 26$ is the least positive integer for this; any positive integer smaller than 26 will not result in $8,424 \cdot m$ being a perfect square, since we need to increase the powers of both prime factors 2 and 13 by at least 1.
 \end{proof}
 
 \subsection{Exercise 39}
+Suppose that in standard factored form $a = p_1^{e_1} p_2^{e_2} \ldots p_k^{e_k}$, where $k$ is a positive integer; $p_1, p_2, \ldots, p_k$ are prime numbers; and $e_1, e_2, \ldots , e_k$ are positive integers.
 
 \subsubsection{(a)}
+What is the standard factored form for $a^3$?
 
 \begin{proof}
-
+$a^3 = (p_1^{e_1} p_2^{e_2} \ldots p_k^{e_k})^3 = p_1^{3e_1} p_2^{3e_2} \ldots p_k^{3e_k}$
 \end{proof}
 
 \subsubsection{(b)}
+Find the least positive integer $k$ such that $2^4 \cdot 3^5 \cdot 7 \cdot 11^2 \cdot k$ is a perfect cube (that is, it equals an integer to the third power). Write the resulting product as a perfect cube.
 
 \begin{proof}
+Every prime factor must be raised to a power that is a multiple of 3.
 
+So $2^4 \cdot 3^5 \cdot 7 \cdot 11^2$ should be turned into: $2^6 \cdot 3^6 \cdot 7^3 \cdot 11^3$ (because those powers are the closest multiples of 3).
+
+Therefore, let $k = 2^2 \cdot 3^1 \cdot 7^2 \cdot 11^1$. Now 
+
+$2^4 \cdot 3^5 \cdot 7 \cdot 11^2 \cdot k = 2^4 \cdot 3^5 \cdot 7 \cdot 11^2 \cdot (2^2 \cdot 3^1 \cdot 7^2 \cdot 11^1) = 2^6 \cdot 3^6 \cdot 7^3 \cdot 11^3 = (2^2 \cdot 3^2 \cdot 7^1 \cdot 11^1)^3$ is a perfect cube.
 \end{proof}
 
 \subsection{Exercise 40}
-
 \subsubsection{(a)}
+If $a$ and $b$ are integers and $12a = 25b$, does $12 \mid b$? does $25 \mid a$? Explain.
 
 \begin{proof}
-
+Because $12a = 25b$, the unique factorization theorem guarantees that the standard factored forms of $12a$ and $25b$ must be the same. Thus $25b$ contains the factors $2^2 \cdot 3 (=12)$. But since neither 2 nor 3 divides 25, the factors $2^2 \cdot 3$ must all occur in $b$, and hence $12\mid b$. Similarly, $12a$ contains the factors $5^2 = 25$, and since 5 is not a factor of 12, the factors $5^2$ must occur in $a$. So $25\mid a$.
 \end{proof}
 
 \subsubsection{(b)}
+If $x$ and $y$ are integers and $10x = 9y$, does $10 \mid y$? does $9 \mid x$? Explain.
 
 \begin{proof}
-
+Because $10x = 9y$, the unique factorization theorem guarantees that the standard factored forms of $10x$ and $9y$ must be the same. Thus $9y$ contains the factors $2 \cdot 5 (=10)$. But since neither 2 nor 5 divides 9, the factors $2 \cdot 5$ must all occur in $y$, and hence $10\mid y$. Similarly, $10x$ contains the factors $3^2 = 9$, and since 3 is not a factor of 10, the factors $3^2$ must occur in $x$. So $9\mid x$.
 \end{proof}
 
 \subsection{Exercise 41}
+How many zeros are at the end of $45^8 \cdot 88^5$? Explain how you can answer this question without actually computing the number. (Hint: $10 = 2\cdot 5$.)
 
 \begin{proof}
+$45^8 \cdot 88^5 =(3^2 \cdot 5)^8 \cdot (2^3 \cdot 11)^5 = 3^{16} \cdot 5^8 \cdot 2^{15} \cdot 11^5$. 
 
+Since $10 = 2 \cdot 5$, there are 8 factors of 10 in this number, because 8 is the smaller power between the powers of 2 and 5. 
+
+$5^8 \cdot 2^{15}$ can be combined as $(2\cdot5)^8 \cdot 2^7 = 10^8 \cdot 2^7$. So 7 powers of 2 are ``left over'' and they do not contribute to powers of 10 (in other words, zeros at the end of the number). 
 \end{proof}
 
 \subsection{Exercise 42}
+If $n$ is an integer and $n > 1$, then $n!$ is the product of $n$ and every other positive integer that is less than $n$. For example, $5! = 5\cdot4\cdot3\cdot2\cdot1$.
 
 \subsubsection{(a)}
+Write $6!$ in standard factored form.
 
 \begin{proof}
-
+$6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 2 \cdot 3 \cdot 5 \cdot 2 \cdot 2 \cdot 3 \cdot 2 = 2^4 \cdot 3^2  \cdot 5$
 \end{proof}
 
 \subsubsection{(b)}
+Write $20!$ in standard factored form.
 
 \begin{proof}
+$(20)! = 20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12 \cdot 11 \cdot 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2$
 
+$= (2^2 \cdot 5) \cdot 19 \cdot (2 \cdot 3^2) \cdot 17 \cdot (2^4) \cdot (3 \cdot 5) \cdot (2 \cdot 7) \cdot 13 \cdot (2^2 \cdot 3) \cdot 11 \cdot (2 \cdot 5) \cdot (3^2) \cdot (2^3) \cdot 7 \cdot (2 \cdot 3) \cdot 5 \cdot (2^2) \cdot 3 \cdot 2$
+
+$= 2^{18} \cdot 3^{8} \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 17 \cdot 19$
 \end{proof}
 
 \subsubsection{(c)}
+Without computing the value of $(20!)^2$ determine how many zeros are at the end of this number when it is written in decimal form. Justify your answer.
 
 \begin{proof}
+By part (b), $(20!) = 2^{18} \cdot 3^{8} \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 17 \cdot 19$.
 
+So $(20!)^2 = (2^{18} \cdot 3^{8} \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 17 \cdot 19)^2 = 2^{36} \cdot 3^{16} \cdot 5^8 \cdot 7^4 \cdot 11^2 \cdot 13^2 \cdot 17^2 \cdot 19^2$.
+
+To find the number of zeros at the end of this number, we look for the largest power of 10 in it. The largest power of 10 is the smaller of the powers of 2 and 5 (36 and 8), which is 8. So there are 8 zeros at the end.
 \end{proof}
 
 \subsection{Exercise 43}
+At a certain university $2/3$ of the mathematics students and $3/5$ of the computer science students have taken a discrete mathematics course. The number of mathematics students who have taken the course equals the number of computer science students who have taken the course. If there are at least 100 mathematics students at the university, what are the least possible number of mathematics students and the least possible number of computer science students at the university?
 
 \begin{proof}
+Let $m$ and $c$ denote the number of mathematics and computer science students, respectively.
 
+We are given that $2m/3 = 3c/5$. So $10m = 9c$. By Exercise 40 part (b), we have $10 \mid c$ and $9 \mid m$.
+
+The smallest possible value for $m$ such that $9 \mid m$ and $m \geq 100$ is $m = 108$. (99 is divisible by 9, then 108, then 117...)
+
+Putting this back into the equation we get $10(108) = 9c$ and solving for $c$ we get $c = 10(108)/9 = 120$.
 \end{proof}
 
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Definition:} Given any nonnegative integer $n$, the {\bf decimal representation} of $n$ is an expression of the form 
+$$
+d_k d_{k-1} \cdots d_2d_1d_0,
+$$ 
+where $k$ is a nonnegative integer, $d_0, d_1, d_2, \ldots, d_k$ (called the {\bf decimal digits} of $n$) are integers from 0 to 9 inclusive, $d_k \neq 0$ unless $n = 0$ and $k = 0$, and 
+$$
+n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0. 
+$$
+(For example, $2,503 = 2\cdot 10^3 + 5\cdot 10^2 + 0\cdot 10 + 3$.)
+\end{tcolorbox}
+
 \subsection{Exercise 44}
+Prove that if $n$ is any nonnegative integer whose decimal representation ends in 0, then $5\mid n$. (Hint: If the decimal representation of a nonnegative integer $n$ ends in $d_0$, then $n = 10m + d_0$ for some integer $m$.)
 
 \begin{proof}
-
+Suppose $n$ is a nonnegative integer whose decimal representation ends in 0. Then $n = 10m + 0 = 10m$ for
+some integer $m$. Factoring out a 5 yields $n = 10m = 5(2m)$, and $2m$ is an integer since $m$ is an integer. Hence $10m$ is divisible by 5, which is what was to be shown.
 \end{proof}
 
 \subsection{Exercise 45}
+Prove that if $n$ is any nonnegative integer whose decimal representation ends in $5$, then $5\mid n$.
 
 \begin{proof}
-
+Assume that if $n$ is any nonnegative integer whose decimal representation ends in $5$. Then by definition,
+$$
+n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + 5
+$$
+for some nonnegative integer $k$ and integers $d_1, \ldots, d_k$ from 0 to 9. If $k = 0$ then $n = 5$ which is divisible by 5. So we can assume $k \geq 1$. Now
+$$
+n = 10d_k \cdot 10^{k-1} + 10d_{k-1} \cdot 10^{k-2} + \cdots + 10d_2 \cdot 10^{2-1} + 10 d_1 + 5
+$$
+Now factoring out a 5 we get
+$$
+n = 5(2d_k \cdot 10^{k-1} + 2d_{k-1} \cdot 10^{k-2} + \cdots + 2d_2 \cdot 10 + 2 d_1 + 1)
+$$
+Let $t = 2d_k \cdot 10^{k-1} + 2d_{k-1} \cdot 10^{k-2} + \cdots + 2d_2 \cdot 10 + 2 d_1 + 1$. Then $t$ is an integer because it is a sum of products of integers. So $5 \mid n$ by definition of divides.
 \end{proof}
 
 \subsection{Exercise 46}
+Prove that if the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$ and if $4 \mid (10d_1 + d0)$, then $4\mid n$. (Hint: If the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$, then there is an integer $s$ such that $n = 100s + 10d_1 + d_0$.)
 
 \begin{proof}
+Assume the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$ and assume $4 \mid (10d_1 + d0)$. Let
+$$
+n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0. 
+$$
+be the decimal representation of $n$. Since the representation ends in $d_1d_0$, $k$ must be at least 2 or greater. Factoring out $10^2$ from the first $k-1$ terms, and leaving the last 2 terms alone, we get
+$$
+n = 10^2(d_k \cdot 10^{k-2} + d_{k-1} \cdot 10^{k-3} + \cdots + d_2 \cdot 10^{2-2}) + d_1 \cdot 10 + d_0. 
+$$
+Let $s = d_k \cdot 10^{k-2} + d_{k-1} \cdot 10^{k-3} + \cdots + d_2 \cdot 10^{2-2}$, which is an integer (being a sum of products of integers).
 
+So $n = 100s + 10d_1 + d_0$. Since $4 \mid (10d_1 + d0)$, we have $10d_1 + d0 = 4t$ for some integer $t$. Therefore $n = 100s + 10d_1 + d_0 = 100s + 4t = 4(25s+t)$.
+
+Let $r = 25s+t$, which is an integer (being a sum of products of integers). So $n = 4r$ where $r$ is an integer. So $4 \mid n$ by definition of divides.
 \end{proof}
 
 \subsection{Exercise 47}
+Observe that
+$$
+\begin{array}{rcl}
+7,524 &=& 7 \cdot 1,000 + 5 \cdot 100 + 2 \cdot 10 + 4\\
+&=& 7(999 + 1) + 5(99 + 1) + 2(9 + 1) + 4\\
+&=& (7 \cdot 999 + 7) + (5 \cdot 99 + 5) + (2 \cdot 9 + 2) + 4\\
+&=& (7 \cdot 999 + 5 \cdot 99 + 2 \cdot 9) + (7 + 5 + 2 + 4)\\
+&=& (7 \cdot 111 \cdot 9 + 5 \cdot 11 \cdot 9 + 2 \cdot 9) + (7 + 5 + 2 + 4)\\
+&=& (7 \cdot 111 + 5 \cdot 11 + 2) \cdot 9 + (7 + 5 + 2 + 4)\\
+&=& \text{(an integer divisible by 9) + (the sum of the digits of 7,524)}.
+\end{array}
+$$
+Since the sum of the digits of 7,524 is divisible by 9, 7,524 can be written as a sum of two integers each of which is divisible by 9. It follows from exercise 15 that 7,524 is divisible by 9. Generalize the argument given in this example to any nonnegative integer $n$. In other words, prove that for any nonnegative integer $n$, if the sum of the digits of $n$ is divisible by 9, then $n$ is divisible by 9.
 
+Hint: You may take it as a fact that for any positive
+integer $k$, 
+$$
+10^k = 9\cdot10^{k-1} + 9\cdot10^{k-2} + \ldots + 9\cdot10^1 + 9\cdot10^0 + 1.
+$$
 \begin{proof}
+First let's talk about the Hint. It tells us that, for any positive integer $k$, we have $10^k = 9(10^{k-1} +10^{k-2} + \ldots + 10^1 + 10^0) + 1$. (For example, if $k = 5$ then $10^5 = 100000 = 99999 + 1 = 9 \cdot 11111 + 1$.)
 
+In other words, every power of 10 can be written as: (some integer divisible by 9) + 1, or equivalently as: ($9 \cdot$ some integer) + 1.
+
+Assume $n$ is any nonnegative integer such that the sum of the digits of $n$ is divisible by 9. Let
+$$
+n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0. 
+$$
+be the decimal representation of $n$. By the Hint, 
+$$
+n = d_k \cdot (9a_k + 1) + d_{k-1} \cdot (9a_{k-1}+1) + \cdots + d_2 \cdot (9a_2+1) + d_1 \cdot (9a_1+1) + d_0
+$$
+for some integers $a_1, \ldots, a_k$. Multiplying out, we get:
+$$
+n = (9d_ka_k + d_k) + (9d_{k-1}a_{k-1} + d_{k-1}) + \cdots + (9d_2 a_2 + d_2) + (9d_1a_1 + d_1) + d_0
+$$
+Reorganizing, we get
+$$
+n = 9(d_ka_k + d_{k-1}a_{k-1} + \cdots + d_2 a_2 + d_1a_1) + (d_k + d_{k-1} + \cdots + d_2 + d_1 + d_0)
+$$
+The first term is divisible by 9. Therefore, $n$ is divisible by 9 if, and only if, the second term $(d_k + d_{k-1} + \cdots + d_2 + d_1 + d_0)$, in other words the sum of $n$'s digits, is also divisible by 9.
 \end{proof}
 
 \subsection{Exercise 48}
+Prove that for any nonnegative integer $n$, if the sum of the digits of $n$ is divisible by 3, then $n$ is divisible by 3.
 
 \begin{proof}
-
+This follows from the proof of Exercise 47. We can simply repeat the same proof, and at the end, since $9 = 3 \cdot 3$, we have
+$$
+n = (3 \cdot 3) \cdot(d_ka_k + d_{k-1}a_{k-1} + \cdots + d_2 a_2 + d_1a_1) + (d_k + d_{k-1} + \cdots + d_2 + d_1 + d_0)
+$$
+so the first term is divisible by 3, therefore $n$ is divisible by 3 if and only if the second term (sum of its digits) is also divisible by 3.
 \end{proof}
 
 \subsection{Exercise 49}
+Given a positive integer $n$ written in decimal form, the alternating sum of the digits of $n$ is obtained by starting with the right-most digit, subtracting the digit immediately to its left, adding the next digit to the left, subtracting the next digit, and so forth. For example, the alternating sum of the digits of 180,928 is $8 - 2 + 9 - 0 + 8 - 1 = 22$. Justify the fact that for any nonnegative integer $n$, if the alternating sum of the digits of $n$ is divisible by 11, then $n$ is divisible by 11.
 
 \begin{proof}
+The idea is the same as in Exercises 47 and 48. This time, we have to notice that for even powers of 10, like $100$ for example, we can write it as $100 = 99 + 1 = 11 \cdot 9 + 1$; but for odd powers of 10, like $1000$ for example, we can write $1000 = 1001 - 1 = 11 \cdot 91 - 1$.
 
+Taking a look at more examples of even powers of 10, we see $10,000 = 9,999 + 1 = 11 \cdot 909 + 1$, and $1,000,000 = 999,999 + 1 = 11 \cdot 90,909 + 1$ and so on.
+
+Taking a look at more examples of odd powers of 10, we see $100,000 = 100,001 - 1 = 11 \cdot 9091 - 1$, and $10,000,000 = 10,000,001 - 1 = 11 \cdot 909,091 - 1$ and so on.
+
+In general, if $k$ is a nonnegative integer, then we have $10^{2k} = 11 \cdot a + 1$ and $10^{2k+1} = 11 \cdot b - 1$ for some integers $a, b$. Putting these into one formula we get:
+$$
+\fa k \geq 0, \te a_k \geq 0 \text{ such that } 10^{k} = 11 \cdot a_k + (-1)^k.
+$$
+Now we can repeat the proof in Exercise 47 but using the above equation instead. We'll end up with:
+$$
+n = 11 \cdot(d_ka_k +\cdots + d_2 a_2 + d_1a_1) + ((-1)^{k}d_k +  \cdots + (-1)^{2}d_2 + (-1)^{1}d_1 + (-1)^{0}d_0)
+$$
+The first term on the right-hand side is divisible by 11. So $n$ is divisible by 11 if, and only if, the second term (the alternating sum of its digits) is divisible by 11.
 \end{proof}
 
 \subsection{Exercise 50}
+The integer 123,123 has the form $abc,abc$, where $a, b$, and $c$ are integers from 0 through 9. Consider all six-digit integers of this form. Which prime numbers divide every one of these integers? Prove your answer.
 
 \begin{proof}
-
+11 divides every one of these integers. Every one of these integers has an alternating sum of digits equal to 0, because: $a - b + c - a + b - c = 0$. Since $11 \mid 0$, by Exercise 49, 11 divides every one of these integers.
 \end{proof}
 
 \section{Exercise Set 4.5}
