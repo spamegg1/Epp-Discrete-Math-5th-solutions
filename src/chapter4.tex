@@ -2445,410 +2445,933 @@ The integer 123,123 has the form $abc,abc$, where $a, b$, and $c$ are integers f
 
 \section{Exercise Set 4.5}
 
+{\bf \cy For each of the values of $n$ and $d$ given in $1-6$, find integers $q$ and $r$ such that $n = dq + r$ and $0 \leq r < d$.}
+
 \subsection{Exercise 1}
+$n = 70, d = 9$
 
 \begin{proof}
-
+$q = 7, r = 7$
 \end{proof}
 
 \subsection{Exercise 2}
+$n = 62, d = 7$
 
 \begin{proof}
-
+$q = 8, r = 6$
 \end{proof}
 
 \subsection{Exercise 3}
+$n = 36, d = 40$
 
 \begin{proof}
-
+$q = 0, r = 36$
 \end{proof}
 
 \subsection{Exercise 4}
+$n = 3, d = 11$
 
 \begin{proof}
-
+$q = 0, r = 3$
 \end{proof}
 
 \subsection{Exercise 5}
+$n = -45, d = 11$
 
 \begin{proof}
-
+$q = -5, r = 10$
 \end{proof}
 
 \subsection{Exercise 6}
+$n = -27, d = 8$
 
 \begin{proof}
-
+$q = -4, r = 5$
 \end{proof}
+
+{\bf \cy Evaluate the expressions in $7-10$.}
 
 \subsection{Exercise 7}
 
 \subsubsection{(a)}
+43 div 9
 
 \begin{proof}
-
+4
 \end{proof}
 
 \subsubsection{(b)}
+$43 \mod 9$
 
 \begin{proof}
-
+7
 \end{proof}
 
 \subsection{Exercise 8}
 
 \subsubsection{(a)}
+50 div 7
 
 \begin{proof}
-
+7
 \end{proof}
 
 \subsubsection{(b)}
+$50 \mod 7$
 
 \begin{proof}
-
+1
 \end{proof}
 
 \subsection{Exercise 9}
 
 \subsubsection{(a)}
+28 div 5
 
 \begin{proof}
-
+5
 \end{proof}
 
 \subsubsection{(b)}
+$28 \mod 5$
 
 \begin{proof}
-
+3
 \end{proof}
 
 \subsection{Exercise 10}
+30 div 2
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+15
 \end{proof}
 
 \subsubsection{(b)}
+$30 \mod 2$
 
 \begin{proof}
-
+0
 \end{proof}
 
 \subsection{Exercise 11}
+Check the correctness of formula (4.5.1) given in Example 4.5.3 for the following values of $DayT$ and $N$.
 
 \subsubsection{(a)}
+$DayT = 6$ (Saturday) and $N = 15$
 
 \begin{proof}
-
+When today is Saturday, 15 days from today is two weeks (which is Saturday) plus one day (which is Sunday). Hence $DayN$ should be 0. According to the formula, when today is Saturday, $DayT = 6$, and so when $N = 15$,
+$$
+\begin{array}{rcl}
+DayN &=& (DayT + N) \mod 7 \\
+&=& (6 + 15) \mod 7 \\
+&=& 21 \mod 7 \\
+&=& 0,
+\end{array}
+$$
+which agrees.
 \end{proof}
 
 \subsubsection{(b)}
+$DayT = 0$ (Sunday) and $N = 7$
 
 \begin{proof}
-
+When today is Sunday, 7 days from today is one week (which is Sunday). Hence $DayN$ should be 0. According to the formula, when today is Sunday, $DayT = 0$, and so when $N = 7$,
+$$
+\begin{array}{rcl}
+DayN &=& (DayT + N) \mod 7 \\
+&=& (0 + 7) \mod 7 \\
+&=& 7 \mod 7 \\
+&=& 0,
+\end{array}
+$$
+which agrees.
 \end{proof}
 
 \subsubsection{(c)}
+$DayT = 4$ (Thursday) and $N = 12$
 
 \begin{proof}
-
+When today is Thursday, 12 days from today is one week (which is Thursday) plus 5 days (which is Tuesday). Hence $DayN$ should be 2. According to the formula, when today is Thursday, $DayT = 4$, and so when $N = 12$,
+$$
+\begin{array}{rcl}
+DayN &=& (DayT + N) \mod 7 \\
+&=& (4 + 12) \mod 7 \\
+&=& 16 \mod 7 \\
+&=& 2,
+\end{array}
+$$
+which agrees.
 \end{proof}
 
 \subsection{Exercise 12}
+Justify formula (4.5.1) for general values of $DayT$ and $N$.
+
+Formula 4.5.1 says: if $DayT$ is the day of the week today and $DayN$ is the day of the week in $N$ days, then $DayN = (DayT + N) \mod 7$, where Sunday = 0, Monday = 1, $\ldots$, Saturday = 6.
 
 \begin{proof}
+By the quotient-remainder theorem, $N = 7q + r$ for some integers $q$ and $r$ where $0 \leq r < 7$.
 
+If we start counting from Monday (assuming that today is Monday), then $N$ days later, the day of the week will be $r$ days after Monday.
+
+If, instead, we start counting from another day of the week (assume today is $DayT$ days after Monday, then $N$ days later, the day of the week will be $r+DayT$ days away from Monday.
+
+Since $0 \leq r \leq 6$ and $0 \leq DayT \leq 6$, we have $0 \leq r + DayT \leq 12$. So, to find the day of the week that is $r+DayT$ days after Monday, we have to take its remainder mod 7. (If $r+DayT \geq 7$ then we would have to subtract 7.)
+
+Therefore $DayN = (r+DayT) \mod 7 = (N + DayT) \mod 7$ (because $N = r \mod 7$).
 \end{proof}
 
 \subsection{Exercise 13}
+On a Monday a friend says he will meet you again in 30 days. What day of the week will that be?
 
 \begin{proof}
+Solution 1: $30 = 4\cdot 7 + 2$. Hence the answer is two days after Monday, which is Wednesday.
 
+Solution 2: By the formula, the answer is $(1 + 30) \mod
+7 = 31 \mod 7 = 3$, which is Wednesday.
 \end{proof}
 
 \subsection{Exercise 14}
+If today is Tuesday, what day of the week will it be 1,000 days from today?
+
+{\it Hint:} There are two ways to solve this problem. One is to find that $1,000 = 7\cdot 142 + 6$ and note that if today is Tuesday, then 1,000 days from today is 142 weeks plus 6 days from today. 
+
+The other way is to use the formula $DayN = (DayT + N) \mod 7$, with $DayT = 2$ (Tuesday) and $N = 1,000$.
 
 \begin{proof}
-
+For Tuesday, $DayT = 2$. According to the formula, when $N  = 1000$, $DayN = (DayT + N) \mod 7 = 1002 \mod 7 = 1$, which is Monday.
 \end{proof}
 
 \subsection{Exercise 15}
+January 1, 2000, was a Saturday, and 2000 was a leap year. What day of the week will January 1, 2050, be?
 
 \begin{proof}
+There are 13 leap years 2000-2050: 2000, 2004, 2008, $\ldots$, 2044, 2048. These 13 years contribute 366 days, one more than the usual 365. There are 50 years. So the total number of days between January 1, 2000 and January 1, 2050 is $365 \cdot 50 + 13 = 18263$.
 
+By the formula, where $DayT = 6$ for Saturday and $N = 18263$, we have $DayN = (DayT + N) \mod 7 = (6 + 18263) \mod 7$ $= 18269 \mod 7 = 6$ so it will be Saturday.
+
+(Another way to approach this problem is as follows: there are 52 weeks in every year, which add up to $52 \cdot 7 = 364$ days, which is 1 less than 365. So every non-leap year advances the day of the week by only 1 day, and every leap year advances the day of the week by 2 days, because they have 366 days.
+
+There are 37 non-leap years, which advance the day of the week by $37 \cdot 1 = 37$ days, and there are 13 leap years which advance the day of the week by $13 \cdot 2 = 26$ days. So the 50 years will advance the day of the week by $37 + 26 = 63$ days. Then we can use the formula with $N = 63$ instead: $DayN = (DayT + 63) \mod 7 = (6 + 63) \mod 7 = 6$, which is Saturday, as before.)
 \end{proof}
 
 \subsection{Exercise 16}
+Suppose $d$ is a positive and $n$ is any integer. If $d \mid n$, what is the remainder obtained when the quotient-remainder theorem is applied to $n$ with divisor $d$?
 
 \begin{proof}
-
+Because $d\mid n$, $n = dq + 0$ for some integer $q$. Thus the remainder is 0.
 \end{proof}
 
 \subsection{Exercise 17}
+Prove directly from the definitions that for every integer $n$, $n^2-n + 3$ is odd. Use division into two cases: $n$ is even and $n$ is odd.
 
 \begin{proof}
+Assume $n$ is any integer. {\it [Want to prove $n^2-n + 3$ is odd.]}
 
+{\bf Case 1:} $n$ is even.
+
+By definition of even, $n = 2k$ for some integer $k$. 
+
+Then $n^2-n + 3 = (2k)^2 - 2k + 3 = 4k^2 - 2k + 2 + 1 = 2(2k^2 - k + 1) + 1$. 
+
+Let $t = 2k^2 - k + 1$, which is an integer because it is a sum and product of integers. So $n^2 - n + 3 = 2t+1$ where $t$ is an integer. So by definition of odd, $n^2 - n + 3$ is odd.
+
+{\bf Case 2:} $n$ is odd.
+
+By definition of even, $n = 2k + 1$ for some integer $k$. 
+
+Then $n^2-n + 3 = (2k+1)^2 - 2(k+1) + 3 = 4k^2 + 4k + 4 - 2k - 2 + 3 = 4k^2 + 2k + 5 = 2(2k^2 + k + 2) + 1$. 
+
+Let $t = 2k^2 + k + 2$, which is an integer because it is a sum and product of integers. So $n^2 - n + 3 = 2t+1$ where $t$ is an integer. So by definition of odd, $n^2 - n + 3$ is odd.
 \end{proof}
 
 \subsection{Exercise 18}
 
 \subsubsection{(a)}
+Prove that the product of any two consecutive integers is even.
 
 \begin{proof}
+Assume $a,b$ are any two consecutive integers. By definition of consecutive, $a = n, b = n+1$ for some integer $n$. Then $ab = n(n+1)$.
 
+{\bf Case 1:} $n$ is even.
+
+By definition of even, $n = 2k$ for some integer $k$. Then $ab = n(n+1) = (2k)(2k+1) = 2(k^2+k)$, where $k^2+k$ is an integer (sum and product of integers). So by definition of even, $ab$ is even.
+
+{\bf Case 2:} $n$ is odd.
+
+By definition of odd, $n = 2k+1$ for some integer $k$. Then $ab = n(n+1) = (2k+1)(2k+2) = (2k+1)(2(k+1)) = 2(2k+1)(k+1) = 2(2k^2 + 3k + 1)$, where $2k^2 + 3k + 1$ is an integer (sum and product of integers). So by definition of even, $ab$ is even.
 \end{proof}
 
 \subsubsection{(b)}
+The result of part (a) suggests that the second approach in the discussion of Example 4.5.7 might be possible after all. Write a new proof of Theorem 4.5.3 based on this observation.
+
+{\bf Theorem 4.5.3} says: ``The square of any odd integer has the form $8m + 1$ for some integer $m$.''
 
 \begin{proof}
-
+Suppose $n$ is any odd integer. By definition of odd, $n = 2q + 1$ for some integer $q$. Then $n^2 = (2q + 1)^2 = 4q^2 + 4q + 1 = 4(q^2 + q) + 1 = 4q(q + 1) + 1$. By the result of part (a), the product $q(q + 1)$ is even, so $q(q + 1) = 2m$ for some integer $m$. Then, by substitution, $n^2 = 4\cdot2m + 1 = 8m + 1$.
 \end{proof}
 
 \subsection{Exercise 19}
+Prove directly from the definitions that for all integers $m$ and $n$, if $m$ and $n$ have the same parity, then $5m + 7n$ is even. Divide into two cases: $m$ and $n$ are both even and $m$ and $n$ are both odd.
 
 \begin{proof}
+Assume $m, n$ are any two integers that have the same parity. {\it [Want to prove $5m+7n$ is even.]}
 
+{\bf Case 1:} $m,n$ are both even.
+
+By definition of even, $m = 2r, n = 2s$ for some integers $r, s$.
+
+Then $5m+7n = 5(2r) + 7(2s) = 2(5r + 7s)$ where $5r + 7s$ is an integer (sum and product of integers). So by definition of even, $5m+7n$ is even.
+
+{\bf Case 2:} $m,n$ are both odd.
+
+By definition of even, $m = 2r+1, n = 2s+1$ for some integers $r, s$.
+
+Then $5m+7n = 5(2r+1) + 7(2s+1) = 10r+5+14s+7 = 2(5r+7s+6)$ where $5r+7s+6$ is an integer (sum and product of integers). So by definition of even, $5m+7n$ is even.
 \end{proof}
 
 \subsection{Exercise 20}
+Suppose $a$ is any integer. If $a \mod 7 = 4$, what is $5a \mod 7$? In other words, if division of $a$ by $7$ gives a remainder of 4, what is the remainder when $5a$ is divided by 7? Your solution should show that you obtain the same answer no matter what integer you start with.
 
 \begin{proof}
-
+Because $a \mod 7 = 4$, the remainder obtained when $a$ is divided by 7 is 4, and so $a = 7q + 4$ for some integer $q$. Multiplying this equation through by 5 gives that $5a = 35q + 20 = 35q + 14 + 6 = 7(5q + 2) + 6$. Because $q$ is an integer, $5q + 2$ is also an integer, and so $5a = 7\cdot$(an integer) $+ 6$. Thus, because $0 \leq 6 < 7$, the remainder obtained when $5a$ is divided by 7 is 6, and so $5a \mod 7 = 6$.
 \end{proof}
 
 \subsection{Exercise 21}
+Suppose $b$ is any integer. If $b \mod 12 = 5$, what is $8b \mod 12$? In other words, if division of $b$ by 12 gives a remainder of 5, what is the remainder when $8b$ is divided by 12? Your solution should show that you obtain the same answer no matter what integer you start with.
 
 \begin{proof}
-
+Because $b \mod 12 = 5$, the remainder obtained when $b$ is divided by 12 is 5, and so $b = 12q + 5$ for some integer $q$. Multiplying this equation through by 8 gives that $8b = 96q + 40 = 96q + 36 + 4 = 12(8q + 3) + 4$. Because $q$ is an integer, $8q + 3$ is also an integer, and so $8b = 12\cdot$(an integer) $+ 4$. Thus, because $0 \leq 4 < 12$, the remainder obtained when $8b$ is divided by 12 is 4, and so $8b \mod 12 = 4$.
 \end{proof}
 
 \subsection{Exercise 22}
+Suppose $c$ is any integer. If $c \mod 15 = 3$, what is $10c \mod 15$? In other words, if division of $c$ by 15 gives a remainder of 3, what is the remainder when $10c$ is divided by 15? Your solution should show that you obtain the same answer no matter what integer you start with.
 
 \begin{proof}
-
+Because $c \mod 15 = 3$, the remainder obtained when $c$ is divided by 15 is 3, and so $c = 15q + 3$ for some integer $q$. Multiplying this equation through by 10 gives that $10c = 150q + 30 = 15(10q + 2) + 0$. Because $q$ is an integer, $10q + 2$ is also an integer, and so $10c = 15\cdot$(an integer) $+ 0$. Thus, because $0 \leq 0 < 15$, the remainder obtained when $10c$ is divided by 15 is 0, and so $10c \mod 15 = 0$.
 \end{proof}
 
 \subsection{Exercise 23}
+Prove that for every integer $n$, if $n \mod 5 = 3$ then
+$n^2 \mod 5 = 4$.
 
 \begin{proof}
+Suppose $n$ is any {\it [particular but arbitrarily chosen]} integer such that $n \mod 5 = 3$. Then the remainder obtained when $n$ is divided by 5 is 3, and so $n = 5q + 3$ for some integer $q$. By substitution, 
 
+$n^2 = (5q + 3)^2 = 25q^2 + 30q + 9 = 25q^2 + 30q + 5 + 4 = 5(5q^2 + 6q + 1) + 4$.
+
+Because products and sums of integers are integers, $5q^2 + 6q + 1$ is an integer, and hence $n^2 = 5\cdot$ (an integer) $+ 4$. Thus, since $0 \leq 4 < 5$, the remainder obtained when $n^2$ is divided by 5 is 4, and so $n^2 \mod 5 = 4$.
 \end{proof}
 
 \subsection{Exercise 24}
+Prove that for all integers $m$ and $n$, if $m \mod 5 = 2$
+and $n \mod 5 = 1$ then $mn \mod 5 = 2$.
 
 \begin{proof}
+Suppose $m,n$ are any {\it [particular but arbitrarily chosen]} integers such that $m \mod 5 = 2$ and $n \mod 5 = 1$. 
 
+Then $m = 5q + 2$ and $n = 5s + 1$ for some integers $q,s$. By substitution, 
+
+$mn = (5q + 2)(5s+1) = 25qs + 5q + 10s + 2 = 5(5qs + q + 2s) + 2$.
+
+Because products and sums of integers are integers, $5qs + q + 2s$ is an integer, and hence $mn = 5\cdot$ (an integer) $+ 2$. Thus, since $0 \leq 2 < 5$, the remainder obtained when $mn$ is divided by 5 is 2, and so $mn \mod 5 = 2$.
 \end{proof}
 
 \subsection{Exercise 25}
+Prove that for all integers $a$ and $b$, if $a \mod 7 = 5$ and $b \mod 7 = 6$ then $ab \mod 7 = 2$.
 
 \begin{proof}
+Suppose $a,b$ are any {\it [particular but arbitrarily chosen]} integers such that $a \mod 7 = 5$ and $b \mod 7 = 6$. 
 
+Then $a = 7q + 5$ and $b = 7s + 6$ for some integers $q,s$. By substitution, 
+
+$ab = (7q + 5)(7s+6) = 49qs + 42q + 35s + 30 = 7(7qs + 6q + 5s + 4) + 2$.
+
+Because products and sums of integers are integers, $7qs + 6q + 5s + 4$ is an integer, and hence $ab = 7\cdot$ (an integer) $+ 2$. Thus, since $0 \leq 2 < 7$, the remainder obtained when $ab$ is divided by 7 is 2, and so $ab \mod 7 = 2$.
 \end{proof}
 
 \subsection{Exercise 26}
+Prove that a necessary and sufficient condition for an integer $n$ to be divisible by a positive integer $d$ is that $n \mod d = 0$.
+
+{\it Hint:} You need to show that (1) for each integer $n$ and positive integer $d$, if $n$ is divisible by $d$ then $n \mod d = 0$; and (2) for each integer $n$ and positive integer $d$, if $n \mod d = 0$ then $n$ is divisible by $d$.
 
 \begin{proof}
+Assume $n$ is any integer and $d$ is any positive integer.
 
+(1) Assume $n$ is divisible by $d$. {\it Want to prove $n \mod d = 0$.}
+
+By definition of divisible, $n = ad$ for some integer $a$. So $n = ad + 0$. This means that dividing $n$ by $d$ results in a remainder of $0$ where $0 \leq 0 < d$. By definition of $\mod$, we have $n \mod d = 0$.
+
+(2) Assume $n \mod d = 0$. {\it Want to prove $n$ is divisible by $d$.}
+
+By definition of $\mod$, $n = qd + 0$ for some integer $q$. So $n = qd$, where $q$ is an integer. By definition of divisible, $n$ is divisible by $d$.
 \end{proof}
 
 \subsection{Exercise 27}
+Use the quotient-remainder theorem with divisor equal to 2 to prove that the square of any integer can be written in one of the two forms $4k$ or $4k + 1$ for some integer $k$.
+
+{\it Hint:} Given any integer $n$, by the quotient-remainder theorem with divisor equal to 2, $n = 2q$, or $n = 2q + 1$ for some integer $q$.
 
 \begin{proof}
+Assume $n$ is any integer. {\it [Want to prove $n^2 = 4k$ or $n^2 = 4k+1$ for some integer $k$.]}
 
+By the quotient-remainder theorem $n = 2q+r$ for some integers $q, r$ where $0 \leq r < 2$.
+
+{\bf Case 1:} $r = 0$.
+
+Then $n = 2q$, so $n^2 = (2q)^2 = 4q^2$. Let $k = q^2$ which is an integer (square of an integer). So $n^2 = 4k$ for some integer $k$.
+
+{\bf Case 2:} $r = 1$.
+
+Then $n = 2q+1$, so $n^2 = (2q+1)^2 = 4q^2+4q+1 = 4(q^2+q)+1$. Let $k = q^2+q$ which is an integer (sum and product of integers). So $n^2 = 4k+1$ for some integer $k$.
+
+Since these two cases exhaust all the possibilities, we proved what was to be shown.
 \end{proof}
 
 \subsection{Exercise 28}
 
 \subsubsection{(a)}
+Prove: Given any set of three consecutive integers, one of the integers is a multiple of 3. 
 
 \begin{proof}
+(using the {\it Hint}:)
 
+Suppose that $n, n + 1$, and $n + 2$ are any three consecutive integers. Then by the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ where $0 \leq r < 3$.
+
+There are three cases:
+
+{\bf Case 1 ($n = 3q$ for some integer $q$).} In this case $n = 3q$ is a multiple of 3.
+
+{\bf Case 2 ($n = 3q + 1$ for some integer $q$).} In this case $n + 2 = (3q+1)+2 = 3q+3 = 3(q+1)$ is a multiple of 3 (because $q+1$ is an integer).
+
+{\bf Case 3 ($n = 3q + 2$ for some integer $q$).} In this case $n + 1 = (3q + 2) + 1 = 3q+3 = 3(q+1)$ is a multiple of 3 (because $q+1$ is an integer).
+
+Since these cases exhaust all the possibilities, we conclude that in all possible cases one of the integers is a multiple of 3.
 \end{proof}
 
 \subsubsection{(b)}
+Use the result of part (a) to prove that any product of three consecutive integers is a multiple of 3.
 
 \begin{proof}
+Assume $n, n+1, n+2$ are any three consecutive integers. By part (a) one of them is a multiple of 3. There are 3 cases:
 
+{\bf Case 1 ($n$) is a multiple of 3.} Then $n = 3k$ for some integer $k$. Then $n(n+1)(n+2) = (3k)(n+1)(n+2) = 3[k(n+1)(n+2)]$. Let $t = k(n+1)(n+2)$ which is a product of integers, therefore an integer. So $n(n+1)(n+2) = 3t$ for some integer $t$, so $n(n+1)(n+2)$ is a multiple of 3.
+
+{\bf Case 2 ($n+1$) is a multiple of 3.} Then $n+1 = 3k$ for some integer $k$. Then $n(n+1)(n+2) = n(3k)(n+2) = 3[kn(n+2)]$. Let $t = kn(n+2)$ which is a product of integers, therefore an integer. So $n(n+1)(n+2) = 3t$ for some integer $t$, so $n(n+1)(n+2)$ is a multiple of 3.
+
+{\bf Case 3 ($n+2$) is a multiple of 3.} Then $n+2 = 3k$ for some integer $k$. Then $n(n+1)(n+2) = n(n+1)(3k) = 3[kn(n+1)]$. Let $t = kn(n+1)$ which is a product of integers, therefore an integer. So $n(n+1)(n+2) = 3t$ for some integer $t$, so $n(n+1)(n+2)$ is a multiple of 3.
+
+Since these cases exhaust all possibilities, in all possible cases their product is a multiple of 3.
 \end{proof}
 
 \subsection{Exercise 29}
 
 \subsubsection{(a)}
+Use the quotient-remainder theorem with divisor equal to 3 to prove that the square of any integer has the form $3k$ or $3k + 1$ for some integer $k$.
 
 \begin{proof}
+(using the {\it Hint}) 
 
+Assume $n$ is any integer. By the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ with $0 \leq r < 3$. There are 3 cases depending on the value of $r$:
+
+{\bf Case 1:} $n = 3q$.
+
+Then $n^2 = (3q)^2 = 9q^2 = 3(3q^2)$. Let $k = 3q^2$, which is an integer since it's a product of integers. Therefore $n = 3k$ for some integer $k$.
+
+{\bf Case 2:} $n = 3q + 1$.
+
+Then $n^2 = (3q+1)^2 = 9q^2 + 6q + 1 = 3(3q^2 + 2q) + 1$. Let $k = 3q^2 + 2q$, which is an integer since it's a sum and product of integers. Therefore $n = 3k + 1$ for some integer $k$.
+
+{\bf Case 3:} $n = 3q + 2$
+
+Then $n^2 = (3q+2)^2 = 9q^2 + 12q + 4 = 3(3q^2 + 4q + 1) + 1$. Let $k = 3q^2 + 4q+1$, which is an integer since it's a sum and product of integers. Therefore $n = 3k + 1$ for some integer $k$.
+
+Since these exhaust all the possibilities, in all cases $n = 3k$ or $n = 3k+1$ for some integer $k$.
 \end{proof}
 
 \subsubsection{(b)}
+Use the mod notation to rewrite the result of part (a).
 
 \begin{proof}
+The square of any integer $\mod 3$ is either 0 or 1.
 
+If $n$ is any integer, then $n^2 = 0 \mod 3$ or $n^2 = 1 \mod 3$.
 \end{proof}
 
 \subsection{Exercise 30}
 
 \subsubsection{(a)}
+Use the quotient-remainder theorem with divisor equal to 3 to prove that the product of any two consecutive integers has the form $3k$ or $3k + 2$ for some integer $k$.
 
 \begin{proof}
+Assume $n$ and $n+1$ are any two consecutive integers. By the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ with $0 \leq r < 3$. There are 3 cases depending on the value of $r$:
 
+{\bf Case 1:} $n = 3q$.
+
+Then $n(n+1) = (3q)(3q+1) = 9q^2 + 3q = 3(3q^2 + q)$. Let $k = 3q^2 + q$, which is an integer since it's a sum and product of integers. Therefore $n(n+1) = 3k$ for some integer $k$.
+
+{\bf Case 2:} $n = 3q + 1$.
+
+Then $n(n+1) = (3q+1)(3q+2) = 9q^2 + 9q + 2 = 3(3q^2 + 3q) + 2$. Let $k = 3q^2 + 3q$, which is an integer since it's a sum and product of integers. Therefore $n = 3k + 2$ for some integer $k$.
+
+{\bf Case 3:} $n = 3q + 2$
+
+Then $n(n+1) = (3q+2)(3q+3) = 9q^2 + 15q + 6 = 3(3q^2 + 5q + 2)$. Let $k = 3q^2 + 5q + 2$, which is an integer since it's a sum and product of integers. Therefore $n = 3k$ for some integer $k$.
+
+Since these exhaust all the possibilities, in all cases $n(n+1) = 3k$ or $n(n+1) = 3k+2$ for some integer $k$.
 \end{proof}
 
 \subsubsection{(b)}
+Use the$ $mod$ $notation to rewrite the result of part (a).
 
 \begin{proof}
-
+For any integer $n$, $n(n+1) = 0 \mod 3$ or $n(n+1) = 2 \mod 3$.
 \end{proof}
+
+{\bf \cy In $31-33$, you may use the properties listed in example 4.3.3.}
 
 \subsection{Exercise 31}
 
 \subsubsection{(a)}
+Prove that for all integers $m$ and $n$, $m + n$ and $m - n$ are either both odd or both even.
 
 \begin{proof}
+Assume $m,n$ are any two integers. There are 4 cases.
 
+{\bf Case 1.} $m,n$ are both odd.
+
+Then $m = 2r+1, n = 2s+1$ for some integers $r,s$. 
+
+So $m+n = 2r + 2s + 2 = 2(r+s+1)$ is even, and $m-n = 2r - 2s = 2(r-s)$ is even.
+
+{\bf Case 2.} $m,n$ are both even.
+
+Then $m = 2r, n = 2s$ for some integers $r,s$.
+
+So $m+n = 2r + 2s  = 2(r+s)$ is even, and $m-n = 2r - 2s = 2(r-s)$ is even.
+
+{\bf Case 3.} $m$ is odd, $n$ is even.
+
+Then $m = 2r+1, n = 2s$ for some integers $r,s$.
+
+So $m+n = 2r + 2s + 1 = 2(r+s) +1$ is odd, and $m-n = 2r - 2s + 1 = 2(r-s) + 1$ is odd.
+
+{\bf Case 4.} $m$ is even, $n$ is odd.
+
+Then $m = 2r, n = 2s+1$ for some integers $r,s$.
+
+So $m+n = 2r + 2s + 1 = 2(r+s)+1$ is even, and $m-n = 2r - 2s - 1 = 2r - 2s - 2 + 1 = 2(r-s - 1) + 1$ is odd.
+
+Since these cases exhaust all possibilities, we proved that $m+n$ and $m-n$ are either both odd or both even for all integers $m,n$.
 \end{proof}
 
 \subsubsection{(b)}
+Find all solutions to the equation $m^2 - n^2 = 56$ for which both $m$ and $n$ are positive integers.
 
 \begin{proof}
-
+If $m^2 - n^2 = 56$, then $56 = (m + n)(m - n)$. Now $56 = 2^3 \cdot 7$, and by the unique factorization theorem, this factorization is unique. Hence the only representation of 56 as a product of two positive integers are $56 = 7\cdot8 = 14\cdot4 = 28\cdot2 = 56\cdot1$. By part (a), $m$ and $n$ must both be odd or both be even. Thus the only solutions are either $m + n = 14$ and $m - n = 4$ or $m + n = 28$ and $m - n = 2$. It follows that the only solutions are either $m = 9$ and $n = 5$ or $m = 15$ and $n = 13$.
 \end{proof}
 
 \subsubsection{(c)}
+Find all solutions to the equation $m^2 - n^2 = 88$ for which both $m$ and $n$ are positive integers.
 
 \begin{proof}
-
+If $m^2 - n^2 = 88$, then $88 = (m + n)(m - n)$. Now $88 = 2^3 \cdot 11$, and by the unique factorization theorem, this factorization is unique. Hence the only representation of 88 as a product of two positive integers are $88 = 11\cdot8 = 22\cdot4 = 44\cdot2 = 88\cdot1$. By part (a), $m$ and $n$ must both be odd or both be even. Thus the only solutions are either $m + n = 22$ and $m - n = 4$ or $m + n = 44$ and $m - n = 2$. It follows that the only solutions are either $m = 13$ and $n = 9$ or $m = 23$ and $n = 21$.
 \end{proof}
 
 \subsection{Exercise 32}
+Given any integers $a, b$, and $c$, if $a - b$ is even and $b - c$ is even, what can you say about the parity of $2a - (b + c)$? Prove your answer.
 
 \begin{proof}
+Under the given conditions, $2a - (b + c)$ is even.
 
+Suppose $a, b$, and $c$ are any integers such that $a - b$
+is even and $b - c$ is even. [We must show that $2a - (b + c)$ is even.] 
+
+Note first that $2a - (b + c) = (a - b) + (a - c)$. Also note that $(a - b) + (b - c)$ is a sum of two even integers and hence is even by Example 4.3.3 \#1. But $(a - b) + (b - c) = a - c$, and so $a - c$ is even. Hence $2a - (b + c)$ is a sum of two even integers, and thus it is even {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 33}
+Given any integers $a, b$, and $c$, if $a - b$ is odd and
+$b - c$ is even, what can you say about the parity of
+$a - c$? Prove your answer.
 
 \begin{proof}
+Under the given conditions, $a - c$ is even.
 
+Suppose $a, b$, and $c$ are any integers such that $a - b$
+is odd and $b - c$ is even. [We must show that $a - c$ is even.] 
+
+Note first that $a - c = (a - b) + (b - c)$. Also note that $(a - b) + (b - c)$ is a sum of an odd integer and an even integer and hence is odd by Example 4.3.3 \#5. Hence $a - c$ is odd {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 34}
+Given any integer $n$, if $n > 3$, could $n, n + 2$, and
+$n + 4$ all be prime? Prove or give a counterexample.
+
+{\it Hint:} Express $n$ using the quotient-remainder theorem with $d = 3$.
 
 \begin{proof}
+Assume $n>3$ is any integer. By the quotient-remainder theorem, $n = 3q+r$ for some integers $q,r$ where $0 \leq r < 3$.
 
+{\bf Case 1.} $r = 0$.
+
+Then $n = 3q$ is not prime because it is divisible by 3.
+
+{\bf Case 2.} $r = 1$.
+
+Then $n+2 = (3q+1)+2 = 3q+3 = 3(q+1)$ is not prime because it is divisible by 3.
+
+{\bf Case 3.} $r = 2$.
+
+Then $n+4 = (3q+2)+4 = 3q+6 = 3(q+2)$ is not prime because it is divisible by 3.
+
+Since these cases exhaust all possibilities, it is impossible for $n, n+2, n+4$ to be all prime for any integer $n>3$.
 \end{proof}
 
+{\bf \cy Prove each of the statements in $35-43$.}
+
 \subsection{Exercise 35}
+The fourth power of any integer has the form $8m$ or $8m + 1$ for some integer $m$.
 
 \begin{proof}
+Assume $n$ is any integer. {\it [Want to prove $n^4 = 8m$ or $n^4 = 8m+1$ for some integer $m$.]}
 
+{\bf Case 1.} $n$ is even.
+
+By definition of even, $n = 2k$ for some integer $k$. So $n^4 = (2k)^4 = 16k^4 = 2(8k^4)$. 
+
+Let $m = 8k^4$ which is an integer since it's a product of integers. So $n^4 = 8m$ where $m$ is an integer.
+
+{\bf Case 2.} $n$ is odd.
+
+By definition of odd, $n = 2k+1$ for some integer $k$. So 
+
+$n^4 = (2k+1)^4 = (2k)^4 + 4 \cdot (2k)^3 + 6 \cdot (2k)^2 + 4 \cdot (2k) + 1$ 
+
+$= 16k^4 + 32k^3 + 24k^2 + 8k + 1 = 8(2k^4 + 4k^3 + 3k^2 + k) + 1$.
+
+Let $m = 2k^4 + 4k^3 + 3k^2 + k$ which is an integer since it's a sum and product of integers. So $n^4 = 8m + 1$ where $m$ is an integer.
+
+Since these cases exhaust all possibilities, $n^4 = 8m$ or $n^4 = 8m+1$ for some integer $m$ {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 36}
+The product of any four consecutive integers is divisible by 8.
+
+{\it Hint:} Use the quotient-remainder theorem (as in Example 4.5.6) to say that $n = 4q, n = 4q + 1, n = 4q + 2$, or $n = 4q + 3$ and divide into cases accordingly.
 
 \begin{proof}
+Assume $n, n+1, n+2, n+3$ are any four consecutive integers. {\it [Want to prove that their product is equal to $8m$ for some integer $m$.]}
 
+By the quotient-remainder theorem, $n = 4q+r$ for some integers $r,q$ with $0 \leq r < 4$.
+
+{\bf Case 1:} $n = 4q + 0$.
+
+Then $n(n+1)(n+2)(n+3) = 4q(4q+1)(4q+2)(4q+3) = 4q(4q+1)2(2q+1)(4q+3) = 8[q(4q+1)(2q+1)(4q+3)]$.
+
+Let $m = q(4q+1)(2q+1)(4q+3)$, which is an integer because it's a sum and product of integers. Then $n(n+1)(n+2)(n+3) = 8m$ where $m$ is an integer.
+
+{\bf Case 2:} $n = 4q + 1$.
+
+Then $n(n+1)(n+2)(n+3) = (4q+1)(4q+2)(4q+3)(4q+4) = (4q+1)2(2q+1)(4q+3)4(q+1) = 8[(4q+1)(2q+1)(4q+3)(q+1)]$.
+
+Let $m = (4q+1)(2q+1)(4q+3)(q+1)$, which is an integer because it's a sum and product of integers. Then $n(n+1)(n+2)(n+3) = 8m$ where $m$ is an integer.
+
+{\bf Case 3:} $n = 4q + 2$.
+
+Then $n(n+1)(n+2)(n+3) = (4q+2)(4q+3)(4q+4)(4q+5) = 2(2q+1)(4q+3)4(q+1)(4q+5) = 8[(2q+1)(4q+3)(q+1)(4q+5)]$.
+
+Let $m = (2q+1)(4q+3)(q+1)(4q+5)$, which is an integer because it's a sum and product of integers. Then $n(n+1)(n+2)(n+3) = 8m$ where $m$ is an integer.
+
+{\bf Case 4:} $n = 4q + 3$.
+
+Then $n(n+1)(n+2)(n+3) = (4q+3)(4q+4)(4q+5)(4q+6) = (4q+3)4(q+1)(4q+5)2(2q+3) = 8[(4q+3)(q+1)(4q+5)(2q+3)]$.
+
+Let $m = (4q+3)(q+1)(4q+5)(2q+3)$, which is an integer because it's a sum and product of integers. Then $n(n+1)(n+2)(n+3) = 8m$ where $m$ is an integer.
+
+Since these cases exhaust all possibilities, we have proved what was to be shown.
 \end{proof}
 
 \subsection{Exercise 37}
+For any integer $n$, $n^2 + 5$ is not divisible by 4.
+
+{\it Hint:} Given any integer $n$, consider the two cases where $n$ is even and where $n$ is odd.
 
 \begin{proof}
+Assume $n$ is any integer. {\it [Want to prove $n^2+5$ is not divisible by 4.]}
 
+{\bf Case 1.} $n$ is even. Then $n = 2k$ for some integer $k$.
+
+Then $n^2+5 = (2k)^2+5 = 4k^2+5 = 4(k^2+1)+1$ where $k^2+1$ is an integer. Therefore $n \mod 4 = 1$ which means $4 \nmid n$ by Exercise 26.
+
+{\bf Case 2.} $n$ is odd. Then $n = 2k+1$ for some integer $k$.
+
+Then $n^2+5 = (2k+1)^2+5 = 4k^2+4k+1+5 = 4(k^2+k+1)+2$ where $k^2+k+1$ is an integer. Therefore $n \mod 4 = 2$ which means $4 \nmid n$ by Exercise 26.
+
+Since these cases exhaust all possibilities, we have proved that $n^2+5$ is not divisible by 4.
 \end{proof}
 
 \subsection{Exercise 38}
+For every integer $m$, $m^2 = 5k$, or $m^2 = 5k + 1$, or $m^2 = 5k + 4$ for some integer $k$.
 
 \begin{proof}
+Assume $m$ is any integer. By the quotient-remainder theorem $m = 5q+r$ for some integers $q,r$ where $0 \leq r < 5$. There are 5 cases:
 
+{\bf Case 1:} $r = 0$. So $m = 5q + 0$ and $m^2 = (5q+0)^2 = 25q^2$.
+
+Then $m^2 = 25q^2 = 5(5q^2)$.
+
+Let $k = 5q^2$ which is an integer because it's a product of integers. So $m^2 = 5k$ where $k$ is an integer.
+
+{\bf Case 2:} $r = 1$. So $m = 5q + 1$ and $m^2 = (5q + 1)^2 = 25q^2 + 10q + 1$.
+
+Then $m^2 = 25q^2 + 10q + 1 = 5(5q^2+2q)+1$.
+
+Let $k = 5q^2+2q$ which is an integer because it's a sum and product of integers. So $m^2 = 5k + 1$ where $k$ is an integer.
+
+{\bf Case 3:} $r = 2$. So $m = 5q + 2$ and $m^2 = (5q + 2)^2 = 25q^2 + 20q + 4$.
+
+Then $m^2 = 25q^2 + 20q + 4 = 5(5q^2+4q)+4$.
+
+Let $k = 5q^2+4q$ which is an integer because it's a sum and product of integers. So $m^2 = 5k +4$ where $k$ is an integer.
+
+{\bf Case 4:} $r = 3$. So $m = 5q + 3$ and $m^2 = (5q + 3)^2 = 25q^2 + 30q+9$.
+
+Then $m^2 = 25q^2 + 30q+9 = 5(5q^2+6q+1)+4$.
+
+Let $k = 5q^2+6q+1$ which is an integer because it's a sum and product of integers. So $m^2 = 5k + 4$ where $k$ is an integer.
+
+{\bf Case 5:} $r = 4$. So $m = 5q + 4$ and $m^2 = (5q + 4)^2 = 25q^2 + 40q + 16$.
+
+Then $m^2 = 25q^2 + 40q + 16 = 5(5q^2+8q+3)+1$.
+
+Let $k = 5q^2+8q+3$ which is an integer because it's a sum and product of integers. So $m^2 = 5k + 1$ where $k$ is an integer.
+
+Since these cases exhaust all possibilities, we have proved for any integer $m$, $m^2 = 5k$ or $m^2 = 5k+1$ or $m^2 = 5k+4$ for some integer $k$.
 \end{proof}
 
 \subsection{Exercise 39}
+Every prime number except 2 and 3 has the form $6q + 1$ or $6q + 5$ for some integer $q$.
+
+{\it Hint:} Use the quotient-remainder theorem to say that $p$ must have one of the forms $6q, 6q + 1, 6q + 2, 6q + 3, 6q + 4$, or $6q + 5$ for some integer $q$. Then use the fact that $p$ is prime and not equal to either 2 or 3 to show that you only need to consider two cases.
 
 \begin{proof}
+Assume $p$ is any prime number except 2 and 3. By the quotient-remainder theorem $p = 6q+r$ for some integers, where $0 \leq r < 6$. There are 6 cases.
 
+{\bf Case 1:} $r = 0$. Then $p = 6q$ is divisible by $6$, contradicting the fact that $p$ is prime. So this case is impossible.
+
+{\bf Case 2:} $r = 1$. Then $p = 6q+1$ for some integer $q$ as was to be shown.
+
+{\bf Case 3:} $r = 2$. Then $p = 6q+2 = 2(3q+1)$ is divisible by $2$, contradicting the fact that $p$ is prime. So this case is impossible.
+
+{\bf Case 4:} $r = 3$. Then $p = 6q+3 = 3(2q+1)$ is divisible by $3$, contradicting the fact that $p$ is prime. So this case is impossible.
+
+{\bf Case 5:} $r = 4$. Then $p = 6q+4 = 2(3q+2)$ is divisible by $2$, contradicting the fact that $p$ is prime. So this case is impossible.
+
+{\bf Case 6:} $r = 5$. Then $p = 6q+5$ for some integer $q$ as was to be shown.
+
+Since these cases exhaust all possibilities, we proved that $p = 6q+1$ or $p = 6q+5$ for some integer $q$.
 \end{proof}
 
 \subsection{Exercise 40}
+If $n$ is any odd integer, then $n^4 \mod 16 = 1$.
 
 \begin{proof}
+Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$.
 
+Then $n^4 = (2k+1)^4 = (2k)^4 + 4(2k)^3 + 6(2k)^2 + 4(2k) + 1 = 16k^4 + 32k^3 + 24k^2 + 8k + 1 = 16k^4 + 32k^3 + 16k^2 + 8k^2 + 8k + 1 = 16(k^4 + 2k^3+ k^2) + 8k^2 + 8k + 1$
+
+$= 16(k^4 + 2k^3+ k^2) + 8k(k + 1) + 1$.
+
+By an earlier Exercise, the product of any two consecutive integers is even. So $k(k+1)$ is even. So $k(k+1) = 2s$ for some integer $s$. Then
+
+$n^4 = 16(k^4 + 2k^3+ k^2) + 8(2s) + 1 = 16(k^4 + 2k^3+ k^2 + s) + 1$.
+
+Let $t = k^4 + 2k^3+ k^2 + s$ which is an integer because it's a sum and product of integers. Therefore $n^4 = 16t + 1$ for some integer $t$. Since $0 \leq 1 < 16$, the remainder of dividing $n^4$ by 16 is 1. So by definition of mod, $n^4 \mod = 1$.
 \end{proof}
 
 \subsection{Exercise 41}
+For all real numbers $x$ and $y$, $|x| \cdot |y| = |xy|$.
 
 \begin{proof}
+Assume $x,y$ are any two real numbers. There are 2 cases.
 
+{\bf Case 1:} $x \geq 0$. In this case $|x| = x$ by definition of absolute value. There are 2 subcases.
+
+{\bf Subcase 1.1:} $y \geq 0$. In this subcase $|y| = y$ by definition of absolute value. Moreover notice that $xy \geq 0$ therefore $|xy| = xy$ by definition of absolute value. So $|x||y| = xy = |xy|$.
+
+{\bf Subcase 1.2:} $y < 0$. In this subcase $|y| = -y$ by definition of absolute value. Moreover notice that $xy \leq 0$ therefore $|xy| = -xy$ by definition of absolute value. So $|x||y| = x(-y) = -xy = |xy|$.
+
+{\bf Case 2:} $x < 0$. In this case $|x| = -x$ by definition of absolute value. There are 2 subcases.
+
+{\bf Subcase 2.1:} $y \geq 0$. In this subcase $|y| = y$ by definition of absolute value. Moreover notice that $xy \leq 0$ therefore $|xy| = -xy$ by definition of absolute value. So $|x||y| = (-x)y = -xy = |xy|$.
+
+{\bf Subcase 2.2:} $y < 0$. In this subcase $|y| = -y$ by definition of absolute value. Moreover notice that $xy \geq 0$ therefore $|xy| = xy$ by definition of absolute value. So $|x||y| = (-x)(-y) = xy = |xy|$.
+
+In all cases we showed $|x||y| = |xy|$. Since these cases exhaust all possibilities, $|x||y| = |xy|$ for all real numbers $x,y$.
 \end{proof}
 
 \subsection{Exercise 42}
+For all real numbers $r$ and $c$ with $c \geq 0$, $-c \leq r \leq c$ if, and only if, $|r| \leq c$. (Hint: Proving $A$ if, and only if, $B$ requires proving both if $A$ then $B$ and if $B$ then $A$.)
 
 \begin{proof}
+Assume $-c \leq r \leq c$. We want to prove $|r| \leq c$. There are two cases:
 
+{\bf Case 1.} $r \geq 0$. Then $|r| = r$. Since we know $r \leq c$, we have by substitution $|r| \leq c$.
+
+{\bf Case 2.} $r < 0$. Then $|r| = -r$. Since we know $-c \leq r$, multiplying this inequality by $-1$ we get $c \geq -r$, in other words $-r \leq c$. So we have by substitution $|r| \leq c$.
+
+Now we want to prove the converse.
+
+Assume $|r| \leq c$. We want to prove $-c \leq r \leq c$.
+
+{\bf Case 1.} $r \geq 0$. Then $|r| = r$. Since we know $|r| \leq c$, by substitution we get $r \leq c$. 
+
+We know $c \geq 0$ so $-c \leq 0$. We also know $0 \leq r$, so combining these we get $-c \leq 0 \leq r$, and by transitivity $-c \leq r$.
+
+Combining these two results we get $-c \leq r \leq c$.
+
+{\bf Case 2.} $r < 0$. Then $|r| = -r$.  Since we know $|r| \leq c$, by substitution we get $-r \leq c$. Multiplying this inequality by $-1$ gives us $r \geq -c$, in other words $-c \leq r$.
+
+We know $c \geq 0$ in other words $0 \leq c$. We also know $r < 0$, so combining these we get $r < 0 \leq c$, and by transitivity $r \leq c$.
+
+Combining these two results we get $-c \leq r \leq c$.
 \end{proof}
 
 \subsection{Exercise 43}
+For all real numbers $a$ and $b$, $||a| - |b|| \leq |a - b|$.
+
+{\it Hint:} Apply the triangle inequality with $x = a - b$ and $y = b$ and with $x = b - a$ and $y = a$. Then use the result of exercise 42.
 
 \begin{proof}
+(using the Hint)
 
+Let $x = a-b, y = b$. By triangle inequality $|x+y| \leq |x|+ |y|$ we have: 
+
+$|(a-b)+b| = |a| \leq |a-b|+|b|$. Therefore $|a| - |b| \leq |a-b|$.
+
+Let $x = b-a, y = a$. By triangle inequality $|x+y| \leq |x|+ |y|$ we have: 
+
+$|(b-a)+a| = |b| \leq |b-a|+|a|$. Therefore $-|b-a| \leq |a| - |b|$.
+
+Notice $|b-a| = |a-b|$ so we have $-|a-b| \leq |a| - |b|$.
+
+Combining these two results we have $-|a-b| \leq |a| - |b| \leq |a-b|$.
+
+Then by Exercise 42 (where $c = |a-b|$ and $r = |a| - |b|$), we have $||a| - |b|| \leq |a-b|$.
 \end{proof}
 
 \subsection{Exercise 44}
+A matrix {\bf M} has 3 rows and 4 columns.
+$$
+\left[
+\begin{array}{cccc}
+a_{11}&a_{12}&a_{13}&a_{14}\\
+a_{21}&a_{22}&a_{23}&a_{24}\\
+a_{31}&a_{32}&a_{33}&a_{34}\\
+\end{array}
+\right]
+$$
+The 12 entries in the matrix are to be stored in {\it row major} form in locations 7,609 to 7,620 in a computer’s memory. This means that the entries in the first row (reading left to right) are stored first, then the entries in the second row, and finally the entries in the third row.
 
 \subsubsection{(a)}
+Which location will $a_{22}$ be stored in?
 
 \begin{proof}
-
+$7,609 + 5 = 7,614$
 \end{proof}
 
 \subsubsection{(b)}
+Write a formula (in $i$ and $j$) that gives the integer $n$ so that $a_{ij}$ is stored in location $7,609 + n$.
 
 \begin{proof}
-
+$n = 4\cdot (i-1) + j - 1$
 \end{proof}
 
 \subsubsection{(c)}
+Find formulas (in $n$) for $r$ and $s$ so that $a_{rs}$ is stored in location $7,609 + n$.
 
 \begin{proof}
-
+$r = 1 + (n$ div $4), s = 1 + (n \mod 4)$
 \end{proof}
 
 \subsection{Exercise 45}
+Let {\bf M} be a matrix with $m$ rows and $n$ columns, and suppose that the entries of {\bf M} are stored in a computer’s memory in row major form (see exercise 44) in locations $N, N + 1, N + 2, \ldots, N + mn - 1$. Find formulas in $k$ for $r$ and $s$ so that $a_{rs}$ is stored in location $N + k$.
 
 \begin{proof}
-
+$r = 1 + (k$ div $n), s = 1 + (k \mod n)$
 \end{proof}
 
 \subsection{Exercise 46}
+If $m, n$, and $d$ are integers, $d > 0$, and $m \mod d = n \mod d$, does it necessarily follow that $m = n$? That $m - n$ is divisible by $d$? Prove your answers.
 
 \begin{proof}
+{\it Answer to first question:} No. Counterexample: Let $m = 1, n = 3$, and $d = 2$. Then $m \mod d = 1$ and $n \mod d = 1$ but $m \neq n$.
 
+{\it Answer to second question:} Yes. Proof: Suppose $m, n$, and $d$ are integers such that $m \mod d = n \mod d$. Let $r = m \mod d = n mod d$. By definition of mod, $m = dp + r$ and $n = dq + r$ for some integers $p$ and $q$. Then $m - n = (dp + r) - (dq + r) = d(p - q)$. But $p - q$ is an integer (being a difference of integers), and so $m - n$ is divisible by $d$ by definition of divisible.
 \end{proof}
 
 \subsection{Exercise 47}
+If $m$, $n$, and $d$ are integers, $d > 0$, and $d \mid (m - n)$, what is the relation between \\ $m \mod d$ and $n \mod d$? Prove your answer.
 
 \begin{proof}
+{\it Answer:} They are equal. Let's prove the answer.
 
+Let $r = m \mod d$ and $s = n \mod d$.
+
+By definition of mod, $m = da+r$ and $n = db+s$ for some integers $a,b$, where $0 \leq r < d$ and $0 \leq s < d$.
+
+Since $d \mid (m - n)$, by definition of divides, $m-n = dq$ for some integer $q$. 
+
+Substituting, we get $m-n = (da+r) - (db+s) = dq$.
+
+So $da+r-db-s-dq = 0$. Organizing, we get $d(a-b-q) + r-s = 0$. So $r-s = d(q-a+b)$. This means $r-s$ is a multiple of $d$.
+
+Since $0 \leq r < d$ and $0 \leq s < d$, the range of possible values of $r-s$ is: $-d+1, -d+2, \ldots, -2, -1, 0, 1, 2, \ldots, d-2, d-1$. Among these values, the only multiple of $d$ is 0. 
+
+Therefore $r-s = 0$. So $r = s$, in other words $m \mod d = n \mod d$.
 \end{proof}
 
 \subsection{Exercise 48}
+If $m, n, a, b$, and $d$ are integers, $d > 0$, and $m \mod d = a$ and $n \mod d = b$, is $(m + n) \mod d = a + b$? Is $(m + n) \mod d = (a + b) \mod d$? Prove your answers.
 
 \begin{proof}
+{\it Answer to the first question:} No. Let $m = 1, n = 2, d = 3, a = 1, b = 2$. Then $1 \mod 3 = 1$ and $2 \mod 3 = 2$ but $(1+2) \mod 3 = 3 \mod 3 = 0 \neq 1+2$.
 
+{\it Answer to the first question:} Yes. Let $r = (a+b) \mod d$. By definition of mod, $m = pd+a$ and $n = qd+b$ and $(a+b) = sd+r$ for some integers $p,q,s$, where $0 \leq a < d$ and $0 \leq b < d$ and $0 \leq r < d$. Then 
+
+$m+n = pd+a+qd+b = d(p+q)+(a+b) = d(p+q) + sd+r = d(p+q+s)+r$.
+
+Let $t = p+q+s$ which is an integer (being a sum of integers). So $m+n = dt + r$ where $t$ is an integer and $0 \leq r < d$. Therefore by definition of mod, $(m+n) \mod d = r$, in other words, $(m + n) \mod d = (a + b) \mod d$.
 \end{proof}
 
 \subsection{Exercise 49}
+If $m, n, a, b$, and $d$ are integers, $d > 0$, and $m \mod d = a$ and $n \mod d = b$, is $(mn) \mod d = ab$? Is $(mn) \mod d = ab \mod d$? Prove your answers.
 
 \begin{proof}
+{\it Answer to the first question:} No. Let $m = 2, n = 3, d = 6, a = 2, b = 3$. Then $2 \mod 6 = 2$ and $3 \mod 6 = 3$ but $(2\cdot3) \mod 6 = 6 \mod 6 = 0 \neq 6 = 2\cdot3$.
 
+{\it Answer to the first question:} Yes. Let $r = ab \mod d$. By definition of mod, $m = pd+a$ and $n = qd+b$ and $(ab) = sd+r$ for some integers $p,q,s$, where $0 \leq a < d$ and $0 \leq b < d$ and $0 \leq r < d$. Then 
+
+$mn = (pd+a)(qd+b) = pqd^2 + pbd + qad + ab = pqd^2 + pbd + qad + (sd + r)$
+
+$ = d(pqd+pb+qa+s) + r$
+
+Let $t = pqd+pb+qa+s$ which is an integer (being a sum and product of integers). So $mn = dt + r$ where $t$ is an integer and $0 \leq r < d$. Therefore by definition of mod, $(mn) \mod d = r$, in other words, $(mn) \mod d = (ab) \mod d$.
 \end{proof}
 
 \subsection{Exercise 50}
+Prove that if $m, d$, and $k$ are integers and $d > 0$, then $(m + dk) \mod d = m \mod d$.
 
 \begin{proof}
+Let $r = m \mod d$. By definition of mod, $m = qd+r$ for some integer $q$ where $0 \leq r < d$. 
 
+Then $m + dk = qd+r+dk = d(q+k)+r$.
+
+Let $t = q+k$ which is an integer (being a sum of integers). Then $m+dk = dt + r$ where $t,r$ are integers with $0 \leq r < d$. So by definition of mod, $(m+dk) \mod d = r$. In other words, $(m + dk) \mod d = m \mod d$.
 \end{proof}
 
 \section{Exercise Set 4.6}
