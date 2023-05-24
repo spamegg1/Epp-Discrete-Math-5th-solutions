@@ -18,6 +18,8 @@
 \newcommand{\false}{{\bf c}}
 \newcommand{\bic}{\leftrightarrow}
 \newcommand{\base}[1]{{\color{cyan}#1}}
+\newcommand{\floor}[1]{{\left\lfloor#1\right\rfloor}}
+\newcommand{\ceil}[1]{{\left\lceil#1\right\rceil}}
 \newcommand{\da}{\downarrow}
 \newcommand{\fa}{\forall}
 \newcommand{\te}{\exists}
@@ -3375,211 +3377,549 @@ Let $t = q+k$ which is an integer (being a sum of integers). Then $m+dk = dt + r
 \end{proof}
 
 \section{Exercise Set 4.6}
+{\bf \cy Compute $\floor{x}$ and $\ceil{x}$ for each of the values of $x$ in $1-4$.}
 
 \subsection{Exercise 1}
+37.999
 
 \begin{proof}
-
+$\floor{37.999} = 37, \ceil{37.999} = 38$
 \end{proof}
 
 \subsection{Exercise 2}
+17/4
 
 \begin{proof}
-
+$17/4 = 4.25$, so $\floor{17/4} = 4, \ceil{17/4} = 5$
 \end{proof}
 
 \subsection{Exercise 3}
+-14.00001
 
 \begin{proof}
-
+$\floor{-14.00001} = -15, \ceil{-14.00001} = -14$
 \end{proof}
 
 \subsection{Exercise 4}
+$-32/5$
 
 \begin{proof}
-
+$-32/5 = -6.4$, so $\floor{-32/5} = -7, \ceil{-32/5} = -6$
 \end{proof}
 
 \subsection{Exercise 5}
+Use the floor notation to express 259 div 11 and $259 \mod 11$.
 
 \begin{proof}
-
+259 div 11 = $\floor{259/11}$ and $259 \mod 11 = 259 - 11 \cdot \floor{259/11}$.
 \end{proof}
 
 \subsection{Exercise 6}
+If $k$ is an integer, what is $\ceil{k}$? Why?
 
 \begin{proof}
-
+$k-1 < k \leq k$, so $k$ is the unique integer $n$ such that $n-1 < k \leq n$. So $\ceil{k} = k$.
 \end{proof}
 
 \subsection{Exercise 7}
+If $k$ is an integer, what is $\ceil{k+\frac{1}{2}}$? Why?
 
 \begin{proof}
-
+$k < k + \frac{1}{2} \leq k+1$, so $k+1$ is the unique integer $n$ such that $n - 1 < k + \frac{1}{2} \leq n$. So $\ceil{k+\frac{1}{2}} = k+1$.
 \end{proof}
 
 \subsection{Exercise 8}
+Seven pounds of raw material are needed to manufacture each unit of a certain product. Express the number of units that can be produced from $n$ pounds of raw material using either the floor or the ceiling notation. Which notation is more appropriate?
 
 \begin{proof}
-
+$\floor{n/7}$. The floor notation is more appropriate. If the ceiling notation is used, two different formulas are needed, depending on whether $n/7$ is an integer or not. (What are they?)
 \end{proof}
 
 \subsection{Exercise 9}
+Boxes, each capable of holding 36 units, are used to ship a product from the manufacturer to a wholesaler. Express the number of boxes that would be required to ship $n$ units of the product using either the floor or the ceiling notation. Which notation is more appropriate?
 
 \begin{proof}
-
+$\ceil{n/36}$. The ceiling notation is more appropriate. If the floor notation is used, two different formulas are needed, depending on whether $n/36$ is an integer or not. (What are they?)
 \end{proof}
 
 \subsection{Exercise 10}
-
+If 0 = Sunday, 1 = Monday, 2 = Tuesday, $\ldots$, 6 = Saturday, then January 1 of year $n$ occurs on the day of the week given by the following formula:
+$$
+\left(n + \floor{\frac{n-1}{4}} - \floor{\frac{n-1}{100}} + \floor{\frac{n-1}{400}}\right) \mod 7
+$$
 \subsubsection{(a)}
+Use this formula to find January 1 of {\cy i.} 2050 {\cy ii.} 2100 {\cy iii.} the year of your birth.
 
 \begin{proof}
+{\cy i.}
+$$
+\left(2050 + \floor{\frac{2049}{4}} - \floor{\frac{2049}{100}} + \floor{\frac{2049}{400}}\right) \mod 7 = (2050+512-20+5) \mod 7
+$$
+which is $2547 \mod 7 = 6$, which corresponds to a Saturday.
 
+{\cy ii.}
+$$
+\left(2100 + \floor{\frac{2099}{4}} - \floor{\frac{2099}{100}} + \floor{\frac{2099}{400}}\right) \mod 7 = (2100+524-20+5) \mod 7
+$$
+which is $2609 \mod 7 = 5$, which corresponds to a Friday.
+
+{\cy iii.}
+$$
+\left(1970 + \floor{\frac{1969}{4}} - \floor{\frac{1969}{100}} + \floor{\frac{1969}{400}}\right) \mod 7 = (1970+492-19+4) \mod 7
+$$
+which is $2447 \mod 7 = 4$, which corresponds to a Thursday.
 \end{proof}
 
 \subsubsection{(b)}
+Interpret the different components of this formula.
+
+{\it Hint:} One day is added every four years, except that each century the day is not added unless the century is a multiple of 400.
 
 \begin{proof}
+52 weeks is $52 * 7 = 364$ days, which leaves 1 extra day left over from 365. So every year adds 1 day, which explains $n$.
 
+Once every four years there is a leap year which has 366 days. These leap years add an additional 1 day. That explains $\floor{\frac{n-1}{4}}$.
+
+Leap years do not happen on years divisible by 100, but happen on years divisible by 400 (I didn't know this). This explains the remaining two terms $-\floor{\frac{n-1}{100}} + \floor{\frac{n-1}{400}}$. Here is the link: \url{https://en.wikipedia.org/wiki/Leap_year}
 \end{proof}
 
 \subsection{Exercise 11}
+State a necessary and sufficient condition for the floor of a real number to equal that number.
 
 \begin{proof}
-
+For any real number $x$, $x = \floor{x}$ if, and only if, $x$ is an integer.
 \end{proof}
 
 \subsection{Exercise 12}
+Let $S$ be the statement: For any odd integer $n$, $\floor{n/2} = (n - 1)/2$. Then $S$ is true, but the following “proof” is incorrect. Find the mistake. 
+
+“{\bf Proof:} Suppose $n$ is any odd integer. Then $n = 2k + 1$ for some integer $k$. Consequently,
+$$
+\floor{\frac{2k+1}{2}} = \frac{(2k+1)-1}{2} = \frac{2k}{2} = k.
+$$
+But $n = 2k + 1$. Solving for $k$ gives $k = (n - 1)/2$.
+Hence, by substitution, $\floor{n/2} = (n - 1)/2$.”
+
+{\it Hint:} The mistake is assuming what is to be proved. Explain the way in which the mistake occurs in the “proof.”
 
 \begin{proof}
-
+The step $\floor{\frac{2k+1}{2}} = \frac{(2k+1)-1}{2}$ is not justified. It assumes, and uses, what is to be proved, where $n$ is replaced by $2k+1$.
 \end{proof}
 
 \subsection{Exercise 13}
+Prove that if $n$ is any even integer, then $\floor{n/2} = n/2$.
 
 \begin{proof}
+Suppose $n$ is any even integer. By definition of even, $n = 2k$ for some integer $k$. Then
+$$
+\begin{array}{cccccccl}
+\dps\floor{\frac{n}{2}} &=& \dps\floor{\frac{2k}{2}} &=& \dps\floor{k} &=& k & \text{\cy because $k$ is an integer and $k \leq k < k+1$} \\
+& & & \text{But} & k &=& \dps\frac{n}{2} & \text{\cy because $n = 2k$.}\\
+\end{array}
+$$
 
+Thus, on the one hand, $\floor{\frac{n}{2}} = k$, and on the other hand, $k = \frac{n}{2}$. It follows that $\floor{\frac{n}{2}} = \frac{n}{2}$ {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 14}
+Show that the following statement is false:
+
+For all real numbers $x$ and $y$, $\floor{x-y} = \floor{x} - \floor{y}$.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $x = 2$, $y = 1.9$. Then $\floor{x-y} = \floor{2-1.9} = \floor{0.1} = 0$, whereas $\floor{x} - \floor{y} = \floor{2} - \floor{1.9} = 2-1 = 1$.
 \end{proof}
 
+{\bf \cy Some of the statements in $15-22$ are true and some are false. Prove each true statement and find a counterexample for each false statement, but do not use theorem 4.6.1 in your proofs.}
+
 \subsection{Exercise 15}
+For every real number $x$, $\floor{x - 1} = \floor{x} - 1$.
 
 \begin{proof}
+Suppose $x$ is any real number. Let $m = \floor{x}$. By definition of floor,\\ $m \leq x < m + 1$. Subtracting 1 from
+all parts of the inequality gives that
+$$
+m - 1 \leq x - 1 < m,
+$$
+and so, by definition of floor, $\floor{x - 1} = m - 1$. It follows by substitution that\\ $\floor{x - 1} = \floor{x} - 1$.
 
 \end{proof}
 
 \subsection{Exercise 16}
+For every real number $x$, $\floor{x^2} = \floor{x}^2$.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $x = -2.1$. Then $\floor{x} = -3$ and $x^2 = 4.41$. So 
+$$
+\floor{x^2} = \floor{4.41} = 4 \neq 9 = (-3)^2 = \floor{x}^2.
+$$
 \end{proof}
 
 \subsection{Exercise 17}
-
+For every integer $n$,
+$$
+\floor{n/3} =
+\left\{
+\begin{array}{lr}
+n/3 & \text{if } n \mod 3 = 0\\
+(n-1)/3 & \text{if } n \mod 3 = 1\\
+(n-2)/3 & \text{if } n \mod 3 = 2\\
+\end{array}
+\right.
+$$
 \begin{proof}
+Assume $n$ is any integer. Let $r = n \mod 3$. There are 3 cases.
 
+{\bf Case 1:} $r = 0$. By definition of mod, $n = 3q$ for some integer $q$. So $n/3 = q$ is an integer. By Exercise 11, $\floor{q} = q$. Therefore $\floor{n/3} = \floor{q} = q = n / 3$.
+
+{\bf Case 2:} $r = 1$. By definition of mod, $n = 3q + 1$ for some integer $q$. So $n/3 = (3q+1)/3 = q + \frac{1}{3}$. 
+
+Since $q$ is an integer and $q \leq q + \frac{1}{3} < q+1$, we have $\floor{q+\frac{1}{3}} = q$. Now $q = (n-1)/3$, so 
+$$
+\floor{n/3} = \floor{(3q+1)/3} = \floor{q+\frac{1}{3}} = q = (n-1)/3.
+$$
+{\bf Case 3:} $r = 2$. By definition of mod, $n = 3q + 2$ for some integer $q$. So $n/3 = (3q+2)/3 = q + \frac{2}{3}$. 
+
+Since $q$ is an integer and $q \leq q + \frac{2}{3} < q+1$, we have $\floor{q+\frac{2}{3}} = q$. Now $q = (n-2)/3$, so 
+$$
+\floor{n/3} = \floor{(3q+2)/3} = \floor{q+\frac{2}{3}} = q = (n-2)/3.
+$$
+Putting these cases together, we see that the formula given in the problem for $\floor{n/3}$ holds.
 \end{proof}
 
 \subsection{Exercise 18}
+For all real numbers $x$ and $y$, $\ceil{x + y} = \ceil{x} + \ceil{y}$.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $x = -0.5$ and $y = -0.6$. Then
+$$
+\ceil{x+y} = \ceil{-0.5-0.6} = \ceil{-1.1} = -1 \neq 0+0 = \ceil{-0.5} + \ceil{-0.6} = \ceil{x} + \ceil{y} 
+$$
 \end{proof}
 
 \subsection{Exercise 19}
+For every real number $x$, $\ceil{x - 1} = \ceil{x} - 1$.
 
 \begin{proof}
+Assume $x$ is any real number. Let $n = \ceil{x}$. By definition of ceiling, $n$ is the unique integer such that $n-1 < x \leq n$.
 
+Subtracting 1 from all sides of the inequality we get $n-2 < x-1 \leq n-1$. So we see that $n-1$ is the unique integer which satisfies these inequalities.
+
+Therefore by definition of ceiling, $\ceil{x-1} = n-1 = \ceil{x}-1$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 20}
+For all real numbers $x$ and $y$, $\ceil{x \cdot y} = \ceil{x} \cdot \ceil{y}$.
 
 \begin{proof}
-
+{\it Counterexample:} Let $x = -0.5$ and $y = -4$. Then $x\cdot y = 2$. So $\ceil{x\cdot y} = 2$. But $\ceil{x} = 0$ and $\ceil{y} = -4$, so $\ceil{x} \cdot \ceil{y} = 0\cdot(-4) = 0$ which is different than 2.
 \end{proof}
 
 \subsection{Exercise 21}
+For every odd integer $n$, $\ceil{n/2} = (n + 1) / 2$.
 
 \begin{proof}
+Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Now $n/2 = (2k+1)/2 = k+\frac{1}{2}$.
 
+Since $(k+1)-1 = k < k+\frac{1}{2} \leq k+1$, by definition of ceiling we have $\ceil{k+\frac{1}{2}} = k+1$.
+
+Also we have $(n+1)/2 = (2k+1+1)/2 = (2k+2)/2 = k+1$.
+
+Putting these facts together we have
+$$
+\ceil{n/2} = \ceil{(2k+1)/2} = \ceil{k+\frac{1}{2}} = k+1 = (n+1)/2,
+$$
+{\it[as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 22}
+For all real numbers $x$ and $y$, $\ceil{x \cdot y} = \ceil{x} \cdot \floor{y}$.
 
 \begin{proof}
-
+{\it Counterexample:} Let $x = -0.5, y = 4$. Then $x\cdot y = -2$, $\ceil{x\cdot y} = \ceil{-2} = -2$, $\ceil{x} = \ceil{-0.5} = 0$ and $\floor{y} = \floor{4} = 4$. So $\ceil{x\cdot y} = -2 \neq 0 = 0 \cdot 4 = \ceil{x} \cdot \floor{y}$.
 \end{proof}
 
+{\bf \cy Prove each of the statements in $23-33$.}
+
 \subsection{Exercise 23}
+For any real number $x$, if $x$ is not an integer, then $\floor{x} + \floor{-x} = -1$.
 
 \begin{proof}
+Suppose $x$ is a real number that is not an integer. Let $n = \floor{x}$. Then, by definition of floor and because $x$ is not an integer, $n < x < n - 1$. 
 
+Multiplying both sides by $-1$ gives $-n > -x > -n - 1$, or equivalently, $-n - 1 < -x < -n$. 
+
+Since $-n - 1$ is an integer, it follows by definition of floor that $\floor{-x} = -n - 1$. 
+
+Hence $\floor{x} + \floor{-x} = n + (-n - 1) = n - n - 1 = -1$, as was to be shown.
 \end{proof}
 
 \subsection{Exercise 24}
+For any integer $m$ and any real number $x$, if $x$ is not an integer, then $\floor{x} + \floor{m-x} = m-1$.
 
 \begin{proof}
+Suppose $m$ is any integer and $x$ is any real number that is not an integer. Let $n = \floor{x}$. Then, by definition of floor and because $x$ is not an integer, $n < x < n - 1$. 
 
+Multiplying both sides by $-1$ gives $-n > -x > -n - 1$, or equivalently, $-n - 1 < -x < -n$. Adding $m$ to both sides we get $m - n - 1 < m - x < m - n$.
+
+Since $m - n - 1$ is an integer, it follows by definition of floor that $\floor{m - x} = m - n - 1$. 
+
+Hence $\floor{x} + \floor{m - x} = n + (m - n - 1) = n + m - n - 1 = m - 1$, as was to be shown.
 \end{proof}
 
 \subsection{Exercise 25}
+For every real number $x$, $\floor{\floor{x/2}/2} = \floor{x/4}$.
+
+{\it Hint:} Let $n = \floor{\frac{x}{2}}$ and consider the two cases: $n$ is even and $n$ is odd.
 
 \begin{proof}
+(using the Hint)
 
+Assume $x$ is any real number. Let $n = \floor{\frac{x}{2}}$.
+
+{\bf Case 1:} $n$ is even. By definition of even, $n = 2k$ for some integer $k$.
+
+By definition of floor, $n \leq \frac{x}{2} < n+1$. Substituting, we get $2k \leq \frac{x}{2} < 2k+1$. 
+Dividing by 2, we get $k \leq \frac{x}{4} < k+\frac{1}{2}$. 
+
+Since $k + \frac{1}{2} < k + 1$, we get $k \leq \frac{x}{4} < k+1$. Since $k$ is an integer, it follows by definition of floor that $\floor{\frac{x}{4}} = k$.
+
+On the other hand, $\floor{\frac{x}{2}}/2 = n/2 = (2k)/2 = k$ is an integer, therefore $\floor{\floor{\frac{x}{2}}/2} = k$.
+
+Combining these two results, we get $\floor{\floor{x/2}/2} = \floor{x/4}$ (they are both equal to $k$, therefore they are equal to each other).
+
+{\bf Case 2:} $n$ is odd. By definition of odd, $n = 2k+1$ for some integer $k$.
+
+By definition of floor, $n \leq \frac{x}{2} < n+1$. Substituting, we get $2k+1 \leq \frac{x}{2} < 2k+2$. 
+Dividing by 2, we get $k+\frac{1}{2} \leq \frac{x}{4} < k + 1$. 
+
+Since $k < k + \frac{1}{2}$, we get $k < \frac{x}{4} < k+1$. Since $k$ is an integer, it follows by definition of floor that $\floor{\frac{x}{4}} = k$.
+
+On the other hand, $\floor{\frac{x}{2}}/2 = n/2 = (2k+1)/2 = k + \frac{1}{2}$. Therefore $\floor{\floor{\frac{x}{2}}/2} = \floor{k + \frac{1}{2}} = k$ (because $k$ is an integer).
+
+Combining these two results, we get $\floor{\floor{x/2}/2} = \floor{x/4}$ (they are both equal to $k$, therefore they are equal to each other).
 \end{proof}
 
 \subsection{Exercise 26}
+For every real number $x$, if $x - \floor{x} < 1/2$ then $\floor{2x} = 2\floor{x}$.
 
 \begin{proof}
+Suppose $x$ is any real number such that $x - \floor{x} < 1/2$. Multiplying both sides by 2 gives 
+$$
+2x - 2\floor{x} < 1, \,\,\text{ or, }\,\, 2x < 2\floor{x} + 1. 
+$$
+Now by definition of floor, $\floor{x} \leq x$. Hence, $2\floor{x} \leq 2x$. 
 
+Putting the two inequalities involving $2x$ together gives $2\floor{x} \leq 2x < 2\floor{x} + 1$. 
+
+Thus, by definition of floor (and because $2\floor{x}$ is an integer), $\floor{2x} = 2\floor{x}$. This is what was to be shown.
 \end{proof}
 
 \subsection{Exercise 27}
+For every real number $x$, if $x - \floor{x} \geq 1/2$ then $\floor{2x} = 2\floor{x} + 1$.
 
 \begin{proof}
+Suppose $x$ is any real number such that $x - \floor{x} \geq 1/2$. Multiplying both sides by 2 gives 
+$$
+2x - 2\floor{x} \geq 1, \,\,\text{ or, }\,\, 2\floor{x}+1 \leq 2x. 
+$$
+Now by definition of floor, $x < \floor{x} + 1$. Hence, $2x < 2\floor{x} + 2$. 
 
+Putting the two inequalities involving $2x$ together gives $2\floor{x} + 1 \leq 2x < 2\floor{x} + 2$. 
+
+Thus, by definition of floor (and because $2\floor{x} + 1$ is an integer), $\floor{2x} = 2\floor{x} + 1$. This is what was to be shown.
 \end{proof}
 
 \subsection{Exercise 28}
+For any odd integer $n$,
+$$
+\floor{\frac{n^2}{4}} = \left(\frac{n-1}{2}\right)\left(\frac{n+1}{2}\right).
+$$
+{\it Hint:} After applying the hypothesis that $n$ is odd, evaluate the two sides of the equation separately and show
+that the results are equal.
 
 \begin{proof}
+Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Then
+$$
+\left(\frac{n-1}{2}\right)\left(\frac{n+1}{2}\right) = \left(\frac{2k+1-1}{2}\right)\left(\frac{2k+1+1}{2}\right) = k(k+1) = k^2+k.
+$$
+On the other hand $n^2 = (2k+1)^2 = 4k^2+4k+1$ so $\frac{n^2}{4} = k^2+k+\frac{1}{4}$. 
 
+Since $k^2+k \leq k^2+k+\frac{1}{4} < k^2+k+1$ we have $k^2+k \leq \frac{n^2}{4} < k^2+k+1$. 
+
+Since $k^2+k$ is an integer, by definition of floor we have $\dps\floor{\frac{n^2}{4}} = k^2+k$.
+
+Combining these two results we get $\dps\floor{\frac{n^2}{4}} = \left(\frac{n-1}{2}\right)\left(\frac{n+1}{2}\right)$ (because they are both equal to $k^2+k$, so they are equal to each other).
 \end{proof}
 
 \subsection{Exercise 29}
-
+For any odd integer $n$,
+$$
+\ceil{\frac{n^2}{4}} = \frac{n^2+3}{4}.
+$$
 \begin{proof}
+Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Then
+$$
+\frac{n^2+3}{4} = \frac{(2k+1)^2+3}{4} = \frac{4k^2 + 4k + 1+3}{4} = k^2+k+1.
+$$
+On the other hand $n^2 = (2k+1)^2 = 4k^2+4k+1$ so $\frac{n^2}{4} = k^2+k+\frac{1}{4}$. 
 
+Since $k^2+k < k^2+k+\frac{1}{4} \leq k^2+k+1$ we have $k^2+k < \frac{n^2}{4} \leq k^2+k+1$. 
+
+Since $k^2+k+1$ is an integer, by definition of ceiling we have $\dps\ceil{\frac{n^2}{4}} = k^2+k+1$.
+
+Combining these two results we get $\dps\ceil{\frac{n^2}{4}} = \frac{n^2+3}{4}$ (because they are both equal to $k^2+k+1$, so they are equal to each other).
 \end{proof}
 
 \subsection{Exercise 30}
+For every integer $n$, $\dps \floor{\frac{n}{2}} + \ceil{\frac{n}{2}} = n$.
+
+{\it Hint:} Divided into two cases: $n$ is even and $n$ is odd. For each case evaluate the two sides of the equation
+separately and show that the results are equal.
 
 \begin{proof}
+Assume $n$ is any integer.
 
+{\bf Case 1:} $n$ is even. By definition of even $n = 2k$ for some integer $k$. Then $n/2 = k$ is an integer, so $\floor{\frac{n}{2}} = \ceil{\frac{n}{2}} = k$. Therefore $\floor{\frac{n}{2}} + \ceil{\frac{n}{2}} = k + k = 2k = n$, as was to be proved.
+
+{\bf Case 2:} $n$ is odd. By definition of odd $n = 2k+1$ for some integer $k$. Then $n/2 = k+\frac{1}{2}$.
+
+Since $k < k+\frac{1}{2} < k+1$ and $k$ is an integer, by definition of floor and ceiling, we have $\floor{\frac{n}{2}} = \floor{k+\frac{1}{2}} = k$ and $\ceil{\frac{n}{2}} = \ceil{k+\frac{1}{2}} = k+1$.
+
+Therefore $\floor{\frac{n}{2}} + \ceil{\frac{n}{2}} = k + k + 1 = 2k+1 = n$, as was to be proved.
 \end{proof}
 
 \subsection{Exercise 31}
+For every integer $n$, $\dps \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$.
+
+{\it Hint:} Start by dividing the proof into two cases: $n$ is even and $n$ is odd. In case $n$ is odd, use the quotient-remainder theorem with divisor equal to 6 to divide into three cases: $n = 6k + 1$, $n = 6k + 3$, and $n = 6k + 5$ for some integer $k$. You will need to consider a total of four cases.
 
 \begin{proof}
+Assume $n$ is any integer.
 
+{\bf Case 1:} $n$ is even. By definition of even, $n = 2k$ for some integer $k$. Then $n/2 = k$. Since $k$ is an integer, $\floor{n/2} = \floor{k} = k = n/2$. Therefore 
+$$
+\frac{\floor{n/2}}{3} = \frac{n/2}{3} = \frac{n}{6}, \,\, \text{ so } \,\, \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}},
+$$
+as was to be shown.
+
+{\bf Case 2:} $n$ is odd. By the quotient-remainder theorem, $n = 6q+r$ for some integers $q,r$ where $0 \leq r < 6$. Since $n$ is odd, $r = 0, 2, 4$ are impossible.
+
+{\bf Subcase 2.1:} $r = 1$. 
+
+Then $n = 6q+1$. So $n/2 = 3q+1/2$, therefore by definition of floor, $\floor{n/2} = \floor{3q+1/2} = 3q$ (since $3q < 3q+1/2< 3q+1$ and $3q$ is an integer). 
+
+So $\floor{\frac{\floor{n/2}}{3}} = \floor{\frac{3q}{3}} = \floor{q} = q$ because $q$ is an integer.
+
+On the other hand 
+$$
+\floor{\frac{n}{6}} = \floor{\frac{6q+1}{6}} = \floor{q+\frac{1}{6}} = q
+$$
+by definition of floor (because $q < q+\frac{1}{6} < q+1$ and $q$ is an integer).
+
+Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q$ so they are equal to each other), as was to be shown.
+
+{\bf Subcase 2.2:} $r = 3$. 
+
+Then $n = 6q+3$. So $n/2 = 3q+3/2 = (3q+1)+1/2$, therefore by definition of floor, $\floor{n/2} = \floor{(3q+1)+1/2} = 3q+1$ (since $3q+1 < 3q+1+1/2< 3q+2$ and $3q+1$ is an integer). 
+
+So $\floor{\frac{\floor{n/2}}{3}} = \floor{\frac{3q+1}{3}} = \floor{q+1/3} = q$ because $q < q+1/3 < q+1$ and $q$ is an integer.
+
+On the other hand 
+$$
+\floor{\frac{n}{6}} = \floor{\frac{6q+3}{6}} = \floor{q+\frac{1}{2}} = q
+$$
+by definition of floor (because $q < q+\frac{1}{2} < q+1$ and $q$ is an integer).
+
+Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q$ so they are equal to each other), as was to be shown.
+
+{\bf Subcase 2.3:} $r = 5$. 
+
+Then $n = 6q+5$. So $n/2 = 3q+5/2 = 3q+2+1/2$, therefore by definition of floor, $\floor{n/2} = \floor{3q+2+1/2} = 3q+2$ (since $3q+2 < 3q+2+1/2< 3q+3$ and $3q+2$ is an integer). 
+
+So $\floor{\frac{\floor{n/2}}{3}} = \floor{\frac{3q+2}{3}} = \floor{q+2/3} = q$ because $q < q+2/3 < q+1$ and $q$ is an integer.
+
+On the other hand 
+$$
+\floor{\frac{n}{6}} = \floor{\frac{6q+5}{6}} = \floor{q+\frac{5}{6}} = q
+$$
+by definition of floor (because $q < q+\frac{5}{6} < q+1$ and $q$ is an integer).
+
+Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q$ so they are equal to each other), as was to be shown.
 \end{proof}
 
 \subsection{Exercise 32}
+For every integer $n$, $\dps \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n}{6}}$.
 
 \begin{proof}
+Assume $n$ is any integer.
 
+{\bf Case 1:} $n$ is even. By definition of even, $n = 2k$ for some integer $k$. Then $n/2 = k$. Since $k$ is an integer, $\ceil{n/2} = \ceil{k} = k = n/2$. Therefore 
+$$
+\frac{\ceil{n/2}}{3} = \frac{n/2}{3} = \frac{n}{6}, \,\, \text{ so } \,\, \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n}{6}},
+$$
+as was to be shown.
+
+{\bf Case 2:} $n$ is odd. By the quotient-remainder theorem, $n = 6q+r$ for some integers $q,r$ where $0 \leq r < 6$. Since $n$ is odd, $r = 0, 2, 4$ are impossible.
+
+{\bf Subcase 2.1:} $r = 1$. 
+
+Then $n = 6q+1$. So $n/2 = 3q+1/2$, therefore by definition of ceiling, $\ceil{n/2} = \ceil{3q+1/2} = 3q+1$ (since $3q < 3q+1/2< 3q+1$ and $3q+1$ is an integer). 
+
+So $\ceil{\frac{\ceil{n/2}}{3}} = \ceil{\frac{3q+1}{3}} = \ceil{q+1/3} = q+1$ because $q < q+1/3 < q+1$ and $q+1$ is an integer.
+
+On the other hand 
+$$
+\ceil{\frac{n}{6}} = \ceil{\frac{6q+1}{6}} = \ceil{q+\frac{1}{6}} = q+1
+$$
+by definition of floor (because $q < q+\frac{1}{6} < q+1$ and $q+1$ is an integer).
+
+Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
+
+{\bf Subcase 2.2:} $r = 3$. 
+
+Then $n = 6q+3$. So $n/2 = 3q+3/2 = 3q+1+1/2$, therefore by definition of ceiling, $\ceil{n/2} = \ceil{3q+1+1/2} = 3q+2$ (since $3q+1 < 3q+1+1/2< 3q+2$ and $3q+2$ is an integer). 
+
+So $\ceil{\frac{\ceil{n/2}}{3}} = \ceil{\frac{3q+2}{3}} = \ceil{q+2/3} = q+1$ because $q < q+2/3 < q+1$ and $q+1$ is an integer.
+
+On the other hand 
+$$
+\ceil{\frac{n}{6}} = \ceil{\frac{6q+3}{6}} = \ceil{q+\frac{1}{2}} = q+1
+$$
+by definition of floor (because $q < q+\frac{1}{2} < q+1$ and $q+1$ is an integer).
+
+Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
+
+{\bf Subcase 2.3:} $r = 5$. 
+
+Then $n = 6q+5$. So $n/2 = 3q+5/2 = 3q+2+1/2$, therefore by definition of ceiling, $\ceil{n/2} = \ceil{3q+2+1/2} = 3q+3$ (since $3q+2 < 3q+2+1/2< 3q+3$ and $3q+3$ is an integer). 
+
+So $\ceil{\frac{\ceil{n/2}}{3}} = \ceil{\frac{3q+3}{3}} = \ceil{q+1} = q+1$ because $q+1$ is an integer.
+
+On the other hand 
+$$
+\ceil{\frac{n}{6}} = \ceil{\frac{6q+5}{6}} = \ceil{q+\frac{5}{6}} = q+1
+$$
+by definition of floor (because $q < q+\frac{5}{6} < q+1$ and $q+1$ is an integer).
+
+Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
 \end{proof}
 
 \subsection{Exercise 33}
+A necessary and sufficient condition for an integer $n$ to be divisible by a nonzero integer $d$ is that $n = \floor{n/d} \cdot d$. In other words, for every integer $n$ and nonzero integer $d$, 
+
+\subsubsection{(a)}
+if $d \mid n$, then $n = \floor{n/d} \cdot d$.
 
 \begin{proof}
+Assume $d \mid n$. By definition of divides, $n = k \cdot d$ for some integer $k$. Then $\floor{n/d} = \floor{k} = k$ since $k$ is an integer. Therefore $n = k \cdot d = \floor{n/d} \cdot d$ as was to be shown.
+\end{proof}
 
+\subsubsection{(b)}
+if $n = \floor{n/d} \cdot d$, then $d \mid n$.
+
+\begin{proof}
+Assume $n = \floor{n/d} \cdot d$. Let $k = \floor{n/d}$. Since $k$ is an integer (by definition of floor), $n = k \cdot d$ where $k$ is an integer, therefore by definition of divides, $d \mid n$, as was to be shown.
 \end{proof}
 
 \section{Exercise Set 4.7}
