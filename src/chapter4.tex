@@ -1,6 +1,7 @@
 \documentclass[14pt]{extarticle}
 
 \usepackage[table]{xcolor}
+\usepackage[normalem]{ulem} % strike through text
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref,wasysym,pifont}
 \usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel,tcolorbox}
 
@@ -17,13 +18,16 @@
 \newcommand{\true}{{\bf t}}
 \newcommand{\false}{{\bf c}}
 \newcommand{\bic}{\leftrightarrow}
-\newcommand{\base}[1]{{\color{cyan}#1}}
-\newcommand{\floor}[1]{{\left\lfloor#1\right\rfloor}}
-\newcommand{\ceil}[1]{{\left\lceil#1\right\rceil}}
 \newcommand{\da}{\downarrow}
 \newcommand{\fa}{\forall}
 \newcommand{\te}{\exists}
 \newcommand{\cy}{\color{cyan}}
+
+\newcommand{\base}[1]{{\cy #1}} % for log bases
+\newcommand{\floor}[1]{{\left\lfloor#1\right\rfloor}}
+\newcommand{\ceil}[1]{{\left\lceil#1\right\rceil}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -3923,311 +3927,713 @@ Assume $n = \floor{n/d} \cdot d$. Let $k = \floor{n/d}$. Since $k$ is an integer
 \end{proof}
 
 \section{Exercise Set 4.7}
-
 \subsection{Exercise 1}
+Fill in the blanks in the following proof by contradiction that there is no least positive real number.
+
+{\bf Proof:} Suppose not. That is, suppose that there is a least positive real number $x$. {\it[We must deduce {\cy (a)} \fbl].} Consider the number $x/2$. Since $x$ is a positive real number, $x/2$ is also {\cy (b)} \fbl. In addition, we can deduce that $x/2 < x$ by multiplying both sides of the inequality $1 < 2$ by {\cy (c)} \fbl and dividing {\cy (d)} \fbl. Hence $x/2$ is a positive real number that is less than the least positive real number. This is a {\cy (e)} \fbl. {\it[Thus the supposition is false, and so there is no least positive real number.]}
 
 \begin{proof}
-
+(a) a contradiction
+(b) a positive real number
+(c) $x$
+(d) both sides by 2 \\
+(e) contradiction
 \end{proof}
 
 \subsection{Exercise 2}
+Is $\frac{1}{0}$ an irrational number? Explain.
 
 \begin{proof}
-
+No, it is not a number, it is undefined.
 \end{proof}
 
 \subsection{Exercise 3}
+Use proof by contradiction to show that for every integer $n, 3n + 2$ is not divisible by 3.
 
 \begin{proof}
-
+Suppose not. That is, suppose there is an integer $n$ such that $3n + 2$ is divisible by 3. {\it [We must show that this supposition leads to a contradiction.]} By definition of divisibility, $3n + 2 = 3k$ for some integer $k$. Subtracting 2 from both sides gives that $3n = 3k + 2$, and subtracting $3k$ from both sides gives $3n - 3k = 2$, which implies that $3(n - k) = 2$ by factoring out 3. Dividing both sides by 3 gives $n - k = 2/3$. Now $n - k$ is an integer (because it is a difference of integers) and $2/3$ is not an integer. Since an integer cannot equal a non-integer, we have reached a contradiction. {\it[Hence the supposition is false and the given statement is true.]}
 \end{proof}
 
 \subsection{Exercise 4}
+Use proof by contradiction to show that for every integer $m, 7m + 4$ is not divisible by 7. 
 
 \begin{proof}
+Argue by contradiction and assume the negation of what is to be proved: there exists an integer $m$ such that $7m+4$ is divisible by 4.
 
+{\it [We must show that this supposition leads to a contradiction.]}
+
+By definition of divisibility, $7m+4 = 7k$ for some integer $k$. Then $7k-7m = 4$, so $7(k-m) = 4$ and hence $k-m = 4/7$.
+
+But $k-m$ is an integer (being a difference of integers) while 4/7 is not an integer, contradiction.
+
+{\it [Hence the supposition is false and the given statement is true.]}
 \end{proof}
 
+{\bf \cy Carefully formulate the negations of each of the statements in $5-7$. then prove each statement by contradiction.}
+
 \subsection{Exercise 5}
+There is no greatest even integer.
 
 \begin{proof}
+{\it Negation for the statement:} There is a greatest even
+integer.
 
+\underline{Proof of the statement:} Suppose not. That is, suppose there is a greatest even integer; call it $N$. Then $N$ is an even integer, and $N > n$ for every even integer $n$. {\it [We must deduce a contradiction.]} Let $M = N + 2$. Then $M$ is an even integer since it is a sum of even integers, and $M > N$ since $M = N + 2$. This contradicts the supposition that $N > n$ for every even integer $n$. {\it [Hence the supposition is false and the statement is true.]}
 \end{proof}
 
 \subsection{Exercise 6}
+There is no greatest negative real number.
 
 \begin{proof}
+{\it Negation for the statement:} There is a greatest negative real number.
 
+\underline{Proof of the statement:} Suppose not. That is, suppose there is a greatest negative real number; call it $R$. Then $R < 0$, and $R > r$ for every negative real number $r$. {\it [We must deduce a contradiction.]} Let $S = R / 2$. Then $S$ is a negative real number since it is a ratio of a negative real number and a positive number, and $S > R$ since $|S| < |R|$ and $S$ and $R$ are both negative. This contradicts the supposition that $R > r$ for every negative real number $r$. {\it [Hence the supposition is false and the statement is true.]}
 \end{proof}
 
 \subsection{Exercise 7}
+There is no least positive rational number.
 
 \begin{proof}
+{\it Negation for the statement:} There is a least positive real number.
 
+\underline{Proof of the statement:} Suppose not. That is, suppose there is a least positive real number; call it $R$. Then $R > 0$, and $R < r$ for every positive real number $r$. {\it [We must deduce a contradiction.]} Let $S = R / 2$. Then $S$ is a positive real number since it is a ratio of a positive real number and a positive number, and $S < R$ since $|S| < |R|$ and $S$ and $R$ are both positive. This contradicts the supposition that $R < r$ for every negative real number $r$. {\it [Hence the supposition is false and the statement is true.]}
 \end{proof}
 
 \subsection{Exercise 8}
+Fill in the blanks for the following proof that the difference of any rational number and any irrational number is irrational.
+
+{\it Proof (by contradiction):} Suppose not. That is, suppose that there exist {\cy (a)} \fbl x and {\cy (b)} \fbl y such that $x - y$ is rational. By definition of rational, there exist integers $a, b, c$, and $d$ with $b \neq 0$ and $d \neq 0$ so that $x =$ {\cy (c)} \fbl and $x - y =$ {\cy (d)} \fbl. By substitution,
+$$
+\frac{a}{b} - y = \frac{c}{d}
+$$
+Adding $y$ and subtracting $c/d$ on both sides gives
+$$
+\begin{array}{rcll}
+y & = & \text{\cy (e)} \fbl& \text{\cy by substitution}\\
+\vspace{0.3cm}
+  & = & \dps\frac{ad}{bd} - \frac{bc}{bd}& \\
+  & = & \dps\frac{ad - bc}{bd} & \text{\cy by algebra}\\
+\end{array}
+$$
+Now both $ad - bc$ and $bd$ are integers because products and differences of {\cy (f)} \fbl are {\cy (g)} \fbl. And $bd \neq 0$ by the {\cy (h)} \fbl. Hence $y$ is a ratio of integers with a nonzero denominator, and thus $y$ is {\cy (i)} \fbl by definition of rational. We therefore have both that $y$ is irrational and that $y$ is rational, which is a contradiction. {\it[Thus the supposition is false and the
+statement to be proved is true.]}
 
 \begin{proof}
-
+(a) a rational number
+(b) an irrational number
+(c) $\frac{a}{b}$
+(d) $\frac{c}{d}$
+(e) $\frac{a}{b} - \frac{c}{d}$
+(f) integers
+(g) integers
+(h) zero product property
+(i) rational
 \end{proof}
 
 \subsection{Exercise 9}
 
 \subsubsection{(a)}
+When asked to prove that the difference of any irrational number and any rational number is irrational, a student began, “Suppose not. That is, suppose the difference of any irrational number and any rational number is rational.” What is wrong with beginning the proof in this way? ({\it Hint:} If needed, review the answer to exercise 11 in Section 3.2.)
 
 \begin{proof}
-
+The mistake in this proof occurs in the second sentence where the negation written by the student is incorrect: instead of being existential, it is universal. The problem is that if the student proceeds in a logically correct manner, all that is needed to reach a contradiction is one example of a rational and an irrational number whose difference is irrational. To prove the given statement, however, it is necessary to show that there is no rational
+number and no irrational number whose difference is rational.
 \end{proof}
 
 \subsubsection{(b)}
+Prove that the difference of any irrational number and any rational number is irrational.
 
 \begin{proof}
+Argue by contradiction and assume $i$ is irrational and $r$ is rational, with the property that $i-r$ is not irrational. So $i-r$ is rational. By definition of rational, $r = \frac{a}{b}, i-r = \frac{c}{d}$ for some integers $a,b,c,d$ with $b \neq 0, d \neq 0$.
 
+Then $i = r + i - r = \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd}$ where $ad+bc$ and $bd$ are integers (being sums and products of integers) and $bd \neq 0$ (by the zero product property). Therefore $i$ is rational, a contradiction.
+
+Therefore the supposition was false, and the original claim is true.
 \end{proof}
 
 \subsection{Exercise 10}
+Let $S$ be the statement: For all positive real numbers $r$ and $s$, $\sqrt{r+s} \neq \sqrt{r} + \sqrt{s}$. Statement $S$ is true, but but the following “proof” is incorrect. Find the mistake.
+
+“{\bf Proof by contradiction:} Suppose not. That is, suppose that for all positive real numbers $r$ and $s$, $\sqrt{r + s} = \sqrt{r} + \sqrt{s}$. This means that the equation will be true no matter what positive real numbers are substituted for $r$ and $s$. So let $r = 9$ and $s = 16$. Then $r$ and $s$ are positive real numbers and
+$$
+\sqrt{r+s} = \sqrt{9 + 16} = \sqrt{25} = 5
+$$
+whereas
+$$
+\sqrt{r}+\sqrt{s} = \sqrt{9} + \sqrt{16} = 3+4 = 7
+$$
+Since $5 \neq 7$, we have that $\sqrt{r + s} \neq \sqrt{r} + \sqrt{s}$. This contradiction shows that the supposition is false, and hence statement $S$ is true.”
 
 \begin{proof}
-
+The mistake is that the negation for $S$ that was used in the “proof” is incorrect. Thus deducing a contradiction from it fails to prove that $S$ is true. (The actual negation is “There exist positive real numbers $r$ and $s$ such that $\sqrt{r + s} = \sqrt{r} + \sqrt{s}$.”)
 \end{proof}
 
 \subsection{Exercise 11}
+Let $T$ be the statement: The sum of any two rational numbers is rational. Then $T$ is true, but the following “proof” is incorrect. Find the mistake.
+
+“{\bf Proof by contradiction:} Suppose not. That is, suppose that the sum of any two rational numbers is not rational. This means that no matter what two rational numbers are chosen their sum is not rational. Now both 1 and 3 are rational because $1 = 1/1$ and $3 = 3/1$, and so both are ratios of integers with a nonzero denominator. Hence, by a supposition, the sum of 1 and 3, which is 4, is not rational. But 4 is rational because $4 = 4/1$, which is a ratio of integers with a nonzero denominator. Hence 4 is both rational and not rational, which is a contradiction. This contradiction shows that the supposition is false, and hence statement $T$ is true.”
 
 \begin{proof}
+Again, the negation of $T$ is incorrect. ``This means that no matter what two rational numbers are chosen their sum is not rational'' is not the negation of $T$. The correct negation is: ``There exist two rationals whose sum is not rational.''
 
+Since the proof starts with an incorrect negation, which is a universal statement, it goes on to derive a contradiction by finding a counterexample to that universal statement. The correct negation is an existential statement, so a contradiction cannot be reached by providing a counterexample to it.
 \end{proof}
 
 \subsection{Exercise 12}
+Let $R$ be the statement: The square root of any irrational number is irrational.
 
 \subsubsection{(a)}
+Write a negation for $R$.
 
 \begin{proof}
-
+There exists an irrational number whose square root is rational.
 \end{proof}
 
 \subsubsection{(b)}
+Prove $R$ by contradiction.
 
 \begin{proof}
-
+Suppose not. That is, suppose there exists an irrational number $x$ such that the square root of $x$ is rational. {\it [We must derive a contradiction.]} By definition of rational, $\sqrt{x} = \frac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$. By substitution,
+\[
+(\sqrt{x})^2 = \left(\frac{a}{b}\right)^2
+\]
+and so, by algebra,
+\[
+x = \frac{a^2}{b^2}
+\]
+But $a^2$ and $b^2$ are both products of integers and thus
+are integers, and $b^2$ is nonzero by the zero product
+property. Thus $\frac{a^2}{b^2}$ is rational. It follows that $x$ is both irrational and rational, which is a contradiction. {\it [This is what was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 13}
+Let $S$ be the statement: The product of any irrational number and any nonzero rational number is irrational.
 
 \subsubsection{(a)}
+Write a negation for $S$.
 
 \begin{proof}
-
+{\it Negation for S:} There exist an irrational number and a nonzero rational number whose product is rational.
 \end{proof}
 
 \subsubsection{(b)}
+Prove $S$ by contradiction.
 
 \begin{proof}
+Argue by contradiction and assume the negation of $S$.
 
+So there exist an irrational number $i$ and a nonzero rational number $r$ whose product $ir$ is rational.
+
+By definition of rational, $r = \frac{a}{b}, ir = \frac{c}{d}$ for some integers $a,b,c,d$ with $b \neq 0, d \neq 0$. Also since $r$ is nonzero, $a \neq 0$.
+Then 
+\[
+i = \frac{ir}{r} = \frac{c/d}{a/b} = \frac{cb}{ad}
+\]
+Now $cd$ and $ab$ are integers (being products of integers) and $ad \neq 0$ by the zero product property. Therefore $i$ is rational by definition of rational, a contradiction.
+
+{\it [Therefore our supposition was false, and $S$ is true.]}
 \end{proof}
 
 \subsection{Exercise 14}
+Let $T$ be the statement: For every integer $a$, if $a \mod 6 = 3$, then $a \mod 3 \neq 2$.
 
 \subsubsection{(a)}
+Write a negation for $T$.
 
 \begin{proof}
-
+$\te$ an integer $a$ such that $a \mod 6 = 3$ and $a \mod 3 = 2$.
 \end{proof}
 
 \subsubsection{(b)}
+Prove $T$ by contradiction.
+
+{\it Hint:} Recall that to say $a \mod 6 = 3$ means that there exists an integer $r$ such that $a = 6r + 3$.
 
 \begin{proof}
+Argue by contradiction and assume the negation of $T$.
 
+So $\te$ an integer $a$ such that $a \mod 6 = 3$ and $a \mod 3 = 2$.
+
+By definition of mod used with $a \mod 6 = 3$, there exists an integer $r$ such that $a = 6r + 3$.
+
+By definition of mod used with $a \mod 6 = 2$, there exists an integer $s$ such that $a = 6s + 2$.
+
+So $6r + 3 = 6s + 2$. Therefore $1 = 6s - 6r = 6(r-s)$. Therefore $r-s = \frac{1}{6}$. But $r-s$ is an integer (being a difference of integers) while $\frac{1}{6}$ is not an integer, contradiction!
+
+{\it [Therefore our supposition was false, and $T$ is true.]}
 \end{proof}
 
 \subsection{Exercise 15}
+Do there exist integers $a, b$, and $c$ such that $a, b$, and $c$ are all odd and $a^2 + b^2 = c^2$? Prove your answer.
+
+{\it Hint:} You could argue directly from the definition of odd, or you could use a result from Example 4.3.2.
 
 \begin{proof}
+No. Argue by contradiction and assume that there exist odd integers $a,b,c$ such that $a^2 + b^2 = c^2$.
 
+By definition of odd, $a = 2k+1, b = 2r + 1, c = 2s+1$ for some integers $k,r,s$. Then
+\[
+a^2 + b^2 = (2k+1)^2 + (2r+1)^2 = 4k^2+4k+1+4r^2+4r+1 = 4s^2+4s+1 = (2s+1)^2 = c^2
+\]
+So we have 
+\[
+4k^2+4k+1+4r^2+4r+1 = 4s^2+4s+1
+\]
+By algebra, we get:
+\[
+4k^2+4k+4r^2+4r-4s^2-4s = -1 \,\, \implies \,\, 4(k^2+k+r^2+r-s^2-s) = -1
+\]
+Let $t = k^2+k+r^2+r-s^2-s$. Now $t$ is an integer because it is a sum, product, and difference of integers. So we have $4t = -1$ and hence $t = -1/4$, which is not an integer, a contradiction!
+
+{\it [Therefore our supposition was false, and there are no odd integers $a,b,c$ with the property $a^2 + b^2 = c^2$.]}
 \end{proof}
 
+{\bf \cy Prove each statement in $16-19$ by contradiction.}
+
 \subsection{Exercise 16}
+For all odd integers $a$ and $b$, $b^2 - a^2 \neq 4$. ({\it Hint:} $b^2 - a^2 = (b + a)(b - a)$ and the only way to factor 4 is either $4 = 2\cdot2$ or $4 = 4\cdot1$.)
 
 \begin{proof}
+\underline{Proof by contradiction:} Suppose not. That is, suppose that there exist odd integers $a$ and $b$ such that $b^2 - a^2 = 4$. {\it [We must show that this supposition leads logically to a contradiction.]} Factoring gives that
+\[
+b^2 - a^2 = (b + a)(b - a) = 4. 
+\] 
+Now $b > a$ because $b^2 - a^2 = 4 > 0$, and the only way to factor 4 is either $4 = 2\cdot2$ or $4 = 4\cdot1$. Hence either $b + a = b - a = 2$, or $b + a = 4$ and $b - a = 1$ or $b + a = 1$ and $b - a = 4$.
 
+In case $b + a = b - a = 2$, then $-a = a$ and so $a = 0$, which is not an odd integer. 
+
+In case $b + a = 4$ and $b - a = 1$, then $2b = 5$ and so $b = 5/2$, which is not an odd integer. 
+
+In case $b + a = 1$ and $b - a = 4$, then $2b = 5$ and so $b = 5/2$, which is not an odd integer. 
+
+Thus there are no odd integers $a$ and $b$ such that $b^2 - a^2 - 4$, which contradicts the supposition. {\it [Hence the supposition is false and the given statement is true.]}
 \end{proof}
 
 \subsection{Exercise 17}
+For all prime numbers $a, b$, and $c$, $a^2 + b^2 \neq c^2$.
+
+{\it Hint:} Use the fact that $a^2 = c^2 - b^2 = (c - b)(c + b)$ and apply the unique factorization of integers theorem.
 
 \begin{proof}
+Argue by contradiction and assume $a,b,c$ are prime numbers such that $a^2 + b^2 = c^2$. Then $a^2 = c^2 - b^2 = (c - b)(c + b)$. 
 
+$a^2$ is factored in two ways, as $a \cdot a$ and as $(c-b)(c+b)$. So, by the unique factorization theorem, $c-b = a$ and $c+b = a$. 
+
+Adding these two equations together, we get $2c = 2a$ therefore $c = a$. But then $a^2 + b^2 = a^2$ by substitution, so $b=0$, which is not a prime number, a contradiction.
+
+{\it [Therefore our supposition was false, and the original statement is true.]}
 \end{proof}
 
 \subsection{Exercise 18}
+If $a$ and $b$ are rational numbers, $b \neq 0$, and $r$ is an irrational number, then $a + br$ is irrational.
 
 \begin{proof}
+Argue by contradiction and assume there exist rational numbers $a$ and $b$, where $b \neq 0$, and an irrational number $r$ such that $a + br$ is rational.
 
+By definition of rational, $a = \frac{u}{v}, b = \frac{w}{x}, a+br = \frac{y}{z}$ for some integers $u,v,w,x,y,z$ where $v \neq 0, x \neq 0, z \neq 0$. Also since $b \neq 0$, $w \neq 0$.
+
+Then solving for $r$ we get
+\[
+r = \frac{\frac{y}{z}-a}{b} = \frac{\frac{y}{z}-\frac{u}{v}}{\frac{w}{x}} = \frac{\frac{yv-uz}{zv}}{\frac{w}{x}} = \frac{yvx-uzx}{zvw}
+\]
+Now both $yvx-uzx$ and $zvw$ are integers (being products and differences of integers) and $zvw \neq 0$ by the zero product property.
+
+So $r$ is rational by definition, which is a contradiction. Therefore our supposition was false, and the original statement is true.
 \end{proof}
 
 \subsection{Exercise 19}
+For any integer $n, n^2 - 2$ is not divisible by 4.
+
+{\it Hint:} Suppose $n^2 - 2$ is divisible by 4, and consider the two cases where $n$ is even and $n$ is odd. (An alternative solution uses Proposition 4.7.4.)
 
 \begin{proof}
+Argue by contradiction and assume $n^2 - 2$ is divisible by 4. By definition of divisibility, $n^2-2 = 4k$ for some integer $k$.
 
+{\bf Case 1:} $n$ is even. By definition of even, $n = 2r$ for some integer $r$. Then
+\[
+n^2 - 2 = (2r)^2-2 = 4r^2-2 = 4k
+\]
+So $4r^2-4k = 2$, or $4(r^2-k) = 2$ or $r^2-k = \frac{1}{2}$. But $r^2-k$ is an integer (product and difference of integers), and is equal to 1/2 which is not an integer, contradiction. Therefore our supposition was false and the original statement is true in this case.
+
+{\bf Case 2:} $n$ is odd. By definition of odd, $n = 2r+1$ for some integer $r$. Then
+\[
+n^2 - 2 = (2r+1)^2-2 = 4r^2+4r+1-2 = 4k
+\]
+So $4r^2+4r-4k = 1$, or $4(r^2+r-k) = 1$ or $r^2+r-k = \frac{1}{4}$. But $r^2+r-k$ is an integer (sum, product and difference of integers), and is equal to 1/4 which is not an integer, contradiction. Therefore our supposition was false and the original statement is true in this case.
 \end{proof}
 
 \subsection{Exercise 20}
+Fill in the blanks in the following proof by contraposition that for every integer $n$, if $5 \nmid n^2$ then $5 \nmid n$.
+
+{\bf Proof (by contraposition):} {\it[The contrapositive is: For every integer $n$, if $5 \mid n$ then $5 \nmid n^2$.]} Suppose $n$ is any integer such that {\cy (a)} \fbl. {\it[We must show that {\cy(b)} \fbl.]} By definition of divisibility, $n = $ {\cy(c)} \fbl for some integer $k$. By substitution, $n^2 = $ {\cy(d)} \fbl $= 5(5k^2)$. But $5k^2$ is an integer because it is a product of integers. Hence $n^2 = 5\cdot$(an integer), and so {\cy(e)} \fbl {\it[as was to be shown].}
 
 \begin{proof}
-
+(a) $5 \mid n$ (b) $5 \mid n^2$ (c) $5k$ (d) $(5k)^2$ (e) $5 \mid n^2$
 \end{proof}
 
 \subsection{Exercise 21}
+Consider the statement “For every integer $n$, if $n^2$ is odd then $n$ is odd.”
 
 \subsubsection{(a)}
+Write what you would suppose and what you would need to show to prove this statement by contradiction.
 
 \begin{proof}
+Proof by contradiction: Suppose not. That is, suppose there is an integer $n$ such that $n^2$ is odd and $n$ is even. Show that this supposition leads logically to a contradiction.
 
 \end{proof}
 
 \subsubsection{(b)}
+Write what you would suppose and what you would need to show to prove this statement by contraposition.
 
 \begin{proof}
-
+Proof by contraposition: Suppose $n$ is any integer such
+that $n$ is not odd. Show that $n^2$ is not odd.
 \end{proof}
 
 \subsection{Exercise 22}
+Consider the statement “For every real number $r$, if $r^2$ is irrational then $r$ is irrational.”
 
 \subsubsection{(a)}
+Write what you would suppose and what you would need to show to prove this statement by contradiction.
 
 \begin{proof}
-
+Proof by contradiction: Suppose not. That is, suppose there is a real number $r$ such that $r^2$ is irrational and $r$ is rational. Show that this supposition leads logically to a contradiction.
 \end{proof}
 
 \subsubsection{(b)}
+Write what you would suppose and what you would need to show to prove this statement by contraposition.
 
 \begin{proof}
-
+Proof by contraposition: Suppose $r$ is any real number such that $r$ is rational. Show that $r^2$ is rational.
 \end{proof}
 
+{\bf \cy Prove each of the statements in $23-25$ in two ways: (a) by contraposition and (b) by contradiction.}
+
 \subsection{Exercise 23}
+The negative of any irrational number is irrational.
 
 \begin{proof}
+{\it Formal version of the statement to be proved:} For every real number $x$, if $x$ is irrational then $-x$ is irrational.
 
+\underline{Proof by contraposition:} Suppose $x$ is any real number such that $-x$ is not irrational. By definition of irrational this means that $-x$ is rational. {\it [We must show that $x$ is not irrational, or, equivalently, that $x$ is rational.]} 
+
+By definition of rational, $-x = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then, by algebra,
+\[
+x = -(-x) = -(a/b) = (-a)/b.
+\]
+Now $-a$ is an integer because $a$ is an integer and because $-a = (-1)a$. Also $b$ is a nonzero integer. Thus $x$ is a ratio of integers with a nonzero denominator, and hence $x$ is rational {\it [as was to be shown].}
+
+\underline{Proof by contradiction:} Suppose there exists a real number $x$ such that $x$ is irrational and $-x$ is not irrational. {\it [We must show that this supposition leads logically to a contradiction.]} 
+
+By definition of rational, $-x = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then, by algebra,
+\[
+x = -(-x) = -(a/b) = (-a)/b.
+\]
+Now $-a$ is an integer because $a$ is an integer and because $-a = (-1)a$. Also $b$ is a nonzero integer. Thus $x$ is a ratio of integers with a nonzero denominator, and hence $x$ is rational. Hence $x$ is both irrational and rational, which is a contradiction {\it [which shows that the negation is false and therefore that the statement to be proved is true].}
 \end{proof}
 
 \subsection{Exercise 24}
+The reciprocal of any irrational number is irrational. (The reciprocal of a nonzero real number $x$ is $1/x$.)
 
 \begin{proof}
+{\it Formal version of the statement to be proved:} For every nonzero real number $x$, if $x$ is irrational then $1/x$ is irrational.
 
+\underline{Proof by contraposition:} Suppose $x$ is any nonzero real number such that $1/x$ is not irrational. By definition of irrational this means that $1/x$ is rational. {\it [We must show that $x$ is not irrational, or, equivalently, that $x$ is rational.]} 
+
+By definition of rational, $1/x = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then, by algebra,
+\[
+x = 1/(1/x) = 1/(a/b) = b/a.
+\]
+Notice that $a \neq 0$, otherwise $x$ is not a real number. Also $b$ is a nonzero integer. Thus $x$ is a ratio of integers with a nonzero denominator, and hence $x$ is rational {\it [as was to be shown].}
+
+\underline{Proof by contradiction:} Suppose there exists a real number $x$ such that $x$ is irrational and $1/x$ is not irrational. {\it [We must show that this supposition leads logically to a contradiction.]} 
+
+By definition of rational, $1/x = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then, by algebra,
+\[
+x = 1/(1/x) = 1/(a/b) = b/a.
+\]
+Now $a \neq 0$, otherwise $x$ is not a real number. Also $b$ is a nonzero integer. Thus $x$ is a ratio of integers with a nonzero denominator, and hence $x$ is rational. Hence $x$ is both irrational and rational, which is a contradiction {\it [which shows that the negation is false and therefore that the statement to be proved is true].}
 \end{proof}
 
 \subsection{Exercise 25}
+For every integer $n$, if $n^2$ is odd then $n$ is odd.
+
+{\it Hint:} See the answer to exercise 21 and look carefully at the two proofs for Proposition 4.7.4.
 
 \begin{proof}
+\underline{Proof by contraposition:} Suppose $n$ is any integer such that $n$ is not odd (in other words, even). Show that $n^2$ is not odd (in other words, even).
 
+By definition of even, $n = 2k$ for some integer $k$. Then $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$, and $2k^2$ is an integer (being a product of integers). Therefore by definition of even, $n^2$ is even, {\it [as was to be shown.]}
 \end{proof}
 
+{\bf \cy Use any method to prove the statements in $26-29$.}
+
 \subsection{Exercise 26}
+For all integers $a, b$, and $c$, if $a \nmid bc$ then $a \nmid b$.
 
 \begin{proof}
+\underline{Proof by contraposition:} Suppose $a, b$, and $c$ are any {\it [particular but arbitrarily chosen]} integers such that $a \mid b$. {\it [We must show that $a \mid bc$.]} 
 
+By definition of divides, $b = ak$ for some integer $k$. Then $bc = (ak)c = a(kc)$. But $kc$ is an integer (because it is a product of the integers $k$ and $c$). Hence $a \mid bc$ by definition of divisibility {\it [as was to be shown].}
+
+\underline{Proof by contradiction:} Suppose not. {\it [We take the negation and suppose it to be true.]} Suppose $\te$ integers $a, b$, and $c$ such that $a \nmid bc$ and $a \mid b$. 
+
+Since $a \mid b$, there exists an integer $k$ such that $b = ak$ by definition of divides. Then $bc = (ak)c = a(kc)$ {\it [by the associative law of algebra]}. But $kc$ is an integer (being a product of integers), and so $a \mid bc$ by definition of divides. Thus $a \nmid bc$ and $a \mid bc$, which is a contradiction. {\it [This contradiction shows that the supposition is false, and hence the given statement is true.]}
 \end{proof}
 
 \subsection{Exercise 27}
+For all positive real numbers $r$ and $s$, $\sqrt{r+s} \neq \sqrt{r}+\sqrt{s}$.
 
 \begin{proof}
+Argue by contradiction and assume there exist positive real number $r,s$ such that $\sqrt{r+s} = \sqrt{r}+\sqrt{s}$. Squaring both sides, we get 
+\[
+r+s = (\sqrt{r}+\sqrt{s})^2 = (\sqrt{r})^2 + 2\sqrt{r}\sqrt{s} + (\sqrt{s})^2 = r + 2\sqrt{r}\sqrt{s} + s
+\]
+Canceling $r+s$ on both sides we get $0 = 2\sqrt{r}\sqrt{s}$ and dividing by 2 we get $0 = \sqrt{r}\sqrt{s}$. By the zero product property, either $\sqrt{r} = 0$ or $\sqrt{s} = 0$ (or both). By squaring, this implies that either $r = 0$ or $s = 0$ (or both), a contradiction to the fact that $r,s$ are positive.
 
+Therefore our supposition was false, and the original statement is true.
 \end{proof}
 
 \subsection{Exercise 28}
+For all integers $a, b$, and $c$, if $a \mid b$ and $a \nmid c$, then $a \nmid (b + c)$.
 
 \begin{proof}
+Assume $a,b,c$ are any integers such that $a \mid b$ and $a \nmid c$. Argue by contradiction and assume $a \mid (b+c)$.
 
+By definition of divides, $b = ar$ and $b+c = as$ for some integers $r,s$. Then $c = (b+c) - b = as - ar = a(s-r)$ where $s-r$ is an integer (being a difference of integers). Therefore by definition of divides, $a \mid c$, which contradicts $a \nmid c$.
+
+Therefore our supposition was false and the original statement is true.
 \end{proof}
 
 \subsection{Exercise 29}
+For all integers $m$ and $n$, if $m + n$ is even then $m$
+and $n$ are both even or $m$ and $n$ are both odd.
+
+{\it Hints:} (1) The contrapositive is “For all integers $m$ and $n$, if $m$ and $n$ are not both even and $m$ and $n$ are not both odd, then $m + n$ is not even.”
+
+Equivalently: “For all integers $m$ and $n$, if one of $m$ and $n$ is even and the other is odd, then $m + n$ is odd.”
+
+(2) The negation of the given statement is the following:
+$\te$ integers $m$ and $n$ such that $m + n$ is even, and either $m$ is even and $n$ is odd, or $m$ is odd and $n$ is even.
 
 \begin{proof}
+\underline{by contrapositive:} Assume $m,n$ are any integers where one of $m$ and $n$ is even and the other is odd. {\it [We want to prove $m+n$ is odd.]}
 
+{\bf Case 1:} $m$ is even and $n$ is odd. By definitions of even and odd, $m = 2k$ and $n = 2l+1$ for some integers $k,l$. 
+
+Then $m+n = 2k + 2l+1 = 2(k+l)+1$. Let $t = k+l$, which is an integer (being a sum of integers). Therefore $m+n = 2t+1$ where $t$ is an integer, so $m+n$ is odd by definition of odd.
+
+{\bf Case 2:} $m$ is odd and $n$ is even. By definitions of even and odd, $m = 2k+1$ and $n = 2l$ for some integers $k,l$. 
+
+Then $m+n = 2k + 1 + 2l = 2(k+l)+1$. Let $t = k+l$, which is an integer (being a sum of integers). Therefore $m+n = 2t+1$ where $t$ is an integer, so $m+n$ is odd by definition of odd.
 \end{proof}
 
 \subsection{Exercise 30}
-
 \subsubsection{(a)}
+Let $n = 53$. Find an approximate value for $\sqrt{n}$ and write a list of all the prime numbers less than or equal to $\sqrt{n}$. Is the following statement true or false? When $n = 53$, $n$ is not divisible by any prime number less than or equal to $\sqrt{n}$.
 
 \begin{proof}
+Since $7^2 = 49$ and $8^2 = 64$ and $49 < 53 < 64$, the value of $\sqrt{53}$ is between 7 and 8.
 
+So, all the primes less than $\sqrt{53}$ are: 2, 3, 5, 7. Then the statement is true, since $53$ is not divisible by 2, 3, 5, 7.
 \end{proof}
 
 \subsubsection{(b)}
+Suppose $n$ is a fixed integer. Let $S$ be the statement, “$n$ is not divisible by any prime number less than or equal to $\sqrt{n}$.” The following statement is equivalent to $S$: 
+
+$\fa$ prime number $p$, if $p$ is less than or equal to $\sqrt{n}$ then $n$ is not divisible by $p$. 
+
+Which of the following are negations for $S$?
+
+(i) $\te$ a prime number $p$ such that $p \leq \sqrt{n}$ and $n$ is divisible by $p$.
+
+(ii) $n$ is divisible by every prime number less than or equal to $\sqrt{n}$.
+
+(iii) $\te$ a prime number $p$ such that $p$ is a multiple of $n$ and $p$ is less than or equal to $\sqrt{n}$.
+
+(iv) $n$ is divisible by some prime number that is less than or equal to $\sqrt{n}$.
+
+(v) $\fa$ prime number $p$, if $p$ is less than or equal to $\sqrt{n}$, then $n$ is divisible by $p$.
 
 \begin{proof}
-
+(i) and (iv)
 \end{proof}
 
 \subsection{Exercise 31}
 
 \subsubsection{(a)}
+Prove by contraposition: For all positive integers $n, r, s$, if $rs \leq n$ then $r \leq \sqrt{n}$ or $s \leq \sqrt{n}$. ({\it Hint:} Use Theorem T27 in Appendix A.)
 
 \begin{proof}
-
+Suppose $n, r$, and $s$ are positive integers and $r > \sqrt{n}$ and $s > \sqrt{n}$. {\it [We must show that $rs > n$.]} By Theorem T27 in Appendix A (with $a = r, b = s$, and $c = d = \sqrt{n}$), $rs > \sqrt{n}\cdot\sqrt{n} = n$. Thus the contrapositive of the given statement is true, and so the given statement is also true.
 \end{proof}
 
 \subsubsection{(b)}
+Prove: For each integer $n > 1$, if $n$ is not prime then there exists a prime number $p$ such that $p \leq \sqrt{n}$ and $n$ is divisible by $p$. ({\it Hint:} Use the results of part (a), Theorems 4.4.1, 4.4.3, and 4.4.4, and the transitive property of order.)
 
 \begin{proof}
+Assume $n$ is any integer such that $n > 1$ and $n$ is not prime. So $n$ is composite. By definition of composite, $n = ab$ for some integers $a,b$ where $1 < a < n, 1 < b < n$.
 
+By part (a), $a \leq \sqrt{n}$ or $b \leq \sqrt{n}$.
+
+{\bf Case 1:} $a \leq \sqrt{n}$. By Theorem 4.4.4 there is a prime number $p$ that divides $a$. By Theorem 4.4.1 $p \leq a$. We have $p \leq a \leq \sqrt{n}$, so by transitivity of order, $p \leq \sqrt{n}$. We have $p \mid a$ and $a \mid n$, so by Theorem 4.4.3 $p \mid n$ {\it [as was to be shown.]}
+
+{\bf Case 2:} $b \leq \sqrt{n}$. By Theorem 4.4.4 there is a prime number $p$ that divides $b$. By Theorem 4.4.1 $p \leq b$. We have $p \leq b \leq \sqrt{n}$, so by transitivity of order, $p \leq \sqrt{n}$. We have $p \mid b$ and $b \mid n$, so by Theorem 4.4.3 $p \mid n$ {\it [as was to be shown.]}
 \end{proof}
 
 \subsubsection{(c)}
+State the contrapositive of the result of part (b). The results of exercise 31 provide a way to test whether an integer is prime.
 
 \begin{proof}
-
+For each integer $n>1$, if $n$ is not divisible by any prime $p$ with the property $p \leq \sqrt{n}$, then $n$ is prime.
 \end{proof}
+
+\begin{tcolorbox}[colframe=cyan]
+\begin{center}
+{\cy Test for Primality}
+\end{center}
+Given an integer $n > 1$, to test whether $n$ is prime check to see if it is divisible by a prime number less than or equal to its square root. If it is not divisible by any of these numbers, then it is prime.
+\end{tcolorbox}
 
 \subsection{Exercise 32}
-
-\begin{proof}
-
-\end{proof}
-
-\subsection{Exercise 33}
-
-\begin{proof}
-
-\end{proof}
-
-\subsection{Exercise 34}
+Use the test for primality to determine whether the following numbers are prime or not.
 
 \subsubsection{(a)}
+667
 
 \begin{proof}
-
+$\sqrt{667} \approx 25.8$, and so the possible prime factors to be checked are 2, 3, 5, 7, 11, 13, 17, 19, and 23. Testing each in turn shows that 667 is not prime because $667 = 23 \cdot 29$.
 \end{proof}
 
 \subsubsection{(b)}
+557
 
 \begin{proof}
-
+$\sqrt{557} \approx 23.6$, and so the possible prime factors to be checked are 2, 3, 5, 7, 11, 13, 17, 19, and 23. Testing each in turn shows that none divides 557. Therefore, 557 is prime.
 \end{proof}
 
 \subsubsection{(c)}
+527
 
 \begin{proof}
-
+$\sqrt{527} \approx 23$ and so the possible prime factors to be checked are 2, 3, 5, 7, 11, 13, 17, 19, and 23. Testing each in turn shows that $557 = 17 \cdot 31$. Therefore, 527 is not prime.
 \end{proof}
 
 \subsubsection{(d)}
+613
 
 \begin{proof}
+$\sqrt{613} \approx 25$ and so the possible prime factors to be checked are 2, 3, 5, 7, 11, 13, 17, 19, and 23. Testing each in turn shows that none divides 613. Therefore, 613 is prime.
+\end{proof}
 
+\subsection{Exercise 33}
+The sieve of Eratosthenes, named after its inventor, the Greek scholar Eratosthenes (276–194 b.c.e.), provides a way to find all prime numbers less than or equal to some fixed number $n$. To construct it, write out all the integers from 2 to $n$. Cross out all multiples of 2 except 2 itself, then all multiples of 3 except 3 itself, then all multiples of 5 except 5 itself, and so forth. Continue crossing out the multiples of each successive prime number up to $\sqrt{n}$. The numbers that are not crossed out are all the prime numbers from 2 to $n$. Here is a sieve of Eratosthenes that includes the numbers from 2 to 27. The multiples of 2 are crossed out with {\cy /}, the multiples of 3 with a {\color{red} \textbackslash}, and the multiples of 5 with a \textemdash.
+
+\begin{center}
+2 3 \Ccancel[cyan]{4} \sout{5} 
+\Cbcancel[red]{\Ccancel[cyan]{6}} 7
+\Ccancel[cyan]{8} \Cbcancel[red]{9} 
+\sout{\Ccancel[cyan]{10}} 11
+\Cbcancel[red]{\Ccancel[cyan]{12}} 13 \Ccancel[cyan]{14}
+\sout{\Cbcancel[red]{15}} \Ccancel[cyan]{16} 17 
+\Cbcancel[red]{\Ccancel[cyan]{18}} 19 
+\sout{\Ccancel[cyan]{20}} \Cbcancel[red]{21} 
+\Ccancel[cyan]{22} 23 \Cbcancel[red]{\Ccancel[cyan]{24}} 
+\sout{25} \Ccancel[cyan]{26} \Cbcancel[red]{27}
+\end{center}
+
+Use the sieve of Eratosthenes to find all prime numbers less than 100.
+
+\begin{proof}
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 91, 93, 97
+\end{proof}
+
+\subsection{Exercise 34}
+Use the test for primality and the result of exercise 33 to determine whether the following numbers are prime.
+
+\subsubsection{(a)}
+9,269
+
+\begin{proof}
+$\sqrt{9269} \approx 96.3$, and so the possible primes factors to be checked are all among those you found for exercise 33. Testing each in turn shows that 9,269 is not prime because $9,269 = 13 \cdot 713$.
+
+\end{proof}
+
+\subsubsection{(b)}
+9,103
+
+\begin{proof}
+$\sqrt{9103} \approx 95.4$, and so the possible prime factors to be checked are all among those you found for exercise 33. Testing each in turn shows that none divides 9,103. Therefore, 9,103 is prime.
+\end{proof}
+
+\subsubsection{(c)}
+8,623
+
+\begin{proof}
+$\sqrt{8,623} \approx 92.8$, and so the possible prime factors to be checked are all among those you found for exercise 33. Testing each in turn shows that none divides
+8,623. Therefore, 8,623 is prime.
+\end{proof}
+
+\subsubsection{(d)}
+7,917
+
+\begin{proof}
+$\sqrt{7,917}$ has the sum of its digits divisible by 3, therefore it's divisible by 3. Therefore, 7,917 is not prime.
 \end{proof}
 
 \subsection{Exercise 35}
+Use proof by contradiction to show that every integer greater than 11 is a sum of two composite numbers.
+
+{\it Hint:} Assuming that $n$ is not composite, show that
+$n - 4, n - 6$, and $n - 8$ are all prime. Next show that
+$n - 7$ is divisible by 3 by considering $n - 6, n - 7$,
+and $n - 8$. Finally, write $n - 4 = (n - 7) + 3$ and show
+that 3 divides $n - 4$.
 
 \begin{proof}
+Argue by contradiction. Assume there is an integer $n > 11$ that is not a sum of two composite numbers.
 
+Since $n = (n-4) + 4$ and $4 = 2 \cdot 2$ is composite, and $n$ is not a sum of two composite numbers, $n-4$ is prime.
+
+Similarly $n-6$ and $n-8$ are also prime. Since $n-6, n-7, n-8$ are three consecutive integers, at least one of them is divisible by 3. Since $n-6$ and $n-8$ are prime, then $n-7$ must be divisible by 3.
+
+By definition of divisibility, $n-7 = 3k$ for some integer $k$. Then $n-4 = (n-7)+3 = 3k+3 = 3(k+1)$ where $k+1$ is an integer, therefore $n-4$ is divisible by 3, hence composite.
+
+So $n-4$ is both prime and composite, a contradiction. Thus our supposition was false, and the original statement is true.
 \end{proof}
 
 \subsection{Exercise 36}
+For all odd integers $a, b$, and $c$, if $z$ is a solution of $ax^2 + bx + c = 0$ then $z$ is irrational. (In the proof, use the properties of even and odd integers that
+are listed in Example 4.3.3.)
+
+{\it Hint:} Use proof by contradiction. Suppose $a, b$, and $c$ are odd integers, $z$ is a solution to $ax^2 + bx + c$, and $z$ is rational. Then $z = m'/n'$, for some integers $m'$ and $n'$ with $n' \neq 0$. Divide out the greatest common factor of $m'$ and $n'$ (possibly 1) to obtain two integers $m$ and $n$ with no common factor that satisfy the equation $m'/n' = m/n$. Substitute $m/n$ into $ax^2 + bx + c$, and multiply through by $n^2$. Show that (1) the assumption that $m$ is even leads to a contradiction, and (2) the assumption that $n$ is even leads to a contradiction.
 
 \begin{proof}
+Argue by contradiction. Suppose $a, b$, and $c$ are odd integers, $z$ is a solution to $ax^2 + bx + c$, and $z$ is rational. 
 
+Then by definition of rational, $z = m'/n'$, for some integers $m'$ and $n'$ with $n' \neq 0$. Let $k \geq 1$ be the greatest common factor of $m'$ and $n'$. So $m'=km$ and $n'=kn$ for some integers $m,n$ where $m,n$ have no common factors.
+
+Then $z = m'/n' = (km)/(kn) = m/n$, so $m/n$ is a solution of the equation too, and $m,n$ have no common factors. Then
+\[
+0 = az^2+bz+c = a\left(\frac{m}{n}\right)^2 + b\frac{m}{n} + c = \frac{am^2}{n^2} + \frac{bm}{n} + c.
+\]
+Multiplying both sides by $n^2$ we get $0 = am^2 + bmn + cn^2$. So $-am^2 = n(bm+cn)$.
+
+Since $m,n$ have no common factors, they cannot be both even. There are 3 possibilities:
+
+{\bf Case 1:} $m$ is odd, $n$ is even.
+
+Then $-am^2$ is odd (being a product of odd integers), but $n(bm + cn)$ is even (being a product of an even integer and another integer). This contradicts $-am^2 = n(bm+cn)$.
+
+{\bf Case 2:} $m$ is even, $n$ is odd.
+
+Then $-am^2$ is even (being a product of an even integer and other integers). $bm$ is also even. $cn$ is odd (being a product of odd integers), so $bm+cn$ is odd (being the sum of an even integer and an odd integer) and $n(bm+cn)$ is also odd (being a product of odd integers). This contradicts $-am^2 = n(bm+cn)$.
+
+{\bf Case 3:} $m$ is odd, $n$ is odd.
+
+Then $am^2, bmn$ and $cn^2$ are all odd (being products of odd integers). Therefore  $am^2 + bmn + cn^2$ is also odd (being the sum of 3 odd integers). This contradicts $0 = am^2 + bmn + cn^2$.
+
+In all cases we get a contradiction. Therefore our supposition was false, and $z$ must be irrational.
 \end{proof}
 
 \section{Exercise Set 4.8}
