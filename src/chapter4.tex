@@ -620,11 +620,9 @@ The difference of any even integer minus any odd integer is odd.
 \begin{proof}
 Suppose $a$ is any even integer and $b$ is any odd integer. 
 {\it [We must show that $a - b$ is odd.]} By definition of even and odd, $a = 2r$ and $b = 2s + 1$, for some integers $r, s$. By substitution and algebra,
-$$
+\[
 a-b = 2r - (2s+1) = 2r-2s-1 = 2r-2s-2+2-1 = 2(r-s-1)+1
-$$
-
-
+\]
 Let $t = r-s-1$. Then $t$ is an integer because differences of integers are integers. 
 
 Thus $a-b = 2t+1$ where $t$ is an integer, and so by definition of odd $a-b$ is odd {\it [as was to be shown]}.
@@ -785,9 +783,9 @@ Suppose $n$ is any odd integer. {\it [We must show that $(-1)^n = -1$.]}
 By definition of even, $n = 2k+1$, for some integer $k$. 
 
 Then by the laws of exponents from algebra 
-$$
+\[
 (-1)^n = (-1)^{2k+1} = (-1)^{2k}\cdot(-1) = ((-1)^2)^k\cdot(-1) = 1^k\cdot(-1) = 1\cdot(-1) = -1
-$$ 
+\] 
 {\it [as was to be shown]}.
 \end{proof}
 
@@ -909,13 +907,13 @@ Using ``if $m\cdot n$ is even...'' in this case is the problem; it has the {\it 
 So it would be better to write: ``{\it We want to prove that $m\cdot n$ is even. In other words, we want to prove that there is an integer $r$ such that $m \cdot n = 2r$.}'' Using the words ``We want to prove that...'' instead of ``If...'' goes a long way to avoid this common mistake. This way we can ``unpack'' the definition of what we are trying to prove without assuming it.
 
 Another related problem is to first unpack the definition of what we are trying to prove, then try to ``prove backwards''. Say we want to prove $A$, and we unpack the definition to B. So we have to prove $B$. But instead, we start by assuming $B$ is true, and apply some algebra or logic to it, to arrive at something else, say $E$, that is true:
-$$
+\[
 A \to \text{unpack definition} \to B \to \text{middle steps} \to C \to D \to E = \text{something true!}
-$$
+\]
 But this would only prove that $B$ implies $E$. In order to establish the truth of $B$ (and hence of $A$), we would actually have to prove that $E$ implies $B$! So all the ``steps'' from $B$ to $E$ would have to be ``reversible'', in other words, logical equivalences (biconditionals):
-$$
+\[
 A \bic \text{unpack definition} \bic B \bic \text{middle steps} \bic C \bic D \bic E = \text{something true!}
-$$
+\]
 But that is rarely the case!
 \end{proof}
 
@@ -923,9 +921,9 @@ But that is rarely the case!
 {\bf Theorem:} The sum of any two even integers equals $4k$ for some integer $k$.
 
 “{\bf Proof:} Suppose $m$ and $n$ are any two even integers. By definition of even, $m = 2k$ for some integer $k$ and $n = 2k$ for some integer $k$. By substitution, 
-$$
+\[
 m + n = 2k + 2k = 4k.
-$$
+\]
 This is what was to be shown.”
 
 \begin{proof}
@@ -1084,9 +1082,9 @@ For every integer $n$, $4(n^2 + n + 1) - 3n^2$ is a perfect square.
 
 \begin{proof}
 True. Suppose $n$ is any integer. Then by algebra
-$$
+\[
 4(n^2 + n + 1) - 3n^2 = 4n^2 + 4n + 4 - 3n^2 = n^2 + 4n + 4 = (n + 2)^2
-$$
+\]
 Now $(n + 2)^2$ is a perfect square because $n + 2$ is an integer (being a sum of $n$ and $2$). Hence $4(n^2 + n + 1) - 3n^2$ is a perfect square, as was to be shown.
 \end{proof}
 
@@ -1104,15 +1102,15 @@ False. \underline{Counterexample:} 7 cannot be written as a sum of three of fewe
 True. Suppose $a, b, c, d$ are any four consecutive integers. {\it [Want to prove: there is an integer $k$ such that $abcd = k^2 - 1$.]}
 
 By definition of consecutive, there is an integer $n$ such that $a = n, b = n+1, c = n+2, d = n+3$. Then
-$$
+\[
 abcd = n(n+1)(n+2)(n+3) = n(n+3)(n+1)(n+2) = (n^2+3n)(n^2+3n+2)
-$$
+\]
 {\it [Here we notice a pattern. The two factors differ by 2. So it is reminiscent of $(x-1)(x+1) = x^2 - 1^2$ isn't it?]}
 
 By some more algebra,
-$$
+\[
 (n^2+3n)(n^2+3n+2) = (n^2+3n+1-1)(n^2+3n+1+1) = (n^2+3n+1)^2-1^2
-$$
+\]
 Let $k = n^2+3n+1$. Then $k$ is an integer because it is a sum and product of integers. Therefore $abcd = k^2 - 1$ where $k$ is an integer, {\it [as was to be shown].}
 \end{proof}
 
@@ -1166,9 +1164,9 @@ For all nonnegative real numbers $a$ and $b$, $\sqrt{a + b} = \sqrt{a} + \sqrt{b
 
 \begin{proof}
 False. \underline{Counterexample:} Let $a = b = 1$. Then 
-$$
+\[
 \sqrt{a+b} = \sqrt{1+1} = \sqrt{2} \neq 2 = 1 + 1 = \sqrt{1} + \sqrt{1} = \sqrt{a} + \sqrt{b}
-$$
+\]
 \end{proof}
 
 \subsection{Exercise 39}
@@ -1320,9 +1318,9 @@ integer. Then $n = n\cdot 1$, and so $n = n/1$ by dividing both sides by 1. Now 
 Let $S$ be the statement “The square of any rational number is rational.” A formal version of $S$ is “For every rational number $r$, $r^2$ is rational.” Fill in the blanks in the proof for $S$.
 
 {\bf Proof:} Suppose that $r$ is (a) \fbl. By definition of rational, $r = a/b$ for some (b) \fbl with $b \neq 0$. By substitution,
-$$
+\[
 r^2 = (c) \fbl = a^2/b^2.
-$$
+\]
 Since $a$ and $b$ are both integers, so are the products $a^2$ and (d) \fbl. Also $b^2 \neq 0$ by the (e) \fbl. Hence $r^2$ is a ratio of two integers with a nonzero denominator, and so (f) \fbl by definition of rational.
 
 \begin{proof}
@@ -1358,9 +1356,9 @@ Determine whether the statement is true or false and justify your answer.
 
 \begin{proof}
 The statement is true. Suppose $r$ is a {\it [particular but arbitrarily chosen]} rational number. {\it [We must show that $-r$ is rational.]} By definition of rational, $r = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then by substitution and algebra,
-$$
+\[
 -r = -\frac{a}{b} = \frac{-a}{b}
-$$
+\]
 Now since $a$ is an integer, so is $-a$ (being the product of $-1$ and $a$). Hence $-r$ is a quotient of integers with a nonzero denominator, and so $-r$ is rational {\it [as was to be shown]}.
 \end{proof}
 
@@ -1379,9 +1377,9 @@ Determine whether the statement is true or false and justify your answer.
 
 \begin{proof}
 The statement is true. Suppose $r$ is a {\it [particular but arbitrarily chosen]} rational number. {\it [We must show that $r^3$ is rational.]} By definition of rational, $r = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then by substitution and algebra,
-$$
+\[
 r^3 = \left(\frac{a}{b}\right)^3 = \frac{a^3}{b^3}
-$$
+\]
 Now since $a, b$ are integers, so are $a^3$ and $b^3$ (being the products of $a$ and $b$). Moreover, since $b \neq 0$, by the Zero Product Property, $b^3 \neq 0$. 
 
 Hence $r^3$ is a quotient of integers with a nonzero denominator, and so $r^3$ is rational {\it [as was to be shown]}.
@@ -1394,9 +1392,9 @@ The product of any two rational numbers is a rational number.
 
 \begin{proof}
 Suppose $r$ and $s$ are rational numbers. By definition of rational, $r = a/b$ and $s = c/d$ for some integers $a, b, c$, and $d$ with $b \neq 0$ and $d \neq 0$. Then by substitution and algebra,
-$$
+\[
 rs = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}
-$$
+\]
 Now $ac$ and $bd$ are both integers (being products of integers) and $bd \neq 0$ (by the zero product property). Hence $rs$ is a quotient of integers with a nonzero denominator, and so, by definition of rational, $rs$ is rational.
 \end{proof}
 
@@ -1411,9 +1409,9 @@ The quotient of any two rational numbers is a rational number.
 Suppose $r,s$ are rational numbers such that $s \neq 0$. {\it[Want to prove $r/s$ is rational.]}
 
 By definition of rational, $r = a/b$ and $s = c/d$ for some integers $a,b,c,d$ where $b \neq 0, d \neq 0$. Since $s \neq 0$ we also have $c \neq 0$. Then by algebra
-$$
+\[
 \frac{r}{s} = \frac{a/b}{c/d} = \frac{ad}{bc}
-$$
+\]
 Now $ad$ and $bc$ are integers because they are products of integers. Since $b \neq 0$ and $c \neq 0$, by Zero Product Property $bc \neq 0$. 
 
 Let $m = ad$ and $n = bc$. So $m$ and $n$ are integers with $n \neq 0$, and $r / s = m / n$. Therefore by definition of rational, $r/s$ is rational.
@@ -1426,9 +1424,9 @@ The difference of any two rational numbers is a rational number.
 True. Suppose $r,s$ are rational numbers. {\it[Want to prove $r-s$ is rational.]}
 
 By definition of rational, $r = a/b$ and $s = c/d$ for some integers $a,b,c,d$ where $b \neq 0, d \neq 0$. Then by algebra
-$$
+\[
 r-s = \frac{a}{b}-\frac{c}{d} = \frac{ad-bc}{bd}
-$$
+\]
 Now $ad-bc$ and $bd$ are integers because they are products and differences of integers. Since $b \neq 0$ and $d \neq 0$, by Zero Product Property $bd \neq 0$. 
 
 Let $m = ad-bc$ and $n = bd$. So $m$ and $n$ are integers with $n \neq 0$, and $r - s = m / n$. Therefore by definition of rational, $r-s$ is rational.
@@ -1439,9 +1437,9 @@ If $r$ and $s$ are any two rational numbers, then $\frac{r+s}{2}$ is rational.
 
 \begin{proof}
 True. The proof is very similar to Exercises 16 and 17. The crucial steps are
-$$
+\[
 \frac{r+s}{2} = \frac{\frac{a}{b} + \frac{c}{d}}{2} = \frac{(ad+bc)/bd}{2} = \frac{ad+bc}{2bd}
-$$
+\]
 and noticing that $ad+bc$ and $2bd$ are integers, and $2bd \neq 0$.
 \end{proof}
 
@@ -1535,18 +1533,18 @@ Assume $s$ is any rational number. By Theorem 4.3.1, $5, 8, 7$ are rational, and
 
 \subsection{Exercise 27}
 It is a fact that if $n$ is any nonnegative integer, then
-$$
+\[
 1 + \frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + \cdots + \frac{1}{2^n} = \frac{1-(1/2^{n+1})}{1-(1/2)}
-$$
+\]
 (A more general form of this statement is proved in Section 5.2.) Is the right-hand side of this equation rational? If so, express it as a ratio of two integers.
 
 \begin{proof}
-$$
+\[
 x = \frac{1-\dps\frac{1}{2^{n+1}}}{1-\dps\frac{1}{2}} =
 \frac{\dps\frac{2^{n+1}-1}{2^{n+1}}}{\dps\frac{1}{2}} =
 \dps\frac{2^{n+1}-1}{2^{n+1}}\cdot{\dps\frac{2}{1}} = 
 \dps\frac{2^{n+1}-1}{2^{n}}
-$$
+\]
 Now $2^{n+1} - 1$ and $2^n$ are both integers (since $n$ is a nonnegative integer) and $2^n \neq 0$ by the zero product
 property. Therefore, $x$ is rational.
 \end{proof}
@@ -1554,68 +1552,68 @@ property. Therefore, $x$ is rational.
 \subsection{Exercise 28}
 Suppose $a, b, c$, and $d$ are integers and $a \neq c$. Suppose also that $x$ is a real number that satisfies the
 equation
-$$
+\[
 \frac{ax+b}{cx+d} = 1.
-$$
+\]
 Must $x$ be rational? If so, express $x$ as a ratio of two integers.
 
 \begin{proof}
-$$
+\[
 \frac{ax+b}{cx+d} = 1 \to ax+b = cx+d \to ax-cx+b-d = 0 \to x(a-c) = d-b \to x = \frac{d-b}{a-c}
-$$
+\]
 $x$ is rational because both $d-b$ and $a-c$ are rational, and because $a-c \neq 0$ (since $a \neq c$).
 \end{proof}
 
 \subsection{Exercise 29}
 Suppose $a, b$, and $c$ are integers and $x, y$, and $z$ are nonzero real numbers that satisfy the following equations:
-$$
+\[
 \frac{xy}{x+y} = a, \frac{xz}{x+z} = b, \frac{yz}{y+z} = c
-$$
+\]
 Is $x$ rational? If so, express it as ratio of two integers.
 
 \begin{proof}
 Taking the reciprocals of both sides of the first equation:
-$$
+\[
 \frac{x+y}{xy} = \frac{1}{a}
-$$
+\]
 Now we split the first fraction into two, and simplify:
-$$
+\[
 \frac{x+y}{xy} = \frac{x}{xy} + \frac{y}{xy} = \frac{1}{y} + \frac{1}{x}
-$$
+\]
 Therefore $\dps\frac{1}{y} + \frac{1}{x} = \frac{1}{a}$. By performing the same steps on the other two equations, we see that $\dps\frac{1}{z} + \frac{1}{x} = \frac{1}{b}$ and $\dps\frac{1}{z} + \frac{1}{y} = \frac{1}{c}$.
 
 For the sake of simplicity let's do some renaming: let 
-$$
+\[
 X = 1/x, \,\, Y = 1/y, \,\, Z = 1/z, \,\, A = 1/a, \,\, B = 1/b, \,\, C = 1/c
-$$
+\]
 So the three new equations we derived above become:
-$$
+\[
 \begin{array}{ccccccc}
 Y&+&X&=&A&&(1)\\
 Z&+&X&=&B&&(2)\\
 Z&+&Y&=&C&&(3)\\
 \end{array}
-$$
+\]
 From (1) we get (4): $Y = A - X$ and from (2) we get (5): $Z = B - X$.
 
 Substituting (4) and (5) back into (3) we get: $(B-X) + (A-X) = C$.
 
 So $B+A-2X = C$, then $B+A-C = 2X$ and $\frac{1}{2}(B+A-C) = X$. Using our old variable names, we get:
-$$
+\[
 \frac{1}{2}\left(\frac{1}{b}+\frac{1}{a}-\frac{1}{c}\right) = \frac{1}{x}
-$$
+\]
 Rewriting:
-$$
+\[
 \frac{1}{2b}+\frac{1}{2a}-\frac{1}{2c} = \frac{1}{x}
-$$
+\]
 Getting a common denominator, then adding:
-$$
+\[
 \frac{ac}{2abc}+\frac{bc}{2abc}-\frac{ab}{2abc} = \frac{ac + bc - ac}{2abc} = \frac{1}{x}
-$$
+\]
 Finally, taking reciprocals of both sides, we get $x$ as a ratio of two integers:
-$$
+\[
 \frac{2abc}{ac + bc - ac} = x
-$$
+\]
 \end{proof}
 
 \subsection{Exercise 30}
@@ -1625,46 +1623,46 @@ Prove that if one solution for a quadratic equation of the form $x^2 + bx + c = 
 Assume $x^2 + bx + c = 0$ has two solutions $r,s$ where one of them, $r$, is rational. {\it [Want to prove: $s$ is also rational.]}
 
 We are given the fact that $x^2 + bx + c = (x - r)(x - s)$. This holds true for all real numbers $x$. Solving for $s$, we get
-$$
+\[
 \frac{x^2 + bx + c}{x-r} = x - s \implies \frac{x^2 + bx + c}{x-r} -x = - s \implies -\frac{x^2 + bx + c}{x-r} + x = s
-$$
+\]
 This equality is true for all real $x$ except $x = r$ (because then division by $x-r$ would be illegal). So, let's substitute an $x$ value that is rational and different than $r$, say $r+1$. Then we get:
-$$
+\[
 -\frac{(r+1)^2 + b(r+1) + c}{r+1-r} + r+1 = s \implies -(r+1)^2 + b(r+1) + c + r+1 = s
-$$
+\]
 Now we use the facts established in the Exercises that sums, negatives, products and squares of rational numbers are rational. Since $r, b, c, 1$ are all rational, this implies that $s$ is rational.
 \end{proof}
 
 \subsection{Exercise 31}
 Prove that if a real number $c$ satisfies a polynomial equation of the form
-$$
+\[
 r_3 x^3 + r_2 x^2 + r_1 x + r_0 = 0
-$$
+\]
 where $r_0, r_1, r_2, r_3$ are rational numbers, then $c$ satisfies an equation of the form
-$$
+\[
 n_3 x^3 + n_2 x^2 + n_1 x + n_0 = 0
-$$
+\]
 where $n_0, n_1, n_2, n_3$ are integers.
 
 \begin{proof}
 Suppose $c$ is a real number such that $r_3 c^3 + r_2 c^2 + r_1 c + r_0 = 0$, where $r_0, r_1, r_2, r_3$ are rational numbers.
 
 By definition of rational, $r_0 = a_0/b_0, r_1 = a_1/b_1, r_2 = a_2/b_2, r_3 = a_3/b_3$ for some integers $a_0, a_1, a_2, a_3$ and some nonzero integers $b_0, b_1, b_2, b_3$. By substitution,
-$$
+\[
 \begin{array}{rcl}
 r_3 c^3 + r_2 c^2 + r_1 c + r_0 & = & \dps\frac{a_3}{b_3}c^3 + \frac{a_2}{b_2}c^2 + \frac{a_1}{b_1}c + \frac{a_0}{b_0} \vspace{0.3cm}\\
 & = & \dps\frac{b_0b_1b_2a_3}{b_0b_1b_2b_3}c^3 + \frac{b_0b_1b_3a_2}{b_0b_1b_2b_3}c^2 + \frac{b_0b_2b_3a_1}{b_0b_1b_2b_3}c + \frac{b_1b_2b_3a_0}{b_0b_1b_2b_3} \\
 & = & 0.
 \end{array}
-$$
+\]
 Multiplying both sides by $b_0b_1b_2b_3$ gives
-$$
+\[
 b_0b_1b_2a_3 \cdot c^3 + b_0b_1b_3a_2 \cdot c^2 + b_0b_2b_3a_1 \cdot c + b_1b_2b_3a_0 = 0
-$$
+\]
 Let $n_3 = b_0b_1b_2a_3, n_2 = b_0b_1b_3a_2, n_1 = b_0b_2b_3a_1, n_0 = b_1b_2b_3a_0$. Then $n_3, n_2, n_1, n_0$ are all integers (being products of integers). Hence $c$ satisfies the equation
-$$
+\[
 n_3 \cdot c^3 + n_2 \cdot c^2 + n_1 \cdot c + n_0 = 0
-$$
+\]
 where $n_3, n_2, n_1, n_0$ are all integers, {\it [as was to be shown.]}
 \end{proof}
 
@@ -1681,17 +1679,17 @@ The proof is extremely similar to Exercise 31. Assume $p(c) = 0$ where:
 $c$ is any real number, and $p(x) = \dps\frac{a_n}{b_n}x^n + \cdots + \frac{a_1}{b_1}x + \frac{a_0}{b_0}$ is a polynomial with rational coefficients (so $a_0, \ldots, a_n$ are all integers and $b_0, \ldots, b_n$ are all nonzero integers).
 
 So $c$ satisfies the equation
-$$
+\[
 \frac{a_n}{b_n}c^n + \cdots + \frac{a_1}{b_1}c + \frac{a_0}{b_0} = 0
-$$
+\]
 Multiply both sides by $L = b_0b_1\cdots b_{n-1}b_n$:
-$$
+\[
 \frac{a_n L}{b_n}c^n + \cdots + \frac{a_1 L}{b_1}c + \frac{a_0 L}{b_0} = 0
-$$
+\]
 Notice that $\dps\frac{a_nL}{b_n}, \ldots, \frac{a_0L}{b_0}$ are all integers (because all the denominators can be cancelled out with one of the factors of $L$). So $c$ is the root of a polynomial
-$$
+\[
 q(x) = \frac{a_n L}{b_n}x^n + \cdots + \frac{a_1 L}{b_1}x + \frac{a_0 L}{b_0}
-$$
+\]
 where $q(x)$ has all integer coefficients, {\it [as was to be shown.]}
 \end{proof}
 
@@ -1722,9 +1720,9 @@ Assume $x^2 - 1253x + 255 = (x-r)(x-s)$ where $r,s$ are real numbers. So $r+s = 
 
 \subsection{Exercise 34}
 Observe that
-$$
+\[
 (x-r)(x-s)(x-t) = x^3 - (r+s+t)x^2 + (rs+rt+st)x - rst
-$$
+\]
 \subsubsection{(a)}
 Derive a result for cubic polynomials similar to the result in part (a) of exercise 33 for quadratic polynomials.
 
@@ -1781,9 +1779,9 @@ By setting both $r$ and $s$ equal to $a/b$, this incorrect proof violates the re
 
 \subsection{Exercise 38}
 “{\bf Proof:} Suppose $r$ and $s$ are rational numbers. Then $r = a/b$ and $s = c/d$ for some integers $a, b, c$, and $d$ with $b \neq 0$ and $d \neq 0$ (by definition of rational). Then
-$$
+\[
 r = \frac{a}{b}+\frac{c}{d}
-$$
+\]
 But this is a sum of two fractions, which is a fraction. So $r + s$ is a rational number since a rational number is a fraction.”
 
 \begin{proof}
@@ -1794,9 +1792,9 @@ This ``proof'' does not establish that ``the sum of two fractions is a fraction'
 “{\bf Proof:} Suppose $r$ and $s$ are rational numbers. If $r + s$ is rational, then by definition of rational $r + s = a/b$ for some integers $a$ and $b$ with $b \neq 0$. 
 
 Also since $r$ and $s$ are rational, $r = i/j$ and $s = m/n$ for some integers $i, j, m$, and $n$ with $j \neq 0$ and $n \neq 0$. It follows that
-$$
+\[
 r+s = \frac{i}{j} + \frac{m}{n} = \frac{a}{b}
-$$
+\]
 which is a quotient of two integers with a nonzero denominator. Hence it is a rational number. This is what was to be shown.”
 
 \begin{proof}
@@ -1907,9 +1905,9 @@ Fill in the blanks in the following proof that for all integers $a$ and $b$, if 
 
 {\bf Proof:} Suppose $a$ and $b$ are any integers such that
 {\cy (a)} \fbl. By definition of divisibility, there exists an integer $r$ such that {\cy (b)} \fbl. By substitution, 
-$$
+\[
 -b = -(ar) = a(-r).
-$$
+\]
 Let $t = $ {\cy(c)} \fbl. Then $t$ is an integer because $t = (-1)\cdot r$, and both $-1$ and $r$ are integers. Thus, by substitution, $-b = at$, where $t$ is an integer, and so by definition of divisibility, {\cy (d)} \fbl, as was to be shown.
 
 \begin{proof}
@@ -2310,13 +2308,13 @@ Putting this back into the equation we get $10(108) = 9c$ and solving for $c$ we
 
 \begin{tcolorbox}[colframe=cyan]
 {\bf \cy Definition:} Given any nonnegative integer $n$, the {\bf decimal representation} of $n$ is an expression of the form 
-$$
+\[
 d_k d_{k-1} \cdots d_2d_1d_0,
-$$ 
+\] 
 where $k$ is a nonnegative integer, $d_0, d_1, d_2, \ldots, d_k$ (called the {\bf decimal digits} of $n$) are integers from 0 to 9 inclusive, $d_k \neq 0$ unless $n = 0$ and $k = 0$, and 
-$$
+\[
 n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0. 
-$$
+\]
 (For example, $2,503 = 2\cdot 10^3 + 5\cdot 10^2 + 0\cdot 10 + 3$.)
 \end{tcolorbox}
 
@@ -2333,17 +2331,17 @@ Prove that if $n$ is any nonnegative integer whose decimal representation ends i
 
 \begin{proof}
 Assume that if $n$ is any nonnegative integer whose decimal representation ends in $5$. Then by definition,
-$$
+\[
 n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + 5
-$$
+\]
 for some nonnegative integer $k$ and integers $d_1, \ldots, d_k$ from 0 to 9. If $k = 0$ then $n = 5$ which is divisible by 5. So we can assume $k \geq 1$. Now
-$$
+\[
 n = 10d_k \cdot 10^{k-1} + 10d_{k-1} \cdot 10^{k-2} + \cdots + 10d_2 \cdot 10^{2-1} + 10 d_1 + 5
-$$
+\]
 Now factoring out a 5 we get
-$$
+\[
 n = 5(2d_k \cdot 10^{k-1} + 2d_{k-1} \cdot 10^{k-2} + \cdots + 2d_2 \cdot 10 + 2 d_1 + 1)
-$$
+\]
 Let $t = 2d_k \cdot 10^{k-1} + 2d_{k-1} \cdot 10^{k-2} + \cdots + 2d_2 \cdot 10 + 2 d_1 + 1$. Then $t$ is an integer because it is a sum of products of integers. So $5 \mid n$ by definition of divides.
 \end{proof}
 
@@ -2352,13 +2350,13 @@ Prove that if the decimal representation of a nonnegative integer $n$ ends in $d
 
 \begin{proof}
 Assume the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$ and assume $4 \mid (10d_1 + d0)$. Let
-$$
+\[
 n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0. 
-$$
+\]
 be the decimal representation of $n$. Since the representation ends in $d_1d_0$, $k$ must be at least 2 or greater. Factoring out $10^2$ from the first $k-1$ terms, and leaving the last 2 terms alone, we get
-$$
+\[
 n = 10^2(d_k \cdot 10^{k-2} + d_{k-1} \cdot 10^{k-3} + \cdots + d_2 \cdot 10^{2-2}) + d_1 \cdot 10 + d_0. 
-$$
+\]
 Let $s = d_k \cdot 10^{k-2} + d_{k-1} \cdot 10^{k-3} + \cdots + d_2 \cdot 10^{2-2}$, which is an integer (being a sum of products of integers).
 
 So $n = 100s + 10d_1 + d_0$. Since $4 \mid (10d_1 + d0)$, we have $10d_1 + d0 = 4t$ for some integer $t$. Therefore $n = 100s + 10d_1 + d_0 = 100s + 4t = 4(25s+t)$.
@@ -2368,7 +2366,7 @@ Let $r = 25s+t$, which is an integer (being a sum of products of integers). So $
 
 \subsection{Exercise 47}
 Observe that
-$$
+\[
 \begin{array}{rcl}
 7,524 &=& 7 \cdot 1,000 + 5 \cdot 100 + 2 \cdot 10 + 4\\
 &=& 7(999 + 1) + 5(99 + 1) + 2(9 + 1) + 4\\
@@ -2378,35 +2376,35 @@ $$
 &=& (7 \cdot 111 + 5 \cdot 11 + 2) \cdot 9 + (7 + 5 + 2 + 4)\\
 &=& \text{(an integer divisible by 9) + (the sum of the digits of 7,524)}.
 \end{array}
-$$
+\]
 Since the sum of the digits of 7,524 is divisible by 9, 7,524 can be written as a sum of two integers each of which is divisible by 9. It follows from exercise 15 that 7,524 is divisible by 9. Generalize the argument given in this example to any nonnegative integer $n$. In other words, prove that for any nonnegative integer $n$, if the sum of the digits of $n$ is divisible by 9, then $n$ is divisible by 9.
 
 Hint: You may take it as a fact that for any positive
 integer $k$, 
-$$
+\[
 10^k = 9\cdot10^{k-1} + 9\cdot10^{k-2} + \ldots + 9\cdot10^1 + 9\cdot10^0 + 1.
-$$
+\]
 \begin{proof}
 First let's talk about the Hint. It tells us that, for any positive integer $k$, we have $10^k = 9(10^{k-1} +10^{k-2} + \ldots + 10^1 + 10^0) + 1$. (For example, if $k = 5$ then $10^5 = 100000 = 99999 + 1 = 9 \cdot 11111 + 1$.)
 
 In other words, every power of 10 can be written as: (some integer divisible by 9) + 1, or equivalently as: ($9 \cdot$ some integer) + 1.
 
 Assume $n$ is any nonnegative integer such that the sum of the digits of $n$ is divisible by 9. Let
-$$
+\[
 n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0. 
-$$
+\]
 be the decimal representation of $n$. By the Hint, 
-$$
+\[
 n = d_k \cdot (9a_k + 1) + d_{k-1} \cdot (9a_{k-1}+1) + \cdots + d_2 \cdot (9a_2+1) + d_1 \cdot (9a_1+1) + d_0
-$$
+\]
 for some integers $a_1, \ldots, a_k$. Multiplying out, we get:
-$$
+\[
 n = (9d_ka_k + d_k) + (9d_{k-1}a_{k-1} + d_{k-1}) + \cdots + (9d_2 a_2 + d_2) + (9d_1a_1 + d_1) + d_0
-$$
+\]
 Reorganizing, we get
-$$
+\[
 n = 9(d_ka_k + d_{k-1}a_{k-1} + \cdots + d_2 a_2 + d_1a_1) + (d_k + d_{k-1} + \cdots + d_2 + d_1 + d_0)
-$$
+\]
 The first term is divisible by 9. Therefore, $n$ is divisible by 9 if, and only if, the second term $(d_k + d_{k-1} + \cdots + d_2 + d_1 + d_0)$, in other words the sum of $n$'s digits, is also divisible by 9.
 \end{proof}
 
@@ -2415,9 +2413,9 @@ Prove that for any nonnegative integer $n$, if the sum of the digits of $n$ is d
 
 \begin{proof}
 This follows from the proof of Exercise 47. We can simply repeat the same proof, and at the end, since $9 = 3 \cdot 3$, we have
-$$
+\[
 n = (3 \cdot 3) \cdot(d_ka_k + d_{k-1}a_{k-1} + \cdots + d_2 a_2 + d_1a_1) + (d_k + d_{k-1} + \cdots + d_2 + d_1 + d_0)
-$$
+\]
 so the first term is divisible by 3, therefore $n$ is divisible by 3 if and only if the second term (sum of its digits) is also divisible by 3.
 \end{proof}
 
@@ -2432,13 +2430,13 @@ Taking a look at more examples of even powers of 10, we see $10,000 = 9,999 + 1 
 Taking a look at more examples of odd powers of 10, we see $100,000 = 100,001 - 1 = 11 \cdot 9091 - 1$, and $10,000,000 = 10,000,001 - 1 = 11 \cdot 909,091 - 1$ and so on.
 
 In general, if $k$ is a nonnegative integer, then we have $10^{2k} = 11 \cdot a + 1$ and $10^{2k+1} = 11 \cdot b - 1$ for some integers $a, b$. Putting these into one formula we get:
-$$
+\[
 \fa k \geq 0, \te a_k \geq 0 \text{ such that } 10^{k} = 11 \cdot a_k + (-1)^k.
-$$
+\]
 Now we can repeat the proof in Exercise 47 but using the above equation instead. We'll end up with:
-$$
+\[
 n = 11 \cdot(d_ka_k +\cdots + d_2 a_2 + d_1a_1) + ((-1)^{k}d_k +  \cdots + (-1)^{2}d_2 + (-1)^{1}d_1 + (-1)^{0}d_0)
-$$
+\]
 The first term on the right-hand side is divisible by 11. So $n$ is divisible by 11 if, and only if, the second term (the alternating sum of its digits) is divisible by 11.
 \end{proof}
 
@@ -2569,14 +2567,14 @@ $DayT = 6$ (Saturday) and $N = 15$
 
 \begin{proof}
 When today is Saturday, 15 days from today is two weeks (which is Saturday) plus one day (which is Sunday). Hence $DayN$ should be 0. According to the formula, when today is Saturday, $DayT = 6$, and so when $N = 15$,
-$$
+\[
 \begin{array}{rcl}
 DayN &=& (DayT + N) \mod 7 \\
 &=& (6 + 15) \mod 7 \\
 &=& 21 \mod 7 \\
 &=& 0,
 \end{array}
-$$
+\]
 which agrees.
 \end{proof}
 
@@ -2585,14 +2583,14 @@ $DayT = 0$ (Sunday) and $N = 7$
 
 \begin{proof}
 When today is Sunday, 7 days from today is one week (which is Sunday). Hence $DayN$ should be 0. According to the formula, when today is Sunday, $DayT = 0$, and so when $N = 7$,
-$$
+\[
 \begin{array}{rcl}
 DayN &=& (DayT + N) \mod 7 \\
 &=& (0 + 7) \mod 7 \\
 &=& 7 \mod 7 \\
 &=& 0,
 \end{array}
-$$
+\]
 which agrees.
 \end{proof}
 
@@ -2601,14 +2599,14 @@ $DayT = 4$ (Thursday) and $N = 12$
 
 \begin{proof}
 When today is Thursday, 12 days from today is one week (which is Thursday) plus 5 days (which is Tuesday). Hence $DayN$ should be 2. According to the formula, when today is Thursday, $DayT = 4$, and so when $N = 12$,
-$$
+\[
 \begin{array}{rcl}
 DayN &=& (DayT + N) \mod 7 \\
 &=& (4 + 12) \mod 7 \\
 &=& 16 \mod 7 \\
 &=& 2,
 \end{array}
-$$
+\]
 which agrees.
 \end{proof}
 
@@ -3272,7 +3270,7 @@ Then by Exercise 42 (where $c = |a-b|$ and $r = |a| - |b|$), we have $||a| - |b|
 
 \subsection{Exercise 44}
 A matrix {\bf M} has 3 rows and 4 columns.
-$$
+\[
 \left[
 \begin{array}{cccc}
 a_{11}&a_{12}&a_{13}&a_{14}\\
@@ -3280,7 +3278,7 @@ a_{21}&a_{22}&a_{23}&a_{24}\\
 a_{31}&a_{32}&a_{33}&a_{34}\\
 \end{array}
 \right]
-$$
+\]
 The 12 entries in the matrix are to be stored in {\it row major} form in locations 7,609 to 7,620 in a computer’s memory. This means that the entries in the first row (reading left to right) are stored first, then the entries in the second row, and finally the entries in the third row.
 
 \subsubsection{(a)}
@@ -3448,29 +3446,29 @@ $\ceil{n/36}$. The ceiling notation is more appropriate. If the floor notation i
 
 \subsection{Exercise 10}
 If 0 = Sunday, 1 = Monday, 2 = Tuesday, $\ldots$, 6 = Saturday, then January 1 of year $n$ occurs on the day of the week given by the following formula:
-$$
+\[
 \left(n + \floor{\frac{n-1}{4}} - \floor{\frac{n-1}{100}} + \floor{\frac{n-1}{400}}\right) \mod 7
-$$
+\]
 \subsubsection{(a)}
 Use this formula to find January 1 of {\cy i.} 2050 {\cy ii.} 2100 {\cy iii.} the year of your birth.
 
 \begin{proof}
 {\cy i.}
-$$
+\[
 \left(2050 + \floor{\frac{2049}{4}} - \floor{\frac{2049}{100}} + \floor{\frac{2049}{400}}\right) \mod 7 = (2050+512-20+5) \mod 7
-$$
+\]
 which is $2547 \mod 7 = 6$, which corresponds to a Saturday.
 
 {\cy ii.}
-$$
+\[
 \left(2100 + \floor{\frac{2099}{4}} - \floor{\frac{2099}{100}} + \floor{\frac{2099}{400}}\right) \mod 7 = (2100+524-20+5) \mod 7
-$$
+\]
 which is $2609 \mod 7 = 5$, which corresponds to a Friday.
 
 {\cy iii.}
-$$
+\[
 \left(1970 + \floor{\frac{1969}{4}} - \floor{\frac{1969}{100}} + \floor{\frac{1969}{400}}\right) \mod 7 = (1970+492-19+4) \mod 7
-$$
+\]
 which is $2447 \mod 7 = 4$, which corresponds to a Thursday.
 \end{proof}
 
@@ -3498,9 +3496,9 @@ For any real number $x$, $x = \floor{x}$ if, and only if, $x$ is an integer.
 Let $S$ be the statement: For any odd integer $n$, $\floor{n/2} = (n - 1)/2$. Then $S$ is true, but the following “proof” is incorrect. Find the mistake. 
 
 “{\bf Proof:} Suppose $n$ is any odd integer. Then $n = 2k + 1$ for some integer $k$. Consequently,
-$$
+\[
 \floor{\frac{2k+1}{2}} = \frac{(2k+1)-1}{2} = \frac{2k}{2} = k.
-$$
+\]
 But $n = 2k + 1$. Solving for $k$ gives $k = (n - 1)/2$.
 Hence, by substitution, $\floor{n/2} = (n - 1)/2$.”
 
@@ -3515,13 +3513,12 @@ Prove that if $n$ is any even integer, then $\floor{n/2} = n/2$.
 
 \begin{proof}
 Suppose $n$ is any even integer. By definition of even, $n = 2k$ for some integer $k$. Then
-$$
+\[
 \begin{array}{cccccccl}
 \dps\floor{\frac{n}{2}} &=& \dps\floor{\frac{2k}{2}} &=& \dps\floor{k} &=& k & \text{\cy because $k$ is an integer and $k \leq k < k+1$} \\
 & & & \text{But} & k &=& \dps\frac{n}{2} & \text{\cy because $n = 2k$.}\\
 \end{array}
-$$
-
+\]
 Thus, on the one hand, $\floor{\frac{n}{2}} = k$, and on the other hand, $k = \frac{n}{2}$. It follows that $\floor{\frac{n}{2}} = \frac{n}{2}$ {\it [as was to be shown.]}
 \end{proof}
 
@@ -3542,9 +3539,9 @@ For every real number $x$, $\floor{x - 1} = \floor{x} - 1$.
 \begin{proof}
 Suppose $x$ is any real number. Let $m = \floor{x}$. By definition of floor,\\ $m \leq x < m + 1$. Subtracting 1 from
 all parts of the inequality gives that
-$$
+\[
 m - 1 \leq x - 1 < m,
-$$
+\]
 and so, by definition of floor, $\floor{x - 1} = m - 1$. It follows by substitution that\\ $\floor{x - 1} = \floor{x} - 1$.
 
 \end{proof}
@@ -3554,14 +3551,14 @@ For every real number $x$, $\floor{x^2} = \floor{x}^2$.
 
 \begin{proof}
 \underline{Counterexample:} Let $x = -2.1$. Then $\floor{x} = -3$ and $x^2 = 4.41$. So 
-$$
+\[
 \floor{x^2} = \floor{4.41} = 4 \neq 9 = (-3)^2 = \floor{x}^2.
-$$
+\]
 \end{proof}
 
 \subsection{Exercise 17}
 For every integer $n$,
-$$
+\[
 \floor{n/3} =
 \left\{
 \begin{array}{lr}
@@ -3570,7 +3567,7 @@ n/3 & \text{if } n \mod 3 = 0\\
 (n-2)/3 & \text{if } n \mod 3 = 2\\
 \end{array}
 \right.
-$$
+\]
 \begin{proof}
 Assume $n$ is any integer. Let $r = n \mod 3$. There are 3 cases.
 
@@ -3579,15 +3576,15 @@ Assume $n$ is any integer. Let $r = n \mod 3$. There are 3 cases.
 {\bf Case 2:} $r = 1$. By definition of mod, $n = 3q + 1$ for some integer $q$. So $n/3 = (3q+1)/3 = q + \frac{1}{3}$. 
 
 Since $q$ is an integer and $q \leq q + \frac{1}{3} < q+1$, we have $\floor{q+\frac{1}{3}} = q$. Now $q = (n-1)/3$, so 
-$$
+\[
 \floor{n/3} = \floor{(3q+1)/3} = \floor{q+\frac{1}{3}} = q = (n-1)/3.
-$$
+\]
 {\bf Case 3:} $r = 2$. By definition of mod, $n = 3q + 2$ for some integer $q$. So $n/3 = (3q+2)/3 = q + \frac{2}{3}$. 
 
 Since $q$ is an integer and $q \leq q + \frac{2}{3} < q+1$, we have $\floor{q+\frac{2}{3}} = q$. Now $q = (n-2)/3$, so 
-$$
+\[
 \floor{n/3} = \floor{(3q+2)/3} = \floor{q+\frac{2}{3}} = q = (n-2)/3.
-$$
+\]
 Putting these cases together, we see that the formula given in the problem for $\floor{n/3}$ holds.
 \end{proof}
 
@@ -3596,9 +3593,9 @@ For all real numbers $x$ and $y$, $\ceil{x + y} = \ceil{x} + \ceil{y}$.
 
 \begin{proof}
 \underline{Counterexample:} Let $x = -0.5$ and $y = -0.6$. Then
-$$
+\[
 \ceil{x+y} = \ceil{-0.5-0.6} = \ceil{-1.1} = -1 \neq 0+0 = \ceil{-0.5} + \ceil{-0.6} = \ceil{x} + \ceil{y} 
-$$
+\]
 \end{proof}
 
 \subsection{Exercise 19}
@@ -3630,9 +3627,9 @@ Since $(k+1)-1 = k < k+\frac{1}{2} \leq k+1$, by definition of ceiling we have $
 Also we have $(n+1)/2 = (2k+1+1)/2 = (2k+2)/2 = k+1$.
 
 Putting these facts together we have
-$$
+\[
 \ceil{n/2} = \ceil{(2k+1)/2} = \ceil{k+\frac{1}{2}} = k+1 = (n+1)/2,
-$$
+\]
 {\it[as was to be shown.]}
 \end{proof}
 
@@ -3709,9 +3706,9 @@ For every real number $x$, if $x - \floor{x} < 1/2$ then $\floor{2x} = 2\floor{x
 
 \begin{proof}
 Suppose $x$ is any real number such that $x - \floor{x} < 1/2$. Multiplying both sides by 2 gives 
-$$
+\[
 2x - 2\floor{x} < 1, \,\,\text{ or, }\,\, 2x < 2\floor{x} + 1. 
-$$
+\]
 Now by definition of floor, $\floor{x} \leq x$. Hence, $2\floor{x} \leq 2x$. 
 
 Putting the two inequalities involving $2x$ together gives $2\floor{x} \leq 2x < 2\floor{x} + 1$. 
@@ -3724,9 +3721,9 @@ For every real number $x$, if $x - \floor{x} \geq 1/2$ then $\floor{2x} = 2\floo
 
 \begin{proof}
 Suppose $x$ is any real number such that $x - \floor{x} \geq 1/2$. Multiplying both sides by 2 gives 
-$$
+\[
 2x - 2\floor{x} \geq 1, \,\,\text{ or, }\,\, 2\floor{x}+1 \leq 2x. 
-$$
+\]
 Now by definition of floor, $x < \floor{x} + 1$. Hence, $2x < 2\floor{x} + 2$. 
 
 Putting the two inequalities involving $2x$ together gives $2\floor{x} + 1 \leq 2x < 2\floor{x} + 2$. 
@@ -3736,17 +3733,17 @@ Thus, by definition of floor (and because $2\floor{x} + 1$ is an integer), $\flo
 
 \subsection{Exercise 28}
 For any odd integer $n$,
-$$
+\[
 \floor{\frac{n^2}{4}} = \left(\frac{n-1}{2}\right)\left(\frac{n+1}{2}\right).
-$$
+\]
 {\it Hint:} After applying the hypothesis that $n$ is odd, evaluate the two sides of the equation separately and show
 that the results are equal.
 
 \begin{proof}
 Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Then
-$$
+\[
 \left(\frac{n-1}{2}\right)\left(\frac{n+1}{2}\right) = \left(\frac{2k+1-1}{2}\right)\left(\frac{2k+1+1}{2}\right) = k(k+1) = k^2+k.
-$$
+\]
 On the other hand $n^2 = (2k+1)^2 = 4k^2+4k+1$ so $\frac{n^2}{4} = k^2+k+\frac{1}{4}$. 
 
 Since $k^2+k \leq k^2+k+\frac{1}{4} < k^2+k+1$ we have $k^2+k \leq \frac{n^2}{4} < k^2+k+1$. 
@@ -3758,14 +3755,14 @@ Combining these two results we get $\dps\floor{\frac{n^2}{4}} = \left(\frac{n-1}
 
 \subsection{Exercise 29}
 For any odd integer $n$,
-$$
+\[
 \ceil{\frac{n^2}{4}} = \frac{n^2+3}{4}.
-$$
+\]
 \begin{proof}
 Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Then
-$$
+\[
 \frac{n^2+3}{4} = \frac{(2k+1)^2+3}{4} = \frac{4k^2 + 4k + 1+3}{4} = k^2+k+1.
-$$
+\]
 On the other hand $n^2 = (2k+1)^2 = 4k^2+4k+1$ so $\frac{n^2}{4} = k^2+k+\frac{1}{4}$. 
 
 Since $k^2+k < k^2+k+\frac{1}{4} \leq k^2+k+1$ we have $k^2+k < \frac{n^2}{4} \leq k^2+k+1$. 
@@ -3802,9 +3799,9 @@ For every integer $n$, $\dps \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\fra
 Assume $n$ is any integer.
 
 {\bf Case 1:} $n$ is even. By definition of even, $n = 2k$ for some integer $k$. Then $n/2 = k$. Since $k$ is an integer, $\floor{n/2} = \floor{k} = k = n/2$. Therefore 
-$$
+\[
 \frac{\floor{n/2}}{3} = \frac{n/2}{3} = \frac{n}{6}, \,\, \text{ so } \,\, \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}},
-$$
+\]
 as was to be shown.
 
 {\bf Case 2:} $n$ is odd. By the quotient-remainder theorem, $n = 6q+r$ for some integers $q,r$ where $0 \leq r < 6$. Since $n$ is odd, $r = 0, 2, 4$ are impossible.
@@ -3816,9 +3813,9 @@ Then $n = 6q+1$. So $n/2 = 3q+1/2$, therefore by definition of floor, $\floor{n/
 So $\floor{\frac{\floor{n/2}}{3}} = \floor{\frac{3q}{3}} = \floor{q} = q$ because $q$ is an integer.
 
 On the other hand 
-$$
+\[
 \floor{\frac{n}{6}} = \floor{\frac{6q+1}{6}} = \floor{q+\frac{1}{6}} = q
-$$
+\]
 by definition of floor (because $q < q+\frac{1}{6} < q+1$ and $q$ is an integer).
 
 Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q$ so they are equal to each other), as was to be shown.
@@ -3830,9 +3827,9 @@ Then $n = 6q+3$. So $n/2 = 3q+3/2 = (3q+1)+1/2$, therefore by definition of floo
 So $\floor{\frac{\floor{n/2}}{3}} = \floor{\frac{3q+1}{3}} = \floor{q+1/3} = q$ because $q < q+1/3 < q+1$ and $q$ is an integer.
 
 On the other hand 
-$$
+\[
 \floor{\frac{n}{6}} = \floor{\frac{6q+3}{6}} = \floor{q+\frac{1}{2}} = q
-$$
+\]
 by definition of floor (because $q < q+\frac{1}{2} < q+1$ and $q$ is an integer).
 
 Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q$ so they are equal to each other), as was to be shown.
@@ -3844,9 +3841,9 @@ Then $n = 6q+5$. So $n/2 = 3q+5/2 = 3q+2+1/2$, therefore by definition of floor,
 So $\floor{\frac{\floor{n/2}}{3}} = \floor{\frac{3q+2}{3}} = \floor{q+2/3} = q$ because $q < q+2/3 < q+1$ and $q$ is an integer.
 
 On the other hand 
-$$
+\[
 \floor{\frac{n}{6}} = \floor{\frac{6q+5}{6}} = \floor{q+\frac{5}{6}} = q
-$$
+\]
 by definition of floor (because $q < q+\frac{5}{6} < q+1$ and $q$ is an integer).
 
 Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q$ so they are equal to each other), as was to be shown.
@@ -3859,9 +3856,9 @@ For every integer $n$, $\dps \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n
 Assume $n$ is any integer.
 
 {\bf Case 1:} $n$ is even. By definition of even, $n = 2k$ for some integer $k$. Then $n/2 = k$. Since $k$ is an integer, $\ceil{n/2} = \ceil{k} = k = n/2$. Therefore 
-$$
+\[
 \frac{\ceil{n/2}}{3} = \frac{n/2}{3} = \frac{n}{6}, \,\, \text{ so } \,\, \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n}{6}},
-$$
+\]
 as was to be shown.
 
 {\bf Case 2:} $n$ is odd. By the quotient-remainder theorem, $n = 6q+r$ for some integers $q,r$ where $0 \leq r < 6$. Since $n$ is odd, $r = 0, 2, 4$ are impossible.
@@ -3873,9 +3870,9 @@ Then $n = 6q+1$. So $n/2 = 3q+1/2$, therefore by definition of ceiling, $\ceil{n
 So $\ceil{\frac{\ceil{n/2}}{3}} = \ceil{\frac{3q+1}{3}} = \ceil{q+1/3} = q+1$ because $q < q+1/3 < q+1$ and $q+1$ is an integer.
 
 On the other hand 
-$$
+\[
 \ceil{\frac{n}{6}} = \ceil{\frac{6q+1}{6}} = \ceil{q+\frac{1}{6}} = q+1
-$$
+\]
 by definition of floor (because $q < q+\frac{1}{6} < q+1$ and $q+1$ is an integer).
 
 Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
@@ -3887,9 +3884,9 @@ Then $n = 6q+3$. So $n/2 = 3q+3/2 = 3q+1+1/2$, therefore by definition of ceilin
 So $\ceil{\frac{\ceil{n/2}}{3}} = \ceil{\frac{3q+2}{3}} = \ceil{q+2/3} = q+1$ because $q < q+2/3 < q+1$ and $q+1$ is an integer.
 
 On the other hand 
-$$
+\[
 \ceil{\frac{n}{6}} = \ceil{\frac{6q+3}{6}} = \ceil{q+\frac{1}{2}} = q+1
-$$
+\]
 by definition of floor (because $q < q+\frac{1}{2} < q+1$ and $q+1$ is an integer).
 
 Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
@@ -3901,9 +3898,9 @@ Then $n = 6q+5$. So $n/2 = 3q+5/2 = 3q+2+1/2$, therefore by definition of ceilin
 So $\ceil{\frac{\ceil{n/2}}{3}} = \ceil{\frac{3q+3}{3}} = \ceil{q+1} = q+1$ because $q+1$ is an integer.
 
 On the other hand 
-$$
+\[
 \ceil{\frac{n}{6}} = \ceil{\frac{6q+5}{6}} = \ceil{q+\frac{5}{6}} = q+1
-$$
+\]
 by definition of floor (because $q < q+\frac{5}{6} < q+1$ and $q+1$ is an integer).
 
 Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
@@ -4003,18 +4000,18 @@ There is no least positive rational number.
 Fill in the blanks for the following proof that the difference of any rational number and any irrational number is irrational.
 
 {\it Proof (by contradiction):} Suppose not. That is, suppose that there exist {\cy (a)} \fbl x and {\cy (b)} \fbl y such that $x - y$ is rational. By definition of rational, there exist integers $a, b, c$, and $d$ with $b \neq 0$ and $d \neq 0$ so that $x =$ {\cy (c)} \fbl and $x - y =$ {\cy (d)} \fbl. By substitution,
-$$
+\[
 \frac{a}{b} - y = \frac{c}{d}
-$$
+\]
 Adding $y$ and subtracting $c/d$ on both sides gives
-$$
+\[
 \begin{array}{rcll}
 y & = & \text{\cy (e)} \fbl& \text{\cy by substitution}\\
 \vspace{0.3cm}
   & = & \dps\frac{ad}{bd} - \frac{bc}{bd}& \\
   & = & \dps\frac{ad - bc}{bd} & \text{\cy by algebra}\\
 \end{array}
-$$
+\]
 Now both $ad - bc$ and $bd$ are integers because products and differences of {\cy (f)} \fbl are {\cy (g)} \fbl. And $bd \neq 0$ by the {\cy (h)} \fbl. Hence $y$ is a ratio of integers with a nonzero denominator, and thus $y$ is {\cy (i)} \fbl by definition of rational. We therefore have both that $y$ is irrational and that $y$ is rational, which is a contradiction. {\it[Thus the supposition is false and the
 statement to be proved is true.]}
 
@@ -4055,13 +4052,13 @@ Therefore the supposition was false, and the original claim is true.
 Let $S$ be the statement: For all positive real numbers $r$ and $s$, $\sqrt{r+s} \neq \sqrt{r} + \sqrt{s}$. Statement $S$ is true, but but the following “proof” is incorrect. Find the mistake.
 
 “{\bf Proof by contradiction:} Suppose not. That is, suppose that for all positive real numbers $r$ and $s$, $\sqrt{r + s} = \sqrt{r} + \sqrt{s}$. This means that the equation will be true no matter what positive real numbers are substituted for $r$ and $s$. So let $r = 9$ and $s = 16$. Then $r$ and $s$ are positive real numbers and
-$$
+\[
 \sqrt{r+s} = \sqrt{9 + 16} = \sqrt{25} = 5
-$$
+\]
 whereas
-$$
+\[
 \sqrt{r}+\sqrt{s} = \sqrt{9} + \sqrt{16} = 3+4 = 7
-$$
+\]
 Since $5 \neq 7$, we have that $\sqrt{r + s} \neq \sqrt{r} + \sqrt{s}$. This contradiction shows that the supposition is false, and hence statement $S$ is true.”
 
 \begin{proof}
@@ -4639,269 +4636,660 @@ In all cases we get a contradiction. Therefore our supposition was false, and $z
 \section{Exercise Set 4.8}
 
 \subsection{Exercise 1}
+A calculator display shows that $\sqrt{2} = 1.414213562$.
+Because $1.414213562 = \frac{1414213562}{1000000000}$, this suggests that $\sqrt{2}$ is a rational number, which contradicts Theorem 4.8.1. Explain the discrepancy.
 
 \begin{proof}
-
+The value of $\sqrt{2}$ given by a calculator is an approximation. Calculators can give exact values only for numbers that can be represented using at most the number of
+decimal digits in the calculator display. In particular, every number in a calculator display is rational, but even many rational numbers cannot be represented exactly. For instance, consider the number formed by writing a decimal point and following it with the first million digits of $\sqrt{2}$. By the discussion in Section 4.2, this number is rational, but you could not infer this from the calculator display.
 \end{proof}
 
 \subsection{Exercise 2}
+Example 4.3.1(h) illustrates a technique for showing that any repeating decimal number is rational. A calculator display shows the result of a certain calculation as \\ 40.72727272727. Can you be sure that the result of the calculation is a rational number? Explain.
 
 \begin{proof}
-
+Yes. Since the digits have an infinitely repeating pattern, we can solve it: let $x = 40.7272\ldots$. Then $100x = 4072.7272\ldots$. Subtracting, we get $99x = 4032$ so $x = \frac{4032}{99}$.
 \end{proof}
 
 \subsection{Exercise 3}
+Could there be a rational number whose first trillion digits are the same as the first trillion digits of $\sqrt{2}$? Explain.
 
 \begin{proof}
-
+Yes. In fact there are infinitely many rational numbers
+with the same first trillion digits as $\sqrt{2}$. For instance, if you end the number after the first trillion digits, the result is a finite decimal, which is rational. Repeating the first trillion digits of $\sqrt{2}$ forever would create a repeating decimal, which is rational. Or you could follow the first trillion digits of $\sqrt{2}$ by $012343434\ldots$, where the digits 34 repeat forever. This is also rational. Try creating other examples.
 \end{proof}
 
 \subsection{Exercise 4}
+A calculator display shows that the result of a certain calculation is 0.2. Can you be sure that the result of the calculation is a rational number?
 
 \begin{proof}
-
+Yes.
 \end{proof}
 
 \subsection{Exercise 5}
+Let $S$ be the statement: The cube root of every irrational number is irrational. This statement is true, but the following “proof” is incorrect. Explain the mistake.
+
+“{\bf Proof (by contradiction):} Suppose not. Suppose the cube root of every irrational number is rational. But $2\sqrt{2}$ is irrational because it is a product of a rational and an irrational number, and the cube root of $2\sqrt{2}$ is $\sqrt{2}$, which is irrational. This is a contradiction, and hence it is not true that the cube root of every irrational number is rational. Thus the statement to be proved is true.”
 
 \begin{proof}
-
+The negation of the statement is incorrect. The correct negation is: ``Suppose there exists an irrational number whose cube root is rational.''
 \end{proof}
 
+{\bf \cy Determine which statements in $6-16$ are true and which are false. prove those that are true and disprove those that are false.}
+
 \subsection{Exercise 6}
+$6 - 7\sqrt{2}$ is irrational.
 
 \begin{proof}
+\underline{by contradiction:} Suppose not. That is, suppose
+$6 - 7\sqrt{2}$ is rational. {\it [We must prove a contradiction.]} By definition of rational, there exist integers $a$ and $b$ with $b \neq 0$ with $6 - 7\sqrt{2} = \frac{a}{b}$. Then
 
+\begin{center}
+\begin{tabular}{lrcll}
+& $\sqrt{2}$ & $=$ & $\dps\frac{1}{-7}\left(\frac{a}{b} - 6\right) $ & {\cy by subtracting 6 and dividing by $-7$} \\
+\\
+and so & $\sqrt{2}$ & = & $\dps\frac{a-6b}{-7b}$ & {\cy by algebra}\\
+\end{tabular}
+\end{center}
+
+But $a - 6b$ and $-7b$ are both integers (since $a$ and $b$ are integers and products and difference of integers are integers), and $-7b \neq 0$ by the zero product property. Hence $\sqrt{2}$ is a ratio of the two integers $a - 6b$ and $-7b$ with $-7b \neq 0$, so $\sqrt{2}$ is a rational number (by definition of rational). This contradicts the fact that $\sqrt{2}$ is irrational, and so the supposition is false and $6 - 7 \sqrt{2}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 7}
+$3\sqrt{2} - 7$ is irrational.
 
 \begin{proof}
+True. The proof is extremely similar to Exercise 6. 
 
+\underline{by contradiction:} Suppose not. That is, suppose
+$3\sqrt{2} - 7$ is rational. {\it [We must prove a contradiction.]} By definition of rational, there exist integers $a$ and $b$ with $b \neq 0$ with $3\sqrt{2} - 7 = \frac{a}{b}$. Then
+
+\begin{center}
+\begin{tabular}{lrcll}
+& $\sqrt{2}$ & $=$ & $\dps\frac{1}{3}\left(\frac{a}{b} + 7\right) $ & {\cy by adding 7 and dividing by 3} \\
+\\
+and so & $\sqrt{2}$ & = & $\dps\frac{a+7b}{3b}$ & {\cy by algebra}\\
+\end{tabular}
+\end{center}
+
+But $a + 7b$ and $3b$ are both integers (since $a$ and $b$ are integers and products and difference of integers are integers), and $3b \neq 0$ by the zero product property. Hence $\sqrt{2}$ is a ratio of the two integers $a + 7b$ and $3b$ with $3b \neq 0$, so $\sqrt{2}$ is a rational number (by definition of rational). This contradicts the fact that $\sqrt{2}$ is irrational, and so the supposition is false and $3\sqrt{2} - 7$ is irrational.
 \end{proof}
 
 \subsection{Exercise 8}
+$\sqrt{4}$ is irrational.
 
 \begin{proof}
-
+This is false. $\sqrt{4} = 2 = 2/1$, which is rational.
 \end{proof}
 
 \subsection{Exercise 9}
+$\sqrt{2}/6$ is irrational.
 
 \begin{proof}
+True. The proof is extremely similar to Exercises 6 and 7. 
 
+\underline{by contradiction:} Suppose not. That is, suppose
+$\sqrt{2}/6$ is rational. {\it [We must prove a contradiction.]} By definition of rational, there exist integers $a$ and $b$ with $b \neq 0$ with $\sqrt{2}/6 = \frac{a}{b}$. Then
+
+\begin{center}
+\begin{tabular}{lrcll}
+& $\sqrt{2}$ & $=$ & $\dps 6 \cdot\frac{a}{b}$ & {\cy by multiplying by 6} \\
+\\
+and so & $\sqrt{2}$ & = & $\dps\frac{6a}{b}$ & {\cy by algebra}\\
+\end{tabular}
+\end{center}
+
+But $6a$ and $b$ are both integers (since $a$ and $b$ are integers and products and difference of integers are integers), and $b \neq 0$. Hence $\sqrt{2}$ is a ratio of the two integers $6a$ and $b$ with $b \neq 0$, so $\sqrt{2}$ is a rational number (by definition of rational). This contradicts the fact that $\sqrt{2}$ is irrational, and so the supposition is false and $\sqrt{2}/6$ is irrational.
 \end{proof}
 
 \subsection{Exercise 10}
+The sum of any two irrational numbers is irrational.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $x = \sqrt{2}$ and $y = -\sqrt{2}$. Then $x$ and $y$ are irrational, but $x + y = 0  = 0/1$, which is rational.
 \end{proof}
 
 \subsection{Exercise 11}
+The difference of any two irrational numbers is irrational.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $x = \sqrt{2}$ and $y = \sqrt{2}$. Then $x$ and $y$ are irrational, but $x - y = 0  = 0/1$, which is rational.
 \end{proof}
 
 \subsection{Exercise 12}
+The positive square root of a positive irrational number is irrational.
 
 \begin{proof}
+True.
 
+Formal version of the statement: $\fa$ positive real number
+$r$, if $r$ is irrational, then $\sqrt{r}$ is irrational.
+
+\underline{Proof by contraposition:} Suppose $r$ is any positive real number such that $\sqrt{r}$ is rational. {\it [We must show that $r$ is rational.]} By definition of rational, $\sqrt{r} = \frac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$. Then $r = (\sqrt{r})^2 = \left(\frac{a}{b}\right)^2 = \frac{a^2}{b^2}$. But both $a^2$ and $b^2$ are integers because they are products of integers, and $b^2 \neq 0$ by the zero product property. Thus $r$ is rational {\it [as was to be shown]}. 
+
+(The statement may also be proved by contradiction.)
 \end{proof}
 
 \subsection{Exercise 13}
+If \(r\) is any rational number and $s$ is any irrational number, then $r/s$ is irrational.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $r = 0$ which is rational, $s = \sqrt{2}$ which is irrational. Then $r / s = 0$ is rational.
 \end{proof}
 
 \subsection{Exercise 14}
+The sum of any two positive irrational numbers is irrational.
 
 \begin{proof}
-
+\underline{Counterexample:} $\log_6(2)$ and $\log_6(3)$ are both irrational, however \\ $\log_6(2) + \log_6(3) = \log_6(2\cdot 3) = \log_6(6) = 1$ is rational.
 \end{proof}
 
 \subsection{Exercise 15}
+The product of two irrational numbers is irrational.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $r = \sqrt{2}, s = \sqrt{2}$ which are both irrational. Then $rs = 2$ is rational.
 \end{proof}
 
 \subsection{Exercise 16}
+If an integer greater than 1 is a perfect square, then its cube root is irrational.
 
 \begin{proof}
-
+\underline{Counterexample:} Let $r = 64 = 8^2$ which is a perfect square. Then $\sqrt[3]{r} = 4$ is rational.
 \end{proof}
 
 \subsection{Exercise 17}
+Consider the following sentence: If $x$ is rational then $\sqrt{x}$ is irrational. Is this sentence always true, sometimes true and sometimes false, or always false? Justify your answer.
 
 \begin{proof}
+Sometimes true and sometimes false.
 
+Let $x = 4$ which is rational. Then $\sqrt{4} = 2$ is rational.
+
+Let $x = 2$ which is rational. Then $\sqrt{2}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 18}
-
 \subsubsection{(a)}
+Prove that for every integer $a$, if $a^3$ is even then $a$ is even.
 
 \begin{proof}
+Assume $a$ is any integer such that $a^3$ is even. By definition of even, $a^3 = 2k$ for some integer $k$.
 
+Argue by contradiction and assume $a$ is odd. By definition of odd, $a = 2r+1$ for some integer $r$. So
+\[
+a^3 = (2r+1)^3 = 8r^3 + 12r^2 + 6r + 1 = 2k
+\]
+Dividing both sides by 2 we get $4r^3 + 6r^2 + 3r + \frac{1}{2} = k$. The right-hand side, $k$, is an integer. Moreover $4r^3 + 6r^2 + 3r$ is also an integer (being a sum and product of integers). So the left-hand side, $4r^3 + 6r^2 + 3r + \frac{1}{2}$, is not an integer (because it's an integer plus 1/2). 
+
+This is a contradiction (an integer equals a non-integer), so $a$ must be even.
 \end{proof}
 
 \subsubsection{(b)}
+Prove that $\sqrt[3]{2}$ is irrational.
 
 \begin{proof}
+Argue by contradiction and assume $\sqrt[3]{2}$ is rational. By definition of rational $\sqrt[3]{2} = a'/b'$ for some integers $a',b'$ with $b' \neq 0$. 
 
+Let $m$ be the greatest common divisor of $a'$ and $b'$. Let $a = a'/m$ and $b = b'/m$. So $\sqrt[3]{2} = a'/b' = (am) / (bm) = a/b$ where $a$ and $b$ are integers with $b \neq 0$ and $a$ and $b$ have no common factors.
+
+Cubing both sides we get $2 = a^3 / b^3$ and multiplying by $b^3$ we get $2b^3 = a^3$.
+
+So $a^3$ is even by the definition of even. So by part (a), $a$ is even. So $a = 2k$ for some integer $k$. Therefore by substitution we get $2b^3 = (2k)^3 = 8k^3$. Dividing by 2 we get $b^3 = 4k^3 = 2(2k^3)$.
+
+So $b^3$ is even by the definition of even. So by part (a), $b$ is even. So $b = 2r$ for some integer $r$. But this means that $a$ and $b$ have a common factor of 2, which is a contradiction.
+
+Therefore our supposition was false, and $\sqrt[3]{2}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 19}
-
 \subsubsection{(a)}
+Use proof by contradiction to show that for any integer $n$, it is impossible for $n$ to equal both $3q_1 + r_1$ and $3q_2 + r_2$, where $q_1, q_2, r_1$, and $r_2$ are integers, $0 \leq r_1 < 3, 0 \leq r_2 < 3$, and $r_1 \neq r_2$.
 
 \begin{proof}
+19. a. Proof by contradiction: Suppose not. That
+is, suppose there is an integer n such that
+n 5 3q1 1 r1 5 3q2 1 r2, where q1, q2, r 1, and
+r 2 are integers, $0 \leq r1$, 3, $0 \leq r2$, 3, and
+$r1 \neq r2$. By interchanging the labels for r 1 and r 2
+if necessary, we may assume that r2 . r1. Then
+3(q1 2 q2) 5 r2 2 r1 . 0, and because both r 1 and
+r 2 are less than 3, either r2 2 r1 5 1 or r2 2 r1 5 2.
+So either 3(q1 2 q2) 5 1 or 3(q1 2 q2) 5 2. The
+first case implies that 3u1, and hence, by Theorem
+4.4.1, that $3 \leq 1$, and the second case implies that
+3u2, and hence, by Theorem 4.4.1, that $3 \leq 2$.
+These results contradict the fact that 3 is greater
+than both 1 and 2. Thus in either case we have
+reached a contradiction, which shows that the sup-
+position is false and the given statement is true.
 
 \end{proof}
 
 \subsubsection{(b)}
+Use proof by contradiction, the quotient-remainder theorem, division into cases, and the result of part (a) to prove that for every integer $n$, if $n^2$ is divisible by 3 then $n$ is divisible by 3.
 
 \begin{proof}
-
+b. Proof by contradiction: Suppose not. That is, sup-
+pose there is an integer n such that n 2 is divisible
+by 3 and n is not divisible by 3. [We must deduce
+a contradiction.] By definition of divisible,
+n2 5 3q for some integer q, and by the quotient-
+remainder theorem and part (a), n 5 3k 1 1 or
+n 5 3k 1 2 for some integer k.
+Case 1 (n 5 3k 1 1 for some integer k): In this case
+n2 5 (3k 1 1)2 5 9k2 1 6k 1 1 5 3(3k2 1 2k) 1 1.
+Let s 5 3k2 1 2k. Then n2 5 3s 1 1, and s is an inte-
+ger because it is a sum of products of integers. Thus
+n2 5 3q 5 3s 1 1 for some integers q and s, which
+contradicts the result of part (a).
+Case 2 (n 5 3k 1 2 for some integer k): In this case
+n2 5 (3k 1 2) 5 9k2 1 12k 1 4 5 3(3k2 1 4k 1 1) 1 1.
+Let t 5 3k2 1 4k 1 1. Then n2 5 3t 1 1, and t is an in-
+teger because it is a sum of products of integers. Thus
+there are integers q and t so that n2 5 3q 5 3t 1 1,
+which contradicts the result of part (a).
+Thus in either case, a contradiction is reached,
+which shows that the supposition is false and the
+given statement is true.
 \end{proof}
 
 \subsubsection{(c)}
+Prove that $\sqrt{3}$ is irrational.
 
 \begin{proof}
-
+c. Proof by contradiction: Suppose not. That is,
+suppose Ï3 is rational. By definition of rational,
+a
+Ï3 5 b for some integers a and b with $b \neq 0$.
+Without loss of generality, assume that a and b have
+no common factor. (If not, divide both a and b by
+their greatest common factor to obtain integers a9
+and b9 with the property that a9 and b9 have no com-
+a9
+mon factor and Ï3 5 b9 . Then redefine a 5 a9 and
+a
+b 5 b.) Squaring both sides of Ï3 5 b gives Ï3 5
+a2/b2, and multiplying both sides by b2 gives
+3b2 5 a2(*).
+Thus a2 is divisible by 3, and so, by part (b), a is
+also divisible by 3. By definition of divisibility, then,
+a 5 3k for some integer k, and so
+a2 5 9k2(**).
+Substituting equation (**) into equation (*) gives
+3b2 5 9k2, and dividing both sides by 3 yields
+b2 5 3k2.
+Hence b2 is divisible by 3, and so, by part (b), b is
+also divisible by 3. Consequently, both a and b are
+divisible by 3, which contradicts the assumption that
+a and b have no common factor. Thus the supposi-
+tion is false, and so Ï3 is irrational.
 \end{proof}
 
 \subsection{Exercise 20}
+Give an example to show that if $d$ is not prime and $n^2$ is divisible by $d$, then $n$ need not be divisible by $d$.
 
 \begin{proof}
-
+Let $d = 4$ and $n = 6$. Then $n^2 = 36 = 4 \cdot 9$ is divisible by 4, but $n = 6$ is not divisible by 4.
 \end{proof}
 
 \subsection{Exercise 21}
+The quotient-remainder theorem says not only that there exist quotients and remainders but also that the quotient and remainder of a division are unique. Prove the uniqueness. That is, prove that if $a$ and $d$ are integers with $d > 0$ and if $q_1, r_1, q_2$, and $r_2$ are integers such that
+\[
+a = dq_1 + r_1 \text{ where } 0 \leq r_1 < d
+\]
+and
+\[
+a = dq_2 + r_2 \text{ where } 0 \leq r_2 < d
+\]
+then
+\[
+q_1 = q_2 \text{ and } r_1 = r_2.
+\]
+{\it Hint:} The proof is a generalization of the one given in the solution for exercise 19(a).
 
 \begin{proof}
+Assume $a = dq_1 + r_1$ where $0 \leq r_1 < d$ and assume $a = dq_2 + r_2$ where $0 \leq r_2 < d$. {\it [We want to prove that $q_1 = q_2$ and $r_1 = r_2$.]}
 
+We have $dq_1 + r_1 = dq_2 + r_2$ so $dq_1 - dq_2 = r_2 - r_1$, then $d(q_1 - q_2) = r_2 - r_1$. This means that $r_2 - r_1$ is a multiple of $d$.
+
+Since $0 \leq r_1 < d$ and $0 \leq r_2 < d$, we have $-d < r_2 - r_1 < d$. The only multiple of $d$ in the interval $(-d, d)$ (excluding the endpoints) is 0. Therefore $r_2 - r_1 = 0$, so $r_1 = r_2$.
+
+Substituting this, we get $dq_1 + r_1 = dq_2 + r_1$ so $dq_1 = dq_2$, hence $q_1 = q_2$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 22}
+Prove that $\sqrt{5}$ is irrational.
+
+{\it Hint:} First prove that for all integers $a$, if 5 divides $a$ squared then 5 divides $a$. The rest of the proof is similar to the solution for exercise 19(c).
 
 \begin{proof}
+(following the Hint)
 
+{\bf Claim:} For all integers $a$, if $5 \mid a^2$ then $5 \mid a$.
+
+\begin{proof}
+Assume $5 \mid a^2$. Then $a^2 = 5b$ for some integer $b$. By the quotient-remainder theorem, $a = 5q+r$ for some integers $q,r$ where $0 \leq r < 5$.
+
+Then $a^2 = (5q+r)^2 = 25q^2 + 10qr + r^2 = 5b$. So $25q^2 + 10qr - 5b = r^2$, and $5(5q^2 + 2qr - b) = r^2$. Since $5q^2 + 2qr - b$ is an integer (product, sum and difference of integers), $r^2$ is divisible by 5. Since $0 \leq r \leq 4$, this implies that $r = 0$.
+
+Therefore $a = 5q + 0 = 5q$ where $q$ is an integer. So $a$ is divisible by 5.
+\end{proof}
+
+Now argue by contradiction and assume $\sqrt{5}$ is rational. By definition of rational $\sqrt{5} = a'/b'$ for some integers $a', b'$ where $b' \neq 0$.
+
+Let $m$ be the greatest common divisor of $a'$ and $b'$. Let $a = a'/m, b = b'/m$. Then $\sqrt{5} = a'/b' = a/b$ where $a,b$ are integers, $b \neq 0$ and $a$ and $b$ have no common factors.
+
+Squaring both sides we get $5 = a^2 / b^2$, so $5b^2 = a^2$. So $5$ divides $a^2$. By the Claim, $5$ divides $a$. So $a = 5c$ for some integer $c$.
+
+Then $5b^2 = (5c)^2 = 25c^2$. Dividing by 5 we get $b^2 = 5c^2$. So 5 divides $b^2$. By the Claim, 5 divides $b$. This contradicts the fact that $a$ and $b$ have no common factors. Therefore our supposition was false, and $\sqrt{5}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 23}
+Prove that for any integer $a, 9 \nmid (a^2 - 3).$
+
+{\it Hint:} This statement is true. If $a^2 - 3 = 9b$, then
+$a^2 = 9b + 3 = 3(3b + 1)$, and so $a^2$ is divisible by 3.
+Hence, by exercise 19(b), $a$ is divisible by 3. Thus
+$a^2 = (3c)^2$ for some integer $c$.
 
 \begin{proof}
+Assume $a$ is any integer. Argue by contradiction and assume 9 divides $a^2 - 3$. By definition of divides, $a^2 - 3 = 9b$ for some integer $b$. So $a^2 = 3(3b + 1)$, and so $a^2$ is divisible by 3. Hence, by exercise 19(b), $a$ is divisible by 3. Again by definition of divisibility, $a = 3c$ for some integer $c$. Thus $a^2 = (3c)^2 = 9c^2$ for some integer $c$. 
 
+So we have $9c^2 = 3(3b+1)$. Dividing by 3 we get $3c^2 = 3b+1$, so $3c^2 - 3b = 1$, factoring out a 3 we get $3(c^2 - b) = 1$ and then dividing by 3 we get $c^2 - b = \frac{1}{3}$. This is a contradiction, since $c^2 - b$ is an integer (product and difference of integers), but $\frac{1}{3}$ is not an integer.
+
+Thus our supposition was false, and $9 \nmid (a^2 - 3)$.
 \end{proof}
 
 \subsection{Exercise 24}
+An alternative proof of the irrationality of $\sqrt{2}$ counts the number of 2’s on the two sides of the equation $2n^2 = m^2$ and uses the unique factorization of integers theorem to deduce a contradiction. Write a proof that uses this approach.
 
 \begin{proof}
-
+\underline{By contradiction:} Suppose not. That is, suppose
+$\sqrt{2}$ is rational. {\it [We will show that this supposition leads to a contradiction.]} By definition of rational, we may write $\sqrt{2} = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then $2 = a^2/b^2$, and so $a^2 = 2b^2$. Consider the prime factorizations for $a^2$ and for $2b^2$. By the unique factorization of integers theorem, these factorizations are unique except for the order in which the factors are written. Now because every prime factor of $a$ occurs twice in the prime factorization of $a^2$, the prime factorization of $a^2$ contains an even number of 2’s. (If 2 is a factor of $a$, then this even number is positive, and if 2 is not a factor of $a$, then this even number is 0.) On the other hand, because every prime factor of $b$ occurs twice in the prime factorization of $b^2$, the prime factorization of $2b^2$ contains an odd number of 2’s. Therefore, the equation $a^2 = 2b^2$ cannot be true. So the supposition is false, and hence $\sqrt{2}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 25}
+Use the proof technique illustrated in Exercise 24 to prove that if $n$ is any positive integer that is not a perfect square, then $\sqrt{n}$ is irrational.
 
 \begin{proof}
+Assume $n$ is any positive integer that is not a perfect square. {\it [We want to prove $\sqrt{n}$ is irrational.]}
 
+\underline{By contradiction:} Suppose not. That is, suppose
+$\sqrt{n}$ is rational. {\it [We will show that this supposition leads to a contradiction.]} 
+
+Since $n$ is not a perfect square, at least one of the prime divisors of $n$ occurs with an odd number of factors in its unique prime factorization. Call this prime $p$.
+
+By definition of rational, we may write $\sqrt{n} = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then $n = a^2/b^2$, and so $a^2 = nb^2$. 
+
+Consider the prime factorizations for $a^2$ and for $nb^2$. By the unique factorization of integers theorem, these factorizations are unique except for the order in which the factors are written. Now because every prime factor of $a$ occurs twice in the prime factorization of $a^2$, the prime factorization of $a^2$ contains an even number of $p$’s. (If $p$ is a factor of $a$, then this even number is positive, and if $p$ is not a factor of $a$, then this even number is 0.) On the other hand, because every prime factor of $b$ occurs twice in the prime factorization of $b^2$, the prime factorization of $nb^2$ contains an odd number of $p$’s (because the prime factorization of $n$ contains an odd number of $p$'s). Therefore, the equation $a^2 = 2b^2$ cannot be true. So the supposition is false, and hence $\sqrt{n}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 26}
+Prove that $\sqrt{2} + \sqrt{3}$ is irrational.
+
+{\it Hint:} One solution uses only Theorem 4.8.1 ($\sqrt{2}$ is irrational). Another uses the result of Exercise 25 that $\sqrt{6}$ is irrational.
 
 \begin{proof}
+Argue by contradiction and assume $\sqrt{2} + \sqrt{3}$ is rational. By definition of rational, $\sqrt{2} + \sqrt{3} = a/b$ for some integers $a,b$ where $b \neq 0$. Then
+\[
+\begin{array}{rcl}
+\sqrt{2} + \sqrt{3} & = & a/b \\
+(\sqrt{2} + \sqrt{3})^2 & = & (a/b)^2 \\
+(\sqrt{2})^2 + 2\cdot\sqrt{2}\cdot\sqrt{3} + (\sqrt{3})^2 & = & a^2/b^2 \\
+2 + 2\sqrt{6} + 3 & = & a^2/b^2 \\
+5 + 2\sqrt{6} & = & a^2/b^2 \\
+2\sqrt{6} & = & a^2/b^2 - 5\\
+\sqrt{6} & = & \frac{a^2}{2b^2} - \frac{5}{2}\\
+\end{array}
+\]
+Now both $\frac{a^2}{2b^2}$ and $\frac{5}{2}$ are rational numbers, and so is their difference. Therefore $\sqrt{6}$ is rational, a contradiction to Exercise 25.
 
+Thus our supposition was false, and $\sqrt{2}+\sqrt{3}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 27}
+Prove that $\log_5(2)$ is irrational. ({\it Hint:} Use the unique factorization of integers theorem.)
 
 \begin{proof}
+Argue by contradiction and assume $\log_5(2)$ is rational. By definition of rational, $\log_5(2) = a/b$ for some integers $a, b$ where $b \neq 0$. 
 
+By definition of $\log_5$ we have $5^(a/b) = 2$. Raising both sides to the $b$th power, we get $[5^(a/b)]^b = 2^b$. By the law of exponents, $5^a = 2^b$. 
+
+Let's consider 3 cases for $a$: positive, negative, or zero.
+
+{\bf Case 1:} $a > 0$. Then $a$ is at least 1, so $5^a$ is at least 5, or possibly larger (multiplying by more factors of 5 makes a number larger).
+
+We already know $b \neq 0$. Since $2^b = 5^a \geq 5$ we see that $b$ cannot be negative either, $b$ must also be positive, because negative powers of 2 are less than 1 but $2^b \geq 5$.
+
+Let $x = 5^a = 2^b$. Then $x$ is an integer and $x \geq 5 > 1$. But $x$ has two different factorizations into positive prime powers, which is a contradiction to the unique factorization theorem.
+
+{\bf Case 2:} $a < 0$. A similar argument to Case 1 shows that we must have $b < 0$. Now let $m = -a$, $n = -b$. So $m$ and $n$ are positive integers, and 
+\[
+5^m = 5^{-a} = \frac{1}{5^a} = \frac{1}{2^b} = 2^{-b} = 2^n.
+\]
+Let $x = 5^m = 2^n$. Then $x$ is an integer and $x \geq 5 > 1$. But $x$ has two different factorizations into positive prime powers, which is a contradiction to the unique factorization theorem.
+
+{\bf Case 3:} $a = 0$. Then $5^a = 5^0 = 1$. So $2^b = 1$ which implies $b = 0$, a contradiction to the fact that $b \neq 0$.
+
+These 3 cases are exhaustive of all possibilities, and in each case we reached a contradiction. Thus our initial supposition was false, and $\log_5(2)$ is irrational.
 \end{proof}
 
 \subsection{Exercise 28}
+Let $N = 2\cdot3\cdot5\cdot7 + 1$. What remainder is obtained when $N$ is divided by 2? 3? 5? 7? Justify your answer.
+
+{\it Hint:} Divide $2\cdot3\cdot5\cdot7 + 1$ by each of 2,3,5 and 7, using the quotient-remainder theorem.
 
 \begin{proof}
+The remainder is 1 in each case. For example, let's consider the remainder obtained when $N$ is divided by 5 (the others are similar). 
 
+By the quotient-remainder theorem, $N = 5q+r$ for some integers $q,r$ where $0 \leq r < 5$. Then $N = 5q+r = 2\cdot3\cdot5\cdot7 + 1$. Rearranging, we get $r - 1 = 2\cdot3\cdot5\cdot7 - 5q = 5(2\cdot3\cdot7 - q)$. Dividing by 5 we get $(r-1)/5 = 2\cdot3\cdot7 - q$. 
+
+Notice that $2\cdot3\cdot7 - q$ is an integer (product and difference of integers). Therefore $(r-1)/5$ must also be an integer. Since $0 \leq r < 5$, the only value in this range for which $(r-1)/5$ is an integer is $r = 1$.
 \end{proof}
 
 \subsection{Exercise 29}
+Suppose $a$ is an integer and $p$ is a prime number such that $p \mid a$ and $p \mid (a + 3)$. What can you deduce
+about $p$? Why?
+
+{\it Hint:} You can deduce that $p = 3$.
 
 \begin{proof}
-
+Since $p$ divides both $a+3$ and $a$, $p$ also divides their difference $a+3 - a = 3$. Since $p \mid 3$, we have $p = 3$.
 \end{proof}
 
 \subsection{Exercise 30}
+Let $p_1, p_2, p_3, \ldots$ be a list of all prime numbers in ascending order. Here is a table of the first six:
+
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\cy p_1$ & $\cy p_2$ & $\cy p_3$ & $\cy p_4$ & $\cy p_5$ & $\cy p_6$\\
+\hline
+2 & 3 & 5 & 7 & 11 & 13 \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{(a)}
+Let $N_1 = p_1, N_2 = p_1 \cdot p_2, N_3 = p_1 \cdot p_2 \cdot p_3, \ldots, N_6 = p_1 \cdot p_2 \cdot p_3 \cdot p_4 \cdot p_5 \cdot p_6$. Calculate $N_1, N_2, N_3, N_4, N_5$, and $N_6$.
+
+{\it Hint:} For example, $N_4 = 2\cdot3\cdot5\cdot7 + 1 = 211$.
 
 \begin{proof}
-
+$N_1 = 2 + 1 = 3$\\
+$N_2 = 2\cdot3 + 1 = 7$\\
+$N_3 = 2\cdot3\cdot5 + 1 = 31$\\
+$N_4 = 2\cdot3\cdot5\cdot7 + 1 = 211$\\
+$N_5 = 2\cdot3\cdot5\cdot7\cdot11 + 1 = 2311$\\
+$N_6 = 2\cdot3\cdot5\cdot7\cdot11\cdot13 + 1 = 30031$\\
 \end{proof}
 
 \subsubsection{(b)}
+For each $i = 1, 2, 3, 4, 5, 6$, find whether $N_i$ is itself prime or just has a prime factor less than itself. ({\it Hint:} Use the test for primality from exercise 31 in Section 4.7 to determine your answers.)
 
 \begin{proof}
+$N_1 = 3$ is prime. $N_2 = 7$ is prime. $N_3 = 31$ is prime.
 
+$N_4 = 211$. Consider primes $\leq \sqrt{211} \approx 14.5$ which are 2, 3, 5, 7, 11, 13. We can already eliminate 2, 3, 5, 7 by Proposition 4.8.3. We see $N_4$ is not divisible by any of them, so it's prime.
+
+$N_5 = 2311$. Consider primes $\leq \sqrt{2311} \approx 48$ which are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47. We can already eliminate 2, 3, 5, 7, 11 by Proposition 4.8.3. We see $N_5$ is not divisible by any of them, so it's prime.
+
+$N_5 = 30031$. Consider primes $\leq \sqrt{30031} \approx 173$. We can already eliminate 2, 3, 5, 7, 11, 13 by Proposition 4.8.3. We see $N_6 = 59 \cdot 509$, so it's not prime.
 \end{proof}
 
+{\bf \cy For exercises 31 and 32, use the fact that for every integer $n$,
+\[
+n! = n \cdot (n-1) \cdots 3\cdot 2\cdot 1.
+\]
+}
 \subsection{Exercise 31}
+An alternative proof of the infinitude of the prime numbers begins as follows:
+
+{\bf Proof:} Suppose there are only finitely many prime numbers. Then one is the largest. Call it $p$. Let $M = p! + 1$. We will show that there is a prime number $q$ such that $q > p$. Complete this proof.
 
 \begin{proof}
+By Theorem 4.4.4 there is a prime $q$ that divides $M$. 
 
+Notice that all prime numbers less than or equal to $p$ divide $p!$ because $p! = p \cdot (p-1) \cdot \cdots \cdot 3 \cdot 2 \cdot 1$. Therefore by Proposition 4.8.3, no prime number less than or equal to $p$ can divide $M = p!+1$.
+
+Therefore $q > p$, contradicting the fact that $p$ is the largest prime. Therefore our supposition was false, and there are infinitely many prime numbers.
 \end{proof}
 
 \subsection{Exercise 32}
+Prove that for every integer $n$, if $n > 2$ then there is a prime number $p$ such that $n < p < n!$.
+
+{\it Hint:} By Theorem 4.4.4 (divisibility by a prime) there is a prime number $p$ such that $p \mid (n! - 1)$. Show that the supposition that $p \leq n$ leads to a contradiction. It will then follow that $n < p < n!$.
 
 \begin{proof}
+Since $n > 2$, we have $n! \geq 6$. Therefore $n! - 1 \geq 5 > 1$. So by Theorem 4.4.4 there is a prime $p$ that divides $n!-1$. Therefore $p \leq n!-1$, in other words $p < n!$.
 
+Argue by contradiction and assume $p \leq n$. {\it [We must prove a contradiction.]} By definition of divides, $n!-1 = pk$ for some integer $k$. 
+
+Dividing by $p$ we get $(n!/p) - (1/p) = k$. By algebra, $(n!/p) - k = 1/p$.
+
+Since $p \leq n$, $p$ is one of the numbers $2, 3, 4, \ldots, n$. Therefore $p$ divides $n!$. So $n! / p$ is an integer. Therefore $(n!/p) - k$ is an integer (being a difference of integers). 
+
+This contradicts $(n!/p) - k = 1/p$, because the left hand side is an integer, but the right hand side is not an integer. {\it [Thus our supposition of $p \leq n$ was false, therefore it follows that $n < p$.]} Combining it with our earlier fact $p < n!$ we get $n < p < n!$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 33}
+Prove that if $p_1, p_2, \ldots$, and $p_n$ are distinct prime numbers with $p_1 = 2$ and $n > 1$, then $p_1 p_2 \cdots p_n + 1$ can be written in the form $4k + 3$ for some integer $k$.
+
+{\it Hint:} Every odd integer can be written as $4k + 1$ or as $4k + 3$ for some integer $k$. (Why?) If $p_1 p_2 \cdots p_n + 1 = 4k + 1$, then $4 \mid p_1 p_2 \cdots p_n$. Is this possible?
 
 \begin{proof}
+(following the Hint)
+
+Let $z = p_1 p_2 \cdots p_n + 1$. Since $p_1 = 2$, $p_1 p_2 \cdots p_n$ is even (being a product of 2 and other integers), therefore $z$ is odd (being one plus an even integer).
+
+By the quotient-remainder theorem $z = 4q+r$ for some integers $q,r$ where $0 \leq r < 4$. So the possibilities are $r = 0,1,2$ or 3. However, since $z$ is odd, $r = 0$ and $r = 2$ are impossible.
+
+We claim that $r = 3$. Argue by contradiction and assume $r \neq 3$. Then it must be that $r = 1$. So $z = 4q+1 = p_1 p_2 \cdots p_n + 1$. Solving we get $4q = p_1 p_2 \cdots p_n$. Since $p_1 = 2$, dividing by 2 we get $2q = p_2 p_3 \cdots p_n$. 
+
+Since $p_1, p_2, \ldots, p_n$ are all distinct primes, and $p_1 = 2$, we have that $p_2, p_3, \ldots, p_n$ are all odd primes. Thus $p_2 p_3 \cdots p_n$ is odd (being a product of odd integers).
+
+But this is a contradiction to the fact $2q = p_2 p_3 \cdots p_n$, because the left side is even and the right side is odd. {\it [Therefore our supposition was false, and $r = 3$. So $z = 4q+3$ for some integer $q$ as was to be shown.]}
 
 \end{proof}
 
 \subsection{Exercise 34}
 
 \subsubsection{(a)}
+Fermat’s last theorem says that for every integer $n > 2$, the equation $x^n + y^n = z^n$ has no positive integer solution (solution for which $x, y$, and $z$ are positive integers). Prove the following: If for every prime number $p > 2, x^p + y^p = z^p$ has no positive integer solution,
+then for any integer $n > 2$ that is not a power of 2, $x^n + y^n = z^n$ has no positive integer solution.
+
+{\it Hint:} Prove the contrapositive: If for some integer $n > 2$ that is not a power of 2, $x^n + y^n = z^n$ has a positive integer solution, then for some prime number $p > 2$, $x^p + y^p = z^p$ has a positive integer solution. Note that if $n = kp$, then $x^n = x^{kp} = (x^k)^p$.
 
 \begin{proof}
+(following the Hint)
 
+Assume there exists some integer $n > 2$ that is not a power of 2, and some positive integers $a,b,c$, such that $a^n + b^n = c^n$.
+
+{\it [We want to prove that there exists some prime number $p > 2$, and some positive integers $d,e,f$, such that $d^p + e^p = f^p$.]}
+
+By Theorem 4.4.4 $n$ has at least one prime divisor $p$. Then $p \neq 2$ since $n$ is not a power of 2. So $p > 2$ is an odd prime which divides $n$. So $n = pk$ for some integer $k$.
+
+Let $d = a^k, e = b^k, f = c^k$. Then
+\[
+d^p + e^p = (a^k)^p + (b^k)^p = a^{kp} + b^{kp} = a^n + b^n = c^n = c^{kp} = (c^k)^p = f^p
+\]
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsubsection{(b)}
+Fermat proved that there are no integers $x, y$, and $z$ such that $x^4 + y^4 = z^4$. Use this result to remove the restriction in part (a) that $n$ not be a power of 2. That is, prove that if $n$ is a power of 2 and $n > 4$, then $x^n + y^n = z^n$ has no positive integer solution.
 
 \begin{proof}
 
 \end{proof}
 
+{\bf \cy For exercises $35-38$ note that to show there is a unique object with a certain property, show that (1) there is an object with the property and (2) if objects $A$ and $B$ have the property, then $A = B$.}
+
 \subsection{Exercise 35}
+Prove that there exists a unique prime number of the form $n^2 - 1$, where $n$ is an integer that is greater than or equal to 2.
 
 \begin{proof}
+\underline{Existence:} When $n = 2$, then $n^2 - 1 = 3$, which is prime. Hence there exists a prime number of the form $n^2 - 1$, where $n$ is an integer and $n \geq 2$.
 
+\underline{Uniqueness (by contradiction):} Suppose to the
+contrary that $m$ is another integer satisfying the given
+conditions. That is, $m > 2$ and $m^2 - 1$ is prime. {\it [We must derive a contradiction.]} Factor $m^2 - 1$ to obtain $m^2 - 1 = (m - 1)(m + 1)$. But $m > 2$, and so $m - 1 > 1$ and $m + 1 > 1$. Hence $m^2 - 1$ is not prime, which is a contradiction. {\it [This contradiction shows that the supposition is false, and so there is no other integer $m > 2$ such that $m^2 - 1$ is prime.]}
+
+\underline{Uniqueness (direct):} Suppose $m$ is any integer
+such that $m \geq 2$ and $m^2 - 1$ is prime. {\it [We must show that $m = 2$.]} By factoring, $m^2 - 1 = (m - 1)(m + 1)$. Since $m^2 - 1$ is prime, either $m - 1 = 1$ or $m + 1 = 1$. But $m + 1 \geq 2 + 1 = 3$. Hence, by elimination, $m - 1 = 1$, and so $m = 2$.
 \end{proof}
 
 \subsection{Exercise 36}
+Prove that there exists a unique prime number of the form $n^2 + 2n - 3$, where $n$ is a positive integer.
 
 \begin{proof}
+For $n=2$ we get $n^2 + 2n - 3 = 4 + 4 - 3 = 5$, which is prime. 
 
+Now we need to prove that this prime number is unique. In other words, we must prove that for all positive integers $n$, if $n^2 + 2n - 3$ is prime, then $n=2$.
+
+Assume there exists a positive integer $n$ such that $n^2 + 2n - 3$ is prime. {\it[We must prove that $n = 2$.]}
+
+Notice that $n^2 + 2n - 3 = (n+3)(n-1)$. So $(n+3) \mid (n^2 + 2n - 3)$.
+
+Since $(n+3) \mid (n^2 + 2n - 3)$ and $n^2 + 2n - 3$ is prime, either $n+3 = 1$ or $n+3 = n^2 + 2n - 3$. In the first case we get $n = -2$, but $n$ is a positive integer so that's impossible. 
+
+Thus $n+3 = n^2 + 2n - 3$. Solving we get $0 = n^2 + n - 6 = (n+3)(n-2)$. By the zero product property, either $n+3 = 0$ or $n-2 = 0$. The first case gives us $n = -3$ which is impossible (since $n$ is positive), therefore $n-2 = 0$ and $n=2$ {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 37}
+Prove that there is at most one real number $a$ with the property that $a + r = r$ for every real number $r$. (Such a number is called an additive identity.)
 
 \begin{proof}
+\underline{(by contradiction):} Suppose not. That is, suppose there are two distinct real numbers $a_1$ and $a_2$ such that for all real numbers $r$,
+\[
+(1) \,\, a_1 + r = r \,\,\text{ and }\,\, (2) \,\, a_2 + r = r.
+\]
+Then $a_1 + a_2 = a_2$ by (1) with $r = a_2$ and $a_2 + a_1 = a_1$ by (2) with $r = a_1$.
 
+It follows that $a_2 = a_1 + a_2 = a_2 + a_1 = a_1$, which implies that $a_2 = a_1$. But this contradicts the supposition that $a_1$ and $a_2$ are distinct. {\it [Thus the supposition is false and there is at most one real number $a$ such that $a + r = r$ for all real numbers $r$.]}
+
+\underline{Proof (direct):} Suppose $a_1$ and $a_2$ are real numbers such that for all real numbers $r$,
+\[
+(1) \,\, a_1 + r = r \,\,\text{ and }\,\, (2) \,\, a_2 + r = r.
+\]
+Then $a_1 + a_2 = a_2$ by (1) with $r = a_2$ and $a_2 + a_1 = a_1$ by (2) with $r = a_1$.
+
+It follows that $a_2 = a_1 + a_2 = a_2 + a_1 = a_1$. Hence $a_2 = a_1$. {\it [Thus there is at most one real number $a$ such that $a + r = r$ for all real numbers $r$.]}
 \end{proof}
 
 \subsection{Exercise 38}
+Prove that there is at most one real number $b$ with the property that $br = r$ for every real number $r$. (Such a number is called a multiplicative identity.)
 
 \begin{proof}
+\underline{(direct):} Suppose $b_1$ and $b_2$ are real numbers such that for all real numbers $r$,
+\[
+(1) \,\, b_1 r = r \,\,\text{ and }\,\, (2) \,\, b_2 r = r.
+\]
+Then $b_1 b_2 = b_2$ by (1) with $r = b_2$ and $b_2 b_1 = b_1$ by (2) with $r = b_1$.
 
+It follows that $b_2 = b_1 b_2 = b_2 b_1 = b_1$. Hence $b_2 = b_1$. {\it [Thus there is at most one real number $b$ such that $br = r$ for all real numbers $r$.]}
 \end{proof}
 
 \section{Exercise Set 4.9}
