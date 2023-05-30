@@ -4681,7 +4681,7 @@ The negation of the statement is incorrect. The correct negation is: ``Suppose t
 $6 - 7\sqrt{2}$ is irrational.
 
 \begin{proof}
-\underline{by contradiction:} Suppose not. That is, suppose
+\underline{By contradiction:} Suppose not. That is, suppose
 $6 - 7\sqrt{2}$ is rational. {\it [We must prove a contradiction.]} By definition of rational, there exist integers $a$ and $b$ with $b \neq 0$ with $6 - 7\sqrt{2} = \frac{a}{b}$. Then
 
 \begin{center}
@@ -4701,7 +4701,7 @@ $3\sqrt{2} - 7$ is irrational.
 \begin{proof}
 True. The proof is extremely similar to Exercise 6. 
 
-\underline{by contradiction:} Suppose not. That is, suppose
+\underline{By contradiction:} Suppose not. That is, suppose
 $3\sqrt{2} - 7$ is rational. {\it [We must prove a contradiction.]} By definition of rational, there exist integers $a$ and $b$ with $b \neq 0$ with $3\sqrt{2} - 7 = \frac{a}{b}$. Then
 
 \begin{center}
@@ -4728,7 +4728,7 @@ $\sqrt{2}/6$ is irrational.
 \begin{proof}
 True. The proof is extremely similar to Exercises 6 and 7. 
 
-\underline{by contradiction:} Suppose not. That is, suppose
+\underline{By contradiction:} Suppose not. That is, suppose
 $\sqrt{2}/6$ is rational. {\it [We must prove a contradiction.]} By definition of rational, there exist integers $a$ and $b$ with $b \neq 0$ with $\sqrt{2}/6 = \frac{a}{b}$. Then
 
 \begin{center}
@@ -4765,7 +4765,7 @@ True.
 Formal version of the statement: $\fa$ positive real number
 $r$, if $r$ is irrational, then $\sqrt{r}$ is irrational.
 
-\underline{Proof by contraposition:} Suppose $r$ is any positive real number such that $\sqrt{r}$ is rational. {\it [We must show that $r$ is rational.]} By definition of rational, $\sqrt{r} = \frac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$. Then $r = (\sqrt{r})^2 = \left(\frac{a}{b}\right)^2 = \frac{a^2}{b^2}$. But both $a^2$ and $b^2$ are integers because they are products of integers, and $b^2 \neq 0$ by the zero product property. Thus $r$ is rational {\it [as was to be shown]}. 
+\underline{By contraposition:} Suppose $r$ is any positive real number such that $\sqrt{r}$ is rational. {\it [We must show that $r$ is rational.]} By definition of rational, $\sqrt{r} = \frac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$. Then $r = (\sqrt{r})^2 = \left(\frac{a}{b}\right)^2 = \frac{a^2}{b^2}$. But both $a^2$ and $b^2$ are integers because they are products of integers, and $b^2 \neq 0$ by the zero product property. Thus $r$ is rational {\it [as was to be shown]}. 
 
 (The statement may also be proved by contradiction.)
 \end{proof}
@@ -4847,83 +4847,35 @@ Therefore our supposition was false, and $\sqrt[3]{2}$ is irrational.
 Use proof by contradiction to show that for any integer $n$, it is impossible for $n$ to equal both $3q_1 + r_1$ and $3q_2 + r_2$, where $q_1, q_2, r_1$, and $r_2$ are integers, $0 \leq r_1 < 3, 0 \leq r_2 < 3$, and $r_1 \neq r_2$.
 
 \begin{proof}
-19. a. Proof by contradiction: Suppose not. That
-is, suppose there is an integer n such that
-n 5 3q1 1 r1 5 3q2 1 r2, where q1, q2, r 1, and
-r 2 are integers, $0 \leq r1$, 3, $0 \leq r2$, 3, and
-$r1 \neq r2$. By interchanging the labels for r 1 and r 2
-if necessary, we may assume that r2 . r1. Then
-3(q1 2 q2) 5 r2 2 r1 . 0, and because both r 1 and
-r 2 are less than 3, either r2 2 r1 5 1 or r2 2 r1 5 2.
-So either 3(q1 2 q2) 5 1 or 3(q1 2 q2) 5 2. The
-first case implies that 3u1, and hence, by Theorem
-4.4.1, that $3 \leq 1$, and the second case implies that
-3u2, and hence, by Theorem 4.4.1, that $3 \leq 2$.
-These results contradict the fact that 3 is greater
-than both 1 and 2. Thus in either case we have
-reached a contradiction, which shows that the sup-
-position is false and the given statement is true.
-
+\underline{By contradiction:} Suppose not. That is, suppose there is an integer $n$ such that $n = 3q_1 + r_1 = 3q_2 + r_2$, where $q_1, q_2, r_1$, and $r_2$ are integers, $0 \leq r1$, 3, $0 \leq r2$, 3, and $r1 \neq r2$. By interchanging the labels for $r_1$ and $r_2$ if necessary, we may assume that $r_2 > r_1$. Then $3(q_1 - q2) = r_2 - r_1 > 0$, and because both $r_1$ and $r_2$ are less than 3, either $r_2 - r1 = 1$ or $r_2 - r_1 = 2$. So either $3(q_1 - q_2) = 1$ or $3(q_1 - q_2) = 2$. The first case implies that $3 \mid 1$, and hence, by Theorem 4.4.1, that $3 \leq 1$, and the second case implies that $3 \mid 2$, and hence, by Theorem 4.4.1, that $3 \leq 2$. These results contradict the fact that 3 is greater than both 1 and 2. Thus in either case we have reached a contradiction, which shows that the supposition is false and the given statement is true.
 \end{proof}
 
 \subsubsection{(b)}
 Use proof by contradiction, the quotient-remainder theorem, division into cases, and the result of part (a) to prove that for every integer $n$, if $n^2$ is divisible by 3 then $n$ is divisible by 3.
 
 \begin{proof}
-b. Proof by contradiction: Suppose not. That is, sup-
-pose there is an integer n such that n 2 is divisible
-by 3 and n is not divisible by 3. [We must deduce
-a contradiction.] By definition of divisible,
-n2 5 3q for some integer q, and by the quotient-
-remainder theorem and part (a), n 5 3k 1 1 or
-n 5 3k 1 2 for some integer k.
-Case 1 (n 5 3k 1 1 for some integer k): In this case
-n2 5 (3k 1 1)2 5 9k2 1 6k 1 1 5 3(3k2 1 2k) 1 1.
-Let s 5 3k2 1 2k. Then n2 5 3s 1 1, and s is an inte-
-ger because it is a sum of products of integers. Thus
-n2 5 3q 5 3s 1 1 for some integers q and s, which
-contradicts the result of part (a).
-Case 2 (n 5 3k 1 2 for some integer k): In this case
-n2 5 (3k 1 2) 5 9k2 1 12k 1 4 5 3(3k2 1 4k 1 1) 1 1.
-Let t 5 3k2 1 4k 1 1. Then n2 5 3t 1 1, and t is an in-
-teger because it is a sum of products of integers. Thus
-there are integers q and t so that n2 5 3q 5 3t 1 1,
-which contradicts the result of part (a).
-Thus in either case, a contradiction is reached,
-which shows that the supposition is false and the
-given statement is true.
+\underline{By contradiction:} Suppose not. That is, suppose there is an integer $n$ such that $n^2$ is divisible by 3 and $n$ is not divisible by 3. {\it [We must deduce a contradiction.]} By definition of divisible, $n^2 = 3q$ for some integer $q$, and by the quotient-remainder theorem and part (a), $n = 3k + 1$ or $n = 3k + 2$ for some integer $k$. 
+
+{\bf Case 1 ($n = 3k + 1$ for some integer $k$):} In this case $n^2 = (3k + 1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1$. Let $s = 3k^2 + 2k$. Then $n^2 = 3s + 1$, and $s$ is an integer because it is a sum of products of integers. Thus $n^2 = 3q = 3s + 1$ for some integers $q$ and $s$, which contradicts the result of part (a).
+
+{\bf Case 2 ($n = 3k + 2$ for some integer $k$):} In this case $n^2 = (3k + 2)^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k + 1) + 1$. Let $t = 3k^2 + 4k + 1$. Then $n^2 = 3t + 1$, and $t$ is an integer because it is a sum of products of integers. Thus there are integers $q$ and $t$ so that $n^2 = 3q = 3t + 1$, which contradicts the result of part (a). Thus in either case, a contradiction is reached, which shows that the supposition is false and the given statement is true.
 \end{proof}
 
 \subsubsection{(c)}
 Prove that $\sqrt{3}$ is irrational.
 
 \begin{proof}
-c. Proof by contradiction: Suppose not. That is,
-suppose Ï3 is rational. By definition of rational,
-a
-Ï3 5 b for some integers a and b with $b \neq 0$.
-Without loss of generality, assume that a and b have
-no common factor. (If not, divide both a and b by
-their greatest common factor to obtain integers a9
-and b9 with the property that a9 and b9 have no com-
-a9
-mon factor and Ï3 5 b9 . Then redefine a 5 a9 and
-a
-b 5 b.) Squaring both sides of Ï3 5 b gives Ï3 5
-a2/b2, and multiplying both sides by b2 gives
-3b2 5 a2(*).
-Thus a2 is divisible by 3, and so, by part (b), a is
-also divisible by 3. By definition of divisibility, then,
-a 5 3k for some integer k, and so
-a2 5 9k2(**).
-Substituting equation (**) into equation (*) gives
-3b2 5 9k2, and dividing both sides by 3 yields
-b2 5 3k2.
-Hence b2 is divisible by 3, and so, by part (b), b is
-also divisible by 3. Consequently, both a and b are
-divisible by 3, which contradicts the assumption that
-a and b have no common factor. Thus the supposi-
-tion is false, and so Ï3 is irrational.
+\underline{By contradiction:} Suppose not. That is,
+suppose $\sqrt{3}$ is rational. By definition of rational,
+$\sqrt{3} = \frac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$. Without loss of generality, assume that $a$ and $b$ have no common factor. (If not, divide both $a$ and $b$ by their greatest common factor to obtain integers $a'$ and $b'$ with the property that $a'$ and $b'$ have no common factor and $\sqrt{3} = \frac{a'}{b'}$. Then redefine $a = a'$ and $b = b'$.) Squaring both sides of $\sqrt{3} = \frac{a}{b}$ gives $3 = \frac{a^2}{b^2}$, and multiplying both sides by $b^2$ gives 
+\[
+3b^2 = a^2 \,\,\,(*)
+\]
+Thus $a^2$ is divisible by 3, and so, by part (b), $a$ is also divisible by 3. By definition of divisibility, then, $a = 3k$ for some integer $k$, and so 
+\[
+a^2 = 9k^2 \,\,\,(**).
+\] 
+Substituting equation (**) into equation (*) gives $3b^2 = 9k^2$, and dividing both sides by 3 yields $b^2 = 3k^2$. Hence $b^2$ is divisible by 3, and so, by part (b), $b$ is also divisible by 3. Consequently, both $a$ and $b$ are divisible by 3, which contradicts the assumption that $a$ and $b$ have no common factor. Thus the supposition is false, and so $\sqrt{3}$ is irrational.
 \end{proof}
 
 \subsection{Exercise 20}
@@ -4971,7 +4923,7 @@ Prove that $\sqrt{5}$ is irrational.
 \begin{proof}
 Assume $5 \mid a^2$. Then $a^2 = 5b$ for some integer $b$. By the quotient-remainder theorem, $a = 5q+r$ for some integers $q,r$ where $0 \leq r < 5$.
 
-Then $a^2 = (5q+r)^2 = 25q^2 + 10qr + r^2 = 5b$. So $25q^2 + 10qr - 5b = r^2$, and $5(5q^2 + 2qr - b) = r^2$. Since $5q^2 + 2qr - b$ is an integer (product, sum and difference of integers), $r^2$ is divisible by 5. Since $0 \leq r \leq 4$, this implies that $r = 0$.
+Then $a^2 = (5q+r)^2 = 25q^2 + 10qr + r^2 = 5b$. So $25q^2 + 10qr - 5b = r^2$, and $5(5q^2 + 2qr - b) = r^2$. Since $5q^2 + 2qr - b$ is an integer (product, sum and difference of integers), $r^2$ is divisible by 5. Since $0 \leq r \leq 4$, we have $0 \leq r^2 \leq 16$. The only integers in this range that are divisible by 5 are: 0, 5, 10 and 15. Since $r^2 = 5, r^2 = 10$ and $r^2 = 15$ are impossible for an integer $0 \leq r \leq 4$, the only remaining possibility is $r^2 = 0$, which implies $r = 0$.
 
 Therefore $a = 5q + 0 = 5q$ where $q$ is an integer. So $a$ is divisible by 5.
 \end{proof}
@@ -5054,11 +5006,11 @@ Prove that $\log_5(2)$ is irrational. ({\it Hint:} Use the unique factorization 
 \begin{proof}
 Argue by contradiction and assume $\log_5(2)$ is rational. By definition of rational, $\log_5(2) = a/b$ for some integers $a, b$ where $b \neq 0$. 
 
-By definition of $\log_5$ we have $5^(a/b) = 2$. Raising both sides to the $b$th power, we get $[5^(a/b)]^b = 2^b$. By the law of exponents, $5^a = 2^b$. 
+By definition of $\log_5$ we have $5^{a/b} = 2$. Raising both sides to the $b^{\text{th}}$ power, we get $[5^{a/b}]^b = 2^b$. By the law of exponents, $5^a = 2^b$. 
 
 Let's consider 3 cases for $a$: positive, negative, or zero.
 
-{\bf Case 1:} $a > 0$. Then $a$ is at least 1, so $5^a$ is at least 5, or possibly larger (multiplying by more factors of 5 makes a number larger).
+{\bf Case 1:} $a > 0$. Then $a$ is at least 1, so $5^a$ is at least 5, or possibly larger (multiplying a positive number by more factors of 5 makes the number larger).
 
 We already know $b \neq 0$. Since $2^b = 5^a \geq 5$ we see that $b$ cannot be negative either, $b$ must also be positive, because negative powers of 2 are less than 1 but $2^b \geq 5$.
 
@@ -5191,11 +5143,9 @@ We claim that $r = 3$. Argue by contradiction and assume $r \neq 3$. Then it mus
 Since $p_1, p_2, \ldots, p_n$ are all distinct primes, and $p_1 = 2$, we have that $p_2, p_3, \ldots, p_n$ are all odd primes. Thus $p_2 p_3 \cdots p_n$ is odd (being a product of odd integers).
 
 But this is a contradiction to the fact $2q = p_2 p_3 \cdots p_n$, because the left side is even and the right side is odd. {\it [Therefore our supposition was false, and $r = 3$. So $z = 4q+3$ for some integer $q$ as was to be shown.]}
-
 \end{proof}
 
 \subsection{Exercise 34}
-
 \subsubsection{(a)}
 Fermat’s last theorem says that for every integer $n > 2$, the equation $x^n + y^n = z^n$ has no positive integer solution (solution for which $x, y$, and $z$ are positive integers). Prove the following: If for every prime number $p > 2, x^p + y^p = z^p$ has no positive integer solution,
 then for any integer $n > 2$ that is not a power of 2, $x^n + y^n = z^n$ has no positive integer solution.
@@ -5222,7 +5172,18 @@ d^p + e^p = (a^k)^p + (b^k)^p = a^{kp} + b^{kp} = a^n + b^n = c^n = c^{kp} = (c^
 Fermat proved that there are no integers $x, y$, and $z$ such that $x^4 + y^4 = z^4$. Use this result to remove the restriction in part (a) that $n$ not be a power of 2. That is, prove that if $n$ is a power of 2 and $n > 4$, then $x^n + y^n = z^n$ has no positive integer solution.
 
 \begin{proof}
+Assume $n$ is a power of 2 and $n > 4$. {\it [We want to prove that $x^n + y^n = z^n$ has no positive integer solution.]}
 
+Argue by contradiction and assume that $a,b,c$ are positive integers that are a solution: $a^n + b^n = c^n$. Since $n$ is a power of 2, $n = 2^k$ for some positive integer $k$. Since $n > 4$, we have $k > 2$. So $k-2 > 0$. Then $n = 2^k = 2^{k-2} \cdot 2^2 = 2^{k-2} \cdot 4$. So we have by the laws of exponents:
+\[
+\begin{array}{ccc}
+a^n + b^n & = & c^n \\
+a^{2^k} + b^{2^k} & = & c^{2^k} \\
+a^{2^{k-2}\cdot 4} + b^{2^{k-2}\cdot 4} & = & c^{2^{k-2}\cdot 4} \\
+\left(a^{2^{k-2}}\right)^4 + \left(b^{2^{k-2}}\right)^4 & = & \left(c^{2^{k-2}}\right)^4
+\end{array}
+\]
+Let $d = a^{2^{k-2}}$, $e = b^{2^{k-2}}$, $f = c^{2^{k-2}}$. Then $d^4 + e^4 = f^4$ where $d,e,f$ are positive integers, which contradicts the fact given in the problem. {\it [Therefore our supposition was false and $x^n + y^n = z^n$ has no positive integer solution.]}
 \end{proof}
 
 {\bf \cy For exercises $35-38$ note that to show there is a unique object with a certain property, show that (1) there is an object with the property and (2) if objects $A$ and $B$ have the property, then $A = B$.}
@@ -5245,7 +5206,7 @@ such that $m \geq 2$ and $m^2 - 1$ is prime. {\it [We must show that $m = 2$.]} 
 Prove that there exists a unique prime number of the form $n^2 + 2n - 3$, where $n$ is a positive integer.
 
 \begin{proof}
-For $n=2$ we get $n^2 + 2n - 3 = 4 + 4 - 3 = 5$, which is prime. 
+For $n = 2$ we get $n^2 + 2n - 3 = 4 + 4 - 3 = 5$, which is prime. 
 
 Now we need to prove that this prime number is unique. In other words, we must prove that for all positive integers $n$, if $n^2 + 2n - 3$ is prime, then $n=2$.
 
