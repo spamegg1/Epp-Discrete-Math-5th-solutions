@@ -5255,264 +5255,427 @@ It follows that $b_2 = b_1 b_2 = b_2 b_1 = b_1$. Hence $b_2 = b_1$. {\it [Thus t
 
 \section{Exercise Set 4.9}
 
+{\bf \cy In 1 and 2 find the degree of each vertex and the total degree of the graph. Check that the number of edges equals one-half of the total degree.}
+
 \subsection{Exercise 1}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.1.png}
+\end{figure}
 
 \begin{proof}
-
+Total degree = 3+2+4+2+1 = 12, there are 6 edges (6 = 12/2).
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+{\bf vertex} & $v_1$ & $v_2$ & $v_3$ & $v_4$ & $v_5$ & $v_6$ \\
+\hline
+{\bf degree} & $3$ & $2$ & $4$ & $2$ & $1$ & $0$ \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 2}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.2.png}
+\end{figure}
 
 \begin{proof}
-
+Total degree = 1+5+4+4+1+3 = 18, there are 9 edges (9 = 18/2).
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+{\bf vertex} & $v_1$ & $v_2$ & $v_3$ & $v_4$ & $v_5$ & $v_6$ \\
+\hline
+{\bf degree} & $1$ & $5$ & $4$ & $4$ & $1$ & $3$ \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 3}
+A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the graph have?
 
 \begin{proof}
-
+The total degree of the graph is $0 + 2 + 2 + 3 + 9 = 16$, so, by the handshake theorem (Theorem 4.9.1), the number of edges is $16/2 = 8$.
 \end{proof}
 
 \subsection{Exercise 4}
+A graph has vertices of degrees 1, 1, 4, 4, and 6.
+How many edges does the graph have?
 
 \begin{proof}
-
+The total degree of the graph is $1 + 1 + 4 + 4 + 6 = 16$, so, by the handshake theorem (Theorem 4.9.1), the number of edges is $16/2 = 8$.
 \end{proof}
 
+{\bf \cy In each of $5-13$ either draw a graph with the specified properties or explain why no such graph exists.}
+
 \subsection{Exercise 5}
+Graph with five vertices of degrees 1, 2, 3, 3, and 5.
 
 \begin{proof}
-
+One such graph is
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.5.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 6}
+Graph with four vertices of degrees 1, 2, 3, and 3.
 
 \begin{proof}
-
+If there were a graph with four vertices of degree 1, 2, 3, and 3, then its total degree would be 9, which is odd. But by Corollary 4.9.2, the total degree of the graph must be even. {\it [This is a contradiction.]} Hence there is no such graph. (Alternatively, if there were such a graph, it would have an odd number of vertices of odd degree. But by Proposition 4.9.3 this is impossible.)
 \end{proof}
 
 \subsection{Exercise 7}
+Graph with four vertices of degrees 1, 1, 1, and 4.
 
 \begin{proof}
-
+If there were a graph with four vertices of degree 1, 1, 1, and 4, then its total degree would be 7, which is odd. But by Corollary 4.9.2, the total degree of the graph must be even. {\it [This is a contradiction.]} Hence there is no such graph. (Alternatively, if there were such a graph, it would have an odd number of vertices of odd degree. But by Proposition 4.9.3 this is impossible.)
 \end{proof}
 
 \subsection{Exercise 8}
+Graph with four vertices of degrees 1, 2, 3, and 4.
 
 \begin{proof}
-
+The graph given in Example 4.9.1 satisfies this (parallel edges and self-loops are required to make this happen):
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.8.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 9}
+Simple graph with four vertices of degrees 1, 2, 3, and 4.
 
 \begin{proof}
-
+Suppose there were a simple graph with four vertices of degrees 1, 2, 3, and 4. Then the vertex of degree 4 would have to be connected by edges to four distinct vertices other than itself because of the assumption that the graph is simple (and hence has no loops or parallel edges). This contradicts the assumption that the graph has four vertices in total. Hence there is no simple graph with four vertices of degrees 1, 2, 3, and 4.
 \end{proof}
 
 \subsection{Exercise 10}
+Simple graph with five vertices of degrees 2, 3, 3, 3, and 5.
 
 \begin{proof}
-
+Similar to Exercise 10, since the graph in question is simple and has 5 vertices, the maximum degree of any vertex is $5 - 1 = 4$, contradicting the fact that a vertex of degree 5 exists. So, such a graph does not exist.
 \end{proof}
 
 \subsection{Exercise 11}
-
+Simple graph with five vertices of degrees 1, 1, 1, 2, and 3.
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.11.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 12}
+Simple graph with six edges and all vertices of degree 3.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.12.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 13}
+Simple graph with nine edges and all vertices of degree 3.
 
 \begin{proof}
-
+Since there are 9 edges, the total degree of such a graph has to be $9 \cdot 2 = 18$. Since all vertices have degree 3, there are $18 / 3 = 6$ vertices.
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.13.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 14}
+At a party attended by a group of people, two people knew one other person before the party, and five people knew two other people before the party. The rest of the people knew three other people before the party. A total of 15 pairs of people knew each other before the party.
 
 \subsubsection{(a)}
+How many people attending the party knew three other people before the party?
 
 \begin{proof}
+Define a graph $G$ by letting each vertex represent a person at the party and drawing an edge between each pair of people who knew each other before the party. Let $x$ be the number of people who knew three other people before the party. Then the total degree of the graph $ = 2\cdot 1 + 5\cdot 2 + x\cdot 3 = 12 + 3x$ because 2 people knew 1 other person before the party, 5 people knew 2 other people before the party, and $x$ people knew 3 other people before the party. 
 
+In addition, since a total of 15 pairs of people knew each other before the party, the graph has 15 edges. By the handshake theorem (Theorem 4.9.1), the total degree is twice the number of edges. Hence the total degree of the graph $= 2 \cdot 15 = 30$. It follows that $12 + 3x = 30$. Thus $3x = 30 - 12 = 18$, and so $x = \frac{18}{3} = 6$. In other words, 6 people at the party knew 3 other people before the party.
 \end{proof}
 
 \subsubsection{(b)}
+How many people attended the party?
 
 \begin{proof}
-
+Now the total number of people at the party is the sum of the number who knew 1 other person before the party, plus the number who knew 2 other people before the party, plus the number who knew 3 other people before the party. Therefore, the number of people at the party $= 2 + 5 + 6 = 13$.
 \end{proof}
 
 \subsection{Exercise 15}
+A small social network contains three people who network friends with six other people in the network, one person who is network friend with five other people in the network, and five people who are network friends with four other people in the network. The rest are network friends with three other people in the network. The network contains 41 pairs of network friends.
 
 \subsubsection{(a)}
+How many people are network friends with three other people in the network?
 
 \begin{proof}
+Similar to Exercise 14, define a graph $G$ where vertices are people and edges represent networking relations. This is a simple graph (no self-loops: people do not ``network with themselves'' but only with other people, and no parallel edges: two people only network with each other once). So the number of people that a person networks with represents the degree of the vertex for that person. Now we can translate from English to math:
 
+There are 3 people who network with 6 other people: in other words there are 3 vertices of degree 6. Similarly, one vertex of degree 5, 5 vertices of degree 4, and say $x$ vertices of degree 3 (let $x$ be the number of people who are network friends with 3 other people). And there are a total of 41 edges.
+
+The total degree is $42 \cdot 2 = 82$. Counted the other way, the total degree is: $3 \cdot 6 + 1 \cdot 5 + 5 \cdot 4 + 3x = 43+3x$. So $82 = 43+3x$, therefore $39 = 3x$ so $x = 13$. So 13 people are network friends with three other people in the network.
 \end{proof}
 
 \subsubsection{(b)}
+How many people are in the network?
 
 \begin{proof}
-
+$4 + 1 + 5 + 13 = 23$ people.
 \end{proof}
 
 \subsection{Exercise 16}
-
 \subsubsection{(a)}
+In a group of 15 people, is it possible for each person to have exactly 3 friends? Justify your answer. (Assume that friendship is a symmetric relationship: If $x$ is a friend of $y$, then $y$ is a friend of $x$.)
 
 \begin{proof}
-
+Suppose that, in a group of 15 people, each person had exactly three friends. Then you could draw a graph representing each person by a vertex and connecting two vertices by an edge if the corresponding people were friends. But such a graph would have 15 vertices, each of degree 3, for a total degree of 45. This would contradict the fact that the total degree of any graph is even. Hence the supposition must be false, and in a group of 15 people it is not possible for each to have exactly three friends.
 \end{proof}
 
 \subsubsection{(b)}
+In a group of 4 people, is it possible for each person to have exactly 3 friends? Justify your answer.
 
 \begin{proof}
-
+Yes. Let each person in a group of 4 be friends with the other 3. Then each person has exactly 3 friends. This corresponds to the complete graph $K_{4}$:
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.16.b.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 17}
+In a group of 25 people, is it possible for each to shake hands with exactly 3 other people? Justify your answer.
 
 \begin{proof}
-
+If we represent this as a graph, letting vertices represent people, and edges represent handshakes between people, then we would have a total degree of $25 \cdot 3 = 75$, which is odd, which is impossible by Corollary 4.9.2.
 \end{proof}
 
 \subsection{Exercise 18}
+Is there a simple graph, each of whose vertices has even degree? Justify your answer.
 
 \begin{proof}
-
+Yes, for example $K_3$ (a triangle) is a simple graph where each vertex has degree 2:
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.18.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 19}
+Suppose that $G$ is a graph with $v$ vertices and $e$ edges and that the degree of each vertex is at least $d_{min}$ and at most $d_{max}$. Show that
+\[
+\frac{1}{2}d_{min}\cdot v \leq e \leq \frac{1}{2}d_{max}\cdot v
+\]
+{\it Hint:} Let $t$ be the total degree of the graph, let $d_{min}$ be the minimum degree of any vertex in $G$, and let $d_{max}$ be the maximum degree of any vertex in $G$.
 
 \begin{proof}
-
+Let $a_1, \ldots, a_v$ be the vertices of $G$. The total degree of all vertices is twice the number of edges, so
+\[
+2e = \text{deg}(a_1) + \text{deg}(a_2) + \ldots + \text{deg}(a_v).
+\]
+We are given that for all $i = 1, 2, \ldots, v$, $d_{min} \leq \text{deg}(a_i) \leq d_{max}$. Therefore
+\[
+d_{min} \cdot v = d_{min} + d_{min} + \ldots + d_{min} \leq \text{deg}(a_1) + \text{deg}(a_2) + \ldots + \text{deg}(a_v)
+\]
+and
+\[
+\text{deg}(a_1) + \text{deg}(a_2) + \ldots + \text{deg}(a_v) \leq d_{max} + d_{max} + \ldots + d_{max} = d_{max} \cdot v.
+\]
+Combining we get $d_{min} \cdot v \leq 2e \leq d_{max} \cdot v$ and dividing by 2 we get the desired result.
 \end{proof}
 
 \subsection{Exercise 20}
-
 \subsubsection{(a)}
+Draw $K_6$, a complete graph on six vertices.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.20.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
+Use the result of Example 4.9.9 to show that the number of edges of a simple graph with $n$ vertices is less than or equal to $\frac{n(n - 1)}{2}$.
 
 \begin{proof}
+By the result of Example 4.9.9, the number of edges of $K_n$ is $\frac{n(n - 1)}{2}$.
 
+If $G$ is any simple graph with $n$ vertices, then $G$ can have at most as many edges as $K_n$ does, because $K_n$ is complete, and $G$ may be complete (in which case it would have the same number of edges as $K_n$) or incomplete (in which case it would have fewer edges than $K_n$).
+
+Therefore the number of edges of a simple graph with $n$ vertices is less than or equal to $\frac{n(n - 1)}{2}$.
 \end{proof}
 
 \subsection{Exercise 21}
 
 \subsubsection{(a)}
+In a simple graph, must every vertex have degree that is less than the number of vertices in the graph? Why?
 
 \begin{proof}
-
+Yes. Let $G$ be a simple graph with $n$ vertices and let $v$ be a vertex of $G$. Since G has no parallel edges, $v$ can be joined by at most a single edge to each of the $n - 1$ other vertices of $G$, and since $G$ has no loops, $v$ cannot be joined to itself. Therefore, the maximum degree of $v$ is $n - 1$.
 \end{proof}
 
 \subsubsection{(b)}
+Can there be a simple graph that has four vertices all of different degrees? Why?
 
 \begin{proof}
-
+No. Suppose there is a simple graph with four vertices, all of which have different degrees. By part (a), no vertex can have degree greater than three, and of course, no vertex can have degree less than 0. Therefore, the only possible degrees of the vertices are 0, 1, 2, and 3. Since all four vertices have different degrees, there is one vertex with each degree. But then the vertex of degree 3 is connected to all the other vertices, which contradicts the fact that one of the vertices has degree 0. Hence the supposition is false, and there is no simple graph with four vertices each of which has a different degree.
 \end{proof}
 
 \subsubsection{(c)}
+For any integer $n \geq 5$, can there be a simple graph that has $n$ vertices all of different degrees? Why?
 
 \begin{proof}
-
+No. In a simple graph that has $n$ vertices, the maximum degree of a vertex is $n-1$ by part (a). So, if $n$ vertices in a simple graph all have different degrees, then these degrees must be $0, 1, 2, \ldots, n-1$. So there is a vertex $v$ such that deg$(v) = 0$. But the vertex with degree $n-1$ is connected to every other vertex, including $v$. So deg$(v) \geq 1$, contradicting deg$(v) = 0$. Thus such a simple graph is impossible.
 \end{proof}
 
 \subsection{Exercise 22}
+In a group of two or more people, must there always be at least two people who are acquainted with the same number of people within the group? Why?
+
+{\it Hint:} Use the result of exercise 21, part (c).
 
 \begin{proof}
-
+Yes. If we represent people with vertices and acquaintances with edges, we obtain a simple graph: no person is counted as being ``acquainted with themselves'' but only with others, so there are no self-loops; and if two people are acquainted, then only one edge is enough to represent this (it is only counted once), so there are no parallel edges.
+By Exercise 21 part (c), it is impossible for all vertices in a simple graph to have different degrees. Therefore there are at least two people who are acquainted with t he same number of people within the group.
 \end{proof}
 
 \subsection{Exercise 23}
+Recall that $K_{m,n}$ denotes a complete bipartite graph on $(m, n)$ vertices.
 
 \subsubsection{(a)}
+Draw $K_{4,2}$.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/4.9.23.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
+Draw $K_{1,3}$.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.23.b.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(c)}
+Draw $K_{3,4}$.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.23.c.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(d)}
+How many vertices of $K_{m,n}$ have degree $m$? degree $n$?
 
 \begin{proof}
-
+If $n \neq m$, the vertices of $K_{m,n}$ are divided into two groups: one of size $m$ and the other of size $n$. Every vertex in the group of size $m$ has degree $n$ because each is connected to every vertex in the group of size $n$. So $K_{m,n}$ has $m$ vertices of degree $n$. Similarly, every vertex in the group of size $n$ has degree $m$ because each is connected to every vertex in the group of size $m$. So $K_{m,n}$ has $n$ vertices of degree $m$. Note that if $n = m$, then all $n + m = 2n$ vertices have the same degree, namely, $n$.
 \end{proof}
 
 \subsubsection{(e)}
+What is the total degree of $K_{m,n}$?
 
 \begin{proof}
-
+By part (d), the group of $m$ vertices each have degree $n$, so they contribute a total of $mn$ degrees; and the group of $n$ vertices each have degree $m$, so they contribute a total of $nm$ degrees. So the total degree overall is $2mn$.
 \end{proof}
 
 \subsubsection{(f)}
+Find a formula in terms of $m$ and $n$ for the number of edges of $K_{m,n}$. Justify your answer.
 
 \begin{proof}
-
+Since the total degree is equal to twice the number of edges, $e = 2mn / 2 = mn$.
 \end{proof}
 
 \subsection{Exercise 24}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.24.1.png}
+\end{figure}
+
+A (general) bipartite graph G is a simple graph whose vertex set can be partitioned into two disjoint nonempty subsets $V_1$ and $V_2$ such that vertices in $V_1$ may be connected to vertices in $V_2$, but no vertices in $V_1$ are connected to other vertices in $V_1$ and no vertices in $V_2$ are connected to other vertices in $V_2$. For example, the bipartite graph $G$ illustrated in (i) can be redrawn as shown in (ii). From the drawing in (ii), you can see that $G$ is bipartite with mutually disjoint vertex sets $V_1 = \{v_1, v_3, v_5\}$ and $V_2 = \{v_2, v_4, v_6\}$.
+
+Find which of the following graphs are bipartite. Redraw the bipartite graphs so that their bipartite nature is evident.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/4.9.24.2.png}
+\end{figure}
 
 \subsubsection{(a)}
+Graph a. above
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/4.9.24.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
+Graph b. above
 
 \begin{proof}
-
+Suppose this graph is a bipartite. Then the vertex set can be partitioned into two mutually disjoint subsets such that vertices in each subset are connected by edges only to vertices in the other subset and not to vertices in the same subset. Now $v_1$ is in one subset of the partition, say, $V_1$. Since $v_1$ is connected by edges to $v_2$ and $v_3$ both $v_2$ and $v_3$ must be in the other subset, $V_2$. But $v_2$ and $v_3$ are connected by an edge to each other. This contradicts the fact that no vertices in $V_2$ are connected by edges to other vertices in $V_2$. Hence the supposition is false, and so the graph is not bipartite.
 \end{proof}
 
 \subsubsection{(c)}
+Graph c. above
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/4.9.24.c.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(d)}
+Graph d. above
 
 \begin{proof}
-
+This graph is not bipartite due to the triangle formed by $v_2, v_4, v_5$. Argue by contradiction and assume it is bipartite, with disjoint vertex sets $V_1, V_2$. Then either $v_2 \in V_1$ or $v_2 \in V_2$. If $v_2 \in V_1$, then since $v_2$ is connected to both $v_4$ and $v_5$, we must have $v_4 \in V_2$ and $v_5 \in V_2$. But $v_4$ and $v_5$ are also connected, contradicting the definition of bipartite. Similarly if $v_2 \in V_2$ then $v_4 \in V_1$ and $v_5 \in V_1$ and we get a similar contradiction. Therefore the graph is not bipartite.
 \end{proof}
 
 \subsubsection{(e)}
+Graph e. above
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/4.9.24.e.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(f)}
+Graph f. above
 
 \begin{proof}
-
+This graph is not bipartite. Argue by contradiction and assume it is bipartite, with disjoint vertex sets $V_1, V_2$. Then either $v_1 \in V_1$ or $v_1 \in V_2$. If $v_1 \in V_1$, then since $v_1$ is connected to both $v_2$ and $v_5$, we must have $v_2 \in V_2$ and $v_5 \in V_2$. So $v_3 \in V_1$ and $v_4 \in V_1$. But $v_3$ is connected to $v_4$, contradicting the definition of bipartite. Similarly if $v_1 \in V_2$ then $v_2 \in V_1$ and $v_5 \in V_1$ and $v_3 \in V_2$ and $v_4 \in V_2$ and we get a similar contradiction. Therefore the graph is not bipartite.
 \end{proof}
 
 \subsection{Exercise 25}
+Suppose $r$ and $s$ are any positive integers. Does there exist a graph $G$ with the property that $G$ has vertices of degrees $r$ and $s$ and of no other degrees? Explain.
 
 \begin{proof}
-
+Yes. Let $G = K_{r,s}$. Then by the solution to Exercise 23 (d) every vertex has degree either $r$ or $s$.
 \end{proof}
 
 \section{Exercise Set 4.10}
