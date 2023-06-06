@@ -1,6 +1,6 @@
 \documentclass[14pt]{extarticle}
 
-\usepackage[table]{xcolor}
+\usepackage[table]{xcolor} % colored lines for tables
 \usepackage[normalem]{ulem} % strike through text
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref,wasysym,pifont}
 \usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel,tcolorbox}
@@ -5062,6 +5062,7 @@ $\cy p_1$ & $\cy p_2$ & $\cy p_3$ & $\cy p_4$ & $\cy p_5$ & $\cy p_6$\\
 2 & 3 & 5 & 7 & 11 & 13 \\
 \hline
 \end{tabular}
+\arrayrulecolor{black}
 \end{center}
 
 \subsubsection{(a)}
@@ -5679,265 +5680,696 @@ Yes. Let $G = K_{r,s}$. Then by the solution to Exercise 23 (d) every vertex has
 \end{proof}
 
 \section{Exercise Set 4.10}
+{\bf \cy Find the value of $z$ when each of the algorithm segments in 1 and 2 is executed.}
 
 \subsection{Exercise 1}
+\begin{tabbing}
+$i \coloneqq 2$ \\
+{\bf if} \= ($i > 3$ or $i \leq 0$) \\
+         \> {\bf then} $z \Coloneqq 1$ \\
+         \> {\bf else} $z \Coloneqq 0$
+\end{tabbing}
 
 \begin{proof}
-
+$z = 0$
 \end{proof}
 
 \subsection{Exercise 2}
+\begin{tabbing}
+$i \coloneqq 3$ \\
+{\bf if} \= ($i \leq 3$ or $i > 6$) \\
+         \> {\bf then} $z \Coloneqq 2$ \\
+         \> {\bf else} $z \Coloneqq 0$
+\end{tabbing}
 
 \begin{proof}
-
+$z = 2$
 \end{proof}
 
 \subsection{Exercise 3}
+Consider the following algorithm segment:
+\begin{tabbing}
+{\bf if} \= $x \cdot y > 0$ \\
+         \> {\bf then do} \= $y \coloneqq 3\cdot x$ \\
+         \>               \> $x \coloneqq x+1$ {\bf end do} \\
+$z \coloneqq x \cdot y$
+\end{tabbing}
+Find the value of $z$ if prior to execution $x$ and $y$ have the values given below.
 
 \subsubsection{(a)}
+$x = 2, y = 3$
 
 \begin{proof}
-
+$z = 18$
 \end{proof}
 
 \subsubsection{(b)}
+$x = 1, y = 1$
 
 \begin{proof}
-
+$z = 6$
 \end{proof}
 
+{\bf \cy Find the values of $a$ and $e$ after execution of the loops in 4 and 5 by first making trace tables for them.}
+
 \subsection{Exercise 4}
+\begin{tabbing}
+$a \coloneqq 2$ \\
+{\bf for} \= $i \coloneqq 1$ {\bf to} 3 \\
+          \> $a \coloneqq 3a + 1$ \\
+{\bf next} $i$
+\end{tabbing}
 
 \begin{proof}
-
+After execution: $a = 67$
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$i$ & 0 & 1 & 2 & 3 \\
+\hline
+$a$ & 2 & 7 & 22 & 67 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 5}
+\begin{tabbing}
+$e \coloneqq 2, f \coloneqq 0$ \\
+{\bf for} \= $k \coloneqq 1$ {\bf to} 3 \\
+          \> $e \coloneqq e \cdot k $ \\
+          \> $f \coloneqq e + f$ \\
+{\bf next} $k$
+\end{tabbing}
 
 \begin{proof}
-
+After execution: $e = 12$
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$k$ & 0 & 1 & 2 & 3 \\
+\hline
+$f$ & 0 & 2 & 6 & 18 \\
+\hline
+$e$ & 2 & 2 & 4 & 12 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
+{\bf \cy Make a trace table to trace the action of algorithm 4.10.1 for the input variables given in 6 and 7.}
+
 \subsection{Exercise 6}
+$a = 26, d = 7$
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & \multicolumn{4}{c|}{{\bf \cy Iteration number}} \\
+\hline
+ & 0 & 1 & 2 & 3 \\
+\hline
+$a$ & 26 &  &  &  \\
+\hline
+$d$ & 7 &  &  &  \\
+\hline
+$q$ & 0 & 1 & 2 & 3 \\
+\hline
+$r$ & 26 & 19 & 12 & 5 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 7}
+$a = 59, d = 13$
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{5}{c|}{{\bf \cy Iteration number}} \\
+\hline
+ & 0 & 1 & 2 & 3 & 4 \\
+\hline
+$a$ & 59 &  &  & & \\
+\hline
+$d$ & 13 &  &  & & \\
+\hline
+$q$ & 0 & 1 & 2 & 3 & 4 \\
+\hline
+$r$ & 59 & 46 & 33 & 20 & 7 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 8}
-
+The following algorithm segment makes change; given an amount of money $A$ between 1¢ and 99¢, it determines a breakdown of $A$ into quarters ($q$), dimes ($d$), nickels ($n$), and pennies ($p$).
+\[
+\begin{array}{rcl}
+q & \coloneqq & A \,\, div \,\, 25 \\
+A & \coloneqq & A \,\, mod \,\, 25 \\
+d & \coloneqq & A \,\, div \,\, 10 \\
+A & \coloneqq & A \,\, mod \,\, 10 \\
+n & \coloneqq & A \,\, div \,\, 5 \\
+p & \coloneqq & A \,\, mod \,\, 5
+\end{array}
+\]
 \subsubsection{(a)}
+Trace this algorithm segment for $A = 69$.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$A$ & 69 & 19 & 9 &  \\
+\hline
+$q$ & 2 &  &  & \\
+\hline
+$d$ &  & 1 &  & \\
+\hline
+$n$ &  &  & 1 &  \\
+\hline
+$p$ &  &  & & 4 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsubsection{(b)}
+Trace this algorithm segment for $A = 87$.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$A$ & 87 & 12 & 2 &  \\
+\hline
+$q$ & 3 &  &  & \\
+\hline
+$d$ &  & 1 &  & \\
+\hline
+$n$ &  &  & 0 &  \\
+\hline
+$p$ &  &  & & 2 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
+{\bf \cy Find the greatest common divisor of each of the pairs of integers in $9-12$. (Use any method you wish.)}
+
 \subsection{Exercise 9}
+27 and 72
 
 \begin{proof}
-
+gcd(27, 72) = 9
 \end{proof}
 
 \subsection{Exercise 10}
+5 and 9
 
 \begin{proof}
-
+gcd(5, 9) = 1
 \end{proof}
 
 \subsection{Exercise 11}
+7 and 21
 
 \begin{proof}
-
+gcd(7, 21) = 7
 \end{proof}
 
 \subsection{Exercise 12}
+48 and 54
 
 \begin{proof}
-
+gcd(48, 54) = 6
 \end{proof}
 
+{\bf \cy Use the Euclidean algorithm to hand-calculate the greatest common divisors of each of the pairs of integers in $13-16$.}
+
 \subsection{Exercise 13}
+1,188 and 385
 
 \begin{proof}
-
+Divide the larger number, 1,188, by the smaller, 385, to obtain a quotient of 3 and a remainder of 33. Next divide 385 by 33 to obtain a quotient of 11 and a remainder of 22. Then divide 33 by 22 to obtain a quotient of 1 and a remainder of 11. Finally, divide 22 by 11 to obtain a quotient of 2 and a remainder of 0. Thus, by Lemma 4.10.2, gcd(1188, 385) = gcd(385, 33) = gcd(33, 22) = gcd(22, 11) = gcd(11, 0), and by Lemma 4.10.1, gcd(11, 0) = 11. So gcd(1188, 385) = 11.
 \end{proof}
 
 \subsection{Exercise 14}
+509 and 1,177
 
 \begin{proof}
-
+Divide the larger number, 1,177, by the smaller, 509, to obtain a quotient of 2 and a remainder of 159. Next divide 509 by 159 to obtain a quotient of 3 and a remainder of 32. Next divide 159 by 32 to obtain a quotient of 4 and a remainder of 31. Then divide 32 by 31 to obtain a quotient of 1 and a remainder of 1. Finally, divide 31 by 1 to obtain a quotient of 31 and a remainder of 0. Thus, by Lemma 4.10.2, gcd(1177, 509) = gcd(509, 159) = gcd(159, 32) = gcd(32, 31) = gcd(31, 1) = gcd(1, 0), and by Lemma 4.10.1, gcd(1, 0) = 1. So gcd(1177, 509) = 1.
 \end{proof}
 
 \subsection{Exercise 15}
+832 and 10,933
 
 \begin{proof}
+Divide the larger number, 10,933, by the smaller, 832, to obtain a quotient of 13 and a remainder of 117. Next divide 832 by 117 to obtain a quotient of 7 and a remainder of 13. Next divide 117 by 13 to obtain a quotient of 9 and a remainder of 0. Thus, by Lemma 4.10.2, gcd(10933, 832) = gcd(832, 117) = gcd(117, 13) = 13. So gcd(10933, 832) = 13.
 
+Indeed, $10933 = 13 \cdot 841$ and $832 = 13 \cdot 64 = 13 \cdot 2^6$, and gcd$(2^6, 841) = 1$ since 841 is odd.
 \end{proof}
 
 \subsection{Exercise 16}
+4,131 and 2,431
 
 \begin{proof}
+Divide the larger number, 4,131, by the smaller, 2,431, to obtain a quotient of 1 and a remainder of 1700. Next divide 2431 by 1700 to obtain a quotient of 1 and a remainder of 731. Next divide 1700 by 731 to obtain a quotient of 2 and a remainder of 238. Next divide 731 by 238 to obtain a quotient of 3 and a remainder of 17. Next divide 238 by 17 to obtain a quotient of 14 and a remainder of 0. Thus, by Lemma 4.10.2, gcd(4131, 2431) = gcd(2431, 1700) = gcd(1700, 731) = gcd(731, 238) = gcd(238, 17) = 17. So gcd(4131, 2431) = 17.
 
+Indeed, $4131 = 17 \cdot 243 = 17 \cdot 3^5$ and $2431 = 17 \cdot 143 = 17 \cdot 11 \cdot 13$, and gcd$(3^5, 143) = 0$ since $143$ is not divisible by 3.
 \end{proof}
 
+{\bf \cy Make a trace table to trace the action of algorithm 4.10.2 for the input variables given in $17-19$.}
+
 \subsection{Exercise 17}
+1,001 and 871
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$A$ &1001 &     &    &    &    & \\
+\hline
+$B$ & 871 &     &    &    &    & \\
+\hline
+$r$ &     & 130 & 91 & 39 & 13 & 0 \\
+\hline
+$b$ & 871 & 130 & 91 & 39 & 13 & 0 \\
+\hline
+$a$ &1001 & 871 & 130& 91 & 39 & 13 \\
+\hline
+gcd &     &     &    &    &    & 13 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 18}
+5,859 and 1,232
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$A$ &1001 &     &    &    &    & \\
+\hline
+$B$ & 871 &     &    &    &    & \\
+\hline
+$r$ &     & 130 & 91 & 39 & 13 & 0 \\
+\hline
+$b$ & 871 & 130 & 91 & 39 & 13 & 0 \\
+\hline
+$a$ &1001 & 871 & 130& 91 & 39 & 13 \\
+\hline
+gcd &     &     &    &    &    & 13 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 19}
+1,570 and 488
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$A$ &1001 &     &    &    &    & \\
+\hline
+$B$ & 871 &     &    &    &    & \\
+\hline
+$r$ &     & 130 & 91 & 39 & 13 & 0 \\
+\hline
+$b$ & 871 & 130 & 91 & 39 & 13 & 0 \\
+\hline
+$a$ &1001 & 871 & 130& 91 & 39 & 13 \\
+\hline
+gcd &     &     &    &    &    & 13 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Definition:} Integers $a$ and $b$ are said to be {\bf relatively prime} if, and only if, their greatest common divisor is 1.
+\end{tcolorbox}
+
+{\bf \cy In 20 and 21 trace the action of algorithm 4.10.2 to determine whether the integers are relatively prime.}
+
 \subsection{Exercise 20}
+4,617 and 2,563
 
 \begin{proof}
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$A$ &4,617&     &     &    &    &   &   &   &   \\
+\hline
+$B$ &2,563&     &     &    &    &   &   &   &   \\
+\hline
+$a$ &4,617&2,563&2,054& 509& 18 & 5 & 3 & 2 & 1 \\
+\hline
+$b$ &2,563&2,054& 509 & 18 & 5  & 3 & 2 & 1 & 0 \\
+\hline
+$r$ &2,563&2,054& 509 & 18 & 5  & 3 & 2 & 1 & 0 \\
+\hline
+gcd &     &     &     &    &    &   &   &   & 1 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 
+The table shows that the greatest common divisor of 4,617 and 2,563 is 1, and so these integers are relatively prime.
 \end{proof}
 
 \subsection{Exercise 21}
+34,391 and 6,728
 
 \begin{proof}
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+$A$ &34391&     &     &    &    &   &   &    \\
+\hline
+$B$ &6,728&     &     &    &    &   &   &    \\
+\hline
+$a$ &34391&6,728& 751 & 720& 31 & 7 & 3 & 1  \\
+\hline
+$b$ &6,728& 751 & 720 & 31 & 7  & 3 & 1 & 0  \\
+\hline
+$r$ &6,728& 751 & 720 & 31 & 7  & 3 & 1 & 0  \\
+\hline
+gcd &     &     &     &    &    &   &   & 1  \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 
+The table shows that the greatest common divisor of 34,391 and 6,728 is 1, and so these integers are relatively prime.
 \end{proof}
 
 \subsection{Exercise 22}
+Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only if, gcd$(a, b) = a$. (Note that to prove “$A$ if, and only if, $B$,” you need to prove “if $A$ then $B$” and “if $B$ then $A$.”)
 
 \begin{proof}
+We divide the proof into two parts: “if $A$ then $B$”, and “if $B$ then $A$.”
 
+1) Suppose $a$ and $b$ are any positive integers such that $a\mid b$. {\it [We want to show that gcd$(a, b) = a$}. To do this, note that because it is also the case that $a \mid a$, $a$ is a common divisor of $a$ and $b$. Thus, by definition of greatest common divisor, $a \leq gcd(a, b)$. Since gcd$(a,b)$ divides $a$, we have $a \geq gcd(a, b)$ by Theorem 4.4.1. Therefore $a = gcd(a,b)$.
+
+2) Suppose $a$ and $b$ are positive integers such that gcd$(a, b) = a$. By definition of greatest common divisor, $a$ divides both $a$ and $b$. In particular, $a \mid b$.
 \end{proof}
 
 \subsection{Exercise 23}
-
 \subsubsection{(a)}
+Prove that if $a$ and $b$ are integers, not both zero, and $d = \text{gcd}(a, b)$, then $a/d$ and $b/d$ are integers with no common divisor that is greater than 1.
 
 \begin{proof}
+By definition of greatest common divisor, $d \mid a$ and $d \mid b$, therefore $a/d$ and $b/d$ are integers.
 
+Argue by contradiction and assume that $a/d$ and $b/d$ have a common divisor $e > 1$. Then $de$ is a common divisor of $a$ and $b$, and since $e > 1$ we have $de > d$, contradicting the fact that $d$ is the {\it greatest} common divisor of $a$ and $b$.
 \end{proof}
 
 \subsubsection{(b)}
+Write an algorithm that accepts the numerator and denominator of a fraction as input and produces as output the numerator and denominator of that fraction written in lowest terms. (The algorithm may call upon the Euclidean algorithm as needed.)
 
 \begin{proof}
+Algorithm goes like this:
 
+1) Take the inputs $a$ and $b$ that are the numerator and the denominator of a fraction. So $b \neq 0$, therefore $a$ and $b$ are not both zero.
+
+2) Use the Euclidean algorithm to find $d = gcd(a,b)$.
+
+3) Calculate $a/d$ and $b/d$ by division. By part (a), $a/d$ and $b/d$ do not have any common divisor greater than 1. Therefore $\dps\frac{a}{b} = \frac{a/d}{b/d}$ is written in lowest terms.
 \end{proof}
 
 \subsection{Exercise 24}
+Complete the proof of Lemma 4.10.2 by proving the following: If $a$ and $b$ are any integers with $b \neq 0$ and $q$ and $r$ are any integers such that $a = bq + r$.
+then gcd$(b, r) \leq$ gcd$(a, b)$.
 
 \begin{proof}
+Assume $a$ and $b$ are any integers with $b \neq 0$ and $q$ and $r$ are any integers such that $a = bq + r$. Let $d = gcd(b,r)$.
 
+By definition of gcd, $d \mid b$ and $d \mid r$. By definition of divides, $b = sd$ and $r = td$ for some integers $s, t$. Then $a = bq+r = sdq + td = d(sq + t)$ so $d \mid a$. 
+
+So $d$ is a common divisor of $a$ and $b$. Then by definition of gcd, $d \leq gcd(a,b)$.
 \end{proof}
 
 \subsection{Exercise 25}
-
 \subsubsection{(a)}
+Prove: If $a$ and $d$ are positive integers and $q$ and $r$ are integers such that $a = dq + r$ and $0 < r < d$, then
+$-a = d(-(q + 1)) + (d - r)$ and $0 < d - r < d$.
 
 \begin{proof}
-
+Assume $a$ and $d$ are positive integers and $q$ and $r$ are integers such that $a = dq + r$ and $0 < r < d$. Then
+\[
+-a = -(dq+r) = -dq-r = -d(q+1-1)-r = -d(q+1) -(-d) - r = -d(q+1) + d - r.
+\]
+Since $0 < r < d$, multiplying by $-1$ we get $0 > -r > -d$. Adding $d$ we get $d > d-r > d-d$. In other words, $0 < d-r < d$.
 \end{proof}
 
 \subsubsection{(b)}
+Indicate how to modify Algorithm 4.10.1 to allow for the input $a$ to be negative.
 
 \begin{proof}
+When the input $a$ is negative, the algorithm promises to produce a nonpositive quotient $q'$ and a nonnegative remainder $r'$ such that $a = dq' + r'$ where $0 \leq r' < d$.
 
+Assume $a$ is negative.
+
+First run the usual algorithm on $-a$, which is positive. This gives us $-a = dq + r$ where $q,r$ are nonnegative integers and $0 \leq r < d$. 
+
+Now if $r = 0$ then $-a = dq$, so $a = d(-q)$ Let $q' = -q$ and $r' = 0$. Then $q'$ is nonpositive and $r'$ is nonnegative with $0 \leq r' < d$ as needed.
+
+If $r > 0$ then by part (a) (applied to $-a$ instead of $a$) we have $a = d(-(q + 1)) + (d - r)$ and $0 < d - r < d$. Let $q' = -(q+1)$ and let $r' = d-r$. Then $a = dq' + r'$ where $q'$ is nonpositive, $r'$ is nonnegative and $0 < r' < d$ as needed.
 \end{proof}
 
 \subsection{Exercise 26}
-
 \subsubsection{(a)}
+Prove that if $a, d, q$, and $r$ are integers such that $a = dq + r$ and $0 \leq r < d$, then $q = \floor{a/d}$ and $r = a - \floor{a/d} \cdot d$.
 
 \begin{proof}
-
+Suppose $a, d, q$, and $r$ are integers such that $a = dq + r$ and $0 \leq r < d$. {\it [We must show that $q = \floor{\frac{a}{d}}$ and $r = a - d\floor{\frac{a}{d}}$.]} Solving $a = dq + r$ for $r$ gives $r = a - dq$, and substituting into $0 \leq r < d$ gives $0 \leq a - dq < d$. Add $dq$ to both sides to obtain $dq \leq a < d + dq = d(q + 1)$. Then divide through by a $d$ to obtain $q \leq \frac{a}{d} < q + 1$. Therefore, by definition of a floor, $\floor{\frac{a}{d}} = q$. Finally, substitution into $a = dq + r$ gives $a = d \floor{\frac{a}{d}} + r$, and subtracting $d\floor{\frac{a}{d}}$ from both sides yields $r = a - d\floor{\frac{a}{d}}$, {\it [as was to be shown].}
 \end{proof}
 
 \subsubsection{(b)}
+In a computer language with a built-in-floor function, div and mod can be calculated as follows: $a$ $div$ $d = \floor{a/d}$ and $a \mod d = a - \floor{a/d} \cdot d$. Rewrite the steps of Algorithm 4.10.2 for a computer language with a built-in floor function but without div and mod.
 
 \begin{proof}
+{\bf \cy Input:} $A, B$ {\it [integers with $A > B \geq 0$]}
 
+{\bf \cy Algorithm Body:}
+\begin{tabbing}
+$a \coloneqq A, b \coloneqq B, r \coloneqq B$ \\
+{\bf whi}\={\bf le} $(b \neq 0)$ \\
+         \>$r \coloneqq a - \floor{a/b}\cdot b$ \\
+         \>$a \coloneqq b$ \\
+         \>$b \coloneqq r$ \\
+{\bf end while} \\
+gcd $\coloneqq a$
+\end{tabbing}
 \end{proof}
 
 \subsection{Exercise 27}
+An alternative to the Euclidean algorithm uses subtraction rather than division to compute greatest common divisors. (After all, division is repeated subtraction.) 
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm 4.10.3 Computing gcd’s by Subtraction} 
+
+{\it [Given two positive integers $A$ and $B$, variables $a$ and $b$ are set equal to $A$ and $B$. Then a repetitive process begins. If $a \neq 0$, and $b \neq 0$, then the larger of $a$ and $b$ is set equal to $a - b$ (if $a \geq b$) or to $b - a$ (if $a < b$), and the smaller of $a$ and $b$ is left unchanged. This process is repeated over and over until eventually $a$ or $b$ becomes 0. By Lemma 4.10.3, after each repetition of the process,}
+\[
+\text{gcd}(A, B) = \text{gcd}(a, b).
+\]
+{\it After the last repetition,}
+\[
+\text{gcd}(A, B) = \text{gcd}(a, 0) \textit{ or } \text{gcd}(A, B) = \text{gcd}(0, b)
+\]
+{\it depending on whether $a$ or $b$ is nonzero. But by Lemma 4.10.1,}
+\[
+\text{gcd}(a, 0) = a \textit{ and } \text{gcd}(0, b) = b.
+\]
+{\it Hence, after the last repetition,}
+\[
+\text{gcd}(A,B) = a \textit{ if } a \neq 0 \textit{ or } \text{gcd}(A,B) = b \textit{ if } b \neq 0. \textit{]}
+\]
+{\bf Input:} $A, B$ {\it[positive integers]}
+\begin{tabbing}
+{\bf Alg}\={\bf orithm Body:} \\
+         \> $a \coloneqq A, b \coloneqq B$ \\
+         \> {\bf wh}\={\bf ile} ($a \neq 0$ and $b \neq 0$) \\
+         \>          \> {\bf if} $a$ \= $\geq b$ {\bf then} $a \coloneqq a - b$ \\
+         \>          \>             \> {\bf else} $b \coloneqq b - a$ \\
+         \> {\bf end while} \\
+         \> {\bf if} \= $a = 0$ {\bf then} gcd $\coloneqq b$ \\
+         \>             \> {\bf else} gcd $\coloneqq a$ \\
+         \> {\it [After the execution of the} {\bf if-then-else} {\it statement,} gcd = gcd$(A,B).${\it]} \\
+{\bf Output:} gcd {\it [a positive integer]}
+\end{tabbing}
+\end{tcolorbox}
+
+It is based on the following lemma:
+
+{\bf Lemma 4.10.3} If $a \geq b > 0$, then gcd$(a, b) =$ gcd$(b, a - b)$.
 
 \subsubsection{(a)}
+Prove Lemma 4.10.3.
 
 \begin{proof}
+Let $d = gcd(a,b)$. By definition, $d \mid a$ and $d \mid b$. So $a = ds$ and $b = dt$ for some integers $t,s$. Then $a-b = ds - dt = d(s-t)$ where $s-t$ is an integer. So $d \mid (a-b)$. So $d$ divides both $b$ and $a-b$. So by definition of greatest common divisor, $d \leq gcd(b, a-b)$, or in other words, $gcd(a,b) \leq gcd(b, a-b)$.
 
+Let $e = gcd(b,a-b)$. By definition, $e \mid b$ and $e \mid a-b$. So $b = eu$ and $a-b = ev$ for some integers $u,v$. Then $a = b + a-b = eu + ev = e(u+v)$ where $u+v$ is an integer. So $e \mid a$. So $e$ divides both $a$ and $b$. So by definition of greatest common divisor, $e \leq gcd(a,b)$, or in other words, $gcd(b, a-b) \leq gcd(a,b)$.
+
+Since $gcd(a,b) \leq gcd(b, a-b)$ and $gcd(b, a-b) \leq gcd(a,b)$, we have $gcd(b, a-b) = gcd(a,b)$.
 \end{proof}
 
 \subsubsection{(b)}
+Trace the execution of Algorithm 4.10.3 for $A = 630$ and $B = 336$.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+    & \multicolumn{10}{c|}{{\bf \cy Iteration number}} \\
+\hline
+    & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+$a$ &630&294&294&252&210&168&126& 84& 42& 0 \\
+\hline
+$b$ &336&336& 42& 42& 42& 42& 42& 42& 42& 42\\
+\hline
+gcd &   &   &   &   &   &   &   &   &   & 42\\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
 
 \subsubsection{(c)}
+Trace the execution of Algorithm 4.10.3 for $A = 768$ and $B = 348$.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+    & \multicolumn{13}{c|}{{\bf \cy Iteration number}} \\
+\hline
+    & 0 & 1 & 2 & 3 & 4 & 5 &6 &7 &8 &9 &10&11&12 \\
+\hline
+$a$ &768&420& 72& 72& 72& 72&72&12&12&12&12&12&0  \\
+\hline
+$b$ &348&348&348&276&204&132&60&60&48&36&24&12&12 \\
+\hline
+gcd &   &   &   &   &   &   &  &  &  &  &  &  &12 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
+\end{center}
 \end{proof}
+
+{\bf \cy Exercises $28-32$ refer to the following definition.}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Definition:} The {\bf least common multiple} of two nonzero integers $a$ and $b$, denoted {\bf lcm}$(a, b)$, is the positive integer $c$ such that
+
+a. $a \mid c$ and $b \mid c$
+
+b. for all integers $m$, if $a \mid m$ and $b \mid m$ then $c \leq m$.
+\end{tcolorbox}
 
 \subsection{Exercise 28}
+Find
 
 \subsubsection{(a)}
+lcm(12, 18)
 
 \begin{proof}
-
+lcm(12, 18) = 36
 \end{proof}
 
 \subsubsection{(b)}
+lcm$(2^2 \cdot 3 \cdot 5, 2^3 \cdot 3^2)$
 
 \begin{proof}
-
+lcm$(2^2 \cdot 3 \cdot 5, 2^3 \cdot 3^2) = 2^3\cdot 3^2 \cdot 5 = 360$
 \end{proof}
 
 \subsubsection{(c)}
+lcm(2800, 6125)
 
 \begin{proof}
-
+$lcm(2800, 6125) = lcm(2^4 \cdot 5^2 \cdot 7, 5^3 \cdot 7^2) = 2^4 \cdot 5^3 \cdot 7^2 = 98000$
 \end{proof}
 
 \subsection{Exercise 29}
+Prove that for all positive integers $a$ and $b$, gcd$(a, b) =$ lcm$(a, b)$ if, and only if, $a = b$.
 
 \begin{proof}
+An ``if, and only if'' statement is proved in two parts.
 
+Part 1: Let $a$ and $b$ be positive integers, and suppose $d = gcd(a, b) = lcm(a, b)$. By definition of greatest common divisor and least common multiple, $d > 0, d \mid a, d\mid b, a\mid d$, and $b \mid d$. Thus, in particular, $a = dm$ and $d = an$ for some integers $m$ and $n$. By substitution, $a = dm = (an)m = anm$. Dividing both sides by a gives $1 = nm$. But the only divisors of 1 are 1 and $-1$ (Theorem 4.4.2), and so $m = n = \pm 1$. Since both $a$ and $d$ are positive, $m = n = 1$, and hence $a = d$. Similar reasoning shows that $b = d$ also, and so $a = b$.
+
+Part 2: Given any positive integers $a$ and $b$ such that $a = b$, we have $gcd(a, b) = gcd(a, a) = a$ and $lcm(a, b) = lcm(a, a) = a$, and hence $gcd(a, b) = lcm(a, b)$.
 \end{proof}
 
 \subsection{Exercise 30}
+Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only if, lcm$(a, b) = b$.
 
 \begin{proof}
+Assume $a \mid b$. By definition of divides, $b = ac$ for some integer $c$. So $ac$ is a common multiple of $a$ and $b$, because it's equal to $c$ times $a$, and 1 times $b$. By definition of the least common multiple, lcm$(a,b) \leq ac = b$. But also by definition of least common multiple we have $b \leq lcm(a,b)$ (because lcm$(a,b)$ is among $b, 2b, 3b, \ldots$). Therefore lcm$(a,b) = b$.
 
+Assume lcm$(a, b) = b$. By definition of least common multiple, lcm$(a, b)$ is a multiple of $a$. So lcm$(a, b) = ac$ for some integer $c$. Therefore $ac = b$ for some integer $c$. By definition of divides, $a \mid b$.
 \end{proof}
 
 \subsection{Exercise 31}
+Prove that for all integers $a$ and $b$, gcd$(a, b) \mid$ lcm$(a, b).$
 
 \begin{proof}
+By definition of gcd, gcd$(a, b) \mid a$. So by definition of divides, $a = c \cdot gcd(a, b)$ for some integer $c$.
 
+By definition of lcm, lcm$(a, b) = ae$ for some integer $e$.
+
+By algebra, lcm$(a, b) = ae = ce \cdot gcd(a,b)$. So by definition of divides, gcd$(a, b) \mid$ lcm$(a, b).$
 \end{proof}
 
 \subsection{Exercise 32}
+Prove that for all positive integers $a$ and $b$, gcd$(a, b)$ $\cdot$ lcm$(a, b) = ab$.
 
 \begin{proof}
+Let $g = gcd(a,b)$ and $l = lcm(a,b)$. {\it [Want to show $lg = ab$.]} First we will show $lg \leq ab$.
 
+By definition of gcd, $g \mid a$ and $g \mid b$. So $a = gm$ and $b = gn$ for some integers $m,n$. So $\dps\frac{ab}{g} = \frac{(gm)(gn)}{g} = gmn$. 
+
+Notice that $gmn = an$ and $gmn = bm$. So $gmn$ is a common multiple of $a$ and $b$. Then $\dps\frac{ab}{g}$ is a common multiple of $a$ and $b$. So by definition of lcm, $l \leq \dps\frac{ab}{g}$ and therefore $lg \leq ab$.
+
+Now we want to show $ab \leq lg$. By definition of lcm, $l = ac = bd$ for some integers $c,d$. 
+
+So $\dps\frac{ab}{l} = \frac{ab}{ac} = \frac{b}{c}$ and $\dps\frac{ab}{l} = \frac{ab}{bd} = \frac{a}{d}$. Therefore $\dps\frac{ab}{l} \cdot c = b$ and $\dps\frac{ab}{l} \cdot d = a$. 
+
+So $\dps\frac{ab}{l}$ divides both $a$ and $b$, hence is a common divisor of $a$ and $b$. Then by definition of gcd, $\dps\frac{ab}{l} \leq g$, so $ab \leq lg$. Therefore $ab = lg$.
 \end{proof}
 
 \end{document}
