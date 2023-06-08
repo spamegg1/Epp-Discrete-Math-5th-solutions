@@ -1,0 +1,1009 @@
+\documentclass[14pt]{extarticle}
+
+\usepackage[table]{xcolor}
+\usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref,wasysym,pifont}
+\usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel,tcolorbox}
+
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\dps}{\displaystyle}
+\newcommand{\fbl}{\underline{\hspace{1cm}}\,\,}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\from}{\leftarrow}
+\newcommand{\true}{{\bf t}}
+\newcommand{\false}{{\bf c}}
+\newcommand{\bic}{\leftrightarrow}
+\newcommand{\base}[1]{{\color{cyan}#1}}
+\newcommand{\floor}[1]{{\left\lfloor#1\right\rfloor}}
+\newcommand{\ceil}[1]{{\lceil#1\rceil}}
+\newcommand{\da}{\downarrow}
+\newcommand{\fa}{\forall}
+\newcommand{\te}{\exists}
+\newcommand{\cy}{\color{cyan}}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
+
+\hypersetup{colorlinks,allcolors=blue,linktoc=all}
+\geometry{a4paper}
+\geometry{margin=0.42in}
+
+\title{Chapter 5 Solutions, Susanna Epp Discrete Math 5th Edition}
+
+\author{https://github.com/spamegg1}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Exercise Set 5.1}
+
+{\bf \cy Write the first four terms of the sequences defined by the formulas in $1-6$.}
+
+\subsection{Exercise 1}
+$\dps a_k  = \frac{k}{10 + k}$, for every integer $k \geq 1$.
+
+\begin{proof}
+$\dps\frac{1}{11}, \frac{2}{12}, \frac{3}{13}, \frac{4}{14}$
+\end{proof}
+
+\subsection{Exercise 2}
+$\dps b_j  = \frac{5-j}{5+j}$, for every integer $j \geq 1$.
+
+\begin{proof}
+$\dps\frac{4}{6}, \frac{3}{7}, \frac{2}{8}, \frac{1}{9}$
+\end{proof}
+
+\subsection{Exercise 3}
+$\dps c_i  = \frac{(-1)^i}{3^i}$, for every integer $i \geq 0$.
+
+\begin{proof}
+$\dps 1, -\frac{1}{3}, \frac{1}{9}, -\frac{1}{27}$
+\end{proof}
+
+\subsection{Exercise 4}
+$\dps d_m  = 1 + \left(\frac{1}{2}\right)^m$, for every integer $m \geq 0$.
+
+\begin{proof}
+$\dps 2, \frac{3}{2}, \frac{5}{4}, \frac{9}{8}$
+\end{proof}
+
+\subsection{Exercise 5}
+$\dps e_n  = \floor{\frac{n}{2}}\cdot 2$, for every integer $n \geq 0$.
+
+\begin{proof}
+$0, 0, 2, 2$
+\end{proof}
+
+\subsection{Exercise 6}
+$\dps f_n  = \floor{\frac{n}{4}}\cdot 4$, for every integer $n \geq 1$.
+
+\begin{proof}
+0, 0, 0, 4
+\end{proof}
+
+\subsection{Exercise 7}
+Let $a_k = 2k + 1$ and $b_k = (k - 1)^3 + k + 2$ for every integer $k \geq 0$. Show that the first three terms of these sequences are identical but that their fourth terms differ.
+
+\begin{proof}
+$a_0 = 2(0) + 1 = 1, a_1 = 2(1) + 1 = 3, a_2 = 2(2) + 1 = 5, a_3 = 2(3) + 1 = 7$.
+
+$b_0 = (0-1)^3 + 0 + 2 = 1, b_1 = (1-1)^3 + 1 + 2 = 3, b_2 = (2-1)^3 + 2 + 2 = 5, b_3 = (3-1)^3 + 3 + 2 = 13.$
+\end{proof}
+
+{\bf\cy Compute the first fifteen terms of each of the sequences in 8 and 9, and describe the general behavior of these sequences in words. (a definition of logarithm is given in Section 7.1.)}
+
+\subsection{Exercise 8}
+$g_n = \floor{\log_2 n}$ for every integer $n \geq 1$.
+
+\begin{proof}
+$g_1 = \floor{\log_2 1} = 0, g_2 = \floor{\log_2 2} = 1, g_3 = \floor{\log_2 3} = 1, g_4 = \floor{\log_2 4} = 2$,
+
+$g_5 = \floor{\log_2 5} = 2, g_6 = \floor{\log_2 6} = 2, g_7 = \floor{\log_2 7} = 2, g_8 = \floor{\log_2 8} = 3$, 
+
+$g_9 = \floor{\log_2 9} = 3, g_{10} = \floor{\log_2 10} = 3, g_{11} = \floor{\log_2 11} = 3, g_{12} = \floor{\log_2 12} = 3$, 
+
+$g_{13} = \floor{\log_2 13} = 3, g_{14} = \floor{\log_2 14} = 3, g_{15} = \floor{\log_2 15} = 3$.
+
+When $n$ is an integral power of 2, $g_n$ is the exponent of that power. For instance, $8 = 2^3$ and $g_8 = 3$. More generally, if $n = 2k$, where $k$ is an integer, then $g_n = k$. All terms of the sequence from $g_{2^k}$ up to, but not including, $g_{2^{k+1}}$ have the same value, namely $k$. For instance, all terms of the sequence from $g_8$ through $g_{15}$ have the value 3.
+\end{proof}
+
+\subsection{Exercise 9}
+$h_n = n\floor{\log_2 n}$ for every integer $n \geq 1$.
+
+\begin{proof}
+$h_1 = 1\floor{\log_2 1} = 0, h_2 = 2\floor{\log_2 2} = 2, h_3 = 3\floor{\log_2 3} = 3, h_4 = 4\floor{\log_2 4} = 8$,
+
+$h_5 = 5\floor{\log_2 5} = 10, h_6 = 6\floor{\log_2 6} = 12, h_7 = 7\floor{\log_2 7} = 14, h_8 = 8\floor{\log_2 8} = 24$, 
+
+$h_9 = 9\floor{\log_2 9} = 27, h_{10} = 10\floor{\log_2 10} = 30, h_{11} = 11\floor{\log_2 11} = 33$, 
+
+$h_{12} = 12\floor{\log_2 12} = 36, h_{13} = 13\floor{\log_2 13} = 39, h_{14} = 14\floor{\log_2 14} = 42,$ 
+
+$h_{15} = 15\floor{\log_2 15} = 45$.
+\end{proof}
+
+{\bf\cy Find explicit formulas for sequences of the form $a_1, a_2, a_3, \ldots$ with the initial terms given in $10-16$.}
+
+{\bf\cy Exercises $10-16$ have more than one correct answer.}
+
+\subsection{Exercise 10}
+$-1, 1, -1, 1, -1, 1$
+
+\begin{proof}
+$a_n = (-1)^n$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 11}
+$0, 1, -2, 3, -4, 5$
+
+\begin{proof}
+$a_n = (n-1)(-1)^n$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 12}
+$\dps \frac{1}{4}, \frac{2}{9}, \frac{3}{16}, \frac{4}{25}, \frac{5}{36}, \frac{6}{49}$
+
+\begin{proof}
+$\dps a_n = \frac{n}{(n+1)^2}$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 13}
+$\dps 1 - \frac{1}{2}, \frac{1}{2} - \frac{1}{3}, \frac{1}{3} - \frac{1}{4}, \frac{1}{4} - \frac{1}{5}, \frac{1}{5} - \frac{1}{6}, \frac{1}{6} - \frac{1}{7}$
+
+\begin{proof}
+$\dps a_n = \frac{1}{n} - \frac{1}{n+1}$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 14}
+$\dps \frac{1}{3}, \frac{4}{9}, \frac{9}{27}, \frac{16}{81}, \frac{25}{243}, \frac{36}{729}$
+
+\begin{proof}
+$\dps a_n = \frac{n^2}{3^n}$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 15}
+$\dps 0, -\frac{1}{2}, \frac{2}{3}, -\frac{3}{4}, \frac{4}{5}, -\frac{5}{6}, \frac{6}{7}$
+
+\begin{proof}
+$\dps a_n = \frac{n-1}{n}\cdot(-1)^{n-1}$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 16}
+3, 6, 12, 24, 48, 96
+
+\begin{proof}
+$\dps a_n = 3\cdot 2^{n-1}$, where $n$ is an integer and $n \geq 1$
+\end{proof}
+
+\subsection{Exercise 17}
+Consider the sequence defined by $\dps a_n = \frac{2n + (-1)^n - 1}{4}$ for every integer $n \geq 0$. Find an alternative explicit formula for an that uses the floor notation.
+
+\begin{proof}
+$a_0 = 0, a_1 = 0, a_2 = 1, a_3 = 1, a_4 = 2, a_5 = 2$. It seems to be following the pattern: $\dps a_n = \floor{\frac{n}{2}}$. Let's try to prove this. When $n$ is even, $n = 2k$ for some integer $k$, so we have
+\[
+a_n = a_{2k} = \frac{2(2k) + (-1)^{2k} - 1}{4} = \frac{4k + 1 - 1}{4} = \frac{4k}{4} = k = \frac{n}{2} = \floor{\frac{n}{2}}
+\]
+When $n$ is odd, $n = 2k+1$ for some integer $k$, so we have
+\[
+a_n = a_{2k+1} = \frac{2(2k+1) + (-1)^{2k+1} - 1}{4} = \frac{4k + 2 - 1 - 1}{4} = \frac{4k}{4} = k = \frac{n-1}{2} = \floor{\frac{n}{2}}
+\]
+So $\dps a_n = \floor{\frac{n}{2}}$ for all $n \geq 0$.
+\end{proof}
+
+\subsection{Exercise 18}
+Let $a_0 = 2, a_1 = 3, a_2 = -2, a_3 = 1, a_4 = 0, a_5 = -1$, and $a_6 = -2$. Compute each of the summations and products below.
+
+\subsubsection{(a)}
+$\dps\sum_{i=0}^{6}a_i$
+
+\begin{proof}
+$2 + 3 + (-2) + 1 + 0 + (-1) + (-2) = 1$
+
+\end{proof}
+
+\subsubsection{(b)}
+$\dps\sum_{i=0}^{0}a_i$
+
+\begin{proof}
+$a_0 = 2$
+\end{proof}
+
+\subsubsection{(c)}
+$\dps\sum_{j=1}^{3}a_{2j}$
+
+\begin{proof}
+$a_2 + a_4 + a_6 = -2 + 0 + (-2) = -4$
+\end{proof}
+
+\subsubsection{(d)}
+$\dps\prod_{k=0}^{6}a_k$
+
+\begin{proof}
+$2 \cdot 3 \cdot (-2) \cdot 1 \cdot 0 \cdot (-1) \cdot (-2) = 0$
+\end{proof}
+
+\subsubsection{(e)}
+$\dps\prod_{k=2}^{2}a_k$
+
+\begin{proof}
+
+\end{proof}
+
+{\bf\cy Compute the summations and products in $19-28$.}
+
+\subsection{Exercise 19}
+$\dps\sum_{k=1}^{5}(k+1)$
+
+\begin{proof}
+$2+3+4+5+6=20$
+\end{proof}
+
+\subsection{Exercise 20}
+$\dps\prod_{k=2}^{4}{k}^2$
+
+\begin{proof}
+$2^2\cdot 3^2\cdot 4^2 = 576$
+\end{proof}
+
+\subsection{Exercise 21}
+$\dps\sum_{k=1}^{3}(k^2+1)$
+
+\begin{proof}
+$(1^2+1) + (2^2+1) + (3^2+1) = 2+5+10 = 17$
+\end{proof}
+
+\subsection{Exercise 22}
+$\dps\prod_{j=0}^{4}{(-1)}^j$
+
+\begin{proof}
+$(-1)^0\cdot (-1)^1\cdot (-1)^2\cdot (-1)^3\cdot(-1)^4 = 1$
+\end{proof}
+
+\subsection{Exercise 23}
+$\dps\sum_{i=1}^{1}i(i+1)$
+
+\begin{proof}
+1(1+1) = 2
+\end{proof}
+
+\subsection{Exercise 24}
+$\dps\sum_{j=0}^{0}(j+1)\cdot2^j$
+
+\begin{proof}
+$(0+1)\cdot 2^0 = 1$
+\end{proof}
+
+\subsection{Exercise 25}
+$\dps\prod_{k=2}^{2}\left(1 - \frac{1}{k}\right)$
+
+\begin{proof}
+$(1 - 1/2) = 1/2$
+\end{proof}
+
+\subsection{Exercise 26}
+$\dps\sum_{k=-1}^{1}(k^2+3)$
+
+\begin{proof}
+$((-1)^2+3) + (0^2+3) + (1^2+3) = 11$
+\end{proof}
+
+\subsection{Exercise 27}
+$\dps\sum_{n=1}^{6}\left(\frac{1}{n} - \frac{1}{n+1}\right)$
+
+\begin{proof}
+$\dps \left(\frac{1}{1} - \Ccancel[cyan]{\frac{1}{2}}\right) + \left(\Ccancel[cyan]{\frac{1}{2}} - \Ccancel[red]{\frac{1}{3}}\right) + \left(\Ccancel[red]{\frac{1}{3}} - \Ccancel[green]{\frac{1}{4}}\right) + \left(\Ccancel[green]{\frac{1}{4}} - \Ccancel[magenta]{\frac{1}{5}}\right) + \left(\Ccancel[magenta]{\frac{1}{5}} - \Ccancel[black]{\frac{1}{6}}\right) + \left(\Ccancel[black]{\frac{1}{6}} - \frac{1}{7}\right)$
+
+$\dps = 1 - \frac{1}{7} = \frac{6}{7}$
+\end{proof}
+
+\subsection{Exercise 28}
+$\dps\prod_{i=2}^{5}\frac{i(i+2)}{(i-1)\cdot(i+1)}$
+
+\begin{proof}
+$\dps \frac{2(2+2)}{(2-1)(2+1)}\cdot\frac{3(3+2)}{(3-1)(3+1)}\cdot\frac{4(4+2)}{(4-1)(4+1)}\cdot\frac{5(5+2)}{(5-1)(5+1)}$
+
+$\dps = \frac{\Ccancel[cyan]{8}}{3}\cdot\frac{\Ccancel[red]{15}}{\Ccancel[cyan]{8}}\cdot\frac{\Ccancel[green]{24}}{\Ccancel[red]{15}}\cdot\frac{35}{\Ccancel[green]{24}}\cdot = \frac{35}{3}$
+\end{proof}
+
+{\bf\cy Write the summations in $29-32$ in expanded form.}
+
+\subsection{Exercise 29}
+$\dps\sum_{i=1}^{n}(-2)^i$
+
+\begin{proof}
+$(-2)^1 + (-2)^2 + (-2)^3 + \cdots + (-2)^n = -2 + 2^2 - 2^3 + \cdots + (-1)^n2^n$
+\end{proof}
+
+\subsection{Exercise 30}
+$\dps\sum_{j=1}^{n}j(j+1)$
+
+\begin{proof}
+$1\cdot2 + 2\cdot3 + 3\cdot4 + \cdots + n(n+1)$
+\end{proof}
+
+\subsection{Exercise 31}
+$\dps\sum_{k=0}^{n+1}\frac{1}{k!}$
+
+\begin{proof}
+$\dps\sum_{k=0}^{n+1}\frac{1}{k!} = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{(n+1)!}$
+\end{proof}
+
+\subsection{Exercise 32}
+$\dps\sum_{i=1}^{k+1}i(i!)$
+
+\begin{proof}
+$1(1!) + 2(2!) + 3(3!) + \cdots + (k+1)(k+1)!$
+\end{proof}
+
+{\bf\cy Evaluate the summations and products in $33-36$ for the indicated values of the variable.}
+
+\subsection{Exercise 33}
+$\dps \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \cdots + \frac{1}{n^2}$; $n = 1$
+
+\begin{proof}
+$\dps\frac{1}{1^2} = 1$
+\end{proof}
+
+\subsection{Exercise 34}
+$\dps 1(1!) + 2(2!) + 3(3!) + \cdots + m(m!)$; $m = 2$
+
+\begin{proof}
+$\dps 1(1!) + 2(2!) = 1 + 4 = 5$
+\end{proof}
+
+\subsection{Exercise 35}
+$\dps \left(\frac{1}{1+1}\right)\left(\frac{2}{2+1}\right)\left(\frac{3}{3+1}\right) \cdots \left(\frac{k}{k+1}\right)$; $k = 3$
+
+\begin{proof}
+$\dps \left(\frac{1}{1+1}\right)\left(\frac{2}{2+1}\right)\left(\frac{3}{3+1}\right) = \frac{1}{2}\frac{2}{3}\frac{3}{4} = \frac{1}{4}$
+\end{proof}
+
+\subsection{Exercise 36}
+$\dps \left(\frac{1\cdot2}{3\cdot4}\right)\left(\frac{2\cdot3}{4\cdot5}\right)\left(\frac{3\cdot4}{5\cdot6}\right)\cdots\left(\frac{m\cdot(m+1)}{(m+2)\cdot(m+3)}\right); m = 1$
+
+\begin{proof}
+$\dps \frac{1\cdot2}{3\cdot4} = \frac{3}{8}$
+\end{proof}
+
+{\bf\cy Write each of $37-39$ as a single summation.}
+
+\subsection{Exercise 37}
+$\dps\sum_{i=1}^{k}i^3 + (k+1)^3$
+
+\begin{proof}
+$\dps\sum_{i=1}^{k+1}i^3$
+\end{proof}
+
+\subsection{Exercise 38}
+$\dps\sum_{k=1}^{m}\frac{k}{k+1} + \frac{m+1}{m+2}$
+
+\begin{proof}
+$\dps\sum_{k=1}^{m+1}\frac{k}{k+1}$
+\end{proof}
+
+\subsection{Exercise 39}
+$\dps\sum_{m=0}^{n}(m+1)2^n + (n+2)2^{n+1}$
+
+\begin{proof}
+$\dps\sum_{m=0}^{n+1}(m+1)2^n$
+\end{proof}
+
+{\bf\cy Rewrite $40-42$ by separating off the final term.}
+
+\subsection{Exercise 40}
+$\dps\sum_{i=1}^{k+1}i(i!)$
+
+\begin{proof}
+$\dps\sum_{i=1}^{k}i(i!) + (k+1)(k+1)!$
+\end{proof}
+
+\subsection{Exercise 41}
+$\dps\sum_{k=1}^{m+1}k^2$
+
+\begin{proof}
+$\dps\sum_{k=1}^{m}k^2 + (m+1)^2$
+\end{proof}
+
+\subsection{Exercise 42}
+$\dps\sum_{m=1}^{n+1}m(m+1)$
+
+\begin{proof}
+$\dps\sum_{m=1}^{n}m(m+1) + (n+1)(n+2)$
+\end{proof}
+
+{\bf\cy Write each of $43-52$ using summation or product
+notation.}
+
+{\bf\cy Exercises $43-52$ have more than one correct answer.}
+
+\subsection{Exercise 43}
+$1^2 - 2^2 + 3^2 - 4^2 + 5^2 - 6^2 + 7^2$
+
+\begin{proof}
+$\dps \sum_{k=1}^{7}(-1)^{k+1}k^2$ or $\dps \sum_{k=0}^{6}(-1)^{k}(k+1)^2$
+\end{proof}
+
+\subsection{Exercise 44}
+$(1^3 - 1) - (2^3 - 1) + (3^3 - 1) - (4^3 - 1) + (5^3 - 1)$
+
+\begin{proof}
+$\dps\sum_{k=1}^{5}(k^3-1)$
+\end{proof}
+
+\subsection{Exercise 45}
+$(2^2 - 1)\cdot(3^2 - 1)\cdot(4^2 - 1)$
+
+\begin{proof}
+$\dps\prod_{k=2}^{4}(k^2-1)$
+\end{proof}
+
+\subsection{Exercise 46}
+$\dps\frac{2}{3\cdot4} - \frac{3}{4\cdot5} + \frac{4}{5\cdot6} - \frac{5}{6\cdot7} + \frac{6}{7\cdot8}$
+
+\begin{proof}
+$\dps\sum_{j=2}^{6}\frac{(-1)^j j}{(j+1)(j+2)}$
+\end{proof}
+
+\subsection{Exercise 47}
+$1 - r + r^2 - r^3 + r^4 - r^5$
+
+\begin{proof}
+$\dps\sum_{i = 0}^{5}(-1)^i r^i$
+\end{proof}
+
+\subsection{Exercise 48}
+$(1 - t)\cdot(1 - t^2)\cdot(1 - t^3)\cdot(1 - t^4)$
+
+\begin{proof}
+$\dps\prod_{k=1}^{4}(1-t^k)$
+\end{proof}
+
+\subsection{Exercise 49}
+$1^3 + 2^3 + 3^3 + \cdots + n^3$
+
+\begin{proof}
+$\dps\sum_{k=1}^{n}k^3$
+\end{proof}
+
+\subsection{Exercise 50}
+$\dps \frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots \frac{n}{(n+1)!}$
+
+\begin{proof}
+$\dps\sum_{k=1}^{n}\frac{k}{(k+1)!}$
+\end{proof}
+
+\subsection{Exercise 51}
+$n + (n - 1) + (n - 2) + \cdots + 1$
+
+\begin{proof}
+$\dps\sum_{i=0}^{n-1}(n-i)$
+\end{proof}
+
+\subsection{Exercise 52}
+$\dps n + \frac{n-1}{2!} + \frac{n-2}{3!} + \frac{n-3}{4!} + \cdots + \frac{1}{n!}$
+
+\begin{proof}
+$\dps\sum_{i=0}^{n-1}\frac{n-i}{(i+1)!}$
+\end{proof}
+
+{\bf\cy Transform each of 53 and 54 by making the change of
+variable $i = k + 1$.}
+
+\subsection{Exercise 53}
+$\dps\sum_{k=0}^{5}k(k-1)$
+
+\begin{proof}
+When $k = 0$, we have $i = 0+1 = 1$ and when $k = 5$ we have $i = 5+1 = 6$. Solving for $k$ we get $k = i-1$. So
+\[
+\sum_{k=0}^{5}k(k-1) = \sum_{i=1}^{6}(i-1)(i-2)
+\]
+\end{proof}
+
+\subsection{Exercise 54}
+$\dps\prod_{k=1}^{n}\frac{k}{k^2+4}$
+
+\begin{proof}
+When $k = 1$, we have $i = 1+1 = 2$ and when $k = n$ we have $i = n+1$. Solving for $k$ we get $k = i-1$. So
+\[
+\prod_{k=1}^{n}\frac{k}{k^2+4} = \prod_{i=2}^{n+1}\frac{i-1}{(i-1)^2+4}
+\]
+\end{proof}
+
+{\bf\cy Transform each of $55-58$ by making the change of variable $j = i - 1$.}
+
+\subsection{Exercise 55}
+$\dps\sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n}$
+
+\begin{proof}
+When $i = 1$, we have $j = 1-1 = 0$ and when $i = n+1$ we have $j = n+1-1 = n$. Solving for $i$ we get $i = j+1$. So
+\[
+\sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n} = \sum_{j=0}^{n}\frac{(j+1-1)^2}{(j+1)\cdot n} = \sum_{j=0}^{n}\frac{j^2}{(j+1)\cdot n}
+\]
+\end{proof}
+
+\subsection{Exercise 56}
+$\dps\sum_{i=3}^{n}\frac{i}{i+n-1}$
+
+\begin{proof}
+When $i = 3$, we have $j = 3-1 = 2$ and when $i = n$ we have $j = n-1$. Solving for $i$ we get $i = j+1$. So
+\[
+\sum_{i=3}^{n}\frac{i}{i+n-1} = \sum_{j=2}^{n-1}\frac{j+1}{j+1+n-1} = \sum_{j=2}^{n-1}\frac{j+1}{j+n}
+\]
+\end{proof}
+
+\subsection{Exercise 57}
+$\dps\sum_{i=1}^{n-1}\frac{i}{(n-i)^2}$
+
+\begin{proof}
+When $i = 1$, we have $j = 1-1 = 0$ and when $i = n-1$ we have $j = n-1-1 = n-2$. Solving for $i$ we get $i = j+1$. So
+\[
+\sum_{i=1}^{n-1}\frac{i}{(n-i)^2} = \sum_{j=0}^{n-2}\frac{j+1}{(n-(j+1))^2}
+\]
+\end{proof}
+
+\subsection{Exercise 58}
+$\dps\prod_{i=n}^{2n}\frac{n-i+1}{n+i}$
+
+\begin{proof}
+When $i = n$, we have $j = n-1$ and when $i = 2n$ we have $j = 2n-1$. Solving for $i$ we get $i = j+1$. So
+\[
+\prod_{i=n}^{2n}\frac{n-i+1}{n+i} = \prod_{j=n-1}^{2n-1}\frac{n-(j+1)+1}{n+j+1} = \prod_{j=n-1}^{2n-1}\frac{n-j}{n+j+1}
+\]
+\end{proof}
+
+{\bf\cy Write each of $59-61$ as a single summation or product.}
+
+\subsection{Exercise 59}
+$\dps 3\sum_{k=1}^{n}(2k-3) + \sum_{k=1}^{n}(4-5k)$
+
+\begin{proof}
+$\dps\sum_{k=1}^{n}[3(2k-3) + (4-5k)] = \sum_{k=1}^{n}[6k-9 + 4-5k] = \sum_{k=1}^{n}[k-5]$
+\end{proof}
+
+\subsection{Exercise 60}
+$\dps 2\sum_{k=1}^{n}(3k^2+4) + 5\sum_{k=1}^{n}(2k^2-1)$
+
+\begin{proof}
+$\dps \sum_{k=1}^{n}[2(3k^2+4) + 5(2k^2-1)] = \sum_{k=1}^{n}[6k^2+8 + 10k^2-5] = \sum_{k=1}^{n}[16k^2+3]$
+\end{proof}
+
+\subsection{Exercise 61}
+$\dps\prod_{k=1}^{n}\frac{k}{k+1} \prod_{k=1}^{n}\frac{k+1}{k+2}$
+
+\begin{proof}
+$\dps\prod_{k=1}^{n}\frac{k}{k+1} \prod_{k=1}^{n}\frac{k+1}{k+2} = \prod_{k=1}^{n}\frac{k}{\Ccancel[cyan]{k+1}}\frac{\Ccancel[cyan]{k+1}}{k+2} = \prod_{k=1}^{n}\frac{k}{k+2}$
+\end{proof}
+
+{\bf\cy Compute each of $62-76$. Assume the values of the variables are restricted so that the expressions are defined.}
+
+\subsection{Exercise 62}
+$\dps\frac{4!}{3!}$
+
+\begin{proof}
+$\dps \frac{4\cdot\Ccancel[cyan]{3\cdot2\cdot1}}{\Ccancel[cyan]{3\cdot2\cdot1}} = 4$
+\end{proof}
+
+\subsection{Exercise 63}
+$\dps\frac{6!}{8!}$
+
+\begin{proof}
+$\dps \frac{\Ccancel[cyan]{6\cdot5\cdot4\cdot3\cdot2\cdot1}}{8\cdot7\cdot\Ccancel[cyan]{6\cdot5\cdot4\cdot3\cdot2\cdot1}} = \frac{1}{56}$
+\end{proof}
+
+\subsection{Exercise 64}
+$\dps\frac{4!}{0!}$
+
+\begin{proof}
+$\dps\frac{4!}{0!} = \frac{24}{1} = 24$
+\end{proof}
+
+\subsection{Exercise 65}
+$\dps\frac{n!}{(n-1)!}$
+
+\begin{proof}
+$\dps\frac{n\cdot\Ccancel[cyan]{(n-1)\cdots2\cdot1}}{\Ccancel[cyan]{(n-1)\cdots2\cdot1}} = n$
+\end{proof}
+
+\subsection{Exercise 66}
+$\dps\frac{(n-1)!}{(n+1)!}$
+
+\begin{proof}
+$\dps\frac{\Ccancel[cyan]{(n-1)\cdots2\cdot1}}{(n+1)\cdot n\cdot\Ccancel[cyan]{(n-1)\cdots2\cdot1}} = \frac{1}{(n+1)n}$
+\end{proof}
+
+\subsection{Exercise 67}
+$\dps\frac{n!}{(n-2)!}$
+
+\begin{proof}
+$\dps\frac{n\cdot(n-1)\cdot\Ccancel[cyan]{(n-2)\cdots2\cdot1}}{\Ccancel[cyan]{(n-2)\cdots2\cdot1}} = n(n-1)$
+\end{proof}
+
+\subsection{Exercise 68}
+$\dps\frac{((n+1)!)^2}{(n!)^2}$
+
+\begin{proof}
+$ = \dps\left(\frac{(n+1)!}{n!}\right)^2 = \left(\frac{(n+1)\Ccancel[cyan]{n(n-1)\cdots2\cdot1}}{\Ccancel[cyan]{n(n-1)\cdots2\cdot1}}\right)^2 = (n+1)^2$
+\end{proof}
+
+\subsection{Exercise 69}
+$\dps\frac{n!}{(n-k)!}$
+
+\begin{proof}
+$\dps\frac{n\cdot(n-1)\cdots(n-k+1)\cdot\Ccancel[cyan]{(n-k)(n-k-1)\cdots2\cdot1}}{\Ccancel[cyan]{(n-k)(n-k-1)\cdots2\cdot1}} = n(n-1)\cdots(n-k+1)$
+\end{proof}
+
+\subsection{Exercise 70}
+$\dps\frac{n!}{(n-k+1)!}$
+
+\begin{proof}
+$\dps\frac{n\cdot(n-1)\cdots(n-k+2)\cdot\Ccancel[cyan]{(n-k+1)(n-k)\cdots2\cdot1}}{\Ccancel[cyan]{(n-k+1)(n-k)\cdots2\cdot1}} = n(n-1)\cdots(n-k+2)$
+\end{proof}
+
+\subsection{Exercise 71}
+$\dps\binom{5}{3}$
+
+\begin{proof}
+$\dps\binom{5}{3} = \frac{5!}{3!(5-3)!} = \frac{5!}{3! \cdot 2!} = \frac{5 \cdot 4 \cdot \Ccancel[cyan]{3 \cdot 2 \cdot 1}}{(\Ccancel[cyan]{3 \cdot 2 \cdot 1}) \cdot (2 \cdot 1)} = 10$
+
+\end{proof}
+
+\subsection{Exercise 72}
+$\dps\binom{7}{4}$
+
+\begin{proof}
+$\dps\binom{7}{4} = \frac{7!}{4!(7-4)!} = \frac{7!}{4! \cdot 3!} = \frac{7 \cdot \Ccancel[red]{6} \cdot 5 \cdot \Ccancel[cyan]{4 \cdot 3 \cdot 2 \cdot 1}}{(\Ccancel[cyan]{4 \cdot 3 \cdot 2 \cdot 1}) \cdot (\Ccancel[red]{3 \cdot 2} \cdot 1)} = 35$
+\end{proof}
+
+\subsection{Exercise 73}
+$\dps\binom{3}{0}$
+
+\begin{proof}
+1
+\end{proof}
+
+\subsection{Exercise 74}
+$\dps\binom{5}{5}$
+
+\begin{proof}
+1
+\end{proof}
+
+\subsection{Exercise 75}
+$\dps\binom{n}{n-1}$
+
+\begin{proof}
+$\dps\binom{n}{n-1} = \frac{n!}{(n-1)!(n-(n-1))!} = \frac{n!}{(n-1)! \cdot 1!} = \frac{n \cdot \Ccancel[cyan]{(n-1) \cdots 2 \cdot 1}}{\Ccancel[cyan]{(n-1) \cdots 2 \cdot 1}} = n$
+\end{proof}
+
+\subsection{Exercise 76}
+$\dps\binom{n+1}{n-1}$
+
+\begin{proof}
+$\dps\binom{n+1}{n-1} = \frac{(n+1)!}{(n-1)!(n+1-(n-1))!} = \frac{(n+1)!}{(n-1)! \cdot 2!}$ 
+
+$\dps= \frac{(n+1) \cdot n \cdot \Ccancel[cyan]{(n-1) \cdots 2 \cdot 1}}{\Ccancel[cyan]{(n-1) \cdots 2 \cdot 1}\cdot 2} = \frac{(n+1)n}{2}$
+\end{proof}
+
+\subsection{Exercise 77}
+
+\subsubsection{(a)}
+Prove that $n! + 2$ is divisible by 2, for every integer $n \geq 2$.
+
+\begin{proof}
+Let $n$ be an integer such that $n \geq 2$. By definition of factorial,
+\[
+n! =
+\left\{
+\begin{array}{lr}
+2 \cdot 1 & \text{\cy if $n = 2$} \\
+3 \cdot 2 \cdot 1 & \text{\cy if $n = 3$} \\
+n \cdot (n-1) \cdots 2 \cdot 1 & \text{\cy if $n > 3$} \\
+\end{array}
+\right.
+\]
+In each case, $n!$ has a factor of 2, and so $n! = 2k$ for some integer $k$. Then $n!+2 = 2k+2 = 2(k+1)$. Since $k+1$ is an integer, $n!+2$ is divisible by 2.
+\end{proof}
+
+\subsubsection{(b)}
+Prove that $n! + k$ is divisible by $k$, for every integer $n \geq 2$ and $k = 2, 3, \ldots, n$.
+
+\begin{proof}
+For every $k = 2, 3, \ldots , n$, from the definition of $n!$ in part (a), we can see that $n!$ has a factor of $k$, so $n! = ka$ for some integer $a$. Then $n!+k = ka + k = k(a+1)$ where $a+1$ is an integer. Therefore $n!+k$ is divisible by $k$ for every $k = 2, 3, \ldots , n$.
+\end{proof}
+
+\subsubsection{(c)}
+Given any integer $m \geq 2$, is it possible to find a sequence of $m - 1$ consecutive positive integers none of which is prime? Explain your answer.
+
+\begin{proof}
+Yes. By part (b), $m! + k$ is divisible by $k$, for all $k = 2, 3, \ldots, m$. So $m!+2, m!+3, \ldots, m!+m$ are $m-1$ consecutive integers none of which is prime.
+\end{proof}
+
+\subsection{Exercise 78}
+Prove that for all nonnegative integers $n$ and $r$ with
+$r+1 \leq n$, $\dps\binom{n}{r+1} = \frac{n-r}{r+1}\binom{n}{r}$.
+
+\begin{proof}
+Suppose $n$ and $r$ are nonnegative integers with $r + 1 \leq n$. The right-hand side of the equation to be shown is
+\[
+\begin{array}{rcl}
+\dps\frac{n-r}{r+1} \cdot \binom{n}{r} & = & \dps\frac{n-r}{r+1} \cdot \frac{n!}{r!(n-r)!} \\
+& = & \dps\frac{\Ccancel[cyan]{n-r}}{r+1} \cdot \frac{n!}{r!\Ccancel[cyan]{(n-r)}(n-r-1)!} \\
+& = & \dps \frac{n!}{(r+1)!(n-r-1)!} \\
+& = & \dps \frac{n!}{(r+1)!(n-(r+1))!} \\
+& = & \dps \binom{n}{r+1}
+\end{array}
+\]
+which is the left-hand side of the equality to be shown.
+\end{proof}
+
+\subsection{Exercise 79}
+Prove that if $p$ is a prime number and $r$ is an integer
+with $0 < r < p$, then $\dps\binom{p}{r}$ is divisible by $p$.
+
+\begin{proof}
+We know that
+\[
+\binom{p}{r} = \frac{p!}{r!(p-r)!} = \frac{p \cdot (p-1) \cdots 2 \cdot 1}{[r \cdot (r-1) \cdots 2 \cdot 1][(p-r) \cdot (p-r-1) \cdots 2 \cdot 1]}
+\]
+is an integer. Notice that all the factors in the denominator are less than $p$. So, since $p$ is prime, $p$ is not divisible by any of the factors in the denominator. This means that every factor in the denominator is canceled out by the factors of $(p-1) \cdots 2 \cdot 1$. Thus
+\[
+M = \frac{(p-1) \cdots 2 \cdot 1}{[r \cdot (r-1) \cdots 2 \cdot 1][(p-r) \cdot (p-r-1) \cdots 2 \cdot 1]}
+\]
+is also an integer (otherwise $p \cdot M$ would not be an integer, since $p$ cannot cancel out anything in the denominator). Therefore $\dps\binom{p}{r} = p\cdot M$ where $M$ is an integer, so it is divisible by $p$.
+\end{proof}
+
+\subsection{Exercise 80}
+Suppose $a[1], a[2], a[3], \ldots, a[m]$ is a one-dimensional array and consider the following algorithm segment:
+
+\begin{tabbing}
+\hspace{7cm}
+\= $sum \coloneqq 0$ \\
+\> {\bf for} \= ($k \coloneqq 1$ {\bf to} $m$) \\
+\>           \> $sum \coloneqq sum +  a[k]$ \\
+\> {\bf next} $k$
+\end{tabbing}
+
+Fill in the blanks below so that each algorithm segment performs the same job as the one shown in the exercise statement.
+
+\subsubsection{(a)}
+\begin{tabbing}
+$sum \coloneqq 0$ \\
+{\bf for} \= ($i \coloneqq 0$ {\bf to} \fbl) \\
+          \> $sum \coloneqq$ \fbl \\
+{\bf next} $i$
+\end{tabbing}
+
+\begin{proof}
+$m - 1, sum + a[i + 1]$
+\end{proof}
+
+\subsubsection{(b)}
+\begin{tabbing}
+$sum \coloneqq 0$ \\
+{\bf for} \= ($j \coloneqq 2$ {\bf to} \fbl) \\
+          \> $sum \coloneqq$ \fbl \\
+{\bf next} $j$
+\end{tabbing}
+
+\begin{proof}
+$m + 1, sum + a[j - 1]$
+\end{proof}
+
+{\bf\cy Use repeated division by 2 to convert (by hand) the integers in $81-83$ from base 10 to base 2.}
+
+\subsection{Exercise 81}
+90
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+90 / 2 & = & 45, & remainder = 0 \\
+45 / 2 & = & 22, & remainder = 1 \\
+22 / 2 & = & 11, & remainder = 0 \\
+11 / 2 & = & 5, & remainder = 1 \\
+5 / 2 & = & 2, & remainder = 1 \\
+2 / 2 & = & 1, & remainder = 0 \\
+1 / 2 & = & 0, & remainder = 1
+\end{tabular}
+\end{center}
+So $90_{10} = 1011010_2$.
+\end{proof}
+
+\subsection{Exercise 82}
+98
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+98 / 2 & = & 49, & remainder = 0 \\
+49 / 2 & = & 24, & remainder = 1 \\
+24 / 2 & = & 12, & remainder = 0 \\
+12 / 2 & = & 6, & remainder = 0 \\
+6 / 2 & = & 3, & remainder = 0 \\
+3 / 2 & = & 1, & remainder = 1 \\
+1 / 2 & = & 0, & remainder = 1
+\end{tabular}
+\end{center}
+So $98_{10} = 1100010_2$.
+\end{proof}
+
+\subsection{Exercise 83}
+205
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+205 / 2 & = & 102, & remainder = 1 \\
+102 / 2 & = & 51, & remainder = 0 \\
+51 / 2 & = & 25, & remainder = 1 \\
+25 / 2 & = & 12, & remainder = 1 \\
+12 / 2 & = & 6, & remainder = 0 \\
+6 / 2 & = & 3, & remainder = 0 \\
+3 / 2 & = & 1, & remainder = 1 \\
+1 / 2 & = & 0, & remainder = 1
+\end{tabular}
+\end{center}
+So $205_{10} = 11001101_2$.
+\end{proof}
+
+{\bf\cy Make a trace table to trace the action of algorithm 5.1.1 on the input in $84-86$.}
+
+\subsection{Exercise 84}
+23
+\begin{proof}
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$a$&23&&&&& \\
+\hline
+$i$&0&1&2&3&4&5 \\
+\hline
+$q$&23&11&5&2&1&0 \\
+\hline
+$r[0]$&&1&&&& \\
+\hline
+$r[1]$&&&1&&& \\
+\hline
+$r[2]$&&&&1&& \\
+\hline
+$r[3]$&&&&&0& \\
+\hline
+$r[4]$&&&&&&1 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+\end{proof}
+
+\subsection{Exercise 85}
+28
+\begin{proof}
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$a$&28&&&&& \\
+\hline
+$i$&0&1&2&3&4&5 \\
+\hline
+$q$&28&14&7&3&1&0 \\
+\hline
+$r[0]$&&0&&&& \\
+\hline
+$r[1]$&&&0&&& \\
+\hline
+$r[2]$&&&&1&& \\
+\hline
+$r[3]$&&&&&1& \\
+\hline
+$r[4]$&&&&&&1 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+\end{proof}
+
+\subsection{Exercise 86}
+44
+\begin{proof}
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$a$&44&&&&&& \\
+\hline
+$i$&0&1&2&3&4&5&6 \\
+\hline
+$q$&44&22&11&5&2&1&0 \\
+\hline
+$r[0]$&&0&&&&& \\
+\hline
+$r[1]$&&&0&&&& \\
+\hline
+$r[2]$&&&&1&&& \\
+\hline
+$r[3]$&&&&&1&& \\
+\hline
+$r[4]$&&&&&&0& \\
+\hline
+$r[5]$&&&&&&&1 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+\end{proof}
+
+\subsection{Exercise 87}
+Write an informal description of an algorithm (using repeated division by 16) to convert a nonnegative integer from decimal notation to hexadecimal notation (base 16).
+
+\begin{proof}
+Suppose $a$ is a nonnegative integer. Divide a by 16 using the quotient-remainder theorem to obtain a quotient $q[0]$ and a remainder $r[0]$. If the quotient is nonzero, divide by 16 again to obtain a quotient $q[1]$ and a remainder $r[1]$. Continue this process until a quotient of 0 is obtained. At each stage, the remainder must be less than the divisor, which is 16. Thus each remainder is always among $0, 1, 2, \ldots, 15$. Read the divisions from the bottom up.
+\end{proof}
+
+{\bf\cy Use the algorithm you developed for exercise 87 to convert the integers in $88-90$ to hexadecimal notation.}
+
+\subsection{Exercise 88}
+287
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+287 / 16 & = & 17, & remainder = 15 = F \\
+17 / 16 & = & 1, & remainder = 1 \\
+1 / 16 & = & 0, & remainder = 1
+\end{tabular}
+\end{center}
+So $287_{10} = 11F_{16}$.
+\end{proof}
+
+\subsection{Exercise 89}
+693
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+693 / 16 & = & 43, & remainder = 5 \\
+43 / 16 & = & 2, & remainder = 11 = B \\
+2 / 16 & = & 0, & remainder = 2
+\end{tabular}
+\end{center}
+So $693_{10} = 2B5_{16}$.
+\end{proof}
+
+\subsection{Exercise 90}
+2301
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+2301 / 16 & = & 143, & remainder = 13 = D \\
+143 / 16 & = & 8, & remainder = 15 = F \\
+8 / 16 & = & 0, & remainder = 8
+\end{tabular}
+\end{center}
+So $2301_{10} = 8FD_{16}$.
+\end{proof}
+
+\subsection{Exercise 91}
+Write a formal version of the algorithm you developed for exercise 87.\\
+{\it Proof:}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Decimal to Hexadecimal Conversion Using Repeated Division by 16} 
+
+{\bf \cy Input:} $a$ {\it[a nonnegative integer]}
+
+\begin{tabbing}
+{\bf\cy Alg}\={\bf\cy orithm Body:} \\
+         \> $q \coloneqq a, i \coloneqq 0$ \\
+         \> {\bf wh}\={\bf ile} ($i = 0$ or $q \neq 0$) \\
+         \>          \> $r[i] \coloneqq q \mod 16$ \\
+         \>          \> $q \coloneqq q \text{ div } 16$ \\
+         \>          \> {\it [$r[i]$ and $q$ can be obtained by calling the division algorithm.]} \\
+         \> {\bf end while} \\
+         \> {\it [After execution of this step, the values $r[0], r[1], \ldots, r[i-1]$ are all 0's and 1's,} \\ 
+         \> {\it and $a = (r[i-1] r[i-2] \ldots r[1] r[0])_{16}$].} \\
+{\bf\cy Output:} $r[0], r[1], \ldots, r[i-1] $ {\it [a sequence of integers]}
+\end{tabbing}
+\end{tcolorbox}
+
+
+\end{document}
