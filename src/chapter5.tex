@@ -1005,5 +1005,1106 @@ Write a formal version of the algorithm you developed for exercise 87.\\
 \end{tabbing}
 \end{tcolorbox}
 
+\section{Exercise Set 5.2}
+
+\subsection{Exercise 1}
+Use the technique illustrated at the beginning of this section to show that the statements in (a) and (b) are true.
+
+\subsubsection{(a)}
+If $\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right) = \frac{1}{5}$ then 
+
+$\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right) = \frac{1}{6}$.
+
+\begin{proof}
+The statement in part (a) is true because if 
+\[
+\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right) = \frac{1}{5}
+\]
+then
+\[\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right) = \frac{1}{5} \cdot \frac{5}{6} = \frac{1}{6}.
+\]
+\end{proof}
+
+\subsubsection{(b)}
+If $\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right) = \frac{1}{6}$ then 
+
+$\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right)\left(1 - \frac{1}{7}\right) = \frac{1}{7}$.
+
+\begin{proof}
+The statement in part (a) is true because if 
+\[
+\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right) = \frac{1}{6}
+\]
+then
+\[\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right)\left(1 - \frac{1}{7}\right) = \frac{1}{6} \cdot \frac{6}{7} = \frac{1}{7}.
+\]
+\end{proof}
+
+\subsection{Exercise 2}
+For each positive integer $n$, let $P(n)$ be the formula
+\[
+1 + 3 + 5 + \cdots + (2n - 1) = n^2.
+\]
+\subsubsection{(a)}
+Write $P(1)$. Is $P(1)$ true?
+
+\begin{proof}
+$P(1)$ is the equation $1 = 1^2$, which is true.
+\end{proof}
+
+\subsubsection{(b)}
+Write $P(k)$.
+
+\begin{proof}
+$P(k)$ is the equation $1 + 3 + 5 + \cdots + (2k - 1) = k^2$.
+\end{proof}
+
+\subsubsection{(c)}
+Write $P(k + 1)$.
+
+\begin{proof}
+$P(k + 1)$ is the equation $1 + 3 + 5 + \cdots + (2(k + 1) - 1) = (k + 1)^2$.
+\end{proof}
+
+\subsubsection{(d)}
+In a proof by mathematical induction that the formula holds for every integer $n \geq 1$, what must be shown in the inductive step?
+
+\begin{proof}
+In the inductive step, show that if $k$ is any integer for which $k \geq 1$ and $1 + 3 + 5 + \cdots + (2k - 1) = k^2$ is true, then $1 + 3 + 5 + \cdots + (2(k + 1) - 1) = (k + 1)^2$ is also true.
+\end{proof}
+
+\subsection{Exercise 3}
+For each positive integer $n$, let $P(n)$ be the formula
+\[
+1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}
+\]
+\subsubsection{(a)}
+Write $P(1)$. Is $P(1)$ true?
+
+\begin{proof}
+$P(1)$ is ``$1^2 = \frac{1(1+1)(2\cdot 1 + 1)}{6}$.'' $P(1)$ is true because the left-hand side equals $1^2 = 1$ and the right-hand side equals $\frac{1(1+1)(2 + 1)}{6} = \frac{2 \cdot 3}{6} = 1$ also.
+\end{proof}
+
+\subsubsection{(b)}
+Write $P(k)$.
+
+\begin{proof}
+$P(k)$ is ``$\dps k^2 = \frac{k(k+1)(2k + 1)}{6}$.''
+\end{proof}
+
+\subsubsection{(c)}
+Write $P(k + 1)$.
+
+\begin{proof}
+$P(k+1)$ is ``$\dps (k+1)^2 = \frac{(k+1)(k+2)(2k + 3)}{6}$.''
+\end{proof}
+
+\subsubsection{(d)}
+In a proof by mathematical induction that the formula holds for every integer $n \geq 1$, what must be shown in the inductive step?
+
+\begin{proof}
+In the inductive step, show that if $k$ is any integer for which $k \geq 1$ and $\dps k^2 = \frac{k(k+1)(2k + 1)}{6}$ is true, then $\dps (k+1)^2 = \frac{(k+1)(k+2)(2k + 3)}{6}$ is also true.
+\end{proof}
+
+\subsection{Exercise 4}
+For each integer $n$ with $n \geq 2$, let $P(n)$ be the formula
+\[
+\sum_{i=1}^{n-1}i(i+1) = \frac{n(n-1)(n+1)}{3}
+\]
+\subsubsection{(a)}
+Write $P(2)$. Is $P(2)$ true?
+
+\begin{proof}
+$P(2)$ is ``$\dps \sum_{i=1}^{1}i(i+1) = \frac{2(2-1)(2+1)}{3}$'' It's true because the left-hand side is $1(1+1) = 2$ and the right-hand side is $\dps \frac{2(1)(3)}{3} = 2$ also.
+\end{proof}
+
+\subsubsection{(b)}
+Write $P(k)$.
+
+\begin{proof}
+$P(k)$ is ``$\dps \sum_{i=1}^{k-1}i(i+1) = \frac{k(k-1)(k+1)}{3}$.''
+\end{proof}
+
+\subsubsection{(c)}
+Write $P(k + 1)$.
+
+\begin{proof}
+$P(k+1)$ is ``$\dps \sum_{i=1}^{k}i(i+1) = \frac{(k+1)k(k+2)}{3}$.''
+\end{proof}
+
+\subsubsection{(d)}
+In a proof by mathematical induction that the formula holds for every integer $n \geq 2$, what must be shown in the inductive step?
+
+\begin{proof}
+In the inductive step, show that if $k$ is any integer for which $k \geq 2$ and \\ $\dps \sum_{i=1}^{k-1}i(i+1) = \frac{k(k-1)(k+1)}{3}$ is true, then $\dps \sum_{i=1}^{k}i(i+1) = \frac{(k+1)k(k+2)}{3}$ is also true.
+\end{proof}
+
+\subsection{Exercise 5}
+Fill in the missing pieces in the following proof that
+\[
+1 + 3 + 5 + \cdots + (2n - 1) = n^2
+\]
+for every integer $n \geq 1$.
+
+{\bf Proof:} Let the property $P(n)$ be the equation 
+\[
+1 + 3 + 5 + \cdots + (2n - 1) = n^2. \,\,\,{\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} To establish $P(1)$, we must show that when 1 is substituted in place of $n$, the left-hand side equals the right-hand side. But when $n = 1$, the left-hand side is the sum of all the odd integers from 1 to $2\cdot 1 - 1$, which is the sum of the odd integers from 1 to 1 and is just 1. The right-hand side is {\cy (a) \fbl}, which also equals 1. So $P(1)$ is true. 
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:} Let $k$ be any integer with $k \geq 1$. 
+
+{\it [Suppose $P(k)$ is true. That is:]} Suppose 
+\[
+1 + 3 + 5 + \cdots + (2k - 1) = {\cy (b) \fbl \from P(k)}
+\]
+{\it [This is the inductive hypothesis.]} 
+
+{\it [We must show that $P(k + 1)$ is true. That is:]} We must show that 
+\[
+{\cy (c) \fbl} = {\cy (d) \fbl \from P(k + 1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $1 + 3 + 5 + \cdots + (2(k + 1) - 1)$ 
+\[
+\begin{array}{lll}
+= & 1 + 3 + 5 + \cdots + (2k + 1) & \text{\cy by algebra} \\
+= & [1 + 3 + 5 + \cdots + (2k - 1)] + (2k+1) & \text{\cy because (e) \fbl} \\
+= & k^2 + (2k+1) & \text{\cy by (f) \fbl} \\
+= & (k + 1)^2 & \text{\cy by algebra,}
+\end{array}
+\]
+which is the right-hand side of $P(k+1)$ {\it [as was to be shown.]}
+
+{\it [Since we have proved the basis step and the inductive step, we conclude that the given statement is true.]}
+
+{\it Note:} This proof was annotated to help make its logical flow more obvious. In standard mathematical writing, such annotation is omitted.
+
+\begin{proof}
+a. $1^2$; b. $k^2$; c. $1 + 3 + 5 + \cdots + [2(k + 1) - 1]$; d. $(k + 1)^2$; e. the next-to-last term is $2k-1$ because the odd integer just before $2k + 1$ is $2k - 1$; f. inductive hypothesis
+\end{proof}
+
+{\bf\cy Prove each statement in $6-9$ using mathematical induction. Do not derive them from theorem 5.2.1 or Theorem 5.2.2.}
+
+\subsection{Exercise 6}
+For every integer $n \geq 1$,
+\[
+2 + 4 + 6 + \cdots + 2n = n^2 + n.
+\]
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+2 + 4 + 6 + \cdots + 2n = n^2 + n. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} To prove $P(1)$, we must show that when 1 is substituted into the equation in place of $n$, the left-hand side equals the right-hand side. But when 1 is substituted for $n$, the left-hand side is the sum of all the even integers from 2 to $2 \geq 1$, which is just 2, and the right-hand side is $1^2 + 1$, which also equals 2. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+2 + 4 + 6 + \cdots + 2k = k^2 + k. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+2 + 4 + 6 + \cdots + 2(k + 1) = (k + 1)^2 + (k + 1).
+\]
+Because $(k + 1)^2 + (k + 1) = k^2 + 2k + 1 + k + 1 =
+k^2 + 3k + 2$, this is equivalent to showing that
+\[
+2 + 4 + 6 + \cdots + 2(k + 1) = k^2 + 3k + 2. \,\, \from P(k + 1)
+\]
+Now the left-hand side of $P(k + 1)$ is $2 + 4 + 6 + \cdots + 2(k + 1)$
+\[
+\begin{array}{lll}
+= & 2 + 4 + 6 + \cdots + 2k + 2(k + 1) & \text{\cy make next-to-last term explicit} \\
+= & (k^2+k) + 2(k+1) & \text{\cy by inductive hypothesis} \\
+= & k^2 + 3k + 2 & \text{\cy by algebra,} 
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 7}
+For every integer $n \geq 1$,
+\[
+1 + 6 + 11 + 16 + \cdots + (5n-4) = \frac{n(5n-3)}{2}.
+\]
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+1 + 6 + 11 + 16 + \cdots + (5n-4) = \frac{n(5n-3)}{2}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} To prove $P(1)$, we must show that when 1 is substituted into the equation in place of $n$, the left-hand side equals the right-hand side. But when 1 is substituted for $n$, the left-hand side is the sum from 1 to $1 \geq 1$, which is just 1, and the right-hand side is $\frac{1(5-3)}{2}$, which also equals 1. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+1 + 6 + 11 + 16 + \cdots + (5k-4) = \frac{k(5k-3)}{2}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+1 + 6 + 11 + 16 + \cdots + (5(k+1)-4) = \frac{(k+1)(5(k+1)-3)}{2}.
+\]
+Because $5(k + 1) - 4 = 5k+1$ and $5(k + 1) - 3 = 5k+2$, this is equivalent to showing that
+\[
+1 + 6 + 11 + 16 + \cdots + (5k+1) = \frac{(k+1)(5k+2)}{2}. \,\, {\cy \from P(k + 1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $1 + 6 + 11 + 16 + \cdots + (5k+1)$
+
+\[
+\begin{array}{lll}
+= & \dps 1 + 6 + 11 + 16 + \cdots + (5k-4) + (5k+1)  & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{k(5k-3)}{2} + (5k+1) & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{5k^2-3k}{2} + \frac{10k+2}{2} & \text{\cy by algebra} \\
+= & \dps \frac{5k^2-3k + 10k + 2}{2} & \text{\cy by algebra} \\
+= & \dps \frac{5k^2 + 7k + 2}{2} & \text{\cy by algebra} \\
+= & \dps \frac{(k+1)(5k+2)}{2} & \text{\cy by factoring,}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 8}
+For every integer $n \geq 0$,
+\[
+1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1.
+\]
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(0)$ is true:} The left-hand side of $P(0)$ is 1, and the right-hand side is $2^{0+1} - 1 = 2 - 1 = 1$ also. Thus $P(0)$ is true.
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose
+\[
+1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{(k+1)+1} - 1,
+\]
+or, equivalently,
+\[
+1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1. \,\, {\cy \from P(k + 1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $1 + 2 + 2^2 + \cdots + 2^{k+1}$
+\[
+\begin{array}{lll}
+= & 1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} & \text{\cy make next-to-last term explicit} \\
+= & (2^{k+1} - 1) + 2^{k+1} & \text{\cy by inductive hypothesis} \\
+= & 2 \cdot 2^{k+1} - 1& \text{\cy by combining like terms} \\
+= & 2^{k+2} - 1& \text{\cy by the laws of exponents} 
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 0$.]}
+\end{proof}
+
+\subsection{Exercise 9}
+For every integer $n \geq 3$,
+\[
+4^3 + 4^4 + 4^5 + \cdots + 4^n = \frac{4(4^n-16)}{3}.
+\]
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+4^3 + 4^4 + 4^5 + \cdots + 4^n = \frac{4(4^n-16)}{3}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(3)$ is true:} The left-hand side of $P(3)$ is $4^3 = 64$, and the right-hand side is $\frac{4(4^3-16)}{3} = 4 \cdot 48 / 3 = 64$ also. Thus $P(3)$ is true.
+
+{\bf Show that for every integer $k \geq 3$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 3$, and suppose $P(k)$ is true. That is, suppose
+\[
+4^3 + 4^4 + 4^5 + \cdots + 4^k = \frac{4(4^k-16)}{3}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+4^3 + 4^4 + 4^5 + \cdots + 4^{k+1} = \frac{4(4^{k+1}-16)}{3}. \,\, {\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $4^3 + 4^4 + 4^5 + \cdots + 4^{k+1}$
+\[
+\begin{array}{lll}
+= & 4^3 + 4^4 + 4^5 + \cdots + 4^k + 4^{k+1} & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{4(4^k-16)}{3} + 4^{k+1} & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{4(4^k-16)}{3} + 4 \cdot 4^k & \text{\cy by the laws of exponents} \\
+= & \dps 4\left(\frac{4^k-16}{3} + 4^k \right) & \text{\cy by factoring} \\
+= & \dps 4\left(\frac{4^k-16}{3} + \frac{3 \cdot 4^k}{3}\right) & \text{\cy by algebra} \\
+= & \dps 4\left(\frac{4^k-16 + 3 \cdot 4^k}{3}\right) & \text{\cy by algebra} \\
+= & \dps 4\left(\frac{4 \cdot 4^k-16}{3}\right) & \text{\cy by combining like terms} \\
+= & \dps 4\left(\frac{4^{k+1}-16}{3}\right) & \text{\cy by the laws of exponents} 
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 3$.]}
+\end{proof}
+
+{\bf\cy Prove each of the statements in $10-18$ by mathematical induction.}
+
+\subsection{Exercise 10}
+$\dps 1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}$, for every integer $n \geq 1$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $1^2 = 1$, and the right-hand side is $\dps \frac{1(1+1)(2+1)}{6} = \frac{2 \cdot 3}{6} = 1$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+1^2 + 2^2 + \cdots + k^2 = \frac{k(k+1)(2k+1)}{6}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+1^2 + 2^2 + \cdots + (k+1)^2 = \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6},
+\]
+or, equivalently,
+\[
+1^2 + 2^2 + \cdots + (k+1)^2 = \frac{(k+1)(k+2)(2k+3)}{6}. \,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $1^2 + 2^2 + \cdots + (k+1)^2$
+\[
+\begin{array}{lll}
+= & 1^2 + 2^2 + \cdots + k^2 + (k+1)^2 & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{k(k+1)(2k+1)}{6} + (k+1)^2 & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{k(k+1)(2k+1)}{6} + \frac{6(k+1)^2}{6} & \text{\cy because $\frac{6}{6} = 1$} \\
+= & \dps \frac{k(k+1)(2k+1) + 6(k+1)^2}{6} & \text{\cy by adding fractions} \\
+= & \dps \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} & \text{\cy by factoring out $(k+1)$} \\
+= & \dps \frac{(k+1)[2k^2+k + 6k+6]}{6} & \text{\cy by multiplying out} \\
+= & \dps \frac{(k+1)[2k^2+7k+6]}{6} & \text{\cy by combining like terms} \\
+= & \dps \frac{(k+1)(k+2)(2k+3)}{6} & \text{\cy by factoring} \\
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 11}
+$\dps 1^3 + 2^3 + \cdots + n^3 = \left[\frac{n(n+1)}{2}\right]^2$, for every integer $n \geq 1$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps 1^3 + 2^3 + \cdots + n^3 = \left[\frac{n(n+1)}{2}\right]^2. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $1^3 = 1$, and the right-hand side is $\dps \left[ \frac{1(1+1)}{2}\right]^2 = 1^2 = 1$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps 1^3 + 2^3 + \cdots + k^3 = \left[\frac{k(k+1)}{2}\right]^2. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps 1^3 + 2^3 + \cdots + (k+1)^3 = \left[\frac{(k+1)(k+2)}{2}\right]^2. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $1^3 + 2^3 + \cdots + (k+1)^3$
+\[
+\begin{array}{lll}
+= & 1^3 + 2^3 + \cdots + k^3+ (k+1)^3 & \text{\cy make next-to-last term explicit} \\
+= & \dps \left[\frac{k(k+1)}{2}\right]^2 + (k+1)^3 & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{k^2(k+1)^2}{4} + (k+1)(k+1)^2 & \text{\cy by algebra} \\
+= & \dps \frac{k^2(k+1)^2}{4} + \frac{4(k+1)(k+1)^2}{4} & \text{\cy because $\frac{4}{4} = 1$} \\
+= & \dps \frac{k^2(k+1)^2 + 4(k+1)(k+1)^2}{4} & \text{\cy by adding fractions} \\
+= & \dps \frac{(k+1^2)[k^2 + 4(k+1)]}{4} & \text{\cy by factoring out $(k+1)^2$}  \\
+= & \dps \frac{(k+1)^2[k^2+4k+4]}{4} & \text{\cy by multiplying out} \\
+= & \dps \frac{(k+1)^2(k+2)^2}{4} & \text{\cy by factoring} \\
+= & \dps \left[\frac{(k+1)(k+2)}{2}\right]^2 & \text{\cy by factoring}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 12}
+$\dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n+1)} = \frac{n}{n+1}$, for every integer $n \geq 1$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n+1)} = \frac{n}{n+1}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $\frac{1}{1\cdot (1+1)} = 1/2$, and the right-hand side is $\frac{1}{1+1} = 1/2$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k(k+1)} = \frac{k}{k+1}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{(k+1)((k+1)+1)} = \frac{k+1}{(k+1)+1}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{(k+1)(k+2)}$
+\[
+\begin{array}{lll}
+= & \dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k(k+1)} + \frac{1}{(k+1)(k+2)} & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{k}{k+1} + \frac{1}{(k+1)(k+2)} & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{k(k+2)}{(k+1)(k+2)} + \frac{1}{(k+1)(k+2)} & \text{\cy because $\frac{k+2}{k+2} = 1$} \\
+= & \dps \frac{k^2+2k}{(k+1)(k+2)} + \frac{1}{(k+1)(k+2)} & \text{\cy by algebra} \\
+= & \dps \frac{k^2+2k+1}{(k+1)(k+2)} & \text{\cy by algebra} \\
+= & \dps \frac{(k+1)^2}{(k+1)(k+2)} & \text{\cy by algebra} \\
+= & \dps \frac{k+1}{k+2} & \text{\cy by canceling $k+1$}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 13}
+$\dps \sum_{i=1}^{n-1}i(i+1) = \frac{n(n-1)(n+1)}{3}$, for every integer $n \geq 2$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \sum_{i=1}^{n-1}i(i+1) = \frac{n(n-1)(n+1)}{3}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(2)$ is true:} The left-hand side of $P(1)$ is $\dps \sum_{i=1}^{2-1}i(i+1) = 1(1+1) = 2$, and the right-hand side is $\dps \frac{2(2-1)(2+1)}{3} = \frac{6}{3} = 2$ also. Thus $P(2)$ is true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \sum_{i=1}^{k-1}i(i+1) = \frac{k(k-1)(k+1)}{3}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \sum_{i=1}^{k+1-1}i(i+1) = \frac{(k+1)(k+1-1)(k+1+1)}{3},
+\]
+or, equivalently,
+\[
+\dps \sum_{i=1}^{k}i(i+1) = \frac{(k+1)k(k+2)}{3}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \sum_{i=1}^{k}i(i+1)$
+\[
+\begin{array}{lll}
+= & \dps \sum_{i=1}^{k-1}i(i+1) + k(k+1) & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{k(k-1)(k+1)}{3} + k(k+1) & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{k(k-1)(k+1)}{3} + \frac{3k(k+1)}{3} & \text{\cy because $\frac{3}{3} = 1$} \\
+= & \dps \frac{k(k-1)(k+1) + 3k(k+1)}{3} & \text{\cy by adding fractions} \\
+= & \dps \frac{k(k+1)[(k-1) + 3]}{3} & \text{\cy by factoring out $k(k+1)$} \\
+= & \dps \frac{k(k+1)(k+2)}{3} & \text{\cy by algebra}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 2$.]}
+\end{proof}
+
+\subsection{Exercise 14}
+$\dps \sum_{i=1}^{n+1}i \cdot 2^i = n \cdot 2^{n+2} + 2$, for every integer $n \geq 0$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \sum_{i=1}^{n+1}i \cdot 2^i = n \cdot 2^{n+2} + 2. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(0)$ is true:} The left-hand side of $P(0)$ is $\dps \sum_{i=1}^{0+1}i \cdot 2^i = 1 \cdot 2^i = 2$, and the right-hand side is $0 \cdot 2^{0+2} + 2 = 0 + 2 = 2$ also. Thus $P(0)$ is true.
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \sum_{i=1}^{k+1}i \cdot 2^i = k \cdot 2^{k+2} + 2. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \sum_{i=1}^{(k+1)+1}i \cdot 2^i = (k+1) \cdot 2^{(k+1) +2} + 2,
+\]
+or, equivalently,
+\[
+\dps \sum_{i=1}^{k+2}i \cdot 2^i = (k+1) \cdot 2^{k+3} + 2. \,\,\,{\cy \from P(k+1)}.
+\]
+Now the left-hand side of $P(k + 1)$ is $\sum_{i=1}^{k+2}i \cdot 2^i$
+\[
+\begin{array}{lll}
+= & \dps \sum_{i=1}^{k+1}i \cdot 2^i + (k+2) \cdot 2^{k+2} & \text{\cy make next-to-last term explicit} \\
+= & k \cdot 2^{k+2} + 2 + (k+2) \cdot 2^{k+2} & \text{\cy by inductive hypothesis} \\
+= & (2k+2) \cdot 2^{k+2} + 2 & \text{\cy by combining like terms} \\
+= & 2(k+1) \cdot 2^{k+2} + 2 & \text{\cy by factoring out 2} \\
+= & (k+1) \cdot 2^{k+3} + 2 & \text{\cy by laws of exponents} 
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 0$.]}
+\end{proof}
+
+\subsection{Exercise 15}
+$\dps \sum_{i=1}^{n}i(i!) = (n+1)! - 1$, for every integer $n \geq 1$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \sum_{i=1}^{n}i(i!) = (n+1)! - 1. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $\dps \sum_{i=1}^{1}i(i!) = 1(1!) = 1$, and the right-hand side is $(1+1)! - 1 = 2 - 1 = 1$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \sum_{i=1}^{k}i(i!) = (k+1)! - 1. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \sum_{i=1}^{k+1}i(i!) = (k+2)! - 1. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\sum_{i=1}^{k+1}i(i!)$
+\[
+\begin{array}{lll}
+= & \dps \sum_{i=1}^{k}i(i!) + (k+1)(k+1)! & \text{\cy make next-to-last term explicit} \\
+= & (k+1)! - 1 + (k+1)(k+1)! & \text{\cy by inductive hypothesis} \\
+= & (k+1)![1 + (k+1)] - 1 & \text{\cy by factoring out $(k+1)!$} \\
+= & (k+1)!(k+2) - 1 & \text{\cy by algebra} \\
+= & (k+2)! - 1 & \text{\cy by definition of !}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 16}
+$\dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \cdots \left(1 - \frac{1}{n^2}\right) = \frac{n+1}{2n}$, for every integer $n \geq 2$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \cdots \left(1 - \frac{1}{n^2}\right) = \frac{n+1}{2n}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(2)$ is true:} The left-hand side of $P(2)$ is $\dps 1 - \frac{1}{2^2} = 1 - \frac{1}{4} = \frac{3}{4}$, and the right-hand side is $\dps \frac{2+1}{2 \cdot 2} = \frac{3}{4}$ also. Thus $P(2)$ is true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \cdots \left(1 - \frac{1}{k^2}\right) = \frac{k+1}{2k}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \cdots \left(1 - \frac{1}{(k+1)^2}\right) = \frac{(k+1)+1}{2(k+1)}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \ldots \left(1 - \frac{1}{(k+1)^2}\right)$
+\[
+\begin{array}{lll}
+= & \dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \cdots \left(1 - \frac{1}{k^2}\right) \left(1 - \frac{1}{(k+1)^2}\right) & \text{\cy show next-to-last term} \\
+= & \dps \frac{k+1}{2k} \cdot \left(1 - \frac{1}{(k+1)^2}\right) & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{k+1}{2k} \cdot \left(\frac{(k+1)^2}{(k+1)^2} - \frac{1}{(k+1)^2}\right) & \text{\cy because $\frac{(k+1)^2}{(k+1)^2} = 1$} \\
+= & \dps \frac{k+1}{2k} \cdot \frac{(k+1)^2 - 1}{(k+1)^2} & \text{\cy by adding fractions} \\
+= & \dps \frac{k+1}{2k} \cdot \frac{k^2+2k+1 - 1}{(k+1)^2} & \text{\cy by algebra} \\
+= & \dps \frac{k+1}{2k} \cdot \frac{k^2+2k}{(k+1)^2} & \text{\cy by algebra} \\
+= & \dps \frac{k+1}{2k} \cdot \frac{k(k+2)}{(k+1)^2} & \text{\cy by factoring out $k$} \\
+= & \dps \frac{k+1}{2} \cdot \frac{k+2}{(k+1)^2} & \text{\cy by canceling out $k$} \\
+= & \dps \frac{1}{2} \cdot \frac{k+2}{k+1} & \text{\cy by canceling out $k+1$} \\
+= & \dps \frac{k+2}{2(k+1)} & \text{\cy by multiplying fractions} 
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 2$.]}
+\end{proof}
+
+\subsection{Exercise 17}
+$\dps \prod_{i=0}^{n}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) = \frac{1}{(2n+2)!}$, for every integer $n \geq 0$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \prod_{i=0}^{n}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) = \frac{1}{(2n+2)!}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(0)$ is true:} The left-hand side of $P(0)$ is $\dps \prod_{i=0}^{0}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) = \frac{1}{2\cdot0+1} \cdot \frac{1}{2\cdot0+2} = \frac{1}{1}\cdot \frac{1}{2} = \frac{1}{2}$, and the right-hand side is $\dps \frac{1}{(2\cdot 0 +2)!} = \frac{1}{2}$ also. Thus $P(0)$ is true.
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \prod_{i=0}^{k}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) = \frac{1}{(2k+2)!}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \prod_{i=0}^{k+1}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) = \frac{1}{(2(k+1)+2)!}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \prod_{i=0}^{k+1}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right)$
+\[
+\begin{array}{lll}
+= & \dps \prod_{i=0}^{k}\left(\frac{1}{2i+1} \frac{1}{2i+2}\right) \left(\frac{1}{2(k+1)+1} \frac{1}{2(k+1)+2}\right) & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{1}{(2k+2)!} \cdot \left(\frac{1}{2(k+1)+1} \cdot \frac{1}{2(k+1)+2}\right) & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{1}{(2k+2)!} \cdot \frac{1}{2k+3} \cdot \frac{1}{2k+4} & \text{\cy by algebra} \\
+= & \dps \frac{1}{(2k+2)!\cdot(2k+3)\cdot(2k+4)} & \text{\cy by multiplying fractions} \\
+= & \dps \frac{1}{(2k+4)!} & \text{\cy by definition of factorial}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 0$.]}
+\end{proof}
+
+\subsection{Exercise 18}
+$\dps \prod_{i=2}^{n}\left(1 - \frac{1}{i}\right) = \frac{1}{n}$, for every integer $n \geq 2$.
+
+{\it Hint:} See the discussion at the beginning of this section.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \prod_{i=2}^{n}\left(1 - \frac{1}{i}\right) = \frac{1}{n}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(2)$ is true:} The left-hand side of $P(2)$ is $\dps \prod_{i=2}^{2}\left(1 - \frac{1}{i}\right) = 1 - \frac{1}{2} = \frac{1}{2}$, and the right-hand side is $\dps \frac{1}{2}$ also. Thus $P(2)$ is true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \prod_{i=2}^{k}\left(1 - \frac{1}{i}\right) = \frac{1}{k}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \prod_{i=2}^{k+1}\left(1 - \frac{1}{i}\right) = \frac{1}{k+1}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \prod_{i=2}^{k+1}\left(1 - \frac{1}{i}\right)$
+\[
+\begin{array}{lll}
+= & \dps \prod_{i=2}^{k}\left(1 - \frac{1}{i}\right) \cdot \left(1 - \frac{1}{k+1}\right) & \text{\cy make next-to-last term explicit} \\
+= & \dps \frac{1}{k} \cdot \left(1 - \frac{1}{k+1}\right) & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{1}{k} \cdot \left(\frac{k+1}{k+1} - \frac{1}{k+1}\right) & \text{\cy because $\frac{k+1}{k+1} = 1$} \\
+= & \dps \frac{1}{k} \cdot \frac{k}{k+1} & \text{\cy by adding fractions} \\
+= & \dps \frac{1}{k+1} & \text{\cy by canceling $k$}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 2$.]}
+\end{proof}
+
+\subsection{Exercise 19}
+(For students who have studied calculus) Use mathematical induction, the product rule from calculus, and the facts that $\dps \frac{d(x)}{dx} = 1$ and that $x^{k+1} = x\cdot x^k$ to prove that for every integer $\dps n \geq 1, \frac{d(x^n)}{dx} = n x^{n-1}$.
+
+\begin{proof}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \frac{d(x^n)}{dx} = n x^{n-1}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $\dps \frac{d(x^1)}{dx} = \frac{d(x)}{dx} = 1$, and the right-hand side is $1 \cdot x^{1-1} = 1$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \frac{d(x^k)}{dx} = k x^{k-1}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \frac{d(x^{k+1})}{dx} = (k+1) x^{k+1-1}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k+1)$ is $\dps \frac{d(x^{k+1})}{dx}$
+\[
+\begin{array}{lll}
+= & \dps \frac{d(x\cdot x^k)}{dx} & \text{\cy because $x^{k+1} = x\cdot x^k$} \\
+= & \dps \frac{d(x)}{dx}\cdot x^k + x\cdot\frac{d(x^k)}{dx} & \text{\cy by the product rule} \\
+= & \dps 1 \cdot x^k + x\cdot\frac{d(x^k)}{dx} & \text{\cy because $\frac{d(x)}{dx} = 1$} \\
+= & x^k + x\cdot(k x^{k-1}) & \text{\cy by inductive hypothesis} \\
+= & x^k + kx^k & \text{\cy by algebra} \\
+= & (k+1)x^k & \text{\cy by combining like terms}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+{\bf \cy Use the formula for the sum of the first $n$ integers and/or the formula for the sum of a geometric sequence to evaluate the sums in $20-29$ or to write them in closed form.}
+
+\subsection{Exercise 20}
+$4 + 8 + 12 + 16 + \cdots + 200$
+
+\begin{proof}
+$\dps 4 + 8 + 12 + 16 + \cdots + 200 = 4(1+2+\cdots+50) = 4 \cdot \frac{50 \cdot 51}{2} = 5100$
+\end{proof}
+
+\subsection{Exercise 21}
+$5 + 10 + 15 + 20 + \cdots + 300$
+
+\begin{proof}
+$\dps 5 + 10 + 15 + 20 + \cdots + 300 = 5(1+2+\cdots+60) = 5 \cdot \frac{60 \cdot 61}{2} = 9150$
+\end{proof}
+
+\subsection{Exercise 22}
+\subsubsection{(a)}
+$3 + 4 + 5 + 6 + \cdots + 1000$
+
+\begin{proof}
+$\dps 3 + 4 + 5 + 6 + \cdots + 1000 = (1+2+\cdots+1000) - (1+2) = \frac{1000 \cdot 1001}{2} - 3 = 500500-3 = 500497$
+\end{proof}
+
+\subsubsection{(b)}
+$3 + 4 + 5 + 6 + \cdots + m$
+
+\begin{proof}
+$\dps 3 + 4 + 5 + 6 + \cdots + m = (1+2+\cdots+m) - (1+2) = \frac{m(m+1)}{2} - 3$
+\end{proof}
+
+\subsection{Exercise 23}
+\subsubsection{(a)}
+$7 + 8 + 9 + 10 + \cdots + 600$
+
+\begin{proof}
+$\dps 7 + 8 + 9 + 10 + \cdots + 600 = 1 + 2 + \cdots + 600 - (1+2+3+4+5+6) = \frac{600 \cdot 601}{2} - \frac{6 \cdot 7}{2} = 18300 - 21 = 18279$
+\end{proof}
+
+\subsubsection{(b)}
+$7 + 8 + 9 + 10 + \cdots + k$
+
+\begin{proof}
+$\dps 7 + 8 + 9 + 10 + \cdots + k = 1 + 2 + \cdots + k - (1+2+3+4+5+6) = \frac{k(k+1)}{2} - 21$
+\end{proof}
+
+\subsection{Exercise 24}
+$1 + 2 + 3 + \cdots + (k - 1)$, where $k$ is any integer with $k \geq 2$.
+
+\begin{proof}
+$\dps 1 + 2 + 3 + \cdots + (k - 1) = \frac{(k-1)(k-1+1)}{2} = \frac{(k-1)k}{2}$
+\end{proof}
+
+\subsection{Exercise 25}
+$1 + 2 + 2^2 + \cdots + 2^{25}$
+
+\subsubsection{(a)}
+
+\begin{proof}
+$\dps 1 + 2 + 2^2 + \cdots + 2^{25} = \frac{2^{26} - 1}{2-1} = 2^{26} - 1$
+\end{proof}
+
+\subsubsection{(b)}
+$2 + 2^2 + 2^3 + \cdots + 2^{26}$
+
+\begin{proof}
+$2 + 2^2 + 2^3 + \cdots + 2^{26} = 2(1 + 2 + 2^2 + \cdots + 2^{25}) = 2(2^{26} - 1) = 2^{27}-2$
+\end{proof}
+
+\subsubsection{(c)}
+$2 + 2^2 + 2^3 + \cdots + 2^n$
+
+\begin{proof}
+$2 + 2^2 + 2^3 + \cdots + 2^{n} = 2(1 + 2 + 2^2 + \cdots + 2^{n-1}) = 2(2^{n} - 1) = 2^{n+1}-2$
+\end{proof}
+
+\subsection{Exercise 26}
+$3 + 3^2 + 3^3 + \cdots + 3^n$, where $n$ is any integer with $n \geq 1$.
+
+\begin{proof}
+$\dps 3 + 3^2 + 3^3 + \cdots + 3^n = 1 + 3 + 3^2 + 3^3 + \cdots + 3^n - 1 = \frac{3^{n+1}-1}{3-1} - 1 = \frac{3^{n+1}-1}{2} - 1$
+\end{proof}
+
+\subsection{Exercise 27}
+$5^3 + 5^4 + 5^5 + \cdots + 5^k$, where $k$ is any integer with $k \geq 3$.
+
+\begin{proof}
+$5^3 + 5^4 + 5^5 + \cdots + 5^k = 1 + 5 + 5^2 + 5^3 + 5^4 + 5^5 + \cdots + 5^k - (1 + 5 + 5^2) = (5^{k+1} - 1) - 31 = 5^{k+1} - 32$
+\end{proof}
+
+\subsection{Exercise 28}
+$\dps 1 + \frac{1}{2} + \frac{1}{2^2} + \cdots + \frac{1}{2^n}$, where $n$ is any positive integer.
+
+\begin{proof}
+$\dps 1 + \frac{1}{2} + \frac{1}{2^2} + \cdots + \frac{1}{2^n} = \frac{\left(\frac{1}{2}\right)^{n+1} - 1}{\frac{1}{2} - 1} = -2\left[\left(\frac{1}{2}\right)^{n+1} - 1\right] = 2 - \frac{1}{2^n}$
+\end{proof}
+
+\subsection{Exercise 29}
+$1 - 2 + 2^2 - 2^3 + \cdots + (-1)^n 2^n$, where $n$ is any positive integer.
+
+\begin{proof}
+$\dps 1 - 2 + 2^2 - 2^3 + \cdots + (-1)^n 2^n = \frac{(-2)^{n+1} - 1}{-2 - 1} = \frac{(-2)^{n+1} - 1}{-3} = \frac{1 - (-2)^{n+1}}{3}$
+\end{proof}
+
+\subsection{Exercise 30}
+Observe that $\,\,\,\dps \frac{1}{1 \cdot 3} = \dps \frac{1}{3}, \,\,\, \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} = \dps \frac{2}{5}, \,\,\, \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} = \dps \frac{3}{7}$, 
+
+$\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \frac{1}{7 \cdot 9} = \dps \frac{4}{9}$
+
+Guess a general formula and prove it by induction.
+
+\begin{proof}
+{\it General formula:} For every integer $n \geq 1$,
+\[
+\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2n-1)(2n+1)} = \frac{n}{2n+1}
+\]
+\underline{Proof by mathematical induction:}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2n-1)(2n+1)} = \frac{n}{2n+1}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $\dps \frac{1}{1 \cdot 3} = \frac{1}{3}$, and the right-hand side is $\dps \frac{1}{2 \cdot 1 + 1} = \frac{1}{3}$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2k-1)(2k+1)} = \frac{k}{2k+1}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2(k+1)-1)(2(k+1)+1)} = \frac{k+1}{2(k+1)+1}, 
+\]
+or, equivalently,
+\[
+\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2k+1)(2k+3)} = \frac{k+1}{2k+3}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2k+1) (2k+3)}$
+
+\[
+\begin{array}{lll}
+= & \dps \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \cdots + \frac{1}{(2k-1)(2k+1)} + \frac{1}{(2k+1)(2k+3)} & \text{\cy show next-to-last term} \\
+= & \dps \frac{k}{2k+1} + \frac{1}{(2k+1)(2k+3)} & \text{\cy by inductive hypothesis} \\
+= & \dps \frac{k(2k+3)}{(2k+1)(2k+3)} + \frac{1}{(2k+1)(2k+3)} & \text{\cy because $\frac{2k+3}{2k+3} = 1$} \\
+= & \dps \frac{2k^2+3k+1}{(2k+1)(2k+3)} & \text{\cy by adding fractions} \\
+= & \dps \frac{(2k+1)(k+1)}{(2k+1)(2k+3)} & \text{\cy by factoring} \\
+= & \dps \frac{k+1}{2k+3} & \text{\cy by canceling $2k+1$}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 31}
+Compute values of the product
+\[
+\left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{n}\right)
+\]
+for small values of $n$ in order to conjecture a general formula for the product. Prove your conjecture by mathematical induction.
+
+\begin{proof}
+$\dps \left(1 + \frac{1}{1}\right) = 2, \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right) = \dps 3,
+\left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) = \dps 4$.
+
+{\it General formula:} For every integer $n \geq 1$,
+\[
+\dps \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{n}\right) = n+1.
+\]
+\underline{Proof by mathematical induction:}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{n}\right) = n+1. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $1 + \frac{1}{1} = 2$, and the right-hand side is $1 + 1 = 2$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{k}\right) = k+1. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{k+1}\right) = k+2. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{k+1}\right)$
+\[
+\begin{array}{lll}
+= & \dps \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \cdots \left(1 + \frac{1}{k}\right) \left(1 + \frac{1}{k+1}\right) & \text{\cy show next-to-last term} \\
+= & \dps (k+1) \cdot \left(1 + \frac{1}{k+1}\right) & \text{\cy by inductive hypothesis} \\
+= & \dps (k+1) \cdot \left(\frac{k+1}{k+1} + \frac{1}{k+1}\right) & \text{\cy because $\frac{k+1}{k+1} = 1$} \\
+= & \dps (k+1) \cdot \frac{k+2}{k+1} & \text{\cy by adding fractions} \\
+= & k+2 & \text{\cy by canceling $k+1$}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 32}
+Observe that
+\[
+\begin{array}{rcl}
+1 & = & 1 \\
+1 - 4 & = & -(1+2) \\
+1 - 4 + 9 & = & 1+2+3 \\
+1 - 4 + 9 - 16 & = & -(1+2+3+4) \\
+1 - 4 + 9 - 16 + 25 & = & 1+2+3+4+5
+\end{array}
+\]
+Guess a general formula and prove it by mathematical induction.
+
+\begin{proof}
+{\it General formula:} For every integer $n \geq 1$,
+\[
+\dps \sum_{i=1}^n (-1)^{i+1}i^2 = (-1)^{n+1}\sum_{j=1}^{n}j = (-1)^{n+1}\frac{n(n+1)}{2}.
+\]
+\underline{Proof by mathematical induction:}
+For the given statement, the property $P(n)$ is the equation
+\[
+\dps \sum_{i=1}^n (-1)^{i+1}i^2 = (-1)^{n+1}\frac{n(n+1)}{2}. \,\,\, {\cy \from P(n)}
+\]
+{\bf Show that $P(1)$ is true:} The left-hand side of $P(1)$ is $\dps \sum_{i=1}^1 (-1)^{i+1}i^2 = (-1)^2 1^2 = 1$, and the right-hand side is $\dps (-1)^{1+1}\frac{1(1+1)}{2} = 1$ also. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose
+\[
+\dps \sum_{i=1}^k (-1)^{i+1}i^2 = (-1)^{k+1}\frac{k(k+1)}{2}. \,\,\, {\cy \from P(k) \text{: inductive hypothesis}}
+\]
+We must show that $P(k + 1)$ is true. That is, we must show that
+\[
+\dps \sum_{i=1}^{k+1} (-1)^{i+1}i^2 = (-1)^{k+2}\frac{(k+1)(k+2)}{2}. \,\,\,{\cy \from P(k+1)}
+\]
+Now the left-hand side of $P(k + 1)$ is $\dps \sum_{i=1}^{k+1} (-1)^{i+1}i^2$
+\[
+\begin{array}{lll}
+= & \dps \sum_{i=1}^{k} (-1)^{i+1}i^2 + (-1)^{k+2}(k+1)^2 & \text{\cy make next-to-last term explicit} \\
+= & \dps (-1)^{k+1}\frac{k(k+1)}{2} + (-1)^{k+2}(k+1)^2 & \text{\cy by inductive hypothesis} \\
+= & \dps (-1)^{k+1}\frac{k(k+1)}{2} + (-1)^{k+1}(-1)(k+1)^2 & \text{\cy by factoring a power of $-1$} \\
+= & \dps (-1)^{k+1}\left[\frac{k(k+1)}{2} - (k+1)^2\right] & \text{\cy by factoring out $(-1)^{k+1}$} \\
+\end{array}
+\]
+\[
+\begin{array}{lll}
+\vspace{0.2cm}
+= & \dps (-1)^{k+1}\left[\frac{k(k+1)}{2} -\frac{2(k+1)^2}{2}\right] & \text{\cy because $\frac{2}{2} = 1$} \\
+\vspace{0.2cm}
+= & \dps (-1)^{k+1}\frac{k(k+1)-2(k+1)^2}{2}  & \text{\cy by adding fractions} \\
+\vspace{0.2cm}
+= & \dps (-1)^{k+1}\frac{k^2 + k - 2(k^2 + 2k + 1)}{2} & \text{\cy by algebra} \\
+\vspace{0.2cm}
+= & \dps (-1)^{k+1}\frac{k^2 + k - 2k^2 - 4k -2}{2} & \text{\cy by algebra} \\
+\vspace{0.2cm}
+= & \dps (-1)^{k+1}\frac{-k^2 - 3k - 2}{2} & \text{\cy by algebra} \\
+\vspace{0.2cm}
+= & \dps (-1)^{k+2}\frac{k^2 + 3k + 2}{2} & \text{\cy by factoring out $(-1)$} \\
+\vspace{0.2cm}
+= & \dps (-1)^{k+2}\frac{(k+2)(k+1)}{2} & \text{\cy by factoring}
+\end{array}
+\]
+and this is the right-hand side of $P(k + 1)$. Hence $P(k + 1)$ is true. {\it [Since both the basis step and the inductive step have been proved, $P(n)$ is true for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 33}
+Find a formula in $n, a, m$, and $d$ for the sum $(a + md) + (a + (m + 1)d) + (a + (m + 2)d) + \cdots + (a + (m + n)d)$, where $m$ and $n$ are integers, $n \geq 0$, and $a$ and $d$ are real numbers. Justify your answer.
+
+\begin{proof}
+$(a + md) + (a + (m + 1)d) + (a + (m + 2)d) + \cdots + (a + (m + n)d)$
+\[
+\begin{array}{lll}
+= & \dps \sum_{i = 1}^{n} (a+(m+i)d) & \text{\cy by summation notation} \\
+= & \dps \sum_{i = 1}^{n} (a+md+id) & \text{\cy by multiplying} \\
+= & \dps \sum_{i = 1}^{n} (a+md) + \sum_{i = 1}^{n} id & \text{\cy by splitting the sum} \\
+= & \dps (a+md)\sum_{i = 1}^{n} 1 + d\sum_{i = 1}^{n} i & \text{\cy by moving out constants} \\
+= & \dps (a+md)n + d \sum_{i = 1}^{n} i & \text{\cy because $\sum_{i=1}^{n}1 = n$} \\
+= & \dps (a+md)n + d \cdot \frac{n(n+1)}{2} & \text{\cy because $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$}
+\end{array}
+\]
+\end{proof}
+
+\subsection{Exercise 34}
+Find a formula in $a, r, m$, and $n$ for the sum $ar^m + ar^{m+1} + ar^{m+2} + \cdots + ar^{m+n}$ where $m$ and $n$ are integers, $n \geq 0$, and $a$ and $r$ are real numbers. Justify your answer.
+
+\begin{proof}
+$\dps ar^m + ar^{m+1} + ar^{m+2} + \cdots + ar^{m + n} = ar^m(1 + r + r^2 + \cdots + r^n) = ar^m \cdot \frac{r^{n + 1} - 1}{r - 1}$
+\end{proof}
+
+\subsection{Exercise 35}
+You have two parents, four grandparents, eight great-grandparents, and so forth.
+
+\subsubsection{(a)}
+If all your ancestors were distinct, what would be the total number of your ancestors for the past 40 generations (counting your parents’ generation as number one)? (Hint: Use the formula for the sum of a geometric sequence.)
+
+\begin{proof}
+$\dps 2^1 + 2^2 + \cdots + 2^{40} = 2(1 + 2^1 + \cdots 2^{39}) = 2 \cdot \frac{2^{40} - 1}{2 - 1} = 2^{41} - 2$
+\end{proof}
+
+\subsubsection{(b)}
+Assuming that each generation represents 25 years, how long is 40 generations?
+
+\begin{proof}
+$25 \cdot 40 = 1000$
+\end{proof}
+
+\subsubsection{(c)}
+The total number of people who have ever lived is approximately 10 billion, which equals $10^{10}$ people. Compare this fact with the answer to part (a). What can you deduce?
+
+\begin{proof}
+$2^{41} - 2 = 2,199,023,255,550 > 10,000,000,000 = 10^{10}$ so many of my ancestors are not distinct.
+\end{proof}
+
+{\bf \cy Find the mistakes in the proof fragments in $36-38$.}
+
+\subsection{Exercise 36}
+{\bf Theorem:} For any integer $\dps n \geq 1, \,\,\, 1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}.$
+
+{\bf ``Proof (by mathematical induction):} Certainly the theorem is true for $n = 1$ because $1^2 = 1$ and $\dps \frac{1(1+1)(2+1)}{6} = 1$. So the basis step is true. For the inductive step, suppose that $k$ is any integer with $\dps k \geq 1, k^2 = \frac{k(k+1)(2k+1)}{6}$. We must show that $\dps (k+1)^2 = \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6}$.''
+
+\begin{proof}
+In the inductive step, both the inductive hypothesis and what is to be shown are wrong. The inductive hypothesis should be: 
+
+Suppose that for some integer $k \geq 1$, 
+
+\[
+\dps 1^2 + 2^2 + \cdots + k^2 = \frac{k(k+1)(2k+1)}{6}.
+\]
+
+And what is to be shown should be:
+\[
+\dps 1^2 + 2^2 + \cdots + (k + 1)^2 = \frac{(k + 1)((k + 1) + 1)(2(k+1)+1)}{6}.
+\]
+\end{proof}
+
+\subsection{Exercise 37}
+{\bf Theorem:} For any integer $n \geq 0$,
+\[
+1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1.
+\]
+{\bf ``Proof (by mathematical induction):} Let the property $P(n)$ be
+\[
+1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1.
+\]
+{\bf Show that $P(0)$ is true:} \\
+The left-hand side of $P(0)$ is $1 + 2 + 2^2 + \cdots + 2^0 = 1$ and the right-hand side is $2^{0+1} - 1 = 2 - 1 = 1$ also. So $P(0)$ is true.''
+
+{\it Hint:} See the Caution note in Section 5.1, page 262.
+
+\begin{proof}
+The left-hand side of $P(0)$ is wrong; it should be simply $1$ instead of $1 + 2 + 2^2 + \cdots + 2^0$.
+\end{proof}
+
+\subsection{Exercise 38}
+{\bf Theorem:} For any integer $n \geq 1$,
+\[
+\sum_{i=1}^{n}i(i!) = (n+1)! - 1.
+\]
+{\bf ``Proof (by mathematical induction):} Let the property $P(n)$ be
+\[
+1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1.
+\]
+{\bf Show that $P(1)$ is true:} When $n = 1$,
+\[
+\sum_{i=1}^{1}i(i!) = (1+1)! - 1.
+\]
+So $1(1!) = 2! - 1$, and $1 = 1$. Thus $P(1)$ is true.
+
+{\it Hint:} See the subsection Proving an Equality on page 284 in Section 5.2.
+
+\begin{proof}
+For $P(1)$ this proof is assuming what is to be shown. The equality \\ $\dps \sum_{i=1}^{1}i(i!) = (1+1)! - 1$ is $P(1)$ which is what we need to show, but the proof assumes that this is true, then does operations on both sides to reach a true conclusion $1 = 1$. This proves that if $P(1)$ is true, then $1 = 1$ is true, but that does not prove $P(1)$ is true.
+\end{proof}
+
+\subsection{Exercise 39}
+Use Theorem 5.2.1 to prove that if $m$ and $n$ are any positive integers and $m$ is odd, then $\dps \sum_{k=0}^{m-1}(n+k)$ is divisible by $m$. Does the conclusion hold if $m$ is even? Justify your answer.
+
+\begin{proof}
+$\dps \sum_{k=0}^{m-1}(n+k) = \sum_{k=0}^{m-1}n + \sum_{k=0}^{m-1}k = n\sum_{k=0}^{m-1}1 + (0 + \sum_{k=1}^{m-1}k) = nm + \frac{(m-1)(m-1+1)}{2}$
+
+$\dps = nm + \frac{(m-1)m}{2} = m(n + (m-1)/2)$ which is divisible by $m$ if and only if $n + (m-1)/2$ is an integer, if and only if $m-1$ is even, if and only if $m$ is odd. So the statement is true when $m$ is odd and false when $m$ is even.
+\end{proof}
+
+\subsection{Exercise 40}
+Use Theorem 5.2.1 and the result of Exercise 10 to prove that if $p$ is any prime number with $p \geq 5$, then the sum of the squares of any $p$ consecutive integers is divisible by $p$.
+
+\begin{proof}
+Assume $p$ is any prime number with $p \geq 5$. Assume $n$ is any integer and consider the $p$ consecutive integers $n, n+1, \ldots, n+p-1$. {\it [We want to show $n^2 + (n+1)^2 + \cdots + (n+p-1)^2$ is divisible by $p$.]} Then
+
+$n^2 + (n+1)^2 + (n+2)^2 + \cdots + (n+p-1)^2$
+\[
+\begin{array}{lll}
+= & n^2 + (n^2 + 2n + 1) + (n^2 + 2n \cdot 2 + 2^2) + \cdots + (n^2 + 2n(p-1) + (p-1)^2) \\
+= & pn^2 + 2n(1 + 2 + \cdots + (p-1)) + (1^2 + 2^2 + \cdots + (p-1)^2) \\
+= & \dps pn^2 + 2n \cdot \frac{(p-1)(p-1+1)}{2} + \frac{(p-1)(p-1+1)(2(p-1)+1)}{6} \\
+= & \dps pn^2 + n(p-1)p + \frac{(p-1)p(2p-1)}{6}
+\end{array}
+\]
+We know that the sum of squares formula gives us an integer, so $\dps \frac{(p-1)p(2p-1)}{6}$ is an integer. Since $p \geq 5$ is a prime, it is not divisible by 6, therefore $\dps\frac{(p-1)(2p-1)}{6}$ is an integer. So
+\[
+\begin{array}{lll}
+= & \dps pn^2 + n(p-1)p + p\frac{(p-1)(2p-1)}{6} \\
+= & \dps p\left[n^2 + n(p-1) + \frac{(p-1)(2p-1)}{6}\right] 
+\end{array}
+\]
+is divisible by $p$.
+\end{proof}
 
 \end{document}
