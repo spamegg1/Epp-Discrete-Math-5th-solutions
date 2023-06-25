@@ -24,6 +24,9 @@
 \newcommand{\fa}{\forall}
 \newcommand{\te}{\exists}
 \newcommand{\cy}{\color{cyan}}
+
+\newcommand{\colsq}[1]{{\color{#1} $\blacksquare$}}
+
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
 
@@ -879,6 +882,7 @@ $r[4]$&&&&&&1 \\
 
 \subsection{Exercise 85}
 28
+
 \begin{proof}
 \begin{center}
 \arrayrulecolor{cyan}
@@ -1250,7 +1254,6 @@ Because $5(k + 1) - 4 = 5k+1$ and $5(k + 1) - 3 = 5k+2$, this is equivalent to s
 1 + 6 + 11 + 16 + \cdots + (5k+1) = \frac{(k+1)(5k+2)}{2}. \,\, {\cy \from P(k + 1)}
 \]
 Now the left-hand side of $P(k + 1)$ is $1 + 6 + 11 + 16 + \cdots + (5k+1)$
-
 \[
 \begin{array}{lll}
 = & \dps 1 + 6 + 11 + 16 + \cdots + (5k-4) + (5k+1)  & \text{\cy make next-to-last term explicit} \\
@@ -1403,6 +1406,7 @@ We must show that $P(k + 1)$ is true. That is, we must show that
 \dps 1^3 + 2^3 + \cdots + (k+1)^3 = \left[\frac{(k+1)(k+2)}{2}\right]^2. \,\,\,{\cy \from P(k+1)}
 \]
 Now the left-hand side of $P(k + 1)$ is $1^3 + 2^3 + \cdots + (k+1)^3$
+
 \[
 \begin{array}{lll}
 = & 1^3 + 2^3 + \cdots + k^3+ (k+1)^3 & \text{\cy make next-to-last term explicit} \\
@@ -1440,6 +1444,7 @@ We must show that $P(k + 1)$ is true. That is, we must show that
 \dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{(k+1)((k+1)+1)} = \frac{k+1}{(k+1)+1}. \,\,\,{\cy \from P(k+1)}
 \]
 Now the left-hand side of $P(k + 1)$ is $\dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{(k+1)(k+2)}$
+
 \[
 \begin{array}{lll}
 = & \dps \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k(k+1)} + \frac{1}{(k+1)(k+2)} & \text{\cy make next-to-last term explicit} \\
@@ -1549,7 +1554,8 @@ We must show that $P(k + 1)$ is true. That is, we must show that
 \[
 \dps \sum_{i=1}^{k+1}i(i!) = (k+2)! - 1. \,\,\,{\cy \from P(k+1)}
 \]
-Now the left-hand side of $P(k + 1)$ is $\sum_{i=1}^{k+1}i(i!)$
+Now the left-hand side of $P(k + 1)$ is $\dps \sum_{i=1}^{k+1}i(i!)$
+
 \[
 \begin{array}{lll}
 = & \dps \sum_{i=1}^{k}i(i!) + (k+1)(k+1)! & \text{\cy make next-to-last term explicit} \\
@@ -1588,7 +1594,11 @@ Now the left-hand side of $P(k + 1)$ is $\dps \left(1 - \frac{1}{2^2}\right)\lef
 = & \dps \left(1 - \frac{1}{2^2}\right)\left(1 - \frac{1}{3^2}\right) \cdots \left(1 - \frac{1}{k^2}\right) \left(1 - \frac{1}{(k+1)^2}\right) & \text{\cy show next-to-last term} \\
 = & \dps \frac{k+1}{2k} \cdot \left(1 - \frac{1}{(k+1)^2}\right) & \text{\cy by inductive hypothesis} \\
 = & \dps \frac{k+1}{2k} \cdot \left(\frac{(k+1)^2}{(k+1)^2} - \frac{1}{(k+1)^2}\right) & \text{\cy because $\frac{(k+1)^2}{(k+1)^2} = 1$} \\
-= & \dps \frac{k+1}{2k} \cdot \frac{(k+1)^2 - 1}{(k+1)^2} & \text{\cy by adding fractions} \\
+= & \dps \frac{k+1}{2k} \cdot \frac{(k+1)^2 - 1}{(k+1)^2} & \text{\cy by adding fractions}
+\end{array}
+\]
+\[
+\begin{array}{lll}
 = & \dps \frac{k+1}{2k} \cdot \frac{k^2+2k+1 - 1}{(k+1)^2} & \text{\cy by algebra} \\
 = & \dps \frac{k+1}{2k} \cdot \frac{k^2+2k}{(k+1)^2} & \text{\cy by algebra} \\
 = & \dps \frac{k+1}{2k} \cdot \frac{k(k+2)}{(k+1)^2} & \text{\cy by factoring out $k$} \\
@@ -1621,6 +1631,7 @@ We must show that $P(k + 1)$ is true. That is, we must show that
 \dps \prod_{i=0}^{k+1}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) = \frac{1}{(2(k+1)+2)!}. \,\,\,{\cy \from P(k+1)}
 \]
 Now the left-hand side of $P(k + 1)$ is $\dps \prod_{i=0}^{k+1}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right)$
+
 \[
 \begin{array}{lll}
 = & \dps \prod_{i=0}^{k}\left(\frac{1}{2i+1} \frac{1}{2i+2}\right) \left(\frac{1}{2(k+1)+1} \frac{1}{2(k+1)+2}\right) & \text{\cy make next-to-last term explicit} \\
@@ -1656,6 +1667,7 @@ We must show that $P(k + 1)$ is true. That is, we must show that
 \dps \prod_{i=2}^{k+1}\left(1 - \frac{1}{i}\right) = \frac{1}{k+1}. \,\,\,{\cy \from P(k+1)}
 \]
 Now the left-hand side of $P(k + 1)$ is $\dps \prod_{i=2}^{k+1}\left(1 - \frac{1}{i}\right)$
+
 \[
 \begin{array}{lll}
 = & \dps \prod_{i=2}^{k}\left(1 - \frac{1}{i}\right) \cdot \left(1 - \frac{1}{k+1}\right) & \text{\cy make next-to-last term explicit} \\
@@ -1692,7 +1704,11 @@ Now the left-hand side of $P(k+1)$ is $\dps \frac{d(x^{k+1})}{dx}$
 \[
 \begin{array}{lll}
 = & \dps \frac{d(x\cdot x^k)}{dx} & \text{\cy because $x^{k+1} = x\cdot x^k$} \\
-= & \dps \frac{d(x)}{dx}\cdot x^k + x\cdot\frac{d(x^k)}{dx} & \text{\cy by the product rule} \\
+= & \dps \frac{d(x)}{dx}\cdot x^k + x\cdot\frac{d(x^k)}{dx} & \text{\cy by the product rule}
+\end{array}
+\]
+\[
+\begin{array}{lll}
 = & \dps 1 \cdot x^k + x\cdot\frac{d(x^k)}{dx} & \text{\cy because $\frac{d(x)}{dx} = 1$} \\
 = & x^k + x\cdot(k x^{k-1}) & \text{\cy by inductive hypothesis} \\
 = & x^k + kx^k & \text{\cy by algebra} \\
@@ -2113,14 +2129,52 @@ is divisible by $p$.
 Use mathematical induction (and the proof of proposition 5.3.1 as a model) to show that any amount of money of at least 14¢ can be made up using 3¢ and 8¢ coins.
 
 \begin{proof}
+Let the property $P(n)$ be the sentence “$n$ cents can be obtained by using 3-cent and 8-cent coins.” 
 
+We will show that $P(n)$ is true for every integer $n \geq 14$. 
+
+{\bf Show that $P(14)$ is true:} Fourteen cents can be obtained by using two 3-cent coins and one 8-cent coin.
+
+{\bf Show that for every integer $k \geq 14$, if $P(k)$ is true then $P(k + 1)$ is also true:} 
+
+Suppose $k$ is any integer with $k \geq 14$ such that $k$ cents can be obtained using 3-cent and 8-cent coins {\it [Inductive hypothesis]}. 
+
+We must show that $k + 1$ cents can be obtained using 3-cent and 8-cent coins. 
+
+If the $k$ cents includes an 8-cent coin, replace it by three 3-cent coins to obtain a total of $k + 1$ cents. 
+
+Otherwise the $k$ cents consists of 3-cent coins exclusively, and so there must be least five 3-cent coins (since the total amount is at least 14 cents). 
+
+In this case, replace five of the 3-cent coins by two 8-cent coin to obtain a total of $k + 1$ cents. Thus, in either case, $k + 1$ cents can be obtained using 3-cent and 8-cent coins. {\it [This is what we needed to show.]}
+
+{\it [Since we have proved the basis step and the inductive step, we conclude that the given statement is true for every integer $n \geq 14$.]}
 \end{proof}
 
 \subsection{Exercise 2}
 Use mathematical induction to show that any postage of at least 12¢ can be obtained using 3¢ and 7¢ stamps.
 
 \begin{proof}
+Let the property $P(n)$ be the sentence “$n$ cents of postage can be obtained by using 3-cent and 7-cent stamps.” 
 
+We will show that $P(n)$ is true for every integer $n \geq 12$. 
+
+{\bf Show that $P(12)$ is true:} 12 cents of postage can be obtained by using four 3-cent stamps.
+
+{\bf Show that for every integer $k \geq 12$, if $P(k)$ is true then $P(k + 1)$ is also true:} 
+
+Suppose $k$ is any integer with $k \geq 12$ such that $k$ cents of postage can be obtained using 3-cent and 7-cent stamps {\it [Inductive hypothesis]}. 
+
+We must show that $k + 1$ cents of postage can be obtained using 3-cent and 7-cent stamps. 
+
+If the $k$ cents of postage includes at least two 3-cent stamps, replace them by one 7-cent stamp to obtain a total of $k + 1$ cents of postage. 
+
+Otherwise the $k$ cents of postage consists of zero or one 3-cent stamp and the rest is all 7-cent stamps.
+
+In this case, there must be at least two 7-cent stamps (since the total postage is at least 12 cents and $12 - 3 = 9 > 7$). Then replace these two 7-cent stamps (which total 14) with five 3-cent stamps (which total 15) to obtain $k+1$ cents of postage. 
+
+{\it [This is what we needed to show.]}
+
+{\it [Since we have proved the basis step and the inductive step, we conclude that the given statement is true for every integer $n \geq 12$.]}
 \end{proof}
 
 \subsection{Exercise 3}
@@ -2130,46 +2184,65 @@ Stamps are sold in packages containing either 5 stamps or 8 stamps.
 Show that a person can obtain 5, 8, 10, 13, 15, 16, 20, 21, 24, or 25 stamps by buying a collection of 5-stamp packages and 8-stamp packages.
 
 \begin{proof}
+$5 = 5 \cdot 1, 8 = 8 \cdot 1, 10 = 5 \cdot 2, 13 = 5 + 8 = 5 \cdot 1 + 8 \cdot 1, 15 = 5 \cdot 3, 16 = 8 \cdot 2, 20 = 5 \cdot 4, 21 = 5 + 16 = 5 \cdot 1 + 8 \cdot 2, 24 = 8 \cdot 3, 25 = 5 \cdot 5$.
 
+So in each case a person can get the required number of stamps by buying a collection of 5-stamp packages and 8-stamp packages.
 \end{proof}
 
 \subsubsection{(b)}
 Use mathematical induction to show that any quantity of at least 28 stamps can be obtained by buying a collection of 5-stamp packages and 8-stamp packages.
 
 \begin{proof}
+Let the property $P(n)$ be the sentence “a quantity of $n$ stamps can be obtained by buying a collection of 5-stamp packages and 8-stamp packages.” 
 
+We will show that $P(n)$ is true for every integer $n \geq 28$. 
+
+{\bf Show that $P(28)$ is true:} $28 = 20 + 8 = 5 \cdot 4 + 8 \cdot 1$, so 28 stamps can be obtained by buying four 5-stamp packages and one 8-stamp package. 
+
+{\bf Show that for every integer $k \geq 28$, if $P(k)$ is true then $P(k + 1)$ is also true:} 
+
+Suppose $k$ is any integer with $k \geq 28$ such that $k$ stamps can be obtained by buying 5-stamp and 8-stamp packages {\it [Inductive hypothesis]}. 
+
+We must show that $k + 1$ stamps can be obtained by buying 5-stamp and 8-stamp packages. 
+
+If the $k$ stamps contain at least three 5-stamp packages (which total 15), then replace them with two 8-stamp packages (which total 16) to obtain $k+1$ stamps.
+
+Otherwise the $k$ stamps contain at most two 5-stamp packages, and the rest is made up of 8-stamp packages. At most two 5-stamp packages total at most 10 stamps. Since there are at least 28 stamps, this leaves 18 stamps (out of $k$ stamps) unaccounted. Since $8 \cdot 2  = 16 < 18 < 24 = 8 \cdot 3$, there must be at least three 8-stamp packages.
+
+Then replace three 8-stamp packages (which total 24) with five 5-stamp packages (which total 25) in order to obtain $k+1$ stamps. {\it [This is what we needed to show.]}
+
+{\it [Since we have proved the basis step and the inductive step, we conclude that the given statement is true for every integer $n \geq 28$.]}
 \end{proof}
 
 \subsection{Exercise 4}
-For each positive integer $n$, let $P(n)$ be the sentence
-that describes the following divisibility property: $5^n - 1$ is divisible by 4.
+For each positive integer $n$, let $P(n)$ be the sentence that describes the following divisibility property: $5^n - 1$ is divisible by 4.
 
 \subsubsection{(a)}
 Write $P(0)$. Is $P(0)$ true?
 
 \begin{proof}
-
+$P(0)$ is ``$5^0 - 1$ is divisible by 4''. It's true since $5^0 - 1 = 1 - 1 = 0 = 4 \cdot 0$.
 \end{proof}
 
 \subsubsection{(b)}
 Write $P(k)$.
 
 \begin{proof}
-
+$P(k)$ is ``$5^k - 1$ is divisible by 4''.
 \end{proof}
 
 \subsubsection{(c)}
 Write $P(k + 1)$.
 
 \begin{proof}
-
+$P(k+1)$ is ``$5^{k+1} - 1$ is divisible by 4''.
 \end{proof}
 
 \subsubsection{(d)}
 In a proof by mathematical induction that this divisibility property holds for every integer $n \geq 0$, what must be shown in the inductive step?
 
 \begin{proof}
-
+{\it Must show:} If $k$ is any integer such that $k \geq 0$ and $5^k - 1$ is divisible by 4, then $5^{k+1} - 1$ is divisible by 4.
 \end{proof}
 
 \subsection{Exercise 5}
@@ -2180,28 +2253,28 @@ $2^n < (n + 1)!$.
 Write $P(2)$. Is $P(2)$ true?
 
 \begin{proof}
-
+$P(2)$ is ``$2^2 < (2+1)!$''. It's true because $2^2 = 4 < 6 = 3! = (2+1)!$.
 \end{proof}
 
 \subsubsection{(b)}
 Write $P(k)$.
 
 \begin{proof}
-
+$P(k)$ is ``$2^k < (k + 1)!$''.
 \end{proof}
 
 \subsubsection{(c)}
 Write $P(k + 1)$.
 
 \begin{proof}
-
+$P(k + 1)$ is ``$2^{k + 1} < ((k + 1) + 1)!$''.
 \end{proof}
 
 \subsubsection{(d)}
 In a proof by mathematical induction that this inequality holds for every integer $n \geq 2$, what must be shown in the inductive step?
 
 \begin{proof}
-
+{\it Must show:} If $k$ is any integer such that $k \geq 2$ and $2^k < (k + 1)!$, then $2^{k + 1} < ((k + 1) + 1)!$.
 \end{proof}
 
 \subsection{Exercise 6}
@@ -2213,13 +2286,21 @@ Any checkerboard with dimensions $2 \times 3n$ can be completely covered with L-
 Write $P(1)$. Is $P(1)$ true?
 
 \begin{proof}
-
+P(1) is the sentence “Any checkerboard with
+dimensions 2 3 3 can be completely covered with
+L-shaped trominoes.” The following diagram shows
+that P(1) is true:
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.3.6.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 Write $P(k)$.
 
 \begin{proof}
+$P(k)$ is the sentence “Any checkerboard with dimensions $2 \times 3k$ can be completely covered with L-shaped trominoes.”
 
 \end{proof}
 
@@ -2227,47 +2308,47 @@ Write $P(k)$.
 Write $P(k + 1)$.
 
 \begin{proof}
-
+$P(k + 1)$ is the sentence “Any checkerboard with dimensions $2 \times 3(k + 1)$ can be completely covered with L-shaped trominoes.”
 \end{proof}
 
 \subsubsection{(d)}
 In a proof by mathematical induction that $P(n)$ is true for each integer $n \geq 1$, what must be shown in the inductive step?
 
 \begin{proof}
-
+The inductive step requires showing that for every integer $k \geq 1$, if any checkerboard with dimensions $2 \times 3k$ can be completely covered with L-shaped trominoes, then any checkerboard with dimensions $2 \times 3(k + 1)$ can be completely covered with L-shaped trominoes.
 \end{proof}
 
 \subsection{Exercise 7}
 For each positive integer $n$, let $P(n)$ be the sentence:
 
-In any round-robin tournament involving $n$ teams, the teams can be labeled $T_1, T_2, T_3, \ldots$, $T_n$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2, \ldots, n$.
+In any round-robin tournament involving $n$ teams, the teams can be labeled $T_1, T_2, T_3, \ldots$, $T_n$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2, \ldots, n - 1$.
 
 \subsubsection{(a)}
 Write $P(2)$. Is $P(2)$ true?
 
 \begin{proof}
-
+$P(2)$ is the sentence ``In any round-robin tournament involving $2$ teams, the teams can be labeled $T_1, T_2$, so that $T_1$ beats $T_{2}$.'' It is true by Exercise 36 later.
 \end{proof}
 
 \subsubsection{(b)}
 Write $P(k)$.
 
 \begin{proof}
-
+$P(k)$ is the sentence ``In any round-robin tournament involving $k$ teams, the teams can be labeled $T_1, T_2, T_3, \ldots$, $T_k$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2, \ldots, k$.''
 \end{proof}
 
 \subsubsection{(c)}
 Write $P(k + 1)$.
 
 \begin{proof}
-
+$P(k + 1)$ is the sentence ``In any round-robin tournament involving $k + 1$ teams, the teams can be labeled $T_1, T_2, T_3, \ldots$, $T_{k + 1}$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2, \ldots, k + 1$.''
 \end{proof}
 
 \subsubsection{(d)}
 In a proof by mathematical induction that $P(n)$ is true for each integer $n \geq 2$, what must be shown in the inductive step?
 
 \begin{proof}
-
+The inductive step requires showing that for every integer $k \geq 2$, if in any round-robin tournament involving $k$ teams, the teams can be labeled $T_1, T_2, T_3, \ldots$, $T_k$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2, \ldots, k$, then in any round-robin tournament involving $k + 1$ teams, the teams can be labeled $T_1, T_2, T_3, \ldots$, $T_{k + 1}$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2, \ldots, k + 1$.
 \end{proof}
 
 {\bf \cy Prove each statement in $8-23$ by mathematical induction.}
@@ -2276,98 +2357,336 @@ In a proof by mathematical induction that $P(n)$ is true for each integer $n \ge
 $5^n - 1$ is divisible by 4, for every integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$5^n - 1$ is divisible by 4.” 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$5^0 - 1$ is divisible by 4.” Now $5^0 - 1 = 1 - 1 = 0$, and 0 is divisible by 4 because $0 = 4 \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $5^k - 1$ is divisible by 4. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $5^{k + 1} - 1$ is divisible by 4. Now 
+
+$5^{k + 1} - 1 = 5^k \cdot 5 - 1 = 5^k \cdot (4 + 1) - 1 = 5^k \cdot 4 + (5^k - 1)$. (*) 
+
+By the inductive hypothesis, $5^k - 1$ is divisible by 4, and so $5^k - 1 = 4r$ for some integer $r$. Substitute $4r$ in place of $5^k - 1$ in equation (*), to obtain 
+
+$5^{k + 1} - 1 = 5^k \cdot 4 + 4r = 4(5^k + r)$. 
+
+But $5^k + r$ is an integer because $k$ and $r$ are integers. Hence, by definition of divisibility, $5^{k + 1} - 1$ is divisible by 4 {\it [as was to be shown]}. 
+
+{\it An alternative proof of the inductive step goes as follows:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose that $5^k - 1$ is divisible by 4. Then $5^k - 1 = 4r$ for some integer $r$, and hence $5^k = 4r + 1$. It follows that $5^{k + 1} = 5k \cdot 5 = (4r + 1) \cdot 5 = 20r + 5$. Subtracting 1 from both sides gives that $5^{k + 1} - 1 = 20r + 4 = 4(5r + 1)$. Now since $5r + 1$ is an integer, by definition of divisibility, $5^{k + 1} - 1$ is divisible by 4.
 \end{proof}
 
 \subsection{Exercise 9}
 $7^n - 1$ is divisible by 6, for each integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$7^n - 1$ is divisible by 6.” 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$7^0 - 1$ is divisible by 6.” Now $7^0 - 1 = 1 - 1 = 0$, and 0 is divisible by 6 because $0 = 6 \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $7^k - 1$ is divisible by 6. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $7^{k + 1} - 1$ is divisible by 6. Now 
+
+$7^{k + 1} - 1 = 7^k \cdot 7 - 1 = 7^k \cdot (6 + 1) - 1 = 7^k \cdot 6 + (7^k - 1)$. (*) 
+
+By the inductive hypothesis, $7^k - 1$ is divisible by 6, and so $7^k - 1 = 6r$ for some integer $r$. Substitute $6r$ in place of $7^k - 1$ in equation (*), to obtain 
+
+$7^{k + 1} - 1 = 7^k \cdot 6 + 6r = 6(7^k + r)$. 
+
+But $7^k + r$ is an integer because $k$ and $r$ are integers. Hence, by definition of divisibility, $7^{k + 1} - 1$ is divisible by 6 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 10}
 $n^3 - 7n + 3$ is divisible by 3, for each integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$n^3 - 7n + 3$ is divisible by 3.” 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$0^3 - 7 \cdot 0 + 3$ is divisible by 3.” Now $0^3 - 7 \cdot 0 + 3 = 3$, and 3 is divisible by 3 because $3 = 1 \cdot 3$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $k^3 - 7k + 3$ is divisible by 3. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $(k+1)^3 - 7(k+1) + 3$ is divisible by 3. Now 
+
+$(k+1)^3 - 7(k+1) + 3 = k^3 + 3k^2 + 3k + 1 - 7k - 7 + 3 = (k^3 - 7k + 3) + 3(k^2 + k - 2)$. (*) 
+
+By the inductive hypothesis, $k^3 - 7k + 3$ is divisible by 3, and so $k^3 - 7k + 3 = 3r$ for some integer $r$. Substitute $3r$ in place of $k^3 - 7k + 3$ in equation (*), to obtain 
+
+$(k+1)^3 - 7(k+1) + 3 = 3r + 3(k^2 + k - 2) = 3(r + k^2 + k - 2)$. 
+
+But $r + k^2 + k - 2$ is an integer because $k$ and $r$ are integers. Hence, by definition of divisibility, $(k+1)^3 - 7(k+1) + 3$ is divisible by 3 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 11}
 $3^{2n} - 1$ is divisible by 8, for each integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$3^{2n} - 1$ is divisible by 8.” 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$3^{2 \cdot 0} - 1$ is divisible by 8.” Now $3^{2 \cdot 0} - 1 = 1 - 1 = 0$, and 0 is divisible by 8 because $0 = 8 \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $3^{2k} - 1$ is divisible by 8. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $3^{2(k+1)} - 1$ is divisible by 8. Now 
+
+$3^{2(k+1)} - 1 = 3^{2k+2} - 1 = 3^{2k} \cdot 3^2 - 1 = 3^{2k} \cdot 9 - 1 = 3^{2k} \cdot (8+1) - 1 = 3^{2k} \cdot 8 + 3^{2k} - 1$. (*) 
+
+By the inductive hypothesis, $3^{2k} - 1$ is divisible by 8, and so $3^{2k} - 1 = 8r$ for some integer $r$. Substitute $8r$ in place of $3^{2k} - 1$ in equation (*), to obtain 
+
+$3^{2(k+1)} - 1 = 3^{2k} \cdot 8 + 8r = 8(3^{2k} + r)$. 
+
+But $3^{2k} + r$ is an integer because $k$ and $r$ are integers. Hence, by definition of divisibility, $3^{2(k+1)} - 1$ is divisible by 8 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 12}
 For any integer $n \geq 0$, $7^n - 2^n$ is divisible by 5.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$7^n - 2^n$ is divisible by 5.” 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$7^0 - 2^0$ is divisible by 5.” Now $7^0 - 2^0 = 1 - 1 = 0$, and 0 is divisible by 5 because $0 = 5 \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $7^k - 2^k$ is divisible by 5. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $7^{k+1} - 2^{k+1}$ is divisible by 5. Now 
+
+$7^{k+1} - 2^{k+1} = 7 \cdot 7^k - 2 \cdot 2^k = (5+2) \cdot 7^k - 2 \cdot 2^k = 5 \cdot 7^k + 2(7^k - 2^k)$. (*) 
+
+By the inductive hypothesis, $7^k - 2^k$ is divisible by 5, and so $7^k - 2^k = 5r$ for some integer $r$. Substitute $5r$ in place of $7^k - 2^k$ in equation (*), to obtain 
+
+$7^{k+1} - 2^{k+1} = 5 \cdot 7^k + 2(5r) = 5(7^k + 2r)$. 
+
+But $7^k + 2r$ is an integer because $k$ and $r$ are integers. Hence, by definition of divisibility, $7^{k+1} - 2^{k+1}$ is divisible by 5 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 13}
 For any integer $n \geq 0, x^n - y^n$ is divisible by $x - y$, where $x$ and $y$ are any integers with $x \neq y$.
 
-\begin{proof}
+{\it Hint:} $x^{k+1} - y^{k+1} = x^{k+1} - xy^k + xy^k - y^{k+1} = x(x^k - y^k) + y^k(x-y)$.
 
+\begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$x^n - y^n$ is divisible by $x - y$.” 
+
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$x^0 - y^0$ is divisible by $x - y$..” Now $x^0 - y^0 = 1 - 1 = 0$, and 0 is divisible by $x - y$ because $0 = (x-y) \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $x^k - y^k$ is divisible by $x-y$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $7^{k+1} - 2^{k+1}$ is divisible by $x-y$. Now 
+
+$x^{k+1} - y^{k+1} = x^{k+1} - xy^k + xy^k - y^{k+1} = x(x^k - y^k) + y^k(x-y)$. (*) 
+
+By the inductive hypothesis, $x^k - y^k$ is divisible by $x-y$, and so $x^k - y^k = (x-y)r$ for some integer $r$. Substitute $(x-y)r$ in place of $x^k - y^k$ in equation (*), to obtain 
+
+$x^{k+1} - y^{k+1} = x(x - y)r + y^k(x-y) = (x-y)[xr + y^k]$. 
+
+But $xr + y^k$ is an integer because $k, x, y$ and $r$ are integers. Hence, by definition of divisibility, $x^{k+1} - y^{k+1}$ is divisible by $x - y$ {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 14}
 $n^3 - n$ is divisible by 6, for each integer $n \geq 0$.
 
-\begin{proof}
+{\it Hint 1:} $(k + 1)^3 - (k + 1) = k^3 + 3k^2 + 3k + 1 - k - 1 = (k^3 - k) + 3k^2 + 3k = (k^3 - k) + 3k(k + 1)$.
 
+{\it Hint 2:} $k(k + 1)$ is a product of two consecutive integers. By Theorem 4.5.2, one of these must be even.
+
+\begin{proof}
+{\it Note:} It is possible to prove this without mathematical induction, because $n^3 - n = n(n^2 - 1) = n(n-1)(n+1)$ is the product of 3 consecutive integers. Therefore one of them is divisible by 3, and one of them is even, hence their product is divisible by 6.
+
+For the given statement, the property $P(n)$ is the sentence “$n^3 - n$ is divisible by 6.” 
+
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$n^3 - n$ is divisible by 6.” Now $0^3 - 0 = 0 - 0 = 0$, and 0 is divisible by 6 because $0 = 6 \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $k^3 - k$ is divisible by 6. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $(k+1)^3 - (k+1)$ is divisible by 6. Now 
+
+$(k + 1)^3 - (k + 1) = k^3 + 3k^2 + 3k + 1 - k - 1 = (k^3 - k) + 3k(k + 1)$. (*)
+
+By the inductive hypothesis, $k^3 - k$ is divisible by 6, and so $k^3 - k = 6r$ for some integer $r$. Moreover $k(k+1)$ is even by Theorem 4.5.2, so $k(k+1) = 2s$ for some integer $s$. Substitute $6r$ in place of $k^3 - k$ and $2s$ in place of $k(k+1)$ in equation (*), to obtain 
+
+$(k + 1)^3 - (k + 1) = 6r + 3(2s) = 6r + 6s = 6(r+s)$.
+
+But $r+s$ is an integer because $r$ and $s$ are integers. Hence, by definition of divisibility, $(k + 1)^3 - (k + 1)$ is divisible by 6 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 15}
 $n(n^2 + 5)$ is divisible by 6, for each integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the sentence “$n(n^2 + 5)$ is divisible by 6.” 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ is the sentence “$0(0^2 + 5)$ is divisible by 6.” Now $0(0^2 + 5) = 0$, and 0 is divisible by 6 because $0 = 6 \cdot 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $k(k^2 + 5)$ is divisible by 6. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $(k+1)((k+1)^2 + 5)$ is divisible by 6. Now 
+
+$(k+1)((k+1)^2 + 5) = (k+1)^3 + 5(k+1) = k^3 + 3k^2 + 3k + 1 + 5k + 5 =$
+
+$= (k^3 + 5k) + (3k^2 + 3k + 6) = k(k^2 + 5) + 3(k^2 + k + 2) = k(k^2 + 5) + 3(k(k+1) + 2)$. (*)
+
+By the inductive hypothesis, $k(k^2 + 5)$ is divisible by 6, and so $k(k^2 + 5) = 6r$ for some integer $r$. Moreover $k(k+1)$ is even by Theorem 4.5.2, so $k(k+1) = 2s$ for some integer $s$. Substitute $6r$ in place of $k(k^2 + 5)$ and $2s$ in place of $k(k+1)$ in equation (*), to obtain 
+
+$(k+1)((k+1)^2 + 5) = 6r + 3(2s + 2) = 6r + 6s + 6 = 6(r + s + 1)$.
+
+But $r + s + 1$ is an integer because $r$ and $s$ are integers. Hence, by definition of divisibility, $(k + 1)((k + 1)^2 + 5)$ is divisible by 6 {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 16}
 $2^n < (n + 1)!$, for every integer $n \geq 2$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $2^n < (n + 1)!$. 
 
+{\bf Show that $P(2)$ is true:} 
+
+$P(2)$ says that $2^2 < (2 + 1)!$. The left-hand side is $2^2 = 4$ and the right-hand side is $(2+1)! = 3! = 6$. So, because $4 < 6$, $P(2)$ is true. 
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose $2^k < (k + 1)!$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $2^{k+1} < ((k+1) + 1)!$, or, equivalently, $2^{k+1} < (k + 2)!$. By the laws of exponents and the induction hypothesis,
+\[
+2^{k+1} = 2 \cdot 2^k < 2(k+1)!.
+\]
+Since $k \geq 2$, then $2 < k+2$, so
+\[
+2^{k+1} = 2 \cdot 2^k < 2(k+1)! < (k+2)(k+1)! = (k+2)!.
+\]
+So $2^{k+1} < (k+2)!$ {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 17}
 $1 + 3n \leq 4^n$, for every integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $1 + 3n \leq 4^n$. 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ says that $1 + 3 \cdot 0 \leq 4^0$. The left-hand side is $1 + 3 \cdot 0 = 1$ and the right-hand side is $4^0 = 1$. So, because $1 \leq 1$, $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $1 + 3k \leq 4^k$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $1 + 3(k+1) \leq 4^{k+1}$, or, equivalently, $1+3k+3 < 4 \cdot 4^k$. 
+
+Now by the induction hypothesis, $1 + 3k + 3 \leq 4^k + 3$. So we need to show that $4^k + 3 \leq 4 \cdot 4^k$.
+
+Since $0 \leq k$, we have $1 \leq 4^k$. So $3 \leq 3 \cdot 4^k$. Adding $4^k$ to both sides we get $3 + 4^k \leq 3 \cdot 4^k + 4^k = 4 \cdot 4^k$. Thus $3 + 4^k \leq 4 \cdot 4^k$.
+
+So we have $1 + 3k + 3 \leq 4^k + 3$ and $3 + 4^k \leq 4 \cdot 4^k$. Combining these we get $1 + 3k + 3 \leq 4 \cdot 4^k$, in other words $1 + 3(k+1) \leq 4^{k+1}$, {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 18}
 $5^n + 9 < 6^n$, for each integer $n \geq 2$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $5^n + 9 < 6^n$. 
 
+{\bf Show that $P(2)$ is true:} 
+
+$P(2)$ says that $5^2 + 9 < 6^2$. The left-hand side is $5^2 + 9 = 25 + 9 = 34$ and the right-hand side is $6^2 = 36$. So, because $34 < 36$, $P(2)$ is true. 
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose $5^k + 9 < 6^k$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $5^{k+1} + 9 < 6^{k+1}$. Now by laws of exponents and the induction hypothesis,
+\[
+5^{k+1} + 9 = 5 \cdot 5^k + 9 = (4 + 1) \cdot 5^k + 9 = 4 \cdot 5^k + (5^k + 9) < 4 \cdot 5^k + 6^k. (*)
+\]
+So we need to show $4 \cdot 5^k + 6^k < 6^{k+1}$.
+
+Notice that since $4 < 5$ (and $5^k$ is positive) we have $4 \cdot 5^k < 5 \cdot 5^k$, and since $5 < 6$ (and $k \geq 2$) we have $5^k < 6^k$, and therefore $5 \cdot 5^k < 5 \cdot 6^k$. By transitivity of $<$, we get $4 \cdot 5^k < 5 \cdot 6^k$.
+
+Since $4 \cdot 5^k < 5 \cdot 6^k$, adding $6^k$ to both sides we get $4 \cdot 5^k + 6^k < 5 \cdot 6^k + 6^k = 6 \cdot 6^k = 6^{k+1}$.
+
+Combining this with (*) we get $5^{k+1} + 9 < 6^{k+1}$, {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 19}
 $n^2 < 2^n$, for every integer $n \geq 5$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $n^2 < 2^n$. 
 
+{\bf Show that $P(5)$ is true:} 
+
+$P(5)$ says that $5^2 < 2^5$. The left-hand side is $5^2 = 25$ and the right-hand side is $2^5 = 32$. So, because $25 < 32$, $P(5)$ is true. 
+
+{\bf Show that for every integer $k \geq 5$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 5$, and suppose $P(k)$ is true. That is, suppose $k^2 < 2^k$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $(k+1)^2 < 2^{k+1}$. 
+
+Now by algebra and the induction hypothesis, $(k+1)^2 = k^2 + 2k + 1 < 2^k + 2k + 1$. Also by Proposition 5.3.2, $2k + 1 < 2^k$. Putting these inequalities together gives
+\[
+(k+1)^2 < 2^k + 2k + 1 < 2^k + 2^k = 2 \cdot 2^k = 2^{k+1}
+\]
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 20}
 $2^n < (n + 2)!$, for each integer $n \geq 0$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $n^2 < 2^n$. 
 
+{\bf Show that $P(0)$ is true:} 
+
+$P(0)$ says that $2^0 < (0 + 2)!$. The left-hand side is $2^0 = 1$ and the right-hand side is $(0 + 2)! = 2! = 2$. So, because $1 < 2$, $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose $P(k)$ is true. That is, suppose $2^k < (k + 2)!$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $2^{k+1} < (k + 3)!$. 
+
+Now $2^{k+1} = 2 \cdot 2^k < 2 \cdot (k+2)!$ by the induction hypothesis. Since $k \geq 0$, we have $2 < k+3$, so $2 \cdot (k+2)! < (k+3) \cdot (k+2)! = (k+3)!$. Putting these two inequalities together gives $2^{k+1} < (k+3)!$, {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 21}
 $\dps \sqrt{n} < \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{n}}$, for every integer $n \geq 2$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $\dps \sqrt{n} < \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{n}}$. 
 
+{\bf Show that $P(2)$ is true:} 
+
+$P(2)$ says that $\dps \sqrt{2} < \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}}$. The left-hand side is $\dps \sqrt{2} \approx 1.414$ and the right-hand side is $\dps \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} \approx 1 + \frac{1}{1.414} = 1.707$. So, because $1.414 < 1.707$, $P(2)$ is true. 
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose $\dps \sqrt{k} < \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{k}}$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $\dps \sqrt{k+1} < \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{k+1}}$. 
+
+Now the right-hand side of $P(k+1)$ is $\dps \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{k+1}}$
+
+\begin{center}
+\begin{tabular}{lll}
+= & $\dps \frac{1}{\sqrt{1}} + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}}$ & {\cy make next-to-last term explicit} \\
+$>$ & $\dps \sqrt{k} + \frac{1}{\sqrt{k+1}}$ & {\cy by inductive hypothesis} \\
+= & $\dps \sqrt{k} \cdot \frac{\sqrt{k + 1}}{\sqrt{k + 1}} + \frac{1}{\sqrt{k+1}}$ & {\cy because $\frac{\sqrt{k + 1}}{\sqrt{k + 1}} = 1$} \\
+$>$ & $\dps \sqrt{k} \cdot \frac{\sqrt{k}}{\sqrt{k + 1}} + \frac{1}{\sqrt{k+1}}$ & {\cy because $k + 1 > k$} \\
+= & $\dps \frac{k}{\sqrt{k + 1}} + \frac{1}{\sqrt{k+1}}$ & {\cy by algebra} \\
+= & $\dps \frac{k+1}{\sqrt{k + 1}}$ & {\cy by adding fractions} \\
+= & $\dps \sqrt{k + 1}$ & {\cy by canceling $\sqrt{k+1}$}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 22}
@@ -2375,7 +2694,29 @@ $1 + nx \leq (1 + x)^n$, for every real number $x > -1$
 and every integer $n \geq 2$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the statement ``$1 + nx \leq (1 + x)^n$, for every real number $x > -1$''. 
 
+{\bf Show that $P(2)$ is true:} 
+
+$P(2)$ says that $1 + 2x \leq (1 + x)^2$, for every real number $x > -1$. The left-hand side is $1 + 2x$ and the right-hand side is $(1+x)^2 = 1 + 2x + x^2$. So, because $0 \leq x^2$ for every real number $x > -1$, adding $1 + 2x$ to both sides gives us $1 + 2x \leq 1 + 2x + x^2$. So $P(2)$ is true. 
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose $1 + kx \leq (1 + x)^k$, for every real number $x > -1$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $1 + (k + 1)x \leq (1 + x)^{k + 1}$, for every real number $x > -1$. 
+
+Now the left-hand side of $P(k+1)$ is $1 + (k + 1)x = 1 + kx + x \leq (1 + x)^k + x$ by inductive hypothesis. 
+
+We want to show $x \leq x(1+x)^k$. There are two cases:
+
+{\bf Case 1: $-1 < x < 0$.} Then $0 < 1 + x < 1$, so $0 < (1+x)^k < 1$. So $0 > x(1+x)^k > x$ (since $x$ is negative).
+
+{\bf Case 2: $0 \leq x$.} Then $1 \leq 1+x$, so $1 \leq (1 + x)^k$. Multiplying both sides by $x$ we get $x \leq x(1 + x)^k$ since $x$ is positive.
+
+Combining the two inequalities $1 + (k + 1)x \leq (1 + x)^k + x$ and $x \leq x(1 + x)^k$ we get 
+\[
+1 + (k + 1)x \leq (1 + x)^k + x(1 + x)^k = (1 + x)^k (1 + x) = (1 + x)^{k + 1}
+\]
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 23}
@@ -2384,21 +2725,65 @@ and every integer $n \geq 2$.
 $n^3 > 2n + 1$, for each integer $n \geq 2$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $n^3 > 2n + 1$. 
 
+{\bf Show that $P(2)$ is true:} 
+
+$P(2)$ says that $2^3 > 2\cdot2 + 1$. The left-hand side is $2^3 = 8$ and the right-hand side is $2 \cdot 2 + 1 = 5$. So, because $8 > 5$, $P(2)$ is true. 
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 2$, and suppose $P(k)$ is true. That is, suppose $k^3 > 2k + 1$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $(k + 1)^3 > 2(k + 1) + 1$. 
+
+Now $(k + 1)^3 = k^3 + 3k^2 + 3k + 1 > (2k + 1) + 3k^2 + 3k + 1$ by the induction hypothesis. Since $k \geq 2$, we have $3k^2 + 3k \geq 3 \cdot 2^2 + 3 \cdot 2 = 18 > 2$, so
+\[
+(k + 1)^3 > (2k + 1) + 3k^2 + 3k + 1 > 2k + 1 + 2 = 2k + 3 = 2(k + 1) + 1
+\]
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsubsection{(b)}
 $n! > n^2$, for each integer $n \geq 4$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the inequality $n! > n^2$. 
 
+{\bf Show that $P(4)$ is true:} 
+
+$P(4)$ says that $4! > 4^2$. The left-hand side is $4! = 24$ and the right-hand side is $4^2 = 16$. So, because $24 > 16$, $P(4)$ is true. 
+
+{\bf Show that for every integer $k \geq 4$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 4$, and suppose $P(k)$ is true. That is, suppose $k! > k^2$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $(k + 1)! > (k + 1)^2$. 
+
+We have $(k + 1)! = (k + 1) \cdot k! > (k + 1) \cdot k^2$ by the induction hypothesis. So we need to show $(k + 1) \cdot k^2 > (k + 1)^2$, or, equivalently, $k^2 > k+1$, or equivalently $k^2 - k - 1 > 0$.
+
+From analytic geometry, we know that the roots of the equation $k^2 - k - 1 = 0$ are $k = \dps \frac{-(-1) \pm \sqrt{(-1)^2 - 4(1)(-1)}}{2(1)} = \frac{1 \pm \sqrt{5}}{2} \approx 0.618$ and $1.618$. Since the leading coefficient of the quadratic polynomial $k^2 - k - 1$ is positive, it has a U-shape and it's positive for all values of $k$ greater than the larger root 1.618. Since $k \geq 4$ it follows that $k^2 - k - 1 > 0$.
 \end{proof}
 
 \subsection{Exercise 24}
 A sequence $a_1, a_2, a_3, \ldots$ is defined by letting $a_1 = 3$ and $a_k = 7a_{k-1}$ for each integer $k \geq 2$. Show that $a_n = 3\cdot 7^n - 1$ for every integer $n \geq 1$.
 
 \begin{proof}
+For the given statement, the property $P(n)$ is the equation $a_n = 3 \cdot 7^{n - 1}$. 
 
+{\bf Show that $P(1)$ is true:} 
+
+The left-hand side is $a_1$, which equals 3 by the definition of the sequence. The right-hand side is $4 \cdot 7^{1 - 1} = 3$ also. Thus $P(1)$ is true. 
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 1$, and suppose $P(k)$ is true. That is, suppose $a_k = 3 \cdot 7^{k - 1}$. {\it [This is the inductive hypothesis.]} We must show that $P(k + 1)$ is true. That is, we must show that $a_{k + 1} = 3 \cdot 7^{(k + 1) - 1}$, or, equivalently, $a_{k + 1} = 3 \cdot 7^k$. But the left-hand side of $P(k+1)$ is $a_{k+1}$
+
+\begin{center}
+\begin{tabular}{rlll}
+$a_{k+1}$ & = & $7a_k$ & {\cy by definition of the sequence} \\
+& = & $7(3 \cdot 7^{k - 1})$ & {\cy by inductive hypothesis} \\
+& = & $3 \cdot 7^k$ & {\cy by laws of exponents} \\
+\end{tabular}
+\end{center}
+
+which is the right-hand side of $P(k + 1)$, {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 25}
@@ -2406,22 +2791,81 @@ A sequence $b_0, b_1, b_2, \ldots$ is defined by letting
 $b_0 = 5$ and $b_k = 4 + b_{k-1}$ for each integer $k \geq 1$. Show that $b_n > 4n$ for every integer $n \geq 0$.
 
 \begin{proof}
+Let the property $P(n)$ be the inequality $b_n > 4n$. 
 
+{\bf Show that $P(0)$ is true:} 
+
+The left-hand side is $b_0$, which equals 5 by the definition of the sequence. The right-hand side is $4 \cdot 0 = 0$ and $5 > 0$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose that $b_k > 4k$ ({\cy inductive hypothesis}). We must show that $b_{k + 1} > 4(k+1)$. Now
+
+\begin{center}
+\begin{tabular}{rlll}
+$b_{k+1}$ & = & $4 + b_k$ & {\cy by definition of the sequence} \\
+& $>$ & $4 + 4k$ & {\cy by inductive hypothesis} \\
+& = & $4(1 + k)$ & {\cy by factoring out a 4} \\
+& = & $4(k + 1)$ & {\cy by commutative law for addition}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 26}
 A sequence $c_0, c_1, c_2, \ldots$ is defined by letting
-$c_0 = 3$ and $c_k = (c_{k-1})^2$ for every integer $k \geq 1$. Show that $c_n = 3^{2n}$ for each integer $n \geq 0$.
+$c_0 = 3$ and $c_k = (c_{k-1})^2$ for every integer $k \geq 1$. Show that $\dps c_n = 3^{2^n}$ for each integer $n \geq 0$.
 
 \begin{proof}
+Let the property $P(n)$ be the equation $\dps c_n = 3^{2^n}$. 
 
+{\bf Show that $P(0)$ is true:} 
+
+The left-hand side is $c_0$, which equals 3 by the definition of the sequence. The right-hand side is $\dps 3^{2^0} = 3^1 = 3$ and $3 = 3$. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 0$, and suppose that $\dps c_k = 3^{2^k}$ ({\cy inductive hypothesis}). We must show that $c_{k + 1} = 3^{2^{k+1}}$. Now
+
+\begin{center}
+\begin{tabular}{rlll}
+$c_{k+1}$ & = & $(c_k)^2$ & {\cy by definition of the sequence} \\
+& = & $\dps (3^{2^k})^2$ & {\cy by inductive hypothesis} \\
+& = & $3^{2^k \cdot 2}$ & {\cy by laws of exponents} \\
+& = & $3^{2^{k + 1}}$ & {\cy by laws of exponents}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 27}
-A sequence $d_1, d_2, d_3, \ldots$ is defined by letting $d1 = 2$ and $d_k = \frac{d_{k-1}}{k}$ for each integer $k \geq 2$. Show that for every integer $n \geq 1, d_n = \frac{2}{n!}$. 
+A sequence $d_1, d_2, d_3, \ldots$ is defined by letting $d_1 = 2$ and $\dps d_k = \frac{d_{k-1}}{k}$ for each integer $k \geq 2$. Show that for every integer $\dps n \geq 1, d_n = \frac{2}{n!}$. 
 
 \begin{proof}
+Let the property $P(n)$ be the equation $\dps d_n = \frac{2}{n!}$. 
 
+{\bf Show that $P(1)$ is true:} 
+
+The left-hand side is $d_1$, which equals 2 by the definition of the sequence. The right-hand side is $\dps \frac{2}{1!} = 2$ and $2 = 2$. Thus $P(1)$ is true. 
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 1$, and suppose that $\dps d_k = \frac{2}{k!}$ ({\cy inductive hypothesis}). We must show that $\dps d_{k + 1} = \frac{2}{(k + 1)!}$. Now
+
+\begin{center}
+\begin{tabular}{rlll}
+\vspace{0.3cm}
+$d_{k+1}$ & = & $\dps \frac{d_k}{k+1}$ & {\cy by definition of the sequence} \\
+\vspace{0.3cm}
+& = & $\dps \frac{\frac{2}{k!}}{k+1}$ & {\cy by inductive hypothesis} \\
+& = & $\dps \frac{2}{k!(k+1)}$ & {\cy by algebra} \\
+& = & $\dps \frac{2}{(k + 1)!}$ & {\cy by definition of !}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 28}
@@ -2430,7 +2874,49 @@ Prove that for every integer $n \geq 1$,
 \frac{1}{3} = \frac{1 + 3 + 5 + \cdots + (2n-1)}{(2n+1) + (2n+3) + \cdots + (2n + (2n-1))}
 \]
 \begin{proof}
+Let the property $P(n)$ be the equation 
 
+\[
+\dps \frac{1}{3} = \frac{1 + 3 + 5 + \cdots + (2n-1)}{(2n+1) + (2n+3) + \cdots + (2n + (2n-1))}.
+\] 
+
+{\bf Show that $P(1)$ is true:} 
+
+The left-hand side is $1/3$. The right-hand side is $\dps \frac{1}{(2 \cdot 1 + 1)} = 1/3$ also. Thus $P(1)$ is true. 
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:} 
+
+Let $k$ be any integer with $k \geq 1$, and suppose that 
+\[
+\dps \frac{1}{3} = \frac{1 + 3 + 5 + \cdots + (2k-1)}{(2k+1) + (2k+3) + \cdots + (2k + (2k-1))}
+\]
+({\cy inductive hypothesis}). We must show that 
+\[
+\dps \frac{1}{3} = \frac{1 + 3 + 5 + \cdots + (2(k+1)-1)}{(2(k+1)+1) + (2(k+1)+3) + \cdots + (2(k+1) + (2(k+1)-1))}.\] 
+Now from the inductive hypothesis, we get by cross-multiplying:
+\[
+(2k+1) + (2k+3) + \cdots + (2k + (2k-1)) = 3[1 + 3 + 5 + \cdots + (2k-1)]
+\]
+For each term on the left-hand side, we add 2 to both sides. This way, $(2k + 1)$ becomes $(2k + 1) + 2 = (2(k+1) + 1)$, $(2k + 3)$ becomes $(2k + 3) + 2 = (2(k+1) + 3)$, and so on. There are $(2k - 1 + 1) / 2 = k$ terms on the left-hand side, therefore we are adding a total of $2k$ to both sides. We get:
+\[
+(2(k+1)+1) + (2(k+1)+3) + \cdots + (2(k+1) + (2k-1)) = 3[1 + 3 + 5 + \cdots + (2k-1)] + 2k
+\]
+Now add the last missing term $(2(k+1) + (2(k+1)-1))$ to both sides:
+
+$(2(k+1)+1) + (2(k+1)+3) + \cdots + (2(k+1) + (2k-1)) + (2(k+1) + (2(k+1)-1))$
+
+$ = 3[1 + 3 + 5 + \cdots + (2k-1)] + 2k + (2(k+1) + (2(k+1)-1))$
+
+Notice that $2k + (2(k+1) + (2(k+1)-1)) = 6k + 3 = 3(2k+1) = 3(2(k+1) - 1)$. Therefore
+
+$(2(k+1)+1) + (2(k+1)+3) + \cdots + (2(k+1) + (2k-1)) + (2(k+1) + (2(k+1)-1))$
+
+$ = 3[1 + 3 + 5 + \cdots + (2k-1) + (2(k+1)-1)]$.
+
+Dividing both sides by (3 times the left-hand side), we get:
+\[
+\dps \frac{1}{3} = \frac{1 + 3 + 5 + \cdots + (2(k+1)-1)}{(2(k+1)+1) + (2(k+1)+3) + \cdots + (2(k+1) + (2(k+1)-1))}\] 
+{\it [as was to be shown]}.
 \end{proof}
 
 {\bf \cy Exercises 29 and 30 use the definition of string and string length from page 13 in Section 1.4. Recursive definitions for these terms are given in Section 5.9.}
@@ -2439,50 +2925,213 @@ Prove that for every integer $n \geq 1$,
 A set $L$ consists of strings obtained by juxtaposing one or more of $abb, bab$, and $bba$. Use mathematical induction to prove that for every integer $n \geq 1$, if a string $s$ in $L$ has length $3n$, then $s$ contains an even number of $b$’s.
 
 \begin{proof}
+Let the property $P(n)$ be the sentence “If a string $s$ in $L$ has length $3n$, then $s$ contains an even number of $b$’s.” 
 
+{\bf Show that $P(1)$ is true:} $P(1)$ is the statement that a string $s$ in $L$ of length 3 contains an even number of $b$’s. The only strings in $L$ that have length 3 are $abb, bab$, and $bba$, and each of these strings has an even number of $b$’s. So $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:} Let $k$ be any integer with $k \geq 1$ and suppose that if a string $s$ in $L$ has length $3k$, then $s$ contains an even number of $b$’s. {\cy $\from P(k)$ inductive hypothesis}
+
+We must show that if a string $s$ in $L$ has length $3(k + 1)$, then $s$ contains an even number of $b$’s. {\cy $\from P(k + 1)$} 
+
+So, suppose $s$ is a string in $L$ that has length $3(k + 1)$. Now $3(k + 1) = 3k + 3$ and the strings in $L$ are obtained by juxtaposing strings already in $L$ with one of $abb, bab$, or $bba$. Thus, either the initial or the final three characters in $s$ are $abb$, $bab$, or $bba$. Moreover, the other $3k$ characters in $s$ are also in $L$ by definition of $L$, and so, by inductive hypothesis, the other $3k$ characters in $s$ contain an even number, say $m$, of $b$’s. Because each of $abb$, $bab$, and $bba$ contains 2 $b$’s, the total number of $b$’s in $s$ is $m + 2$, which is a sum of even integers and hence is even {\it [as was to be shown]}. 
 \end{proof}
 
 \subsection{Exercise 30}
 A set $S$ consists of strings obtained by juxtaposing one or more copies of 1110 and 0111. Use mathematical induction to prove that for every integer $n \geq 1$, if a string $s$ in $S$ has length $4n$, then the number of 1’s in $s$ is a multiple of 3.
 
 \begin{proof}
+Let the property $P(n)$ be the sentence “If a string $s$ in $S$ has length $4n$, then the number of 1’s in $s$ is a multiple of 3.” 
 
+{\bf Show that $P(1)$ is true:} $P(1)$ is the statement that a string $s$ in $S$ of length 4 contains zero or three  1’s. The only strings in $S$ that have length 4 are 1110 and 0111, and each of these strings has three 1’s. So $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is true:} Let $k$ be any integer with $k \geq 1$ and suppose that if a string $s$ in $S$ has length $4k$, then the number of 1’s in $s$ is a multiple of 3. {\cy $\from P(k)$ inductive hypothesis}
+
+We must show that if a string $s$ in $S$ has length $4(k + 1)$, then the number of 1’s in $s$ is a multiple of 3. {\cy $\from P(k + 1)$} 
+
+So, suppose $s$ is a string in $S$ that has length $4(k + 1)$. Now $4(k + 1) = 4k + 4$ and the strings in $S$ are obtained by juxtaposing strings already in $S$ with one of 1110 or 0111. Thus, either the initial or the final four characters in $s$ are 1110 or 0111. Moreover, the other $4k$ characters in $s$ are also in $S$ by definition of $S$, and so, by inductive hypothesis, the other $4k$ characters in $s$ contain a number of 1's divisible by 3, say $3m$ 1’s. Because each of 1110 and 0111 contains three 1’s, the total number of 1’s in $s$ is $3m + 3 = 3(m+1)$, which is a multiple of 3 {\it [as was to be shown]}. 
 \end{proof}
 
 \subsection{Exercise 31}
-Use mathematical induction to give an alternative proof for the statement proved in Example 4.9.9: For any positive integer $n$, a complete graph on $n$ vertices has $\frac{n(n - 1)}{2}$ edges. {\it Hint:} Let $P(n)$ be the sentence, ``the number of edges in a complete graph on $n$ vertices is $\frac{n(n - 1)}{2}$.''
+Use mathematical induction to give an alternative proof for the statement proved in Example 4.9.9: For any positive integer $n$, a complete graph on $n$ vertices has $\frac{n(n - 1)}{2}$ edges. 
+
+{\it Hint:} Let $P(n)$ be the sentence, ``the number of edges in a complete graph on $n$ vertices is $\frac{n(n - 1)}{2}$.''
 
 \begin{proof}
+Let $P(n)$ be as in the Hint above.
 
+{\bf Show that $P(1)$ is true:} A complete graph on 1 vertex has no edges, and $\frac{1(1 - 1)}{2} = 0$, so $P(1)$ is true.
+
+{\bf Show that for any integer $k \geq 1$ if $P(k)$ is true then $P(k+1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$ and suppose that a complete graph on $k$ vertices has $\frac{k(k - 1)}{2}$ edges. {\cy $\from P(k)$ inductive hypothesis}
+
+We must show that a complete graph on $k + 1$ vertices has $\frac{(k+1)k}{2}$ edges. {\cy $\from P(k + 1)$}
+
+Let $K_{k+1}$ be a complete graph on $k+1$ vertices labeled $v_1, \ldots, v_k, v_{k+1}$. Consider the subgraph $K_k$ of $K_{k + 1}$ which is a complete graph on the first $k$ vertices $v_1, \ldots, v_k$.
+
+Then the edges of $K_{k+1}$ can be divided into two disjoint sets: the edges of $K_k$, and the edges between $v_{k+1}$ and all the other edges $v_1, \ldots, v_k$.
+
+By the inductive hypothesis the first set has $\frac{k(k-1)}{2}$ edges. Since $K_{k+1}$ is complete, the second set has $k$ additional edges (one edge between $v_{k + 1}$ and each one of $v_1, \ldots, v_k$).
+
+Therefore the total number of edges of $K_{k+1}$ is the total of the two sets: $\frac{k(k-1)}{2} + k = \frac{k^2 - k + 2k}{2} = \frac{k^2 + k}{2} = \frac{(k+1)k}{2}$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 32}
 Some $5 \times 5$ checkerboards with one square removed can be completely covered by L-shaped trominoes, whereas other $5 \times 5$ checkerboards cannot. Find examples of both kinds of checkerboards. Justify your answers.
 
-\begin{proof}
+{\it Hint:} Consider the problem of trying to cover a $3 \times 3$ checkerboard with trominoes. Place a checkmark in
+certain squares as shown in the following figure.
 
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+ & \hspace{0.4cm} & \\
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+\end{tabular}
+\end{center}
+
+Observe that no two squares containing checkmarks can be covered by the same tromino. Since there are four checkmarks, four trominoes would be needed to cover these squares. But, since each tromino covers three squares, four trominoes would cover twelve squares, not the nine squares in this checkerboard. It follows that such a covering is impossible.
+
+\begin{proof}
+For example, if we remove the center square, then the $5 \times 5$ board can be covered by L-shaped trominoes:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\colsq{red} & \colsq{red} & \colsq{blue} & \colsq{green} & \colsq{green} \\
+\hline
+\colsq{red} & \colsq{blue} & \colsq{blue} & \colsq{magenta} & \colsq{green} \\
+\hline
+\colsq{brown} & \colsq{brown} &  & \colsq{magenta} & \colsq{magenta} \\
+\hline
+\colsq{brown} & \colsq{gray} & \colsq{cyan} & $\blacksquare$ & $\blacksquare$ \\
+\hline
+\colsq{gray} & \colsq{gray} & \colsq{cyan} & \colsq{cyan} & $\blacksquare$ \\
+\hline
+\end{tabular}
+\end{center}
+
+There are many other ways to remove 1 square from the 25, to make it work. The above is not the only one.
+
+(Following the Hint) All 25 squares cannot be completely covered by L-shaped trominoes:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+ & \hspace{0.4cm} &  & \hspace{0.4cm} & \\
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+ & \hspace{0.4cm} &  & \hspace{0.4cm} & \\
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+\end{tabular}
+\end{center}
 \end{proof}
+
+No two squares with checkmarks can be covered by the same L-shaped tromino. Since there are 9 checkmarks, we would need at least 9 trominoes, which cover 27 squares, exceeding the 25 squares. Therefore such a covering is impossible.
 
 \subsection{Exercise 33}
 Consider a $4 \times 6$ checkerboard. Draw a covering of the board by L-shaped trominoes.
 
 \begin{proof}
-
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\colsq{red} & \colsq{red} & \colsq{blue} & \colsq{green} & \colsq{green} & \colsq{magenta} \\
+\hline
+\colsq{red} & \colsq{blue} & \colsq{blue} & \colsq{green} & \colsq{magenta} & \colsq{magenta} \\
+\hline
+\colsq{brown} & \colsq{brown} & \colsq{gray} & $\blacksquare$ & \colsq{yellow} & \colsq{yellow} \\
+\hline
+\colsq{brown} & \colsq{gray} & \colsq{gray} & $\blacksquare$ & $\blacksquare$ & \colsq{yellow} \\
+\hline
+\end{tabular}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 34}
 \subsubsection{(a)}
 Use mathematical induction to prove that for each integer $n \geq 1$, any checkerboard with dimensions $2 \times 3n$ can be completely covered with L-shaped trominoes.
 
-\begin{proof}
+{\it Hint:} For the inductive step, note that a $2 \times 3(k + 1)$ checkerboard can be split into a $2 \times 3k$ checkerboard and a $2 \times 3$ checkerboard.
 
+\begin{proof}
+Let the property $P(n)$ be ``any checkerboard with dimensions $2 \times 3n$ can be completely covered with L-shaped trominoes.''
+
+{\bf Show that $P(1)$ is true:} $P(1)$ says ``A checkerboard with dimensions $2 \times 3$ can be completely covered with L-shaped trominoes.'' This is true:
+\begin{tabular}{|c|c|c|}
+\hline
+\colsq{cyan} & \colsq{cyan} & \colsq{red} \\
+\hline
+\colsq{cyan} & \colsq{red} & \colsq{red} \\
+\hline
+\end{tabular}
+
+{\bf Show that for any integer $k \geq 1$ if $P(k)$ is true then $P(k+1)$ is true:} Suppose $k$ is any integer with $k \geq 1$ such that $P(k)$ is true. That is, any checkerboard with dimensions $2 \times 3k$ can be completely covered with L-shaped trominoes. We want to show $P(k+1)$, that is, we want to show that any checkerboard with dimensions $2 \times 3(k+1)$ can be completely covered with L-shaped trominoes.
+
+Consider any checkerboard with dimensions $2 \times 3(k+1)$, in other words with dimensions $2 \times (3k+3)$. This board can be split into two parts: a $2 \times 3k$ board on the left, and a $2 \times 3$ board on the right:
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+\end{tabular}
+\hspace{0.5cm}
+\begin{tabular}{|c|c|c|}
+\hline
+ &  &  \\
+\hline
+ &  &  \\
+\hline
+\end{tabular}
+
+By the inductive hypothesis, the left part with dimensions $2 \times 3k$ can be completely covered with L-shaped trominoes. By $P(1)$, the right part with dimensions $2 \times 3$ can be completely covered with L-shaped trominoes. Putting these two coverings together we see that the whole board with dimensions $2 \times 3(k+1)$ can be completely covered with L-shaped trominoes, {\it [as was to be shown.]}
 \end{proof}
 
 \subsubsection{(b)}
-Let $n$ be any integer greater than or equal to 1. Use the result of part (a) to prove by mathematical induction that for every integer $m$, any checkerboard with dimensions $2m \times 3n$ can be completely covered with L-shaped trominoes.
+Let $n$ be any integer greater than or equal to 1. Use the result of part (a) to prove by mathematical induction that for every integer $m \geq 1$, any checkerboard with dimensions $2m \times 3n$ can be completely covered with L-shaped trominoes.
 
 \begin{proof}
+Let the property $Q(m)$ be ``any checkerboard with dimensions $2m \times 3n$ can be completely covered with L-shaped trominoes.''
 
+{\bf Show that $Q(1)$ is true:} $Q(1)$ says ``A checkerboard with dimensions $2 \times 3n$ can be completely covered with L-shaped trominoes.'' This is true by part (a).
+
+{\bf Show that for any integer $k \geq 1$ if $Q(k)$ is true then $Q(k+1)$ is true:} Suppose $k$ is any integer with $k \geq 1$ such that $Q(k)$ is true. That is, any checkerboard with dimensions $2k \times 3n$ can be completely covered with L-shaped trominoes. We want to show $Q(k+1)$, that is, we want to show that any checkerboard with dimensions $2(k+1) \times 3n$ can be completely covered with L-shaped trominoes.
+
+Consider any checkerboard with dimensions $2(k+1) \times 3n$, in other words with dimensions $(2k+2) \times 3n$. This board can be split into two parts: a $2k \times 3n$ board on the top, and a $2 \times 3n$ board on the bottom:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+ & $\vdots$ &  &  &  \\
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+ &  &  & $\ldots$ &  \\
+\hline
+\end{tabular}
+\end{center}
+
+By the inductive hypothesis, the top part with dimensions $2k \times 3n$ can be completely covered with L-shaped trominoes. By $Q(1)$, the bottom part with dimensions $2 \times 3n$ can be completely covered with L-shaped trominoes. Putting these two coverings together we see that the whole board with dimensions $2(k+1) \times 3n$ can be completely covered with L-shaped trominoes, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 35}
@@ -2492,14 +3141,38 @@ Let $m$ and $n$ be any integers that are greater than or equal to 1.
 Prove that a necessary condition for an $m \times n$ checkerboard to be completely coverable by L-shaped trominoes is that $mn$ be divisible by 3.
 
 \begin{proof}
+Assume an $m \times n$ checkerboard is completely coverable by L-shaped trominoes. {\it [We want to show that $mn$ is divisible by 3.]}
 
+Since the board is coverable by L-shaped trominoes, there exists an integer $k \geq 1$ such that the board is covered with $k$ L-shaped trominoes. Since each tromino has 3 squares, and the trominoes do not overlap, the total number of squares covered by the covering is $3k$. 
+
+Since the trominoes cover the whole board, and since the whole board has $mn$ squares, $mn = 3k$. So by definition of divisibility, $mn$ is divisible by 3.
 \end{proof}
 
 \subsubsection{(b)}
 Prove that having $mn$ be divisible by 3 is not a sufficient condition for an $m \times n$ checkerboard to be completely coverable by L-shaped trominoes.
 
-\begin{proof}
+{\it Hint:} Consider a $3 \times 5$ checkerboard, and refer to the hint for Exercise 32. Figure out a way to place six checkmarks in squares so that no two of the squares that contain checkmarks can be covered by the same tromino.
 
+\begin{proof}
+(following the Hint)
+
+Consider the $3 \times 5$ checkerboard below:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+ & \hspace{0.4cm} &  & \hspace{0.4cm} & \\
+\hline
+\checkmark & \hspace{0.4cm} & \checkmark & \hspace{0.4cm} & \checkmark \\
+\hline
+\end{tabular}
+\end{center}
+
+No L-shaped tromino can cover two of the checkmarked squares. So we need at least 6 trominoes to cover the checkmarked squares. However this gives us $6 \cdot 3 = 18$ squares, exceeding the 15 squares of the board. Therefore this covering is impossible.
+
+Let $m = 5, n = 3$. Since $3 \cdot 5 = 15$ is divisible by 3 and the board is not coverable by L-shaped trominoes, we conclude that having $mn$ be divisible by 3 is not a sufficient condition for the $m \times n$ board to be coverable by L-shaped trominoes.
 \end{proof}
 
 \subsection{Exercise 36}
@@ -2510,17 +3183,58 @@ In a round-robin tournament each team plays every other team exactly once with t
 \includegraphics[scale=0.5]{../images/5.3.36.png}
 \end{figure}
 
-Use mathematical induction to show that in any round-robin tournament involving $n$ teams, where $n \geq 2$, it is possible to label the teams $T_1, T_2, \ldots, T_n$ so that $T_i$ beats $T_i + 1$ for all $i = 1, 2, \ldots, n - 1$. (For instance, one such labeling in the example above is $T_1 = A, T_2 = B, T_3 = C, T_4 = E, T_5 = D$.) (Hint: Given $k+1$ teams, pick one, say $T_9$, and apply the inductive hypothesis to the remaining teams to obtain an ordering $T_1, T_2, \ldots, T_k$. Consider three cases: $T_9$ beats $T_1$, $T_9$ loses to the first $m$ teams (where $1 \leq m \leq k - 1$) and beats the $(m + 1)$st team, and $T_9$ loses to all the other teams.)
+Use mathematical induction to show that in any round-robin tournament involving $n$ teams, where $n \geq 2$, it is possible to label the teams $T_1, T_2, \ldots, T_n$ so that $T_i$ beats $T_{i + 1}$ for all $i = 1, 2, \ldots, n - 1$. (For instance, one such labeling in the example above is $T_1 = A, T_2 = B, T_3 = C, T_4 = E, T_5 = D$.) ({\it Hint:} Given $k+1$ teams, pick one, say $T'$, and apply the inductive hypothesis to the remaining teams to obtain an ordering $T_1, T_2, \ldots, T_k$. Consider three cases: $T'$ beats $T_1$, $T'$ loses to the first $m$ teams (where $1 \leq m \leq k - 1$) and beats the $(m + 1)$st team, and $T'$ loses to all the other teams.)
 
 \begin{proof}
+Let the property $P(n)$ be ``in any round-robin tournament involving $n$ teams, it is possible to label the teams $T_1, T_2, \ldots, T_n$ so that $T_i$ beats $T_{i + 1}$ for all $i = 1, 2, \ldots, n - 1$.''.
 
+{\bf Show that $P(2)$ is true:} In a round-robin tournament with two teams $A, B$, either $A$ beats $B$, in which case label $T_1 = A$ and $T_2 = B$, or $B$ beats $A$, in which case label $T_1 = B$ and $T_2 = A$. So in both cases $T_1$ beats $T_2$. So $P(2)$ is true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(k)$ is true then $P(k+1)$ is true:} Suppose $k \geq 2$ is any integer such that $P(k)$ is true. So in any round-robin tournament involving $k$ teams, it is possible to label the teams $T_1, T_2, \ldots, T_k$ so that $T_i$ beats $T_{i + 1}$ for all $i = 1, 2, \ldots, k - 1$. {\cy $\from P(k)$ inductive hypothesis}
+
+{\it [We want to show that in any round-robin tournament involving $k+1$ teams, it is possible to label the teams $S_1, S_2, \ldots, S_{k+1}$ so that $S_i$ beats $S_{i + 1}$ for all $i = 1, 2, \ldots, k$.]} {\cy $\from P(k+1)$}
+
+Given $k+1$ teams, pick one, say $X$. By the inductive hypothesis applied to the remaining $k$ teams, there exists an ordering $T_1, T_2, \ldots, T_k$ so that $T_i$ beats $T_{i + 1}$ for all $i = 1, 2, \ldots, k - 1$.
+
+{\bf Case 1: $X$ beats $T_1$.} Then label the $k+1$ teams as follows: $S_1 = X, S_2 = T_1, S_3 = T_2, \ldots, S_{k+1} = T_k$. Now $S_i$ beats $S_{i + 1}$ for all $i = 1, 2, \ldots, k$, {\it [as was to be shown.]}
+
+{\bf Case 2: There exists an integer $m$ where $1 \leq m \leq k - 1$ such that $X$ loses to $T_1, T_2, \ldots, T_m$ and beats $T_{m + 1}$.} Then label the $k+1$ teams as follows: $S_1 = T_1, \ldots, S_m = T_m, S_{m+1} = X, S_{m+2} = T_{m+1}, \ldots, S_{k+1} = T_k$. Now $S_i$ beats $S_{i + 1}$ for all $i = 1, 2, \ldots, k$, {\it [as was to be shown.]}
+
+{\bf Case 3: $X$ loses to all the other teams.} Then label the $k+1$ teams as follows: $S_1 = T_1, S_2 = T_2, \ldots, S_k = T_k, S_{k+1} = X$. Now $S_i$ beats $S_{i + 1}$ for all $i = 1, 2, \ldots, k$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 37}
 On the outside rim of a circular disk the integers from 1 through 30 are painted in random order. Show that no matter what this order is, there must be three successive integers whose sum is at least 45.
 
-\begin{proof}
+{\it Hint:} Use proof by contradiction. If the statement is false, then there exists some ordering of the integers from 1 to 30, say, $x_1, x_2, \ldots, x_{30}$, such that $x_1 + x_2 + x_3 < 45, x_2 + x_3 + x_4 < 45, \ldots$, and $x_{30} + x_1 + x_2 < 45$. Evaluate the sum of all these inequalities using the fact that $\sum_{i = 1}^{30} x_i = \sum_{i = 1}^{30} i$ and Theorem 5.2.1.
 
+\begin{proof}
+(following the Hint)
+
+Argue by contradiction. Assume the statement is false, then there exists some ordering of the integers from 1 to 30, say, $x_1, x_2, \ldots, x_{30}$, such that the following 30 inequalities are true:
+
+$x_1 + x_2 + x_3 < 45$, 
+
+$x_2 + x_3 + x_4 < 45$,
+
+$x_3 + x_4 + x_5 < 45$, 
+
+$\vdots$
+
+$x_{30} + x_1 + x_2 < 45$. 
+
+Notice that for every $i$ with $1 \leq i \leq 30$, the integer $x_i$ occurs exactly 3 times total in all of the inequalities.
+
+Therefore, adding up all these inequalities we get
+\[
+3x_1 + 3x_2 + \cdots + 3x_{30} < 45 \cdot 30 = 1350.
+\]
+
+Since the integers $x_1, \ldots, x_{30}$ are an ordering of the integers $1, \ldots, 30$, we have 
+\[
+\dps \sum_{i = 1}^{30} x_i = \sum_{i = 1}^{30} i = \frac{30 \cdot 31}{2} = 465.
+\] 
+It follows that $\dps 3x_1 + \cdots + 3x_{30} = 3\sum_{i = 1}^{30} x_i = 3 \cdot 465 = 1395$. But we also have $3x_1 + \cdots + 3x_{30} < 1350$, so $1395 < 1350$, a contradiction. {\it [Thus our supposition was false, and the original statement is true.]}
 \end{proof}
 
 \subsection{Exercise 38}
@@ -2532,14 +3246,60 @@ the outside of a circle. Use mathematical induction to prove that for any intege
 \includegraphics[scale=0.5]{../images/5.3.38.png}
 \end{figure}
 
-\begin{proof}
+{\it Hint:} Given $k + 1$ $a$’s and $k + 1$ $b$’s arrayed around the outside of the circle, there has to be at least one location where an $a$ is followed by a $b$ as one travels in the clockwise direction. In the inductive step, temporarily remove such an $a$ and the $b$ that follows it, and apply the inductive hypothesis.
 
+\begin{proof}
+Let the property $P(n)$ be ``given $n$ $a$'s and $n$ $b$'s distributed around the outside of a circle, it is possible to find a starting point so that if you travel around the circle in a clockwise direction, the number of $a$'s you pass is never less than the number of $b$'s you have passed.''.
+
+{\bf Show that $P(1)$ is true:} Given one $a$ and one $b$ we can start from the $a$ and go clockwise:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.3.38.a.png}
+\end{figure}
+
+Then the number of $a$'s we pass will be 1 after we pass through the $a$, and the number of $b$'s we have passed at that point is 0, and 1 is not less than 0. So $P(1)$ is true.
+
+{\bf Show that for every integer $k$ with $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:} Assume $P(k)$ is true. Assume we are given $k+1$ $a$'s and $k+1$ $b$'s arranged around the outside of a circle.
+
+On the circle, there must be at least one $a$ which is next to a $b$ when we are going clockwise. Removing that $a$ and $b$ leaves us with $k$ $a$'s and $k$ $b$'s. By the inductive hypothesis, it is possible to find a starting point so that if you travel around the circle in a clockwise direction, the number of $a$'s you pass is never less than the number of $b$'s you have passed. Mark this starting point with an asterisk *:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.3.38.b.png}
+\end{figure}
+
+Now if we add back the $a$ and the $b$ that we removed, start from the same point at * and go clockwise, and go over the previously removed $a$ and $b$, it is still true that the number of $a$'s you pass is never less than the number of $b$'s you have passed (because we will pass over the $a$ first). This proves $P(k+1)$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 39}
+For a polygon to be convex means that given any two points on or inside the polygon, the line joining the points lies entirely inside the polygon. Use mathematical induction to prove that for every integer $n \geq 3$, the angles of any $n$-sided convex polygon add up to $180(n - 2)$ degrees.
 
 \begin{proof}
+Let the property $P(n)$ be: ``the angles of any $n$-sided convex polygon add up to $180(n - 2)$ degrees.''
 
+{\bf Show that $P(3)$ is true:} $P(3)$ says ``the angles of any triangle add up to $180(3 - 2) = 180$ degrees.'' This is true by our knowledge from high school geometry.
+
+{\bf Show that for every integer $k \geq 3$, if $P(k)$ is true then $P(k+1)$ is true:} Suppose $k$ is an integer with $k \geq 3$ and suppose the angles of any $k$-sided convex polygon add up to $180(k - 2)$ degrees. {\it [We want to show that the angles of any $k+1$-sided convex polygon add up to $180(k+1 - 2)$ degrees.]}
+
+Consider any $k+1$-sided convex polygon. Choose any two adjacent edges and connect them with a third edge (see below).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.3.39.png}
+\end{figure}
+
+Since the polygon is convex, this splits the $k+1$-sided polygon (cyan) into two parts: a $k$-sided polygon (green), and a triangle (with red angles). By the inductive hypothesis, the angles of the $k$-sided (green) polygon add up to $180(k - 2)$ degrees. 
+
+Now observe that the sum of the angles of the $k+1$-sided (cyan) polygon is equal to: 
+
+the sum of the angles of the $k$-sided polygon (green) $ = 180(k-2)$
+
+PLUS 
+
+the sum of the angles of the triangle (red) $ = 180$
+
+which equals $180(k-2) + 180 = 180(k+1-2)$ {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 40}
@@ -2547,28 +3307,153 @@ the outside of a circle. Use mathematical induction to prove that for any intege
 Prove that in an $8 \times 8$ checkerboard with alternating black and white squares, if the squares in the top right and bottom left corners are removed the remaining board cannot be covered with dominoes. ({\it Hint:} Mathematical induction is not needed for this proof.)
 
 \begin{proof}
-
+Let us consider an $8 \times 8$ checkerboard with alternating black and white squares. Thus, the checkerboard has total 64 squares, with 32 black and 32 white in color. Now, if the squares in the top right and bottom left corners are removed, both the removed ones are either black or white in color. Therefore, out of the remaining 62 squares, 30 squares are of one color and 32 are of other. Now a domino always covers one black and one white square. Thus, the board with 30 of one color and 32 of other cannot be covered with dominoes.
 \end{proof}
 
 \subsubsection{(b)}
 Use mathematical induction to prove that for each positive integer $n$, if a $2n \times 2n$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.
 
-\begin{proof}
+{\it Hint:} In the inductive step, imagine dividing a $2(k + 1) \times 2(k + 1)$ checkerboard into two sections: a center checkerboard of dimensions $2k \times 2k$ and an outer perimeter of single, adjacent squares. Then examine three cases: case 1 is where both removed squares are in the central $2k \times 2k$ checkerboard, case 2 is where one removed square is in the central $2k \times 2k$ checkerboard and the other is on the perimeter, and case 3 is where both removed squares are on the perimeter.
 
+\begin{proof}
+Let the property $P(n)$ be: ``if a $2n \times 2n$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.''
+
+{\bf Show that $P(1)$ is true:} $P(1)$ says ``if a $2 \times 2$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.''
+
+A $2 \times 2$ alternating B \& W board looks like this:
+\begin{tabular}{|c|c|}
+\hline
+\colsq{black} & \colsq{lightgray} \\
+\hline
+\colsq{lightgray} & \colsq{black} \\
+\hline
+\end{tabular}
+This means that, if one white square and one black square are removed, then either a row or a column is removed. So the remaining row or column can be covered with one domino. So $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:} Assume $k \geq 1$ is an integer such that if a $2k \times 2k$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.
+
+{\it [We want to show that if a $2(k+1) \times 2(k+1)$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.]}
+
+(following the Hint) Split the $2(k+1) \times 2(k+1)$ board into two sections: a $2k \times 2k$ center, and the remaining perimeter surrounding it. For example, if $k = 3$ then it looks like this (for demonstration purposes, I colored the center yellow and the perimeter blue):
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue}\\
+\hline
+\end{tabular}
+\end{center}
+
+Now consider the possibilities for the two removed squares.
+
+{\bf Case 1: both removed squares are in the center.} Then by the inductive hypothesis, the $2k \times 2k$ center part with two squares removed (one white, one black) can be completely covered with dominoes. 
+
+The perimeter can also be covered with dominoes: the top and bottom rows each have length $2(k+1)$ consisting of $k+1$ white squares and $k+1$ black squares, so they can be covered with $k+1$ dominoes each, and the remaining sides each have length $2k$ with $k$ white and $k$ black squares, which can be covered with $k$ dominoes each. 
+
+Therefore the whole $2(k+1) \times 2(k+1)$ board (with one black, one white square removed) can be covered with dominoes, {\it [as was to be shown.]}
+
+{\bf Case 2: both removed squares are on the perimeter.} The center $2k \times 2k$ part can be covered with dominoes since it has nothing removed. Now since one black and one white square are removed from the perimeter, the two ``paths'' along the perimeter between the two removed squares must each have even lengths, each containing equal numbers of white and black squares. 
+
+For example, in the following picture the removed squares are shown as ``B'' and ``W'' and the others are shown in black and white, except the center which is not shown:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\colsq{black} & \colsq{lightgray} & \colsq{black} & \colsq{lightgray} & \colsq{black} & \colsq{lightgray} & \colsq{black} & \colsq{lightgray} \\
+\hline
+\colsq{lightgray} &  &  &  &  &  &  & \colsq{black} \\
+\hline
+B &  &  &  &  &  &  & \colsq{lightgray} \\
+\hline
+\colsq{lightgray} &  &  &  &  &  &  & \colsq{black} \\
+\hline
+\colsq{black} &  &  &  &  &  &  & \colsq{lightgray} \\
+\hline
+\colsq{lightgray} &  &  &  &  &  &  & \colsq{black} \\
+\hline
+\colsq{black} &  &  &  &  &  &  & \colsq{lightgray} \\
+\hline
+\colsq{lightgray} & \colsq{black} & \colsq{lightgray} & \colsq{black} & \colsq{lightgray} & \colsq{black} & W & \colsq{black} \\
+\hline
+\end{tabular}
+\end{center}
+
+So both of those ``paths'' can be covered by dominoes, since they have even lengths, no gaps, and equal numbers of white and black squares. Hence the whole $2(k+1) \times 2(k+1)$ board can be covered, {\it [as was to be shown.]}
+
+{\bf Case 3: one removed square is in the center, the other on the perimeter.} Consider the two squares removed, say P is removed from the perimeter, and C is removed from the center. 
+
+If P and C are close enough to each other, so that they are both inside a $2k \times 2k$ square (not the center but some other $2k \times 2k$ square), then by the inductive hypothesis, that $2k \times 2k$ square can be covered with dominoes, and the remaining portion of the $2(k+1) \times 2(k+1)$ square can also be covered with dominoes since it has equal numbers of white and black squares, and no gaps. Here is an example with $k = 3$:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.3.40.b.1.png}
+\end{figure}
+
+So we may assume that P and C do not fall into a $2k \times 2k$ square. In other words, we may assume that C is at the opposite end of the center from P, so that either horizontally or vertically, there are $2k-1$ squares between P and C. 
+
+Since P and C have different colors, they cannot be on the same diagonal, so P and C always fit inside a $2k \times (2k+1)$ or a $(2k+1) \times 2k$ rectangle. Here are some examples for $k = 1$ to illustrate this. They always fit into either a $2 \times 3$ or a $3 \times 2$ rectangle:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/5.3.40.b.2.png}
+\end{figure}
+
+We cannot apply the inductive hypothesis to this $2k \times (2k+1)$ or $(2k+1) \times 2k$ rectangle. So we have to move C closer to P by one diagonal, so that the horizontal or vertical distance is $2k-2$ and hence they fall into a $2k \times 2k$ square. Here is an example for $k = 2$:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.3.40.b.3.png}
+\end{figure}
+
+(Of course, depending on the position of P, we might have to move C in any one of the 4 diagonal directions. The picture above is only one example.)
+
+Now we have to show that, this $2k \times (2k+1)$ or $(2k+1) \times 2k$ rectangle can be covered by dominoes, if and only if, the $2k \times 2k$ square obtained by moving C diagonally closer to P can be covered by dominoes. (This is possible but the proof is annoying and complicated, so I'll skip it here.)
+
+By the inductive hypothesis, any $2k \times 2k$ board with one white and one black square removed can be covered with dominoes. Thus, by the above ``if and only if'' equivalence, the $2k \times (2k+1)$ or $(2k+1) \times 2k$ board can also be covered by dominoes. The remaining portion of the $2(k+1) \times 2(k+1)$ board can also be covered by dominoes, like before. So the whole $2(k+1) \times 2(k+1)$ board can be covered by dominoes, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 41}
 A group of people are positioned so that the distance between any two people is different from the distance between any other two people. Suppose that the group contains an odd number of people and each person sends a message to their nearest neighbor. Use mathematical induction to prove that at least one person does not receive a message from anyone. [This exercise is inspired by the article “Odd Pie Fights” by L. Carmony, The Mathematics Teacher, 72(1), 1979, 61–64.]
 
-\begin{proof}
+{\it Hint:} Let $P(n)$ be the sentence: If (1) $2n + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone. Use mathematical induction to prove that $P(n)$ is true for each integer $n \geq 1$.
 
+\begin{proof}
+(following the Hint) Let $P(n)$ be the sentence: ``If (1) $2n + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone.''
+
+{\bf Show that $P(0)$ is true:} $P(0)$ says: ``If (1) $2 \cdot 0 + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone.'' 
+
+Now the group has only $2 \cdot 0 + 1 = 1$ person and this person does not receive a message from anyone. So $P(0)$ is true.
+
+{\bf Show that for every integer $k \geq 0$ if $P(k)$ is true then $P(k+1)$ is true:}
+
+Suppose $k\geq 0$ is an integer such that $P(k)$ is true: if (1) $2k + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone. {\it [We want to show $P(k+1)$ is true.]}
+
+To prove $P(k+1)$, suppose (1) $2(k+1) + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and (2) each person sends a message to their nearest neighbor.
+
+{\it [Then we want to show there is at least one person who does not receive a message from anyone.]}
+
+{\it [how to continue ??? Remove two people, use inductive hypothesis?]}
 \end{proof}
 
 \subsection{Exercise 42}
-Show that for any even integer $n$, it is possible to find a group of $n$ people who are all positioned so that the distance between any two people is different from the distance between any other two people, so that each person sends a message to their nearest neighbor, and so that every person in the group receives a message from another person in the group.
+Show that for any (positive) even integer $n$, it is possible to find a group of $n$ people who are all positioned so that the distance between any two people is different from the distance between any other two people, so that each person sends a message to their nearest neighbor, and so that every person in the group receives a message from another person in the group.
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 43}
@@ -2579,29 +3464,70 @@ are the same color, you put in one black ball. If the balls are different colors
 Map out all possibilities for playing the game starting with two balls in the urn, then three balls, and then four balls. For each case keep track of the number of white and black balls you start with and the color of the ball at the
 end of the game.
 
-\begin{proof}
+{\it Hint:}
+\arrayrulecolor{cyan}
+\begin{tabular}{|ccc|}
+\hline
+\multicolumn{3}{|c|}{\cy Two Balls} \\
+\hline
+WW & $\to$ & B \\
+\hline
+WB & $\to$ & W \\
+\hline
+BB & $\to$ & B \\
+\hline
+\end{tabular}
+\begin{tabular}{|cc|cc|}
+\hline
+\multicolumn{4}{|c|}{\cy Summary} \\
+\hline
+\multicolumn{2}{|c|}{Start} & \multicolumn{2}{c|}{End} \\
+\hline
+W & B & W & B \\
+\hline
+2 & 0 & 0 & 1 \\
+\hline
+1 & 1 & 1 & 0 \\
+\hline
+0 & 2 & 0 & 1 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
 
+\begin{proof}
+{\it ???}
 \end{proof}
 
 \subsubsection{(b)}
 Does the number of white balls seem to be predictive? Does the number of black balls seem to be predictive? Make a conjecture about the color of the ball at the end of the game given the numbers of white and black balls at the beginning.
 
-\begin{proof}
+{\it Hint:} In all three cases when the urn initially contains an odd number of white balls, there is one white ball in the urn at the end of the game, and when the urn initially contains an even number of white balls, there is one black ball (i.e., zero white balls) in the urn at the end of the game.
 
+\begin{proof}
+{\it ???}
 \end{proof}
 
 \subsubsection{(c)}
 Use mathematical induction to prove the conjecture you made in part (b).
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 44}
 Let $P(n)$ be the following sentence: Given any graph $G$ with $n$ vertices satisfying the condition that every vertex of $G$ has degree at most $M$, then the vertices of $G$ can be colored with at most $M + 1$ colors in such a way that no two adjacent vertices have the same color. Use mathematical induction to prove this statement is true for every integer $n \geq 1$.
 
-\begin{proof}
+{\it Hint:} Given a graph $G$ satisfying the given condition, form a new graph $G'$ by deleting one vertex $v$ of $G$ and all the edges that are incident on $v$. Then apply the inductive hypothesis to $G'$.
 
+\begin{proof}
+{\bf Show that $P(1)$ is true:} Given any graph $G$ with 1 vertex satisfying the given condition, we can color this vertex with only 1 color (which is $\leq M+1$) so that no two adjacent vertices have the same color (since there are no two adjacent vertices at all). So $P(1)$ is true.
+
+{\bf Show that for any integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:} Assume $P(k)$ is true, {\it [we want to prove $P(k+1)$ is true].} To prove $P(k+1)$ assume $G$ is any graph with $k+1$ vertices with degree at most $M$. {\it [We want to show that the vertices of $G$ can be colored with at most $M+1$ colors so that no two adjacent vertices have the same color.]}
+
+
+Form a new graph $G'$ by deleting one vertex $v$ of $G$ and all the edges that are incident on $v$. Now $G'$ has $k$ vertices with degree at most $M$. By the inductive hypothesis we can color the vertices of $G'$ with at most $M+1$ colors so that no two adjacent vertices have the same color.
+
+{\it ???}
 \end{proof}
 
 {\bf \cy In order for a proof by mathematical induction to be valid, the basis statement must be true for $n = a$ and the argument of the inductive step must be correct for every integer $k \geq a$. In 45 and 46 find the mistakes in the “proofs” by mathematical induction.}
@@ -2616,7 +3542,18 @@ B = \{a_1, a_2, a_3, \ldots, a_k\} \text{ and } C = \{a_1, a_3, a_4, \ldots, a_{
 ($B$ consists of all the numbers in $A$ except $a_{k+1}$, and $C$ consists of all the numbers in $A$ except $a_2$.) By inductive hypothesis, all the numbers in $B$ equal $a_1$ and all the numbers in $C$ equal $a_1$ (since both sets have only $k$ numbers). But every number in $A$ is in $B$ or $C$, so all the numbers in $A$ equal $a_1$; hence all are equal to each other.”
 
 \begin{proof}
+The inductive step fails for going from $n = 1$ to $n = 2$,
+because when $k = 1$,
+\[
+A = \{a_1, a_2\} \text{ and } B = \{a_1\}
+\]
+and no set $C$ can be defined to have the properties claimed for the $C$ in the proof. The reason is that $C = \{a_1\} = B$, and so an element of $A$, namely $a_2$, is
+not in either $B$ or $C$.
 
+Since the inductive step fails for going from $n = 1$ to $n = 2$, the truth of the following statement is never proved: “All the numbers in a set of two numbers are equal to each other.” This breaks the sequence of inductive steps, and so none of the statements for $n > 2$ is proved true either.
+
+Here is an explanation for what happens in terms of the
+domino analogy. The first domino is tipped backward (the basis step is proved). Also, if any domino from the second onward tips backward (the inductive step works or $n \geq 2$). In this case, however, when the first domino is tipped backward, it does not tip the second domino backward. So only the first domino falls down; the rest remain standing.
 \end{proof}
 
 \subsection{Exercise 46}
@@ -2624,8 +3561,12 @@ B = \{a_1, a_2, a_3, \ldots, a_k\} \text{ and } C = \{a_1, a_3, a_4, \ldots, a_{
 
 {\bf “Proof (by mathematical induction):} Suppose the theorem is true for an integer $k$, where $k \geq 1$. That is, suppose that $3^k - 2$ is even. We must show that $3^{k+1} - 2$ is even. Observe that $3^{k+1} - 2 = 3^k \cdot 3 - 2 = 3^k(1 + 2) - 2 = (3^k - 2) + 3^k \cdot 2$. Now $3^k - 2$ is even by inductive hypothesis and $3^k \cdot 2$ is even by inspection. Hence the sum of the two quantities is even (by Theorem 4.1.1). It follows that $3^{k+1} - 2$ is even, which is what we needed to show.”
 
-\begin{proof}
+{\it Hint:} Is the basis step true?
 
+\begin{proof}
+This proof starts at the inductive step, assuming $P(k)$ and proving $P(k+1)$. However, it does not prove the basis step. In fact, the basis step is false: when $n = 1$, $3^n - 2 = 3^1 - 2 = 1$ is odd.
+
+(Even if the basis step were true, the proof is still incomplete as it's missing the basis step.)
 \end{proof}
 
 \end{document}
