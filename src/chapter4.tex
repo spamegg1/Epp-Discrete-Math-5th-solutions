@@ -3646,7 +3646,7 @@ For all real numbers $x$ and $y$, $\ceil{x \cdot y} = \ceil{x} \cdot \floor{y}$.
 For any real number $x$, if $x$ is not an integer, then $\floor{x} + \floor{-x} = -1$.
 
 \begin{proof}
-Suppose $x$ is a real number that is not an integer. Let $n = \floor{x}$. Then, by definition of floor and because $x$ is not an integer, $n < x < n - 1$. 
+Suppose $x$ is a real number that is not an integer. Let $n = \floor{x}$. Then, by definition of floor and because $x$ is not an integer, $n < x < n + 1$. 
 
 Multiplying both sides by $-1$ gives $-n > -x > -n - 1$, or equivalently, $-n - 1 < -x < -n$. 
 
@@ -3659,7 +3659,7 @@ Hence $\floor{x} + \floor{-x} = n + (-n - 1) = n - n - 1 = -1$, as was to be sho
 For any integer $m$ and any real number $x$, if $x$ is not an integer, then $\floor{x} + \floor{m-x} = m-1$.
 
 \begin{proof}
-Suppose $m$ is any integer and $x$ is any real number that is not an integer. Let $n = \floor{x}$. Then, by definition of floor and because $x$ is not an integer, $n < x < n - 1$. 
+Suppose $m$ is any integer and $x$ is any real number that is not an integer. Let $n = \floor{x}$. Then, by definition of floor and because $x$ is not an integer, $n < x < n + 1$. 
 
 Multiplying both sides by $-1$ gives $-n > -x > -n - 1$, or equivalently, $-n - 1 < -x < -n$. Adding $m$ to both sides we get $m - n - 1 < m - x < m - n$.
 
