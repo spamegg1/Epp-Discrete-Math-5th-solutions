@@ -3569,4 +3569,1376 @@ This proof starts at the inductive step, assuming $P(k)$ and proving $P(k+1)$. H
 (Even if the basis step were true, the proof is still incomplete as it's missing the basis step.)
 \end{proof}
 
+\section{Exercise Set 5.4}
+
+\subsection{Exercise 1}
+Suppose that $a_1, a_2, a_3, \ldots$ is a sequence defined
+as follows:
+\[
+a_1 = 1, a_2 = 3, a_k = a_{k-2} + 2a_{k-1} \text{ for every integer $k \geq 3$.}
+\]
+Prove that $a_n$ is odd for every integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the sentence “$a_n$ is odd.”
+
+{\bf Show that $P(1)$ and $P(2)$ are true:}
+
+Observe that $a_1 = 1$ and $a_2 = 3$ and both 1 and 3 are odd. Thus $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $a_i$ is odd for each integer $i$ with $1 \leq i \leq k$. {\it [This is the inductive hypothesis.]} We must show that $a_{k+1}$ is odd. 
+
+We know that $a_{k+1} = a_{k-1} + 2a_k$ by definition of $a_1, a_2, a_3, \ldots$. Moreover, $k - 1$ is less than $k + 1$ and is greater than or equal to 1 (because $k \geq 2$). Thus, by inductive hypothesis, $a_{k-1}$ is odd. 
+
+Also, every term of the sequence is an integer (being a sum of products of integers), and so $2a_k$ is even by definition of even. 
+
+It follows that $a_{k+1}$ is the sum of an odd integer and an even integer and hence is odd by Theorem 4.1.2 (Exercise 30, Section 4.1). {\it [This is what was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 2}
+Suppose that $b_1, b_2, b_3, \ldots$ is a sequence defined
+as follows:
+\[
+b_1 = 4, b_2 = 12, b_k = b_{k-2} + b_{k-1} \text{ for every integer $k \geq 3$.}
+\]
+Prove that $b_n$ is divisible by 4 for every integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the sentence “$b_n$ is divisible by 4.”
+
+{\bf Show that $P(1)$ and $P(2)$ are true:}
+
+Observe that $b_1 = 4$ and $b_2 = 12$ and both 4 and 12 are divisible by 4. Thus $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $b_i$ is divisible by 4 for each integer $i$ with $1 \leq i \leq k$. {\it [This is the inductive hypothesis.]} We must show that $b_{k+1}$ is divisible by 4. 
+
+We know that $b_{k+1} = b_{k-1} + b_k$ by definition of $b_1, b_2, b_3, \ldots$. Moreover, $k - 1$ and $k$ are both less than or equal to $k$ and are greater than or equal to 1 (because $k \geq 2$). Thus, by inductive hypothesis, $b_{k-1}$ and $b_k$ are divisible by 4. So by definition of divisible, $b_{k-1} = 4m$ and $b_k = 4n$ for some integers $m,n$. 
+
+It follows that $b_{k+1} = b_{k-1} + b_k = 4m + 4n = 4(m+n)$ is divisible by 4 because $m+n$ is an integer. {\it [This is what was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 3}
+Suppose that $c_0, c_1, c_2, \ldots$ is a sequence defined
+as follows:
+\[
+c_0 = 2, c_1 = 2, c_2 = 6, c_k = 3c_{k-3} \text{ for every integer $k \geq 3$.}
+\]
+Prove that $c_n$ is even for every integer $n \geq 0$.
+
+\begin{proof}
+Let the property $P(n)$ be the sentence “$c_n$ is even.”
+
+{\bf Show that $P(0), P(1)$ and $P(2)$ are true:}
+
+Observe that $c_0 = 2, c_1 = 2$ and $c_2 = 6$ and both 2 and 6 are even. Thus $P(0), P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $0 \leq i \leq k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $c_i$ is even for each integer $i$ with $0 \leq i \leq k$. {\it [This is the inductive hypothesis.]} We must show that $c_{k+1}$ is even. 
+
+We have $c_{k+1} = 3c_{k-2}$ and $0 \leq k-2 \leq k$, therefore $c_{k-2}$ is even by inductive hypothesis. So $c_{k-2} = 2m$ for some integer $m$. Then $c_{k+1} = 3c_{k-2} = 3(2m) = 2(3m)$ where $3m$ is an integer. Thus $c_{k+1}$ is even. {\it [This is what was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 4}
+Suppose that $d_1, d_2, d_3, \ldots$ is a sequence defined
+as follows:
+\[
+d_1 = \frac{9}{10}, d_2 = \frac{10}{11}, d_k = d_{k-1} \cdot d_{k-2} \text{ for every integer $k \geq 3$.}
+\]
+Prove that $0 < d_n \leq 1$ for every integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the inequality $d_n \leq 1$.
+
+{\bf Show that $P(1)$ and $P(2)$ are true:}
+
+Observe that $d_1 = 9/10$ and $d_2 = 10/11$ and both $9/10 \leq 1$ and $10 / 11 \leq 1$. Thus $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose $d_i \leq 1$ for each integer $i$ with $1 \leq i \leq k$. {\it [This is the inductive hypothesis.]} We must show that $d_{k+1} \leq 1$. 
+
+Now, by definition of $d_1, d_2, d_3, \ldots$, $d_{k+1} = d_k \cdot d_{k-1}$. Moreover $d_k \leq 1$ and $d_{k-1} \leq 1$ by inductive hypothesis because both $k - 1$ and $k$ are less than or equal to $k$. 
+
+Consequently, $d_{k+1} = d_k \cdot d_{k-1} \leq 1$ because if two positive numbers are each less than or equal to 1, then their product is less than or equal to 1. 
+
+{\it [To see why this is so, note that if $0 < a \leq 1$ and $0 < b \leq 1$, then multiplying $a \leq 1$ by $b$ gives $ab \leq b$, and since $b \leq 1$, then, by transitivity of order, $ab \leq 1$.]} Thus the inductive step has been proved. 
+
+{\it [Since we have proved both the basis step and the inductive step, we conclude that $d_n \leq 1$ for every integer $n \geq 1$.]}
+\end{proof}
+
+\subsection{Exercise 5}
+Suppose that $e_0, e_1, e_2, \ldots$ is a sequence defined
+as follows:
+\[
+e_0 = 12, e_1 = 29, e_k = 5e_{k-1} - 6e_{k-2} \text{ for every integer $k \geq 2$.}
+\]
+Prove that $e_n = 5 \cdot 3^n + 7 \cdot 2^n$ for every integer $n \geq 0$.
+
+\begin{proof}
+Let the property $P(n)$ be the equation $e_n = 5 \cdot 3^n + 7 \cdot 2^n$.
+
+{\bf Show that $P(0)$ and $P(1)$ are true:}
+
+We must show that $e_0 = 5 \cdot 3^0 + 7 \cdot 2^0$ and $e_1 = 5 \cdot 3^1 + 7 \cdot 2^1$. 
+The left-hand side of the first equation is 12 (by definition of $e_0, e_1, e_2, \ldots$), and its right-hand side is $5 \cdot 1 + 7 \cdot 1 = 12$ also. 
+The left-hand side of the second equation is 29 (by definition of $e_0, e_1, e_2, \ldots$), and its right-hand side is $5 \cdot 3 + 7 \cdot 2 = 29$ also. 
+Thus $P(0)$ and $P(1)$ are true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(i)$ is true for each integer $i$ with $0 \leq i \leq k$, then $P(k + 1)$ is also true:} 
+
+Let $k$ be any integer with $k \geq 1$ and suppose that $e_i = 5 \cdot 3^i + 7 \cdot 2^i$ for each integer $i$ with $0 \leq i \leq k$. {\it [This is the inductive hypothesis.]}
+We must show that $e_{k+1} = 5 \cdot 3^{k+1} + 7 \cdot 2^{k+1}$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps e_{k+1}$ & = & $\dps 5e_{k} - 6e_{k-1}$ & {\cy by definition of $e_0, e_1, e_2, \ldots$} \\
+$\dps $ & = & $\dps 5(5 \cdot 3^k + 7 \cdot 2^k) - 6(5 \cdot 3^{k-1} + 7 \cdot 2^{k-1})$ & {\cy by inductive hypothesis} \\
+$\dps $ & = & $\dps 25 \cdot 3^k + 35 \cdot 2^k - 30 \cdot 3^{k-1} - 42 \cdot 2^{k-1}$ & {\cy by distributing} \\
+$\dps $ & = & $\dps 25 \cdot 3^k + 35 \cdot 2^k - 10 \cdot 3 \cdot 3^{k-1} - 21 \cdot 2 \cdot 2^{k-1}$ & {\cy by algebra} \\
+$\dps $ & = & $\dps 25 \cdot 3^k + 35 \cdot 2^k - 10 \cdot 3^{k} - 21 \cdot 2^{k}$ & {\cy by laws of exponents} \\
+$\dps $ & = & $\dps 15 \cdot 3^k + 14 \cdot 2^k$ & {\cy by combining like terms} \\
+$\dps $ & = & $\dps 5 \cdot 3 \cdot 3^k + 7 \cdot 2 \cdot 2^k$ & {\cy by algebra} \\
+$\dps $ & = & $\dps 5 \cdot 3^{k+1} + 7 \cdot 2^{k+1}$ & {\cy by laws of exponents} \\
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 6}
+Suppose that $f_0, f_1, f_2, \ldots$ is a sequence defined
+as follows:
+\[
+f_0 = 5, f_1 = 16, f_k = 7f_{k-1} - 10f_{k-2} \text{ for every integer $k \geq 2$.}
+\]
+Prove that $f_n = 3 \cdot 2^n + 2 \cdot 5^n$ for every integer $n \geq 0$.
+
+\begin{proof}
+Let the property $P(n)$ be the equation $f_n = 3 \cdot 2^n + 2 \cdot 5^n$.
+
+{\bf Show that $P(0)$ and $P(1)$ are true:}
+
+We must show that $f_0 = 3 \cdot 2^0 + 2 \cdot 5^0$ and $f_1 = 3 \cdot 2^1 + 2 \cdot 5^1$. 
+The left-hand side of the first equation is 5 (by definition of $f_0, f_1, f_2, \ldots$), and its right-hand side is $3 \cdot 2^0 + 2 \cdot 5^0 = 3 + 2 = 5$ also. 
+The left-hand side of the second equation is 16 (by definition of $f_0, f_1, f_2, \ldots$), and its right-hand side is $3 \cdot 2^1 + 2 \cdot 5^1 = 6 + 10 = 16$ also. 
+Thus $P(0)$ and $P(1)$ are true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(i)$ is true for each integer $i$ with $0 \leq i \leq k$, then $P(k + 1)$ is also true:} 
+
+Let $k$ be any integer with $k \geq 1$ and suppose that $f_i = 3 \cdot 2^i + 2 \cdot 5^i$ for each integer $i$ with $0 \leq i \leq k$. {\it [This is the inductive hypothesis.]}
+We must show that $f_{k+1} = 3 \cdot 2^{k+1} + 2 \cdot 5^{k+1}$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps f_{k+1}$ & = & $\dps 7f_{k} - 10f_{k-1}$ & {\cy by definition of $f_0, f_1, f_2, \ldots$} \\
+$\dps $ & = & $\dps 7(3 \cdot 2^k + 2 \cdot 5^k) - 10(3 \cdot 2^{k-1} + 2 \cdot 5^{k-1})$ & {\cy by inductive hypothesis} \\
+$\dps $ & = & $\dps 21 \cdot 2^k + 14 \cdot 5^k - 30 \cdot 2^{k-1} - 20 \cdot 5^{k-1}$ & {\cy by distributing} \\
+$\dps $ & = & $\dps 21 \cdot 2^k + 14 \cdot 5^k - 15 \cdot 2 \cdot 2^{k-1} - 4 \cdot 5 \cdot 5^{k-1}$ & {\cy by algebra} \\
+$\dps $ & = & $\dps 21 \cdot 2^k + 14 \cdot 5^k - 15 \cdot  2^{k} - 4 \cdot 5^{k}$ & {\cy by laws of exponents} \\
+$\dps $ & = & $\dps 6 \cdot 2^k + 10 \cdot 5^k$ & {\cy by combining like terms} \\
+$\dps $ & = & $\dps 3 \cdot 2 \cdot 2^k + 2 \cdot 5 \cdot 5^k$ & {\cy by algebra} \\
+$\dps $ & = & $\dps 3 \cdot 2^{k+1} + 2 \cdot 5^{k+1}$ & {\cy by laws of exponents} \\
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 7}
+Suppose that $g_1, g_2, g_3, \ldots$ is a sequence defined
+as follows:
+\[
+g_1 = 3, g_2 = 5, g_k = 3g_{k-1} - 2g_{k-2} \text{ for every integer $k \geq 3$.}
+\]
+Prove that $g_n = 2^n + 1$ for every integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the equation $g_n = 2^n + 1$.
+
+{\bf Show that $P(1)$ and $P(2)$ are true:}
+
+We must show that $g_1 = 2^1 + 1$ and $g_2 = 2^2 + 1$. 
+The left-hand side of the first equation is 3 (by definition of $g_1, g_2, g_3, \ldots$), and its right-hand side is $2^1 + 1 = 2 + 1 = 3$ also. 
+The left-hand side of the second equation is 5 (by definition of $g_1, g_2, g_3, \ldots$), and its right-hand side is $2^2 + 1 = 4 + 1 = 5$ also. 
+Thus $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$, then $P(k + 1)$ is also true:} 
+
+Let $k$ be any integer with $k \geq 2$ and suppose that $g_i = 2^i + 1$ for each integer $i$ with $1 \leq i \leq k$. {\it [This is the inductive hypothesis.]}
+We must show that $g_{k+1} = 2^{k+1} + 1$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps g_{k+1}$ & = & $\dps 3g_{k} - 2g_{k-1}$ & {\cy by definition of $g_1, g_2, g_3, \ldots$} \\
+$\dps $ & = & $\dps 3(2^{k} + 1) - 2(2^{k-1} + 1)$ & {\cy by inductive hypothesis} \\
+$\dps $ & = & $\dps 3 \cdot 2^k + 3 - 2^k - 2$ & {\cy by distributing} \\
+$\dps $ & = & $\dps 2 \cdot 2^k + 1$ & {\cy by combining like terms} \\
+$\dps $ & = & $\dps 2^{k+1} + 1$ & {\cy by laws of exponents} \\
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 8}
+Suppose that $h_0, h_1, h_2, \ldots$ is a sequence defined
+as follows:
+\[
+h_0 = 1, h_1 = 1, h_2 = 2, h_k = h_{k-1} + h_{k-2} + h_{k-3} \text{ for every integer $k \geq 3$.}
+\]
+\subsubsection{(a)}
+Prove that $h_n \leq 3^n$ for every integer $n \geq 0$.
+
+\begin{proof}
+Let the property $P(n)$ be the inequality $h_n \leq 3^n$.
+
+{\bf Show that $P(0), P(1)$ and $P(2)$ are true:}
+
+We must show that $h_0 \leq 3^0, h_1 \leq 3^1$ and $h_2 \leq 3^2$. 
+The first inequality is $h_0 = 1 \leq 1 = 3^0$ which is true since $1 \leq 1$.
+The second inequality is $h_1 = 1 \leq 3 = 3^1$ which is true since $1 \leq 3$.
+The third inequality is $h_2 = 2 \leq 9 = 3^2$ which is true since $2 \leq 9$.
+Thus $P(0), P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $0 \leq i \leq k$, then $P(k + 1)$ is also true:} 
+
+Let $k$ be any integer with $k \geq 2$ and suppose that $h_i \leq 3^i$ for each integer $i$ with $0 \leq i \leq k$. {\it [This is the inductive hypothesis.]}
+We must show that $h_{k+1} \leq 3^{k+1}$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps h_{k+1}$ & = & $\dps h_{k} + h_{k-1} + h_{k-2}$ & {\cy by definition of $h_0, h_1, h_2, \ldots$} \\
+$\dps $ & $\leq$ & $\dps 3^{k} + 3^{k-1} + 3^{k-2}$ & {\cy by inductive hypothesis} \\
+$\dps $ & $\leq$ & $\dps 3^{k} + 3^{k} + 3^{k}$ & {\cy because $3^{k-1} \leq 3^k$ and $3^{k-2} \leq 3^k$} \\
+$\dps $ & = & $\dps 3 \cdot 3^{k}$ & {\cy by combining like terms} \\
+$\dps $ & = & $\dps 3^{k+1}$ & {\cy by laws of exponents} \\
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown].}
+\end{proof}
+
+\subsubsection{(b)}
+Suppose that $s$ is any real number such that $s^3 \geq s^2 + s + 1$. (This implies that $2 > s > 1.83$.) Prove that $h_n \leq s^n$ for every integer $n \geq 2$.
+
+\begin{proof}
+Let the property $P(n)$ be the inequality $h_n \leq s^n$.
+
+{\bf Show that $P(0), P(1)$ and $P(2)$ are true:}
+
+We must show that $h_0 \leq s^0, h_1 \leq s^1$ and $h_2 \leq s^2$. 
+The first inequality is $h_0 = 1 \leq 1 = s^0$ which is true since $1 \leq 1$.
+The second inequality is $h_1 = 1 \leq s^1$ which is true since $1 \leq 1.83 < s$.
+The third inequality is $h_2 = 2 \leq s^2$ which is true since $2 \leq (1.83)^2 = 3.3489 < s^2$.
+Thus $P(0), P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $0 \leq i \leq k$, then $P(k + 1)$ is also true:} 
+
+Let $k$ be any integer with $k \geq 2$ and suppose that $h_i \leq s^i$ for each integer $i$ with $0 \leq i \leq k$. {\it [This is the inductive hypothesis.]}
+We must show that $h_{k+1} \leq s^{k+1}$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps h_{k+1}$ & = & $\dps h_{k} + h_{k-1} + h_{k-2}$ & {\cy by definition of $h_0, h_1, h_2, \ldots$} \\
+$\dps $ & $\leq$ & $\dps s^{k} + s^{k-1} + s^{k-2}$ & {\cy by inductive hypothesis} \\
+$\dps $ & $=$ & $\dps s^{k-2}(s^2 + s + 1)$ & {\cy by factoring $s^{k-2}$} \\
+$\dps $ & $\leq$ & $\dps s^{k-2}(s^3)$ & {\cy by the fact $s^3 \geq s^2 + s + 1$} \\
+$\dps $ & $=$ & $\dps s^{k+1}$ & {\cy by laws of exponents}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 9}
+Define a sequence $a_1, a_2, a_3, \ldots$ as follows:
+\[
+a_1 = 1, a_2 = 3, a_k = a_{k-1} + a_{k-2} \text{ for every integer $k \geq 3$.}
+\]
+(This sequence is known as the Lucas sequence.) Use strong
+mathematical induction to prove that $a_n \leq (7/4)^n$ for every integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the inequality $a_n \leq (7/4)^n$.
+
+{\bf Show that $P(1)$ and $P(2)$ are true:}
+
+We must show that $a_1 \leq (7/4)^1$ and $a_2 \leq (7/4)^2$. 
+The first inequality is $a_1 = 1 \leq 7/4 = (7/4)^1$ which is true since $1 \leq 7/4$.
+The second inequality is $a_2 = 3 \leq 3.0625 = 49 / 16 = (7/4)^2$ which is true since $3 \leq 3.0625$.
+Thus $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$, then $P(k + 1)$ is also true:} 
+
+Let $k$ be any integer with $k \geq 2$ and suppose that $a_i \leq (7/4)^i$ for each integer $i$ with $1 \leq i \leq k$. {\it [This is the inductive hypothesis.]}
+We must show that $a_{k+1} \leq (7/4)^{k+1}$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps a_{k+1}$ & = & $\dps a_{k} + a_{k-1}$ & {\cy by definition of $a_1, a_2, a_3, \ldots$} \\
+$\dps $ & $\leq$ & $\dps (7/4)^{k} + (7/4)^{k-1}$ & {\cy by inductive hypothesis} \\
+$\dps $ & $=$ & $\dps (7/4)^{k-1}(7/4 + 1)$ & {\cy by factoring $(7/4)^{k-1}$} \\
+$\dps $ & $=$ & $\dps (7/4)^{k-1}(11/4)$ & {\cy by algebra} \\
+$\dps $ & $\leq$ & $\dps (7/4)^{k-1}(49/16)$ & {\cy because $11/4 \leq 49/16$} \\
+$\dps $ & $=$ & $\dps (7/4)^{k-1}(7/4)^2$ & {\cy by rewriting} \\
+$\dps $ & $=$ & $\dps (7/4)^{k+1}$ & {\cy by laws of exponents}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 10}
+The introductory example solved with ordinary
+mathematical induction in Section 5.3 can also be
+solved using strong mathematical induction. Let $P(n)$
+be “any $n$¢ can be obtained using a combination of
+3¢ and 5¢ coins.” Use strong mathematical induction
+to prove that $P(n)$ is true for every integer $n \geq 8$.
+
+{\it Hint:} In the basis step, show that $P(8), P(9)$,
+and $P(10)$ are all true. For the inductive step, note
+that $k + 1 = [(k + 1) - 3] + 3$, and if $k \geq 10$, then
+$(k + 1) - 3 \geq 8$.
+
+\begin{proof}
+{\bf Show that $P(8), P(9)$ and $P(10)$ are true:}
+8¢ = 3¢ + 5¢ so $P(8)$ is true. 
+9¢ = 3¢ + 3¢ + 3¢ so $P(9)$ is true. 
+10¢ = 5¢ + 5¢ so $P(10)$ is true.
+
+{\bf Show that for every $k \geq 10$, if $P(i)$ is true for every $i$ with $8 \leq i \leq k$ then $P(k+1)$ is true:}
+
+Notice that $k - 2 \geq 8$, so by the inductive hypothesis, $(k-2)$¢ can be obtained using a combination of 3¢ and 5¢ coins. 
+Notice that $k + 1 = (k-2) + 3$. So $(k+1)$¢ can be obtained from $(k-2)$¢ by adding one more 3¢ coin.
+Therefore $(k+1)$¢ can be obtained using a combination of 3¢ and 5¢ coins, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 11}
+You begin solving a jigsaw puzzle by finding two pieces that match and fitting them together. 
+Every subsequent step of the solution consists of fitting together two blocks, each of which is made up of one or more pieces that have previously been assembled. 
+Use strong mathematical induction to prove that for every integer $n \geq 1$, the number of steps required to put together all $n$ pieces of a jigsaw puzzle is $n - 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the sentence ``A jigsaw puzzle consisting of $n$ pieces takes $n - 1$ steps to put together.''
+
+{\bf Show that $P(1)$ is true:}
+A jigsaw puzzle consisting of just one piece does not
+take any steps to put together. Hence it is correct to say
+that it takes zero steps to put together.
+
+{\bf Show that for every integer $k \geq 1$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$ and suppose that for
+each integer $i$ with $1 \leq i \leq k$, a jigsaw puzzle consisting of $i$ pieces takes $i - 1$ steps to put together. {\it [This is the inductive hypothesis.]} 
+We must show that a jigsaw puzzle consisting of $k + 1$ pieces takes $k$ steps to put together. 
+
+Consider assembling a jigsaw puzzle consisting of $k + 1$ pieces. 
+The last step involves fitting together two blocks. Suppose one of the blocks consists of $r$ pieces and the other consists of $s$ pieces. Then $r + s = k + 1$, and $1 \leq r \leq k$ and $1 \leq s \leq k$. 
+Thus, by the inductive hypothesis, the numbers of steps required to assemble the blocks are $r - 1$ and $s - 1$, respectively. 
+Then the total number of steps required to assemble the puzzle is $(r - 1) + (s - 1) + 1 = (r + s) - 1 = (k + 1) - 1 = k$ {\it [as was to be shown]}.
+\end{proof}
+
+\subsection{Exercise 12}
+The sides of a circular track contain a sequence of $n$ cans of gasoline. For each integer $n \geq 1$, the total amount in the cans is sufficient to enable a certain car to make one complete circuit of the track. 
+In addition, all the gasoline could fit into the car’s gas tank at one time. 
+Use mathematical induction to prove that it is possible to find an initial location for placing the car so that it will be able to traverse the entire track by using the various amounts of gasoline in the cans that it encounters along the way.
+
+{\it Hint:} For any collection of cans, at least one must
+contain enough gasoline to enable the car to get to the
+next can. (Why?) 
+Imagine taking all the gasoline from that can and pouring it into the can that immediately proceeds it in the direction of travel around the track. 
+{\it (I think ``precedes'' here is a typo in the book, I think they meant ``proceeds'' so I changed it.)}
+
+\begin{proof}
+Let $P(n)$ be the statement: ``It is possible to find an initial location for placing the car so that it will be able to traverse the entire track by using the various amounts of gasoline in the $n$ cans that it encounters along the way.''
+
+{\bf Show that $P(1)$ is true:} In this case there is only one gasoline can. Let the initial location for the car to be this can. By the given assumption in the problem statement, the total amount in this can is sufficient to enable the car to make one complete circuit of the track. Therefore $P(1)$ is true.
+
+{\bf Show that for any integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:}
+
+Assume $k \geq 1$ is any integer and assume $P(k)$ is true. Assume we are considering a circuit with $k+1$ gasoline cans. For convenience, label them $c_1, c_2, \ldots, c_{k+1}$ in the direction of the car's movement, and label their gasoline amounts as $g_1, g_2, \ldots, g_{k+1}$ respectively.
+
+So the problem tells us that $g_1 + g_2 + \ldots + g_{k+1}$ is enough to allow the car make one complete track around the circuit.
+
+{\bf Claim:} For any collection of cans, at least one must
+contain enough gasoline to enable the car to get to the
+next can.
+
+{\it Proof of Claim.} Argue by contradiction and assume that no can contains enough gasoline to enable the car to get to the next can. Then the total amount in the cans is insufficient to enable the car to make one complete circuit, which is a contradiction to the fact given in the problem.
+
+By the Claim, there exists a can, let's say $c_1$, that contains enough gasoline $g_1$ to reach the next can $c_2$ in the direction of movement.
+
+Consider the circuit with $k$ gasoline cans obtained from the current track by combining the gasoline in $c_1$ and $c_2$ into $c_1$. This is a circuit with $k$ gasoline cans: we got rid of $c_2$ and now $c_1$ contains gasoline in the amount of $g_1 + g_2$. So the cans and their gasoline amounts are: $c_1: g_1 + g_2, c_3: g_3, c_4: g_4, \ldots, c_{k+1}: g_{k+1}$.
+
+By the inductive hypothesis, there is an initial location in this $k$ can circuit, say at can $c_i$, that allows the car to make one complete track around this circuit.
+
+Now we want to show that the same starting point, $c_i$, also works for our $k+1$ can circuit.
+
+Let the car start at $c_i$. Then the car is able to travel to $c_1$ because the cans from $c_i$ up to $c_1$ have enough gasoline to allow the car to reach $c_1$ (by the inductive hypothesis). Some of this gasoline might be left over. When the car reaches $c_1$, say the remaining gasoline in the tank is $g$.  From this point on, we will talk about the two different circuit runs in parallel.
+
+In the $k$ can circuit, now the car fuels up at can $c_1$ and receives $g_1 + g_2$ amount of gasoline. So $g + (g_1 + g_2)$ is enough to reach from $c_1$ to the next can, which is $c_3$ (by the inductive hypothesis). 
+
+To explain this a little bit better, say the exact amount of gasoline required to go from $c_1$ to $c_2$ is $G_1$, and the exact amount of gasoline required to go from $c_2$ to $c_3$ is $G_2$. So by the paragraph above, $g + g_1 + g_2 \geq G_1 + G_2$. And then the car reaches $c_3$ with $g + g_1 + g_2 - G_1 - G_2$ left in the tank, which is enough to complete the circuit back to $c_i$ (by the inductive hypothesis).
+
+In the $k+1$ can circuit, now the car fuels up at can $c_1$ and receives $g_1$ amount of gasoline. Now there is $g + g_1$ in the tank. We know that $g_1$ is enough to go from $c_1$ to $c_2$ (by the property of $c_1$), so $g_1 \geq G_1$. Therefore the car reaches $c_2$ no problem, because $g + g_1 \geq G_1$. (Notice that if $g_1 \geq G_1$ weren't true, then the car would have to rely on the previous leftover $g$ to make up for the difference to reach $c_2$, which might not have been enough, since $g$ might be 0.)
+
+Continuing on the $k+1$ circuit: when the car reaches $c_2$ there is $g + g_1 - G_1$ left in the tank. Now the car fuels up at $c_2$ and receives $g_2$ from $c_2$, so there is $g + g_1 - G_1 + g_2$ in the tank.
+
+From the $k$ can circuit we know $g + g_1 + g_2 \geq G_1 + G_2$ which implies $g + g_1 + g_2 - G_1 \geq G_2$. The left hand side is the amount the tank has at $c_2$ in the $k+1$ can circuit. So this amount $g + g_1 + g_2 - G_1$ is enough from $c_2$ to reach $c_3$. 
+
+When the car reaches $c_3$ in the $k+1$ can circuit, there is $g + g_1 + g_2 - G_1 - G_2$ left in the tank, which is exactly the same as the $k$ can circuit, so it's enough to complete the track back to $c_i$.
+
+This proves $P(k+1)$, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 13}
+Use strong mathematical induction to prove the existence part of the unique factorization of integers theorem (Theorem 4.4.5). In other words, prove that every integer greater than 1 is either a prime number or a product of prime numbers.
+
+\begin{proof}
+{\it Sketch of proof:} Given any integer $k > 1$, either $k$ is prime or $k$ is a product of two smaller positive integers, each greater than 1. 
+In the former case, the property is true. 
+In the latter case, the inductive hypothesis ensures that both factors of $k$ are products of primes and hence that $k$ is also a product of primes.
+
+Let the property $P(n)$ be: ``There exist a positive integer $k$, distinct prime numbers $p_1, p_2, \ldots, p_k$, and positive integers $e_1, e_2, \ldots, e_k$ such that $n = p_1^{e_1} p_2^{e_2} p_3^{e_3} \cdots p_k^{e_k}$.''
+
+{\bf Show that $P(2)$ is true:} We have $2 = 2^{1}$ so we can choose $k = 1$, $p_1 = 2$ and $e_1 = 1$. So $P(2)$ is true.
+
+{\bf Show that for any integer $n > 1$ if $P(i)$ is true for all integers $i$ with $1 < i \leq n$ then $P(n+1)$ is true:}
+
+Assume $n > 1$ is any integer and assume that for every integer $i$ with $1 < i \leq n$ there exist a positive integer $k_i$, distinct prime numbers $p_{1_i}, p_{2_i}, \ldots, p_{k_i}$ and positive integers $e_{1_i}, e_{2_i}, \ldots, e_{k_i}$ such that $i = p_{1_i}^{e_{1_i}} p_{2_i}^{e_{2_i}} p_{3_i}^{e_{3_i}} \cdots p_{k_i}^{e_{k_i}}$.
+
+{\it [We want to show that there exist a positive integer $k$, distinct prime numbers $p_1, \ldots, p_k$, and positive integers $e_1, e_2, \ldots, e_k$ such that $n+1 = p_1^{e_1} p_2^{e_2} p_3^{e_3} \cdots p_k^{e_k}$.]}
+
+{\bf Case 1: $n+1$ is prime.} Then $n + 1 = (n+1)^1$ so we can take $k = 1, p_1 = n+1, e_1 = 1$ which proves $P(n+1)$ is true.
+
+{\bf Case 2: $n+1$ is composite.} By definition of composite $n+1 = ab$ for integers $a,b$ with $1 < a < n+1$ and $1 < b < n+1$.
+
+By the inductive hypothesis $a = q_1^{f_1} q_2^{f_2} \cdots q_x^{f_x}$ and $b = r_1^{g_1} r_2^{g_2} \cdots r_y^{g_y}$ for some positive integers $x, y, f_1, \ldots, f_x, g_1, \ldots, g_y$ and some primes $q_1, \ldots, q_x, r_1, \ldots, r_y$. The primes $q_1, \ldots, q_x$ are distinct among themselves, and the primes $r_1, \ldots, r_y$ are distinct among themselves.
+
+Then $n+1 = ab = q_1^{f_1} q_2^{f_2} \cdots q_x^{f_x} \cdot r_1^{g_1} r_2^{g_2} \cdots r_y^{g_y}$. 
+
+Now some of the primes $q_i$ might be among the primes $r_j$. If so, we can combine the powers in this product. For example if $q_i = r_j$ then we can let $s_i = q_i, h_i = f_i + g_j$ and combine the product $q_i^{f_i} \cdot r_j^{g_j} = s_i^{f_i + g_j} = s_i^{h_i}$. 
+
+This way, we obtain distinct primes $s_1, \ldots, s_z$ for some positive integer $z$, and positive integers $h_1, \ldots, h_z$ such that
+\[
+n+1 = ab = s_1^{h_1} \cdots s_z^{h_z}
+\]
+which proves $P(n+1)$, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 14}
+Any product of two or more integers is a result of successive multiplications of two integers at a time. For instance, here are a few of the ways in which $a_1, a_2, a_3, a_4$ might be computed: $(a_1 a_2)(a_3 a_4)$ or $((a_1 a_2) a_3) a_4)$ or $a_1((a_2 a_3) a_4)$. Use strong mathematical induction to prove that any product of two or more odd integers is odd.
+
+\begin{proof}
+Let the property $P(n)$ be the sentence “Any product of $n$ odd integers is odd.”
+
+{\bf Show that $P(1)$ and $P(2)$ are true:}
+$P(1)$ is true because any product of one odd integer is odd. 
+$P(2)$ is true because any product of two odd integers is odd (Exercise 20, Section 4.2).
+
+{\bf Show that for every integer $k \geq 1$, if $P(i)$ is true for each integer $i$ with $1 \leq i \leq k$ then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose that
+for each integer $i$ with $1 \leq i \leq k$, any product 
+of $i$ odd integers is odd. {\it [Inductive hypothesis]} 
+
+Consider any product $M$ of $k + 1$ odd integers. 
+Some multiplication is the final one that is used to obtain $M$. 
+Thus, there are integers $A$ and $B$ such that $M = AB$, 
+and each of $A$ and $B$ is a product of between 1 and $k$ 
+odd integers. 
+(For instance, if $M = ((a_1a_2)a_3)a_4$, then $A = (a_1a_2)a_3$ and $B = a_4$.) 
+By inductive hypothesis, each of $A$ and $B$ is odd, and, 
+as in the basis step, we know that any product of two odd
+integers is odd. Hence $M = AB$ is odd.
+\end{proof}
+
+\subsection{Exercise 15}
+Define the “sum” of one integer to be that integer, and use strong mathematical induction to prove that for every integer $n \geq 1$, any sum of $n$ even integers is even.
+
+\begin{proof}
+Let $P(n)$ be the statement ``any sum of $n$ even integers is even.''
+
+{\bf Show that $P(1)$ is true:} The sum of one even integer is equal to itself, which is even. Thus $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$ if $P(i)$ is true for all integers $i$ with $1 \leq i \leq k$ then $P(k+1)$ is true:}
+
+Assume $k \geq 1$ is an integer such that any sum of $i$ even integers is even, for any integer $i$ with $1 \leq i \leq k$. {\it [We want to show that any sum of $k+1$ even integers is even.]}
+
+Consider any sum $S$ of $k+1$ even integers. 
+Some addition is the final one that is used to obtain $S$. 
+Thus, there are integers $A$ and $B$ such that $S = A + B$,
+and each of $A$ and $B$ is a sum of between 1 and $k$ 
+even integers. 
+(For instance, if $S = ((a_1 + a_2) + a_3) + a_4$, then $A = (a_1 + a_2) + a_3$ and $B = a_4$.) 
+By inductive hypothesis, each of $A$ and $B$ is even, and, 
+we know that any sum of two even integers is even. Hence $S = A + B$ is even, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 16}
+Use strong mathematical induction to prove that for every integer $n \geq 2$, if $n$ is even, then any sum of $n$ odd integers is even, and if $n$ is odd, then any sum of $n$ odd integers is odd.
+
+{\it Hint:} Let the property $P(n)$ be the sentence “If 
+$n$ is even, then any sum of $n$ odd integers is even,
+and if $n$ is odd, then any sum of $n$ odd integers is odd.”
+For the inductive step, consider any sum $S$ of $k + 1$ odd integers. 
+Some addition is the final one that is used to obtain $S$.
+Thus, there are integers $A$ and $B$ such that $S = A + B$,
+and $A$ is a sum of $r$ odd integers 
+and $B$ is a sum of $(k + 1) - r$ odd integers. 
+Consider the two cases where $k + 1$ is even and $k + 1$ is
+odd, and for each case consider the two subcases where $r$
+is even and where $r$ is odd.
+
+\begin{proof}
+(following the Hint)
+
+{\bf Show that $P(2)$ is true:} 2 is even, so we need to show that any sum of 2 odd integers is even. Assume $m, n$ are two odd integers. 
+{\it [We want to show $m+n$ is even.]} 
+By definition of odd $m = 2a+1$ and $n = 2b+1$ for some integers $a,b$. 
+Then $m+n = 2a+1 + 2b + 1 = 2(a+b+1)$ where $a+b+1$ is an integer (because $a$ and $b$ are integers). 
+So by definition of even, $m+n$ is even. This proves $P(2)$.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is true for all integers $i$ with $2 \leq i \leq k$ then $P(k+1)$ is true:}
+
+Assume $k \geq 2$ is any integer such that for all $i$ with $2 \leq i \leq k$, if $i$ is even then any sum of $i$ odd integers is even, and if $i$ is odd then any sum of $i$ odd integers is odd.
+
+{\it [We want to show that if $k+1$ is even, then any sum of $k+1$ odd integers is even, and if $k+1$ is odd, then any sum of $k+1$ odd integers is odd.]}
+
+Consider any sum $S$ of $k+1$ odd integers.
+Some addition is the final one that is used to obtain $S$.
+Thus, there are integers $A$ and $B$ such that $S = A + B$,
+$A$ is a sum of $r$ odd integers and $B$ is a sum of $(k + 1) - r$ odd integers.
+
+{\bf Case 1: $k+1$ is even.} {\it [We want to show that $S$ is even.]} 
+
+{\bf Subcase 1.1: $r$ is even.}
+Then $(k+1) - r$ is even. So both $A$ and $B$ are sums of an even number of odd integers.
+By inductive hypothesis $A$ and $B$ are both even.
+Therefore $S = A + B$ is even (a sum of two even integers),
+{\it [as was to be shown.]}
+
+{\bf Subcase 1.2: $r$ is odd.}
+Then $(k+1) - r$ is odd. So both $A$ and $B$ are sums of an odd number of odd integers.
+By inductive hypothesis $A$ and $B$ are both odd.
+Therefore $S = A + B$ is even (a sum of two odd integers),
+{\it [as was to be shown.]}
+
+{\bf Case 2: $k+1$ is odd.} {\it [We want to show that $S$ is odd.]} 
+
+{\bf Subcase 2.1: $r$ is even.}
+Then $(k+1) - r$ is odd. 
+So $A$ is a sum of an even number of odd integers, and 
+$B$ is a sum of an odd number of odd integers.
+By inductive hypothesis $A$ is even and $B$ is odd.
+Therefore $S = A + B$ is odd 
+(a sum of one even and one odd integers),
+{\it [as was to be shown.]}
+
+{\bf Subcase 2.2: $r$ is odd.}
+Then $(k+1) - r$ is even. 
+So $A$ is a sum of an odd number of odd integers, and 
+$B$ is a sum of an even number of odd integers.
+By inductive hypothesis $A$ is odd and $B$ is even.
+Therefore $S = A + B$ is odd 
+(a sum of one odd and one even integers),
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 17}
+Compute $4^1, 4^2, 4^3, 4^4, 4^5, 4^6, 4^7$, and $4^8$. 
+Make a conjecture about the units digit of $4^n$ where $n$ is a positive integer. 
+Use strong mathematical induction to prove your conjecture.
+
+\begin{proof}
+$4^1 = 4, 4^2 = 16, 4^3 = 64, 4^4 = 256, 4^5 = 1024, 4^6 = 4096, 4^7 = 16384, 4^8 = 65536$.
+
+{\it Conjecture:} 
+The units digit of $4^n$ equals 4 if $n$ is odd and equals 6 if $n$ is even, 
+for all $n \geq 1$.
+
+\underline{Proof by strong mathematical induction:} 
+Let $P(n)$ be the statement: 
+``The units digit of $4^n$ is 4 if $n$ is odd, 6 if $n$ is even.''
+
+{\bf Show that $P(1)$ and $P(2)$ are true:} 
+When $n = 1$, $4^n = 4^1 = 4$, so the units digit is 4.
+When $n = 2$, $4^n = 4^2 = 16$, so the units digit is 6.
+Therefore $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for all integers $k \geq 2$, if $P(i)$ is true for all integers $i$ with $1 \leq i \leq k$ then $P(k+1)$ is true:}
+
+Let $k$ by any integer with $k \geq 2$, and suppose that for each integer $i$ 
+with $1 \leq i \leq k$, the units digit of $4^i$ equals 4 if $i$ is odd and 
+equals 6 if $i$ is even. {\it [Inductive hypothesis]} 
+We must show that the units digit of $4^{k+1}$ equals 4 
+if $k + 1$ is odd and equals 6 if $k + 1$ is even.
+
+{\bf Case 1 ($k + 1$ is odd):} In this case, $k$ is even,
+and so, by inductive hypothesis, the units digits of $4^k$ is 6. 
+Thus $4^k = 10q + 6$ for some nonnegative integer $q$. It follows that 
+$4^{k+1} = 4^k \cdot 4 = (10q + 6) \cdot 4 = 40q + 24 = 10(4q + 2) + 4$. 
+Thus, the units digit of $4^{k+1}$ is 4.
+
+{\bf Case 2 ($k + 1$ is even):} In this case, $k$ is odd,
+and so, by inductive hypothesis, the units digits of $4^k$ is 4. 
+Thus $4^k = 10q + 4$ for some nonnegative integer $q$. It follows that 
+$4^{k+1} = 4^k \cdot 4 = (10q + 4) \cdot 4 = 40q + 16 = 10(4q + 1) + 6$. 
+Thus, the units digit of $4^{k+1}$ is 6.
+
+{\bf\it Conclusion:} Because cases 1 and 2 are the only 
+possibilities and $4^{k+1}$ has one of the required forms
+in each case, we have shown that $P(k + 1)$ is true.
+\end{proof}
+
+\subsection{Exercise 18}
+Compute $9^0, 9^1, 9^2, 9^3, 9^4$, and $9^5$. Make a conjecture about the units digit of $9^n$ where $n$ is a positive integer. Use strong mathematical induction to prove your conjecture.
+
+\begin{proof}
+$9^0 = 1, 9^1 = 9, 9^2 = 81, 9^3 = 729, 9^4 = 6561, 9^5 = 59049$.
+
+{\it Conjecture:} 
+The units digit of $9^n$ equals 9 if $n$ is odd and equals 1 if $n$ is even, for $n \geq 0$.
+
+\underline{Proof by strong mathematical induction:} 
+Let $P(n)$ be the statement: 
+``The units digit of $9^n$ is 9 if $n$ is odd, 1 if $n$ is even.''
+
+{\bf Show that $P(0)$ and $P(1)$ are true:} 
+When $n = 0$, $9^n = 9^0 = 1$, so the units digit is 1.
+When $n = 1$, $9^n = 9^1 = 9$, so the units digit is 9.
+Therefore $P(0)$ and $P(1)$ are true.
+
+{\bf Show that for all integers $k \geq 1$, if $P(i)$ is true for all integers $i$ with $0 \leq i \leq k$ then $P(k+1)$ is true:}
+
+Let $k$ by any integer with $k \geq 1$, and suppose that for each integer $i$ 
+with $0 \leq i \leq k$, the units digit of $9^i$ equals 9 if $i$ is odd and 
+equals 1 if $i$ is even. {\it [Inductive hypothesis]}
+We must show that the units digit of $9^{k+1}$ equals 9 
+if $k + 1$ is odd and equals 1 if $k + 1$ is even.
+
+{\bf Case 1 ($k + 1$ is odd):} In this case, $k$ is even, and so, by inductive 
+hypothesis, the units digits of $9^k$ is 1.
+Thus $9^k = 10q + 1$ for some nonnegative integer $q$. It follows that 
+$9^{k+1} = 9^k \cdot 9 = (10q + 1) \cdot 9 = 90q + 9 = 10(9q) + 9$. 
+Thus, the units digit of $9^{k+1}$ is 9.
+
+{\bf Case 2 ($k + 1$ is even):} In this case, $k$ is odd, and so, by inductive 
+hypothesis, the units digits of $9^k$ is 9. 
+Thus $9^k = 10q + 9$ for some nonnegative integer $q$. It follows that 
+$9^{k+1} = 9^k \cdot 9 = (10q + 9) \cdot 9 = 90q + 81 = 10(9q + 8) + 1$. 
+Thus, the units digit of $9^{k+1}$ is 1.
+
+{\bf\it Conclusion:} Because cases 1 and 2 are the only 
+possibilities and $9^{k+1}$ has one of the required forms
+in each case, we have shown that $P(k + 1)$ is true.
+\end{proof}
+
+\subsection{Exercise 19}
+Suppose that $a_1, a_2, a_3, \ldots$ is a sequence defined as follows:
+\[
+a_1 = 1, a_k = 2 \cdot a_{\floor{k/2}} \text{ for every integer } k \geq 2.
+\]
+Prove that $a_n \leq n$ for each integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the inequality $a_n \leq n$. {\cy $\from P(n)$} 
+
+We will show that $P(n)$ is true for each integer $n \geq 1$. 
+
+{\bf Show that $P(1)$ is true:} $a_1 = 1$ and $1 \leq 1$. So $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(i)$ is true for each integer
+$i$ from 1 through $k$, then $P(k + 1)$ is true:} Let $k$ be any integer with
+$k \geq 1$, and suppose that $a_i \leq i$ for each integer $i$ with 
+$1 \leq i \leq k$. {\cy $\from$ inductive hypothesis}
+
+We must show that $a_{k+1} \leq k + 1$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps a_{k+1}$ & = & $\dps 2 \cdot a_{\floor{(k+1)/2}}$ & {\cy by definition of $a_1, a_2, a_3, \ldots$} \\
+$\dps $ & $\leq$ & $\dps 2 \cdot \floor{(k+1)/2}$ & {\cy by inductive hypothesis} \\
+$\dps $ & $=$ & $\dps 
+\left\{
+\begin{array}{lr}
+2((k+1)/2) & \text{if $k$ is odd} \\
+2(k/2) & \text{if $k$ is even} \\
+\end{array}
+\right.$ & {\cy by definition of floor} \\
+$\dps $ & $=$ & $\dps 
+\left\{
+\begin{array}{lr}
+k+1 & \text{if $k$ is odd} \\
+k & \text{if $k$ is even} \\
+\end{array}
+\right.$ & {\cy by algebra} \\
+$\dps $ & $\leq$ & $\dps k+1$ & {\cy because $k \leq k+1$}
+\end{tabular}
+\end{center}
+
+Thus $a_{k+1} \leq k + 1$ {\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 20}
+Suppose that $b_1, b_2, b_3, \ldots$ is a sequence defined as follows:
+\[
+b_1 = 0, b_2 = 3, b_k = 5 \cdot b_{\floor{k/2}} + 6 \text{ for every integer } k \geq 3.
+\]
+Prove that $b_n$ is divisible by 3 for each integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the statement $3 \mid b_n$. {\cy $\from P(n)$} 
+
+We will show that $P(n)$ is true for each integer $n \geq 1$. 
+
+{\bf Show that $P(1)$ and $P(2)$ are true:} 
+$b_1 = 0 = 3 \cdot 0$ and $b_2 = 3 = 3 \cdot 1$. 
+So $3 \mid b_1$ and $3 \mid b_2$. 
+So $P(1)$ and $P(2)$ are true.
+
+{\bf Show that for every integer $k \geq 2$, if $P(i)$ is
+true for each integer $i$ from 1 through $k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 2$, and suppose that
+$3 \mid b_i$ for each integer $i$ with $1 \leq i \leq k$.
+{\cy $\from$ inductive hypothesis}
+
+We must show that $3 \mid b_{k+1}$. 
+
+{\bf Case 1: $k$ is even.} 
+Then $k = 2i$ for some integer $i$ with $1 \leq i < k$, and
+$\dps \floor{(k+1)/2} = \floor{(2i+1)/2} = \floor{i+1/2} = i$.
+By the inductive hypothesis, $3 \mid b_i$. So $b_i = 3m$ for some integer $m$. Then
+\[
+b_{k+1} = 5 \cdot b_{\floor{(k + 1)/2}} + 6 = 5 \cdot b_i + 6 = 5 \cdot (3m) + 6 = 3(5m + 2)
+\]
+so by definition of divides, $3 \mid b_{k+1}$, {\it [as was to be shown.]}
+
+{\bf Case 2: $k$ is odd.} 
+Then $k = 2i + 1$ for some integer $i$ with $1 \leq i < k$,
+and $\dps \floor{(k + 1)/2} = \floor{(2i + 1 + 1)/2} = \floor{(2i + 2)/2} = \floor{i+1}= i+1$. 
+Note that $i + 1 \leq k$.
+By the inductive hypothesis, $3 \mid b_{i + 1}$. So $b_{i + 1} = 3m$ for some integer $m$. Then
+\[
+b_{k+1} = 5 \cdot b_{\floor{(k + 1)/2}} + 6 = 5 \cdot b_{i + 1} + 6 = 5 \cdot (3m) + 6 = 3(5m + 2)
+\]
+so by definition of divides, $3 \mid b_{k+1}$, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 21}
+Suppose that $c_0, c_1, c_2, c_3, \ldots$ is a sequence defined as follows:
+\[
+c_0 = 1, c_1 = 1, c_k = c_{\floor{k/2}} + c_{\ceil{k/2}}  \text{ for every integer } k \geq 2.
+\]
+Prove that $c_n = n$ for each integer $n \geq 1$.
+
+\begin{proof}
+Let the property $P(n)$ be the equality $c_n = n$. {\cy $\from P(n)$} 
+
+We will show that $P(n)$ is true for each integer $n \geq 1$. 
+
+{\bf Show that $P(1)$ is true:} 
+$c_1 = 1$ so $P(1)$ is true.
+
+{\bf Show that for every integer $k \geq 1$, if $P(i)$ is
+true for each integer $i$ from 1 through $k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 1$, and suppose that
+$c_i = i$ for each integer $i$ with $1 \leq i \leq k$.
+{\cy $\from$ inductive hypothesis}
+
+We must show that $c_{k+1} = k+1$. 
+
+{\bf Case 1: $k$ is even.} 
+Then $k = 2i$ for some integer $i$ with $1 \leq i < k$. So: 
+
+$\dps \floor{(k+1)/2} = \floor{(2i+1)/2} = \floor{i+1/2} = i$, and
+
+$\dps \ceil{(k+1)/2} = \ceil{(2i+1)/2} = \ceil{i+1/2} = i+1$.
+
+Notice that $i + 1 \leq k$.
+
+By the inductive hypothesis, $c_i = i$ and $c_{i+1} = i+1$. Then
+\[
+c_{k+1} = c_{\floor{(k+1)/2}} + c_{\ceil{(k+1)/2}} = c_i + c_{i+1} = i + (i+1) = 2i+1 = k+1,
+\]
+{\it [as was to be shown.]}
+
+{\bf Case 2: $k$ is odd.} 
+Then $k = 2i + 1$ for some integer $i$ with $1 \leq i < k$. So: 
+
+$\dps \floor{(k + 1)/2} = \floor{(2i + 1 + 1)/2} = \floor{i + 1} = i + 1$, and
+
+$\dps \ceil{(k + 1)/2} = \ceil{(2i + 1 + 1)/2} = \ceil{i + 1} = i+1$.
+
+Notice that $i + 1 \leq k$.
+
+By the inductive hypothesis $c_{i+1} = i+1$. Then
+\[
+c_{k + 1} = c_{\floor{(k+1)/2}} + c_{\ceil{(k+1)/2}} = c_{i + 1} + c_{i + 1} = (i+1) + (i+1) = 2i+2 = k+1,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 22}
+One version of the game NIM starts with two piles of
+objects such as coins, stones, or matchsticks. In each turn
+a player is required to remove from one to three objects
+from one of the piles. The two players take turns doing
+this until both piles are empty. The loser is the first
+player who can’t make a move. Use strong mathematical
+induction to show that if both piles contain the same
+number of objects at the start of the game, the player who 
+goes second can always win.
+
+\begin{proof}
+Let $P(n)$ be the sentence 
+\begin{center}
+In this version of NIM, if both piles initially contain $n$ objects, the player who goes second can always win. 
+\end{center}
+
+We will prove that $P(n)$ is true for every integer $n \geq 0$.
+
+{\bf Show that $P(0)$ is true:}
+
+If neither pile contains any objects, the player who goes first automatically loses because of not being able to make a move. So the second player wins the game by default. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer $k \geq 0$, if $P(i)$ is true for each integer $i$ from 1 through $k$, then $P(k + 1)$ is true:}
+
+Let $k$ be any integer with $k \geq 0$, and suppose: 
+\begin{center}
+In this version of NIM, for every integer $i$ with $0 \leq i \leq k$, 
+if both piles initially contain $i$ objects, the player who goes second can always win. 
+\end{center}
+We must show that In this version of NIM, if both piles initially contain $k + 1$ objects, the player who goes second can always win. {\cy $\from P(k + 1)$}
+
+So suppose both piles contain $k + 1$ objects, where $0 \leq i \leq k$, and 
+suppose the first player removes $r$ objects from pile \#1, where $1 \leq r \leq 3$. 
+If the second player removes $r$ objects from pile \#2, then both piles will 
+have the same number of objects, namely $(k + 1) - r$, and $(k + 1) - r \leq k$ 
+because $r \geq 1$. Thus, by inductive hypothesis, the second player can win.
+\end{proof}
+
+\subsection{Exercise 23}
+Define a game $G$ as follows: Begin with a pile of $n$ stones and 0 points. In the first move split the pile into
+two possibly unequal sub-piles, multiply the number of stones in one sub-pile times the number of stones in the
+other sub-pile, and add the product to your score. In the second move, split each of the newly created piles into a
+pair of possibly unequal sub-piles, multiply the number of stones in each sub-pile times the number of stones in the 
+paired sub-pile, and add the new products to your score. Continue by successively splitting each newly created pile 
+of stones that has at least two stones into a pair of sub-piles, multiplying the number of stones in each sub-pile 
+times the number of stones in the paired sub-pile, and adding the new products to your score. The game $G$ ends 
+when no pile contains more than one stone.
+
+\subsubsection{(a)}
+Play $G$ starting with 10 stones and using the following initial moves. In move 1 split the pile of 10 stones into two sub-piles with 3 and 7 stones respectively, compute $3 \cdot 7 = 21$, and find that your score is 21. In move 2 split the pile of 3 stones into two sub-piles, with 1 and 2 stones respectively, and split the pile of 7 stones into two sub-piles, with 4 and 3 stones respectively, compute $1 \cdot 2 = 2$ and $4 \cdot 3 = 12$, and find that your score is $21 + 2 + 12 = 35$. In move 3 split the pile of 4 stones into two sub-piles, each with 2 stones, and split the pile of 3 stones into two sub-piles, with 1 and 2 stones respectively, and find your new score. Continue splitting piles and computing your score until no pile has more than one stone. Show your final score along with a record of the numbers of stones in the piles you created with your moves.
+
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/5.4.23.a.png}
+\end{figure}
+\end{proof}
+
+\subsubsection{(b)}
+Play $G$ again starting with 10 stones, but use a different initial move from the one in part (a). Show your final score along with a record of the numbers of stones in the piles you created with your moves.
+
+\begin{proof}
+\[
+\arrayrulecolor{cyan}
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{10}{|c|}{10} & & \\
+\hline
+\multicolumn{2}{|c}{2} & \multicolumn{8}{|c|}{8} & 2 \cdot 8 & 16 \\
+\hline
+1 & 1 & \multicolumn{4}{c|}{4} & \multicolumn{4}{c|}{4} & 1 \cdot 1 + 4 \cdot 4 & 17 \\
+\hline
+ &  & \multicolumn{2}{c|}{2} & \multicolumn{2}{c|}{2} & \multicolumn{2}{c|}{2} & \multicolumn{2}{c|}{2} & 2 \cdot 2 + 2 \cdot 2 & 8 \\
+\hline
+ &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 & 4 \\
+\hline
+\end{array}
+\arrayrulecolor{black}
+\]
+{\bf TOTAL} 45
+\end{proof}
+
+\subsubsection{(c)}
+Show that you can use strong mathematical induction to prove that for every integer $n \geq 1$, given the set-up of game $G$, no matter how you split the piles in the various moves, your final score is $n(n - 1)/2$. The basis step may look a little strange because a pile consisting of one stone cannot be split into any sub-piles. Another way to say this is that it can only be split into zero piles, and that gives an answer that agrees with the general formula for the final score.
+
+\begin{proof}
+Let $P(n)$ be the statement: ``No matter how you split the piles in the various moves, your final score is $n(n-1)/2$.''
+
+{\bf Show that $P(1)$ is true:} A pile of 1 stone cannot be split, therefore the score is 0, and $1(1-1)/2 = 0$ also. So $P(1)$ is true.
+
+{\bf Show that for any integer $k \geq 1$ if $P(i)$ is true for all integers $i$ with $1 \leq i \leq k$ then $P(k+1)$ is true:}
+
+Assume $k \geq 1$ is an integer and assume that for all integers $i$ with $1 \leq i \leq k$, a game played with 
+starting $i$ stones, no matter how you split the piles in various moves, your final score is $i(i-1)/2$.
+
+{\it [We want to show that in a game played with $k+1$ starting stones, no matter how you split the piles in
+various moves, your final score is $(k+1)(k+2)/2$.]}
+
+Starting with $k+1$ stones, there are $\dps \floor{\frac{k + 1}{2}}$ different ways to split the stones: 1 and $k$,
+2 and $k-1$, 3 and $k-2, \ldots$, and $k/2$ and $k/2 + 1$ if $k+1$ is odd, $(k+1) / 2$ and $(k+1) / 2$ if $k+1$ is even.
+
+In other words, the first move splits the stones into piles of $i$ and $(k+1) - i$ for some $1 \leq i \leq \floor{(k + 1) / 2}$. 
+The score of this first move is $i(k+1-i) = ki + i - i^2$.
+
+Then the rest of the game consists of two sub-games with starting piles of $i$ and $(k+1)-i$. By the inductive
+hypothesis, no matter how you split the stones in these sub-games, the final scores are 
+\[
+\frac{i(i+1)}{2} = \frac{i^2 + i}{2}
+\] 
+and $\dps \frac{(k+1-i)(k+1-i+1)}{2}$
+\[
+= \frac{(k+1-i)(k+2-i)}{2} = \frac{k^2 + 2k - ik + k + 2 - i - ik - 2i + i^2}{2}
+\] 
+$\dps = \frac{k^2 + (3 - 2i)k + 2 - 3i + i^2}{2}$, respectively.
+
+Then the total final score of the $k+1$ stone game is:
+\[
+ki + i - i^2 + \frac{i^2 + i}{2} + \frac{k^2 + (3 - 2i)k + 2 - 3i + i^2}{2} = \frac{k^2 + 3k + 2}{2}
+\]
+which is the same as the formula $(k+1)(k+2)/2$ that we claimed, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 24}
+Imagine a situation in which eight people, numbered consecutively $1-8$, are arranged in a circle. Starting from person \#1, every second person in the circle is eliminated. The elimination process continues until only one person remains. In the first round the people numbered 2, 4, 6, and 8 are eliminated, in the second round the people numbered 3 and 7 are eliminated, and in the third round person \#5 is eliminated, so after the third round only person \#1 remains, as shown below.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.4.24.png}
+\end{figure}
+
+\subsubsection{(a)}
+Given a set of sixteen people arranged in a circle and numbered, consecutively $1-16$, list the numbers of the people who are eliminated in each round if every second person is eliminated and the elimination process continues
+until only one person remains. Assume that the starting point is person \#1.
+
+\begin{proof}
+The results are shown both diagrammatically and in a table (on the next page).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/5.4.24.a.png}
+\end{figure}
+\end{proof}
+
+\subsubsection{(b)}
+Use ordinary mathematical induction to prove that for every integer $n \geq 1$, given any set of $2^n$ people arranged in a circle and numbered consecutively 1 through $2^n$, if one starts from person \#1 and goes repeatedly around the circle successively eliminating every second person, eventually only person \#1 will remain.
+
+\begin{proof}
+Let $P(n)$ be the statement ``given any set of $2^n$ people arranged in a circle and numbered consecutively 1 through
+$2^n$, if one starts from person \#1 and goes repeatedly around the circle successively eliminating every second
+person, eventually only person \#1 will remain.''
+
+{\bf Show that $P(1)$ is true:} When $n = 1$ we have $2^n = 2^1 = 2$, so there are 2 people on the circle. 
+Starting from person \#1, the second person is person \#2, who gets eliminated. So only person \#1 remains.
+Thus $P(1)$ is true.
+
+{\bf Show that for any integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:}
+
+Assume $k \geq 1$ is any integer and suppose that given any set of $2^k$ people arranged in a circle and numbered
+consecutively 1 through $2^k$, if one starts from person \#1 and goes repeatedly around the circle successively 
+eliminating every second person, eventually only person \#1 will remain.
+
+Consider any set of $2^{k+1}$ people arranged in a circle and numbered consecutively 1 through $2^{k+1}$.
+If we start from person \#1 and go repeatedly around the circle successively eliminating every second person,
+then persons \#2, \#4, \#6, $\ldots$, \#$2^{k+1}$ will be eliminated.
+
+This leaves us with a circle of the remaining $2^k$ people, numbered 1, 3, 5, 7, $\ldots$, $2^{k+1}-1$. 
+By the inductive hypothesis, this game will result in only person \#1 remaining, {\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(c)}
+Use the result of part (b) to prove that for any nonnegative integers $n$ and $m$ with $2^n \leq 2^n + m < 2^{n+1}$, 
+if $r = 2^n + m$, then given any set of $r$ people arranged in a circle and numbered consecutively 1 through $r$, 
+if one starts from person \#1 and goes repeatedly around the circle successively eliminating every second person, eventually only person \#$(2m + 1)$ will remain.
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
+\subsection{Exercise 25}
+Find the mistake in the following “proof” that purports to show that every nonnegative integer power of every nonzero real number is 1.
+
+{\bf “Proof:} Let $r$ be any nonzero real number and let the property $P(n)$ be the equation $r^n = 1$.
+
+{\bf Show that $P(0)$ is true:} $P(0)$ is true because $r^0 = 1$ by definition of zeroth power.
+
+{\bf Show that for every integer $k \geq 0$, if $P(i)$ is true for each integer $i$ from $0$ through $k$, then $P(k + 1)$ is also true:} Let $k$ be any integer with $k \geq 0$ and suppose that $r^i = 1$ for each integer $i$ from $0$ through $k$. This is the inductive hypothesis. We must show that $r^{k+1} = 1$. Now
+
+\begin{center}
+\begin{tabular}{rcll}
+$\dps r^{k+1}$ & = & $\dps r^{k + k - (k - 1)}$ & {\cy because $k + k - (k - 1) = k+1$} \\
+\vspace{0.3cm}
+ & = & $\dps \frac{r^k \cdot r^k}{r^{k-1}}$ & {\cy by the laws of exponents} \\
+ & = & $\dps \frac{1 \cdot 1}{1}$ & {\cy by inductive hypothesis} \\
+ & = & $\dps 1.$ & {\cy by algebra} 
+\end{tabular}
+\end{center}
+
+Thus $r^{k+1} = 1$ {\it [as was to be shown].}
+
+{\it [Since we have proved the basis step and the inductive
+step of the strong mathematical induction, we conclude that the given statement is true.]”}
+
+\begin{proof}
+The mistake is with the term $r^{k-1}$ being replaced by 1. Because, the assumption is that $k \geq 0$ and $P(i)$ is true for all $i$ with $0 \leq i \leq k$. So here the mistake is using $i = k-1$. When $k = 0$ we get $i = k - 1 = -1$ which does not satisfy $0 \leq i$. So we cannot apply the inductive hypothesis to $i = k-1$.
+\end{proof}
+
+\subsection{Exercise 26}
+Use the well-ordering principle for the integers to prove Theorem 4.4.4: Every integer greater than 1 is divisible by a prime number.
+
+\begin{proof}
+Let $n$ be any integer greater than 1. Consider the set $S$ of all positive integers other than 1 that divide $n$. 
+Since $n \mid n$ and $n > 1$, there is at least one element in $S$. Hence, by the well-ordering principle for the 
+integers, $S$ has a smallest element; call it $p$. We claim that $p$ is prime. 
+
+For suppose $p$ is not prime. Then there are integers $a$ and $b$ with $1 < a < p$, $1 < b < p$, and $p = ab$. By 
+definition of divides, $a \mid p$. Also $p \mid n$ because $p$ is in $S$ and every element in $S$ divides $n$. 
+Therefore, $a \mid p$ and $p \mid n$, and so, by transitivity of divisibility, $a \mid n$. Consequently, $a 
+\in S$. But this contradicts the fact that $a < p$, and $p$ is the smallest element of $S$. 
+
+{\it [This contradiction  shows that the supposition that $p$ is not prime is false.]} Hence $p$ is prime, and we 
+have shown the existence of a prime number that divides $n$. 
+\end{proof}
+
+\subsection{Exercise 27}
+Use the well-ordering principle for the integers to prove the existence part of the unique factorization of integers theorem. In other words, prove that every integer greater than 1 is either prime or a product of prime numbers.
+
+\begin{proof}
+Consider the set $S$ of integers that are greater than 1, not a prime, and not a product of prime numbers.
+
+We claim that $S$ is empty. Argue by contradiction and assume $S$ is nonempty.
+
+By the Well-Ordering Principle, $S$ has a smallest element, call it $a$. 
+So $a > 1$ and $a$ is not prime and $a$ is not a product of primes.
+
+Since $a$ is not prime, $a$ is composite. 
+By definition of composite $a = bc$ for some integers $1 < b < a$ and $1 < c < a$.
+
+By the minimality of $a$, it follows that $b$ and $c$ are either primes or products of primes. Then $a = bc$ is also
+a product of primes, which is a contradiction.
+
+{\it [Thus our initial supposition was false and $S$ is empty.]} So it follows that every integer greater than 1 is 
+either prime or a product of primes, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 28}
+
+\subsubsection{(a)}
+The Archimedean property for the rational numbers states that for every rational number $r$, there is an integer $n$ such that $n > r$. Prove this property.
+
+\begin{proof}
+Suppose $r$ is any rational number. {\it [We need to show that there is an integer $n$ such that $r < n$.]}
+
+{\bf Case 1 ($r \leq 0$):} In this case, take $n = 1$. Then
+$r < n$. 
+
+{\bf Case 2 ($r > 0$):} In this case, $r = a/b$ for some positive integers $a$ and $b$ (by definition of rational
+and because $r$ is positive). Note that $r = a/b < n$ if, and only if, $a < nb$. Let $n = 2a$. Multiply both sides of 
+the inequality $1 < 2$ by $a$ to obtain $a < 2a$, and multiply both sides of the inequality $1 < b$ by $2a$ to 
+obtain $2a < 2ab = nb$. Thus $a < 2a < nb$, and so, by transitivity of order, $a < nb$. Dividing both sides $a$ by 
+$b$ gives that $a/b < n$, or, equivalently, that $r < n$. 
+
+Hence, in both cases, $r < n$ {\it [as was to be shown].}
+\end{proof}
+
+\subsubsection{(b)}
+Prove that given any rational number $r$, the number $-r$ is also rational.
+
+\begin{proof}
+Assume $r$ is any rational number.
+By definition of rational $r = a/b$ for some integers $a,b$ with $b \neq 0$.
+Then $-r = (-a)/b$ where $-a$ and $b$ are integers with $b \neq 0$.
+So by definition of rational, $-r$ is rational.
+\end{proof}
+
+\subsubsection{(c)}
+Use the results of parts (a) and (b) to prove that given any rational number $r$, there is an integer $m$ such that $m < r$.
+
+\begin{proof}
+Assume $r$ is any rational number.
+By part (b), $-r$ is a rational number.
+By part (a) applied to $-r$, there exists an integer $n$ such that $n > -r$. Let $m = -n$. 
+Then multiply the inequality $n > -r$ by $-1$ to get $-n < r$, or equivalently, $m < r$, {\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 29}
+Use the results of exercise 28 and the well-ordering principle for the integers to show that given any rational number $r$, there is an integer $m$ such that $m \leq r < m + 1$.
+
+{\it Hint:} If $r$ is any rational number, let $S$ be the set of all integers $n$ such that $r < n$. 
+Use the results of exercises 28(a), 28(c), and the well-ordering principle for the integers to show that $S$ has a
+least element, say $v$, and then show that $v - 1 \leq r < v$.
+
+\begin{proof}
+(following the Hint)
+
+Assume $r$ is any rational number. 
+By Exercise 28 (c) there is an integer $n$ such that $n < r$.
+Let $S$ be the set of integers that are greater than $n$ and greater than $r$. By Exercise 28 (a) $S$ is nonempty.
+Since every integer in $S$ is greater than the fixed integer $n$, by the well-ordering principle, 
+$S$ has a least element, call it $v$.
+Then $r < v$ and by the minimality of $v$, $v-1 \leq r$.
+Let $m = v-1$. Then $m$ is an integer, and $m \leq r < m+1$ {\it [as was to be shown].}
+
+\end{proof}
+
+\subsection{Exercise 30}
+Use the well-ordering principle to prove that given any integer $n \geq 1$, there exists an odd integer $m$ and a nonnegative integer $k$ such that $n = 2^k \cdot m$.
+
+\begin{proof}
+Let $S$ be the set of all integers $r$ such that $n = 2^i \cdot r$ for some integer $i$. 
+Then $n \in S$ because $n = 2^0 \cdot n$, and so $S \neq \emptyset$. 
+Also, since $n \geq 1$, each $r$ in $S$ is positive, and so, by the well-ordering principle, $S$ has a least element 
+$m$. 
+
+This means that $n = 2^k \cdot m$ (*) for some nonnegative integer $k$, and $m \leq r$ for every $r$ in $S$. 
+
+We claim that $m$ is odd. The reason is that if $m$ is even, then $m = 2p$ for some integer $p$. 
+Substituting into equation (*) gives 
+\[
+n = 2^k \cdot m = 2^k \cdot 2p = (2^k \cdot 2)p = 2^{k+1} \cdot p.
+\]
+It follows that $p \in S$ and $p < m$, which contradicts the fact that $m$ is the least element of $S$. 
+Hence $m$ is odd, and so $n = m \cdot 2^k$ for some odd integer $m$ and nonnegative integer $k$.
+\end{proof}
+
+\subsection{Exercise 31}
+Give examples to illustrate the proof of Theorem 5.4.1.
+
+\begin{proof}
+Let $k = 25$ so $k+1 = 26$ is even. By the inductive hypothesis $(k+1)/2 = 13$ has a binary representation:
+\[
+13 = 8 + 4 + 1 = 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 1101_\base{2}.
+\]
+Multiply everything by 2 and add missing powers of 2:
+\[
+26 = 13 \cdot 2 = 16 + 8 + 2 = 1 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 11010_\base{2}.
+\]
+Let $k = 14$ so $k+1 = 15$ is even. By the inductive hypothesis $k/2 = 7$ has a binary representation:
+\[
+7 = 4 + 2 + 1 = 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 111_\base{2}.
+\]
+Multiply everything by 2 and add missing powers of 2:
+\[
+14 = 7 \cdot 2 = 8 + 4 + 2 = 1 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 1110_\base{2}.
+\]
+To get the binary representation of $k+1$, just add 1:
+\[
+15 = 14 + 1 = 1 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 1111_\base{2}.
+\]
+\end{proof}
+
+\subsection{Exercise 32}
+Suppose $P(n)$ is a property such that
+
+1. $P(0), P(1), P(2)$ are all true,
+
+2. for each integer $k \geq 0$, if $P(k)$ is true, then
+$P(3k)$ is true. 
+
+Must it follow that $P(n)$ is true for every integer $n \geq 0$? If yes, explain why; if no, give a counterexample.
+
+\begin{proof}
+No. Let $P(n)$ be the statement: ``either $n = 1$ or $n = 2$ or $3 \mid n$.''
+
+Then $P(0), P(1)$ and $P(2)$ are all true, because $3 \mid 0$, and $1 = 1$ and $2 = 2$.
+
+Assume $k \geq 0$ is an integer and $P(k)$ is true. {\it [We want to show $P(3k)$ is true.]}
+$P(3k)$ is true because $3 \mid 3k$.
+
+However it is not the case that $P(n)$ is true for every integer $n \geq 0$: for example $P(4)$ is false because $4 \neq 1$ and $4 \neq 2$ and $3 \nmid 4$.
+\end{proof}
+
+\subsection{Exercise 33}
+Prove that if a statement can be proved by strong mathematical induction, then it can be proved by ordinary mathematical induction. To do this, let $P(n)$ be a property that is defined for each integer $n$, and suppose the following two statements are true:
+
+1. $P(a), P(a + 1), P(a + 2), \ldots, P(b)$.
+
+2. For any integer $k \geq b$, if $P(i)$ is true for each
+integer $i$ from $a$ through $k$, then $P(k + 1)$ is true.
+
+The principle of strong mathematical induction would allow us to conclude immediately that $P(n)$ is true for every integer $n \geq a$. Can we reach the same conclusion using the principle of ordinary mathematical induction? Yes! To see this, let $Q(n)$ be the property $P(j)$ is true for each integer $j$ with $a \leq j \leq n$. Then use ordinary mathematical induction to show that $Q(n)$ is true for every integer $n \geq b$. That is, prove:
+
+1. $Q(b)$ is true.
+
+2. For each integer $k \geq b$, if $Q(k)$ is true then $Q(k + 1)$ is true.
+
+\begin{proof}
+{\bf Show that $Q(b)$ is true:} $Q(b)$ is the statement ``$P(j)$ is true for each integer $j$ with $a \leq j \leq b$.'' 
+This is true because we are assuming that $P(a), P(a + 1), P(a + 2), \ldots, P(b)$ are all true (1. given above).
+Therefore $Q(b)$ is true.
+
+{\bf Show that for each integer $k \geq b$, if $Q(k)$ is true then $Q(k+1)$ is true:}
+
+Assume $k$ is an integer with $k \geq b$ and assume $Q(k)$ is true. By definition of $Q$, this means that $P(j)$ is
+true for all integers $j$ with $a \leq j \leq k$.
+So by 2. given in the exercise, $P(k+1)$ is true.
+So $P(j)$ is true for all integers $j$ with $a \leq j \leq k+1$. Thus $Q(k+1)$ is true, {\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 34}
+It is a fact that every integer $n \geq 1$ can be written
+in the form
+\[
+c_r \cdot 3^r + c_{r-1} \cdot 3^{r-1} + \cdots + c_2 \cdot 3^2 + c_1 \cdot 3 + c_0,
+\]
+where $c_r = 1$ or $2$ and $c_i = 0, 1$, or $2$ for each
+integer $i = 0, 1, 2, \ldots, r - 1$. Sketch a proof of this fact.
+
+{\it Hint:} In the inductive step, divide into cases depending on whether $k+1$ can be written as $k+1 = 3x$ or 
+$k+1 = 3x + 1$ or $k+1 = 3x + 2$ for some integer $x$.
+
+\begin{proof}
+Here is a sketch using strong induction. Let $P(n)$ be the statement ``$n$ can be written in the form given above.''
+
+For the base cases, we need to prove $P(0), P(1)$ and $P(2)$. This is easily verified manually.
+
+For the inductive step, assume $P(i)$ is true for all $i$ from 0 through $k$. To show $P(k+1)$ consider 3 cases:
+
+$k + 1 = 3x$: Say we have, by inductive hypothesis applied to $(k+1)/3$,
+\[
+(k + 1) / 3 = c_r \cdot 3^r + c_{r-1} \cdot 3^{r-1} + \cdots + c_2 \cdot 3^2 + c_1 \cdot 3 + c_0.
+\]
+Then multiplying by 3 we get
+\[
+k + 1 = c_r \cdot 3^{r+1} + c_{r-1} \cdot 3^{r} + \cdots + c_2 \cdot 3^3 + c_1 \cdot 3^2 + c_0 \cdot 3^1 + 0.
+\]
+Thus we get the representation for $k+1$.
+
+$k + 1 = 3x+1$: Similar, but start by using inductive hypothesis applied to $k/3$ instead, then add 1.
+
+$k + 1 = 3x+2$: Similar, but start by using inductive hypothesis applied to $(k-1)/3$ instead, then add 2.
+\end{proof}
+
+\subsection{Exercise 35}
+Use mathematical induction to prove the existence part of the quotient-remainder theorem. In other words, use mathematical induction to prove that given any integer $n$ and any positive integer $d$, there exist integers $q$ and $r$ such that $n = dq + r$ and $0 \leq r < d$.
+
+{\it Hint:} In the inductive step, let an integer $k \geq 0$ be given and suppose that there exist integers $q'$ and
+$r'$ such that $k = dq' + r'$ and $0 \leq r' < d'.$ You must show that there exist integers $q$ and $r$ such that
+\[
+k + 1 = dq + r \text{ and } 0 \leq r < d.
+\]
+To do this, consider the two cases $r' < d - 1$ and $r' = d - 1$.
+
+\begin{proof}
+We will prove this for nonnegative integers $n$ first. Then we'll use that to prove it in general.
+
+Let $P(n)$ be the statement: ``for any positive integer $d$, there exist integers $q$ and $r$ such that $n = dq + r$ and $0 \leq r < d$.''
+
+{\bf Show that $P(0)$ is true:} Let $q = r = 0$. Then $dq + r = d \cdot 0 + 0 = 0 = n$ so $P(0)$ is true.
+
+{\bf Show that for any integer $k \geq 0$ if $P(k)$ is true then $P(k+1)$ is true:} (following the Hint)
+
+Let an integer $k \geq 0$ be given and suppose that there exist integers $q'$ and $r'$ such that $k = dq' + r'$ and 
+$0 \leq r' < d'.$ {\it [We must show that there exist integers $q$ and $r$ such that]}
+\[
+k + 1 = dq + r \text{ and } 0 \leq r < d.
+\]
+{\bf Case 1: $r' < d - 1$.} Then let $q = q'$ and $r = r'+1$. So we have
+\[
+k+1 = (dq' + r') + 1 = dq' + (r' + 1) = dq + r
+\]
+and since $r' < d-1$ we have $r = r'+1 < d$, so this proves $P(k+1)$.
+
+{\bf Case 2: $r' = d - 1$.} Notice that $r' + 1 = d$. Let $q = q'+1$ and $r = 0$.  Then
+\[
+k+1 = (dq'+r') + 1 = dq' + (r'+1) = dq'+d = d(q'+1) = dq + r,
+\]
+{\it [as was to be shown.]}
+
+Now assume $n < 0$. Then $-n > 0$. By the above, there exist integers $q',r'$ such that $-n = dq' + r'$ where $0 \leq r' < d'$.
+
+So we have $n = -dq' - r' = d(-q') + (-r')$.
+
+{\bf Case 1: $r' = 0$.} Then let $q = -q'$ and $r = 0$. So we have $n = d(-q') + 0 = dq + r$ {\it [as was to be shown.]}
+
+{\bf Case 2: $0 < r'$.}
+Since $0 < r' < d$, multiplying the inequalities by
+$-1$ we get $0 > -r' > -d$ and adding $d$ we get
+$d > d - r' > 0$. Thus $0 < d-r' < d$.
+
+So let $q = -q'-1$ and $r = d-r'$. Then 
+\[
+n = -dq' - r' = -d(q'+1) + d - r' = d(-q'-1) + (d-r') = dq + r,
+\]
+{\it [as was to be shown].}
+\end{proof}
+
+\subsection{Exercise 36}
+Prove that if a statement can be proved by ordinary mathematical induction, then it can be proved by the well-ordering principle.
+
+{\it Hint:} Given a predicate $P(n)$ that satisfies conditions (1) and (2) of the principle of mathematical 
+induction, let $S$ be the set of all integers greater than or equal to $a$ for which $P(n)$ is false. Suppose that $S$ 
+has one or more elements, and use the well-ordering principle for the integers to derive a contradiction.
+
+\begin{proof}
+(following the Hint)
+
+Assume $a$ is a fixed integer, and assume a predicate $P(n)$ satisfies the two conditions of mathematical induction:
+
+1. $P(a)$ is true.
+
+2. For every integer $k \geq a$, if $P(k)$ is true then $P(k+1)$ is true.
+
+Let $S$ be the set of all integers greater than or equal to $a$ for which $P(n)$ is false. 
+{\it [We want to show that $S$ is empty.]}
+
+Argue by contradiction and assume $S$ is nonempty.
+Then by the well-ordering principle, $S$ has a smallest element, call it $s$.
+
+By definition of $S$, we have $a \geq s$ and $P(s)$ is false. Since $P(a)$ is true by 1., we have $a < s$ and 
+therefore $a \leq s-1$.
+By the minimality of $s$, we have $P(s-1)$ is true.
+Then by 2. we have $P(s)$ is true, a contradiction.
+
+{\it [Thus our supposition was false, and $S$ is empty, so $P(n)$ is true for all $n \geq a$, as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 37}
+Use the principle of ordinary mathematical induction to prove the well-ordering principle for the integers.
+
+{\it Hint:} Suppose $S$ is a set containing one or more integers, all of which are greater than or equal to some  
+integer $a$, and suppose that $S$ does not have a least element. Let the property $P(n)$ be the sentence 
+``$i \notin S$ for any integer $i$ with $a \leq i \leq n$.'' Use mathematical induction to prove that $P(n)$ is 
+true for every integer $n \geq a$, and explain how this result contradicts the supposition that 
+$S$ does not have a least element.
+
+\begin{proof}
+(following the Hint)
+
+Suppose $S$ is a set containing one or more integers, all of which are greater than or equal to some integer $a$.
+Argue by contradiction and suppose that $S$ does not have a least element. {\it [We want to reach a contradiction.]}
+
+Let the property $P(n)$ be the sentence ``$i \notin S$ for any integer $i$ with $a \leq i \leq n$.''
+
+{\bf Show that $P(a)$ is true:} $P(a)$ is the statement 
+``$i \notin S$ for any integer $i$ with $a \leq i \leq a$'', or equivalently, $a \notin S$.
+
+This is true. Why? Suppose $a \in S$. By the definition of $S$, every element of $S$ is greater than or equal to $a$. 
+But if $a \in S$, then this would make $a$ the least element of $S$, contradicting our assumption. 
+Thus $a \notin S$ and hence $P(a)$ is true.
+
+{\bf Show that for any integer $k \geq a$ if $P(k)$ is true then $P(k+1)$ is true:}
+
+Assume $k \geq a$ is any integer and assume $i \notin S$ for any integer $i$ with $a \leq i \leq k$.
+{\it [We want to show that $i \notin S$ for any integer $i$ with $a \leq i \leq k+1$.]}
+So, all we have to show is that $k+1 \notin S$. Argue by contradiction and assume $k+1 \in S$.
+
+Then $k+1$ is the least element of $S$, since $i \notin S$ for any integer $i$ with $a \leq i \leq k$ and all elements
+of $S$ are greater than or equal to $a$. This is a contradiction, therefore $k+1 \notin S$ and so $P(k+1)$ is true.
+
+By mathematical induction $P(n)$ is true for all integers $n$ with $a \leq n$. So $S$ is empty.
+{\it [This contradicts the fact that $S$ is nonempty. Thus our initial supposition was false and $S$ has a least element.]}
+\end{proof}
+
 \end{document}
