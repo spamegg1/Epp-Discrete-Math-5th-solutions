@@ -4941,4 +4941,565 @@ By mathematical induction $P(n)$ is true for all integers $n$ with $a \leq n$. S
 {\it [This contradicts the fact that $S$ is nonempty. Thus our initial supposition was false and $S$ has a least element.]}
 \end{proof}
 
+\section{Exercise Set 5.5}
+
+{\bf \cy Exercises $1-5$ contain a while loop and a predicate. In each case show that if the predicate is true 
+before entry to the loop, then it is also true after exit from the loop.}
+
+\subsection{Exercise 1}
+\begin{tabbing}
+loop: \hspace{1cm} 
+\= {\bf while} \= ($m \geq 0$ and $m \leq 100$) \\
+\>             \> $m \coloneqq m + 1$ \\
+\>             \> $n \coloneqq n - 1$ \\
+\> {\bf end while} 
+\end{tabbing}
+predicate: $m + n = 100$
+
+\begin{proof}
+Suppose the predicate $m + n = 100$ is true before entry to the loop. Then 
+\[
+m_{\text{old}} + n_{\text{old}} = 100.
+\]
+After execution of the loop,
+\[
+m_{\text{new}} = m_{\text{old}} + 1 \text{ and } n_{\text{new}} = n_{\text{old}} - 1,
+\]
+so
+\[
+m_{\text{new}} + n_{\text{new}} = (m_{\text{old}} + 1) + (n_{\text{old}} - 1)
+= m_{\text{old}} + n_{\text{old}} = 100.
+\]
+\end{proof}
+
+\subsection{Exercise 2}
+\begin{tabbing}
+loop: \hspace{1cm} 
+\= {\bf while} \= ($m \geq 0$ and $m \leq 100$) \\
+\>             \> $m \coloneqq m + 4$ \\
+\>             \> $n \coloneqq n - 2$ \\
+\> {\bf end while} 
+\end{tabbing}
+predicate: $m + n$ is odd
+
+\begin{proof}
+Suppose the predicate ``$m + n$ is odd'' is true before entry to the loop. Then 
+\[
+m_{\text{old}} + n_{\text{old}} = 2k+1
+\]
+for some integer $k$. After execution of the loop,
+\[
+m_{\text{new}} = m_{\text{old}} + 4 \text{ and } n_{\text{new}} = n_{\text{old}} - 2,
+\]
+so
+\[
+m_{\text{new}} + n_{\text{new}} = (m_{\text{old}} + 4) + (n_{\text{old}} - 2)
+= m_{\text{old}} + n_{\text{old}} + 2 = 2k+1 + 2 = 2k+3 = 2(k+1) + 1.
+\]
+Therefore $m+n$ is still odd, by definition of odd.
+\end{proof}
+
+\subsection{Exercise 3}
+\begin{tabbing}
+loop: \hspace{1cm} 
+\= {\bf while} \= ($m \geq 0$ and $m \leq 100$) \\
+\>             \> $m \coloneqq 3 \cdot m$ \\
+\>             \> $n \coloneqq 5 \cdot n$ \\
+\> {\bf end while} 
+\end{tabbing}
+predicate: $m^3 > n^2$
+
+\begin{proof}
+Suppose the predicate $m^3 > n^2$ is true before entry to the loop. Then
+\[
+m_{\text{old}}^3 > n_{\text{old}}^2.
+\]
+After execution of the loop,
+\[
+m_{\text{new}} = 3 \cdot m_{\text{old}} \text{ and }
+n_{\text{new}} = 5 \cdot n_{\text{old}},
+\]
+so
+\[
+m_{\text{new}}^3 = (3 \cdot m_{\text{old}})^3 = 27 \cdot m_{\text{old}}^3 > 27 \cdot n_{\text{old}}^2.
+\]
+Now since $n_{\text{new}} = 5 \cdot n_{\text{old}}$, then
+\(n_{\text{old}} = \frac{1}{5}n_{\text{new}}.\)
+Hence
+\[
+m_{\text{new}}^3 > 27 \cdot n_{\text{old}}^2 = 27 \cdot 
+\left(\frac{1}{5}n_{\text{new}}\right)^2 = 27 \cdot \frac{1}{25}
+n_{\text{new}}^2 = \frac{27}{25} \cdot n_{\text{new}}^2 > n_{\text{new}}^2.
+\]
+\end{proof}
+
+\subsection{Exercise 4}
+\begin{tabbing}
+loop: \hspace{1cm} 
+\= {\bf while} \= ($n \geq 0$ and $n \leq 100$) \\
+\>             \> $n \coloneqq n + 1$ \\
+\> {\bf end while} 
+\end{tabbing}
+predicate: $2^n < (n+2)!$
+
+\begin{proof}
+Suppose the predicate $2^n < (n+2)!$ is true before entry to the loop. Then 
+\[
+2^{n_{\text{old}}} < (n_{\text{old}} + 2)!.
+\]
+After execution of the loop,
+\[
+n_{\text{new}} = n_{\text{old}} + 1,
+\]
+and since $n \geq 0$ we have $2 < n_{\text{old}} + 3$, so
+\[
+2^{n_{\text{new}}} = 2^{n_{\text{old}} + 1} = 2 \cdot 2^{n_{\text{old}}} < 2 \cdot (n_{\text{old}} + 2)! < (n_{\text{old}} + 3) \cdot (n_{\text{old}} + 2)! = (n_{\text{old}} + 3)! = (n_{\text{new}} + 2)!.
+\]
+\end{proof}
+
+\subsection{Exercise 5}
+\begin{tabbing}
+loop: \hspace{1cm} 
+\= {\bf while} \= ($n \geq 3$ and $n \leq 100$) \\
+\>             \> $n \coloneqq n + 1$ \\
+\> {\bf end while} 
+\end{tabbing}
+predicate: $2n + 1 \leq 2^n$
+
+\begin{proof}
+Suppose the predicate $2n + 1 \leq 2^n$ is true before entry to the loop. Then 
+\[
+2n_{\text{old}} + 1 \leq 2^{n_{\text{old}}}.
+\]
+After execution of the loop,
+\[
+n_{\text{new}} = n_{\text{old}} + 1,
+\]
+so
+\[
+2n_{\text{new}} + 1 = 2(n_{\text{old}} + 1) + 1 = 2n_{\text{old}} + 1 + 2 \leq 2^{n_{\text{old}}} + 2 \leq 2^{n_{\text{old}}} + 2^{n_{\text{old}}} = 2^{n_{\text{old}} + 1} = 2^{n_{\text{new}}}.
+\]
+\end{proof}
+
+{\bf \cy Exercises $6-9$ each contain a while loop annotated with a pre- and a post-condition and also a loop 
+invariant. In each case, use the loop invariant theorem to prove the correctness of the loop with respect to the pre- 
+and post-conditions.}
+
+\subsection{Exercise 6}
+{\it [Pre-condition: $m$ is a nonnegative integer, $x$ is a real number, $i = 0$, and $exp = 1$.]}
+
+\begin{tabbing}
+{\bf while} \= ($i \neq m$) \\
+            \> 1. $exp \coloneqq exp \cdot x$ \\
+            \> 2. $i \coloneqq i + 1$ \\
+{\bf end while}
+\end{tabbing}
+
+{\it [Post-condition: $exp = x^m$]}
+
+loop invariant: $I(n)$ is ``$exp = x^n$ and $i = n$.''
+
+\begin{proof}
+{\it [The wording of this proof is almost the same as
+that of Example 5.5.2.]}
+
+{\bf I. Basis Property:} {\it [$I(0)$ is true before the first iteration of the loop.]}
+
+$I(0)$ is “$exp = x_0$ and $i = 0$.” According to the pre-condition, before the first iteration of the loop
+$exp = 1$ and $i = 0$. Since $x_0 = 1$, $I(0)$ is evidently true.
+
+{\bf II. Inductive Property:} {\it [If $G \wedge I(k)$ is true before a loop iteration (where $k \geq 0$), then 
+$I(k + 1)$ is true after the loop iteration.]} 
+
+Suppose $k$ is any nonnegative integer such that $G \wedge I(k)$ is true before an iteration of the loop. Then as 
+execution reaches the top of the loop, $i \neq m, exp = x^k$, and $i = k$. Since $i \neq m$, the guard is passed 
+and statement 1 is executed. Now before execution of statement 1, $exp_{\text{old}} = x^k$, so execution of 
+statement 1 has the following effect: 
+\[
+exp_{\text{new}} = exp_{\text{old}} \cdot x = x^k \cdot x = x^{k+1}.
+\]
+Similarly, before statement 2 is executed, $i_{\text{old}} = k$, so after execution of statement 2,
+\[
+i_{\text{new}} = i_{\text{old}} + 1 = k + 1.
+\]
+Hence after the loop iteration, the two statements $exp = x^{k+1}$ and $i = k + 1$ are true, and so $I(k + 1)$ is true.
+
+{\bf III. Eventual Falsity of Guard:} {\it [After a finite number of iterations of the loop, $G$ becomes false.]} The 
+guard $G$ is the condition $i \neq m$, and $m$ is a nonnegative integer. By I and II, it is known that for 
+every integer $n \geq 0$, if the loop is iterated $n$ times, then $exp = x^n$ and $i = n$. So after $m$ 
+iterations of the loop, $i = m$. Thus $G$ becomes false after $m$ iterations of the loop. 
+
+{\bf IV. Correctness of the Post-Condition:} {\it [If $N$ is the least number of iterations after which $G$ is false 
+and $I(N)$ is true, then the value of the algorithm variables will be as specified in the post-condition of the 
+loop.]} According to the post-condition, the value of $exp$ after execution of the loop should be $x^m$. But when $G$ 
+is false, $i = m$. And when $I(N)$ is true, $i = N$ and $exp = x^N$. Since both conditions ($G$ false and $I(N)$ 
+true) are satisfied, $m = i = N$ and $exp = x^m$, as required.
+\end{proof}
+
+\subsection{Exercise 7}
+{\it [Pre-condition: $largest = A[1]$ and $i = 1$].}
+
+\begin{tabbing}
+{\bf while} \= ($i \neq m$) \\
+            \> 1. $i \coloneqq i + 1$ \\
+            \> 2. {\bf if} $A[i] > $ largest {\bf then} largest $\coloneqq A[i]$ \\
+{\bf end while}
+\end{tabbing}
+
+{\it [Post-condition: $largest = $ maximum value of $A[1], A[2], \ldots, A[m]$.]}
+
+loop invariant: $I(n)$ is ``largest = maximum value of $A[1], \ldots, A[n+1]$ and $i = n + 1$.''
+
+\begin{proof}
+{\bf I. Basis Property:} {\it [$I(0)$ is true before the first iteration of the loop.]}
+
+$I(0)$ is “largest = maximum of $A[1]$ and $i = 0+1$.” 
+According to the pre-condition, before the first iteration of the loop, largest = $A[1]$ and $i = 1$. 
+So $I(0)$ is evidently true.
+
+{\bf II. Inductive Property:} {\it [If $G \wedge I(k)$ is true before a loop iteration (where $k \geq 0$), then 
+$I(k + 1)$ is true after the loop iteration.]} 
+
+Suppose $k$ is any nonnegative integer such that $G \wedge I(k)$ is true before an iteration of the loop. Then as 
+execution reaches the top of the loop, $i \neq m, i = k+1$ and largest = maximum of $A[1], \ldots, A[k+1]$. 
+Since $i \neq m$, the guard is passed and statement 1 is executed. The execution of statement 1 has the following effect: 
+\[
+i_{\text{new}} = i_{\text{old}} + 1 = k + 1 + 1 = k + 2.
+\]
+Similarly, before statement 2 is executed, $\text{largest}_{\text{old}}$ = maximum of $A[1], \ldots, A[k+1]$, so
+after execution of statement 2, if $A[k+2] > $ largest then we have
+\[
+\text{largest}_{\text{new}} = A[k+2]
+\]
+and else we have
+\[
+\text{largest}_{\text{new}} = \text{largest}_{\text{old}}.
+\]
+Hence after the loop iteration, the two statements largest = maximum of $A[1], \ldots, A[k+2]$ and $i = (k + 1) + 1$ 
+are true, and so $I(k + 1)$ is true.
+
+{\bf III. Eventual Falsity of Guard:} {\it [After a finite number of iterations of the loop, $G$ becomes false.]} 
+
+The guard $G$ is the condition $i \neq m$, and $m$ is a nonnegative integer. By I and II, it is known that for 
+every integer $n \geq 0$, if the loop is iterated $n$ times, then $i = n + 1$. So after $m-1$ iterations of the 
+loop, $i = m$. Thus $G$ becomes false after $m-1$ iterations of the loop. 
+
+{\bf IV. Correctness of the Post-Condition:} {\it [If $N$ is the least number of iterations after which $G$ is false 
+and $I(N)$ is true, then the value of the algorithm variables will be as specified in the post-condition of the 
+loop.]} 
+
+According to the post-condition, the value of largest after execution of the loop should be the maximum of $A[1], \ldots, A[m]$. 
+But when $G$ is false, $i = m$. And when $I(N)$ is true, $i = N+1$ and largest = maximum of $A[1], \ldots, A[N+1]$. 
+Since both conditions ($G$ false and $I(N)$ true) are satisfied, $m = i = N+1$ and so largest = maximum of $A[1], \ldots, A[m]$, as required.
+\end{proof}
+
+\subsection{Exercise 8}
+{\it [Pre-condition: $sum = A[1]$ and $i = 1$.]} 
+
+\begin{tabbing}
+{\bf while} \= ($i \neq m$) \\
+            \> 1. $i \coloneqq i + 1$ \\
+            \> 2. sum $\coloneqq$ sum $ + A[i]$ \\
+{\bf end while}
+\end{tabbing}
+
+{\it [Post-condition: $sum = A[1] + \cdots + A[m]$].} 
+
+loop invariant: $I(n)$ is ``$i = n + 1$ and sum = $A[1] + \cdots + A[n+1]$.''
+
+\begin{proof}
+{\bf I. Basis Property:} $I(0)$ is “$i = 1$ and $sum = A[1]$.” According to the pre-condition, this statement is true. 
+
+{\bf II. Inductive Property:} Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an iteration of the loop. Then as execution reaches the top of the loop, $i \neq m, i = k + 1$, and $sum = A[1] + A[2] + \cdots + A[k+1]$. Since $i \neq m$, the guard is passed and statement 1 is executed. Now before execution of statement 1, $i_{\text{old}} = k + 1$. So after execution of statement 1, $i_{\text{new}} = i_{\text{old}} + 1 = (k + 1) + 1 = k + 2$. Also before statement 2 is executed, $sum_{\text{old}} = A[1] + A[2] + \cdots + A[k+1]$. Execution of statement 2 adds $A[k + 2]$ to this sum, and so after statement 2 is executed, $sum_{\text{new}} = A[1] + A[2] + \cdots + A[k + 1] + A[k + 2]$. Thus after the loop iteration, $I(k + 1)$ is true. 
+
+{\bf III. Eventual Falsity of Guard:} The guard $G$ is the condition $i \neq m$. By I and II, it is known that for every integer $n \geq 1$, after $n$ iterations of the loop, $I(n)$ is true. Hence, after $m - 1$ iterations of the loop, $I(m)$ is true, which implies that $i = m$ and $G$ is false. 
+
+{\bf IV. Correctness of the Post-Condition:} Suppose that $N$ is the least number of iterations after which $G$ is false and $I(N)$ is true. Then (since $G$ is false) $i = m$ and (since $I(N)$ is true) $i = N + 1$ and $sum = A[1] + A[2] + \cdots + A[N+1]$. Putting these together gives $m = N + 1$, and so $sum = A[1] + A[2] + \cdots + A[m]$, which is the post-condition.
+\end{proof}
+
+\subsection{Exercise 9}
+{\it [Pre-condition: $a = A$ and $A$ is a positive integer.]}
+
+\begin{tabbing}
+{\bf while} \= ($a > 0$) \\
+            \> $a \coloneqq a - 2$ \\
+{\bf end while}
+\end{tabbing}
+
+{\it [Post-condition: $a = 0$ if $A$ is even and $a = -1$ if $A$ is odd.]}
+
+loop invariant: $I(n)$ is ``Both $a$ and $A$ are even integers or both are odd integers and, in either case, $a \geq -1$.''
+
+\begin{proof}
+{\bf I. Basis Property:} $I(0)$ is ``Both $a$ and $A$ are even integers or both are odd integers and, in either case, $a \geq -1$.'' According to the pre-condition, $a = A$ and $A$ is a positive integer, therefore $I(0)$ is true. 
+
+{\bf II. Inductive Property:} Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an 
+iteration of the loop. Then as execution reaches the top of the loop, $a > 0$ and both $a$ and $A$ are even integers or
+both are odd integers and, in either case, $a \geq -1$. Since $a > 0$, the guard is passed and the statement is 
+executed. 
+
+Now before execution of the statement, $a_{\text{old}} > 0$. So after execution of the statement, 
+$a_{\text{new}} = a_{\text{old}} - 2$. Subtracting 2 does not change evenness / oddness. So the parity of 
+$a_{\text{new}}$ is the same as the parity of $a_{\text{old}}$, which is the same as the parity of $A$. 
+Also, since $a_{\text{old}} > 0$, $a_{\text{new}} \geq 1$, so $a_{\text{new}} = a_{\text{old}} - 2 \geq 1 - 2 = -1$.
+Thus after the loop iteration, $I(k + 1)$ is true. 
+
+{\bf III. Eventual Falsity of Guard:} The guard $G$ is the condition $a > 0$. After each iteration of the loop, the 
+value of $a$ is decreased by 2. So eventually we will have $a \leq 0$ and therefore $G$ will be false. 
+
+{\bf IV. Correctness of the Post-Condition:} Suppose that $N$ is the least number of iterations after which $G$ is false and $I(N)$ is true. Then (since $G$ is false) $a \leq 0$ and (since $I(N)$ is true) $a$ and $A$ are either both odd or both even, and $a \geq -1$. 
+
+{\bf Case 1: $A$ is even.} Then $A = 2k$ for some integer $k$. Then after $k$ iterations, $a$ will be decreased by 
+$2k$, reaching zero, which falsifies the loop guard. So in this case $N = k$ and at the end of the loop $a = 0$, 
+which proves the post-condition.
+
+{\bf Case 2: $A$ is odd.} Then $A = 2k+1$ for some integer $k$. Then after $k$ iterations, $a$ will be decreased by
+$2k$, reaching 1, which is not enough to falsify the loop guard. Then after 1 more iteration, $a = -1$ and the loop 
+stops. So in this case $N = k+1$ and at the end of the loop $a = -1$, which proves the post-condition.
+\end{proof}
+
+\subsection{Exercise 10}
+Prove correctness of the while loop of Algorithm 4.10.3 (in exercise 27 of Exercise Set 4.10) with respect to the
+following pre- and post-conditions: 
+
+\begin{tabular}{ll}
+{\it Pre-condition:} & $A$ and $B$ are positive integers, $a = A$, and $b = B$. \\
+{\it Post-condition:} & One of $a$ or $b$ is zero and the other is nonzero. \\
+& Whichever is nonzero equals gcd$(A, B)$.
+\end{tabular}
+
+Use the loop invariant 
+
+\begin{tabular}{lcl}
+$I(n)$: & `` & (1) $a$ and $b$ are nonnegative integers with gcd$(a, b) = $ gcd$(A, B)$, \\
+& & (2) at most one of $a$ and $b$ equals $0$, \\
+& & (3) $0 \leq a + b \leq A + B - n$.''
+\end{tabular}
+
+\begin{proof}
+{\it Hint:} Assume $G \wedge I(k)$ is true for a nonnegative integer $k$. Then $a_{\text{old}} \neq 0$ and $b_{\text{old}} \neq 0$ and 
+
+\begin{tabular}{ll}
+(1) & $a_{\text{old}}$ and $b_{\text{old}}$ are nonnegative integers with gcd$(a_{\text{old}}, b_{\text{old}})$ = gcd$(A, B)$. \\
+(2) & At most one of $a_{\text{old}}$ and $b_{\text{old}}$ equals 0. \\
+(3) & $0 \leq a_{\text{old}} + b_{\text{old}} \leq A + B - k$.
+\end{tabular}
+
+It must be shown that $I(k + 1)$ is true after the loop iteration. That means it is necessary to show that 
+
+\begin{tabular}{ll}
+(1) & $a_{\text{new}}$ and $b_{\text{new}}$ are nonnegative integers with gcd$(a_{\text{new}}, b_{\text{new}})$ = gcd$(A, B)$. \\
+(2) & At most one of $a_{\text{new}}$ and $b_{\text{new}}$ equals 0. \\
+(3) & $0 \leq a_{\text{new}} + b_{\text{new}} \leq A + B - (k + 1)$.
+\end{tabular}
+
+To show (3), observe that 
+
+\[
+a_{\text{new}} + b_{\text{new}} =
+\left\{
+\begin{array}{lr}
+a_{\text{old}} - b_{\text{old}} + b_{\text{old}} & \text{ if } a_{\text{old}} \geq b_{\text{old}} \\
+b_{\text{old}} - a_{\text{old}} + a_{\text{old}} & \text{ if } a_{\text{old}} < b_{\text{old}}. \\
+\end{array}
+\right.
+\]
+{\it [The reason for this is that when $a_{\text{old}} \geq b_{\text{old}}$, then $a_{\text{new}} = a_{\text{old}} - b_{\text{old}}$ and $b_{\text{new}} = b_{\text{old}}$, and when $a_{\text{old}} < b_{\text{old}}$, then $b_{\text{new}} = b_{\text{old}} - a_{\text{old}}$ and $a_{\text{new}} = a_{\text{old}}$.]}
+
+Simplifying:
+\[
+a_{\text{new}} + b_{\text{new}} =
+\left\{
+\begin{array}{lr}
+a_{\text{old}} & \text{ if } a_{\text{old}} \geq b_{\text{old}} \\
+b_{\text{old}} & \text{ if } a_{\text{old}} < b_{\text{old}}. \\
+\end{array}
+\right.
+\]
+Now since $a_{\text{old}} \neq 0$ and $b_{\text{old}} \neq 0$, and since $a_{\text{old}}$ and $b_{\text{old}}$ are nonnegative integers, then $a_{\text{old}} \geq 1$ and $b_{\text{old}} \geq 1$. Hence, $a_{\text{old}} - 1 \geq 0$ and $b_{\text{old}} - 1 \geq 0$, and so $a_{\text{old}} \leq a_{\text{old}} + b_{\text{old}} - 1$ and $b_{\text{old}} \leq b_{\text{old}} + a_{\text{old}} - 1$. It follows that $a_{\text{new}} + b_{\text{new}} \leq a_{\text{old}} + b_{\text{old}} - 1 \leq (A + B - k) - 1$ by noting that (3) is true when going into the $k$th iteration. Thus, $a_{\text{new}} + b_{\text{new}} < A + B - (k + 1)$ by algebraic simplification.
+\end{proof}
+
+\subsection{Exercise 11}
+The following {\bf while} loop implements a way to multiply two numbers that was developed by the ancient Egyptians.
+
+{\it [Pre-condition: $A$ and $B$ are positive integers, $x = A$,  $y = B$, and $product = 0$.]}
+
+\begin{tabbing}
+{\bf while} \= ($y \neq 0$) \\
+\> $r \coloneqq y \, mod \, 2$ \\
+\> {\bf if} \= $r = 0$ \\
+\>          \> {\bf then do} \= $x \coloneqq 2 \cdot x$ \\
+\>          \>               \> $y \coloneqq y \, div \, 2$ \\
+\>          \>               \> {\bf end do} \\
+\> {\bf if} \= $r = 1$ \\
+\>          \> {\bf then do} \= $product \coloneqq product + x$ \\
+\>          \>               \> $y \coloneqq y - 1$ \\
+\>          \>               \> {\bf end do} \\
+{\bf end while} 
+\end{tabbing}
+
+{\it [Post-condition: $product = A \cdot B$]}
+
+\subsubsection{(a)}
+Make a trace table to show that the algorithm gives the correct answer for multiplying $A = 13$ times $B = 18$.
+
+\begin{proof}
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$A$ & 13 & & & & & & \\
+\hline
+$B$ & 18 & & & & & & \\
+\hline
+$r$ &    & 0 & 1 & 0 & 0 & 0 & 1   \\
+\hline
+$x$ & 13 & 26& 26& 52&104&208& 208 \\
+\hline
+$y$ & 18 & 9 & 8 & 4 & 2 & 1 & 0   \\
+\hline
+product&0& 0 & 26& 26& 26& 26& 234 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+\end{proof}
+
+\subsubsection{(b)}
+Prove the correctness of this loop with respect to its pre- and post-conditions by using the loop invariant
+\[
+I(n): xy + product = A \cdot B.
+\]
+\begin{proof}
+{\bf I. Basis Property:} $I(0)$ is ``$xy + product = A \cdot B$.'' Before the loop begins executing, we have 
+$x = A, y = B, product = 0$, so $xy + product = A \cdot B + 0 = AB$. Therefore $I(0)$ is true. 
+
+{\bf II. Inductive Property:} Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an 
+iteration of the loop. 
+
+Then as execution reaches the top of the loop, since $G$ is true we have $y \neq 0$, 
+so the guard is passed and the statement is executed. 
+
+Now before execution of the statement, since $I(k)$ is true we have $x_{old}y_{old} + product_{old} = AB$. 
+Then $r \coloneqq y \mod 2$ is executed. There are two cases:
+
+{\bf Case 1: $r = 0$.} Then the first branch is executed. So we have $x_{new} = 2x_{old}$, 
+$y_{new} = y_{old} \, div \, 2$, and $product_{new} = product_{old}$ (because product does not get modified).
+
+Notice that since $r = 0$, $y_{old}$ is even, therefore $y_{new} = y_{old} \, div \, 2 = y_{old} / 2$. 
+So after execution of the statement, 
+\[
+x_{new}y_{new} + product_{new} = (2x_{old})(y_{old} / 2) + product_{old} = x_{old}y_{old} + product_{old} = AB.
+\]
+Thus after the loop iteration, $I(k + 1)$ is true. 
+
+{\bf Case 2: $r = 1$.} Then the second branch is executed. So we have $product_{new} = product_{old} + x_{old}$, 
+$y_{new} = y_{old} - 1$, and $x_{new} = x_{old}$ (because $x$ does not get modified). So after execution of the statement, 
+
+$x_{new}y_{new} + product_{new} = x_{old}(y_{old} - 1) + (product_{old} + x_{old}) = x_{old}y_{old} - x_{old} + product_{old} + x_{old}$ 
+
+$= x_{old}y_{old} + product_{old} = AB.$
+
+Thus after the loop iteration, $I(k + 1)$ is true. 
+
+{\bf III. Eventual Falsity of Guard:} The guard $G$ is the condition $y \neq 0$. $y$ starts with $y = B$, a positive integer.
+After each iteration of the loop, either $y$ is divided in half, or reduced by 1.
+
+So in each iteration $y_{new} < y_{old}$. Moreover, division by 2 and subtraction by 1 cannot reduce $y$ to 
+negative values without reaching zero first. Therefore eventually we will reach $y = 0$ and $G$ will be false. 
+
+{\bf IV. Correctness of the Post-Condition:} Suppose that $N$ is the least number of iterations after which $G$ is false and $I(N)$ is true. 
+
+Then (since $G$ is false) $y = 0$, and (since $I(N)$ is true) $xy + product = AB$. So $x \cdot + product = AB$,
+therefore $product = AB$, which is the post-condition.
+\end{proof}
+
+\subsection{Exercise 12}
+The following sentence could be added to the loop invariant for the Euclidean algorithm:
+
+There exist integers $u, v, s$, and $t$ such that $a = uA + vB$ and $b = sA + tB$. {\cy 5.5.12}
+
+\subsubsection{(a)}
+Show that this sentence is a loop invariant for 
+\begin{tabbing}
+{\bf while} \= ($b \neq 0$) \\
+\> $r \coloneqq a \mod b$ \\
+\> $a \coloneqq b$ \\
+\> $b \coloneqq r$ \\      
+{\bf end while}
+\end{tabbing}
+
+\begin{proof}
+Assume $G \wedge I(k)$ is true for some nonnegative integer $k$. {\it [We want to show $I(k+1)$ is true.]}
+
+Since $I(k)$ is true, there exist integers $u', v', s'$, and $t'$ such that $a_{old} = u'A + v'B$ and $b_{old} = s'A + t'B$.
+
+Since $G$ is true, $b \neq 0$ so the guard is passed that the statements are executed. After execution we get
+$a_{new} = b_{old}$ and $b_{new} = a_{old} \mod b_{old}$.
+
+So $a_{new} = b_{old} = s'A + t'B$. Let $u = s', v = t'$.
+
+Now let's work on $b_{new} = a_{old} \mod b_{old}$. By definition of mod, \(a_{old} = b_{old} \cdot m + b_{new}\) 
+for some integers $m,n$. We have $a_{old} = u'A + v'B$ and $b_{old} = s'A + t'B$, so
+\[
+u'A + v'B = (s'A + t'B)m + b_{new}, \text{ so } (u'-s'm)A + (v'-t'm)B = b_{new}.
+\]
+Let $s = u'-s'm$, and let $t = v'-t'm$.
+
+We have shown that there exist integers $u, v, s$, and $t$ such that $a_{new} = uA + vB$ and $b_{new} = sA + tB$.
+This proves $I(k+1)$.
+\end{proof}
+
+\subsubsection{(b)}
+Show that if initially $a = A$ and $b = B$, then sentence (5.5.12) is true before the first iteration of the loop.
+
+\begin{proof}
+We can take $u = 1, v = 0, s = 0, t = 1$. Then (5.5.12) is satisfied.
+\end{proof}
+
+\subsubsection{(c)}
+Explain how the correctness proof for the Euclidean algorithm together with the results of (a) and (b) above 
+allow you to conclude that given any integers $A$ and $B$ 
+with $A > B \geq 0$, there exist integers $u$ and $v$ so 
+that gcd$(A, B) = uA + vB$.
+
+\begin{proof}
+We can add the above loop invariant to the correctness proof of the Euclidean algorithm, and it stays correct by parts (a) and (b).
+
+At the end of the Euclidean algorithm, the above invariant still holds, and we have gcd$(A,B) = a$. 
+By the above invariant, there exist integers $u,v$ such that $a = uA + vB$ at the end of the algorithm.
+Therefore gcd$(A,B) = a = uA + vB$.
+\end{proof}
+
+\subsubsection{(d)}
+By actually calculating $u, v, s$, and $t$ at each stage of execution of the Euclidean algorithm, find integers $u$ and 
+$v$ so that gcd$(330, 156) = 330u + 156v$.
+
+\begin{proof}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$A$ &330&   &  &   &    \\
+\hline
+$B$ &156&   &  &   &    \\
+\hline
+$r$ &156& 18&12& 6 & 0  \\
+\hline
+$a$ &330&156&18& 12& 6  \\
+\hline
+$b$ &156& 18&12& 6 & 0  \\
+\hline
+$u$ & 1 & 0 & 1& -8& 9  \\
+\hline
+$v$ & 0 & 1 &-2& 17&-19 \\
+\hline
+$s$ & 0 & 1 &-8& 9 & 26 \\
+\hline
+$t$ & 1 & -2&17&-19&-55 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+gcd = $6 = 330 \cdot 9 + 156 \cdot (-19)$
+\end{proof}
+
 \end{document}
