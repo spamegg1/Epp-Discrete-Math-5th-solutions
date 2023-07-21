@@ -9,6 +9,8 @@
 \newtheorem{claim}{Claim}
 \newtheorem{lemma}{Lemma}
 
+\renewcommand{\arraystretch}{1.3}
+
 \newcommand{\dps}{\displaystyle}
 \newcommand{\fbl}{\underline{\hspace{1cm}}\,\,}
 \newcommand{\R}{\mathbb{R}}
@@ -5500,6 +5502,1194 @@ $t$ & 1 & -2&17&-19&-55 \\
 \end{tabular}
 \arrayrulecolor{black} % change it back!
 gcd = $6 = 330 \cdot 9 + 156 \cdot (-19)$
+\end{proof}
+
+\section{Exercise Set 5.6}
+
+{\cy Find the first four terms of each of the recursively defined sequences in $1-8$.}
+
+\subsection{Exercise 1}
+$a_k = 2a_{k - 1} + k$, for every integer $k \geq 2$
+
+$a_1 = 1$
+
+\begin{proof}
+$a_1 = 1, a_2 = 2a_1 + 2 = 2 \cdot 1 + 2 = 4, a_3 = 2a_2 + 3 = 2 \cdot 4 + 3 = 11, a_4 = 2a_3 + 4 = 2 \cdot 11 + 4 = 26$
+\end{proof}
+
+\subsection{Exercise 2}
+$b_k = b_{k - 1} + 3k$, for every integer $k \geq 2$
+
+$b_1 = 1$
+
+\begin{proof}
+$b_1 = 1, b_2 = b_1 + 3 \cdot 2 = 1 + 6 = 7, b_3 = b_2 + 3 \cdot 3 = 7 + 9 = 16, b_4 = b_3 + 3 \cdot 4 = 16 + 12 = 28$
+\end{proof}
+
+\subsection{Exercise 3}
+$c_k = k(c_{k-1})^2$, for every integer $k \geq 1$
+
+$c_0 = 1$
+
+\begin{proof}
+$c_0 = 1, c_1 = 1 \cdot (c_0)^2 = 1 \cdot (1)^2 = 1, c_2 = 2(c1)^2 = 2 \cdot (1)^2 = 2, c_3 = 3(c_2)^2 = 3 \cdot (2)^2 = 12$
+\end{proof}
+
+\subsection{Exercise 4}
+$d_k = k(d_{k - 1})^2$, for every integer $k \geq 1$
+
+$d_0 = 3$
+
+\begin{proof}
+$d_0 = 3, d_1 = 1 \cdot (d_0)^2 = 1 \cdot (3)^2 = 9, d_2 = 2(d_1)^2 = 2 \cdot (9)^2 = 162, d_3 = 3(d_2)^2 = 3 \cdot (162)^2 = 78732$
+\end{proof}
+
+\subsection{Exercise 5}
+$s_k = s_{k - 1} + 2s_{k - 2}$, for every integer $k \geq 2$ 
+
+$s_0 = 1, s_1 = 1$
+
+\begin{proof}
+$s_0 = 1, s_1 = 1, s_2 = s_1 + 2s_0 = 1 + 2\cdot 1 = 3, s_3 = s_2 + 2s_1 = 3 + 2\cdot 1 = 5$
+\end{proof}
+
+\subsection{Exercise 6}
+$t_k = t_{k - 1} + 2t_{k - 2}$, for every integer $k \geq 2$
+
+$t_0 = -1, t_1 = 2$
+
+\begin{proof}
+$t_0 = -1, t_1 = 2, t_2 = t_1 + 2t_0 = 2 + 2(-1) = 0, t_3 = t_2 + 2t_1 = 0 + 2(2) = 4$
+\end{proof}
+
+\subsection{Exercise 7}
+$u_k = ku_{k - 1} - u_{k - 2}$, for every integer $k \geq 3$
+
+$u_1 = 1, u_2 = 1$
+
+\begin{proof}
+$u_1 = 1, u_2 = 1, u_3 = 3u_2 - u_1 = 3 \cdot 1 - 1 = 2, u_4 = 4u_3 - u_2 = 4 \cdot 2 - 1 = 7$
+\end{proof}
+
+\subsection{Exercise 8}
+$v_k = v_{k-1} + v_{k-2} + 1$, for every integer $k \geq 3$
+
+$v_1 = 1, v_2 = 3$
+
+\begin{proof}
+$v_1 = 1, v_2 = 3, v_3 = v_2 + v_1 + 1 = 3 + 1 + 1 = 5, v_4 = v_3 + v_2 + 1 = 5 + 3 + 1 = 9$
+\end{proof}
+
+\subsection{Exercise 9}
+Let $a_0, a_1, a_2, \ldots$ be defined by the formula $a_n = 3n + 1$, for every integer $n \geq 0$. Show that this 
+sequence satisfies the recurrence relation $a_k = a_{k - 1} + 3$, for every integer $k \geq 1$.
+
+\begin{proof}
+By definition of $a_0, a_1, a_2, \ldots,$ for each integer $k \geq 1$, (*) $a_k = 3k + 1$ and 
+(**) $a_{k-1} = 3(k - 1) + 1$. Then 
+
+\begin{tabular}{lcll}
+$a_{k-1} + 3$ & = & $3(k - 1) + 1 + 3$ & {\cy by substitution from (**)} \\
+& = & $3k - 3 + 1 + 3$ & {\cy by basic algebra} \\
+& = & $3k+1$ & {\cy by basic algebra} \\
+& = & $a_k$ & {\cy by substitution from (*)} \\
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 10}
+Let $b_0, b_1, b_2, \ldots$ be defined by the formula $b_n = 4^n$, for every integer $n \geq 0$. Show that this 
+sequence satisfies the recurrence relation $b_k = 4b_{k - 1}$, for every integer $k \geq 1$.
+
+\begin{proof}
+By definition of $b_0, b_1, b_2, \ldots$, for each integer $k \geq 1$, (*) $b_k = 4^k$ and 
+(**) $b_{k-1} = 4^{k - 1}$. Then 
+
+\begin{tabular}{lcll}
+$4b_{k-1}$ & = & $4 \cdot 4^{k - 1}$ & {\cy by substitution from (**)} \\
+& = & $4^k$ & {\cy by laws of exponents} \\
+& = & $b_k$ & {\cy by substitution from (*)} \\
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 11}
+Let $c_0, c_1, c_2, \ldots$ be defined by the formula $c_n = 2^n - 1$, for every integer $n \geq 0$. Show that this 
+sequence satisfies the recurrence relation $c_k = 2c_{k - 1} + 1$, for every integer $k \geq 1$.
+
+\begin{proof}
+By definition of $c_0, c_1, c_2, \ldots$, we have $c_n = 2^n-1$ for each integer $n \geq 0$. Substitute $k$ and 
+$k-1$ in place of $n$ to get (*) $c_k = 2^k - 1$ and (**) $c_{k-1} = 2^{k - 1} - 1$ for every integer $k \geq 1$. Then 
+
+\begin{tabular}{lcll}
+$2c_{k - 1} + 1$ & = & $2 \cdot (2^{k - 1} - 1) - 1$ & {\cy by substitution from (**)} \\
+& = & $2^k - 2 + 1$ & {\cy by distributing and laws of exponents} \\
+& = & $2^k - 1$ & {\cy by algebra} \\
+& = & $c_k$ & {\cy by substitution from (*)} \\
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 12}
+Let $s_0, s_1, s_2, \ldots$ be defined by the formula $s_n = \dps \frac{(-1)^n}{n!}$ for every integer $n \geq 0$. 
+Show that this sequence satisfies the following recurrence relation for every integer $k \geq 1$: 
+\(\dps s_k = \frac{-s_{k - 1}}{k}\)
+
+\begin{proof}
+By definition of $s_0, s_1, s_2, \ldots$, we have $s_n = \frac{(-1)^n}{n!}$ for each integer $n \geq 0$. Substitute 
+$k$ and $k-1$ in place of $n$ to get (*) $s_k = \frac{(-1)^k}{k!}$ and 
+(**) $s_{k-1} = \frac{(-1)^{k-1}}{(k-1)!}$ for every integer $k \geq 1$. Then 
+
+\begin{tabular}{lcll}
+$\dps \frac{-s_{k - 1}}{k}$ & = & $\dps \frac{-\frac{(-1)^{k-1}}{(k-1)!}}{k}$ & {\cy by substitution from (**)} \\
+& = & $\dps \frac{(-1)^{k}}{k(k-1)!}$ & {\cy by algebra and laws of exponents} \\
+& = & $\dps \frac{(-1)^{k}}{k!}$ & {\cy by definition of !} \\
+& = & $s_k$ & {\cy by substitution from (*)} \\
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 13}
+Let $t_0, t_1, t_2, \ldots$ be defined by the formula $t_n = 2 + n$ for every integer $n \geq 0$. Show that this 
+sequence satisfies the following recurrence relation for every integer $k \geq 2$: $t_k = 2t_{k - 1} - t_{k - 2}$.
+
+\begin{proof}
+By definition of $t_0, t_1, t_2, \ldots$, $t_n = 2+n$ for each integer $n \geq 0$. Substitute $k, k-1$ and $k-2$ in place of $n$ to get
+
+\begin{tabular}{lrcl}
+(*) & $t_k$ & = & $2 + k$, \\
+(**) & $t_{k - 1}$ & = & $2 + (k - 1)$, \\
+(***) & $t_{k - 2}$ & = & $2 + (k - 2)$
+\end{tabular} 
+
+for each integer $k \geq 2$. Then $2t_{k - 1} - t_{k - 2}$
+
+\begin{tabular}{lll}
+= & $2(2 + k - 1) - (2 + k - 2)$ & {\cy by substitution from (**) and (***)} \\
+= & $2(k+1) - k$ & {\cy by basic algebra} \\
+= & $k+2$ & {\cy by basic algebra} \\
+= & $t_k$ & {\cy by substitution from (*)} \\
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 14}
+Let $d_0, d_1, d_2, \ldots$ be defined by the formula $d_n = 3^n - 2^n$ for every integer $n \geq 0$. Show that this 
+sequence satisfies the following recurrence relation for every integer $k \geq 2$: $d_k = 5d_{k-1} - 6d_{k-2}$.
+
+\begin{proof}
+By definition of $d_0, d_1, d_2, \ldots$, $d_n = 3^n - 2^n$ for each integer $n \geq 0$. Substitute $k, k-1$ and $k-2$ in place of $n$ to get
+
+\begin{tabular}{lrcl}
+(*) & $d_k$ & = & $3^k - 2^k$, \\
+(**) & $d_{k - 1}$ & = & $3^{k-1} - 2^{k-1}$, \\
+(***) & $d_{k - 2}$ & = & $3^{k-2} - 2^{k-2}$
+\end{tabular} 
+
+for each integer $k \geq 2$. Then $5d_{k-1} - 6d_{k-2}$
+
+\begin{tabular}{lll}
+= & $5(3^{k-1} - 2^{k-1}) - 6(3^{k-2} - 2^{k-2})$ & {\cy by substitution} \\
+= & $5(3 \cdot 3^{k-2} - 2 \cdot 2^{k-2}) - 6(3^{k-2} - 2^{k-2})$ & {\cy by laws of exponents} \\
+= & $15 \cdot 3^{k-2} - 10 \cdot 2^{k-2} - 6 \cdot 3^{k-2} + 6 \cdot 2^{k-2}$ & {\cy by distributing} \\
+= & $9 \cdot 3^{k-2} - 4 \cdot 2^{k-2}$ & {\cy by combining like terms} \\
+= & $3^{k} - 2^{k}$ & {\cy because $9 = 3^2$ and $4 = 2^2$} \\
+= & $d_k$ & {\cy by substitution from (*)} \\
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 15}
+For the sequence of Catalan numbers defined in Example 5.6.4, prove that for each integer $n \geq 1$,
+\[
+C_n = \frac{1}{4n+2}\binom{2n+2}{n+1}.
+\]
+Hint: Mathematical induction is not needed for the
+proof. Start with the right-hand side of the equation and
+use algebra to transform it into the left-hand side of the
+equation.
+
+\begin{proof}
+Recall that $\dps C_n = \frac{1}{n+1} \binom{2n}{n}$. Then $\dps \frac{1}{4n+2}\binom{2n+2}{n+1}$
+
+\begin{tabular}{lll}
+= & $\dps \frac{1}{2(2n+1)}\frac{(2n+2)!}{(n+1)!(n+1)!}$ & {\cy by definition of binomial} \\
+= & $\dps \frac{1}{2(2n+1)}\frac{(2n+2)(2n+1)(2n)!}{(n+1)(n!)(n+1)(n!)}$ & {\cy by definition of !} \\
+= & $\dps \frac{1}{2(2n+1)}\frac{2(n+1)(2n+1)(2n)!}{(n+1)(n!)(n+1)(n!)}$ & {\cy by factoring} \\
+= & $\dps \frac{1}{1}\frac{(n+1)(2n)!}{(n+1)(n!)(n+1)(n!)}$ & {\cy by canceling} \\
+= & $\dps \frac{(2n)!}{(n!)(n+1)(n!)}$ & {\cy by canceling} \\
+= & $\dps \frac{1}{n+1}\frac{(2n)!}{(n!)(n!)}$ & {\cy by rewriting} \\
+= & $\dps \frac{1}{n+1}\binom{2n}{n}$ & {\cy by definition of binomial} \\
+= & $C_n$ & {\cy by definition of Catalan}
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 16}
+Use the recurrence relation and values for the Tower of Hanoi sequence $m_1, m_2, m_3, \ldots$ discussed in Example 
+5.6.5 to compute $m_7$ and $m_8$.
+
+\begin{proof}
+Recall $m_1 = 1$ and $m_k = 2m_{k-1}+1$ for every integer $k \geq 2$. So:
+
+$m_1 = 1, m_2 = 2m_1 + 1 = 2+1 = 3, m_3 = 2m_2 + 1 = 6+1 = 7, m_4 = 2m_3 + 1 = 14+1 = 15, m_5 = 2m_4 + 1 = 30+1 = 31, m_6 = 2m_5 + 1 = 62+1 = 63, m_7 = 2m_6 + 1 = 126+1 = 127, m_8 = 2m_7 + 1 = 254+1 = 255$.
+\end{proof}
+
+\subsection{Exercise 17}
+{\it Tower of Hanoi with Adjacency Requirement:} Suppose that in addition to the requirement that they never move a 
+larger disk on top of a smaller one, the priests who move the disks of the Tower of Hanoi are also allowed only to 
+move disks one by one from one pole to an adjacent pole. Assume poles A and C are at the two ends of the row and 
+pole B is in the middle. Let $a_n$ be the minimum number of moves needed to transfer a tower of $n$ disks 
+from pole A to pole C.
+
+\subsubsection{(a)}
+Find $a_1, a_2$, and $a_3$.
+
+\begin{proof}
+$a_1 = 2$
+
+$a_2 =$
+
+\begin{tabular}{ll}
+  2 & (moves to move the top disk from pole A to pole C) \\
++ 1 & (move to move the bottom disk from pole A to pole B) \\
++ 2 & (moves to move top disk from pole C to pole A) \\
++ 1 & (move to move the bottom disk from pole B to pole C) \\
++ 2 & (moves to move top disk from pole A to pole C) \\
+= 8 & 
+\end{tabular}
+
+$a_3 = 8 + 1 + 8 + 1 + 8 = 26$
+\end{proof}
+
+\subsubsection{(b)}
+Find $a_4$.
+
+\begin{proof}
+$a_4 = 26 + 1 + 26 + 1 + 26 = 80$
+\end{proof}
+
+\subsubsection{(c)}
+Find a recurrence relation for $a_1, a_2, a_3, \ldots$ Justify your answer.
+
+\begin{proof}
+For every integer $k \geq 2$, $a_k =$
+
+\begin{tabular}{ll}
+$a_{k-1}$ & (moves to move the top $k - 1$ disks from pole A to pole C) \\
++ 1 & (move to move the bottom disk from pole A to pole B) \\
+$+ a_{k-1}$ & (moves to move the top disks from pole C to pole A) \\
++ 1 & (move to move the bottom disk from pole B to pole C) \\
+$+ a_{k-1}$ & (moves to move the top disks from pole A to pole C) \\
+$= 3a_{k-1} + 2$. & 
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 18}
+{\it Tower of Hanoi with Adjacency Requirement:} Suppose the same situation as in Exercise 17. Let $b_n$ be the minimum number of moves needed to transfer a tower of $n$ disks from pole A to pole B.
+
+\subsubsection{(a)}
+Find $b_1, b_2$, and $b_3$.
+
+\begin{proof}
+$b_1 = 1, b_2 = 4, b_3 = 13$.
+\end{proof}
+
+\subsubsection{(b)}
+Find $b_4$.
+
+\begin{proof}
+$b_4 = 40$
+\end{proof}
+
+\subsubsection{(c)}
+Show that $b_k = a_{k - 1} + 1 + b_{k - 1}$ for each integer $k \geq 2$, where $a_1, a_2, a_3, \ldots$ is the 
+sequence defined in exercise 17.
+
+\begin{proof}
+First move the top $k-1$ disks from A to C, which takes a minimum of $a_{k-1}$ moves.
+
+Then move the remaining $k$th disk from A to B, which takes a minimum of 1 move.
+
+Then move the $k-1$ disks from C to B, on top of the $k$th disk, which takes a minimum of $b_{k-1}$ moves.
+(Moving from A to B is the same as moving from C to B, same number of moves).
+
+These moves are minimal because, due to the adjacency requirement, the top $k-1$ disks {\it have to be} moved
+to C first.
+
+Therefore $b_k = a_{k - 1} + 1 + b_{k - 1}$.
+\end{proof}
+
+\subsubsection{(d)}
+Show that $b_k \leq 3b_{k - 1} + 1$ for each integer $k \geq 2$.
+
+\begin{proof}
+We need to show $a_{k-1} \leq 2b_{k-1}$ by part (c). This is true because, we can first move $k-1$ disks from A to B, 
+which takes a minimum of $b_{k-1}$ moves, and then move them from B to C, which takes a minimum of another $b_{k-1}$ 
+moves. Doing this results in $k-1$ disks being moved from A to C, which takes a minimum of $a_{k-1}$ moves.
+Therefore $a_{k-1} \leq 2b_{k-1}$.
+\end{proof}
+
+\subsubsection{(e)}
+Show that $b_k = 3b_{k - 1} + 1$ for each integer $k \geq 2$.
+
+{\it Hint:} One solution is to use mathematical induction and apply the formula from part (c). Another solution is to 
+prove by mathematical induction that when a most efficient transfer of $n$ disks from one end pole to the other end 
+pole is performed, at some point all the disks are on the middle pole.
+
+\begin{proof}
+Let $P(k)$ be the equation $b_k = 3b_{k - 1} + 1$.
+
+{\bf Show that $P(2)$ is true:} by part (a) we have $b_2 = 4 = 3 + 1 = 3 \cdot b_1 + 1$, so $P(2)$ is true.
+
+{\bf Show that for any integer $k \geq 2$ if $P(k)$ is true then $P(k+1)$ is true:}
+Assume $k \geq 2$ is any integer such that $b_k = 3b_{k - 1} + 1$. {\it We want to show $b_{k+1} = 3b_{k} + 1$.}
+
+By part (c) we have $b_{k+1} = a_k + 1 + b_k$. We need to show $a_k = 2b_k$. By the proof of part (d) we know 
+$a_k \leq 2b_k$, so we need to show $a_k \geq 2b_k$.
+
+When moving $k$ disks from A to C, consider the largest disk. Due to the adjacency requirement, it has to move to B
+first. So the top $k-1$ disks must have moved to C before that. Then, for the largest disk to finally move from B to 
+C, the top $k-1$ disks must have first moved from C to A to get out of the way. In the same way, the top $k-1$ disks, on their way from C back to B, must have been moved to B (on top of the largest disk) first, before reaching A. 
+{\it This shows that at some point all the disks are on the middle pole.} This takes a minimum of $b_k$ moves. Then 
+moving all the disks from B to C takes a minimum of $b_k$ moves. Therefore, $a_k \geq 2b_k$.
+
+Thus $b_{k+1} = a_k + 1 + b_k = 2b_k + 1 + b_k = 3b_k + 1$, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 19}
+{\it Four-Pole Tower of Hanoi:} Suppose that the Tower of Hanoi problem has four poles in a row instead of three. Disks can be transferred one by one from one pole to any other pole, but at no time may a larger disk be placed on top of a smaller disk. Let $s_n$ be the minimum number of moves needed to transfer the entire tower of $n$ disks from the left-most to the right-most pole.
+
+\subsubsection{(a)}
+Find $s_1, s_2$, and $s_3$.
+
+\begin{proof}
+$s_1 = 1, s_2 = 1 + 1 + 1 = 3, s_3 = s_1 + (1 + 1 + 1) + s_1 = 5$
+\end{proof}
+
+\subsubsection{(b)}
+Find $s_4$.
+
+\begin{proof}
+$s_4 = s_2 + (1 + 1 + 1) + s_2 = 9$
+\end{proof}
+
+\subsubsection{(c)}
+Show that $s_k \leq 2s_{k - 2} + 3$ for every integer $k \geq 3$.
+
+\begin{proof}
+Let's label the poles A-B-C-D, from left to right.
+
+First notice that, since there is no adjacency requirement, the number of moves to move A to D is equal to the number 
+of moves to move from any pole to any other pole. So, moving $k$ disks from A to, say, B, still takes $s_k$ moves.
+
+First move the top $k-2$ disks from A to B, in $s_{k-2}$ moves. Then move the second largest disk from A to C. Then
+move the largest disk to D. Then move the second largest disk from C to D, on top of the largest. Finally, move 
+$k-2$ disks from B to D. This takes $s_{k-2} + 1 + 1 + 1 + s_{k-2}$ moves.
+
+This procedure gives us the minimum number of moves, because there is no adjacency requirement and we are taking
+advantage of the free space in all 4 poles. (Notice that this is faster than moving the top $k-1$ disks somewhere 
+else first, then moving the largest disk to D, then moving the $k-1$ disks back on top of it, since that uses only 3 
+poles, and moving $k-1$ disks takes more moves than moving $k-2$ disks. Similarly it's faster than moving $k-3$ disks
+first, then moving the bottom 3, since there are not enough empty poles to make that efficient.)
+\end{proof}
+
+\subsection{Exercise 20}
+{\it Tower of Hanoi Poles in a Circle:} Suppose that instead of being lined up in a row, the three poles for the 
+original Tower of Hanoi are placed in a circle. The monks move the disks one by one from one pole to another, but 
+they may only move disks one over in a clockwise direction and they may never move a larger disk on top of a smaller 
+one. Let $c_n$ be the minimum number of moves needed to transfer a pile of $n$ disks from one pole to the next 
+adjacent pole in the clockwise direction.
+
+\subsubsection{(a)}
+Justify the inequality $c_k \leq 4c_{k - 1} + 1$ for each integer $k \geq 2$.
+
+\begin{proof}
+Label the poles A, B, C, in clockwise order A $\to$ B $\to$ C $\to$ A.
+
+To move $k$ disks from A to B, first move the top $k-1$ disks from A to B (which takes $c_{k-1}$), then from B to C
+(which takes $c_{k-1}$), then move the largest disk from A to B (which takes 1 move), then move the $k-1$ disks from C 
+to A (which takes $c_{k-1}$), then from A to B on top of the largest disk (which takes $c_{k-1}$).
+
+So the total moves made are $4c_{k-1} + 1$. This shows that moving $k$ disks from A to B can be accomplished in
+$4c_{k-1} + 1$ moves, so $c_k \leq 4c_{k-1} + 1$.
+\end{proof}
+
+\subsubsection{(b)}
+The expression $4c_{k - 1} + 1$ is not the minimum number of moves needed to transfer a pile of $k$ disks from one 
+pole to another. Explain, for example, why $c_3 \neq 4c_2 + 1$.
+
+\begin{proof}
+Compute $c_2$ by using the following sequence of steps to transfer two disks from A to B:
+
+\begin{tabular}{cc}
+1 & (move to transfer the top disk from A to B) \\
++ 1 & (move to transfer the top disk from B to C) \\
++ 1 & (move to transfer the bottom disk from A to B) \\
++ 1 & (move to transfer the top disk from C to A) \\
++ 1 & (move to transfer the top disk from A to B).
+\end{tabular}
+
+This sequence of steps is the least possible, and so $c_2 = 5$.
+
+A tower of 3 disks can be transferred from A to B by using the following sequence of steps:
+
+\begin{tabular}{cc}
+1 & (move to transfer the top disk from A to B) \\
++ 1 & (move to transfer the top disk from B to C) \\
++ 1 & (move to transfer the middle disk from A to B) \\
++ 1 & (move to transfer the top disk from C to A) \\
++ 1 & (move to transfer the middle disk from B to C) \\
++ 1 & (move to transfer the top disk from A to B) \\
++ 1 & (move to transfer the top disk from B to C).
+\end{tabular}
+
+After these 7 steps have been completed, the bottom disk can be transferred from A to B. At that point the top two 
+disks are on C, and a modified version of the initial seven steps can be used to transfer them from C to B. Thus the 
+total number of steps is 7 + 1 + 7 = 15, and $15 < 21 = 4c_2 + 1$.
+\end{proof}
+
+\subsection{Exercise 21}
+{\it Double Tower of Hanoi:} In this variation of the Tower of Hanoi there are three poles in a row and $2n$ disks, two 
+each of $n$ different sizes, where $n$ is any positive integer. Initially one of the poles contains all the disks 
+placed on top of each other in pairs of decreasing size. Disks are transferred one by one from one pole to another, 
+but at no time may a larger disk be placed on top of a smaller disk. However, a disk may be placed on top of one 
+of the same size. Let $t_n$ be the minimum number of moves needed to transfer a tower of $2n$ disks from one pole to another.
+
+\subsubsection{(a)}
+Find $t_1$ and $t_2$.
+
+\begin{proof}
+{\it ???} I'm a bit tired of these Hanoi problems.
+\end{proof}
+
+\subsubsection{(b)}
+Find $t_3$.
+
+\begin{proof}
+$t_3 = 14$
+\end{proof}
+
+\subsubsection{(c)}
+Find a recurrence relation for $t_1, t_2, t_3, \ldots$.
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
+\subsection{Exercise 22}
+{\it Fibonacci Variation:} A single pair of rabbits (male and female) is born at the beginning of a year. 
+Assume the following conditions (which are somewhat more realistic than Fibonacci’s):
+
+(1) Rabbit pairs are not fertile during their first months of life, but thereafter give birth to four new male/female 
+pairs at the end of every month.
+
+(2) No rabbits die.
+
+\subsubsection{(a)}
+Let $r_n$ be the number of pairs of rabbits alive at the end of month $n$, for each integer $n \geq 1$, and let 
+$r_0 = 1$. Find a recurrence relation for $r_0, r_1, r_2, \ldots$. Justify your answer.
+
+\begin{proof}
+At the beginning there is 1 pair, which is not fertile. $r_0 = 1$.
+
+During the time period 0-1 months, this pair is not yet fertile. So at the end of month 1, there is still $r_1 = 1$
+pair. Now this 1 pair has become fertile.
+
+During the time period 1-2 months, the 1 pair from previous month is fertile, so $r_2 = 4 \cdot r_1 + r_1 = 5$.
+
+Generally we can think of it as: $r_n = 4 \cdot F_{n-1} + S_{n-1}$ where $F_{n-1}$ is the number of fertile pairs 
+from month $n-1$, and $S_{n-1} = r_{n-1}$ is the number of all surviving pairs from month $n-1$.
+
+Notice that during the time period from month $n-1$ to month $n$, the number of fertile pairs $F_{n-1}$ is all 
+pairs except those that were born just 1 month ago, that is, $r_{n-2}$.
+
+So $r_n = 4F_{n-1} + S_{n-1} = 4r_{n-2} + r_{n-1}$.
+\end{proof}
+
+\subsubsection{(b)}
+Compute $r_0, r_1, r_2, r_3, r_4$, and $r_5$.
+
+\begin{proof}
+$r_0 = 1, r_1 = 1, r_2 = 1 + 4\cdot1 = 5, r_3 = 5 + 4\cdot1 = 9, r_4 = 9 + 4\cdot5 = 29, r_5 = 29 + 4\cdot9 = 65, 
+r_6 = 65 + 4\cdot29 = 181$
+\end{proof}
+
+\subsubsection{(c)}
+How many rabbits will there be at the end of the year?
+
+\begin{proof}
+$r_7 = 4r_5 + r_6 = 4 \cdot 65 + 181 = 441$
+
+$r_8 = 4r_6 + r_7 = 4 \cdot 181 + 441 = 1165$
+
+$r_9 = 4r_7 + r_8 = 4 \cdot 441 + 1165 = 2929$
+
+$r_{10} = 4r_8 + r_9 = 4 \cdot 1165 + 2929 = 7589$
+
+$r_{11} = 4r_9 + r_{10} = 4 \cdot 2929 + 7589 = 19305$
+
+$r_{12} = 4r_{10} + r_{11} = 4 \cdot 7589 + 19305 = 49661$.
+
+There are 49661 pairs, so there are 99322 rabbits.
+\end{proof}
+
+\subsection{Exercise 23}
+{\it Fibonacci Variation:} A single pair of rabbits (male and female) is born at the beginning of a year. 
+Assume the following conditions:
+
+(1) Rabbit pairs are not fertile during their first two months of life, but thereafter give birth to three new
+male/female pairs at the end of every month.
+
+(2) No rabbits die.
+
+\subsubsection{(a)}
+Let $s_n$ be the number of pairs of rabbits alive at the end of month $n$, for each integer $n \geq 1$, and let 
+$s_0 = 1$. Find a recurrence relation for $s_0, s_1, s_2, \ldots$. Justify your answer.
+
+\begin{proof}
+At the beginning there is 1 pair, which is not fertile. $s_0 = 1$.
+
+During the time period 0-1 months, this pair is not yet fertile. So at the end of month 1, there is still $s_1 = 1$
+pair. 
+
+During the time period 1-2 months, this pair is not yet fertile. So at the end of month 2, there is still $s_2 = 1$
+pair. Now this pair has become fertile. 
+
+During the time period 2-3 months, this pair is fertile. So at the end of month 3, there are still 
+$s_3 = 3 \cdot 1 + 1 = 4$ pairs. The 3 new pairs that are just born will not be fertile for another 2 months.
+
+During the time period 3-4 months, out of the 4 existing pairs, only 1 is fertile, the other 3 are not yet. So at 
+the end of month 4, there are $s_4 = 3 \cdot 1 + 4 = 7$ pairs. The 3 new pairs that are just born will not be 
+fertile for another 2 months. The 3 pairs that were born in the previous month will be fertile next month.
+
+And so on.
+
+Generally we can think of it as: $s_n = 3 \cdot F_{n-1} + S_{n-1}$ where $F_{n-1}$ is the number of fertile pairs 
+from month $n-1$, and $S_{n-1} = s_{n-1}$ is the number of all surviving pairs from month $n-1$.
+
+Notice that during the time period from month $n-1$ to month $n$, the number of fertile pairs $F_{n-1}$ is all 
+pairs except those that were born just 1 month ago or just 2 months ago, that is, $s_{n-3}$.
+
+So $s_n = 3F_{n-1} + S_{n-1} = 3s_{n-3} + s_{n-1}$.
+\end{proof}
+
+\subsubsection{(b)}
+Compute $s_0, s_1, s_2, s_3, s_4$, and $s_5$.
+
+\begin{proof}
+$s_0 = 1, s_1 = 1, s_2 = 1, s_3 = 3 \cdot 1 + 1 = 4, s_4 = 3 \cdot 1 + 4 = 7, s_5 = 3 \cdot 1 + 7 = 10$
+\end{proof}
+
+\subsubsection{(c)}
+How many rabbits will there be at the end of the year?
+
+\begin{proof}
+$s_6 = 3s_3 + s_5 = 3 \cdot 4 + 10 = 22$
+
+$s_7 = 3s_4 + s_6 = 3 \cdot 7 + 22 = 43$
+
+$s_8 = 3s_5 + s_7 = 3 \cdot 10 + 43 = 73$
+
+$s_9 = 3s_6 + s_8 = 3 \cdot 22 + 73 = 139$
+
+$s_{10} = 3s_7 + s_9 = 3 \cdot 43 + 139 = 268$
+
+$s_{11} = 3s_8 + s_{10} = 3 \cdot 73 + 268 = 487$
+
+$s_{12} = 3s_9 + s_{11} = 3 \cdot 139 + 487 = 904$
+
+There are 904 rabbit pairs, or 1,808 rabbits, after 12 months.
+\end{proof}
+
+{\cy In $24-34$, $F_0, F_1, F_2, \ldots$ is the Fibonacci sequence.}
+
+\subsection{Exercise 24}
+Use the recurrence relation and values for $F_0, F_1, F_2, \ldots$ given in Example 5.6.6 to compute $F_{13}$ and $F_{14}$.
+
+\begin{proof}
+Given: $F_{11} = 144, F_{12} = 233, F_k = F_{k-1} + F_{k-2}$. So
+
+$F_{13} = F_{12} + F_{11} = 233 + 144 = 377$
+
+$F_{14} = F_{13} + F_{12} = 377 + 233 = 610$
+\end{proof}
+
+\subsection{Exercise 25}
+The Fibonacci sequence satisfies the recurrence relation $F_k = F_{k - 1} + F_{k - 2}$, for every integer $k \geq 2$.
+
+\subsubsection{(a)}
+Explain why the following is true: $F_{k+1} = F_k + F_{k-1}$ for each integer $k \geq 1$.
+
+\begin{proof}
+Each term of the Fibonacci sequence beyond the second equals the sum of the previous two. For any integer 
+$k \geq 1$, the two terms previous to $F_{k+1}$ are $F_k$ and $F_{k-1}$. Hence, for every integer $k \geq 1$, 
+$F_{k+1} = F_k + F_{k-1}$.
+\end{proof}
+
+\subsubsection{(b)}
+Write an equation expressing $F_{k+2}$ in terms of $F_{k+1}$ and $F_k$.
+
+\begin{proof}
+$F_{k+2} = F_{k+1} + F_k$
+\end{proof}
+
+\subsubsection{(c)}
+Write an equation expressing $F_{k+3}$ in terms $F_{k+2}$ and $F_{k+1}$.
+
+\begin{proof}
+$F_{k+3} = F_{k+2} + F_{k+1}$
+\end{proof}
+
+\subsection{Exercise 26}
+Prove that $F_k = 3F_{k - 3} + 2F_{k - 4}$ for every integer $k \geq 4$.
+
+\begin{proof}
+By repeated use of definition of the Fibonacci sequence,
+for each integer $k \geq 4$,
+
+\begin{tabular}{rcl}
+$F_k$ & = & $F_{k-1} + F_{k-2}$ \\
+& = & $(F_{k-2} + F_{k-3}) + (F_{k-3} + F_{k-4})$ \\
+& = & $((F_{k-3} + F_{k-4}) + F_{k-3}) + (F_{k-3} + F_{k-4})$ \\
+& = & $3F_{k-3} + 2 + F_{k-4}$.
+\end{tabular}
+
+\end{proof}
+
+\subsection{Exercise 27}
+Prove that $F_k^2 - F_{k - 1}^2 = F_k F_{k + 1} - F_{k - 1}F_{k + 1}$, for every integer $k \geq 1$.
+
+\begin{proof}
+For each integer $k \geq 1$,
+
+\begin{tabular}{rcll}
+$F_k^2 - F_{k-1}^2$ & = & $(F_k - F_{k-1})(F_k + F_{k-1})$ & {\cy by difference of two squares} \\
+& = & $(F_k - F_{k-1})F_{k+1}$ & {\cy by definition of Fibonacci sequence} \\
+& = & $F_k F_{k+1} - F_{k-1} F_{k+1}$. & {\cy by distributing} 
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 28}
+Prove that $F_{k + 1}^2 - F_k^2 - F_{k - 1}^2 = 2F_kF_{k - 1}$, for every integer $k \geq 1$.
+
+\begin{proof}
+By definition of the Fibonacci sequence, we have $F_{k+1} = F_k + F_{k-1}$. Squaring both sides, we have
+\(F_{k+1}^2 = (F_k + F_{k-1})^2 = F_k^2 + 2F_k F_{k-1} + F_{k-1}^2\).
+
+Subtracting, we get \(F_{k+1}^2 - F_k^2 - F_{k-1}^2 = 2F_k F_{k-1}\).
+\end{proof}
+
+\subsection{Exercise 29}
+Prove that $F_{k + 1}^2 - F_k^2 = F_{k - 1}F_{k + 2}$, for every integer $k \geq 1$.
+
+\begin{proof}
+By Exercise 28, $F_{k+1}^2 - F_k^2 - F_{k-1}^2 = 2F_k F_{k-1}$.
+
+So $F_{k+1}^2 - F_k^2 = F_{k-1}^2 + 2F_k F_{k-1} = F_{k-1}(F_{k-1} + 2F_k) = F_{k-1}({\cy F_{k-1} + F_k} + F_k)$.
+
+By Fibonacci definition $F_{k-1} + F_k = F_{k+1}$, so $F_{k+1}^2 - F_k^2 = F_{k-1}({\cy F_{k+1}} + F_k)$.
+
+By Fibonacci definition $F_{k+1} + F_k = F_{k+2}$, so $F_{k+1}^2 - F_k^2 = F_{k-1}(F_{k+2})$.
+\end{proof}
+
+\subsection{Exercise 30}
+Use mathematical induction to prove that for each integer $n \geq 0, F_{n + 2}F_n - F_{n+1}^2 = (-1)^n$.
+
+\begin{proof}
+Let $P(n)$ be the equation \(F_{n + 2}F_n - F_{n+1}^2 = (-1)^n\).
+
+{\bf Show that \(P(0)\) is true:} \(P(0)\) says \(F_2 F_0 - F_1^2 = (-1)^0 = 1\). Since $F_0 = 1, F_1 = 1, F_2 = 2$ we 
+have \(F_2 F_0 - F_1^2 = 2 \cdot 1 - 1^2 = 1 = (-1)^0\), so \(P(0)\) is true.
+
+{\bf Show that for any integer \(k \geq 0\), if $P(k)$ is true then \(P(k+1)\) is true:} Assume \(k \geq 0\) and 
+assume \(F_{k + 2}F_k - F_{k+1}^2 = (-1)^k\). So \(F_{k + 2}F_k - (-1)^k = F_{k+1}^2\). {\bf (*)}
+
+{\it [We want to show \(F_{k + 3}F_{k+1} - F_{k+2}^2 = (-1)^{k+1}\).]} 
+
+Now $F_{k + 3}F_{k+1} - F_{k+2}^2$
+
+\begin{tabular}{cll}
+= & $(F_{k + 2} + F_{k + 1})F_{k+1} - F_{k+2}^2$ & {\cy by Fibonacci definition} \\
+= & $F_{k + 2}F_{k + 1} + F_{k+1}^2 - F_{k+2}^2$ & {\cy by distributing} \\
+= & $F_{k + 2}F_{k + 1} + F_{k + 2}F_k - (-1)^k - F_{k+2}^2$ & {\cy by substituting (*)} \\
+= & $F_{k + 2}(F_{k + 1} + F_k - F_{k+2}) + (-1)^{k+1}$ & {\cy by factoring, algebra} \\
+= & $F_{k + 2}(0) + (-1)^{k+1}$ & {\cy by Fibonacci definition} \\
+= & $(-1)^{k+1}$ & {\cy by algebra}
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 31}
+Use strong mathematical induction to prove that $F_n < 2^n$ for every integer $n \geq 1$.
+
+\begin{proof}
+Let $P(n)$ be the inequality $F_n < 2^n$.
+
+{\bf Show that $P(1)$ is true:} 
+$P(1)$ says $F_1 < 2^1$. We have $F_1 = 1$ and $2^1 = 2$, and $1 < 2$ so $P(1)$ is true.
+
+{\bf Show that for any integer $k \geq 1$ if $P(i)$ is true for all integers $i$ with $1 \leq i \leq k$ then $P(k+1$ 
+is true:}
+Assume $k \geq 1$ and assume $F_i < 2^i$ for all $1 \leq i \leq k$. {\it [We want to show $F_{k+1} < 2^{k+1}$.]}
+
+\begin{center}
+\begin{tabular}{rcll}
+\(F_{k+1}\) & = & \(F_k + F_{k - 1}\) & {\cy by Fibonacci definition} \\
+& $<$ & \(2^k + 2^{k - 1}\) & {\cy by inductive hypothesis} \\
+& $<$ & \(2^k + 2^k\) & {\cy because \(2^{k-1} < 2^k\)} \\
+& $=$ & \(2^{k+1}\) & {\cy by algebra}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 32}
+Prove that for each integer $n \geq 0$, gcd$(F_{n + 1}, F_n) = 1$. 
+(The definition of gcd is given in Section 4.10.)
+
+{\it Hint:} Use mathematical induction. In the inductive step, use Lemma 4.10.2 and the fact that 
+\(F_{k+2} = F_{k+1} + F_k\) to deduce that \(\text{gcd}(F_{k+2}, F_{k+1}) = \text{gcd}(F_{k+1}, F_k)\).
+
+\begin{proof}
+Let \(P(n)\) be the equation \(\text{gcd}(F_{n + 1}, F_n) = 1\).
+
+{\bf Show that \(P(0)\) is true:} \(P(0)\) says \(\text{gcd}(F_1, F_0) = 1\). Since \(F_1 = F_0 = 1\) we 
+have \(\text{gcd}(F_1, F_0) = \text{gcd}(1, 1) = 1\). So \(P(0)\) is true.
+
+{\bf Show that for any integer $k \geq 0$, if \(P(k)\) is true then \(P(k+1)\) is true:}
+Assume \(k \geq 0\) and assume \(\text{gcd}(F_{k+1}, F_k) = 1\).
+{\it [We want to show \(\text{gcd}(F_{k+2}, F_{k+1}) = 1\).]}
+
+By definition of Fibonacci, \(F_{k+2} = F_{k+1} + F_k\).
+By Lemma 4.10.2 applied to \(a = F_{k+2}, b = F_{k+1}, q = 1, r = F_k\) we have 
+\(\text{gcd}(F_{k+2}, F_{k+1}) = \text{gcd}(F_{k+1}, F_k)\).
+By the inductive hypothesis \(\text{gcd}(F_{k+1}, F_k) = 1\). 
+Therefore \(\text{gcd}(F_{k+2}, F_{k+1}) = \text{gcd}(F_{k+1}, F_k) = 1\), {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 33}
+It turns out that the Fibonacci sequence satisfies the following explicit formula: For every integer $F_n \geq 0$,
+\[
+F_n = \frac{1}{\sqrt{5}}\left[\left(\frac{1 + \sqrt{5}}{2}\right)^{n+1} - \left(\frac{1 - \sqrt{5}}{2}\right)^{n+1}\right]
+\]
+Verify that the sequence defined by this formula satisfies the recurrence relation 
+
+\(F_k = F_{k - 1} + F_{k - 2}\) for every integer $k \geq 2$.
+
+\begin{proof}
+For the sake of notational simplicity let \(x = (1 + \sqrt{5}) / 2\) and \(y = (1 - \sqrt{5}) / 2\). Notice that
+\[
+x^2 = \frac{6 + 2\sqrt{5}}{4}, \text{ and } y^2 = \frac{6 - 2\sqrt{5}}{4}.
+\]
+Notice that
+\[
+x + 1 = \frac{1 + \sqrt{5}}{2} + 1 = \frac{3 + \sqrt{5}}{2} = \frac{6 + 2\sqrt{5}}{4} = x^2
+\]
+and similarly for \(y\), therefore \(x^2 = x+1\) and \(y^2 = y+1\).
+
+Assume $k \geq 2$. {\it [We want to show that \(\dps \frac{1}{\sqrt{5}}(x^k - y^k) = \frac{1}{\sqrt{5}}(x^{k-1} - y^{k-1}) + \frac{1}{\sqrt{5}}(x^{k-2} - y^{k-2})\).]}
+
+By using the facts \(x^2 = x+1\) and \(y^2 = y+1\), we have
+\[
+x^k - y^k = x^2x^{k-2} - y^2y^{k-2} = (x+1)x^{k-2} - (y+1)y^{k-2} = x^{k-1} + x^{k-2} - y^{k-1} - y^{k-2}
+\]
+So it follows that \(x^k - y^k = x^{k-1} - y^{k-1} + x^{k-2} - y^{k-2}.\) Dividing both sides by \(\sqrt{5}\)
+we get the desired result, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 34}
+(For students who have studied calculus) Find \(\dps \lim_{n \to \infty} \frac{F_{n+1}}{F_n}\), 
+assuming that the limit exists.
+
+{\it Hint:} Let \(\dps L = \lim_{n \to \infty} \frac{F_{n+1}}{F_n}\) and show that \(\dps L = \frac{1}{L} 
++ 1\). Deduce that \(\dps L = \frac{1 + \sqrt{5}}{2}\).
+
+\begin{proof}
+(following the Hint)
+
+Assume \(\dps L = \lim_{n \to \infty} \frac{F_{n+1}}{F_n}\) exists. Notice that \(\dps \lim_{n \to \infty} 
+\frac{F_{n+2}} {F_{n+1}}\) is also equal to $L$.
+
+Notice that \(L \neq 0\) because each term of the sequence \(\dps \frac{F_{n+1}}{F_n}\) is greater than 1. Therefore
+by a theorem from Calculus, \(\dps \lim_{n \to \infty} \frac{F_{n}}{F_{n+1}}\) also exists and equals \(\dps \frac{1}{L}\).
+
+Also notice that by a theorem from Calculus, \(\dps \lim_{n \to \infty} \left(\frac{F_n}{F_{n+1}} + 1\right) = \frac{1}{L} + 1.\) But 
+\[
+\lim_{n \to \infty} \left(\frac{F_n}{F_{n+1}} + 1\right) = \lim_{n \to \infty} \left(\frac{F_n + F_{n+1}}{F_{n+1}}
+\right) = 
+\lim_{n \to \infty} \left(\frac{F_{n+2}}{F_{n+1}}\right) = L.
+\]
+Therefore \(\dps L = \frac{1}{L} + 1.\) Multiplying by $L$ we get \(L^2 = 1 + L\) so \(L^2 - L - 1 = 0\). Solving this
+with the quadratic formula we get
+\[
+L = \frac{1 \pm \sqrt{1 + 4}}{2} = \frac{1 \pm \sqrt{5}}{2}
+\]
+However we notice that \(\dps \frac{1 - \sqrt{5}}{2} < 0\) but \(L > 0\) so \(\dps L = \frac{1 + \sqrt{5}}{2}\).
+\end{proof}
+
+\subsection{Exercise 35}
+(For students who have studied calculus) Prove that \(\dps \lim_{n \to \infty} \frac{F_{n+1}}{F_n}\) exists.
+
+{\it Hint:} Use the result of exercise 30 to prove that the
+infinite sequence \(\dps \frac{F_0}{F_1}, \frac{F_2}{F_3}, 
+\frac{F_4}{F_5}, \ldots\) is strictly decreasing and that the infinite sequence \(\dps \frac{F_1}{F_2}, \frac{F_3}
+{F_4}, \frac{F_5}{F_6}, \ldots\) is strictly increasing. The first sequence is bounded below by 0, and the second 
+sequence is bounded above by 1. Deduce that the limits of both sequences exist, and show that they are equal.
+
+\begin{proof}
+
+\end{proof}
+
+\subsection{Exercise 36}
+(For students who have studied calculus) Define $x_0, x_1, x_2, \ldots$ as follows:
+
+\(\dps x_k = \sqrt{2 + x_{k-1}}\) for each integer \(k \geq 1\), and \(x_0 = 0\).
+
+Find \(\dps \lim_{n\to\infty} x_n\). (Assume that the limit exists.)
+
+\begin{proof}
+Let \(\dps L = \lim_{n\to\infty} x_n\) (assume $L$ exists). Notice that \(\dps \lim_{n\to\infty} x_{n+1}\) also exists 
+and equals $L$.
+
+By a theorem from Calculus, 
+\[
+L = \lim_{n\to\infty} x_{n+1} = \lim_{n\to\infty} \sqrt{2 + x_n} = \sqrt{2 + \lim_{n\to\infty} x_n} = \sqrt{2+L}.
+\]
+So \(L = \sqrt{2 + L}\). Squaring both sides we get \(L^2 = 2 + L\) so \(L^2 - L - 2 = 0\). Factoring, we get
+\((L-2)(L+1) = 0\) so $L = 2$ or $L = -1$. Since $x_n \geq 0$ for all integers $n \geq 0$, $L$ cannot be negative, so
+$L = 2$.
+\end{proof}
+
+\subsection{Exercise 37}
+{\it Compound Interest:} Suppose a certain amount of money is deposited in an account paying 4\% annual interest compounded quarterly. For each positive integer $n$, let $R_n$ be the amount on deposit at the end of the $n$th quarter, assuming no additional deposits or withdrawals, and let $S_0$ be the initial amount deposited.
+
+\subsubsection{(a)}
+Find a recurrence relation for $R_0, R_1, R_2, \ldots$, assuming no additional deposits or withdrawals during the 
+year. Justify your answer.
+
+\begin{proof}
+Because the 4\% annual interest is compounded quarterly, the quarterly interest rate is (4\%) / 4 = 1\%. Then 
+\(R_k = R_{k-1} + 0.01R_{k - 1} = 1.01R_{k-1}.\)
+\end{proof}
+
+\subsubsection{(b)}
+If $R_0 = \$5,000$, find the amount of money on deposit at the end of one year.
+
+\begin{proof}
+Because one year equals four quarters, the amount on deposit at the end of one year is \(R_4 = \$5,203.02\)
+(rounded to the nearest cent).
+\end{proof}
+
+\subsubsection{(c)}
+Find the APY for the account.
+
+\begin{proof}
+The annual percentage yield (APY) for the account is \(\dps \frac{\$5203.02 - \$5000.00}{\$5000.00} = 4.0604\%\).
+\end{proof}
+
+\subsection{Exercise 38}
+{\it Compound Interest:} Suppose a certain amount of money is deposited in an account paying 3\% annual interest compounded monthly. For each positive integer $n$, let $S_n$ be the amount on deposit at the end of the $n$th month, and let $S_0$ be the initial amount deposited.
+
+\subsubsection{(a)}
+Find a recurrence relation for $S_0, S_1, S_2, \ldots$, assuming no additional deposits or withdrawals during the 
+year. Justify your answer.
+
+\begin{proof}
+Because the 4\% annual interest is compounded monthly, the monthly interest rate is (3\%) / 12 = 0.25\%. Then 
+\(S_k = S_{k-1} + 0.0025 S_{k - 1} = 1.0025 S_{k-1}.\)
+\end{proof}
+
+\subsubsection{(b)}
+If $S_0 = \$10,000$, find the amount of money on deposit at the end of one year.
+
+\begin{proof}
+Because one year equals 12 months, the amount on deposit at the end of one year is \(S_{12} = \$10,304.16\)
+(rounded to the nearest cent).
+\end{proof}
+
+\subsubsection{(c)}
+Find the APY for the account.
+
+\begin{proof}
+The annual percentage yield (APY) for the account is \(\dps \frac{\$10,304.16 - \$10,000.00}{\$10,000.00} = 3.0416\%\).
+\end{proof}
+
+\subsection{Exercise 39}
+With each step you take when climbing a staircase, you can move up either one stair or two stairs. As a result, you 
+can climb the entire staircase taking one stair at a time, taking two at a time, or taking a combination of one- and 
+two-stair increments. For each integer $n \geq 1$, if the staircase consists of $n$ stairs, let $c_n$ be the number 
+of different ways to climb the staircase. Find a recurrence relation for $c_1, c_2, c_3, \ldots$. Justify your answer.
+
+\begin{proof}
+When one is climbing a staircase consisting of $n$ stairs, the last step taken is either a single stair or two stairs 
+together. The number of ways to climb the staircase and have the final step be a single stair is $c_{n-1}$; the 
+number of ways to climb the staircase and have the final step be two stairs is $c_{n-2}$. Therefore, \(c_n = c_{n-1} 
++ c_{n-2}\). Note also that $c_1 = 1$ and $c_2 = 2$ {\it [because either the two stairs can be climbed one by one or 
+they can be climbed as a unit]}.
+\end{proof}
+
+\subsection{Exercise 40}
+A set of blocks contains blocks of heights 1, 2, and 4 centimeters. Imagine constructing towers by piling blocks 
+of different heights directly on top of one another. (A tower of height 6 cm could be obtained using six 1-cm 
+blocks, three 2-cm blocks, one 2-cm block with one 4-cm block on top, one 4-cm block with one 2-cm block on top, 
+and so forth.) Let $t_n$ be the number of ways to construct a tower of height $n$ cm using blocks from the set. (Assume 
+an unlimited supply of blocks of each size.) Find a recurrence relation for $t_1, t_2, t_3, \ldots$. Justify your answer.
+
+\begin{proof}
+$t_1 = 1$. $t_2 = 2$ because $2 = 1+1$. $t_3 = 3$ because $3 = 1 + 1 + 1 = 1 + 2 = 2 + 1$.
+
+A height of 4 cm can be obtained in 6 different ways: 1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2, 4. So $t_4 = 6$.
+
+A height of $n$ cm can be obtained by adding 1 cm to an $n-1$ cm block, or adding 2 cm to an $n-2$ cm block, or
+adding 4 cm to an $n-4$ cm block.
+
+So \(t_{n} = t_{n-1} + t_{n-2} + t_{n-4}\) for all \(n \geq 5\).
+\end{proof}
+
+\subsection{Exercise 41}
+Assume the truth of the distributive law (Appendix A, F3), and use the recursive definition of summation, together with mathematical induction, to prove the generalized distributive law that for each positive integer $n$, if $a_1, a_2, \ldots, a_n$ and $c$ are real numbers, then
+\[
+\sum_{i = 1}^{n} c a_i = c\left(\sum_{i = 1}^{n} a_i \right)\,.
+\]
+\begin{proof}
+Let the property, $P(n)$, be the equation \(\dps \sum_{i=1}^n c a_i = c\sum_{i=1}^n a_i\), where \(a_1, a_2, a_3, 
+\ldots, a_n\) and $c$ are any real numbers.
+
+{\bf Show that $P(1)$ is true:}
+
+Let $a_1$ and $c$ be any real numbers. By the recursive
+definition of sum, \(\dps \sum_{i=1}^1 (c a_i) = c a_1\) 
+and \(\dps \sum_{i=1}^1 a_i = a_1\). Therefore, \(\dps \sum_{i=1} (c a_i) = c a_1 = c \sum_{i=1} a_i\), 
+and so $P(1)$ is true.
+
+{\bf Show that for every integer \(k \geq 1\), if $P(k)$ is true, then \(P(k + 1)\) is true:}
+
+Let $k$ be any integer with \(k \geq 1\). Suppose that for any real numbers \(a_1, a_2, a_3, \ldots, a_k\) and $c$, 
+\(\dps \sum_{i=1}^k (c a_i) = c \sum_{i=1}^k a_i\). {\it [This is the inductive hypothesis.]}
+
+{\it [We must show that for any real numbers \(a_1, a_2, a_3, \ldots, a_{k+1}\) and $c$, \(\dps \sum_{i=1}^{k+1} 
+(c a_i) = c\sum_{i=1}^{k+1} a_i\).]}
+
+Let \(a_1, a_2, a_3, \ldots, a_{k+1}\) and $c$ be any real numbers. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps \sum_{i=1}^{k+1} c a_i\) & = & \(\dps \sum_{i=1}^k c a_i + c a_{k+1}\) & {\cy by recursive definition of $\sum$} \\
+& = & \(\dps c \sum_{i=1}^k a_i + c a_{k+1}\) & {\cy by inductive hypothesis} \\
+& = & \(\dps c \left(\sum_{i=1}^k a_i + a_{k+1}\right)\) & {\cy by distributivity} \\
+& = & \(\dps c \sum_{i=1}^{k+1} a_i\) & {\cy by recursive definition of $\sum$}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 42}
+Assume the truth of the commutative and associative laws (Appendix A, F1 and F2), and use the recursive definition 
+of product, together with mathematical induction, to prove that for each positive integer $n$, if $a_1, a_2, \ldots, 
+a_n$ and $b_1, b_2, \ldots, b_n$ are real numbers, then
+\[
+\prod_{i = 1}^{n}(a_i b_i) = \left(\prod_{i = 1}^{n} a_i \right) \left(\prod_{i = 1}^{n} b_i \right) \,.
+\]
+\begin{proof}
+Let the property, $P(n)$, be the equation \(\prod_{i = 1}^{n}(a_i b_i) = \left(\prod_{i = 1}^{n} a_i \right) \left 
+(\prod_{i = 1}^{n} b_i \right)\), where \(a_1, a_2, a_3, \ldots, a_n, b_1, b_2, \ldots, b_n\) are any real numbers.
+
+{\bf Show that $P(1)$ is true:}
+
+Let $a_1$ and $b_1$ be any real numbers. By the recursive
+definition of product, \(\dps \prod_{i=1}^1 (a_i b_i) = a_1 
+b_1\) and \(\dps \left(\prod_{i = 1}^{1} a_i \right) \left 
+(\prod_{i = 1}^{1} b_i \right) = (a_1)(b_1) = a_1 b_1\). 
+Therefore $P(1)$ is true.
+
+{\bf Show that for every integer \(k \geq 1\), if $P(k)$ is true, then \(P(k + 1)\) is true:}
+
+Let $k$ be any integer with \(k \geq 1\). Suppose that for any real numbers \(a_1, a_2, a_3, \ldots, a_k\), \(b_1, 
+b_2, b_3, \ldots, b_k\), \(\prod_{i = 1}^{k}(a_i b_i) = \left (\prod_{i = 1}^{k} a_i \right) \left (\prod_{i = 1}
+^{k} b_i \right)\). {\it [This is the inductive hypothesis.]}
+
+{\it [We must show that for any real numbers \(a_1, a_2, a_3, \ldots, a_{k+1}\), \(b_1, b_2, \ldots, b_{k+1}\), 
+
+\(\prod_{i = 1}^{k+1}(a_i b_i) = \left(\prod_{i = 1}^{k+1} a_i \right) \left (\prod_{i = 1}^{k+1} b_i \right)\).]}
+
+Let \(a_1, a_2, a_3, \ldots, a_{k+1}, b_1, b_2, \ldots, b_{k+1}\) be any real numbers. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps \prod_{i = 1}^{k+1}(a_i b_i)\) & = & \(\dps \prod_{i = 1}^{k}(a_i b_i) \cdot (a_{k+1}b_{k+1})\) & 
+{\cy by recursive definition of $\prod$} \\
+& = & \(\dps \left( \prod_{i = 1}^{k}a_i \right) \left( \prod_{i = 1}^{k}b_i \right) \cdot (a_{k+1}b_{k+1})\) & 
+{\cy by inductive hypothesis} \\
+& = & \(\dps \left( \prod_{i = 1}^{k}a_i \right) a_{k+1} \left( \prod_{i = 1}^{k}b_i \right) b_{k+1}\) & 
+{\cy by commutativity} \\
+& = & \(\dps \left[\left( \prod_{i = 1}^{k}a_i \right)a_{k+1}\right] \left[\left( \prod_{i = 1}^{k}b_i \right) b_{k+1}\right]\) & 
+{\cy by associativity} \\
+& = & \(\dps \left(\prod_{i = 1}^{k+1} a_i \right) \left (\prod_{i = 1}^{k+1} b_i \right)\) & 
+{\cy by recursive definition of $\prod$}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 43}
+Assume the truth of the commutative and associative laws (Appendix A, F1 and F2), and use the recursive definition 
+of product, together with mathematical induction, to prove that for each positive integer $n$, if $a_1, a_2, \ldots, 
+a_n$ are real numbers, then
+\[
+\prod_{i = 1}^{n}(ca_i) = c^n \left(\prod_{i = 1}^{n} a_i \right) \,.
+\]
+\begin{proof}
+Let $P(n)$ be the equation \(\dps \prod_{i = 1}^{n}(ca_i) = c^n \left(\prod_{i = 1}^{n} a_i \right)\), where 
+\(a_1, a_2, \ldots, a_n\) and $c$ are any real numbers.
+
+{\bf Show that $P(1)$ is true:}
+
+Let $a_1$ and $c$ be any real numbers. By the recursive
+definition of product, 
+\(\dps \prod_{i=1}^1 (c a_i) = c a_1\) and \(\dps c^1 \prod_{i=1}^1 a_i = c a_1\). 
+Therefore, \(\dps \prod_{i=1} (c a_i) = c a_1 = c^1 \prod_{i=1} a_i\), and so $P(1)$ is true.
+
+{\bf Show that for every integer \(k \geq 1\), if $P(k)$ is true, then \(P(k + 1)\) is true:}
+
+Let $k$ be any integer with \(k \geq 1\). Suppose that for any real numbers \(a_1, a_2, a_3, \ldots, a_k\) and $c$, 
+\(\dps \prod_{i=1}^k (c a_i) = c^k \prod_{i=1}^k a_i\). {\it [This is the inductive hypothesis.]}
+
+{\it [We must show that for any real numbers \(a_1, a_2, a_3, \ldots, a_{k+1}\) and $c$, \(\dps \prod_{i=1}^{k+1} 
+(c a_i) = c^{k+1} \prod_{i=1}^{k+1} a_i\).]}
+
+Let \(a_1, a_2, a_3, \ldots, a_{k+1}\) and $c$ be any real numbers. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps \prod_{i=1}^{k+1} c a_i\) & = & \(\dps \prod_{i=1}^k c a_i \cdot (c a_{k+1})\) & {\cy by recursive definition of $\prod$} \\
+& = & \(\dps c^k \prod_{i=1}^k a_i \cdot (c a_{k+1})\) & {\cy by inductive hypothesis} \\
+& = & \(\dps c^k c \prod_{i=1}^k a_i \cdot a_{k+1}\) & {\cy by commutativity} \\
+& = & \(\dps (c^k c) \left[\prod_{i=1}^k a_i \cdot a_{k+1}\right]\) & {\cy by associativity} \\
+& = & \(\dps (c^k c) \prod_{i=1}^{k+1} a_i\) & {\cy by recursive definition of $\prod$} \\
+& = & \(\dps c^{k+1} \prod_{i=1}^{k+1} a_i\) & {\cy by laws of exponents}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 44}
+The triangle inequality for absolute value states that for all real numbers $a$ and $b$, $|a + b| \leq |a| + |b|$.
+Use the recursive definition of summation, the triangle inequality, the definition of absolute value, and 
+mathematical induction to prove that for each positive integer $n$, if $a_1, a_2, \ldots, a_n$ are real numbers, then
+\[
+\left|\sum_{i = 1}^{n} a_i \right| \leq \sum_{i = 1}^{n}|a_i|\,.
+\]
+{\it Hint:} Let the property $P(n)$ be the inequality
+\[
+\left|\sum_{i = 1}^{n} a_i \right| \leq \sum_{i = 1}^{n}|a_i|\,.
+\]
+To prove the inductive step, note that because \(|\sum_{i = 1}^{k + 1} a_i | = |\sum_{i = 1}^k a_i + a_{k + 1}|\), 
+you can use the triangle inequality for absolute value (Theorem 4.5.6) to deduce 
+\[
+\left|\sum_{i = 1}^k a_i + a_{k + 1}\right| \leq \left|\sum_{i = 1}^k a_i\right| + |a_{k + 1}|.
+\]
+\begin{proof}
+(following the Hint)
+
+Let the property $P(n)$ be the inequality
+\[
+\left|\sum_{i = 1}^{n} a_i \right| \leq \sum_{i = 1}^{n}|a_i|\,.
+\]
+{\bf Show that $P(1)$ is true:} $P(1)$ says: \(\left|\sum_{i = 1}^{1} a_i \right| \leq \sum_{i = 1}^{n}|a_i|\,\)
+Both the left hand side and the right hand side are equal to \(|a_1|\), therefore $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\) if $P(k)$ is true then $P(k+1)$ is true:}
+Assume \(k \geq 1\) is any integer such that
+\[
+\left|\sum_{i = 1}^{k} a_i \right| \leq \sum_{i = 1}^{k}|a_i|\,.
+\]
+{\it [We want to show that]}
+\[
+\left|\sum_{i = 1}^{k+1} a_i \right| \leq \sum_{i = 1}^{k+1}|a_i|\,.
+\]
+By Theorem 4.5.6
+\[
+\left|\sum_{i = 1}^{k + 1} a_i \right| = \left|\sum_{i = 1}^k a_i + a_{k + 1}\right| \leq \left|\sum_{i = 1}^k a_i\right| + |a_{k + 1}|.
+\]
+By inductive hypothesis
+\[
+\left|\sum_{i = 1}^k a_i\right| \leq \sum_{i = 1}^k |a_i|.
+\]
+Combining these we get
+\[
+\left|\sum_{i = 1}^{k + 1} a_i \right| \leq \sum_{i = 1}^k |a_i| + |a_{k + 1}| = \sum_{i = 1}^{k+1} |a_i|,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 45}
+Prove that any sum of even integers is even.
+
+\begin{proof}
+We give two proofs for the given statement, one less formal and the other more formal.
+
+\underline{Proof 1:} For the basis step observe that any “sum” of one even integer is the integer itself, which is 
+even. For the inductive step we suppose that for an arbitrarily chosen even integer \(r \geq 1\), the sum of 
+any $r$ even integers is even. Then we must show that any sum of $r + 1$ even integers is even. But any sum of 
+$r + 1$ even integers is equal to a sum of $r$ even integers, which is even (by inductive hypothesis), plus 
+another even integer. The result is a sum of two even integers, which is even (by Theorem 4.1.1) 
+{\it [as was to be shown]}.
+
+\underline{Proof 2:} Let $P(n)$ be the sentence: If \(a_1, a_2, a_3, \ldots, a_n\) are any even integers, then 
+\(\sum_{i=1}^n a_i\) is even. {\cy \(\from P(n)\)} We will show that $P(n)$ is true for every integer \(n \geq 1\). 
+
+{\bf Show that $P(n)$ is true for $n = 1$:} Suppose $a_1$ is any even integer. Then \(\sum_{i = 1}^1 a_i = a_1\), 
+which is even. So $P(1)$ is true. 
+
+{\bf Show that for every integer \(k \geq 1\), if $P(k)$ is true, then $P(k + 1)$ is true:} Let $k$ be any integer with 
+\(k \geq 1\), and suppose that:
+
+If \(a_1, a_2, a_3, \ldots, a_k\) are any even integers, then \(\sum_{i = 1}^k a_i\) is even. {\cy \(\from P(k)\) inductive hypothesis}  
+
+We must show that:
+
+If \(a_1, a_2, a_3, \ldots, a_{k+1}\) are any even integers, then \(\sum_{i = 1}^{k+1} a_i\) is even. 
+{\cy \(\from P(k + 1)\)} 
+
+So suppose \(a_1, a_2, a_3, \ldots, a_{k+1}\) are any even integers, then 
+\[
+\sum_{i = 1}^{k+1} a_i = \sum_{i = 1}^k a_i + a_{k+1}
+\]
+by writing the final term of the sum separately. Now, by inductive hypothesis, \(\sum_{i = 1}^k a_i\) is even, and, 
+by assumption, $a_{k+1}$ is even. Therefore, \(\sum_{i = 1}^{k+1} a_i \) is the sum of two even integers, which is 
+even (by Theorem 4.1.1) {\it [as was to be shown]}.
+\end{proof}
+
+\subsection{Exercise 46}
+Prove that any sum of an odd number of odd integers is odd.
+
+\begin{proof}
+Let $P(n)$ be the sentence: If \(a_1, a_2, a_3, \ldots, a_{2n+1}\) are any odd integers, then 
+\(\sum_{i=1}^{2n+1} a_i\) is even. {\cy \(\from P(n)\)} 
+We will show that $P(n)$ is true for every integer \(n \geq 0\). 
+
+{\bf Show that $P(n)$ is true for $n = 0$:} Suppose $a_1$ is any odd integer. Then \(\sum_{i = 1}^1 a_i = a_1\), 
+which is odd. So $P(0)$ is true. 
+
+{\bf Show that for every integer \(k \geq 0\), if $P(k)$ is true, then $P(k + 1)$ is true:} Let $k$ be any integer with 
+\(k \geq 0\), and suppose that:
+
+If \(a_1, a_2, a_3, \ldots, a_{2k+1}\) are any odd integers, then \(\sum_{i = 1}^{2k+1} a_i\) is odd. {\cy \(\from P(k)\) inductive hypothesis}  
+
+We must show that:
+
+If \(a_1, a_2, a_3, \ldots, a_{2k+3}\) are any odd integers, then \(\sum_{i = 1}^{2k+3} a_i\) is odd. 
+{\cy \(\from P(k + 1)\)} 
+
+So suppose \(a_1, a_2, a_3, \ldots, a_{2k+3}\) are any odd integers, then 
+\[
+\sum_{i = 1}^{2k+3} a_i = \sum_{i = 1}^{2k+1} a_i + (a_{2k+2} + a_{2k+3})
+\]
+by writing the two final terms of the sum separately. Now, by inductive hypothesis, \(\sum_{i = 1}^{2k+1} a_i\) is 
+odd, and, by assumption, $a_{2k+2}$ and $a_{2k+3}$ are odd. So \((a_{2k+2} + a_{2k+3})\) is even (being a sum of two 
+odd integers). Therefore, \(\sum_{i = 1}^{2k+3} a_i\) is the sum of an odd integer and an even integer, which is
+odd, {\it [as was to be shown]}.
+\end{proof}
+
+\subsection{Exercise 47}
+Deduce from exercise 46 that for any positive integer $n$ if there is a sum of $n$ odd integers that is even, then $n$ is even.
+
+{\it Hint:} Use proof by contradiction or proof by contraposition.
+
+\begin{proof}
+Assume $n$ is a positive integer. Assume $S$ is a sum of $n$ odd integers and $S$ is even. {\it [We want to show 
+that $n$ is even.]} Argue by contradiction and assume $n$ is odd. By Exercise 46, $S$ is a sum of an odd number of 
+odd integers, therefore $S$ is odd, which is a contradiction because $S$ is even. {\it [Thus our initial
+supposition was false, and $n$ is even, as was to be shown.]}
 \end{proof}
 
 \end{document}
