@@ -6692,4 +6692,1464 @@ odd integers, therefore $S$ is odd, which is a contradiction because $S$ is even
 supposition was false, and $n$ is even, as was to be shown.]}
 \end{proof}
 
+\section{Exercise Set 5.7}
+
+\subsection{Exercise 1}
+The formula
+\[
+1 + 2 + 3 + \cdots n = \frac{n(n+1)}{2}
+\]
+is true for every integer \(n \geq 1\). Use this fact to solve each of the following problems:
+
+\subsubsection{(a)}
+If $k$ is an integer and \(k \geq 2\), find a formula for
+the expression \(1 + 2 + 3 + \cdots + (k - 1)\).
+
+\begin{proof}
+\(1 + 2 + 3 + \cdots + (k - 1) = \frac{(k-1)(k-1+1)}{2} = \frac{(k-1)k}{2}\)
+\end{proof}
+
+\subsubsection{(b)}
+If $n$ is an integer and \(n \geq 1\), find a formula for
+the expression \(5 + 2 + 4 + 6 + 8 + \cdots + 2n\).
+
+\begin{proof}
+\(5 + 2 + 4 + 6 + 8 + \cdots + 2n = 5 + 2(1 + 2 + 3 + 4 + \cdots + n) = 5 + 2 \cdot \frac{n(n+1)}{2} = 5 + n(n+1) = n^2 + n + 5\)
+\end{proof}
+
+\subsubsection{(c)}
+If $n$ is an integer and \(n \geq 1\), find a formula for
+the expression \(3 + 3 \cdot 2 + 3 \cdot 3 + \cdots + 3 \cdot n + n\).
+
+\begin{proof}
+\(3 + 3 \cdot 2 + 3 \cdot 3 + \cdots + 3 \cdot n + n = 3(1 + 2 + 3 + \cdots + n) + n = 3 \cdot \frac{n(n+1)}{2} + n\)
+\end{proof}
+
+\subsection{Exercise 2}
+The formula
+\[
+1 + r + r^2 + \cdots r^n = \frac{r^{n+1} - 1}{r-1}
+\]
+is true for every real number $r$ except \(r = 1\) and for every integer \(n \geq 0\). 
+Use this fact to solve each of the following problems:
+
+\subsubsection{(a)}
+If $i$ is an integer and \(i \geq 1\), find a formula for
+the expression \(1 + 2 + 2^2 + \cdots + 2^{i-1}\).
+
+\begin{proof}
+\(\dps 1 + 2 + 2^2 + \cdots + 2^{i-1} = \frac{2^{i-1+1} - 1}{2-1} = 2^i - 1\)
+\end{proof}
+
+\subsubsection{(b)}
+If $n$ is an integer and \(n \geq 1\), find a formula for
+the expression \(3^{n-1} + 3^{n-2} + \cdots + 3^2 + 3 + 1\).
+
+\begin{proof}
+\(\dps 3^{n-1} + 3^{n-2} + \cdots + 3^2 + 3 + 1 = \frac{3^{n-1+1} - 1}{3-1} = \frac{3^n - 1}{2}\)
+\end{proof}
+
+\subsubsection{(c)}
+If $n$ is an integer and \(n \geq 2\), find a formula for
+the expression 
+\(2^n + 2^{n-2} \cdot 3 + 2^{n-3} \cdot 3 + \cdots + 2^2 \cdot 3 + 2 \cdot 3 + 3\).
+
+\begin{proof}
+\(2^n + 2^{n-2} \cdot 3 + 2^{n-3} \cdot 3 + \cdots + 2^2 \cdot 3 + 2 \cdot 3 + 3\)
+\begin{center}
+\begin{tabular}{cl}
+= & \(2^n + 3(2^{n-2} + 2^{n-3} + \cdots + 2^2 + 2 + 1)\) \\
+= & \(\dps 2^n + 3 \cdot \frac{2^{n-2+1} - 1}{2 - 1}\) \\
+= & \(2^n + 3 \cdot (2^{n-1} - 1)\) \\
+= & \(2 \cdot 2^{n-1} + 3 \cdot 2^{n-1} - 3\) \\
+= & \(5 \cdot 2^{n-1} - 3\)
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsubsection{(d)}
+If $n$ is an integer and \(n \geq 1\), find a formula for
+the expression 
+\[
+2^n - 2^{n-1} + 2^{n-2} - 2^{n-3} + \cdots + (-1)^{n-1} \cdot 2 + (-1)^n.
+\]
+\begin{proof}
+\(2^n - 2^{n-1} + 2^{n-2} - 2^{n-3} + \cdots + (-1)^{n-1} \cdot 2 + (-1)^n\)
+\begin{center}
+\begin{tabular}{cl}
+= & \((-1)^0 \cdot 2^n + (-1)^1 \cdot 2^{n-1} + (-1)^2 \cdot 2^{n-2} + \cdots + (-1)^{n-1} 
+\cdot 2^1 + (-1)^n \cdot 2^0\) \\
+= & \((-1)^{n-n} \cdot 2^n + (-1)^{n-(n-1)} \cdot 2^{n-1} +  \cdots + (-1)^{n-1} \cdot 2^1 + (-1)^{n-0} \cdot 2^0\) \\
+= & \((-1)^{n}((-1)^{-n} \cdot 2^n + (-1)^{-(n-1)} \cdot 2^{n-1} + \cdots + (-1)^{-1} \cdot 2^1 + (-1)^{0} \cdot 2^0)\) \\
+= & \((-1)^{n}((-2)^{n} + (-2)^{n-1} + (-2)^{n-2} + (-2)^{n-3} + \cdots + (-2)^1 + (-2)^0)\) \\
+= & \(\dps (-1)^{n} \cdot \frac{(-2)^{n+1} - 1}{-2 - 1}\) \\
+= & \(\dps (-1)^{n} \cdot \frac{(-2)^{n+1} - 1}{-3} = (-1)^{n+1} \cdot \frac{(-2)^{n+1} - 1}{3} = 
+\frac{2^{n+1} - (-1)^{n+1}}{3}\)
+\end{tabular}
+\end{center}
+\end{proof}
+
+{\bf \cy In each of $3-15$ a sequence is defined recursively. Use iteration to guess an explicit formula for 
+the sequence. Use formulas from Section 5.2 to simplify your answers whenever possible.}
+
+\subsection{Exercise 3}
+\(a_k = ka_{k-1}\), for each integer \(k \geq 1\)
+
+\(a_0 = 1\)
+
+\begin{proof}
+\(a_0 = 1, \,\,\, a_1 = 1a_0 = 1, \,\,\, a_2 = 2a_1 = 2 \cdot 1, \,\,\, a_3 = 3a_2 = 3 \cdot 2 \cdot 1\)
+
+Guess: \(a_n = n \cdot (n-1) \cdots 3 \cdot 2 \cdot 1 = n!\)
+
+\end{proof}
+
+\subsection{Exercise 4}
+\(b_k = \dps \frac{b_{k-1}}{1 + b_{k-1}}\), for each integer \(k \geq 1\)
+
+\(b_0 = 1\)
+
+\begin{proof}
+\(b_0 = 1, \,\,\, b_1 = \dps \frac{b_0}{1 + b_0} = 1/2, \,\,\, b_2 = \dps \frac{b_1}{1 + b_1} = \frac{1/2}{1+1/2}
+= 1/3, \,\,\, b_3 = \dps \frac{b_2}{1 + b_2} = \frac{1/3}{1+1/3} = 1/4.\)
+
+Guess: \(b_n = 1/(n+1)\)
+\end{proof}
+
+\subsection{Exercise 5}
+\(c_k = 3c_{k-1} + 1\), for each integer \(k \geq 2\)
+
+\(c_1 = 1\)
+
+\begin{proof}
+\(c_1 = 1\)
+
+\(c_2 = 3c_1 + 1 = 3 \cdot 1 + 1 = 3 + 1\)
+
+\(c_3 = 3c_2 + 1 = 3(3 + 1) + 1 = 3^2 + 3 + 1\)
+
+\(c_4 = 3c_3 + 1 = 3(3^2 + 3 + 1) + 1 = 3^3 + 3^2 + 3 + 1\)
+
+Guess: \(c_n = 3^{k-1} + 3^{k-2} + \cdots + 3^2 + 3 + 1 = \dps \frac{3^n - 1}{3 - 1} = \frac{3^n - 1}{2}\) 
+{\cy (by Theorem 5.2.2 with $r = 3$)}
+\end{proof}
+
+\subsection{Exercise 6}
+\(d_k = 2d_{k-1} + 3\), for each integer \(k \geq 2\)
+
+\(d_1 = 2\)
+
+\begin{proof}
+\(d_1 = 2\)
+
+\(d_2 = 2d_1 + 3 = 2 \cdot 2 + 3 = 2^2 + 3\)
+
+\(d_3 = 2d_2 + 3 = 2 \cdot (2^2 + 3) + 3 = 2^3 + 2 \cdot 3 + 3\)
+
+\(d_4 = 2d_3 + 3 = 2 \cdot (2^3 + 2 \cdot 3 + 3) + 3 = 2^4 + 2^2 \cdot 3 + 2 \cdot 3 + 3\)
+
+\(d_5 = 2d_4 + 3 = 2 \cdot (2^4 + 2^2 \cdot 3 + 2 \cdot 3 + 3) + 3 = 2^5 + 2^3 \cdot 3 + 2^2 \cdot 3 + 2 \cdot 3 + 3\)
+
+Guess: \(d_n = 2^n + 3(2^{n-2} + 2^{n-3} + \cdots + 2 + 1)\)
+
+By Exercise 2(c) \(d_n = 5 \cdot 2^{n-1} - 3\) for every integer \(n \geq 1\).
+\end{proof}
+
+\subsection{Exercise 7}
+\(e_k = 4e_{k-1} + 5\), for each integer \(k \geq 1\)
+
+\(e_0 = 2\)
+
+\begin{proof}
+\(e_0 = 2\)
+
+\(e_1 = 4e_0 + 5 = 4 \cdot 2 + 5\)
+
+\(e_2 = 4e_1 + 5 = 4 \cdot (4 \cdot 2 + 5) + 5 = 4^2 \cdot 2 + 4 \cdot 5 + 5\)
+
+\(e_3 = 4e_2 + 5 = 4 \cdot (4^2 \cdot 2 + 4 \cdot 5 + 5) + 5 = 4^3 \cdot 2 + 4^2 \cdot 5 + 4 \cdot 5 + 5\)
+
+\(e_4 = 4e_3 + 5 = 4 \cdot (4^3 \cdot 2 + 4^2 \cdot 5 + 4 \cdot 5 + 5) + 5 
+= 4^4 \cdot 2 + 4^3 \cdot 5 + 4^2 \cdot 5 + 4 \cdot 5 + 5\)
+
+Guess: \(e_n = 4^n \cdot 2 + 5(4^{n-1} + 4^{n-2} + \cdots + 4 + 1)\)
+
+So \(\dps e_n = 2 \cdot 4^n + 5 \cdot \frac{4^n - 1}{4-1} = 2 \cdot 4^n + 5 \cdot \frac{4^n - 1}{3} = \frac{11 \cdot 4^n - 5}{3}\)
+\end{proof}
+
+\subsection{Exercise 8}
+\(f_k = f_{k-1} + 2^k\), for each integer \(k \geq 2\)
+
+\(f_1 = 1\)
+
+\begin{proof}
+\(f_1 = 1\)
+
+\(f_2 = f_1 + 2^2 = 1 + 2^2\)
+
+\(f_3 = f_2 + 2^3 = 1 + 2^2 + 2^3\)
+
+Guess: \(f_n = 1 + 2^2 + 2^3 + \cdots + 2^n\)
+
+So \(f_n = 1 + 2^1 + 2^2 + 2^3 + \cdots + 2^n - 2^1 = \dps\frac{2^{n+1}-1}{2-1} - 2 = 2^{n+1} - 3\)
+\end{proof}
+
+\subsection{Exercise 9}
+\(g_k = \dps \frac{g_{k-1}}{g_{k-1} + 2}\), for each integer \(k \geq 2\)
+
+\(g_1 = 1\)
+
+\begin{proof}
+\(g_1 = 1\)
+
+\(g_2 = \dps \frac{g_1}{g_1 + 2} = \frac{1}{1 + 2} = 1/3 = 1/(2^2 - 1)\)
+
+\(g_3 = \dps \frac{g_2}{g_2 + 2} = \frac{1/3}{1/3 + 2} = 1/(1 + 2 \cdot 3) = 1 / 7 = 1 / (2^3 - 1)\)
+
+\(g_4 = \dps \frac{g_3}{g_3 + 2} = \frac{1/7}{1/7 + 2} = 1/(1 + 2 \cdot 7) = 1/15 = 1 / (2^4 - 1)\)
+
+\(g_5 = \dps \frac{g_4}{g_4 + 2} = \frac{1/15}{1/15 + 2} = 1/(1 + 2 \cdot 15) = 1/31 = 1 / (2^5 - 1)\)
+
+Guess: \(\dps g_n = \frac{1}{2^{n+1} - 1}\)
+\end{proof}
+
+\subsection{Exercise 10}
+\(h_k = 2^k - h_{k-1}\), for each integer \(k \geq 1\)
+
+\(h_0 = 1\)
+
+\begin{proof}
+\(h_0 = 1 = 2^0\)
+
+\(h_1 = 2^1 - h_0 = 2^1 - 1 = 2^1 - 2^0\)
+
+\(h_2 = 2^2 - h_1 = 2^2 - (2^1 - 2^0) = 2^2 - 2^1 + 2^0\)
+
+\(h_3 = 2^3 - h_2 = 2^3 - (2^2 - 2^1 + 2^0) = 2^3 - 2^2 + 2^1 - 2^0\)
+
+\(h_4 = 2^4 - h_3 = 2^4 - (2^3 - 2^2 + 2^1 - 2^0) = 2^4 - 2^3 + 2^2 - 2^1 + 2^0\)
+
+Guess: \(h_n\)
+\begin{center}
+\begin{tabular}{cll}
+= & \(\dps 2^n - 2^{n-1} + \cdots + (-1)^{n-2} \cdot 2^2 + (-1)^{n-1} \cdot 2^1 + 
+(-1)^n \cdot 2^0\) & {\cy by guessing} \\
+= & \(\dps (-1)^n[(-1)^n \cdot 2^n + \cdots + (-1)^2 \cdot 2^2 + (-1)^1 \cdot 2^1 + 
+(-1)^n \cdot 2^0]\) & {\cy by basic algebra} \\
+= & \(\dps (-1)^n[(-2)^n + (-2)^{n-1} + \cdots + (-2)^2 + (-2)^1 + (-2)^0]\) & {\cy by basic algebra} \\
+= & \(\dps (-1)^n \frac{(-2)^{n+1} - 1}{-2 - 1}\) & {\cy by Theorem 5.2.2} \\
+= & \(\dps \frac{(-1)^{n+1}[(-2)^{n+1} - 1]}{(-1)(-3)}\) & {\cy by basic algebra} \\
+= & \(\dps \frac{2^{n+1} - (-1)^{n+1}}{3}\) & {\cy by basic algebra} 
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 11}
+\(p_k = p_{k-1} + 2 \cdot 3^k\), for each integer \(k \geq 2\)
+
+\(p_1 = 2\)
+
+\begin{proof}
+\(p_1 = 2\)
+
+\(p_2 = p_1 + 2 \cdot 3^2 = 2 + 2 \cdot 3^2\)
+
+\(p_3 = p_2 + 2 \cdot 3^3 = 2 + 2 \cdot 3^2 + 2 \cdot 3^3\)
+
+Guess: \(p_n = 2 + 2(3^2 + 3^3 + \cdots + 3^n)\)
+
+So \(\dps p_n = 2 + 2(1 + 3 + 3^2 + 3^3 + \cdots + 3^n - 1 - 3) = 2 + 2 \left(\frac{3^{n+1} - 1}{3 - 1} - 4 \right)\)
+
+So \(\dps p_n = 2 + 3^{n+1} - 1 - 8 = 3^{n+1} - 7\)
+\end{proof}
+
+\subsection{Exercise 12}
+\(s_k = s_{k-1} + 2k\), for each integer \(k \geq 1\)
+
+\(s_0 = 3\)
+
+\begin{proof}
+\(s_0 = 3\)
+
+\(s_1 = s_0 + 2 \cdot 1 = 3 + 2\)
+
+\(s_2 = s_1 + 2 \cdot 2 = 3 + 2 \cdot 1 + 2 \cdot 2\)
+
+Guess: \(s_n = 3 + 2 + 4 + 6 + \cdots + 2n\)
+
+So \(s_n = 3 + 2(1 + 2 + 3 + \cdots + n) = 3 + 2 \cdot \frac{n(n+1)}{2} = 3 + n(n+1) = n^2 + n + 3\)
+\end{proof}
+
+\subsection{Exercise 13}
+\(t_k = t_{k-1} + 3k + 1\), for each integer \(k \geq 1\)
+
+\(t_0 = 0\)
+
+\begin{proof}
+\(t_0 = 0\)
+
+\(t_1 = t_0 + 3 \cdot 1 + 1 = 3 \cdot 1 + 1\)
+
+\(t_2 = t_1 + 3 \cdot 2 + 1 = 3 \cdot 1 + 1 + 3 \cdot 2 + 1 = 3(1+2)+2\)
+
+\(t_3 = t_2 + 3 \cdot 3 + 1 = 3(1+2)+2 + 3 \cdot 3 + 1 = 3(1+2+3)+3\)
+
+Guess: \(\dps t_n = 3(1+2+3+\cdots+n)+n = 3 \cdot \frac{n(n+1)}{2} + n\)
+\end{proof}
+
+\subsection{Exercise 14}
+\(x_k = 3x_{k-1} + k\), for each integer \(k \geq 2\)
+
+\(x_1 = 1\)
+
+\begin{proof}
+\(x_1 = 1\)
+
+\(x_2 = 3x_1 + 2 = 3 \cdot 1 + 2\)
+
+\(x_3 = 3x_2 + 3 = 3(3 \cdot 1 + 2) + 3 = 3^2 \cdot 1 + 3 \cdot 2 + 3\)
+
+\(x_4 = 3x_3 + 4 = 3(3^2 \cdot 1 + 3 \cdot 2 + 3) + 4 = 3^3 \cdot 1 + 3^2 \cdot 2 + 3 \cdot 3 + 4\)
+
+\(x_5 = 3x_4 + 5 = 3(3^3 \cdot 1 + 3^2 \cdot 2 + 3 \cdot 3 + 4) + 5 = 3^4 \cdot 1 + 3^3 \cdot 2 + 3^2 \cdot 3 + 3 \cdot 4 + 5\)
+
+Guess: \(x_n = 3^{n-1} + 3^{n-2} \cdot 2 + 3^{n-3} \cdot 3 + \cdots + 3^2 \cdot (n-2) + 3^1 \cdot (n-1) + 3^0 \cdot n\)
+
+We can think of $x_n$ as the sum of all terms in the following table:
+\begin{center}
+\begin{tabular}{cccccccc}
+\(3^{n-1}\) & \(3^{n-2}\) & \(3^{n-3}\) & \(3^{n-4}\) & \ldots & \(3^2\) & \(3\) & \(1\) \\
+            & \(3^{n-2}\) & \(3^{n-3}\) & \(3^{n-4}\) & \ldots & \(3^2\) & \(3\) & \(1\) \\
+            &             & \(3^{n-3}\) & \(3^{n-4}\) & \ldots & \(3^2\) & \(3\) & \(1\) \\
+            &             &             & \(3^{n-4}\) & \ldots & \(3^2\) & \(3\) & \(1\) \\
+\vdots & \vdots & \vdots & \vdots & \ldots & \vdots & \vdots & \vdots \\
+            &             &             &             & \ldots &         &       & \(1\)
+\end{tabular}
+\end{center}
+The sum of each column corresponds to a term in the sum: for example the third column has 3 copies of \(3^{n-3}\), 
+which add up to \(3^{n-3} \cdot 3\).
+
+Now the sum of each row can be computed by Theorem 5.2.2.
+
+Row 1 = \(3^{n-1} + 3^{n-2} + \cdots + 3^2 + 3 + 1 = \dps \frac{3^n - 1}{2}\)
+
+Row 2 = \(3^{n-2} + 3^{n-3} + \cdots + 3^2 + 3 + 1 = \dps \frac{3^{n-1} - 1}{2}\)
+
+\vdots
+
+Row $n$ = \(1 = \dps \frac{3^{1} - 1}{2}\)
+
+So \(\dps x_n = \frac{3^n - 1}{2} + \frac{3^{n-1} - 1}{2} + \cdots + \frac{3^2 - 1}{2} + \frac{3 - 1}{2}\)
+
+\( = \dps \frac{1}{2}\left[(3^n + 3^{n-1} + \cdots + 3^2 + 3) - n\right] = \frac{1}{2}\left[3(3^{n-1} + 3^{n-2} + \cdots + 3 + 1) - n\right]\)
+
+\(\dps = \frac{1}{2}\left[3 \cdot \frac{3^n - 1}{2} - n\right] = \frac{1}{4}\left[3^{n+1} - 3 - 2n\right]\)
+\end{proof}
+
+\subsection{Exercise 15}
+\(y_k = y_{k-1} + k^2\), for each integer \(k \geq 2\)
+
+\(y_1 = 1\)
+
+\begin{proof}
+\(y_1 = 1\)
+
+\(y_2 = y_1 + 2^2 = 1 + 2^2 = 1^2 + 2^2\)
+
+\(y_3 = y_2 + 3^2 = 1^2 + 2^2 + 3^2\)
+
+Guess: \(y_n = 1^2 + 2^2 + 3^2 + \cdots + n^2 = \dps \frac{n(n+1)(2n+1)}{6}\) {\cy by Exercise 5.2.10}.
+\end{proof}
+
+\subsection{Exercise 16}
+Solve the recurrence relation obtained as the answer to exercise 17(c) of Section 5.6.
+
+\begin{proof}
+Given: \(a_k = 3a_{k-1} + 2\) for every integer \(k \geq 2\) and \(a_1 = 2\).
+
+\(a_1 = 2\)
+
+\(a_2 = 3a_1 + 2 = 3 \cdot 2 + 2\)
+
+\(a_3 = 3a_2 + 2 = 3 \cdot (3 \cdot 2 + 2) + 2 = 3^2 \cdot 2 + 3 \cdot 2 + 2\)
+
+\(a_4 = 3a_3 + 2 = 3 \cdot (3^2 \cdot 2 + 3 \cdot 2 + 2) + 2 = 3^3 \cdot 2 + 3^2 \cdot 2 + 3 \cdot 2 + 2\)
+
+Guess: \(a_n = 2(3^{n-1} + 3^{n-2} + \cdots + 3 + 1) = \dps 2 \cdot \frac{3^n - 1}{3 - 1} = 3^n - 1\)
+\end{proof}
+
+\subsection{Exercise 17}
+Solve the recurrence relation obtained as the answer to exercise 21(c) of Section 5.6.
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
+\subsection{Exercise 18}
+Suppose $d$ is a fixed constant and \(a_0, a_1, a_2, \ldots\) is a sequence that satisfies the recurrence 
+relation \(a_k = a_{k-1} + d\), for each integer \(k \geq 1\). Use mathematical induction to prove that 
+\(a_n = a_0 + nd\), for every integer \(n \geq 0\).
+
+\begin{proof}
+Let $d$ be any fixed constant, and let \(a_0, a_1, a_2, \ldots\) be the sequence defined recursively by 
+\(a_k = a_{k-1} + d\) for each integer \(k \geq 1\).
+
+The property $P(n)$ is the equation \(a_n = a_0 + nd\). 
+We show by mathematical induction that $P(n)$ is true for every integer \(n \geq 0\).
+
+{\bf Show that \(P(0)\) is true:}
+
+When $n = 0$, the left-hand side of the equation is $a_0$, and the right-hand side is \(a_0 + 0 \cdot d = a_0\), 
+which equals the left-hand side. Thus $P(0)$ is true. 
+
+{\bf Show that for every integer \(k \geq 0\), if \(P(k)\) is true, then \(P(k 1 1)\) is true:}
+
+Suppose $k$ is any integer such that \(k \geq 0\) and \(a_k = a_0 + kd\). {\it [This is the inductive hypothesis.]}
+
+We must show that \(a_{k+1} = a_0 + (k + 1)d\). Now
+
+\begin{tabular}{rcll}
+\(a_{k+1}\) & = & \(a_k + d\) & {\cy by definition of \(a_0, a_1, a_2, \ldots\)} \\
+& = & \(a_0 + kd + d\) & {\cy by substitution from the inductive hypothesis} \\
+& = & \(a_0 + (k + 1)d\) & {\cy by basic algebra}
+\end{tabular}
+
+{\it [as was to be shown]}.
+\end{proof}
+
+\subsection{Exercise 19}
+A worker is promised a bonus if he can increase his productivity by 2 units a day every day for a period of 30 
+days. If on day 0 he produces 170 units, how many units must he produce on day 30 to qualify for the bonus?
+
+\begin{proof}
+Let \(U_n\) equal the number of units produced on day $n$. Then \(U_k = U_{k-1} + 2\) for each integer \(k \geq 1\), 
+and \(U_0 = 170\). Hence \(U_0, U_1, U_2, \ldots\) is an arithmetic sequence with fixed constant 2. It follows that 
+when \(n = 30\), we have \(U_n = U_0 + n \cdot 2 = 170 + 2n = 170 + 2 \cdot 30 = 230\) units.
+\end{proof}
+
+\subsection{Exercise 20}
+A runner targets herself to improve her time on a certain course by 3 seconds a day. If on day 0 she runs the course 
+in 3 minutes, how fast must she run it on day 14 to stay on target?
+
+\begin{proof}
+Let \(U_n\) equal the number of seconds on day $n$. Then \(U_k = U_{k-1} - 3\) for each integer \(k \geq 1\), 
+and \(U_0 = 180\). Hence \(U_0, U_1, U_2, \ldots\) is an arithmetic sequence with fixed constant -3. It follows that 
+when \(n = 14\), we have \(U_n = U_0 + n \cdot (-3) = 180 - 3n = 180 - 3 \cdot 14 = 138\) seconds.
+\end{proof}
+
+\subsection{Exercise 21}
+Suppose $r$ is a fixed constant and \(a_0, a_1, a_2, \ldots\) is a sequence that satisfies the recurrence 
+relation \(a_k = r a_{k-1}\), for each integer \(k \geq 1\) and \(a_0 = a\). Use mathematical induction to prove that 
+\(a_n = a r^n\), for every integer \(n \geq 0\).
+
+\begin{proof}
+Let $P(n)$ be the equation \(a_n = a r^n\).
+
+{\bf Show $P(0)$:} $P(0)$ says \(a_0 = a r^0 = a \cdot 1 = a\) which is true.
+
+{\bf Show for any \(k \geq 0\), if $P(k)$ then $P(k+1)$:}
+Assume $k$ is any integer with \(k \geq 0\), assume \(a_k = a r^k\). {\it [We want to show \(a_{k+1} = ar^{k+1}\)].}
+Now \(a_k = r a_{k-1} = r(ar^k) = ar^{k+1}\) by inductive hypothesis and laws of exponents, {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 22}
+As shown in Example 5.6.8, if a bank pays interest at a rate of $i$ compounded $m$ times a year, then the amount of 
+money $P_k$ at the end of $k$ time periods (where one time period \(= 1/m\)th of a year) satisfies the recurrence 
+relation \(P_k = [1 + (i/m)] P_{k-1}\) with initial condition \(P_0 =\) the initial amount deposited. 
+Find an explicit formula for $P_n$.
+
+\begin{proof}
+\(P_0 = P_0\)
+
+\(P_1 = [1 + (i/m)] P_0\)
+
+\(P_2 = [1 + (i/m)] P_1 = [1 + (i/m)][1 + (i/m)] P_0 = [1 + (i/m)]^2 P_0\)
+
+Guess: \(P_n = [1 + (i/m)]^n P_0\)
+\end{proof}
+
+\subsection{Exercise 23}
+Suppose the population of a country increases at a steady rate of 3\% per year. If the population is 50 million at a 
+certain time, what will it be 25 years later?
+
+\begin{proof}
+Let $P_n$ be the population $n$ years after the ``certain time''. So $P_0 = 50$.
+
+Then the recurrence relation is: \(P_{k+1} = (1 + 3/100) P_k\).
+
+The formula then is: \(P_n = (1 + 3/100)^n P_0 = 50(1+3/100)^n\).
+
+Then \(P_{25} = 50(1+3/100)^{25} \approx 104.69\) million.
+\end{proof}
+
+\subsection{Exercise 24}
+A chain letter works as follows: One person sends a copy of the letter to five friends, each of whom sends a copy to 
+five friends, each of whom sends a copy to five friends, and so forth. How many people will have received copies of 
+the letter after the twentieth repetition of this process, assuming no person receives more than one copy?
+
+\begin{proof}
+\(\dps \sum_{k = 0}^{20} 5^k = \frac{5^{21} - 1}{4} \approx 1.192 \times 10^{14} \approx 119\) trillion people 
+(this is about 20,000 times the current population of the Earth!)
+\end{proof}
+
+\subsection{Exercise 25}
+A certain computer algorithm executes twice as many operations when it is run with an input of size $k$ as when 
+it is run with an input of size $k - 1$ (where $k$ is an integer that is greater than 1). When the algorithm is run 
+with an input of size 1, it executes seven operations. How many operations does it execute when it is run with an 
+input of size 25?
+
+\begin{proof}
+Let $P_k$ be the number of operations if the algorithm is run with $k$ inputs. We have: \(P_0 = 7\) and 
+\(P_k = 2P_{k-1}\). So \(P_n = 7 \cdot 2^n\) and \(P_{25} = 7 \cdot 2^{25} = 234881024\).
+\end{proof}
+
+\subsection{Exercise 26}
+A person saving for retirement makes an initial deposit of \$1,000 to a bank account earning interest at a rate of 3\% 
+per year compounded monthly, and each month she adds an additional \$200 to the account.
+
+\subsubsection{(a)}
+For each nonnegative integer $n$, let $A_n$ be the amount in the account at the end of $n$ months. Find a recurrence 
+relation relating $A_k$ to \(A_{k-1}\).
+
+\begin{proof}
+\(A_k = 200 + (1 + \frac{1}{12}\frac{3}{100})A_{k-1} = 200 + (1 + \frac{1}{400})A_{k-1} = 200 + 1.0025 A_{k-1}\)
+\end{proof}
+
+\subsubsection{(b)}
+Use iteration to find an explicit formula for \(A_n\).
+
+\begin{proof}
+\(A_0 = 1000\)
+
+\(A_1 = 200 + 1.0025 A_0 = 200 + 1000 \cdot 1.0025\)
+
+\(A_2 = 200 + 1.0025 A_1 = 200 + 1.0025 (200 + 1000 \cdot 1.0025)\) 
+
+\(= 200 + 200 \cdot 1.0025 + 1000 \cdot (1.0025)^2\)
+
+\(A_3 = 200 + 1.0025 A_2 = 200 + 1.0025 (200 + 200 \cdot 1.0025 + 1000(1.0025)^2) \)
+
+\(= 200 + 200 \cdot 1.0025 + 200(1.0025)^2 + 1000(1.0025)^3\)
+
+Guess: \(A_n = 200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^{n-1} + 1000(1.0025)^n\)
+
+Explicit formula: \(A_n = \dps 200 \cdot \frac{(1.0025)^n - 1}{1.0025 - 1} + 1000(1.0025)^n\)
+\end{proof}
+
+\subsubsection{(c)}
+Use mathematical induction to prove the correctness of the formula you obtained in part (b).
+
+\begin{proof}
+Let $P(n)$ be the equation 
+
+\(A_n = 200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^{n-1} + 1000(1.0025)^n\).
+
+{\bf Show that $P(0)$ is true:} $P(0)$ says \(A_0 = 1000(1.0025)^0 = 1000 \cdot 1 = 1000\) which is true.
+
+{\bf Show that for any integer \(k \geq 0\) if $P(k)$ is true then \(P(k+1)\) is true:}
+Assume \(k \geq 0\) is an integer such that
+\(A_k = 200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^{k-1} + 1000(1.0025)^k\). 
+{\it [We want to show that 
+
+\(A_{k+1} = 200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^k + 1000(1.0025)^{k+1}\).]}
+
+By recurrence in part (a) we have \(A_{k+1} = 200 + 1.0025 A_k.\)
+
+By inductive hypothesis, 
+\(A_{k+1} = 200 + 1.0025 A_k = \ldots\)
+
+\(= 200 + 1.0025[200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^{k-1} + 1000(1.0025)^k]\)
+
+\(= 200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^k + 1000(1.0025)^{k+1}\),
+
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(d)}
+How much will the account be worth at the end of 20 years? At the end of 40 years?
+
+\begin{proof}
+\(A_{240} = \dps 200 \cdot \frac{(1.0025)^{240} - 1}{1.0025 - 1} + 1000(1.0025)^{240} \approx 67481.15\)
+
+\(A_{480} = \dps 200 \cdot \frac{(1.0025)^{480} - 1}{1.0025 - 1} + 1000(1.0025)^{480} \approx 188527.05\)
+\end{proof}
+
+\subsubsection{(e)}
+In how many years will the account be worth \$10,000?
+
+\begin{proof}
+We need to solve:
+\(10000 = \dps 200 \cdot \frac{(1.0025)^n - 1}{1.0025 - 1} + 1000(1.0025)^n \to\)
+
+\(10000 = \dps 200 \cdot \frac{(1.0025)^n - 1}{0.0025} + 1000(1.0025)^n \to\)
+
+\(10000 = \dps 80000 \cdot [(1.0025)^n - 1] + 1000(1.0025)^n \to\)
+
+\(10 = 80 \cdot [(1.0025)^n - 1] + (1.0025)^n \to 10 = 80 (1.0025)^n - 80 + (1.0025)^n \to\)
+
+\(90 = 81 (1.0025)^n \to 10 = 9 (1.0025)^n \to 10/9 = (1.0025)^n \to \log(10/9) = n \log(1.0025)\)
+
+\(\dps n = \frac{\log(10/9)}{\log(1.0025)} \approx 42.2\) months which is about 3.5 years.
+\end{proof}
+
+\subsection{Exercise 27}
+A person borrows \$3,000 on a bank credit card at a nominal 
+rate of 18\% per year, which is actually charged at a rate of 1.5\% per month.
+
+\subsubsection{(a)}
+What is the annual percentage yield (APY) for the card? (See Example 5.6.8 for a definition of APY.)
+
+\begin{proof}
+Let $A_n$ be the amount after $n$ months. So \(A_0 = 3000\) and \(A_n = (1 + 1.5/100) \cdot A_{n-1}\) for \(n \geq 1\).
+
+Solving the recurrence we get \(A_n = (1 + 1.5/100)^n \cdot A_0 = (1.015)^n \cdot 3000.\)
+
+So the APY is: \(\dps \frac{(1.015)^{12} \cdot 3000 - 3000}{3000} = 
+\frac{(1.015)^{12} - 1}{1} \approx 0.196 =  19.6\%\)
+\end{proof}
+
+\subsubsection{(b)}
+Assume that the person does not place any additional charges on the card and pays the bank \$150 each month to pay off the loan. Let $B_n$ be the balance owed on the card after $n$ months. Find an explicit formula for $B_n$.
+
+\begin{proof}
+\(B_0 = 3000\) and \(B_n = 1.015 \cdot B_{n-1} - 150\) for any \(n \geq 1\).
+
+\(B_1 = 1.015 \cdot B_0 - 150\)
+
+\(B_2 = 1.015 \cdot B_1 - 150 = 1.015(1.015 \cdot B_0 - 150) - 150 = (1.015)^2 B_0 - 1.015 \cdot 150 - 150\)
+
+\(B_3 = 1.015 \cdot B_2 - 150 = 1.015((1.015)^2 B_0 - 1.015 \cdot 150 - 150) - 150\)
+
+\(= (1.015)^3 B_0 - (1.015)^2 \cdot 150 - (1.015) \cdot 150 - 150\)
+
+Guess: \(B_n = (1.015)^n B_0 - 150[(1.015)^{n-1} + \cdots + 1] 
+= \dps (1.015)^n B_0 - 150 \cdot \frac{(1.015)^n - 1}{1.015 - 1}\)
+
+\( = \dps (1.015)^n (3000) - 150 \cdot \frac{(1.015)^n - 1}{0.015} = (1.015)^n (3000) - 10000[(1.015)^n - 1]\)
+
+\(= 10000 - 7000 (1.015)^n\)
+\end{proof}
+
+\subsubsection{(c)}
+How long will be required to pay off the debt?
+
+\begin{proof}
+We need to solve \(B_n = 10000 - 7000 (1.015)^n = 0 \to\)
+
+\(10000 = 7000(1.015)^n \to 10/7 = (1.015)^n \to \log(10/7) = n \log(1.015) \to\)
+
+\(\dps n = \frac{\log(10/7)}{\log(1.015)} \approx 23.96 \approx 24\) months, which is 2 years.
+\end{proof}
+
+\subsubsection{(d)}
+What is the total amount of money the person will have paid for the loan?
+
+\begin{proof}
+\(24 \cdot 150 = \$3600\)
+\end{proof}
+
+{\bf \cy In $28-42$ use mathematical induction to verify the correctness of the formula you obtained in the 
+referenced exercise.}
+
+\subsection{Exercise 28}
+Exercise 3
+
+\begin{proof}
+\(a_k = ka_{k-1}\), for each integer \(k \geq 1\), \(a_0 = 1\). Guess: \(a_n = n!\).
+
+Let $P(n)$ be the equation \(a_n = n!\).
+
+{\bf Show that \(P(0)\) is true:} \(a_0 = 1 = 0!\) so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq \), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq \) is any integer such that \(a_k = k!\). {\it [We want to show that \(a_{k+1} = (k+1)!\).]}
+
+By definition, \(a_{k+1} = (k+1)a_k\). 
+By the induction hypothesis, \(a_k = k!\). 
+Substituting, we get \(a_{k+1} = (k+1)a_k = (k+1) \cdot k! = (k+1)!\), {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 29}
+Exercise 4
+
+\begin{proof}
+\(b_k = \dps \frac{b_{k-1}}{1 + b_{k-1}}\), for each integer \(k \geq 1\), \(b_0 = 1\). Guess: \(b_n = 1/(n+1)\).
+
+Let $P(n)$ be the equation \(b_n = 1/(n+1)\).
+
+{\bf Show that \(P(0)\) is true:} \(b_0 = 1 = 1 / (0+1)\) so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq \), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq \) is any integer such that \(b_k = 1/(k+1)\). {\it [We want to show that \(b_{k+1} = 1/(k+2)\).]}
+
+By definition, \(b_{k+1} = \dps \frac{b_k}{1 + b_k}\).
+By the induction hypothesis, \(b_k = 1/(k+1)\).
+Substituting, we get 
+\[
+b_{k+1} = \dps \frac{b_k}{1 + b_k} = \frac{1/(k+1)}{1 + 1/(k+1)} = \frac{1/(k+1)}{(k+2)/(k+1)} = \frac{1}{k+1} \cdot \frac{k+1}{k+2} = \frac{1}{k+2},
+\] 
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 30}
+Exercise 5
+
+\begin{proof}
+\(c_k = 3c_{k-1} + 1\), for each integer \(k \geq 2\), \(c_1 = 1\). Guess: \(\dps c_n = \frac{3^n - 1}{2}\).
+
+Let $P(n)$ be the equation \(\dps c_n = \frac{3^n - 1}{2}\).
+
+{\bf Show that \(P(1)\) is true:} \(\dps c_1 = 1 = \frac{3^1 - 1}{2}\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq \), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(\dps c_k = \frac{3^k - 1}{2}\). 
+{\it [We want to show that \(\dps c_{k+1} = \frac{3^{k+1} - 1}{2}\).]}
+
+By definition, \(c_{k+1} = 3c_k + 1\).
+By the induction hypothesis, \(\dps c_k = \frac{3^k - 1}{2}\).
+Substituting, we get
+\[
+c_{k+1} = 3c_k + 1 = 3 \cdot \frac{3^k - 1}{2} + 1 = \frac{3^{k+1} - 3}{2} + 1 
+= \frac{3^{k+1} - 3 + 2}{2} = \frac{3^{k+1} - 1}{2}
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 31}
+Exercise 6
+
+\begin{proof}
+\(d_k = 2d_{k-1} + 3\), for each integer \(k \geq 2\), \(d_1 = 2\). Guess: \(\dps d_n = 5 \cdot 2^{n-1} - 3\).
+
+Let $P(n)$ be the equation \(\dps d_n = 5 \cdot 2^{n-1} - 3\).
+
+{\bf Show that \(P(1)\) is true:} \(\dps d_1 = 2 = 5 - 3 = 5 \cdot 2^{1-1} - 3\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq \), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(\dps d_k = 5 \cdot 2^{k-1} - 3\). 
+{\it [We want to show that \(\dps d_{k+1} = 5 \cdot 2^k - 3\).]}
+
+By definition, \(d_{k+1} = 2d_k + 3\)
+By the induction hypothesis, \(d_k = 5 \cdot 2^{k-1} - 3\).
+Substituting, we get
+\[
+d_{k+1} = 2d_k + 3 = 2(5 \cdot 2^{k-1} - 3) + 3 = 5 \cdot 2^k - 6 + 3 = 5 \cdot 2^k - 3,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 32}
+Exercise 7
+
+\begin{proof}
+\(e_k = 4e_{k-1} + 5\), for each integer \(k \geq 1\), \(e_0 = 2\). 
+Guess: \(\dps e_n = \frac{11 \cdot 4^n - 5}{3}\)
+
+Let $P(n)$ be the equation \(\dps e_n = \frac{11 \cdot 4^n - 5}{3}\).
+
+{\bf Show that \(P(0)\) is true:} \(e_0 = 2 = \frac{11 - 5}{3} = \frac{11 \cdot 4^0 - 5}{3}\), so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq \), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 0\) is any integer such that \(\dps e_k = \frac{11 \cdot 4^k - 5}{3}\). 
+{\it [We want to show that \(\dps e_{k+1} = \frac{11 \cdot 4^{k+1} - 5}{3}\).]}
+
+By definition, \(e_k = 4e_{k-1} + 5\).
+By the induction hypothesis, \(\dps e_k = \frac{11 \cdot 4^k - 5}{3}\).
+Substituting we get \(e_k = 4e_{k-1} + 5\)
+\[
+= 4 \cdot \frac{11 \cdot 4^k - 5}{3} + 5 = \frac{11 \cdot 4^{k+1} - 20}{3} + 5 = 
+\frac{11 \cdot 4^{k+1} - 20 + 15}{3} = \frac{11 \cdot 4^{k+1} - 5}{3},
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 33}
+Exercise 8
+
+\begin{proof}
+\(f_k = f_{k-1} + 2^k\), for each integer \(k \geq 2\), \(f_1 = 1\). Guess: \(f_n = 2^{n+1} - 3\).
+
+Let $P(n)$ be the equation \(f_n = 2^{n+1} - 3\).
+
+{\bf Show that \(P(1)\) is true:} \(f_1 = 1 = 4 - 3 = 2^{1+1} - 3\). So $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(f_k = 2^{k+1} - 3\). 
+{\it [We want to show that \(f_{k+1} = 2^{k+2} - 3\).]}
+
+By definition, \(f_{k+1} = f_k + 2^{k+1}\).
+By the induction hypothesis, \(f_k = 2^{k+1} - 3\).
+Substituting we get
+\[
+f_{k+1} = f_k + 2^{k+1} = 2^{k+1} - 3 + 2^{k+1} = 2 \cdot 2^{k+1} - 3 = 2^{k+2} - 3,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 34}
+Exercise 9
+
+\begin{proof}
+\(g_k = \dps \frac{g_{k-1}}{g_{k-1} + 2}\), for each integer \(k \geq 2\), \(g_1 = 1\). 
+Guess: \(\dps g_n = \frac{1}{2^{n+1} - 1}\).
+
+Let $P(n)$ be the equation \(\dps g_n = \frac{1}{2^{n+1} - 1}\).
+
+{\bf Show that \(P(1)\) is true:} \(\dps g_1 = 1 = \frac{1}{2^{1+1} - 1} = \frac{1}{2-1}\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq \) is any integer such that \(\dps g_k = \frac{1}{2^{k+1} - 1}\). 
+{\it [We want to show that \(\dps g_{k+1} = \frac{1}{2^{k+2} - 1}\)]}.
+
+By definition, \(g_{k+1} = \dps \frac{g_k}{g_k + 2}\).
+By the induction hypothesis, \(\dps g_k = \frac{1}{2^{k+1} - 1}\).
+Substituting, we get
+\[
+g_{k+1} = \frac{g_k}{g_k + 2} = \frac{\frac{1}{2^{k+1} - 1}}{\frac{1}{2^{k+1} - 1} + 2} 
+= \frac{\frac{1}{2^{k+1} - 1}}{\frac{1 + 2^{k+2} - 2}{2^{k+1} - 1}}
+= \frac{1}{2^{k+1} - 1} \cdot \frac{2^{k+1} - 1}{2^{k+2} - 1} = \frac{1}{2^{k+2} - 1},
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 35}
+Exercise 10
+
+\begin{proof}
+\(h_k = 2^k - h_{k-1}\), for each integer \(k \geq 1\), \(h_0 = 1\). 
+Guess: \(\dps h_n = \frac{2^{n+1} - (-1)^{n+1}}{3}\)
+
+Let $P(n)$ be the equation \(\dps h_n = \frac{2^{n+1} - (-1)^{n+1}}{3}\).
+
+{\bf Show that \(P(0)\) is true:} \(h_0 = 1 = \frac{2^{0+1} - (-1)^{0+1}}{3} = \frac{2 -(-1)}{3}\), so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq 0\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 0\) is any integer such that \(\dps h_k = \frac{2^{k+1} - (-1)^{k+1}}{3}\). 
+{\it [We want to show that \(\dps h_{k+1} = \frac{2^{k+2} - (-1)^{k+2}}{3}\).]}
+
+By definition, \(h_{k+1} = 2^{k+1} - h_k\).
+By the induction hypothesis, \(\dps h_k = \frac{2^{k+1} - (-1)^{k+1}}{3}\).
+Substituting we get \(h_{k+1} = 2^{k+1} - h_k = \dps 2^{k+1} - \frac{2^{k+1} - (-1)^{k+1}}{3}\)
+
+\(\dps = \frac{3 \cdot 2^{k+1} - [2^{k+1} - (-1)^{k+1}]}{3} =  \frac{3 \cdot 2^{k+1} - 2^{k+1} - (-1)^{k+2}}{3} = 
+\frac{2^{k+1} - (-1)^{k+2}}{3}\), 
+
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 36}
+Exercise 11
+
+\begin{proof}
+\(p_k = p_{k-1} + 2 \cdot 3^k\), for each integer \(k \geq 2\), \(p_1 = 2\). Guess: \(\dps p_n = 3^{n+1} - 7\).
+
+Let $P(n)$ be the equation \(p_n = 3^{n+1} - 7\).
+
+{\bf Show that \(P(1)\) is true:} \(p_1 = 2 = 3^{1+1} - 7 = 9-7\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(p_k = 3^{k+1} - 7\). 
+{\it [We want to show that \(\dps p_{k+1} = 3^{k+2} - 7\).]}
+
+By definition, \(p_{k+1} = p_k + 2 \cdot 3^{k+1}\).
+By the induction hypothesis, \(p_k = 3^{k+1} - 7\). 
+Substituting, we get
+\(
+p_{k+1} = p_k + 2 \cdot 3^{k+1} = 3^{k+1} - 7 + 2 \cdot 3^{k+1} = 3 \cdot 3^{k+1} - 7 = 3^{k+2} - 7,
+\)
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 37}
+Exercise 12
+
+\begin{proof}
+\(s_k = s_{k-1} + 2k\), for each integer \(k \geq 1\), \(s_0 = 3\). Guess: \(s_n = n^2 + n + 3\).
+
+Let $P(n)$ be the equation \(s_n = n^2 + n + 3\).
+
+{\bf Show that \(P(0)\) is true:}
+
+{\bf Show that for any integer \(k \geq 0\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 0\) is any integer such that \(s_k = k^2 + k + 3\). 
+{\it [We want to show that \(s_{k+1} = (k+1)^2 + (k+1) + 3\).]}
+
+By definition, \(s_{k+1} = s_k + 2(k+1)\).
+By the induction hypothesis, \(s_k = k^2 + k + 3\).
+Substituting, we get \(s_{k+1} = s_k + 2(k+1) = k^2 + k + 3 + 2k + 2 = k^2 + 3k + 5\)
+
+\(= k^2 + 2k + 1 + (k+1) + 3 = (k+1)^2 + (k+1) + 3,\)
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 38}
+Exercise 13
+
+\begin{proof}
+\(t_k = t_{k-1} + 3k + 1\), for each integer \(k \geq 1\), \(t_0 = 0\). 
+Guess: \(\dps t_n = 3 \cdot \frac{n(n+1)}{2} + n\).
+
+Let $P(n)$ be the equation \(\dps t_n = 3 \cdot \frac{n(n+1)}{2} + n\).
+
+{\bf Show that \(P(0)\) is true:} \(t_0 = 0 = \dps \frac{0(0+1)}{2} + 0\), so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq 0\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 0\) is any integer such that \(\dps t_k = 3 \cdot \frac{k(k+1)}{2} + k\). 
+{\it [We want to show that \(\dps t_{k+1} = 3 \cdot \frac{(k+1)(k+2)}{2} + k+1\).]}
+
+By definition, \(t_{k+1} = t_k + 3(k+1) + 1\).
+By the induction hypothesis, \(\dps t_k = 3 \cdot \frac{k(k+1)}{2} + k\). 
+Substituting, we get \(t_{k+1} = t_k + 3(k+1) + 1 = \)
+\[
+= 3 \cdot \frac{k(k+1)}{2} + k + 3(k+1) + 1 = 3(k+1)[k / 2 + 1] + k + 1 = 3(k+1)(k+2) / 2 + k + 1,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 39}
+Exercise 14
+
+\begin{proof}
+\(x_k = 3x_{k-1} + k\), for each integer \(k \geq 2\), \(x_1 = 1\).  
+Guess: \(\dps x_n = \frac{1}{4}\left[3^{n+1} - 3 - 2n\right]\)
+
+Let $P(n)$ be the equation \(\dps x_n = \frac{1}{4}\left[3^{n+1} - 3 - 2n\right]\).
+
+{\bf Show that \(P(1)\) is true:} \(x_1 = 1 = \dps \frac{1}{4}\left[3^{1+1} - 3 - 2 \cdot 1\right] 
+= (9 - 3 - 2) / 4 = 4/4\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(\dps x_k = \frac{1}{4}\left[3^{k+1} - 3 - 2k\right]\).
+{\it [We want to show that \(\dps x_{k+1} = \frac{1}{4}\left[3^{k+2} - 3 - 2(k+1)\right]
+= \frac{1}{4}\left[3^{k+2} - 5 - 2k)\right]\).]}
+
+By definition, \(x_{k+1} = 3x_k + k + 1\).
+By the induction hypothesis, \(\dps x_k = \frac{1}{4}\left[3^{k+1} - 3 - 2k\right]\).
+Substituting, we get \(x_{k+1} = 3x_k + k + 1 = \)
+\[
+\frac{3}{4}\left[3^{k+1} - 3 - 2k\right] + k + 1 = 
+\frac{3^{k+2} - 9 - 6k + 4k + 4}{4} =
+\frac{3^{k+2} - 5 - 2k}{4},
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 40}
+Exercise 15
+
+\begin{proof}
+\(y_k = y_{k-1} + k^2\), for each integer \(k \geq 2\),
+\(y_1 = 1\), Guess: \(y_n = \dps \frac{n(n+1)(2n+1)}{6}\).
+
+Let $P(n)$ be the equation \(y_n = \dps \frac{n(n+1)(2n+1)}{6}\).
+
+{\bf Show that \(P(1)\) is true:} \(y_1 = 1 = \dps \frac{1(1+1)(2+1)}{6}\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(y_k = \dps \frac{k(k+1)(2k+1)}{6}\). 
+{\it [We want to show that \(y_{k+1} = \dps \frac{(k+1)(k+2)(2k+3)}{6}\).]}
+
+By definition, \(y_{k+1} = y_k + (k+1)^2\).
+By the induction hypothesis, \(y_k = \dps \frac{k(k+1)(2k+1)}{6}\). 
+Substituting, we get \(y_{k+1} = y_k + (k+1)^2 =\)
+
+\begin{tabular}{rl}
+= & \(\dps \frac{k(k+1)(2k+1)}{6} + (k+1)^2\) 
+= \(\dps (k+1)\left[\frac{k(2k+1)}{6} + (k+1)\right]\) \\
+= & \(\dps (k+1)\left[\frac{2k^2+k}{6} + \frac{6k+6}{6}\right]\) 
+= \(\dps (k+1) \cdot \frac{2k^2+7k+6}{6}\) \\
+= & \(\dps (k+1) \cdot \frac{(2k+3)(k+2)}{6}\) 
+= \(\dps \frac{(k+1)(2k+3)(k+2)}{6}\),
+\end{tabular}
+
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 41}
+Exercise 16
+
+\begin{proof}
+\(a_k = 3a_{k-1} + 2\) for every integer \(k \geq 2\) and \(a_1 = 2\). Guess: \(a_n = 3^n - 1\).
+
+Let $P(n)$ be the equation \(a_n = 3^n - 1\).
+
+{\bf Show that \(P(1)\) is true:} \(a_1 = 2 = 3^1 - 1\), so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(k)\) is true then \(P(k+1)\) is true:}
+
+Assume \(k \geq 1\) is any integer such that \(a_k = 3^k - 1\).
+{\it [We want to show that \(a_{k+1} = 3^{k+1} - 1\).]}
+
+By definition, \(a_{k+1} = 3a_k + 2\).
+By the induction hypothesis, \(a_k = 3^k - 1\).
+Substituting, we get
+\[
+a_{k+1} = 3a_k + 2 = 3(3^k - 1) + 2 = 3^{k+1} - 3 + 2 = 3^{k+1} - 1,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 42}
+Exercise 17
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
+{\bf \cy In each of $43-49$ a sequence is defined recursively. (a) Use iteration to guess an explicit formula 
+for the sequence. (b) Use strong mathematical induction to verify that the formula of part (a) is correct.}
+
+\subsection{Exercise 43}
+\(a_k = \dps \frac{a_{k-1}}{2a_{k-1}-1}\), for each integer \(k \geq 1\)
+
+\(a_0 = 2\)
+
+\begin{proof}
+\(a_0 = 2\)
+
+\(a_1 = \dps \frac{a_0}{2a_0-1} = \frac{2}{2 \cdot 2 -1} = \frac{2}{3}\)
+
+\(a_2 = \dps \frac{a_1}{2a_1-1} = \frac{2/3}{2 \cdot 2/3 -1} = \frac{2/3}{1/3} = 2\)
+
+Then \(a_3 = 2/3, a_4 = 2, \ldots\)
+
+Guess: \(a_n = 2\) if $n$ is even, $2/3$ if $n$ is odd.
+
+Let $P(n)$ be the statement: ``\(a_n = 2\) if $n$ is even, \(a_n = 2/3\) if $n$ is odd.''
+
+{\bf Show that $P(0)$ is true:} When $n = 0$, $n$ is even, and $a_0 = 2$, so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq 0\) if $P(i)$ is true for all integers $i$ with \(0 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 0\) is any integer and assume \(a_i = 2\) if $i$ is even and \(a_i = 2/3\) if $i$ is odd,
+for all integers $i$ with \(0 \leq i \leq k\). {\it [We want to prove \(a_{k+1} = 2\) if $k+1$ is even, 2/3 if 
+$k+1$ is odd.]}
+
+{\bf Case 1: $k+1$ is even.} So $k$ is odd. By inductive hypothesis, \(a_k = 2/3\).
+By definition, \(a_{k+1} = \dps \frac{a_k}{2a_k-1}\).
+Substituting, we get \(a_{k+1} = \dps \frac{2/3}{2 \cdot 2/3 -1} = \frac{2/3}{4/3 - 1} = 2\), {\it [as was to be shown.]}
+
+{\bf Case 2: $k+1$ is odd.} So $k$ is even. By inductive hypothesis, \(a_k = 2\).
+By definition, \(a_{k+1} = \dps \frac{a_k}{2a_k-1}\).
+Substituting, we get \(a_{k+1} = \dps \frac{2}{2 \cdot 2 -1} = \frac{2}{4 - 1} = 2/3\), {\it [as was to be shown.]}
+
+(Note that strong induction was not needed in this problem.)
+\end{proof}
+
+\subsection{Exercise 44}
+\(b_k = \dps \frac{2}{b_{k-1}}\), for each integer \(k \geq 2\)
+
+\(b_1 = 1\)
+
+\begin{proof}
+\(b_1 = 1\)
+
+\(b_2 = \dps\frac{2}{b_1} = 2\)
+
+\(b_3 = \dps\frac{2}{b_2} = 1\)
+
+\(b_4 = \dps\frac{2}{b_3} = 2\)
+
+Guess: \(b_k = 1\) if $k$ is odd, 2 if $k$ is even.
+
+Let $P(n)$ be the statement: ``\(b_n = 2\) if $n$ is even, \(b_n = 1\) if $n$ is odd.''
+
+{\bf Show that $P(1)$ is true:} When $n = 1$, $n$ is odd, and $b_1 = 1$, so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\) if $P(i)$ is true for all integers $i$ with \(1 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 1\) is any integer and assume \(b_i = 2\) if $i$ is even and \(b_i = 1\) if $i$ is odd,
+for all integers $i$ with \(1 \leq i \leq k\). {\it [We want to prove \(b_{k+1} = 2\) if $k+1$ is even, 1 if 
+$k+1$ is odd.]}
+
+{\bf Case 1: $k+1$ is even.} So $k$ is odd. By inductive hypothesis, \(b_k = 1\).
+By definition, \(b_{k+1} = \dps \frac{2}{b_k}\).
+Substituting, we get \(b_{k+1} = \dps \frac{2}{1} = 2\), {\it [as was to be shown.]}
+
+{\bf Case 2: $k+1$ is odd.} So $k$ is even. By inductive hypothesis, \(b_k = 2\).
+By definition, \(b_{k+1} = \dps \frac{2}{b_k}\).
+Substituting, we get \(b_{k+1} = \dps \frac{2}{b_k} = 2/2 = 1\), {\it [as was to be shown.]}
+
+(Note that strong induction was not needed in this problem.)
+\end{proof}
+
+\subsection{Exercise 45}
+\(\dps v_k = v_{\floor{k/2}} + v_{\floor{(k+1)/2}} + 2\), for each integer \(k \geq 2\)
+
+\(v_1 = 1\)
+
+\begin{proof}
+\(v_1 = 1\)
+
+\(\dps v_2 = v_{\floor{2/2}} + v_{\floor{(2+1)/2}} + 2 = v_1 + v_1 + 2 = 2v_1 + 2 = 2 \cdot 1 + 2 = 4\)
+
+\(\dps v_3 = v_{\floor{3/2}} + v_{\floor{(3+1)/2}} + 2 = v_1 + v_2 + 2 = v_1 + 2v_1 + 2 + 2 = 3v_1 + 2 \cdot 2 = 7\)
+
+\(\dps v_4 = v_{\floor{4/2}} + v_{\floor{(4+1)/2}} + 2 = v_2 + v_2 + 2 = 2v_2 + 2 = 2(2v_1 + 2) + 2 = 4v_1 + 2 \cdot 3 = 10\)
+
+Guess: \(v_n = nv_1 + 2(n-1) = n + 2n - 2 = 3n - 2\) for \(n \geq 1\).
+
+Let \(P(n)\) be the equation \(v_n = 3n-2\).
+
+{\bf Show that $P(1)$ is true:} \(v_1 = 1 = 3 \cdot 1 - 2\) so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\) if $P(i)$ is true for all integers $i$ with \(1 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 1\) is any integer and assume \(v_i = 3i-2\) for all integers $i$ with \(1 \leq i \leq k\).
+{\it [We want to show \(v_{k+1} = 3(k+1) - 2\)].}
+
+{\bf Case 1: $k+1$ is odd.} Then $k$ is even. So $k = 2z$ for some integer $z$. So $k+1 = 2z+1$.
+
+By definition \(v_{k+1} = v_{\floor{(2z+1)/2}} + v_{\floor{(2z+2)/2}} + 2 = v_z + v_{z+1} + 2\).
+
+By inductive hypothesis, \(v_z = 3z - 2\) and \(v_{z+1} = 3(z+1) - 2 = 3z+1\).
+
+Substituting we get \(v_{k+1} = v_z + v_{z+1} + 2 = 3z-2 + 3z+1 + 2 = 6z + 1 = 6z+3 - 2 = 3(2z+1) - 2 = 3(2k+1) - 2\),
+{\it [as was to be shown].}
+
+{\bf Case 2: $k+1$ is even.} Then $k$ is odd. So $k = 2z+1$ for some integer $z$. So $k+1 = 2z+2$.
+
+By definition \(v_{k+1} = v_{\floor{(2z+2)/2}} + v_{\floor{(2z+3)/2}} + 2 = v_{z+1} + v_{z+1} + 2 = 2(v_{z+1} + 1)\).
+
+By inductive hypothesis, \(v_{z+1} = 3(z+1) - 2 = 3z+1\).
+
+Substituting we get \(v_{k+1} = 2(v_{z+1} + 1) = 2(3z+1 + 1) = 6z + 4 = 6z + 6 - 2 = 3(2z + 2) - 2 = 3(k+1) - 2\),
+{\it [as was to be shown].}
+
+(Note that strong induction was needed in this problem.)
+\end{proof}
+
+\subsection{Exercise 46}
+\(s_k = 2s_{k-2}\), for each integer \(k \geq 2\)
+
+\(s_0 = 1, s_1 = 2\)
+
+\begin{proof}
+\(s_0 = 1, s_1 = 2\)
+
+\(s_2 = 2s_0 = 2 = 2^1\)
+
+\(s_3 = 2s_1 = 4 = 2^2\)
+
+\(s_4 = 2s_2 = 4 = 2^2\)
+
+\(s_5 = 2s_3 = 8 = 2^3\)
+
+\(s_6 = 2s_4 = 8 = 2^3\)
+
+Guess: \(\dps s_n = 2^{\floor{(n+1)/2}}\). (Alternatively we could also use \(\dps s_n = 2^{\ceil{n/2}}\).)
+
+Let \(P(n)\) be the equation \(\dps s_n = 2^{\floor{(n+1)/2}}\).
+
+{\bf Show that $P(0)$ is true:} \(\dps s_0 = 1 = 2^0 = 2^{\floor{(0+1)/2}}\) so $P(0)$ is true.
+
+{\bf Show that $P(1)$ is true:} \(\dps s_1 = 2 = 2^1 = 2^{\floor{(1+1)/2}}\) so $P(1)$ is true.
+
+{\bf Show that for any integer \(k \geq 0\) if $P(i)$ is true for all integers $i$ with \(0 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 0\) is any integer and assume \(\dps s_i = 2^{\floor{(i+1)/2}}\) for all integers $i$ with 
+\(0 \leq i \leq k\). {\it [We want to show \(\dps s_{k+1} = 2^{\floor{(k+1+1)/2}}\)].}
+
+{\bf Case 1: $k+1$ is odd.} Then $k$ is even. So $k = 2z$ for some integer $z$. So $k+1 = 2z+1$ and $k-1 = 2z-1$.
+
+By definition \(\dps s_{k+1} = 2s_{k-1}\).
+
+By inductive hypothesis, \(\dps s_{k-1} = 2^{\floor{(2z-1+1)/2}} = 2^{z}\).
+
+Substituting we get \(\dps s_{k+1} = 2s_{k-1} = 2(2^z) = 2^{z+1} = 2^{\floor{(2z+2)/2}} = 2^{\floor{(k+1+1)/2}}\), 
+{\it [as was to be shown].}
+
+{\bf Case 2: $k+1$ is even.} Then $k$ is odd. So $k = 2z+1$ for some integer $z$. So $k+1 = 2z+2$ and $k-1 = 2z$.
+
+By definition \(s_{k+1} = 2s_{k-1}\).
+
+By inductive hypothesis, \(s_{k-1} = 2^{\floor{(2z+1)/2}} = 2^z\).
+
+Substituting we get \(\dps s_{k+1} = 2s_{k-1} = 2(2^z) = 2^{z+1} = 2^{\floor{(2z+3)/2}} = 2^{\floor{(k+1+1)/2}}\),
+{\it [as was to be shown].}
+
+(Note that strong induction was needed in this problem.)
+\end{proof}
+
+\subsection{Exercise 47}
+\(t_k = k - t_{k-1}\), for each integer \(k \geq 1\)
+
+\(t_0 = 0\)
+
+\begin{proof}
+\(t_0 = 0\)
+
+\(t_1 = 1 - t_0 = 1\)
+
+\(t_2 = 2 - t_1 = 1\)
+
+\(t_3 = 3 - t_2 = 2\)
+
+\(t_4 = 4 - t_3 = 2\)
+
+\(t_5 = 5 - t_4 = 3\)
+
+\(t_6 = 6 - t_5 = 3\)
+
+Guess: \(t_n = \floor{(n+1)/2}\).
+
+Let \(P(n)\) be the equation \(t_n = \floor{(n+1)/2}\).
+
+{\bf Show that $P(0)$ is true:} \(t_0 = \floor{(0+1)/2} = 0\), so $P(0)$ is true.
+
+{\bf Show that for any integer \(k \geq 0\) if $P(i)$ is true for all integers $i$ with \(0 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 0\) is any integer and assume \(t_i = \floor{(i+1)/2}\) for all integers $i$ with 
+\(0 \leq i \leq k\). {\it [We want to show \(t_{k+1} = \floor{(k+1+1)/2}\)].}
+
+{\bf Case 1: $k+1$ is odd.} Then $k$ is even. So $k = 2z$ for some integer $z$. So $k+1 = 2z+1$.
+
+By definition \(t_{k+1} = k+1 - t_k = 2z+1 - t_k\).
+
+By inductive hypothesis, \(\dps t_k = \floor{(k+1)/2} = \floor{(2z+1)/2} = z\).
+
+Substituting we get \(\dps t_{k+1} = 2z+1 - z = z+1 = \floor{(2z+2)/2} = \floor{(k+1+1)/2}\), 
+{\it [as was to be shown].}
+
+{\bf Case 2: $k+1$ is even.} Then $k$ is odd. So $k = 2z+1$ for some integer $z$. So $k+1 = 2z+2$.
+
+By definition \(t_{k+1} = k+1 - t_k = 2z+2 - t_k\).
+
+By inductive hypothesis, \(\dps t_k = \floor{(k+1)/2} = \floor{(2z+2)/2} = z+1\).
+
+Substituting we get \(\dps t_{k+1} = 2z+2 - (z+1) = z+1 = \floor{(2z+3)/2} = \floor{(k+1+1)/2}\),
+{\it [as was to be shown].}
+
+(Note that strong induction was not needed in this problem.)
+\end{proof}
+
+\subsection{Exercise 48}
+\(w_k = w_{k-2} + k\), for each integer \(k \geq 3\)
+
+\(w_1 = 1, w_2 = 2\)
+
+\begin{proof}
+\(w_1 = 1, w_2 = 2\)
+
+\(w_3 = w_1 + 3 = 1 + 3\)
+
+\(w_4 = w_2 + 4 = 2 + 4\)
+
+\(w_5 = w_3 + 5 = 1 + 3 + 5\)
+
+\(w_6 = w_4 + 6 = 2 + 4 + 6\)
+
+Guess: \(w_n = 1 + 3 + 5 + \cdots + n\) if $n$ is odd, \(w_n = 2 + 4 + 6 + \cdots + n\) if $n$ is even.
+
+Let \(P(n)\) be the statement: 
+``\(w_n = 1 + 3 + 5 + \cdots + n\) if $n$ is odd, 
+\(w_n = 2 + 4 + 6 + \cdots + n\) if $n$ is even.''
+
+{\bf Show that $P(1)$ and $P(2)$ are true:} 
+$n = 1$ is odd, and \(w_1 = 1\), so $P(1)$ is true. 
+$n = 2$ is even and \(w_2 = 2\), so $P(2)$ is true.
+
+{\bf Show that for any integer \(k \geq 1\) if $P(i)$ is true for all integers $i$ with \(1 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 1\) is any integer and assume 
+\(w_i = 1 + 3 + 5 + \cdots + i\) if $i$ is odd, 
+\(w_i = 2 + 4 + 6 + \cdots + i\) if $i$ is even,
+for all integers $i$ with \(1 \leq i \leq k\).
+
+{\it [We want to show 
+\(w_{k+1} = 1 + 3 + 5 + \cdots + k+1\) if $k+1$ is odd, 
+\(w_{k+1} = 2 + 4 + 6 + \cdots + k+1\) if $k+1$ is even].}
+
+{\bf Case 1: $k+1$ is odd.} Then $k$ is even and $k-1$ is odd. 
+So $k = 2z$ for some integer $z$, $k+1 = 2z+1$ and $k-1 = 2z-1$.
+
+{\it [We want to show \(w_{k+1} = 1 + 3 + 5 + \cdots + 2z+1\)].}
+
+By definition \(w_{k+1} = w_{k-1} + k+1 = w_{k-1} + 2z+1\).
+
+By inductive hypothesis, \(\dps w_{k-1} = 1 + 3 + 5 + \cdots + 2z-1\).
+
+Substituting we get \(\dps w_{k+1} = 1 + 3 + 5 + \cdots + (2z-1) + (2z+1)\), {\it [as was to be shown].}
+
+{\bf Case 2: $k+1$ is even.} Then $k$ is odd and $k-1$ is even. 
+So $k = 2z+1$ for some integer $z$, $k+1 = 2z+2$ and $k-1 = 2z$.
+
+{\it [We want to show \(w_{k+1} = 2 + 4 + 6 + \cdots + 2z+2\)].}
+
+By definition \(w_{k+1} = w_{k-1} + k + 1 = w_{k-1} + 2z+2\).
+
+By inductive hypothesis, \(w_{k-1} = 2 + 4 + 6 + \cdots + 2z\).
+
+Substituting we get \(w_{k+1} = 2 + 4 + 6 + \cdots + 2z + 2z+2\), {\it [as was to be shown].}
+
+(Note that strong induction was needed in this problem.)
+\end{proof}
+
+\subsection{Exercise 49}
+\(u_k = u_{k-2} \cdot u_{k-1}\), for each integer \(k \geq 2\)
+
+\(u_0 = u_1 = 2\)
+
+\begin{proof}
+\(u_0 = u_1 = 2\)
+
+\(u_2 = u_1 \cdot u_0 = 2^2\)
+
+\(u_3 = u_2 \cdot u_1 = 2^3\)
+
+\(u_4 = u_3 \cdot u_2 = 2^5\)
+
+\(u_5 = u_4 \cdot u_3 = 2^8\)
+
+Guess: \(u_n = 2^{F_n}\) where $F_n$ is the Fibonacci sequence defined by \(F_0 = F_1 = 1\) and 
+\(F_n = F_{n-1} + F_{n-2}\) for \(n \geq 2\).
+
+Let $P(n)$ be the equation \(u_n = 2^{F_n}\).
+
+{\bf Show that $P(0)$ and $P(1)$ are true:} \(u_0 = 2 = 2^1 = 2^{F_0}\) and \(u_1 = 2 = 2^1 = 2^{F_1}\).
+So $P(0)$ and $P(1)$ are true.
+
+{\bf Show that for any integer \(k \geq 0\) if $P(i)$ is true for all integers $i$ with \(0 \leq i \leq k\), then
+$P(k+1)$ is true:}
+
+Assume \(k \geq 0\) is any integer and assume \(u_i = 2^{F_i}\) for all integers $i$ with \(0 \leq i \leq k\).
+{\it [We want to show \(u_{k+1} = 2^{F_{k+1}}\)].}
+
+By definition, \(u_{k+1} = u_k \cdot u_{k-1}\).
+
+By inductive hypothesis \(u_k = 2^{F_k}\) and \(u_{k-1} = 2^{F_{k-1}}\).
+
+Substituting, we get \(u_{k+1} = 2^{F_k} \cdot 2^{F_{k-1}} = 2^{F_k + F_{k-1}} = 2^{F_{k+1}}\),
+{\it [as was to be shown.]}
+\end{proof}
+
+{\bf \cy In 50 and 51 determine whether the given recursively defined sequence satisfies the explicit formula \(a_n = (n - 1)^2\), for every integer \(n \geq 1\).}
+
+\subsection{Exercise 50}
+\(a_k = 2a_{k-1} + k-1\), for each integer \(k \geq 2\)
+
+\(a_1 = 0\)
+
+\begin{proof}
+Performing the inductive step for a proof by mathematical induction of the formula, involves substituting 
+\((k - 2)^2\) in place of \(a_{k-1}\) in the expression \(a_k = 2a_{k-1} + k - 1\) in hopes of showing that $a_k$
+equals \((k - 1)^2\). However, solving \(2(k - 2)^2 + k - 1 = (k - 1)^2\) for $k$, gives that \(k^2 - 5k + 6 = 0\), 
+which implies that \(k = 2\) or \(k = 3\). It turns out that the sequence \(a_1, a_2, a_3, \ldots\) does satisfy 
+the given formula for \(k = 2\) and \(k = 3\), but when \(k = 4\), \(a_4 = 2 \cdot 4 + (4 - 1) = 11\), and 
+\(11 \neq (4 - 1)^2\). Hence the sequence does not satisfy the formula for $n = 4$.
+\end{proof}
+
+\subsection{Exercise 51}
+\(a_k = 4a_{k-1} - k + 3\), for each integer \(k \geq 2\)
+
+\(a_1 = 0\)
+
+\begin{proof}
+\(a_1 = 0 = (1-1)^2\) is satisfied.
+
+\(a_2 = 4a_1 - 2 + 3 = 4 \cdot 0 - 2 + 3 = 1 = (2-1)^2\) is satisfied.
+
+\(a_3 = 4a_2 - 3 + 3 = 4 \cdot 1 - 3 + 3 = 4 = (3-1)^2\) is satisfied.
+
+\(a_4 = 4a_3 - 4 + 3 = 4 \cdot 4 - 4 + 3 = 15 \neq (4-1)^2\) is not satisfied.
+\end{proof}
+
+\subsection{Exercise 52}
+A single line divides a plane into two regions. Two lines (by crossing) can divide a plane into four regions; three 
+lines can divide it into seven regions (see the figure). Let $P_n$ be the maximum number of regions into which $n$ 
+lines divide a plane, where $n$ is a positive integer.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.7.52.png}
+\end{figure}
+
+\subsubsection{(a)}
+Derive a recurrence relation for $P_k$ in terms of \(P_{k-1}\), for each integer \(k \geq 2\).
+
+{\it Hint:} The maximum number of regions is obtained when each additional line crosses all the previous lines, but 
+not at any point that is already the intersection of two lines. When a new line is added, it divides each region 
+through which it passes into two pieces. The number of regions a newly added line passes through is one more than 
+the number of lines it crosses.
+
+\begin{proof}
+(following the Hint) \(P_k = P_{k-1} + k\) for \(k \geq 2\).
+\end{proof}
+
+\subsubsection{(b)}
+Use iteration to guess an explicit formula for $P_n$.
+
+\begin{proof}
+\(P_1 = 2\)
+
+\(P_2 = P_1 + 2 = 2 + 2 = 4\)
+
+\(P_3 = P_2 + 3 = 2 + (2 + 3) = 7\)
+
+\(P_4 = P_3 + 4 = 2 + (2 + 3 + 4) = 11\)
+
+\(P_n = P_{n-1} + n = 2 + (2 + 3 + 4 + \cdots + n) = 1 + (1 + 2 + 3 + 4 + \cdots + n) = 1 + \frac{n(n+1)}{2}\)
+\end{proof}
+
+\subsection{Exercise 53}
+Compute \(
+\left[ 
+\begin{array}{cc}
+1 & 1 \\
+1 & 0
+\end{array}
+\right]^n
+\) for small values of $n$ (up to about 5 or 6). Conjecture explicit formulas for the entries in this matrix, and prove 
+your conjecture using mathematical induction. 
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
+\subsection{Exercise 54}
+In economics the behavior of an economy from one period to another is often modeled by recurrence relations. Let $Y_k$ 
+be the income in period $k$ and $C_k$ be the consumption in period $k$. In one economic model, income in any period is 
+assumed to be the sum of consumption in that period plus investment and government expenditures (which are assumed 
+to be constant from period to period), and consumption in each period is assumed to be a linear function of the 
+income of the preceding period. That is, \(Y_k = C_k + E\) where $E$ is the sum of investment plus government 
+expenditures \(C_k = c + m Y_{k-1}\) where $c$ and $m$ are constants. Substituting the second equation into the first 
+gives \(Y_k = E + c + m Y_{k-1}\).
+
+\subsubsection{(a)}
+Use iteration on the above recurrence relation to obtain
+\[
+Y_n = (E + c)\left(\frac{m^n - 1}{m^n + 1}\right) + m^n Y_0
+\]
+for every integer \(n \geq 1\).
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
+\subsubsection{(b)}
+(For students who have studied calculus) Show that if \(0 < m < 1\), then \(\dps \lim_{n \to \infty} Y_n = \frac{E + c}{1 + m}\).
+
+\begin{proof}
+{\it ???}
+\end{proof}
+
 \end{document}
