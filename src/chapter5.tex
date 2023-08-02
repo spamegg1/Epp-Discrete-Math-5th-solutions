@@ -8152,4 +8152,665 @@ for every integer \(n \geq 1\).
 {\it ???}
 \end{proof}
 
+\section{Exercise Set 5.8}
+
+\subsection{Exercise 1}
+Which of the following are second-order linear homogeneous recurrence relations with constant coefficients?
+
+\subsubsection{(a)}
+\(a_k = 2a_{k-1} - 5a_{k-2}\)
+
+\begin{proof}
+Yes (2 and $-5$ are both constants).
+\end{proof}
+
+\subsubsection{(b)}
+\(b_k = kb_{k-1} + b_{k-2}\)
+
+\begin{proof}
+No ($k$ is not a constant).
+\end{proof}
+
+\subsubsection{(c)}
+\(c_k = 3c_{k-1} \cdot c^2_{k - 2}\)
+
+\begin{proof}
+No (the right-hand side is not linear due to squaring and multiplication of the terms).
+\end{proof}
+
+\subsubsection{(d)}
+\(d_k = 3d_{k-1} + d_{k-2}\)
+
+\begin{proof}
+Yes.
+\end{proof}
+
+\subsubsection{(e)}
+\(r_k = r_{k-1} - r_{k-2} - 2\)
+
+\begin{proof}
+No (due to the $-2$ it is not linear).
+\end{proof}
+
+\subsubsection{(f)}
+\(s_k = 10s_{k-2}\)
+
+\begin{proof}
+Yes.
+\end{proof}
+
+\subsection{Exercise 2}
+Which of the following are second-order linear homogeneous recurrence relations with constant coefficients?
+
+\subsubsection{(a)}
+\(a_k = (k-1)a_{k-1} + 2ka_{k-2}\)
+
+\begin{proof}
+No ($k-1$ is not constant).
+\end{proof}
+
+\subsubsection{(b)}
+\(b_k = -b_{k-1} + 7b_{k-2}\)
+
+\begin{proof}
+Yes.
+\end{proof}
+
+\subsubsection{(c)}
+\(c_k = 3c_{k-1} + 1\)
+
+\begin{proof}
+No (due to the $+ 1$ it is not linear).
+\end{proof}
+
+\subsubsection{(d)}
+\(d_k = 3d^2_{k-1} + d_{k-2}\)
+
+\begin{proof}
+No (due to squaring on the right-hand side, it is not linear).
+\end{proof}
+
+\subsubsection{(e)}
+\(r_k = r_{k-1} - 6r_{k-3}\)
+
+\begin{proof}
+Yes.
+\end{proof}
+
+\subsubsection{(f)}
+\(s_k = s_{k-1} + 10s_{k-2}\)
+
+\begin{proof}
+Yes.
+\end{proof}
+
+\subsection{Exercise 3}
+Let \(a_0, a_1, a_2, \ldots\) be the sequence defined by the explicit formula \(a_n = C \cdot 2^n + D\) for every 
+integer \(n \geq 0\), where $C$ and $D$ are real numbers.
+
+\subsubsection{(a)}
+Find $C$ and $D$ so that \(a_0 = 1\) and \(a_1 = 3\). What is $a_2$ in this case?
+
+\begin{proof}
+\(a_0 = 1 = C \cdot 2^0 + D = C + D\)
+
+\(a_1 = 3 = C \cdot 2^1 + D = 2C + D\)
+
+We have two equations in two unknowns: \(C+D = 1\) and \(2C+D = 3\). So we get $D = 1-C$; substituting, we get
+\(2C + (1-C) = 3\) which gives $C = 2$ and $D = 1-2 = -1$.
+
+In this case \(a_2 = 2 \cdot 2^2 - 1 = 7\).
+\end{proof}
+
+\subsubsection{(b)}
+Find $C$ and $D$ so that \(a_0 = 0\) and \(a_1 = 2\). What is $a_2$ in this case?
+
+\begin{proof}
+\(a_0 = 0 = C \cdot 2^0 + D = C + D\)
+
+\(a_1 = 2 = C \cdot 2^1 + D = 2C + D\)
+
+We have two equations in two unknowns: \(C+D = 0\) and \(2C+D = 2\). So we get $D = -C$; substituting, we get
+\(2C + (-C) = 2\) which gives $C = 2$ and $D = -2$.
+
+In this case \(a_2 = 2 \cdot 2^2 - 2 = 6\).
+\end{proof}
+
+\subsection{Exercise 4}
+Let \(b_0, b_1, b_2, \ldots\) be the sequence defined by the explicit formula \(b_n = C \cdot 3^n + D(-2)^n\) for 
+every integer \(n \geq 0\), where $C$ and $D$ are real numbers.
+
+\subsubsection{(a)}
+Find $C$ and $D$ so that \(b_0 = 0\) and \(b_1 = 5\). What is $b_2$ in this case?
+
+\begin{proof}
+\(b_0 = 0 = C \cdot 3^0 + D(-2)^0 = C + D\)
+
+\(b_1 = 5 = C \cdot 3^1 + D(-2)^1 = 3C - 2D\)
+
+We have two equations in two unknowns: \(C+D = 0\) and \(3C-2D = 5\). So we get $D = -C$; substituting, we get
+\(3C -2(-C) = 5\) which gives $C = 1$ and $D = -1$.
+
+In this case \(b_2 = 1 \cdot 3^2 - 1(-2)^2 = 5\).
+\end{proof}
+
+\subsubsection{(b)}
+Find $C$ and $D$ so that \(b_0 = 3\) and \(b_1 = 4\). What is $b_2$ in this case?
+
+\begin{proof}
+\(b_0 = 3 = C \cdot 3^0 + D(-2)^0 = C + D\)
+
+\(b_1 = 4 = C \cdot 3^1 + D(-2)^1 = 3C - 2D\)
+
+We have two equations in two unknowns: \(C+D = 3\) and \(3C-2D = 4\). So we get $D = 3-C$; substituting, we get
+\(3C -2(3-C) = 4\) which gives \(3C - 6 + 2C = 4\), so $5C = 10$ then $C = 2$ and $D = 3-2 = 1$.
+
+In this case \(b_2 = 2 \cdot 3^2 + 1(-2)^2 = 22\).
+\end{proof}
+
+\subsection{Exercise 5}
+Let \(a_0, a_1, a_2, \ldots\) be the sequence defined by the explicit formula \(a_n = C \cdot 2^n + D\) for every 
+integer \(n \geq 0\), where $C$ and $D$ are real numbers. 
+Show that for any choice of $C$ and $D$, \(a_k = 3a_{k-1} - 2a_{k-2}\) for every integer \(k \geq 2\).
+
+\begin{proof}
+\begin{tabular}{rcl}
+\(3a_{k-1} - 2a_{k-2}\) & = & \(3(C \cdot 2^{k-1} + D) - 2(C \cdot 2^{k-2} + D)\) \\
+& = & \(3C \cdot 2^{k-1} + 3D - 2C \cdot 2^{k-2} -2D\) \\
+& = & \(3C \cdot 2^{k-1} - C \cdot 2^{k-1} + D\) \\
+& = & \(2C \cdot 2^{k-1} + D = C \cdot 2^k + D = a_k\).
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 6}
+Let \(b_0, b_1, b_2, \ldots\) be the sequence defined by the explicit formula \(b_n = C \cdot 3^n + D(-2)^n\) for 
+every integer \(n \geq 0\), where $C$ and $D$ are real numbers. Show that for any choice of $C$ and $D$, 
+\(b_k = b_{k-1} + 6b_{k-2}\) for every integer \(k \geq 2\).
+
+\begin{proof}
+\begin{tabular}{rcl}
+\(b_{k-1} + 6b_{k-2}\) & = & \((C \cdot 3^{k-1} + D(-2)^{k-1}) + 6(C \cdot 3^{k-2} + D(-2)^{k-2})\) \\
+& = & \(C \cdot 3^{k-1} + D(-2)^{k-1} + 6C \cdot 3^{k-2} + 6D(-2)^{k-2}\) \\
+& = & \(C \cdot 3^{k-1} + D(-2)^{k-1} + 2C \cdot 3^{k-1} - 3D(-2)^{k-1}\) \\
+& = & \(3C \cdot 3^{k-1} - 2D(-2)^{k-1}\) \\
+& = & \(C \cdot 3^k + D(-2)^k = b_k\)
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 7}
+Solve the system of equations in Example 5.8.4 to obtain \(\dps C = \frac{1 + \sqrt{5}}{2 \sqrt{5}}\) 
+and \(\dps D = \frac{-(1 - \sqrt{5})}{2 \sqrt{5}}\).
+
+\begin{proof}
+The equations are: \(C + D = 1\) and \(\dps C \frac{1 + \sqrt{5}}{2} + D \frac{1 - \sqrt{5}}{2} = 1\).
+
+First equation gives $D = 1 - C$. Substituting, we get
+\[
+C \frac{1 + \sqrt{5}}{2} + (1-C) \frac{1 - \sqrt{5}}{2} = 1 \,\,\, \to \,\,\, 
+C\left(\frac{1 + \sqrt{5}}{2} - \frac{1 - \sqrt{5}}{2}\right) = 1 - \frac{1 - \sqrt{5}}{2}
+\]
+Simplifying, we get
+\[
+C \sqrt{5} = \frac{1 + \sqrt{5}}{2} \,\,\, \to \,\,\, 
+C = \frac{1 + \sqrt{5}}{2 \sqrt{5}}
+\]
+Substituting this back into $D = 1 - C$ we get \(\dps D = \frac{-(1 - \sqrt{5})}{2 \sqrt{5}}\).
+\end{proof}
+
+{\bf \cy In each of $8-10$: (a) suppose a sequence of the form \(1, t, t^2, t^3, \ldots, t_n \ldots\) where 
+\(t \neq 0\), satisfies the given recurrence relation (but not necessarily the initial conditions), and find all 
+possible values of $t$: (b) suppose a sequence satisfies the given initial conditions as well as the recurrence 
+relation, and find an explicit formula for the sequence.}
+
+\subsection{Exercise 8}
+\(a_k = 2a_{k-1} + 3a_{k-2}\), for every integer \(k \geq 2\)
+
+\(a_0 = 1, a_1 = 2\)
+
+\begin{proof}
+Here $A = 2$ and $B = 3$ so the characteristic equation is: \(t^2 - 2t - 3 = 0\). 
+Factoring, we get \((t - 3)(t+1) = 0\), so $t = -1, 3$.
+
+By the distinct roots theorem, this gives us a solution \(a_k = C(-1)^k + D \cdot 3^k\). We obtain:
+
+\(a_0 = 1 = C(-1)^0 + D \cdot 3^0 = C + D\)
+
+\(a_1 = 2 = C(-1)^1 + D \cdot 3^1 = -C + 3D\)
+
+Adding these equations we get \(1 + 2 = C + D - C + 3D\) so $D = 3/4$ and $C = 1/4$.
+
+Formula: \(a_n = \frac{1}{4}(-1)^n + \frac{3}{4} \cdot 3^n\) for every \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 9}
+\(b_k = 7b_{k-1} - 10b_{k-2}\), for every integer \(k \geq 2\)
+
+\(b_0 = 2, b_1 = 2\)
+
+\begin{proof}
+Here $A = 7$ and $B = -10$ so the characteristic equation is: \(t^2 - 7t + 10 = 0\). 
+Factoring, we get \((t - 2)(t - 5) = 0\), so $t = 2, 5$.
+
+By the distinct roots theorem, this gives us a solution \(b_k = C \cdot 2^k + D \cdot 5^k\). We obtain:
+
+\(b_0 = 2 = C \cdot 2^0 + D \cdot 5^0 = C + D\)
+
+\(b_1 = 2 = C \cdot 2^1 + D \cdot 5^1 = 2C + 5D\)
+
+First equation gives $D = 2 - C$. Substituting, we get \(2 = 2C + 5(2 - C) = 2C + 10 - 5C = 10 - 3C\). Solving, we get
+$C = 8/3$ and $D = 2-8/3 = -2/3$.
+
+Formula: \(b_n = \frac{8}{3} \cdot 2^n - \frac{2}{3} \cdot 5^n\) for every \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 10}
+\(c_k = c_{k-1} + 6c_{k-2}\), for every integer \(k \geq 2\)
+
+\(c_0 = 0, c_1 = 3\)
+
+\begin{proof}
+Here $A = 1$ and $B = 6$ so the characteristic equation is: \(t^2 - t - 6 = 0\). 
+Factoring, we get \((t + 2)(t - 3) = 0\), so $t = -2, 3$.
+
+By the distinct roots theorem, this gives us a solution \(c_k = C(-2)^k + D \cdot 3^k\). We obtain:
+
+\(c_0 = 0 = C(-2)^0 + D \cdot 3^0 = C + D\)
+
+\(c_1 = 3 = C(-2)^1 + D \cdot 3^1 = -2C + 3D\)
+
+First equation gives $D = - C$. Substituting, we get \(3 = -2C + 3(- C) = - 5C\). Solving, we get $C = -3/5$ and $D = 3/5$.
+
+Formula: \(c_n = -\frac{3}{5}(-2)^n + \frac{3}{5} \cdot 3^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+{\bf \cy In each of $11-16$ suppose a sequence satisfies the given recurrence relation and initial conditions. Find an explicit formula for the sequence.}
+
+\subsection{Exercise 11}
+\(d_k = 4d_{k-2}\), for every integer \(k \geq 2\)
+
+\(d_0 = 1, d_1 = -1\)
+
+\begin{proof}
+Here $A = 0$ and $B = 4$ so the characteristic equation is: \(t^2 - 4 = 0\). 
+Factoring, we get \((t + 2)(t - 2) = 0\), so $t = -2, 2$.
+
+By the distinct roots theorem, this gives us a solution \(d_k = C(-2)^k + D \cdot 2^k\). We obtain:
+
+\(d_0 = 1 = C(-2)^0 + D \cdot 2^0 = C + D\)
+
+\(d_1 = -1 = C(-2)^1 + D \cdot 2^1 = -2C + 2D\)
+
+First equation gives $D = 1 - C$. Substituting, we get \(-1 = -2C + 2(1 - C) = 2 - 4C\). Solving, we get $C = 3/4$ and $D = 1/4$.
+
+Formula: \(d_n = \frac{3}{4}(-2)^n + \frac{1}{4} \cdot 2^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 12}
+\(e_k = 9e_{k-2}\), for every integer \(k \geq 2\)
+
+\(e_0 = 0, e_1 = 2\)
+
+\begin{proof}
+Here $A = 0$ and $B = 9$ so the characteristic equation is: \(t^2 - 9 = 0\). 
+Factoring, we get \((t + 3)(t - 3) = 0\), so $t = -3, 3$.
+
+By the distinct roots theorem, this gives us a solution \(e_k = C(-3)^k + D \cdot 3^k\). We obtain:
+
+\(e_0 = 0 = C(-3)^0 + D \cdot 3^0 = C + D\)
+
+\(e_1 = 2 = C(-3)^1 + D \cdot 3^1 = -3C + 3D\)
+
+First equation gives $D = - C$. Substituting, we get \(2 = -3C + 3(- C) = -6C\). Solving, we get $C = -1/3$ and $D = 1/3$.
+
+Formula: \(e_n = -\frac{1}{3}(-3)^n + \frac{1}{3} \cdot 3^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 13}
+\(r_k = 2r_{k-1} - r_{k-2}\), for every integer \(k \geq 2\)
+
+\(r_0 = 1, r_1 = 4\)
+
+\begin{proof}
+Here $A = 2$ and $B = -1$ so the characteristic equation is: \(t^2 - 2t +1 = 0\). 
+Factoring, we get \((t - 1)^2 = 0\), so $t = 1$.
+
+By the single root theorem, this gives us a solution \(r_k = C \cdot 1^k + D \cdot k \cdot 1^k = C + Dk\). We obtain:
+
+\(r_0 = 1 = C + D \cdot 0 = C\)
+
+\(r_1 = 4 = C + D \cdot 1 = C + D\)
+
+First equation gives $C = 1$. Substituting, we get $D = 3$.
+
+Formula: \(r_n = 1 + 3n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 14}
+\(s_k = -4s_{k-1} - 4s_{k-2}\), for every integer \(k \geq 2\)
+
+\(s_0 = 1, s_1 = -1\)
+
+\begin{proof}
+Here $A = -4$ and $B = -4$ so the characteristic equation is: \(t^2 + 4t + 4 = 0\). 
+Factoring, we get \((t + 2)^2 = 0\), so $t = -2$.
+
+By the single root theorem, this gives us a solution \(s_k = C(-2)^k + Dk(-2)^k = (C + Dk)(-2)^k\). We obtain:
+
+\(s_0 = 1 = (C + D \cdot 0)(-2)^0 = C\)
+
+\(s_1 = -1 = (C + D \cdot 1)(-2)^1 = -2C - 2D\)
+
+First equation gives $C = 1$. Substituting, we get $D = -1/2$.
+
+Formula: \(s_n = (1 - \frac{n}{2})(-2)^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 15}
+\(t_k = 6t_{k-1} - 9t_{k-2}\), for every integer \(k \geq 2\)
+
+\(t_0 = 1, t_1 = 3\)
+
+\begin{proof}
+Here $A = 6$ and $B = -9$ so the characteristic equation is: \(t^2 - 6t + 9 = 0\). 
+Factoring, we get \((t - 3)^2 = 0\), so $t = 3$.
+
+By the single root theorem, this gives us a solution \(s_k = C \cdot 3^k + Dk \cdot 3^k = (C + Dk) \cdot 3^k\). 
+We obtain:
+
+\(t_0 = 1 = (C + D \cdot 0) \cdot 3^0 = C\)
+
+\(t_1 = 3 = (C + D \cdot 1) \cdot 3^1 = 3C + 3D\)
+
+First equation gives $C = 1$. Substituting, we get $D = 0$.
+
+Formula: \(t_n = 3^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 16}
+\(s_k = 2s_{k-1} + 2s_{k-2}\), for every integer \(k \geq 2\)
+
+\(s_0 = 1, s_1 = 3\)
+
+\begin{proof}
+Here $A = 2$ and $B = 2$ so the characteristic equation is: \(t^2 - 2t - 2 = 0\). 
+Solving, we get \(\dps t = \frac{2 \pm \sqrt{(-2)^2 - 4(1)(-2)}}{2} = 1 \pm \sqrt{3}\).
+
+By the distinct roots theorem, this gives us a solution \(s_k = C(1+\sqrt{3})^k + D(1-\sqrt{3})^k\). We obtain:
+
+\(s_0 = 1 = C(1+\sqrt{3})^0 + D(1-\sqrt{3})^0 = C + D\)
+
+\(s_1 = 3 = C(1+\sqrt{3})^1 + D(1-\sqrt{3})^1 = C + D + \sqrt{3}(C - D)\)
+
+First equation gives $D = 1 - C$. Substituting, we get \(3 = C + (1 - C) + \sqrt{3}(C - 1 + C) = 2\sqrt{3}C + 1 - \sqrt{3}\).
+Solving, we get \(\dps C = \frac{2 + \sqrt{3}}{2\sqrt{3}}\) and \(\dps D = 1 - C = \frac{\sqrt{3} - 2}{2\sqrt{3}}\).
+
+Formula: \(\dps s_n = \frac{2 + \sqrt{3}}{2\sqrt{3}}(1+\sqrt{3})^n + \frac{\sqrt{3} - 2}{2\sqrt{3}}(1 - \sqrt{3})^n\) 
+for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 17}
+Find an explicit formula for the sequence of exercise 39 in Section 5.6.
+
+\begin{proof}
+\(c_n = c_{n-1} + c_{n-2}\) and \(c_0 = 1, c_1 = 2\)
+
+Here $A = 1$ and $B = 1$ so the characteristic equation is: \(t^2 - t - 1 = 0\). 
+Solving, we get \(\dps t = \frac{1 \pm \sqrt{(-1)^2 - 4(1)(-1)}}{2} = \frac{1 \pm \sqrt{5}}{2}\).
+
+For notational simplicity let \(x = \frac{1 + \sqrt{5}}{2}\) and \(y = \frac{1 - \sqrt{5}}{2}\).
+Notice that \(x+y = 1\) and \(x - y = \sqrt{5}\).
+
+By the distinct roots theorem, this gives us a solution \(c_k = Cx^k + Dy^k\). We obtain:
+
+\(c_0 = 1 = Cx^0 + Dy^0 = C + D\)
+
+\(c_1 = 2 = Cx^1 + Dy^1 = Cx + Dy\)
+
+First equation gives $D = 1 - C$. Substituting, we get \(2 = Cx + (1 - C)y = y + C(x-y)\).
+
+Solving, we get \(\dps C = \frac{2-y}{x-y} = \frac{(3 + \sqrt{5}) / 2}{\sqrt{5}} = \frac{3 + \sqrt{5}}{2\sqrt{5}}\) 
+
+and \(\dps D = 1 - C = 1 - \frac{3 + \sqrt{5}}{2\sqrt{5}} = \frac{-3 + \sqrt{5}}{2\sqrt{5}}\).
+
+Formula: \(\dps c_n = \frac{3 + \sqrt{5}}{2\sqrt{5}}\left(\frac{1 + \sqrt{5}}{2}\right)^n + \frac{-3 + 
+\sqrt{5}}{2\sqrt{5}}\left(\frac{1 - \sqrt{5}}{2}\right)^n\) 
+for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 18}
+Suppose that the sequences \(s_0, s_1, s_2, \ldots\) and \(t_0, t_1, t_2, \ldots\) both satisfy the same second-order 
+linear homogeneous recurrence relation with constant coefficients:
+
+\(s_k = 5s_{k-1} - 4s_{k-2}\) for each integer \(k \geq 2\)
+
+\(t_k = 5t_{k-1} - 4t_{k-2}\) for each integer \(k \geq 2\)
+
+Show that the sequence \(2s_0 + 3t_0, 2s_1 + 3t_1, 2s_2 + 3t_2, \ldots\) also satisfies the same relation. 
+In other words, show that
+
+\(2s_k + 3t_k = 5(2s_{k-1} + 3t_{k-1}) - 4(2s_{k-2} + 3t_{k-2}\) for each integer \(k \geq 2\).
+
+Do {\it not} use Lemma 5.8.2.
+
+\begin{proof}
+\begin{tabular}{rcl}
+\(2s_k + 3t_k\) & = & \(2(5s_{k-1} - 4s_{k-2}) + 3(5t_{k-1} - 4t_{k-2})\) \\
+& = & \(10s_{k-1} - 8s_{k-2} + 15t_{k-1} - 12t_{k-2}\) \\
+& = & \(10s_{k-1} + 15t_{k-1} - 8s_{k-2} - 12t_{k-2}\) \\
+& = & \(5(2s_{k-1} + 3t_{k-1}) - 4(2s_{k-2} + 3t_{k-2})\)
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 19}
+Show that if \(r, s, a_0, a_1\) are numbers with \(r \neq s\), then there exist unique numbers $C$ and $D$ so that 
+\(C + D = a_0, \,\,\,\, Cr + Ds = a_1\).
+
+\begin{proof}
+Suppose \(r, s, a_0, a_1\) are numbers with \(r \neq s\). Consider the system of equations
+\begin{center}
+\begin{tabular}{rcl}
+\(C + D\) & = & \(a_0\) \\
+\(Cr + Ds\) & = & \(a_1\)
+\end{tabular}
+\end{center}
+By solving for $D$ and substituting, we find that
+\begin{center}
+\begin{tabular}{rcl}
+\(D\) & = & \(a_0 - C\) \\
+\(Cr + (a_0 - C)s\) & = & \(a_1\)
+\end{tabular}
+\end{center}
+Hence \(C(r-s) = a_1 - a_0s\). Since \(r \neq s\), both sides may be divided by $r - s$. Thus the given system of 
+equations has the unique solution \(\dps C = \frac{a_1 - a_0s}{r-s}\) and 
+\[
+D = a_0 - C = a_0 - \frac{a_1 - a_0s}{r-s} = \frac{a_0r - a_0s - a_1 + a_0s}{r-s} = \frac{a_0r - a_1}{r-s}.
+\]
+{\it Alternative solution:} Since the determinant of the system is \(1 \cdot s - r \cdot 1 = s - r\) and since 
+\(r \neq s\), the given system has nonzero determinant and therefore has a unique solution.
+\end{proof}
+
+\subsection{Exercise 20}
+Show that if $r$ is a nonzero real number, $k$ and $m$ are distinct integers, and $a_k$ and $a_m$ are any real 
+numbers, then there exist unique real numbers $C$ and $D$ so that
+\[
+Cr^k + kDr^k = a_k, \,\,\,\,\,\, Cr^m + mDr^m = a_m
+\]
+\begin{proof}
+Suppose \(r \neq 0\) is a real number, $k$ and $m$ are integers with \(k \neq m\), and $a_k, a_m$ are any real numbers. 
+Consider the system of equations
+\begin{center}
+\begin{tabular}{rcl}
+\(Cr^k + kDr^k\) & = & \(a_k\) \\
+\(Cr^m + mDr^m\) & = & \(a_m\)
+\end{tabular}
+\end{center}
+Since $r \neq 0$ we can divide by $r^k$. By solving for $D$ and substituting, we find that
+\begin{center}
+\begin{tabular}{rcl}
+\(D\) & = & \(\dps \frac{a_k - Cr^k}{kr^k}\) \\
+\(\dps Cr^m + m \frac{a_k - Cr^k}{kr^k} r^m\) & = & \(a_m\)
+\end{tabular}
+\end{center}
+Since \(r \neq 0\), both sides may be divided by $r^m$. 
+Thus
+\[
+C + m \frac{a_k - Cr^k}{kr^k} = \frac{a_m}{r^m} \, \to \, 
+C + \frac{ma_k}{kr^k} - \frac{Cm}{k} = \frac{a_m}{r^m} \to
+C\left(1 - \frac{m}{k}\right) = \frac{a_m}{r^m} - \frac{ma_k}{kr^k}
+\]
+Since $k \neq m$, $1 - m/k \neq 0$. So we can divide both sides by $1 - m/k$. Therefore there is a unique solution
+\[
+C = \frac{\dps \frac{a_m}{r^m} - \frac{ma_k}{kr^k}}{\dps 1 - \frac{m}{k}}
+= \frac{\dps \frac{a_m kr^k - a_k mr^m}{kr^{m+k}}}{\dps \frac{k - m}{k}}
+= \frac{a_m kr^k - a_k mr^m}{r^{m+k}(k-m)}
+\]
+and
+\[
+D = \frac{a_k - Cr^k}{kr^k} = \frac{a_k}{kr^k} - \frac{C}{k} 
+= \frac{a_k}{kr^k} - \frac{a_m kr^k - a_k mr^m}{kr^{m+k}(k-m)}
+= \frac{(k-m)a_k r^m}{kr^{m+k}(k-m)} - \frac{a_m kr^k - a_k mr^m}{kr^{m+k}(k-m)}
+\]
+\[
+D = \frac{ka_k r^m - ma_k r^m - a_m kr^k + a_k mr^m}{kr^{m+k}(k-m)}
+= \frac{ka_k r^m - a_m kr^k}{kr^{m+k}(k-m)}
+= \frac{a_k r^m - a_m r^k}{r^{m+k}(k-m)}.
+\]
+\end{proof}
+
+\subsection{Exercise 21}
+Prove Theorem 5.8.5 for the case where the values of $C$ and $D$ are determined by $a_0$ and $a_1$.
+
+{\it Hint:} Use strong mathematical induction. First note that the formula holds for \(n = 0\) and \(n = 1\). To 
+prove the inductive step, suppose that $k$ is any integer such that \(k \geq 2\) and the formula holds for every 
+integer $i$ with \(0 \leq i \leq k\). Then show that the formula holds for $k + 1$. Use the proof of Theorem 5.8.3 
+(the distinct roots theorem) as a model.
+
+\begin{proof}
+Suppose a sequence \(a_0, a_1, a_2, \ldots\) satisfies a recurrence relation \(a_k = Aa_{k-1} + Ba_{k-2}\) for some 
+real numbers $A$ and $B$ with \(B \neq 0\) and for every integer \(k \geq 2\). Assume the characteristic equation
+\(t^2 - At - B = 0\) has a single (real) root $r$. 
+
+Assume $C$ and $D$ are the real numbers whose values are 
+determined by the values of $a_0, a_1$, in other words $C$ 
+and $D$ are numbers such that \(a_0 = Cr^0 + D \cdot 0 \cdot r^0$ and $a_1 = Cr^1 + D \cdot 1 \cdot r^1$.
+
+Let $P(n)$ be the equation \(a_n = Cr^n + Dnr^n\).
+
+{\bf Show that $P(0)$ and $P(1)$ are true:} $P(0)$ says \(a_0 = C\) and $P(1)$ says \(a_1 = Cr + Dr\). These
+equalities are true by our assumption that $C$ and $D$ are determined by $a_0$ and $a_1$.
+
+{\bf Show that for any integer \(k \geq 2\) if $P(i)$ is true for all integers $i$ with \(0 \leq i \leq k\) then
+$P(k+1)$ is true:} 
+
+Assume \(k \geq 2\) and assume for all integers $i$ with \(0 \leq i \leq k\) we have \(a_i = Cr^i + Dir^i\).
+
+{\it [We want to show \(a_{k+1} = Cr^{k+1} + D(k+1)r^{k+1}\).]}
+
+By the recurrence, \(a_{k+1} = Aa_k + Ba_{k-1}\).
+
+By the inductive hypothesis, \(a_k = Cr^k + Dkr^k\) and \(a_{k-1} = Cr^{k-1} + D(k-1)r^{k-1}\).
+
+Substituting, we get \(a_{k+1} = A(Cr^k + Dkr^k) + B(Cr^{k-1} + D(k-1)r^{k-1})\).
+
+Rearranging terms, we get \(a_{k+1} = C(Ar^k + Br^{k-1}) + D(Akr^k + B(k-1)r^{k-1})\).
+
+{\it [We want to show that \(Ar^k + Br^{k-1} = r^{k+1}\) and \(Akr^k + B(k-1)r^{k-1} = (k+1)r^{k+1}\)]}.
+
+Why is this true? Because $r$ satisfies the characteristic equation, both \(1, r, r^2, \ldots, r^n, \ldots\) and \(0, r, 2r^2, \ldots, nr^n, \ldots\) also satisfy the same recurrence relation as $a_k$, by Lemma 5.8.4.
+
+Therefore
+\[
+a_{k+1} = C(Ar^k + Br^{k-1}) + D(Akr^k + B(k-1)r^{k-1}) = Cr^{k+1} + D(k+1)r^{k+1},
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+{\bf \cy Exercises 22 and 23 are intended for students who are familiar with complex numbers.}
+
+\subsection{Exercise 22}
+Find an explicit formula for a sequence \(a_0, a_1, a_2, \ldots\) that satisfies \(a_k = 2a_{k-1} - 2a_{k-2}\) 
+for every integer \(k \geq 2\) with initial conditions \(a_0 = 1, a_1 = 2\).
+
+\begin{proof}
+Here $A = 2$ and $B = -2$ so the characteristic equation is: \(t^2 - 2t + 2 = 0\). 
+Solving, we get \(\dps t = \frac{2 \pm \sqrt{(-2)^2 - 4(1)(2)}}{2} = 1 \pm i\).
+
+By the distinct roots theorem, this gives us a solution \(a_k = C(1+i)^k + D(1-i)^k\). We obtain:
+
+\(a_0 = 1 = C(1+i)^0 + D(1-i)^0 = C + D\)
+
+\(a_1 = 2 = C(1+i)^1 + D(1-i)^1 = (C + D) + i(C - D)\)
+
+First equation gives $D = 1 - C$. Substituting, we get \(2 = (C+1-C) + i(C - 1 + C) = 1 + i(2C-1)\).
+
+Solving, we get \(1 = i(2C-1)\) then \(\frac{1}{i} = 2C-1\) then \(-i = 2C-1\) so \(C = \frac{1-i}{2}\),
+and \(\dps D = 1 - C = 1 - \frac{1-i}{2} = \frac{1+i}{2}\).
+
+Formula: \(\dps a_n = \frac{1-i}{2}(1+i)^n + \frac{1+i}{2}(1-i)^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 23}
+Find an explicit formula for a sequence \(b_0, b_1, b_2, \ldots\) that satisfies \(b_k = 2b_{k-1} - 5b_{k-2}\) 
+for every integer \(k \geq 2\) with initial conditions \(b_0 = 1, b_1 = 1\).
+
+\begin{proof}
+Here $A = 2$ and $B = -5$ so the characteristic equation is: \(t^2 - 2t + 5 = 0\). 
+Solving, we get \(\dps t = \frac{2 \pm \sqrt{(-2)^2 - 4(1)(5)}}{2} = 1 \pm 2i\).
+
+By the distinct roots theorem, this gives us a solution \(b_k = C(1+2i)^k + D(1-2i)^k\). We obtain:
+
+\(b_0 = 1 = C(1+2i)^0 + D(1-2i)^0 = C + D\)
+
+\(b_1 = 1 = C(1+2i)^1 + D(1-2i)^1 = (C + D) + 2i(C - D)\)
+
+First equation gives $D = 1 - C$. Substituting, we get \(1 = (C+1-C) + 2i(C - 1 + C) = 1 + 2i(2C-1)\).
+
+Solving, we get \(0 = 2i(2C-1)\) so \(C = \frac{1}{2}\),
+and \(\dps D = 1 - C = \frac{1}{2}\).
+
+Formula: \(\dps b_n = \frac{1}{2}(1+2i)^n + \frac{1}{2}(1-2i)^n\) for every integer \(n \geq 0\).
+\end{proof}
+
+\subsection{Exercise 24}
+The numbers \(\frac{1 + \sqrt{5}}{2}\) and \(\frac{1 - \sqrt{5}}{2}\) that appear in the explicit formula for the 
+Fibonacci sequence are related to a quantity called the {\it golden ratio} in Greek mathematics. Consider a 
+rectangle of length $\phi$ units and height 1, where \(\phi > 1\).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/5.8.24.png}
+\end{figure}
+
+Divide the rectangle into a rectangle and a square as shown in the preceding diagram. The square is 1 unit on each 
+side, and the rectangle has sides of lengths 1 and $\phi - 1$. The ancient Greeks considered the outer rectangle to be 
+perfectly proportioned (saying that the lengths of its sides are in a {\it golden ratio} to each other) if the 
+ratio of the length to the width of the outer rectangle equals the ratio of the length to the width of the inner 
+rectangle. That is, if the number $\phi$ satisfies the equation
+\[
+\frac{\phi}{1} = \frac{1}{\phi - 1}
+\]
+\subsubsection{(a)}
+Show that if $\phi$ satisfies the equation above, then it also satisfies the quadratic equation: \(t^2 - t - 1 = 0\).
+
+\begin{proof}
+Assume \(\frac{\phi}{1} = \frac{1}{\phi - 1}\). Then \(\phi = \frac{1}{\phi - 1}\) and multiplying by $\phi - 1$ gives
+\(\phi(\phi-1) = 1\), then \(\phi^2 - \phi = 1\), therefore \(\phi^2 - \phi - 1 = 0\).
+\end{proof}
+
+\subsubsection{(b)}
+Find the two solutions of \(t^2 - t - 1 = 0\) and call them $\phi_1$ and $\phi_2$.
+
+\begin{proof}
+By the quadratic formula, \(\dps t = \frac{1 \pm \sqrt{(-1)^2 - 4(1)(-1)}}{2} = \frac{1 \pm \sqrt{5}}{2}\).
+
+So \(\dps \phi_1 = \frac{1 + \sqrt{5}}{2}\) and \(\dps \phi_2 = \frac{1 - \sqrt{5}}{2}\).
+\end{proof}
+
+\subsubsection{(c)}
+Express the explicit formula for the Fibonacci sequence in terms of $\phi_1$ and $\phi_2$.
+
+\begin{proof}
+\(\dps F_n = \frac{1}{\sqrt{5}}(\phi_1^{n+1} - \phi_2^{n+1})\).
+\end{proof}
+
 \end{document}
