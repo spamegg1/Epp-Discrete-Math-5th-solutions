@@ -8813,4 +8813,1107 @@ Express the explicit formula for the Fibonacci sequence in terms of $\phi_1$ and
 \(\dps F_n = \frac{1}{\sqrt{5}}(\phi_1^{n+1} - \phi_2^{n+1})\).
 \end{proof}
 
+\section{Exercise Set 5.9}
+
+\subsection{Exercise 1}
+Consider the set of Boolean expressions defined in Example 5.9.1. Give derivations showing that each of the following 
+is a Boolean expression over the English alphabet \(\{a, b, c, \ldots , x, y, z\}\).
+
+\subsubsection{(a)}
+\({\sim p} \vee (q \wedge (r \vee {\sim s}))\)
+
+\begin{proof}
+(1) $p, q, r$, and $s$ are Boolean expressions by I.
+
+(2) \({\sim s}\) is a Boolean expression by (1) and II(c).
+
+(3) \(r \vee {\sim s}\) is a Boolean expression by (1), (2), and II(b).
+
+(4) \((r \vee {\sim s})\) is a Boolean expression by (3) and II(d).
+
+(5) \(q \wedge (r \vee {\sim s})\) is a Boolean expression by (1), (4), and II(a).
+
+(6) \((q \wedge (r \vee {\sim s}))\) is a Boolean expression by (5) and II(d).
+
+(7) \({\sim p}\) is a Boolean expression by (1) and II(c).
+
+(8) \({\sim p} \vee (q \wedge (r \vee {\sim s}))\) is a Boolean expression by (6), (7), and II(b).
+\end{proof}
+
+\subsubsection{(b)}
+\((p \vee q) \vee {\sim ((p \wedge {\sim s}) \wedge r)}\)
+
+\begin{proof}
+(1) By I, $p, q, r, s$ are Boolean expressions. 
+
+(2) \({\sim s}\) is a Boolean expression by (1) and II(c).
+
+(3) \(p \wedge {\sim s}\) is a Boolean expression by (1), (2) and II(a).
+
+(4) \((p \wedge {\sim s})\) is a Boolean expression by (3) and II(d).
+
+(5) \((p \wedge {\sim s}) \wedge r\) is a Boolean expression by (4), (1) and II(a).
+
+(6) \(((p \wedge {\sim s}) \wedge r)\) is a Boolean expression by (5) and II(d).
+
+(7) \({\sim ((p \wedge {\sim s}) \wedge r)}\) is a Boolean expression by (6) and II(c).
+
+(8) \(p \vee q\) is a Boolean expression by (1) and II(b).
+
+(9) \((p \vee q)\) is a Boolean expression by (8) and II(d).
+
+(10) \((p \vee q) \vee {\sim ((p \wedge {\sim s}) \wedge r)}\) is a Boolean expression by (9), (7) and II(b).
+\end{proof}
+
+\subsection{Exercise 2}
+Consider the set $C$ of parenthesis structures defined in Example 5.9.2. 
+Give derivations showing that each of the following is in $C$.
+
+\subsubsection{(a)}
+()(())
+
+\begin{proof}
+(1) By I, () is in $C$.
+
+(2) By II(a) and (1), (()) is in $C$.
+
+(3) By (1), (2) and II(b), ()(()) is in $C$.
+\end{proof}
+
+\subsubsection{(b)}
+(())(())
+
+\begin{proof}
+(1) By I, () is in $C$.
+
+(2) By II(a) and (1), (()) is in $C$.
+
+(3) By (2), (2) and II(b), (())(()) is in $C$.
+\end{proof}
+
+\subsection{Exercise 3}
+Let $S$ be the set of all strings over a finite set $A$ and let $a, b$, and $c$ be any characters in $A$.
+
+(This exercise shows that parentheses are not needed when writing the string $abc$.)
+
+\subsubsection{(a)}
+Using Theorem 5.9.1 but not Theorem 5.9.3 or 5.9.4, show that \((ab)c = a(bc)\).
+
+\begin{proof}
+(1) By Theorem 5.9.1, $a$ and $b$ are strings in $S$ because $a$ and $b$ are in $A$.
+
+(2) By (1) and part II(c) of the definition of string, $a(bc) = (ab)c$ because $a$ and $b$ are strings in $S$ and 
+$c$ is in $A$.
+\end{proof}
+
+\subsubsection{(b)}
+Show that $ab$ is a string in $S$. Then use the result of part (a) to conclude that $a(bc)$ is a string in $S$.
+
+\begin{proof}
+(1) By Theorem 5.9.1, $a$ is a string in $S$ because $a$ is in $A$.
+
+(2) By (1) and II(a) the concatenation of the string $a$ and the character $b$, namely $ab$, is a string in $S$.
+
+(3) By (2) and II(a) the concatenation of the string $ab$ and the character $c$, namely $(ab)c$, is a string in $S$.
+
+(4) By part (a) $a(bc) = (ab)c$, so by (3) $a(bc)$ is a string in $S$.
+\end{proof}
+
+\subsection{Exercise 4}
+Consider the $M I U$-system discussed in Example 5.9.4. Give derivations showing that each of the following is in the $M I U$-system.
+
+\subsubsection{(a)}
+$M I U I$
+
+\begin{proof}
+(1) $M I$ is in the $M I U$ system by I.
+
+(2) $M I I$ is in the $M I U$ system by (1) and II(b).
+
+(3) $M I I I I$ is in the $M I U$ system by (3) and II(b).
+
+(4) $M I I I I I I I I$ is in the $M I U$ system by (3) and II(b).
+
+(5) $M I U I I I I$ is in the $M I U$ system by (4) and II(c).
+
+(6) $M I U U I$ is in the $M I U$ system by (5) and II(c).
+
+(7) $M I U I$ is in the $M I U$ system by (6) and II(d).
+\end{proof}
+
+\subsubsection{(b)}
+$M U I I U$
+
+\begin{proof}
+(1) $M I$ is in the $M I U$ system by I.
+
+(2) By (1) and II(b), $M I I$ is in the $M I U$-system.
+
+(3) By (2) and II(b), $M I I I I$ is in the $M I U$-system.
+
+(4) By (3) and II(b), $M I I I I I I I I$ is in the $M I U$-system.
+
+(5) By (4) and II(c), $M U I I I I I$ is in the $M I U$-system.
+
+(6) By (5) and II(c), $M U U I I$ is in the $M I U$-system.
+
+(7) By (6) and II(d), $M U I I$ is in the $M I U$-system.
+
+(8) By (7) and II(a), $M U I I U$ is in the $M I U$-system.
+
+\end{proof}
+
+\subsection{Exercise 5}
+The set of arithmetic expressions over the real numbers can be defined recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: Each real number $r$ is an arithmetic expression. \\
+II. & Recursion: If $u$ and $v$ are arithmetic expressions, then the following are also \\
+    & arithmetic expressions: \\
+& II(a) $(+u)$ \\
+& II(b) $(-u)$ \\
+& II(c) $(u + v)$ \\
+& II(d) $(u - v)$ \\
+& II(e) $(u \cdot v)$ \\
+& II(f) \(\dps \left(\frac{u}{v}\right)\) \\
+III. & Restriction: There are no arithmetic expressions over the real numbers other \\
+     & than those obtained from I and II.
+\end{tabular}
+
+(Note that the expression \(\dps \left(\frac{u}{v}\right)\) is allowed to be an arithmetic expression even though the 
+value of $v$ may be 0.) Give derivations showing that each of the following is an arithmetic expression.
+
+\subsubsection{(a)}
+\(((2 \cdot (0.3 - 4.2)) + (27))\)
+
+\begin{proof}
+(1) 2, 0.3, 4.2, and 7 are arithmetic expressions by I.
+
+(2) \((0.3 - 4.2)\) is an arithmetic expression by (1) and II(d).
+
+(3) \((2 \cdot (0.3 - 4.2))\) is an arithmetic expression by (1), (2), and II(e).
+
+(4) (-7) is an arithmetic expression by (1) and II(b).
+
+(5) \(((2 \cdot (0.3 - 4.2)) + (-7))\) is an arithmetic expression by (3), (4), and II(c).
+\end{proof}
+
+\subsubsection{(b)}
+\(\dps \left( \frac{((9 \cdot ((6 \cdot 1) + 2))}{((4 - 7) \cdot 6)}\right)\)
+
+\begin{proof}
+(1) By I, $1, 2, 4, 6, 7, 9$ are arithmetic expressions.
+
+(2) By (1) and II(d) \((4 - 7)\) is an arithmetic expression.
+
+(3) By (2) and (1) and II(e) \(((4 - 7) \cdot 6)\) is an arithmetic expression.
+
+(4) By (1) and II(e) \((6 \cdot 1)\) is an arithmetic expression.
+
+(5) By (4) and (1) and II(c) \((6 \cdot 1 + 2)\) is an arithmetic expression.
+
+(6) By (5) and (1) and II(e) \(((9 \cdot (6 \cdot 1 + 2))\) is an arithmetic expression.
+
+(7) By (6) and (3) and II(f) \(\dps \left( \frac{((9 \cdot (6 \cdot 1 + 2))}{((4 - 7) \cdot 6)}\right)\) is an
+arithmetic expression.
+\end{proof}
+
+\subsection{Exercise 6}
+Let $S$ be a set of integers defined recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: 5 is in $S$. \\
+II. & Recursion: Given any integer $n$ in $S$, $n + 4$ is in $S$. \\
+III. & Restriction: No integers are in $S$ other than those derived from rules I and II \\
+     & above.
+\end{tabular}
+
+Use structural induction to prove that for every integer $n$ in $S$, $n \mod 2 = 1$.
+
+\begin{proof}
+By the definition of $S$ in exercise 6, the only integer in the base for $S$ is 5, and the recursion rule states that 
+for every integer $n$ in $S$, \(n + 4\) is in $S$. Given any integer $n$ in $S$, let property $P(n)$ be the 
+sentence, “\(n \mod 2 = 1\).”
+
+{\bf Show that $P(n)$ is true for each integer $n$ in the base for $S$:}
+
+The only integer in the base for $S$ is 5, and $P(5)$ is true because \(5 \mod 2 = 1\) since \(5 = 2 \cdot 2 + 1\). 
+
+{\bf Show that for each integer $n$ in $S$, if $P(n)$ is true and if $m$ is obtained from $n$ by applying a rule 
+from the recursion for $S$, then $P(m)$ is true:}
+
+Suppose $n$ is any integer in $S$ such that $P(n)$ is true, or, in other words, \(n \mod 2 = 1\). {\it [This is the 
+inductive hypothesis.]} The recursion for $S$ consists of only one rule, and when the rule is applied to $n$, the 
+result is \(n + 4\). To complete the inductive step, we must show that \(P(n + 4)\) is true, or, equivalently, that 
+\((n + 4) \mod 2 = 1\). Now since \(n \mod 2 = 1\), then \(n = 2k + 1\) for some integer $k$. Hence
+\begin{center}
+\begin{tabular}{rcll}
+\((n + 4) \mod 2\) & = & \([(2k + 1) + 4] \mod 2\) & {\cy by substitution} \\
+& = & \([2(k + 2) + 1] \mod 2\) & {\cy by basic algebra} \\
+& = & 1 & {\cy because $k + 2$ is an integer} 
+\end{tabular}
+\end{center}
+and so $P(n + 4)$ is true {\it [as was to be shown].}
+
+{\bf Conclusion:} Because there are no integers in $S$ other than those obtained from the base and the recursion 
+for $S$, we conclude that every integer $n$ in $S$ satisfies the equation \(n \mod 2 = 1\).
+\end{proof}
+
+\subsection{Exercise 7}
+Define a set $S$ of strings over the set \(\{0, 1\}\) recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $1 \in S$. \\
+II. & Recursion: if $s \in S$, then \\
+    & II(a) $0s \in S$ \\
+    & II(b) $1s \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that every string in $S$ ends in a 1.
+
+\begin{proof}
+By the definition of $S$ in exercise 7, the only element in the base is 1, and the recursion rules II(a) and II(b) 
+state that for every string $s$ in $S$, $0s$ and $1s$ are in $S$. Given any string $s$ in $S$, let property $P(s)$ be 
+the sentence “$s$ ends in a 1.” 
+
+{\bf Show that $P(a)$ is true for each string $a$ in the base for $S$:}
+
+The only string in the base for $S$ is 1, which ends in a 1, and so $P(1)$ is true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+The recursion for $S$ consists of two rules: II(a) and II(b). Suppose $s$ is any string in $S$ such that $P(s)$ is 
+true, which means that $s$ ends in a 1. {\it [This is the inductive hypothesis.]} To complete the inductive step, we 
+must show that applying either of the two recursion rules to $s$ also results in a string that ends in 1. 
+
+Now when rule II(a) is applied to $s$, the result is $0s$ and when rule II(b) is applied to $s$, the result is $1s$. 
+Because $s$ ends in a 1, so do $0s$ and $1s$, which means that $P(0s)$ and $P(1s)$ are true and completes the 
+inductive step. 
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and recursion for 
+$S$, we conclude that every string in $S$ ends in a 1.
+\end{proof}
+
+\subsection{Exercise 8}
+Define a set $S$ of strings over the set \(\{a, b\}\) recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $a \in S$. \\
+II. & Recursion: if $s \in S$, then \\
+    & II(a) $sa \in S$ \\
+    & II(b) $sb \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that every string in $S$ begins with an $a$.
+
+\begin{proof}
+By the definition of $S$ in Exercise 8, the only element in the base is $a$, and the recursion rules II(a) and II(b) 
+state that for every string $s$ in $S$, $sa$ and $sb$ are in $S$. Given any string $s$ in $S$, let property $P(s)$ be 
+the sentence “$s$ begins with an $a$.” 
+
+{\bf Show that $P(x)$ is true for each string $x$ in the base for $S$:}
+
+The only string in the base for $S$ is $a$, which begins with an $a$, and so $P(a)$ is true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+The recursion for $S$ consists of two rules: II(a) and II(b). Suppose $s$ is any string in $S$ such that $P(s)$ is 
+true, which means that $s$ begins with an $a$. {\it [This is the inductive hypothesis.]} To complete the inductive 
+step, we must show that applying either of the two recursion rules to $s$ also results in a string that begins with an $a$. 
+
+Now when rule II(a) is applied to $s$, the result is $sa$ and when rule II(b) is applied to $s$, the result is $sb$. 
+Because $s$ begins with an $a$, so do $sa$ and $sb$, which means that $P(sa)$ and $P(sb)$ are true and completes the 
+inductive step. 
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and recursion for 
+$S$, we conclude that every string in $S$ begins with an $a$.
+\end{proof}
+
+\subsection{Exercise 9}
+Define a set $S$ of strings over the set \(\{a, b\}\) recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $\lambda \in S$. \\
+II. & Recursion: if $s \in S$, then \\
+    & II(a) $bs \in S$ \\
+    & II(b) $sb \in S$ \\
+    & II(c) $saa \in S$ \\
+    & II(d) $aas \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that every string in $S$ contains an even number of $a$'s.
+
+\begin{proof}
+By the definition of $S$ in exercise 9, the only element in the base is $\lambda$, and the recursion rules II(a)-II(d) 
+state that for every string $s$ in $S$, $bs, sb, aas, saa$ are in $S$. Given any string $s$ in $S$, 
+let property $P(s)$ be the sentence “$s$ contains an even number of $a$'s.” 
+
+{\bf Show that $P(x)$ is true for each string $x$ in the base for $S$:}
+
+The only string in the base for $S$ is $\lambda$, which contains 0 $a$'s. Since 0 is even, $P(\lambda)$ is true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $s$ is any string in $S$ such that $P(s)$ is true, or, in other words, suppose that $s$ has an even number of $a$'s. {\it [This is the inductive hypothesis.]} 
+
+When either rule II(a) or rule II(b) is applied to $s$, the result is either $bs$ or $sb$, each of which contains the 
+same number of $a$'s as $s$ and hence an even number of $a$'s. Thus both $P(sb)$ and $P(bs)$ are true.
+
+When either rule II(c) or rule II(d) is applied to $s$, the result is either $aas$ or $saa$, each of which contains two 
+more $a$'s than does $s$. Because two more than an even number is an even number, both $aas$ and $saa$ contain an 
+even number of $a$’s. Thus both $P(aas)$ and $P(saa)$ are true.
+
+This completes the inductive step because II(a)–II(d) are the only rules in the recursion.
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and recursion for $S$, we 
+conclude that every string in $S$ contains an even number of $a$'s.
+\end{proof}
+
+\subsection{Exercise 10}
+Define a set $S$ of strings over the set of all integers recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $1 \in S, 2 \in S, 3 \in S, 4 \in S, 5 \in S, 6 \in S, 7 \in S, 8 \in S, 9 \in S$. \\
+II. & Recursion: if $s \in S$ and $t \in S$, then \\
+    & II(a) $s0 \in S$ \\
+    & II(b) $st \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that no string in $S$ represents an integer with a leading zero.
+
+\begin{proof}
+Given any string $s$ in $S$, let property $P(s)$ be the sentence “$s$ does not start with a 0.” 
+
+{\bf Show that $P(x)$ is true for each string $x$ in the base for $S$:}
+
+The only strings in the base for $S$ are representing integers $1-9$, none of which start with a 0. So $P(1)$, 
+$P(2)$, $P(3)$, $P(4)$, $P(5)$, $P(6)$, $P(7)$, $P(8)$, $P(9)$ are all true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $s, t$ are any strings in $S$ such that $P(s)$ and $P(t)$ are true, or, in other words, suppose that $s, t$ do 
+not start with a 0. {\it [This is the inductive hypothesis.]} 
+
+When rule II(a) is applied to $s$, the result is $s0$, which starts with the same character as $s$ and hence does 
+not start with a 0. Thus $P(s0)$ is true.
+
+When rule II(b) is applied to $s$ and $t$, the result is $st$, which starts with the same character as $s$ and hence 
+does not start with a 0. Thus $P(st)$ is true.
+
+This completes the inductive step because II(a)–II(b) are the only rules in the recursion.
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and recursion for $S$, we 
+conclude that every string in $S$ does not start with a 0.
+\end{proof}
+
+\subsection{Exercise 11}
+Define a set $S$ of strings over the set of all integers recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $1 \in S, 3 \in S, 5 \in S, 7 \in S, 9 \in S$. \\
+II. & Recursion: if $s \in S$ and $t \in S$, then \\
+    & II(a) $st \in S$ \\
+    & II(b) $2s \in S$ \\
+    & II(c) $4s \in S$ \\
+    & II(d) $6s \in S$ \\
+    & II(e) $8s \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that every string in $S$ represents an odd integer when written in decimal notation.
+
+{\it Hint:} For each string $s$ in $S$, let property $P(s)$ be the sentence: “$s$ represents an odd integer.” In the 
+decimal notation, a string represents an odd integer if, and only if, it ends in 1, 3, 5, 7, or 9.
+
+\begin{proof}
+Given any string $s$ in $S$, let property $P(s)$ be the sentence “$s$ represents an odd integer.” This is 
+equivalent to: ``$s$ ends in 1, 3, 5, 7, or 9.''
+
+{\bf Show that $P(x)$ is true for each string $x$ in the base for $S$:}
+
+The only strings in the base for $S$ are representing integers $1, 3, 5, 7, 9$, all of which end in 1, 3, 5, 7, 
+or 9. So $P(1)$, $P(3)$, $P(5)$, $P(7)$, $P(9)$ are all true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $s, t$ are any strings in $S$ such that $P(s)$ and $P(t)$ are true, or, in other words, suppose that $s, t$ end in 1, 3, 5, 7, or 9. {\it [This is the inductive hypothesis.]} 
+
+When rule II(a) is applied to $s$ and $t$, the result is $st$, which ends with the same character as $t$ and hence 
+ends in 1, 3, 5, 7, or 9. Thus $P(st)$ is true.
+
+When one of the rules II(b)-II(e) is applied to $s$, the result is one of $2s, 4s, 6s, 8s$, each of which ends with 
+the same character as $s$ and hence ends in 1, 3, 5, 7, or 9. Thus $P(2s), P(4s), P(6s), P(8s)$ are true.
+
+This completes the inductive step because II(a)–II(e) are the only rules in the recursion.
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and recursion for $S$, we 
+conclude that every string in $S$ ends in 1, 3, 5, 7, or 9.
+\end{proof}
+
+\subsection{Exercise 12}
+Define a set $S$ of integers recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $0 \in S, 5 \in S$. \\
+II. & Recursion: if $k \in S$ and $p \in S$, then \\
+    & II(a) $k+p \in S$ \\
+    & II(b) $k-p \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that every integer in $S$ is divisible by 5.
+
+\begin{proof}
+Given any integer $s$ in $S$, let property $P(s)$ be the sentence “$s$ is divisible by 5.” 
+
+{\bf Show that $P(x)$ is true for each integer $x$ in the base for $S$:}
+
+The only integers in the base for $S$ are 0 and 5, each of which is divisible by 5. So $P(0)$ and $P(5)$ are true. 
+
+{\bf Show that for each integer $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $k, p$ are any integers in $S$ such that $P(k)$ and $P(p)$ are true, or, in other words, suppose that $k, p$ 
+are divisible by 5. {\it [This is the inductive hypothesis.]} So $k = 5m$ and $p = 5n$ for some integers $m, n$.
+
+When rule II(a) is applied to $k$ and $p$, the result is $k+p = 5m+5n = 5(m+n)$, where $m+n$ is an integer, and 
+hence $k+p$ is divisible by 5. Thus $P(k+p)$ is true.
+
+When rule II(b) is applied to $k$ and $p$, the result is $k-p = 5m-5n = 5(m-n)$, where $m-n$ is an integer, and 
+hence $k-p$ is divisible by 5. Thus $P(k-p)$ is true.
+
+This completes the inductive step because II(a)–II(b) are the only rules in the recursion.
+
+{\bf Conclusion:} Because there are no integers in $S$ other than those obtained from the base and recursion for 
+$S$, we conclude that every integer in $S$ is divisible by 5.
+\end{proof}
+
+\subsection{Exercise 13}
+Define a set $S$ of integers recursively as follows:
+
+\begin{tabular}{rl}
+I. & Base: $0 \in S$. \\
+II. & Recursion: if $k \in S$, then \\
+    & II(a) $k+3 \in S$ \\
+    & II(b) $k-3 \in S$ \\
+III. & Restriction: Nothing is in $S$ other than objects defined in I and II above.
+\end{tabular}
+
+Use structural induction to prove that every integer in $S$ is divisible by 3.
+
+\begin{proof}
+Given any integer $s$ in $S$, let property $P(s)$ be the sentence “$s$ is divisible by 3.” 
+
+{\bf Show that $P(x)$ is true for each integer $x$ in the base for $S$:}
+
+The only integer in the base for $S$ is 0, which is divisible by 3. So $P(0)$ is true. 
+
+{\bf Show that for each integer $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $k$ is any integer in $S$ such that $P(k)$ is true, or, in other words, suppose that $k$ is divisible by 3. 
+{\it [This is the inductive hypothesis.]} So $k = 3m$ for some integer $m$.
+
+When rule II(a) is applied to $k$, the result is $k+3 = 3m+3 = 3(m+1)$, where $m+1$ is an integer, and hence $k+3$ 
+is divisible by 3. Thus $P(k+3)$ is true.
+
+When rule II(b) is applied to $k$, the result is $k-3 = 3m-3 = 3(m-1)$, where $m-1$ is an integer, and hence $k-3$ 
+is divisible by 3. Thus $P(k-3)$ is true.
+
+This completes the inductive step because II(a)–II(b) are the only rules in the recursion.
+
+{\bf Conclusion:} Because there are no integers in $S$ other than those obtained from the base and recursion for 
+$S$, we conclude that every integer in $S$ is divisible by 3.
+\end{proof}
+
+\subsection{Exercise 14}
+Is the string $MU$ in the $M I U$-system? Use structural induction to prove your answer.
+
+{\it Hint:} Can the number of $I$’s in a string in the $M I U$ system be a multiple of 3? How do rules II(a)-II(d) 
+affect the number of $I$’s in a string?
+
+\begin{proof}
+Let $C$ denote the set of strings that are in the $M I U$-system.
+
+The string $MU$ is not in $C$. To see why this is so, we will prove that no string in $C$ has a number of $I$'s 
+divisible by 3. It will follow that, since $MU$ has 0 $I$'s, and 0 is divisible by 3, $MU$  cannot be in $C$.
+
+Define a function \(f: C \to \Z^{nonneg}\) as follows: For each string $x$ in $C$, let \(f(x) = \) [the number of $I$'s in $x$].
+
+Given any string $x$ in $C$, let property $P(x)$ be the sentence, “\(3 \nmid f(x)\).”
+
+{\bf Show that $P(a)$ is true for each string $a$ in the base for $C$:}
+
+The only string in the base for $C$ is $MI$, and because $MI$ has one $I$, $f(MI) = 1$ which is not divisible by 3. Hence $P(MI)$ is true. 
+
+{\bf Show that for each string $x$ in $C$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $C$, then $P(y)$ is true:}
+
+Suppose $s$ is a string in $S$ such that $P(s)$ is true, or, in other words, suppose that $3 \nmid f(s)$. So there 
+is an integer $n$ such that either \(f(s) = 3n+1\) or \(f(s) = 3n+2\). The recursion for $C$ consists of 4 rules, 
+denoted II(a)-II(d). {\it [This is the inductive hypothesis.]} 
+
+When rule II(a) is applied to $s$, $s$ has the form $xI$ and the result is $xIU = sU$, and \(f(sU) = f(s)\), 
+so \(3 \nmid f(sU)\). Hence, $P(sU)$ is true. 
+
+When rule II(b) is applied to $s$, $s$ has the form $Mx$, and the result is $Mxx$, which has double the number of 
+$I$'s as $s$; so \(f(Mxx) = 2 \cdot f(s) = 6n+2\) or $6n+4$, so \(3 \nmid f(Mxx)\). So $P(Mxx)$ is true.
+
+When rule II(c) is applied to $s$, $s$ has the form $xIIIy$, and the result is $xUy$, which has three fewer 
+$I$'s than the number of $I$'s in $s$; so \(f(xUy) = f(s) - 3 = 3n-2\) or $3n - 1$, so \(3 \nmid f(xUy)\). 
+So $P(xUy)$ is true.
+
+When rule II(d) is applied to $s$, $s$ has the form $xUUy$, and the result is $xUy$, which the same number of $I$'s as 
+$s$; so \(f(xUy) = f(s)\), so \(3 \nmid f(xUy)\). So $P(xUy)$ is true.
+
+{\bf Conclusion:} Because there are no strings in $C$ other than those obtained from the base and the recursion for $C$, we conclude that given any string $x$ in $C$, \(3 \nmid f(x)\). Therefore, every string in $C$ has a number of $I$'s that is not a multiple of 3.
+\end{proof}
+
+\subsection{Exercise 15}
+Determine whether either of the following parenthesis configurations is in the set $C$ defined in Example 5.9.2. 
+Use structural induction to prove your answers.
+
+\subsubsection{(a)}
+()(()
+
+\begin{proof}
+The parenthesis structure ()(() is not in $C$. To see why this is so, we will prove that every parenthesis structure 
+in $C$ has an equal number of left and right parentheses. It will follow that, since ()(() has 3 left parentheses and 
+2 right parentheses, ()(() cannot be in $C$.
+
+Define a function \(f: C \to \Z\) as follows: For each parenthesis structure $x$ in $C$, let \(f(x) = \)
+[the number of left parentheses in $x$] $-$ [the number of right parentheses in $x$].
+
+Given any parenthesis structure $x$ in $C$, let property $P(x)$ be the sentence, “$f(x) = 0$.”
+
+{\bf Show that $P(a)$ is true for each parenthesis structure $a$ in the base for $C$:}
+
+The only parenthesis structure in the base for $C$ is (), and $f[()] = 0$ because () has one left parenthesis and one right parenthesis. Hence $P[( )]$ is true. 
+
+{\bf Show that for each parenthesis structure $x$ in $C$, if $P(x)$ is true and if $y$ is obtained from $x$ by 
+applying a rule from the recursion for $C$, then $P(y)$ is true:}
+
+The recursion for $C$ consists of two rules, denoted II(a) and II(b).
+
+Suppose $u$ and $v$ are any parenthesis structures in $C$ such that $P(u)$ and $P(v)$ are true. This means that 
+$f(u) = 0$ and $f(v) = 0$. {\it [This is the inductive hypothesis.]}
+
+Let $k$ and $m$ be the numbers of left and right parentheses, respectively, in $u$, and let $n$ and $p$ be 
+the numbers of left and right parentheses, respectively, in $v$. Then \(k - m = 0\) and \(n - p = 0\) by definition of $f$. 
+
+When rule II(a) is applied to $u$, the result is $(u)$, and \(f[(u)] = 0\) because $(u)$ has one more left parenthesis 
+and one more right parenthesis than $u$, and \((k + 1) - (m + 1) = 0\). Hence, $P(u)$ is true. 
+
+When rule II(b) is applied to $u$ and $v$, the result is $uv$. Now $uv$ has \(k + n\) left parentheses and \(m + p\) 
+right parentheses. Hence \(f(uv) = (k + n) - (m + p) = (k - m) + (n - p) = 0 + 0 = 0\). Hence, \(f(uv) = 0\), and so $P(uv)$ is true. 
+
+{\bf Conclusion:} Because there are no parenthesis structures in $C$ other than those obtained from the base 
+and the recursion for $C$, we conclude that given any parenthesis structure $x$ in $C$, \(f(x) = 0\). Therefore, 
+every parenthesis structure in $C$ has the same number of left and right parentheses.
+\end{proof}
+
+\subsubsection{(b)}
+(()()))(()
+
+{\it Hint:} This parenthesis structure is not in $C$ either even though it has equal numbers of left and right parentheses.
+
+\begin{proof}
+The parenthesis structure (()()))(() is not in $C$. To see why this is so, we will prove that every parenthesis 
+structure in $C$ has the following property: starting from the left and going right, counting the difference between 
+the number of left parentheses and the number of right parentheses, the count is always nonnegative. It will 
+follow that, since (()())) has 3 left parentheses and 4 right parentheses, (()()))(() cannot be in $C$.
+
+A portion of a parenthesis structure $x$ that starts from the leftmost beginning of $x$ but possibly does not go all 
+the way to the rightmost end of $x$ is called a {\it prefix} of $x$. For example, (()())) is a prefix of (()()))((). Note that $x$ is a prefix of $x$.
+
+Define a function \(f: C \to \Z\) as follows: For each parenthesis structure $x$ in $C$, let \(f(x) = \)
+[the number of left parentheses in $x$] $-$ [the number of right parentheses in $x$].
+
+Given any parenthesis structure $x$ in $C$, let property $P(x)$ be the sentence, “for all prefixes $p$ of $x$, $f(p) \geq 0$.”
+
+{\bf Show that $P(a)$ is true for each parenthesis structure $a$ in the base for $C$:}
+
+The only parenthesis structure in the base for $C$ is (), and $f[(] = 1 \geq 0$ and $f[()] = 0 \geq 0$. Hence $P[()]$ is true. 
+
+{\bf Show that for each parenthesis structure $x$ in $C$, if $P(x)$ is true and if $y$ is obtained from $x$ by 
+applying a rule from the recursion for $C$, then $P(y)$ is true:}
+
+The recursion for $C$ consists of two rules, denoted II(a) and II(b).
+
+Suppose $u$ and $v$ are any parenthesis structures in $C$ such that $P(u)$ and $P(v)$ are true. This means that for 
+any prefix $p$ of $u$, $f(p) \geq 0$ and for any prefix $q$ of $v$, $f(v) \geq 0$. {\it [This is the inductive hypothesis.]}
+
+When rule II(a) is applied to $u$, the result is $(u)$. Now consider the prefixes of $(u)$. There is (, for which 
+\(f[(] = 1 \geq 0\). Then there are the prefixes of the form $(p$ where $p$ is a prefix of $u$. For these, 
+\(f[(p] = 1 + f(p) > f(p) \geq 0\). And finally, there is the prefix $(u)$ itself, for which 
+\(f[(u)] = f(u) \geq 0\). Hence, $P(u)$ is true. 
+
+When rule II(b) is applied to $u$ and $v$, the result is $uv$. Now consider the prefixes of $uv$. There are the 
+prefixes of the form $p$, where $p$ is a prefix of $u$, for these, we have \(f(p) \geq 0\). Then there are the prefixes 
+of the form $uq$ where $q$ is a prefix of $v$, for which we have \(f(uq) = f(u) + f(q) \geq 0 + 0 = 0\). 
+Hence $P(uv)$ is true. 
+
+{\bf Conclusion:} Because there are no parenthesis structures in $C$ other than those obtained from the base 
+and the recursion for $C$, we conclude that given any parenthesis structure $x$ in $C$, for all prefixes $p$ of $x$, \(f(p) \geq 0\).
+\end{proof}
+
+\subsection{Exercise 16}
+Give a recursive definition for the set of all strings of 0’s and 1’s that have the same number of 0’s as 1’s.
+
+\begin{proof}
+Let $S$ be the set of all strings of 0’s and 1’s with the
+same number of 0’s and 1’s. 
+The following is a recursive definition for $S$.
+
+\begin{tabular}{rl}
+{\bf I.}  & Base: The null string $\lambda \in S$. \\
+{\bf II.} & Recursion: If $s \in S$, then \\
+& {\bf a.} $01s \in S$ \\
+& {\bf b.} $s01 \in S$ \\
+& {\bf c.} $10s \in S$ \\
+& {\bf d.} $s10 \in S$ \\
+& {\bf e.} $0s1 \in S$ \\
+& {\bf f.} $1s0 \in S$ \\
+{\bf III.} & Restriction: There are no elements of $S$ other than those obtained \\
+& from the base and recursion for $S$.
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 17}
+Give a recursive definition for the set of all strings of 0’s and 1’s for which all the 0’s precede all the 1’s.
+
+\begin{proof}
+Let $S$ be the set of all strings of 0’s and 1’s for which all the 0’s precede all the 1’s (in other words, there are 
+no 0's {\it after} any 1's, so $\lambda$ and strings like $111\ldots 1$ are OK).
+
+The following is a recursive definition for $S$.
+
+\begin{tabular}{rl}
+{\bf I.}  & Base: \(\lambda \in S, 0 \in S, 1 \in S\). \\
+{\bf II.} & Recursion: \\
+& {\bf a.} If $x1 \in S$ where $x$ is a string, then $x11 \in S$. \\
+& {\bf b.} If $x0 \in S$ where $x$ is a string, then $x00 \in S$. \\
+& {\bf b.} If $x0 \in S$ where $x$ is a string, then $x01 \in S$. \\
+{\bf III.} & Restriction: There are no elements of $S$ other than those obtained \\
+& from the base and recursion for $S$.
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 18}
+Give a recursive definition for the set of all strings of $a$’s and $b$’s that contain an odd number of $a$’s.
+
+\begin{proof}
+Let $T$ be the set of all strings of $a$’s and $b$’s that contain an odd number of $a$’s.
+The following is a recursive definition for $T$.
+
+\begin{tabular}{rl}
+{\bf I.}  & Base: $a \in T$. \\
+{\bf II.} & Recursion: If $t \in T$, then \\
+& {\bf a.} $bt \in T$ \\
+& {\bf b.} $tb \in T$ \\
+& {\bf c.} $aat \in T$ \\
+& {\bf d.} $ata \in T$ \\
+& {\bf e.} $taa \in T$ \\
+{\bf III.} & Restriction: There are no elements of $T$ other than those obtained \\
+& from the base and recursion for $T$.
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 19}
+Give a recursive definition for the set of all strings of $a$’s and $b$’s that contain exactly one $a$.
+
+\begin{proof}
+Let $T$ be the set of all strings of $a$’s and $b$’s that contain exactly one $a$.
+The following is a recursive definition for $T$.
+
+\begin{tabular}{rl}
+{\bf I.}  & Base: $a \in T$. \\
+{\bf II.} & Recursion: If $t \in T$, then \\
+& {\bf a.} $bt \in T$ \\
+& {\bf b.} $tb \in T$ \\
+{\bf III.} & Restriction: There are no elements of $T$ other than those obtained \\
+& from the base and recursion for $T$.
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 20}
+
+\subsubsection{(a)}
+Let $A$ be any finite set and let $L$ be the length function on the set of all strings over $A$. 
+Prove that for every character $a$ in $A$, $L(a) = 1$.
+
+\begin{proof}
+Suppose a is any character in A. {\it [We must show that \(L(a) = 1\).]} Then
+\begin{center}
+\begin{tabular}{rcll}
+\(L(a)\) & = & \(L(\lambda \cdot a)\) & {\cy by part II(b) of the definition of string} \\
+& = & \(L(\lambda) + 1\) & {\cy by part (b) of the definition of the length function} \\
+& = & \(0 + 1\) & {\cy by part (a) of the definition of the length function} \\
+& = & \(1\) & {\cy by definition of 0.}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsubsection{(b)}
+If $A$ is a finite set, define a set $S$ of strings over $A$ as follows:
+
+\begin{tabular}{rl}
+I & Base: Every character in $A$ is a string in $S$. \\
+II & Recursion: If $s$ is in $S$, then for every character $c$ in $A$, $csc$ is a string in $S$.\\
+III & Restriction: Nothing is in $S$ except strings obtained from I and II.
+\end{tabular}
+
+Use structural induction to prove that given any string $s$ in $S$, the length of $s$, $L(s)$, is an odd integer.
+
+\begin{proof}
+Given any string $s$ in $S$, let property $P(s)$ be the sentence, “$L(s) is odd$.”
+
+{\bf Show that $P(a)$ is true for each string $a$ in the base for $S$:}
+
+The only strings in the base for $S$ are the characters in $A$, and by part (a) $L(a) = 1$ for all characters $a$ in 
+$A$. Hence $P(a)$ is true for every string $a$ in the base. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $s$ is any string in $S$ such that $P(s)$is true. This means that $L(s)$ is odd. So $L(s) = 2n+1$ for some 
+integer $n$. {\it [This is the inductive hypothesis.]}
+
+When rule II is applied to $s$, the results are $csc$ for every character $c$ in $A$. Then 
+\(L(csc) = 1 + L(s) + 1 = 2n+3 = 2(n+1) + 1\) where $n+1$ is an integer. Hence, $L(csc)$ is odd and $P(csc)$ is true. 
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and the recursion for 
+$S$, we conclude that given any string $s$ in $S$, \(L(s)\) is odd.
+\end{proof}
+
+\subsection{Exercise 21}
+Write a complete proof for Theorem 5.9.4:
+
+If $S$ is the set of all strings over a finite set $A$ and $u, v$, and $w$ are any strings in $S$, then \(u(vw) = (uv)w\).
+
+\begin{proof}
+Given any string $w$ in $S$, let the property $P(w)$ be the sentence: 
+``For all strings $u$ and $v$ in $S$, \(u(vw) = (uv)w\).''
+
+{\bf Show that $P(a)$ is true for each string $a$ in the base for $S$:}
+
+The only string in the base for $S$ is $\lambda$, and for all strings $u$ and $v$ in $S$, 
+\begin{center}
+\begin{tabular}{rcll}
+\(u(v \lambda)\) & = & \(u(v)\) & {\cy b/c $v \lambda = v$ by II(b) of string def} \\
+& = & \(uv\) & \\
+& = & \((uv)\) & \\
+& = & \((uv) \lambda\) & {\cy b/c $(uv) \lambda = (uv)$ by II(b) of string def}
+\end{tabular}
+\end{center}
+Hence $P(\lambda)$ is true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+
+Suppose $w$ is any string in $S$ such that $P(w)$ is true. This means that for all strings $u$ and $v$ in $S$, 
+\(u(vw) = (uv)w\) {\it [This is the inductive hypothesis.]}
+
+The recursion for $S$ consists of three rules denoted II(a), II(b), and II(c), but rule II(a) is the only one 
+that generates new strings in $S$.
+
+Now when rule II(a) is applied to $w$ the result is $wc$ for some character $c$ in $A$. Consider any strings $u, v$ in $S$. {\it [We need to show that \(u(v(wc)) = (uv)(wc)\).]} Then:
+\begin{center}
+\begin{tabular}{rcll}
+\(u(v(wc))\) & = & \(u((vw)c)\) & {\cy by II(c) of string definition} \\
+& = & \((u(vw))c\) & {\cy by II(c) of string definition} \\
+& = & \(((uv)w)c\) & {\cy by inductive hypothesis} \\
+& = & \((uv)(wc)\) & {\cy by II(c) of string definition.}
+\end{tabular}
+\end{center}
+Hence $P(wc)$ is true.
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and the recursion for 
+$S$, we conclude that if $u, v$, and $w$ are any strings in $S$, then \(u(vw) = (uv)w\).
+\end{proof}
+
+\subsection{Exercise 22}
+If $S$ is the set of all strings over a finite set $A$ and if $u$ is any string in $S$, define the string reversal function, Rev, as follows:
+
+a. Rev($\lambda$) = $\lambda$
+
+b. For every string $u$ in $S$ and for every character $a$ in $A$, Rev($ua$) = $a$Rev($u$).
+
+Use structural induction to prove for all strings $u$ and $v$ in $S$, Rev($uv$) = Rev($v$)Rev($u$).
+
+{\it Hint:} If $S$ is the set of all strings over a finite set $A$, then for any string $v$ in $S$, let the property 
+$P(v)$ be the sentence “If $u$ is any string in $S$, then Rev($uv$) = Rev($v$) Rev($u$).” For the basis step you 
+will show that $P(\lambda)$ is true by showing that Rev($u \lambda$) = Rev($\lambda$) Rev($u$) for all $u$ in $S$. For 
+the inductive step you will assume that $x$ is any string for which $P(x)$ is true, and you will show that if $y$ is 
+the result of applying rule II(a) to $x$, then $P(y)$ is true.
+
+\begin{proof}
+Let the property $P(v)$ be the sentence “If $u$ is any string in $S$, then Rev($uv$) = Rev($v$) Rev($u$).”
+
+{\bf Show that $P(a)$ is true for each string $a$ in the base for $S$:} The only string in the base for $S$ is 
+$\lambda$, and for all strings $u$ in $S$, 
+\begin{center}
+\begin{tabular}{rcll}
+Rev($u \lambda$) & = & Rev($u$) & {\cy by II(b) of string definition} \\
+& = & $\lambda$ Rev($u$) & {\cy by II(b) of string definition} \\
+& = & Rev($\lambda$) Rev($u$) & {\cy by (a)}
+\end{tabular}
+\end{center}
+Hence $P(\lambda)$ is true. 
+
+{\bf Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$ by applying a rule 
+from the recursion for $S$, then $P(y)$ is true:}
+Suppose $v$ is any string in $S$ such that $P(v)$ is true. This means that for all strings $u$ in $S$, Rev($uv$) = 
+Rev($v$)Rev($u$). {\it [This is the inductive hypothesis.]}
+The recursion for $S$ consists of three rules denoted II(a), II(b), and II(c), but rule II(a) is the only one 
+that generates new strings in $S$.
+Now when rule II(a) is applied to $v$ the result is $vc$ for some character $c$ in $A$. {\it [We need to show that 
+Rev($u(vc)$) = Rev($vc$)Rev($u$) for all $u$ in $S$.]} Then:
+\begin{center}
+\begin{tabular}{rcll}
+Rev($u(vc)$) & = & Rev($(uv)c$) & {\cy by II(c) of string definition} \\
+& = & $c$ Rev($uv$) & {\cy by (b)} \\
+& = & $c$ (Rev($v$) Rev($u$)) & {\cy by inductive hypothesis} \\
+& = & ($c$ Rev($v$)) Rev($u$) & {\cy by Theorem 5.9.4} \\
+& = & Rev($vc$) Rev($u$) & {\cy by (b).}
+\end{tabular}
+\end{center}
+Hence $P(vc)$ is true.
+
+{\bf Conclusion:} Because there are no strings in $S$ other than those obtained from the base and the recursion for 
+$S$, we conclude that if $u, v$ are any strings in $S$, then Rev($uv$) = Rev($v$)Rev($u$).
+\end{proof}
+
+\subsection{Exercise 23}
+Use the definition of McCarthy’s 91 function in Example 5.9.7:
+\[
+M(n) =
+\left\{
+\begin{tabular}{lr}
+$n - 10$ & if \(n > 100\) \\
+\(M(M(n+11))\) & if \(n \leq 100\)
+\end{tabular}
+\right.
+\]
+to show the following:
+
+\subsubsection{(a)}
+\(M(86) = M(91)\)
+
+\begin{proof}
+$M(86) = $
+\begin{center}
+\begin{tabular}{cccccccc}
+= & \(M(M(97))\) & = & \(M(M(M(108)))\) & = & \(M(M(98))\) & = & \(M(M(M(109)))\) \\
+= & \(M(M(99))\) & = & \(M(M(M(110)))\) & = & \(M(M(100))\) & = & \(M(M(M(111)))\) \\
+= & \(M(M(101))\) & = & \(M(91)\) & & & &
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsubsection{(b)}
+\(M(91) = 91\)
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{ccccccccc}
+\(M(91)\) & = & \(M(M(102))\) & = & \(M(92)\) & = & \(M(M(103))\) & = & \(M(93)\) \\
+& = & \(M(M(104))\) & = & \(M(94)\) & = & \(M(M(105))\) & = & \(M(95)\) \\
+& = & \(M(M(106))\) & = & \(M(96)\) & = & \(M(M(107))\) & = & \(M(97)\) \\
+& = & \(M(M(108))\) & = & \(M(98)\) & = & \(M(M(109))\) & = & \(M(99)\) \\
+& = & \(M(M(110))\) & = & \(M(100)\) & = & \(M(M(111))\) & = & \(M(101)\) \\
+& = & \(91\) & & & & & &
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 24}
+Prove that McCarthy’s 91 function equals 91 for all positive integers less than or equal to 101.
+
+\begin{proof}
+Define \(F(n) = M(101 - n)\) for all nonnegative integers \(n = 0, 1, 2, \ldots, 100\).
+{\it [We will prove by strong induction that \(F(n) = 91\) for all integers \(n = 0, 1, 2, \ldots, 100\).]}
+
+Let $P(n)$ be: ``\(F(n) = 91\)''. The base cases are for \(n = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\).
+
+{\bf Show that $P(0)$ is true:} \(F(0) = M(101 - 0) = M(101) = 101 - 10 = 91\). So $P(0)$ is true.
+
+{\bf Show that \(P(1), P(2), \ldots, P(11)\) are true:} Assume \(1 \leq n \leq 11\), so \(90 \leq 101-n \leq 100\).
+
+Then \(F(n) = M(101 - n) = M(M(112 - n))\). Now \(101 \leq 112-n \leq 111\), therefore \(M(112 - n) = 102 - n\).
+
+So \(F(n) = M(M(112 - n)) = M(102 - n) = F(n-1)\).
+Therefore \(F(11) = F(10) = \cdots = F(1) = F(0) = 91\).
+
+{\bf Show that for any integer $n$ in \(\{11, \ldots, 99\}\), if $P(i)$ is true for all integers $i$ with 
+\(0 \leq i \leq n\) then $P(n+1)$ is true:} 
+
+Assume $n$ is a positive integer with \(11 \leq n \leq 99\) and assume \(F(i) = 91\) for all integers $i$ with 
+\(0 \leq i \leq n\). {\it We want to show \(F(n+1) = 91\).}
+
+Now \(F(n+1) = M(101 - (n+1)) = M(100 - n)\). 
+
+Since \(11 \leq n \leq 99\), we have \(1 \leq 100-n \leq 89\). So by definition, \(M(100 - n) = M(M(111 - n)) = M(F(n-10))\). 
+
+By the inductive hypothesis \(F(n-10) = 91\). So \(F(n+1) = M(100 - n) = M(M(111 - n)) = M(F(n-10)) = M(91) = 91\) by Exercise 23.
+
+{\bf Conclusion:} We proved by strong induction that \(F(n) = 91\) for all integers $n$ with \(0 \leq n \leq 100\). 
+Therefore \(M(m) = F(101 - m) = 91\) for all integers $m$ with \(1 \leq m \leq 101\). 
+\end{proof}
+
+\subsection{Exercise 25}
+Use the definition of the Ackermann function in Example 5.9.8 to compute the following:
+
+\subsubsection{(a)}
+$A(1, 1)$
+
+\begin{proof}
+\(A(1, 1) = A(1-1, A(1, 1-1)) = A(0, A(1, 0)) = A(0, A(1-1, 1)) = A(0, A(0, 1))\)
+
+\(A(0, A(0, 1)) = A(0, 1) + 1 = (1 + 1) + 1 = 3\)
+\end{proof}
+
+\subsubsection{(b)}
+$A(2, 1)$
+
+\begin{proof}
+\(A(2, 1) = A(2-1, A(2, 1-1)) = A(1, A(2, 0)) = A(1, A(1, 1))\)
+
+\(A(1, A(1, 1)) = A(1, 3) = A(0, A(1, 2)) = A(1, 2) + 1\)
+
+\(A(1, 2) + 1 = A(0, A(1, 1)) + 1 = A(0, 3) + 1 = (3 + 1) + 1 = 5\)
+\end{proof}
+
+\subsection{Exercise 26}
+Use the definition of the Ackermann function to show the following:
+
+\subsubsection{(a)}
+\(A(1, n) = n + 2\), for each nonnegative integer $n$
+
+\begin{proof}
+Let $P(n)$ be the statement: ``\(A(1, n) = n + 2\)''.
+
+{\bf Show that $P(0)$ is true:} \(A(1, 0) = A(0, 1) = 1 + 1 = 2 = 0 + 2\) so $P(0)$ is true.
+
+{\bf Show that if $k$ is any integer with \(0 \leq k\) and $P(k)$ is true, then $P(k+1)$ is true:}
+
+Assume $k$ is any integer with \(0 \leq k\) and assume \(A(1, k) = k + 2\). {\it [We want to show \(A(1, k+1) = k+3\).]}
+
+\(A(1, k+1) = A(0, A(1, k))\) and by inductive hypothesis \(A(1, k) = k+2\). 
+
+So \(A(0, A(1, k)) = A(0, k+2) = k+2+1 = k+3\), {\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(b)}
+\(A(2, n) = 3 + 2n\), for each nonnegative integer $n$
+
+\begin{proof}
+Let $P(n)$ be the statement: ``\(A(2, n) = 3 + 2n\)''.
+
+{\bf Show that $P(0)$ is true:} \(A(2, 0) = A(1, 1) = 3 = 3 + 2 \cdot 0\), so $P(0)$ is true.
+
+{\bf Show that if $k$ is any integer with \(0 \leq k\) and $P(k)$ is true, then $P(k+1)$ is true:}
+
+Assume $k$ is any integer with \(0 \leq k\) and assume \(A(2, k) = 3 + 2k\). 
+{\it [We want to show \(A(2, k+1) = 3+2(k+1) = 5+2k\).]}
+
+\(A(2, k+1) = A(1, A(2, k))\) and by inductive hypothesis \(A(2, k) = 3+2k\).
+ 
+So \(A(1, A(2, k)) = A(1, 3+2k) = A(0, A(1, 2+2k))\). 
+
+By part (a) we have \(A(1, 2+2k) = 2+2k+2 = 4+2k\).
+
+So \(A(0, A(1, 2+2k)) = A(0, 4+2k) = 4+2k+1 = 5+2k\), {\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(c)}
+\(A(3, n) = 8 \cdot 2^n - 3\), for each nonnegative integer $n$
+
+\begin{proof}
+Let $P(n)$ be the statement: ``\(A(3, n) = 8 \cdot 2^n - 3\)''.
+
+{\bf Show that $P(0)$ is true:} \(A(3, 0) = A(2, 1) = 3 + 2 \cdot 1\) by part (b). 
+So \(A(3, 0) = 5 = 8 - 3 = 8 \cdot 2^0 - 3\), so $P(0)$ is true.
+
+{\bf Show that if $k$ is any integer with \(0 \leq k\) and $P(k)$ is true, then $P(k+1)$ is true:}
+
+Assume $k$ is any integer with \(0 \leq k\) and assume \(A(3, k) = 8 \cdot 2^k - 3\). 
+{\it [We want to show \(A(3, k+1) = 8 \cdot 2^{k+1}-3\).]}
+
+\(A(3, k+1) = A(2, A(3, k))\) and by inductive hypothesis \(A(3, k) = 8 \cdot 2^k - 3\). 
+
+So \(A(2, A(3, k)) = A(2, 8 \cdot 2^k - 3)\). By part (b) we have \(A(2, 8 \cdot 2^k - 3) = 3 + 2(8 \cdot 2^k - 3)\).
+
+So \(3 + 2(8 \cdot 2^k - 3) = 3 + 8 \cdot 2^{k+1} - 6 = 8 \cdot 2^{k+1} - 3\), {\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 27}
+Compute $T(2), T(3), T(4), T(5), T(6)$, and $T(7)$ for the “function” $T$ defined after Example 5.9.9.
+\[
+T(n) =
+\left\{
+\begin{tabular}{lr}
+\(1\) & if \(n\) is 1 \\
+\(\dps T\left(\frac{n}{2}\right)\) & if \(n\) is even \\
+\(T(3n+1)\) & if \(n\) is odd.
+\end{tabular}
+\right.
+\]
+\begin{proof}
+\(T(2) = T(2/1) = T(1) = 1\)
+
+\(T(3) = T(3 \cdot 3 + 1) = T(10) = T(5) = T(3 \cdot 5 + 1) = T(16) = T(8) = T(4) = T(2) = T(1) = 1\)
+
+\(T(4) = 1\) (see above), \(T(5) = 1\) (see above), \(T(6) = T(3) = 1\) (see above) 
+
+\(T(7) = T(3 \cdot 7 + 1) = T(22) = T(11) = T(3 \cdot 11 + 1) = T(34) = T(17) = T(3 \cdot 17 + 1) = T(52) = T(26) = T(13) = T(3 \cdot 13 + 1) = T(40) = T(20) = T(10) = 1\) (see above)
+\end{proof}
+
+\subsection{Exercise 28}
+Student $A$ tries to define a function \(F : \Z^+ \to \Z\) by the rule
+\[
+F(n) =
+\left\{
+\begin{tabular}{lr}
+1               & if $n$ is 1 \\
+\(F(n/2)\)      & if $n$ is even \\
+\(1 + F(5n-9)\) & if $n$ is odd and $n > 1$ \\
+\end{tabular}
+\right.
+\]
+for each integer \(n \geq 1\). Student $B$ claims that $F$ is not well defined. Justify student $B$’s claim.
+
+\begin{proof}
+\(F(3) = 1 + F(5 \cdot 3 - 9) = 1 + F(6) = 1 + F(3)\).
+Canceling $F(3)$ on both sides, we get $0 = 1$, which is a contradiction.
+\end{proof}
+
+\subsection{Exercise 29}
+Student $C$ tries to define a function \(G : \Z^+ \to \Z\) by the rule
+\[
+G(n) =
+\left\{
+\begin{tabular}{lr}
+1               & if $n$ is 1 \\
+\(G(n/2)\)      & if $n$ is even \\
+\(2 + G(3n-5)\) & if $n$ is odd and $n > 1$ \\
+\end{tabular}
+\right.
+\]
+for each integer \(n \geq 1\). Student $D$ claims that $G$ is not well defined. Justify student $D$’s claim.
+
+\begin{proof}
+\(G(5) = 2 + G(3 \cdot 5 - 5) = 2 + G(10) = 2 + G(5)\). 
+Canceling $G(5)$ on both sides we get $0 = 2$, which is a contradiction.
+\end{proof}
+
 \end{document}
