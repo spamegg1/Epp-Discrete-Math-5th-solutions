@@ -840,21 +840,21 @@ Let \(B_i = \{x \in \R \, | \, 0 \leq x \leq i\}\) for each integer \(i = 1, 2, 
 \(B_1 \cup B_2 \cup B_3 \cup B_4 = ?\)
 
 \begin{proof}
-
+\(B_1 \cup B_2 \cup B_3 \cup B_4 = B_4 = [0, 4]\)
 \end{proof}
 
 \subsubsection{(b)}
 \(B_1 \cap B_2 \cap B_3 \cap B_4 = ?\)
 
 \begin{proof}
-
+\(B_1 \cap B_2 \cap B_3 \cap B_4 = B_1 = [0, 1]\)
 \end{proof}
 
 \subsubsection{(c)}
 Are \(B_1, B_2, B_3, B_4\) mutually disjoint? Explain.
 
 \begin{proof}
-
+No, because for example \(B_1 \cap B_2 = B_1 \neq \es\).
 \end{proof}
 
 \subsection{Exercise 21}
@@ -864,48 +864,51 @@ Let \(C_i = \{-i, i\}\) for each nonnegative integer $i$.
 \(\dps \bigcup_{i=0}^{4}C_i = ?\)
 
 \begin{proof}
+\(C_0 = \{0, -0\} = \{0\}, C_1 = \{1, -1\}, C_2 = \{2, -2\}, C_3 = \{3, -3\}, C_4 = \{4, -4\}\)
 
+\(\dps \bigcup_{i=0}^{4}C_i = \{-4, -3, -2, -1, 0, 1, 2, 3, 4\}\)
 \end{proof}
 
 \subsubsection{(b)}
 \(\dps \bigcap_{i=0}^{4}C_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{4}C_i = \{0\} \cap \{1, -1\} \cap \{2, -2\} \cap \{3, -3\} \cap \{4, -4\} = \es\)
 \end{proof}
 
 \subsubsection{(c)}
 Are \(C_0, C_1, C_2, \ldots\) mutually disjoint? Explain.
 
 \begin{proof}
-
+$C_0, C_1, C_2, \ldots$ are mutually disjoint because no two of the sets have any elements in common.
 \end{proof}
 
 \subsubsection{(d)}
 \(\dps \bigcup_{i=0}^{n}C_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=0}^{n}C_i = \{-n, -(n-1), \ldots, -2, -1, 0, 1, 2, \ldots, n-1, n\}\)
 \end{proof}
 
 \subsubsection{(e)}
 \(\dps \bigcap_{i=0}^{n}C_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{n}C_i = \es\)
 \end{proof}
 
 \subsubsection{(f)}
 \(\dps \bigcup_{i=0}^{\infty}C_i = ?\)
-\begin{proof}
 
+\begin{proof}
+\(\dps \bigcup_{i=0}^{\infty}C_i = \Z\), the set of all integers
 \end{proof}
 
 \subsubsection{(g)}
 \(\dps \bigcap_{i=0}^{\infty}C_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{\infty}C_i = \es\)
 \end{proof}
 
 \subsection{Exercise 22}
@@ -915,100 +918,104 @@ Let \(D_i = \{x \in \R \,|\, -i \leq x \leq i\} = [-i, i]\) for each nonnegative
 \(\dps \bigcup_{i=0}^{4}D_i = ?\)
 
 \begin{proof}
+\(D_0 = [-0, 0] = \{0\}, D_1 = [-1, 1], D_2 = [-2, 2], D_3 = [-3, 3], D_4 = [-4, 4]\)
 
+\(\dps \bigcup_{i=0}^{4}D_i = \{0\} \cup [-1, 1] \cup [-2, 2] \cup [-3, 3] \cup [-4, 4] = [-4, 4]\)
 \end{proof}
 
 \subsubsection{(b)}
 \(\dps \bigcap_{i=0}^{4}D_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{4}D_i = \{0\} \cap [-1, 1] \cap [-2, 2] \cap [-3, 3] \cap [-4, 4] = \{0\}\)
 \end{proof}
 
 \subsubsection{(c)}
 Are \(D_0, D_1, D_2, \ldots\) mutually disjoint? Explain.
 
 \begin{proof}
-
+$D_0, D_1, D_2, \ldots,$ are not mutually disjoint. In fact, each \(D_k \subseteq D_{k+1}\).
 \end{proof}
 
 \subsubsection{(d)}
 \(\dps \bigcup_{i=0}^{n}D_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=0}^{n}D_i = [-n, n]\)
 \end{proof}
 
 \subsubsection{(e)}
 \(\dps \bigcap_{i=0}^{n}D_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{n}D_i = \{0\}\)
 \end{proof}
 
 \subsubsection{(f)}
 \(\dps \bigcup_{i=0}^{\infty}D_i = ?\)
-\begin{proof}
 
+\begin{proof}
+\(\dps \bigcup_{i=0}^{\infty}D_i = \R\), the set of all real numbers
 \end{proof}
 
 \subsubsection{(g)}
 \(\dps \bigcap_{i=0}^{\infty}D_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{\infty}D_i = \{0\}\)
 \end{proof}
 
 \subsection{Exercise 23}
 Let \(V_i = \{x \in \R \,|\, -\frac{1}{i} \leq x \leq \frac{1}{i}\} = [-\frac{1}{i}, \frac{1}{i}]\) 
-for each nonnegative integer $i$.
+for each positive integer $i$.
 
 \subsubsection{(a)}
-\(\dps \bigcup_{i=0}^{4}V_i = ?\)
+\(\dps \bigcup_{i=1}^{4}V_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=1}^{4}V_i = V_1 = [-1, 1]\)
 \end{proof}
 
 \subsubsection{(b)}
-\(\dps \bigcap_{i=0}^{4}V_i = ?\)
+\(\dps \bigcap_{i=1}^{4}V_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{4}V_i = V_4 = \left[-\frac{1}{4}, \frac{1}{4}\right]\)
 \end{proof}
 
 \subsubsection{(c)}
-Are \(V_0, V_1, V_2, \ldots\) mutually disjoint? Explain.
+Are \(V_1, V_2, V_3, \ldots\) mutually disjoint? Explain.
 
 \begin{proof}
-
+$V_1, V_2, V_3, \ldots,$ are not mutually disjoint. In fact, each \(V_{k+1} \subseteq V_k\).
 \end{proof}
 
 \subsubsection{(d)}
-\(\dps \bigcup_{i=0}^{n}V_i = ?\)
+\(\dps \bigcup_{i=1}^{n}V_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=1}^{n}V_i = V_1 = [-1, 1]\)
 \end{proof}
 
 \subsubsection{(e)}
-\(\dps \bigcap_{i=0}^{n}V_i = ?\)
+\(\dps \bigcap_{i=1}^{n}V_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{n}V_i = V_n = \left[-\frac{1}{n}, \frac{1}{n}\right]\)
 \end{proof}
 
 \subsubsection{(f)}
-\(\dps \bigcup_{i=0}^{\infty}V_i = ?\)
-\begin{proof}
+\(\dps \bigcup_{i=1}^{\infty}V_i = ?\)
 
+\begin{proof}
+\(\dps \bigcup_{i=1}^{\infty}V_i = V_1 = [-1, 1]\)
 \end{proof}
 
 \subsubsection{(g)}
-\(\dps \bigcap_{i=0}^{\infty}V_i = ?\)
+\(\dps \bigcap_{i=1}^{\infty}V_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{\infty}V_i = \{0\}\)
 \end{proof}
 
 \subsection{Exercise 24}
@@ -1018,152 +1025,155 @@ Let \(W_i = \{x \in \R \,|\, i < x\} = (i, \infty)\) for each nonnegative intege
 \(\dps \bigcup_{i=0}^{4}W_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=0}^{4}W_i = W_0 = (0, \infty)\)
 \end{proof}
 
 \subsubsection{(b)}
 \(\dps \bigcap_{i=0}^{4}W_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{4}W_i = W_4 = (4, \infty)\)
 \end{proof}
 
 \subsubsection{(c)}
 Are \(W_0, W_1, W_2, \ldots\) mutually disjoint? Explain.
 
 \begin{proof}
-
+$W_0, W_1, W_2, \ldots,$ are not mutually disjoint. In fact, each \(W_{k+1} \subseteq W_k\).
 \end{proof}
 
 \subsubsection{(d)}
 \(\dps \bigcup_{i=0}^{n}W_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=0}^{n}W_i = W_0 = (0, \infty)\)
 \end{proof}
 
 \subsubsection{(e)}
 \(\dps \bigcap_{i=0}^{n}W_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{n}W_i = W_n = (n, \infty)\)
 \end{proof}
 
 \subsubsection{(f)}
 \(\dps \bigcup_{i=0}^{\infty}W_i = ?\)
-\begin{proof}
 
+\begin{proof}
+\(\dps \bigcup_{i=0}^{\infty}W_i = W_0 = (0, \infty)\)
 \end{proof}
 
 \subsubsection{(g)}
 \(\dps \bigcap_{i=0}^{\infty}W_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=0}^{\infty}W_i = \es\)
 \end{proof}
 
 \subsection{Exercise 25}
 Let \(R_i = \{x \in \R \,|\, 1 \leq x \leq 1 + \frac{1}{i}\} = \left[1, 1 + \frac{1}{i}\right]\) 
-for each nonnegative integer $i$.
+for each positive integer $i$.
 
 \subsubsection{(a)}
-\(\dps \bigcup_{i=0}^{4}R_i = ?\)
+\(\dps \bigcup_{i=1}^{4}R_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=1}^{4}R_i = R_1 = [1, 2]\)
 \end{proof}
 
 \subsubsection{(b)}
-\(\dps \bigcap_{i=0}^{4}R_i = ?\)
+\(\dps \bigcap_{i=1}^{4}R_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{4}R_i = R_4 = \left[1, \frac{5}{4}\right]\)
 \end{proof}
 
 \subsubsection{(c)}
-Are \(R_0, R_1, R_2, \ldots\) mutually disjoint? Explain.
+Are \(R_1, R_2, R_3, \ldots\) mutually disjoint? Explain.
 
 \begin{proof}
-
+No, in fact each \(R_{k+1} \subseteq R_k\).
 \end{proof}
 
 \subsubsection{(d)}
-\(\dps \bigcup_{i=0}^{n}R_i = ?\)
+\(\dps \bigcup_{i=1}^{n}R_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=1}^{n}R_i = R_1 = [1, 2]\)
 \end{proof}
 
 \subsubsection{(e)}
-\(\dps \bigcap_{i=0}^{n}R_i = ?\)
+\(\dps \bigcap_{i=1}^{n}R_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{n}R_i = R_n = \left[1, 1+\frac{1}{n}\right]\)
 \end{proof}
 
 \subsubsection{(f)}
-\(\dps \bigcup_{i=0}^{\infty}R_i = ?\)
-\begin{proof}
+\(\dps \bigcup_{i=1}^{\infty}R_i = ?\)
 
+\begin{proof}
+\(\dps \bigcup_{i=1}^{\infty}R_i = R_1 = [1, 2]\)
 \end{proof}
 
 \subsubsection{(g)}
-\(\dps \bigcap_{i=0}^{\infty}R_i = ?\)
+\(\dps \bigcap_{i=1}^{\infty}R_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{\infty}R_i = \{1\}\)
 \end{proof}
 
 \subsection{Exercise 26}
 Let \(S_i = \{x \in \R \,|\, 1 < x < 1 + \frac{1}{i}\} = \left(1, 1 + \frac{1}{i}\right)\) 
-for each nonnegative integer $i$.
+for each positive integer $i$.
 
 \subsubsection{(a)}
-\(\dps \bigcup_{i=0}^{4}S_i = ?\)
+\(\dps \bigcup_{i=1}^{4}S_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=1}^{4}S_i = S_1 = (1, 2)\)
 \end{proof}
 
 \subsubsection{(b)}
-\(\dps \bigcap_{i=0}^{4}S_i = ?\)
+\(\dps \bigcap_{i=1}^{4}S_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{4}S_i = S_4 = (1, 5/4)\)
 \end{proof}
 
 \subsubsection{(c)}
 Are \(S_0, S_1, S_2, \ldots\) mutually disjoint? Explain.
 
 \begin{proof}
-
+No, in fact each \(S_{k+1} \subseteq S_k\).
 \end{proof}
 
 \subsubsection{(d)}
-\(\dps \bigcup_{i=0}^{n}S_i = ?\)
+\(\dps \bigcup_{i=1}^{n}S_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcup_{i=1}^{n}S_i = S_1 = (1, 2)\)
 \end{proof}
 
 \subsubsection{(e)}
-\(\dps \bigcap_{i=0}^{n}S_i = ?\)
+\(\dps \bigcap_{i=1}^{n}S_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{n}S_i = S_n = (1, \frac{n+1}{n})\)
 \end{proof}
 
 \subsubsection{(f)}
-\(\dps \bigcup_{i=0}^{\infty}S_i = ?\)
-\begin{proof}
+\(\dps \bigcup_{i=1}^{\infty}S_i = ?\)
 
+\begin{proof}
+\(\dps \bigcup_{i=1}^{\infty}S_i = S_1 = (1, 2)\)
 \end{proof}
 
 \subsubsection{(g)}
-\(\dps \bigcap_{i=0}^{\infty}S_i = ?\)
+\(\dps \bigcap_{i=1}^{\infty}S_i = ?\)
 
 \begin{proof}
-
+\(\dps \bigcap_{i=1}^{\infty}S_i = (1, 1) = \es\)
 \end{proof}
 
 \subsection{Exercise 27}
@@ -1173,49 +1183,50 @@ Is \(\{\{a, d, e\}, \{b, c\}, \{d, f\}\}\) a partition of
 \(\{a, b, c, d, e, f\}\)?
 
 \begin{proof}
-
+No. The element $d$ is in two of the sets.
 \end{proof}
 
 \subsubsection{(b)}
 Is \(\{\{w, x, v\}, \{u, y, q\}, \{p, z\}\}\) a partition of \(\{p, q, u, v, w, x, y, z\}\)?
 
 \begin{proof}
-
+Yes.
 \end{proof}
 
 \subsubsection{(c)}
 Is \(\{\{5, 4\}, \{7, 2\}, \{1, 3, 4\}, \{6, 8\}\}\) a partition of \(\{1, 2, 3, 4, 5, 6, 7, 8\}\)?
 
 \begin{proof}
-
+No. The element $4$ is in two of the sets.
 \end{proof}
 
 \subsubsection{(d)}
 Is \(\{\{3, 7, 8\}, \{2, 9\}, \{1, 4, 5\}\}\) a partition of \(\{1, 2, 3, 4, 5, 6, 7, 8, 9\}\)?
 
 \begin{proof}
-
+No. None of the sets contains 6.
 \end{proof}
 
 \subsubsection{(e)}
 Is \(\{\{1, 5\}, \{4, 7\}, \{2, 8, 6, 3\}\}\) a partition of \(\{1, 2, 3, 4, 5, 6, 7, 8\}\)?
 
 \begin{proof}
-
+Yes.
 \end{proof}
 
 \subsection{Exercise 28}
 Let $E$ be the set of all even integers and $O$ the set of all odd integers. Is \(\{E, O\}\) a partition of $\Z$, the set of all integers? Explain your answer.
 
 \begin{proof}
-
+Yes. Every integer is either even or odd, and no integer is both even and odd.
 \end{proof}
 
 \subsection{Exercise 29}
 Let $\R$ be the set of all real numbers. Is $\{R^+, R^-, \{0\}\}$ a partition of $\R$? Explain your answer.
 
 \begin{proof}
-
+Yes. Every real number is either positive or negative or zero, and no real number is both positive and negative, and 
+zero is neither negative nor positive (so the three sets are mutually disjoint).
 \end{proof}
 
 \subsection{Exercise 30}
@@ -1231,7 +1242,8 @@ $A_4$ & = & \(\{n \in \Z \, | \, n = 4k + 3 \text{ for some integer } k\}\)
 Is \(\{A_0, A_1, A_2, A_3\}\) a partition of $\Z$? Explain your answer.
 
 \begin{proof}
-
+Yes. These sets are mutually disjoint, and by the quotient-remainder theorem, every integer has exactly one of the 
+forms \(n = 4k\) or \(n = 4k+1\) or \(n = 4k+2\) or \(n = 4k+3\).
 \end{proof}
 
 \subsection{Exercise 31}
@@ -1241,27 +1253,34 @@ Suppose \(A = \{1, 2\}, B = \{2, 3\}\). Find each of the following:
 \(\ps(A \cap B)\)
 
 \begin{proof}
-
+\(A \cap B = \{2\}\), so \(\ps(A \cap B) = \{\es, \{2\}\}\).
 \end{proof}
 
 \subsubsection{(b)}
 \(\ps(A)\)
 
 \begin{proof}
-
+\(A = \{1, 2\}\), so \(\ps(A) = \{\es, \{1\}, \{2\}, \{1, 2\}\}\).
 \end{proof}
 
 \subsubsection{(c)}
 \(\ps(A \cup B)\)
-\begin{proof}
 
+\begin{proof}
+\(A \cup B = \{1, 2, 3\}\), so \(\ps(A \cup B) = \{\es, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\}\).
 \end{proof}
 
 \subsubsection{(d)}
 \(\ps(A \times B)\)
 
 \begin{proof}
+\(A \times B = \{(1, 2), (1, 3), (2, 2), (2, 3)\}\), so \(\ps(A\times B)=\{\es, \{(1, 2)\},\{(1, 3)\},\{(2, 2)\},\)
 
+\(\{(2, 3)\}, \{(1, 2), (1, 3)\}, \{(1, 2), (2, 2)\}, \{(1, 2), (2, 3)\}, \{(1, 3), (2, 2)\}, \{(1, 3), (2, 3)\}, \)
+
+\(\{(2, 2), (2, 3)\}, \{(1, 2), (1, 3), (2, 2)\}, \{(1, 2), (1, 3), (2, 3)\}, \{(1, 2), (2, 2), (2, 3)\}, \)
+
+\(\{(1, 3), (2, 2), (2, 3)\}, \{(1, 2), (1, 3), (2, 2), (2, 3)\}\}\).
 \end{proof}
 
 \subsection{Exercise 32}
@@ -1270,14 +1289,22 @@ Suppose \(A = \{1, 2\}, B = \{2, 3\}\). Find each of the following:
 Suppose \(A = \{1\}, B = \{u, v\}\). Find \(\ps(A \times B)\).
 
 \begin{proof}
-
+\(\ps(A \times B) = \{\es, \{(1, u)\}, \{(1, v)\}, \{(1, u), (1, v)\}\}\)
 \end{proof}
 
 \subsubsection{(b)}
-Suppose \(X = \{a,b\}, Y = \{x, y\}\). Find \(\ps(X \times Y)\).
+Suppose \(X = \{a, b\}, Y = \{x, y\}\). Find \(\ps(X \times Y)\).
 
 \begin{proof}
+\(X \times Y = \{(a, x), (a, y), (b, x), (b, y)\}\)
 
+\(\ps(X \times Y) = \{\es, \{(a, x)\}, \{(a, y)\}, \{(b, x)\}, \{(b, y)\}, \{(a, x), (a, y)\}, \{(a, x), (b, x)\},\)
+
+\(\{(a, x), (b, y)\}, \{(a, y), (b, x)\}, \{(a, y), (b, y)\}, \{(b, x), (b, y)\}, \{(a, x), (a, y), (b, x)\},\) 
+
+\(\{(a, x), (a, y), (b, y)\}, \{(a, x), (b, x), (b, y)\}, \{(a, y), (b, x), (b, y)\},\) 
+
+\(\{(a, x), (a, y), (b, x), (b, y)\}\}\)
 \end{proof}
 
 \subsection{Exercise 33}
@@ -1286,21 +1313,21 @@ Suppose \(X = \{a,b\}, Y = \{x, y\}\). Find \(\ps(X \times Y)\).
 Find \(\ps(\es)\).
 
 \begin{proof}
-
+\(\ps(\es) = \{\es\}\)
 \end{proof}
 
 \subsubsection{(b)}
 Find \(\ps(\ps(\es))\).
 
 \begin{proof}
-
+\(\ps(\ps(\es)) = \ps(\{\es\}) = \{\es, \{\es\}\}\)
 \end{proof}
 
 \subsubsection{(c)}
 Find \(\ps(\ps(\ps(\es)))\).
 
 \begin{proof}
-
+\(\ps(\ps(\ps(\es))) = \ps(\{\es, \{\es\}\}) = \{\es, \{\es\}, \{\{\es\}\}, \{\es, \{\es\}\}\}\)
 \end{proof}
 
 \subsection{Exercise 34}
@@ -1310,14 +1337,16 @@ Let \(A_1 = \{1\}, A_2 = \{u, v\}, A_3 = \{m, n\}\). Find each of the following 
 $A_1 \cup (A_2 \times A_3)$
 
 \begin{proof}
+\(A_1 \cup (A_2 \times A_3) = \{1\} \cup \{(u, m), (u, n), (v, m), (v, n)\}\)
 
+\(= \{1, (u, m), (u, n), (v, m), (v, n)\}\)
 \end{proof}
 
 \subsubsection{(b)}
 $(A_1 \cup A_2) \times A_3$
 
 \begin{proof}
-
+\((A_1 \cup A_2) \times A_3 = \{1, u, v\} \times \{m, n\} = \{(1, m), (1, n), (u, m), (u, n), (v, m), (v, n)\}\)
 \end{proof}
 
 \subsection{Exercise 35}
@@ -1327,27 +1356,32 @@ Let \(A = \{a, b\}, B = \{1, 2\}, C = \{2, 3\}\). Find each of the following set
 $A \times (B \cup C)$
 
 \begin{proof}
-
+\(A \times (B \cup C) = \{a, b\} \times \{1, 2, 3\}\ = \{(a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)\}\)
 \end{proof}
 
 \subsubsection{(b)}
 $(A \times B) \cup (A \times C)$
-\begin{proof}
 
+\begin{proof}
+\((A \times B) \cup (A \times C) = \{(a, 1), (a, 2), (b, 1), (b, 2), (a, 2), (a, 3), (b, 2), (b, 3)\}\) 
+
+\(= \{(a, 1), (a, 2), (b, 1), (b, 2), (a, 3), (b, 3)\}\)
 \end{proof}
 
 \subsubsection{(c)}
 $A \times (B \cap C)$
 
 \begin{proof}
-
+\(A \times (B \cap C) = \{a, b\} \times \{2\}\ = \{(a, 2), (b, 2)\}\)
 \end{proof}
 
 \subsubsection{(d)}
 $(A \times B) \cap (A \times C)$
 
 \begin{proof}
+\((A \times B) \cap (A \times C) = \{(a, 1), (a, 2), (b, 1), (b, 2)\} \cap \{(a, 2), (a, 3), (b, 2), (b, 3)\}\) 
 
+\(= \{(a, 2), (b, 2)\}\)
 \end{proof}
 
 \subsection{Exercise 36}
@@ -1355,7 +1389,10 @@ Trace the action of Algorithm 6.1.1 on the variables $i, j, found$, and $answer$
 $B$ represented as the arrays \(a[1] = u, a[2] = v, a[3] = w, b[1] = w, b[2] = u, b[3] = v\).
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/6.1.36.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 37}
@@ -1363,15 +1400,42 @@ Trace the action of Algorithm 6.1.1 on the variables $i, j, found$, and $answer$
 $B$ represented as the arrays \(a[1] = u, a[2] = v, a[3] = w, a[4] = x, b[1] = r, b[2] = u, b[3] = y, b[4] = z\).
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan} % change rule color
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+{\bf i} & 1 & & & & 2 & & & \\
+\hline
+{\bf j} & 1 & 2 & 3 & 4 & 1 & 2 & 3 & 4 \\
+\hline
+{\bf found} & no & yes & & & no & & & \\
+\hline
+{\bf answer} & \(A \subseteq B\) & & & & & & & \(A \nsubseteq B\) \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 38}
 Write an algorithm to determine whether a given element $x$ belongs to a given set that is represented as the array 
 \(a[1], a[2], \ldots, a[n]\).
 
-\begin{proof}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: Testing whether $x \in A$} 
 
-\end{proof}
+{\cy Input:} $x$ (an element), $n$ (a positive integer), \(a[1], \ldots, a[n]\) (a one-dimensional array representing 
+the set $A$).
+
+{\cy Algorithm Body:}
+\begin{tabbing}
+\(i \coloneqq 1, answer \coloneqq\) ``\(x \notin A\)'' \\
+{\bf while} \= (\(i \leq n\) and \(answer =\) ``\(x \notin A\)'') \\
+            \> {\bf if} \(x = a[i]\) {\bf then} \(answer = \) ``\(x \in A\)'' \\
+            \> \(i \coloneqq i + 1\) \\
+{\bf end while}
+\end{tabbing}
+{\cy Output:} {\it answer [a string]}
+\end{tcolorbox}
 
 \end{document}
