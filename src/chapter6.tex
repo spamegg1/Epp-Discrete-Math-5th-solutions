@@ -2492,4 +2492,1160 @@ Assume $n$ is a positive integer, \(B_1, B_2, B_3, \ldots\) and $A$ are any sets
 \]
 \end{proof}
 
+\section{Exercise Set 6.3}
+
+{\bf \cy For each of $1-4$ find a counterexample to show that the statement is false. Assume all sets are subsets of a universal set $U$.}
+
+\subsection{Exercise 1}
+For all sets $A$, $B$, and $C$, \((A \cup B) \cap C = A \cup (B \cap C)\).
+
+\begin{proof}
+\underline{Counterexample:} $A$, $B$, and $C$ can be any sets where $A$ has an element that is not in $C$. For 
+instance, let \(A = \{1, 2\}, B = \{2\}\), and \(C = \{2\}\). Then \((A \cup B) \cap C = (\{1, 2\} \cup \{2\}) \cap 
+\{2\} = \{1, 2\} \cap \{2\} = \{2\}\), and \(A \cup (B \cap C) = \{1, 2\} \cup (\{2\} \cap \{2\}) = \{1, 2\} \cup \{2\} 
+= \{1, 2\}\). Thus \(1 \in A \cup (B \cap C)\) but \(1 \notin (A \cup B) \cap C\), and hence \((A \cup B) \cap C 
+\neq A \cup (B \cap C)\) by definition of subset.
+\end{proof}
+
+\subsection{Exercise 2}
+For all sets $A$, $B$, \((A \cup B)^c = A^c \cup B^c\).
+
+\begin{proof}
+Let \(U = \{1, 2\}, A = \{1\}, B = \{2\}\). Then \(A \cup B = \{1, 2\}\) so \((A \cup B)^c = \es\). But \(A^c = \{2\}, 
+B^c = \{1\}\) and so \(A^c \cup B^c = \{1, 2\} \neq \es = (A \cup B)^c\).
+\end{proof}
+
+\subsection{Exercise 3}
+For all sets $A$, $B$, and $C$, if \(A \nsubseteq B\) and \(B \nsubseteq C\) then \(A \nsubseteq C\).
+
+\begin{proof}
+\underline{Counterexample:} $A$, $B$, and $C$ can be any sets where \(A \subseteq C\) and $B$ contains at least one 
+element that is not in either $A$ or $C$. For instance, let \(A = \{1\}, B = \{2\}\), and \(C = \{1, 3\}\). Then 
+\(A \nsubseteq B\) and \(B \nsubseteq C\) but \(A \subseteq C\).
+\end{proof}
+
+\subsection{Exercise 4}
+For all sets $A$, $B$, and $C$, if \(B \cup C \subseteq A\) then \((A - B) \cap (A - C) = \es\).
+
+\begin{proof}
+Let \(A = \{1, 2, 3\}, B = \{2\}, C = \{3\}\). Then \(B \cup C = \{2, 3\} \subseteq A\). And \(A - B = \{1, 3\}\)
+and \(A - C = \{1, 2\}\), but \((A - B) \cap (A - C) = \{1, 3\} \cap \{1, 2\} = \{1\} \neq \es\).
+\end{proof}
+
+{\bf \cy For each of $5-21$ prove each statement that is true and find a counterexample for each statement that is false. Assume all sets are subsets of a universal set $U$.}
+
+\subsection{Exercise 5}
+For all sets $A$, $B$, and $C$, \(A - (B - C) = (A - B) - C\).
+
+\begin{proof}
+False. \underline{Counterexample:} $A$, $B$, and $C$ can be any sets where all three sets have an element in common or 
+where $A$ and $C$ have a common element that is not in $B$. For instance, let \(A = \{1, 2, 3\}, B = \{2, 3\}\), and 
+\(C = \{3\}\). Then \(B - C = \{2\}\), and so \(A - (B - C) = \{1, 2, 3\} - \{2\} = \{1, 3\}\). On the other hand, 
+\(A - B = \{1, 2, 3\} - \{2, 3\} = \{1\}\), and so \((A - B) - C = \{1\} - \{3\} = \{1\}\). 
+Since \(\{1, 3\} \neq \{1\}\), \(A-(B-C) \neq (A-B)-C\).
+\end{proof}
+
+\subsection{Exercise 6}
+For all sets $A$, $B$, \(A \cap (A \cup B) = A\).
+
+\begin{proof}
+True. Let $A$ and $B$ be any sets. 
+
+{\bf Proof that \(\bm{A \cap (A \cup B) \subseteq A}\):} Suppose \(x \in A \cap (A \cup B)\). By definition of 
+intersection, $x \in A$ and \(x \in A \cup B\). In particular, $x \in A$. Thus, by definition of subset, 
+\(A \cap (A \cup B) \subseteq A\). 
+
+{\bf Proof that \(\bm{A \subseteq A \cap (A \cup B)}\):} Suppose $x \in A$. Then by definition of union, \(x \in A \cup B\). 
+Hence $x \in A$ and \(x \in A \cup B\), and so, by definition of intersection \(x \in A \cap (A \cup B)\). 
+Thus, by definition of subset, \(A \subseteq A \cap (A \cup B)\). 
+
+Because both \(A \cap (A \cup B) \subseteq A\) and \(A \subseteq A \cap (A \cup B)\) have been proved, we conclude 
+that \(A \cap (A \cup B) = A\).
+\end{proof}
+
+\subsection{Exercise 7}
+For all sets $A$, $B$, and $C$, \((A - B) \cap (C - B) = A - (B \cup C)\).
+
+\begin{proof}
+\underline{Counterexample:} 
+Let \(A = \{1\}, B = \{2\}, C = \{3\}\). Then \(A-B= \{1\}, C - B = \{3\}, B \cup C = \{2, 3\}\). 
+So \((A - B) \cap (C - B) = \{1\} \cap \{3\} = \es \neq \{1\} = A - (B \cup C)\).
+\end{proof}
+
+\subsection{Exercise 8}
+For all sets $A$, $B$, and $C$, if \(A^c \subseteq B\) then \(A \cup B = U\).
+
+\begin{proof}
+Assume \(x \in A \cup B\). By definition of universal set, \(x \in U\). 
+So by definition of subset, \(A \cup B \subseteq U\).
+
+Assume \(x \in U\). There are two cases: $x \in A$ or $x \notin A$. 
+
+In the first case, $x \in A \cup B$ by definition of union. 
+
+In the second case, $x \in A^c$ by definition of complement, and so $x \in B$ because \(A^c \subseteq B\). 
+Since $x \in B$, then \(x \in A \cup B\) by definition of union.
+
+In both cases \(x \in A \cup B\). So by definition of subset, \(U \subseteq A \cup B\).
+
+By definition of set equality, \(A \cup B = U\).
+\end{proof}
+
+\subsection{Exercise 9}
+For all sets $A$, $B$, and $C$, if \(A \subseteq C\) and \(B \subseteq C\) then \(A \cup B \subseteq C\).
+
+\begin{proof}
+True. Suppose $A, B$, and $C$ are any sets such that \(A \subseteq C\) and \(B \subseteq C\). Let \(x \in A \cup B\). 
+By definition of union, \(x \in A\) or \(x \in B\). But if \(x \in A\) then \(x \in C\) (because \(A \subseteq C\)), 
+and if \(x \in B\) then \(x \in C\) (because \(B \subseteq C\)). Hence, in either case, \(x \in C\). {\it [So, by 
+definition of subset, \(A \cup B \subseteq C\).]}
+\end{proof}
+
+\subsection{Exercise 10}
+For all sets $A$, $B$, if \(A \subseteq B\) then \(A \cap B^c = \es\).
+
+\begin{proof}
+Argue by contradiction and assume \(A \cap B^c \neq \es\).
+There exists $x$ such that \(x \in A \cap B^c \). By definition of intersection, $x \in A$ and $x \in B^c$.
+Since \(A \subseteq B\) and \(x \in A\), \(x \in B\). Since $x \in B^c$, by definition of complement \(x \notin B\).
+So both \(x \in B\) and \(x \notin B\), contradiction.
+Therefore \(A \cap B^c = \es\).
+\end{proof}
+
+\subsection{Exercise 11}
+For all sets $A$, $B$, and $C$, if \(A \subseteq B\) then \(A \cap (B \cap C)^c = \es\).
+
+\begin{proof}
+The statement is false. Let \(U = \{1, 2, 3, 4\}, A = \{1, 2\}, B = \{1, 2, 3\}, C = \{2\}\).
+
+Notice that \(A = \{1, 2\} \subseteq \{1, 2, 3\} = B\). And \(B \cap C = \{1, 2, 3\} \cap \{2\} = \{2\}\), so 
+\((B \cap C)^c = \{1, 3, 4\}\) but \(A \cap (B \cap C)^c = \{1, 2\} \cap \{1, 3, 4\} = \{1\} \neq \es\).
+\end{proof}
+
+\subsection{Exercise 12}
+For all sets $A$, $B$, and $C$, \(A \cap (B - C) = (A \cap B) - (A \cap C)\).
+
+\begin{proof}
+1. Assume \(x \in A \cap (B - C)\).
+
+2. By 1 and definition of intersection \(x \in A\) and \(x \in (B - C)\).
+
+3. By 2 and definition of difference, \(x \in B\) and \(x \notin C\).
+
+4. By 2 and 3 and definition of intersection, \(x \in A \cap B\).
+
+5. If \(x \in A \cap C\) then by definition of intersection \(x \in C\), contradiction to 3. Thus \(x \notin A \cap C\). 
+
+6. By 4 and 5 and definition of difference, \(x \in (A \cap B) - (A \cap C)\).
+
+7. By 1 and 6 and definition of subset, \(A \cap (B - C) \subseteq (A \cap B) - (A \cap C)\).
+
+{\bf Now the reverse part:}
+
+8. Assume \(x \in (A \cap B) - (A \cap C)\).
+
+9. By 8 and definition of difference, \(x \in (A \cap B)\) and \(x \notin (A \cap C)\).
+
+10. By 9 and definition of intersection, \(x \in A\) and \(x \in B\).
+
+11. If \(x \in C\) then by 10 and definition of intersection, \(x \in A \cap C\), contradiction to 9. 
+Thus \(x \notin C\).
+
+12. By 10 and 11 and definition of difference, \(x \in B - C\).
+
+13. By 10 and 12 and definition of intersection, \(x \in A \cap (B - C)\).
+
+14. By 8 and 13 and definition of subset, \((A \cap B) - (A \cap C) \subseteq A \cap (B - C)\).
+
+{\bf Conclusion:} By 7 and 14 and definition of set equality, \((A \cap B) - (A \cap C) = A \cap (B - C)\).
+\end{proof}
+
+\subsection{Exercise 13}
+For all sets $A$, $B$, and $C$, \(A \cup (B - C) = (A \cup B) - (A \cup C)\).
+
+\begin{proof}
+False. Let \(A = \{1\}, B = \{2\}, C = \{3\}\). Then \(A \cup (B - C) = \{1\} \cup (\{2\} - \{3\}) = \{1\} \cup 
+\{2\} = \{1, 2\}\), and \((A \cup B) - (A \cup C) = (\{1\} \cup \{2\}) - (\{1\} \cup \{3\}) = \{1, 2\} - \{1, 3\} = 
+\{2\}\). But \(\{1, 2\} \neq \{2\}\).
+\end{proof}
+
+\subsection{Exercise 14}
+For all sets $A$, $B$, and $C$, if \(A \cap C = B \cap C\) and \(A \cup C = B \cup C\), then $A = B$.
+
+\begin{proof}
+The statement is true. 
+
+1. Suppose \(x \in A\). {\it [We must show that \(x \in B\).]}
+
+2. Either \(x \in C\) or \(x \notin C\). 
+
+3. In case \(x \in C\), by 1 and definition of intersection \(x \in A \cap C = B \cap C\). 
+Then by definition of intersection, \(x \in B\). 
+
+4. In case \(x \notin C\), by 1 and definition of intersection \(x \in A \cup C = B \cup C\). 
+Then by definition of union \(x \in B\) or \(x \in C\), therefore \(x \in B\).
+
+5. By 1, 4 and definition of subset, \(A \subseteq B\).
+
+6. Suppose \(x \in B\). {\it [We must show that \(x \in A\).]}
+
+7. Either \(x \in C\) or \(x \notin C\). 
+
+8. In case \(x \in C\), by 6 and definition of intersection \(x \in B \cap C = A \cap C\). 
+Then by definition of intersection, \(x \in A\). 
+
+9. In case \(x \notin C\), by 6 and definition of intersection \(x \in B \cup C = A \cup C\). 
+Then by definition of union \(x \in A\) or \(x \in C\), therefore \(x \in A\).
+
+10. By 6, 9 and definition of subset, \(B \subseteq A\).
+
+11. By 5, 10 and definition of set equality, $A = B$.
+\end{proof}
+
+\subsection{Exercise 15}
+For all sets $A$, $B$, and $C$, \((A - B) \cup C \subseteq A \cup (C - B)\).
+
+\begin{proof}
+False. \underline{Counterexample:} Let \(A = \{1, 2\}, B = \{2, 3\}, C = \{3, 4\}\). 
+
+Then \((A - B) \cup C = (\{1, 2\} - \{2, 3\}) \cup \{3, 4\} = \{1\} \cup \{3, 4\} = \{1, 3, 4\}\). 
+
+And \(A \cup (C - B) = \{1, 2\} \cup (\{3, 4\} - \{2, 3\}) = \{1, 2\} \cup \{4\} = \{1, 2, 4\}\). 
+
+But \(\{1, 3, 4\} \nsubseteq \{1, 2, 4\}\).
+\end{proof}
+
+\subsection{Exercise 16}
+For all sets $A$, $B$, if \(A \cap B = \es\) then \(A \times B = \es\).
+
+\begin{proof}
+False. \underline{Counterexample:} Let \(A = \{1\}, B = \{2\}\). 
+Then \(A \cap B = \es\) but \(A \times B = \{(1, 2)\} \neq \es\).
+\end{proof}
+
+\subsection{Exercise 17}
+For all sets $A$, $B$, if \(A \subseteq B\) then \(\ps(A) \subseteq \ps(B)\).
+
+\begin{proof}
+Suppose $A$ and $B$ are any sets with \(A \subseteq B\). {\it [We must show that \(\ps(A) \subseteq \ps(B)\).]} 
+So suppose \(X \in \ps(A)\). Then \(X \subseteq A\) by definition of power set. And because \(A \subseteq B\), 
+we also have that \(X \subseteq B\) by the transitive property for subsets. Thus, by definition of power set, 
+\(X \in \ps(B)\). This proves that for all $X$, if \(X \in \ps(A)\) then \(X \in \ps(B)\), and so 
+\(\ps(A) \subseteq \ps(B)\), {\it [as was to be shown]}.
+\end{proof}
+
+\subsection{Exercise 18}
+For all sets $A$, $B$, \(\ps(A \cup B) \subseteq \ps(A) \cup \ps(B)\).
+
+\begin{proof}
+False. \underline{Counterexample:} For any sets $A$ and $B$, the only sets in \(\ps(A) \cup \ps(B)\) are subsets of 
+either $A$ or $B$, whereas a set in \(\ps(A \cup B)\) can contain elements from both $A$ and $B$. Thus, if at least 
+one of $A$ or $B$ contains elements that are not in the other set, \(\ps(A) \cup \ps(B)\) and \(\ps(A \cup B)\) 
+will not be equal. For instance, let \(A = \{1\}\) and \(B = \{2\}\). Then \(\{1, 2\} \in \ps(A \cup B)\) but 
+\(\{1, 2\} \notin \ps(A) \cup \ps(B)\).
+\end{proof}
+
+\subsection{Exercise 19}
+For all sets $A$, $B$, \(\ps(A) \cup \ps(B) \subseteq \ps(A \cup B)\).
+
+\begin{proof}
+Assume $A$, $B$ are any sets.
+
+1. Assume \(x \in \ps(A) \cup \ps(B)\). {\it [Want to show \(x \in \ps(A \cup B)\)]}.
+
+2. By definition of union \(x \in \ps(A)\) or \(x \in \ps(B)\).
+
+3. Case 1: \(x \in \ps(A)\). By definition of power set, \(x \subseteq A\). By definition of union, \(A \subseteq A 
+\cup B\). By transitivity of subsets, \(x \subseteq A \cup B\). By definition of power set, \(x \in \ps(A \cup B)\).
+
+4. Case 2: \(x \in \ps(B)\). By definition of power set, \(x \subseteq B\). By definition of union, \(B \subseteq A 
+\cup B\). By transitivity of subsets, \(x \subseteq A \cup B\). By definition of power set, \(x \in \ps(A \cup B)\).
+
+5. By 2, 3, 4, \(x \in \ps(A \cup B)\).
+
+6. By 1, 5 and definition of subset, \(\ps(A) \cup \ps(B) \subseteq \ps(A \cup B)\).
+\end{proof}
+
+\subsection{Exercise 20}
+For all sets $A$, $B$, \(\ps(A \cap B) = \ps(A) \cap \ps(B)\).
+
+\begin{proof}
+1. Assume \(x \in \ps(A \cap B)\). {\it [Want to show \(x \in \ps(A) \cap \ps(B)\).]}
+
+2. By 1 and definition of power set, \(x \subseteq A \cap B\).
+
+3. By 2 and definition of intersection, \(x \subseteq A\) and \(x \subseteq B\).
+
+4. By 3 and definition of power set, \(x \in \ps(A)\) and \(x \in \ps(B)\).
+
+5. By 4 and definition of intersection, \(x \in \ps(A) \cap \ps(B)\).
+
+6. By 1, 5 and definition of subset, \(\ps(A \cap B) \subseteq \ps(A) \cap \ps(B)\).
+
+7. Assume \(x \in \ps(A) \cap \ps(B)\). {\it [Want to show \(x \in \ps(A \cap B)\).]}
+
+8. By 7 and definition of intersection, \(x \in \ps(A)\) and \(x \in \ps(B)\).
+
+9. By 8 and definition of power set, \(x \subseteq A\) and \(x \subseteq B\).
+
+10. By 9 and definition of intersection, \(x \subseteq A \cap B\).
+
+11. By 10 and definition of power set, \(x \in \ps(A \cap B)\).
+
+12. By 7, 11 and definition of subset, \(\ps(A) \cap \ps(B) \subseteq \ps(A \cap B)\).
+
+13. By 6, 12 and definition of set equality, \(\ps(A \cap B) = \ps(A) \cap \ps(B)\).
+\end{proof}
+
+\subsection{Exercise 21}
+For all sets $A$, $B$, \(\ps(A \times B) = \ps(A) \times \ps(B)\).
+
+\begin{proof}
+False. \underline{Counterexample:} Let \(A = \{1\}, B = \{2\}\). Then \(A \times B = \{(1, 2)\}\). 
+
+So \(\ps(A) = 
+\{\es, \{1\}\}, \ps(B) = \{\es, \{2\}\}\) and \(\ps(A \times B) = \{\es, \{(1, 2)\}\}\). 
+
+But \(\ps(A) \times \ps(B) = \{(\es, \es), (\es, \{2\}), (\{1\}, \es), (\{1\}, \{2\})\} \neq \{\es, \{(1, 2)\}\}.\)
+\end{proof}
+
+\subsection{Exercise 22}
+Write a negation for each of the following statements. Indicate which is true, the statement or its negation. 
+Justify your answers.
+
+\subsubsection{(a)}
+\(\forall\) sets $S$, \(\exists\) a set $T$ such that \(S \cap T = \es\).
+
+\begin{proof}
+True. Let $T = S^c$.
+
+\underline{Negation:} \(\exists\) a set $S$ such that \( \forall\) sets $T$, \(S \cap T \neq \es\).
+\end{proof}
+
+\subsubsection{(b)}
+\(\exists\) a set $S$ such that \(\forall\) sets $T$, \(S \cup T = \es\).
+
+\begin{proof}
+False. If $T$ is nonempty, then no choice of $S$ works.
+
+\underline{Negation:} \(\forall\) sets $S$ \(\exists\) a set $T$ such that \(S \cup T \neq \es\).
+
+Negation is true: let $T$ be any nonempty set.
+\end{proof}
+
+\subsection{Exercise 23}
+Let \(S = \{a, b, c\}\), and for each integer \(i = 0, 1, 2, 3\), let $S_i$ be the set of all subsets of $S$ that 
+have $i$ elements. List the elements in \(S_0, S_1, S_2\), and $S_3$. Is \(\{S_0, S_1, S_2, S_3\}\) a partition of $\ps(S)$?
+
+\begin{proof}
+\(S_0 = \{\es\}, S_1 = \{\{a\}, \{b\}, \{c\}\}, S_2 = \{\{a,b\}, \{a,c\}, \{b,c\}\}, S_3 = \{\{a,b,c\}\}\).
+
+Yes it is a partition of $\ps(S)$.
+\end{proof}
+
+\subsection{Exercise 24}
+Let \(A = \{t, u, v, w\}\), and let $S_1$ be the set of all subsets of $A$ that do not contain $w$ and $S_2$ the set of all subsets of $A$ that contain $w$.
+
+\subsubsection{(a)}
+Find $S_1$.
+
+\begin{proof}
+\(S_1 = \ps(\{t,u,v\}) = \{\es, \{t\}, \{u\}, \{v\}, \{t,u\}, \{t,v\}, \{u,v\}, \{t,u,v\}\}\)
+\end{proof}
+
+\subsubsection{(b)}
+Find $S_2$.
+
+\begin{proof}
+\(S_2 = \{\{w\}, \{t,w\}, \{u,w\}, \{v,w\}, \{t,u,w\}, \{t,v,w\}, \{u,v,w\}, \{t,u,v,w\}\}\)
+\end{proof}
+
+\subsubsection{(c)}
+Are $S_1$ and $S_2$ disjoint?
+
+\begin{proof}
+Yes.
+\end{proof}
+
+\subsubsection{(d)}
+Compare the sizes of $S_1$ and $S_2$.
+
+\begin{proof}
+They are equal (8).
+\end{proof}
+
+\subsubsection{(e)}
+How many elements are in \(S_1 \cup S_2\)?
+
+\begin{proof}
+16.
+\end{proof}
+
+\subsubsection{(f)}
+What is the relation between \(S_1 \cup S_2\) and \(\ps(A)\)?
+
+\begin{proof}
+\(S_1 \cup S_2 = \ps(A)\).
+\end{proof}
+
+\subsection{Exercise 25}
+Use mathematical induction to prove that for every integer $n \geq 2$, if a set $S$ has $n$ elements, then the number 
+of subsets of $S$ with an even number of elements equals the number of subsets of $S$ with an odd number of elements.
+
+\begin{proof}
+For the sake of simplicity let's introduce some notation. For a set $S$ define \(even(S)\) = the set of elements of
+$S$ with an even number of elements, and \(odd(S)\) = the set of elements of $S$ with an odd number of elements.
+(Notice we said ``elements of $S$'' not ``subsets of $S$''.)
+
+Let $P(n)$ be the sentence “If a set $S$ has $n$ elements, then \(|even(\ps(S))| = |odd(\ps(S))|\).” (Here $|a|$ denotes the size of the set $a$.)
+
+{\bf Show that $P(2)$ is true:}
+
+Assume a set $S$ has two elements: \(S = \{a, b\}\). Then \(\ps(S) = \{\es, \{a\}, \{b\}, \{a, b\}\}\). 
+
+There are two subsets with an even number of elements: \(\es\) (which has 0 elements) and \(\{a, b\}\) (which has 2
+elements).
+
+There are two subsets with an odd number of elements: \(\{a\}, \{b\}\) (both of which have 1 element).
+
+Since 2 = 2, $P(2)$ is true.
+
+{\bf Show that for any integer $k \geq 2$ if $P(k)$ is true then $P(k+1)$ is true:} Assume “If a set $S$ has $k$ elements, \(|even(\ps(S))| = |odd(\ps(S))|\).”
+
+Assume $X$ is a set with $k+1$ elements. {\it [We want to show \(|even(\ps(X))| = |odd(\ps(X))|\).]} 
+
+Since $k+1 \geq 1$ we may pick an element $z \in X$. Let $S = X - \{z\}$. Then $S$ has $k$ elements, so by inductive hypothesis \(|even(\ps(S))| = |odd(\ps(S))|\).
+
+Observe that any subset of $X$ either contains $z$ or does not. Let $A$ be the set of subsets of $X$ that contain $z$, 
+let $B$ be the set of subsets of $X$ that do not contain $z$. 
+
+Notice $A$ and $B$ form a partition of $\ps(X)$, so \(|even(\ps(X))| = |even(A)| + |even(B)|\), and \(|
+odd(\ps(X))| = |odd(A)| + |odd(B)|\). Also notice that \(B = \ps(S)\), so \(|even(B)| = |odd(B)|\).
+
+Now consider the following one-to-one correspondence between $A$ and $B$: for any $b \in B$ there is $a \in A$
+given by \(a = b \cup \{z\}\). Similarly for any $a \in A$ there is $b \in B$ given by \(b = a - \{z\}\). Then $A$ and
+$B$ have the same number of elements.
+
+Notice that under this correspondence, if $b \in B$ has an even number of elements, then \(a = b \cup \{z\}\) has an
+odd number of elements, and vice versa. Therefore: \(|even(A)| = |odd(B)|\) and \(|odd(A)| = |even(B)|\). Since
+\(|even(B)| = |odd(B)|\), we get \(|even(A)| = |odd(A)|\).
+
+Putting these facts together, we get
+\[
+|even(\ps(X))| = |even(A)| + |even(B)| = |odd(A)| + |odd(B)| = |odd(\ps(X))|,
+\]
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 26}
+The following problem, devised by Ginger Bolton, appeared in the January 1989 issue of the College Mathematics Journal (Vol. 20, No. 1, p. 68): Given a positive integer $n \geq 2$, let $S$ be the set of all nonempty subsets of \(\{2, 3, \ldots, n\}\). For each \(S_i \in S\), let $P_i$ be the product of the elements of $S_i$. Prove or disprove that
+\[
+\sum_{i=1}^{2^{n-1}-1} P_i = \frac{(n+1)!}{2} - 1
+\]
+\begin{proof}
+Hint: Use mathematical induction. In the inductive step, you will consider the set of all nonempty subsets of 
+\(\{2, \ldots, k\}\) and the set of all nonempty subsets of \(\{2, \ldots, k + 1\}\). Any subset of 
+\(\{2, \ldots, k + 1\}\) either contains \(k + 1\) or does not contain \(k + 1\). Thus the sum of all products of 
+elements of nonempty subsets of \(\{2, \ldots , k + 1\}\) = the sum of all products of elements of nonempty subsets of 
+\(\{2, \ldots, k + 1\}\) that do not contain \(k + 1\) + the sum of all products of elements of nonempty subsets of 
+\(\{2, \ldots, k + 1\}\) that contain \(k + 1\) Now any subset of \(\{2, \ldots, k + 1\}\) that does not contain 
+\(k + 1\) is a subset of \(\{2, \ldots, k\}\). And any subset of \(\{2, \ldots, k + 1\}\) that contains \(k + 1\) 
+is the union of a subset of \(\{2, \ldots, k\}\) and \(\{k + 1\}\).
+\end{proof}
+
+{\bf \cy In 27 and 28 supply a reason for each step in the derivation.}
+
+\subsection{Exercise 27}
+For all sets $A$, $B$, and $C$, \((A \cup B) \cap C = (A \cap C) \cup (B \cap C)\).
+
+\underline{Proof:} Suppose $A,B,C$ are any sets. Then
+
+\begin{tabular}{rcll}
+\((A \cup B) \cap C\) & = & \(C \cap (A \cup B)\) & by (a) \fbl \\
+& = & \((C \cap A) \cup (C \cap B)\) & by (b) \fbl \\
+& = & \((A \cap C) \cup (B \cap C)\) & by (c) \fbl 
+\end{tabular}
+
+\begin{proof}
+(a) commutative law for $\cap$ (b) distributive law (c) commutative law for $\cap$
+\end{proof}
+
+\subsection{Exercise 28}
+For all sets $A$, $B$, and $C$, \((A \cup B) - (C - A) = A \cup (B - C)\).
+
+\underline{Proof:} Suppose $A,B,C$ are any sets. Then
+
+\begin{tabular}{rcll}
+\((A \cup B) - (C - A)\) & = & \((A \cup B) \cap (C - A)^c\) & by (a) \fbl \\
+& = & \((A \cup B) \cap (C \cap A^c)^c\) & by (b) \fbl \\
+& = & \((A \cup B) \cap (A^c \cap C)^c\) & by (c) \fbl \\
+& = & \((A \cup B)\cap((A^c)^c \cup C^c)\) & by (d) \fbl \\
+& = & \((A \cup B) \cap (A \cup C^c)\) & by (e) \fbl \\
+& = & \(A \cup (B \cap C^c)\) & by (f) \fbl \\
+& = & \(A \cup (B - C)\) & by (g) \fbl
+\end{tabular}
+
+\begin{proof}
+(a) set difference law (b) set difference law (c) commutative law for $\cap$ (d) De Morgan’s law 
+(e) double complement law (f) distributive law (g) set difference law
+\end{proof}
+
+\subsection{Exercise 29}
+Some steps are missing from the following proof that for all sets $A,B$, \((A \cup B^c) - B = (A - B) \cup B^c\). 
+Indicate what they are, and then write the proof correctly.
+
+\underline{Proof:} Suppose $A,B$ are any sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\((A \cup B^c) - B\) & = & \((A \cup B^c) \cap B^c\) & {\cy by set difference law} \\
+& = & \((B^c \cap A) \cup (B^c \cap B^c)\) & {\cy by distributive law} \\
+& = & \((B^c \cap A) \cup B^c\) & {\cy by idempotent law for $\cup$} \\
+& = & \((A-B) \cup B^c\) & {\cy by set difference law}
+\end{tabular}
+\end{center}
+\begin{proof}
+Before using the distributive law, we must first use the commutative law to get it into the right form:
+
+\((A \cup B^c) \cap B^c = B^c \cap (A \cup B^c)\) {\cy by commutative law}
+
+Then the same thing before the last step:
+
+\((B^c \cap A) \cup B^c = (A \cap B^c) \cup B^c\) {\cy by commutative law} \\
+\end{proof}
+
+{\bf \cy In $30-40$, construct an algebraic proof for the given statement. Cite a property from Theorem 6.2.2 for every step.}
+
+\subsection{Exercise 30}
+For all sets $A, B, C$, \((A \cap B) \cup C = (A \cup C) \cap (B \cup C)\).
+
+\begin{proof}
+Let sets $A,B,C$ be given. Then
+\begin{center}
+\begin{tabular}{rcll}
+\((A \cap B) \cup C\) & = & \(C \cup (A \cap B)\) & {\cy by the commutative law for $\cup$} \\
+& = & \((C \cup A) \cap (C \cap B)\) & {\cy by the distributive law} \\
+& = & \((A \cup C) \cap (B \cap C)\) & {\cy by the commutative law for $\cup$}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 31}
+For all sets $A, B$, \(A \cup (B - A) = A \cup B\).
+
+\begin{proof}
+Suppose $A,B$ are sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\(A \cup (B - A)\) & = & \(A \cup (B \cap A^c)\) & {\cy by set difference law} \\
+\(\) & = & \((A \cup B) \cap (A \cup A^c)\) & {\cy by distributive law} \\
+\(\) & = & \((A \cup B) \cap U\) & {\cy by complement law for $\cup$} \\
+\(\) & = & \(A \cup B\) & {\cy by identity law for $\cup$}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 32}
+For all sets $A, B$, \((A - B) \cup (A \cap B) = A\).
+
+\begin{proof}
+Suppose $A,B$ are sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\((A - B) \cup (A \cap B)\) & = & \((A \cap B^c) \cup (A \cap B)\) & {\cy by set difference law} \\
+\(\) & = & \(A \cap (B^c \cup B)\) & {\cy by distributive law for $\cap$} \\
+\(\) & = & \(A \cap (B \cup B^c)\) & {\cy by commutative law} \\
+\(\) & = & \(A \cap U\) & {\cy by complement law} \\
+\(\) & = & \(A\) & {\cy by identity law for $\cap$}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 33}
+For all sets $A, B$, \((A - B) \cap (A \cap B) = \es\).
+
+\begin{proof}
+Suppose $A,B$ are sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\((A - B) \cap (A \cap B)\) & = & \((A \cap B^c) \cap (A \cap B)\) & {\cy by set difference law} \\
+\(\) & = & \(A \cap (B^c \cap (A \cap B))\) & {\cy by associative law} \\
+\(\) & = & \(A \cap (B^c \cap (B \cap A))\) & {\cy by commutative law} \\
+\(\) & = & \(A \cap ((B^c \cap B) \cap A)\) & {\cy by associative law}
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{rcll}
+\(\) & = & \(A \cap ((B \cap B^c) \cap A)\) & {\cy by commutative law} \\
+\(\) & = & \(A \cap (\es \cap A)\) & {\cy by complement law} \\
+\(\) & = & \(A \cap (A \cap \es)\) & {\cy by commutative law} \\
+\(\) & = & \(A \cap \es\) & {\cy by universal bound law} \\
+\(\) & = & \(\es\) & {\cy by universal bound law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 34}
+For all sets $A, B, C$, \((A - B) - C = A - (B \cup C)\).
+
+\begin{proof}
+Suppose $A,B,C$ are sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\((A - B) - C\) & = & \((A \cap B^c) - C\) & {\cy by set difference law} \\
+\(\) & = & \((A \cap B^c) \cap C^c\) & {\cy by set difference law} \\
+\(\) & = & \(A \cap (B^c \cap C^c)\) & {\cy by associative law} \\
+\(\) & = & \(A \cap (B \cup C)^c\) & {\cy by De Morgan's law} \\
+\(\) & = & \(A - (B \cup C)\) & {\cy by set difference law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 35}
+For all sets $A, B$, \(A - (A - B) = A \cap B\).
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\(A - (A - B)\) & = & \(A - (A \cap B^c)\) & {\cy by set difference law} \\
+\(\) & = & \(A \cap (A \cap B^c)^c\) & {\cy by set difference law} \\
+\(\) & = & \(A \cap (A^c \cup (B^c)^c)\) & {\cy by De Morgan's law} \\
+\(\) & = & \(A \cap (A^c \cup B)\) & {\cy by double complement law} \\
+\(\) & = & \((A \cap A^c) \cup (A \cap B)\) & {\cy by distributive law for $\cap$} \\
+\(\) & = & \(\es \cup (A \cap B)\) & {\cy by complement law} \\
+\(\) & = & \((A \cap B) \cup \es\) & {\cy by commutative law} \\
+\(\) & = & \(A \cap B\) & {\cy by identity law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 36}
+For all sets $A, B$, \(((A^c \cup B^c) - A)^c = A\).
+
+\begin{proof}
+Let $A,B$ be any sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\(((A^c \cup B^c) - A)^c\) & = & \(((A^c \cup B^c) \cap A^c)^c\) & {\cy by set difference law} \\
+\(\) & = & \((A^c \cup B^c)^c \cup (A^c)^c\) & {\cy by De Morgan's law} \\
+\(\) & = & \(((A^c)^c \cap (B^c)^c) \cup (A^c)^c\) & {\cy by De Morgan's law} \\
+\(\) & = & \((A \cap B) \cup A\) & {\cy by double complement law} \\
+\(\) & = & \(A \cup (A \cap B)\) & {\cy by commutative law} \\
+\(\) & = & \(A\) & {\cy by absorption law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 37}
+For all sets $A, B$, \((B^c \cup (B^c - A))^c = B\).
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\((B^c \cup (B^c - A))^c\) & = & \((B^c \cup (B^c \cap A^c))^c\) & {\cy by set difference law} \\
+\(\) & = & \((B^c)^c \cap (B^c \cap A^c)^c\) & {\cy by De Morgan's law} \\
+\(\) & = & \((B^c)^c \cap ((B^c)^c \cup (A^c)^c)\) & {\cy by De Morgan's law} \\
+\(\) & = & \(B \cap (B \cup A)\) & {\cy by double complement law} \\
+\(\) & = & \(B\) & {\cy by absorption law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 38}
+For all sets $A, B$, \((A \cap B)^c \cap A = A - B\).
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\((A \cap B)^c \cap A\) & = & \((A^c \cup B^c) \cap A\) & {\cy by De Morgan's law} \\
+\(\) & = & \(A \cap (A^c \cup B^c)\) & {\cy by commutative law} \\
+\(\) & = & \((A \cap A^c) \cup (A \cap B^c)\) & {\cy by distributive law} \\
+\(\) & = & \(\es \cup (A \cap B^c)\) & {\cy by complement law} \\
+\(\) & = & \((A \cap B^c) \cup \es\) & {\cy by commutative law} \\
+\(\) & = & \((A \cap B^c)\) & {\cy by identity law} \\
+\(\) & = & \(A - B\) & {\cy by set difference law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 39}
+For all sets $A, B$, \((A - B) \cup (B - A) = (A \cup B) - (A \cap B)\).
+
+\begin{proof}
+Let $A,B$ be any sets. Then \((A - B) \cup (B - A)\)
+\begin{center}
+\begin{tabular}{cll}
+= & \((A \cap B^c) \cup (B \cap A^c)\) & {\cy by set difference law} \\
+= & \([(A \cap B^c) \cup B] \cap [(A \cap B^c) \cup A^c]\) & {\cy by distributive law} \\
+= & \([B \cup (A \cap B^c)] \cap [A^c \cup (A \cap B^c)]\) & {\cy by commutative law} \\
+= & \([(B \cup A) \cap (B \cup B^c)] \cap [(A^c \cup A) \cap (A^c \cup B^c)]\) & {\cy by distributive law} \\
+= & \([(B \cup A) \cap U] \cap [U \cap (A^c \cup B^c)]\) & {\cy by complement law} \\
+= & \([B \cup A] \cap [A^c \cup B^c]\) & {\cy by identity law} \\
+= & \([B \cup A] \cap [A \cap B]^c\) & {\cy by De Morgan's law} \\
+= & \([A \cup B] \cap [A \cap B]^c\) & {\cy by commutative law} \\
+= & \((A \cup B) - (A \cap B)\) & {\cy by set difference law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 40}
+For all sets $A, B, C$, \((A - B) - (B - C) = A - B\).
+
+\begin{proof}
+Let $A,B,C$ be any sets. Then
+\begin{center}
+\begin{tabular}{rcll}
+\((A - B) - (B - C)\) & = & \((A \cap B^c) \cap (B \cap C^c)^c\) & {\cy by set difference law} \\
+\(\) & = & \((A \cap B^c) \cap (B^c \cup (C^c)^c)\) & {\cy by De Morgan's law} \\
+\(\) & = & \((A \cap B^c) \cap (B^c \cup C)\) & {\cy by double complement law} \\
+\(\) & = & \(A \cap (B^c \cap (B^c \cup C))\) & {\cy by associative law} \\
+\(\) & = & \(A \cap [(B^c \cap B^c) \cup (B^c \cap C)]\) & {\cy by distributive law} \\
+\(\) & = & \(A \cap [B^c \cup (B^c \cap C)]\) & {\cy by idempotent law} \\
+\(\) & = & \(A \cap B^c\) & {\cy by absorption law} \\
+\(\) & = & \(A - B\) & {\cy by set difference law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+{\bf \cy In $41-43$ simplify the given expression. Cite a property from Theorem 6.2.2 for every step.}
+
+\subsection{Exercise 41}
+\(A \cap ((B \cup A^c) \cap B^c)\)
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\(A \cap ((B \cup A^c) \cap B^c)\) & = & \(A \cap (B^c \cap (B \cup A^c))\) & {\cy by commutative law} \\
+& = & \(A \cap [(B^c \cap B) \cup (B^c \cap A^c)]\) & {\cy by distributive law} \\
+& = & \(A \cap [\es \cup (B^c \cap A^c)]\) & {\cy by complement law} \\
+& = & \(A \cap [(B^c \cap A^c) \cup \es]\) & {\cy by commutative law} \\
+& = & \(A \cap (B^c \cap A^c)\) & {\cy by identity law}
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{rcll}
+& = & \(A \cap (A^c \cap B^c)\) & {\cy by commutative law} \\
+& = & \((A \cap A^c) \cap B^c\) & {\cy by associative law} \\
+& = & \(\es \cap B^c\) & {\cy by complement law} \\
+& = & \(B^c \cap \es = \es\) & {\cy by commutative \& universal bound law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 42}
+\((A - (A \cap B)) \cap (B - (A \cap B))\)
+
+\begin{proof}
+\begin{tabular}{cll}
+= & \((A \cap (A \cap B)^c) \cap (B \cap (A \cap B)^c)\) & {\cy by set difference law} \\
+= & \(A \cap [(A \cap B)^c \cap (B \cap (A \cap B)^c)]\) & {\cy by associative law} \\
+= & \(A \cap [((A \cap B)^c \cap B) \cap (A \cap B)^c]\) & {\cy by associative law} \\
+= & \(A \cap [(B \cap (A \cap B)^c) \cap (A \cap B)^c]\) & {\cy by commutative law} \\
+= & \(A \cap [B \cap ((A \cap B)^c \cap (A \cap B)^c)]\) & {\cy by associative law} \\
+= & \(A \cap [B \cap (A \cap B)^c]\) & {\cy by idempotent law} \\
+= & \((A \cap B) \cap (A \cap B)^c = \es\) & {\cy by associative \& complement law}
+\end{tabular}
+\end{proof}
+
+\subsection{Exercise 43}
+\(((A \cap (B \cup C)) \cap (A - B)) \cap (B \cup C^c)\)
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{cll}
+= & \((B \cup C^c) \cap ((A \cap (B \cup C)) \cap (A - B)) \) & {\cy by commutative law} \\
+= & \((B \cup C^c) \cap (((B \cup C) \cap A) \cap (A - B)) \) & {\cy by commutative law} \\
+= & \((B \cup C^c) \cap ((B \cup C) \cap (A \cap (A - B))) \) & {\cy by associative law} \\
+= & \([(B \cup C^c) \cap (B \cup C)] \cap (A \cap (A - B)) \) & {\cy by associative law} \\
+= & \([B \cup (C^c \cap C)] \cap (A \cap (A - B)) \) & {\cy by distributive law} \\
+= & \([B \cup \es] \cap (A \cap (A - B)) \) & {\cy by complement law} \\
+= & \(B \cap (A \cap (A - B)) \) & {\cy by identity law} \\
+= & \(B \cap (A \cap (A \cap B^c)) \) & {\cy by set difference law} \\
+= & \(B \cap ((A \cap A) \cap B^c) \) & {\cy by associative law} \\
+= & \(B \cap (A \cap B^c) \) & {\cy by idempotent law} \\
+= & \(B \cap (B^c \cap A) \) & {\cy by commutative law} \\
+= & \((B \cap B^c) \cap A \) & {\cy by associative law} \\
+= & \(\es \cap A\) & {\cy by complement law} \\
+= & \(A \cap \es\) & {\cy by commutative law} \\
+= & \(\es\) & {\cy by universal bound law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 44}
+Consider the following set property: For all sets $A$ and $B$, $A - B$ and $B$ are disjoint.
+
+\subsubsection{(a)}
+Use an element argument to derive the property.
+
+\begin{proof}
+We want to show \((A - B) \cap B = \es\). Argue by contradiction and assume \((A - B) \cap B \neq \es\).
+So there is some \(x \in (A - B) \cap B\). By definition of intersection \(x \in A-B\) and \(x \in B\). By definition
+of set difference \(x \in A\) and \(x \notin B\). So \(x \in B\) and \(x \notin B\), contradiction. Thus the 
+supposition was false, and \((A - B) \cap B = \es\) {\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(b)}
+Use an algebraic argument to derive the property (by applying properties from Theorem 6.2.2).
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\((A - B) \cap B\) & = & \((A \cap B^c) \cap B\) & {\cy by set difference law} \\
+& = & \(A \cap (B^c \cap B)\) & {\cy by associative law} \\
+& = & \(A \cap (B \cap B^c)\) & {\cy by commutative law} \\
+& = & \(A \cap \es\) & {\cy by complement law} \\
+& = & \(\es\) & {\cy by universal bound law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsubsection{(c)}
+Comment on which method you found easier.
+
+\begin{proof}
+Second method.
+\end{proof}
+
+\subsection{Exercise 45}
+Consider the following set property: For all sets $A, B$, and $C$, \((A - B) \cup (B - C) = (A \cup B) - (B \cap C)\).
+
+\subsubsection{(a)}
+Use an element argument to derive the property.
+
+\begin{proof}
+1. Assume \(x \in (A - B) \cup (B - C)\). {\it [Want to show \(x \in (A \cup B) - (B \cap C)\).]}
+
+2. By 1 and definition of union, \(x \in A - B\) or \(x \in B - C\).
+
+3. {\bf Case 1 (\(x \in A - B\)):} By definition of difference, $x \in A$ and $x \notin B$. 
+
+By definition of union and \(x \in A\), \(x \in A \cup B\).
+
+By definition of intersection and \(x \notin B\), \(x \notin B \cap C\). 
+
+So, by definition of difference, \(x \in (A \cup B) - (B \cap C)\).
+
+4. {\bf Case 2 (\(x \in B - C\)):} By definition of difference, $x \in B$ and $x \notin C$. 
+
+By definition of union and \(x \in B\), \(x \in A \cup B\). 
+
+By definition of intersection and \(x \notin C\), \(x \notin B \cap C\). 
+
+So, by definition of difference, \(x \in (A \cup B) - (B \cap C)\).
+
+5. By 3 and 4, \(x \in (A \cup B) - (B \cap C)\).
+
+6. By 1, 5 and definition of subset, \((A - B) \cup (B - C) \subseteq (A \cup B) - (B \cap C)\).
+
+{\it Now the reverse:}
+
+7. Assume \(x \in (A \cup B) - (B \cap C)\). {\it [Want to show \(x \in (A - B) \cup (B - C)\).]}
+
+8. By 7 and definition of difference, \(x \in A \cup B\) and \(x \notin B \cap C\).
+
+9. By 8 and definition of union, \(x \in A\) or \(x \in B\). Also by 8 and definition of intersection, 
+\(x \notin B\) or \(x \notin C\). 
+
+10. {\bf Case 1 (\(x \in A\)):} Either $x \in B$ or $x \notin B$.
+
+11. {\bf Subcase 1.1 (\(x \in B\)):} Then by 9, \(x \notin C\). So by definition of difference, \(x \in B-C\). Then by
+definition of union, \(x \in (A-B) \cup (B-C)\).
+
+12. {\bf Subcase 1.2 (\(x \notin B\)):} Then by definition of difference, \(x \in A - B\). Then by definition of union
+\(x \in (A-B) \cup (B-C)\).
+
+13. {\bf Case 2 (\(x \in B\)):} Then by 9, \(x \notin C\). So by definition of difference \(x \in B-C\), and then by
+definition of union, \(x \in (A-B) \cup (B-C)\).
+
+14. By 10-13, \(x \in (A-B) \cup (B-C)\) in all cases.
+
+15. By 7, 14 and definition of subset, \((A \cup B) - (B \cap C) \subseteq (A - B) \cup (B - C)\).
+
+16. By 6, 15 and definition of set equality, \((A - B) \cup (B - C) = (A \cup B) - (B \cap C)\).
+\end{proof}
+
+\subsubsection{(b)}
+Use an algebraic argument to derive the property (by applying properties from Theorem 6.2.2).
+
+\begin{proof}
+\((A - B) \cup (B - C)\)
+\begin{center}
+\begin{tabular}{cll}
+= & \((A \cap B^c) \cup (B \cap C^c)\) & {\cy by set difference law} \\
+= & \([(A \cap B^c) \cup \es] \cup [(B \cap C^c) \cup \es]\) & {\cy by identity law} \\
+= & \([(A \cap B^c) \cup (B \cap B^c)] \cup [(B \cap C^c) \cup (B \cap B^c)]\) & {\cy by complement law} \\
+= & \([(B^c \cap A) \cup (B^c \cap B)] \cup [(B \cap C^c) \cup (B \cap B^c)]\) & {\cy by commutative law} \\
+= & \([B^c \cap (A \cup B)] \cup [B \cap (C^c \cup B^c)]\) & {\cy by distributive law}
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{cll}
+= & \([B^c \cap (A \cup B)] \cup [B \cap (B^c \cup C^c)]\) & {\cy by commutative law} \\
+= & \(([B^c \cap (A \cup B)] \cup B) \cap ([B^c \cap (A \cup B)] \cup (B^c \cup C^c))\) & {\cy by distributive law} \\
+= & \((B \cup [B^c \cap (A \cup B)]) \cap ((B^c \cup C^c) \cup [B^c \cap (A \cup B)])\) & {\cy by commutative law} \\
+= & \(((B \cup B^c) \cap (B \cup (A \cup B))) \cap\) & \\
+  & \(([(B^c \cup C^c) \cup B^c] \cap [(B^c \cup C^c) \cup (A \cup B)])\) & {\cy by distributive law} \\
+= & \((U \cap (B \cup (A \cup B))) \cap\) & \\
+  & \(([(B^c \cup C^c) \cup B^c] \cap [(B^c \cup C^c) \cup (A \cup B)])\) & {\cy by complement law} \\
+= & \(((B \cup (A \cup B)) \cap U) \cap\) & \\
+  & \(([(B^c \cup C^c) \cup B^c] \cap [(C^c \cup B^c) \cup (B \cup A)])\) & {\cy by commutative law} \\
+= & \((B \cup (A \cup B)) \cap ([(B^c \cup C^c) \cup B^c] \cap [(C^c \cup B^c) \cup (B \cup A)])\) & {\cy by identity law} \\
+= & \((B \cup (B \cup A)) \cap ([(C^c \cup B^c) \cup B^c] \cap [(C^c \cup B^c) \cup (B \cup A)])\) & {\cy by commutative law} \\
+= & \(((B \cup B) \cup A) \cap ([C^c \cup (B^c \cup B^c)] \cap [C^c \cup (B^c \cup B) \cup A])\) & {\cy by associative law} \\
+= & \((B \cup A) \cap ((C^c \cup B^c) \cap [C^c \cup (B^c \cup B) \cup A])\) & {\cy by idempotent law} \\
+= & \((B \cup A) \cap ((C^c \cup B^c) \cap [(C^c \cup U) \cup A])\) & {\cy by complement law} \\
+= & \((B \cup A) \cap ((C^c \cup B^c) \cap (U \cup A))\) & {\cy by univ. bound law} \\
+= & \((A \cup B) \cap ((B^c \cup C^c) \cap (A \cup U))\) & {\cy by commutative law} \\
+= & \((A \cup B) \cap ((B^c \cup C^c) \cap U)\) & {\cy by univ. bound law} \\
+= & \((A \cup B) \cap (B^c \cup C^c)\) & {\cy by identity law} \\
+= & \((A \cup B) \cap (B \cap C)^c\) & {\cy by De Morgan's law} \\
+= & \((A \cup B) - (B \cap C)\) & {\cy by set difference law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsubsection{(c)}
+Comment on which method you found easier.
+
+\begin{proof}
+First method.
+\end{proof}
+
+\begin{tcolorbox}[colframe=cyan]
+\begin{defn}
+Given sets $A$ and $B$, the symmetric difference of $A$ and $B$, denoted \(A \Delta B\), is
+\[
+A \Delta B = (A - B) \cup (B - A).
+\]
+\end{defn}
+\end{tcolorbox}
+
+\subsection{Exercise 46}
+Let \(A = \{1,2,3,4\}\) and \(B = \{3,4,5,6\}\) and \(C = \{5,6,7,8\}\). Find each of the following sets:
+
+\subsubsection{(a)}
+\(A \Delta B\)
+
+\begin{proof}
+\(A \Delta B = (A - B) \cup (B - A) = (\{1,2,3,4\} - \{3,4,5,6\}) \cup (\{3,4,5,6\} - \{1,2,3,4\}) =
+\{1,2\} \cup \{5,6\} = \{1,2,5,6\}\)
+\end{proof}
+
+\subsubsection{(b)}
+\(B \Delta C\)
+
+\begin{proof}
+\(B \Delta C = (B - C) \cup (C - B) = \{3,4\} \cup \{7,8\} = \{3,4,7,8\}\)
+\end{proof}
+
+\subsubsection{(c)}
+\(A \Delta C\)
+
+\begin{proof}
+\(A \Delta C = (A - C) \cup (C - A) = \{1,2,3,4\} \cup \{5,6,7,8\} = \{1,2,3,4,5,6,7,8\}\)
+\end{proof}
+
+\subsubsection{(d)}
+\((A \Delta B) \Delta C\)
+
+\begin{proof}
+\((A \Delta B) \Delta C = \{1,2,5,6\} \Delta \{5,6,7,8\} = \{1,2\} \cup \{7,8\} = \{1,2,7,8\}\)
+\end{proof}
+
+{\bf \cy Refer to the definition of symmetric difference given above. Prove each of $47-52$, assuming that $A$, $B$, 
+and $C$ are all subsets of a universal set $U$.}
+
+\subsection{Exercise 47}
+\(A \Delta B = B \Delta A\)
+
+\begin{proof}
+Let $A$ and $B$ be any subsets of a universal set. By
+definition of $\Delta$, showing that \(A \Delta B = B 
+\Delta A\) is equivalent to showing that \((A - B) \cup (B - A) = (B - A) \cup (A - B)\). This follows immediately 
+from the commutative law for $\cup$.
+\end{proof}
+
+\subsection{Exercise 48}
+\(A \Delta \es = A\)
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\(A \Delta \es\) & = & \((A - \es) \cup (\es - A)\) & {\cy by definition of $\Delta$} \\
+&= & \((A \cap \es^c) \cup (\es \cap A^c)\) & {\cy by set difference law} \\
+&= & \((A \cap U) \cup (\es \cap A^c)\) & {\cy by complement of $U$ law} \\
+&= & \((A \cap U) \cup (A^c \cap \es)\) & {\cy by commutative law} \\
+&= & \(A \cup (A^c \cap \es)\) & {\cy by identity law} \\
+&= & \(A \cup \es\) & {\cy by universal bound law} \\
+&= & \(A\) & {\cy by identity law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 49}
+\(A \Delta A^c = U\)
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\(A \Delta A^c\) & = & \((A - A^c) \cup (A^c - A)\) & {\cy by definition of $\Delta$} \\
+& = & \((A \cap (A^c)^c) \cup (A^c \cap A^c)\) & {\cy by set difference law} \\
+& = & \((A \cap A) \cup (A^c \cap A^c)\) & {\cy by double complement law} \\
+& = & \(A \cup A^c\) & {\cy by idempotent law} \\
+& = & \(U\) & {\cy by complement law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 50}
+\(A \Delta A = \es\)
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\(A \Delta A\) & = & \((A - A) \cup (A - A)\) & {\cy by definition of $\Delta$} \\
+& = & \((A \cap A^c) \cup (A \cap A^c)\) & {\cy by set difference law} \\
+& = & \(\es \cup \es\) & {\cy by complement law} \\
+& = & \(\es\) & {\cy by idempotent law}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 51}
+If \(A \Delta C = B \Delta C\), then $A = B$.
+
+\begin{proof}
+Assume $A,B,C$ are any sets such that \(A \Delta C = B \Delta C\). {\it [Want to show $A = B$.]}
+
+Assume $x \in A$. {\it [Want to show $x \in B$.]} 
+
+{\bf Case 1: $x \in C$.} Then by definition of difference, \(x \notin A-C\) and \(x \notin C-A\). So by definition of 
+$\Delta$, \(x \notin A \Delta C\). Since \(A \Delta C = B \Delta C\), \(x \notin B \Delta C\). 
+
+By definition of $\Delta$, \(x \notin (B - C)\) and \(x \notin (C - B)\). Therefore \(x \notin (C - B)\). 
+
+So by definition of difference, either \(x \notin C\) or \(x \in B\). Since \(x\in C\), \(x \notin C\) is impossible.
+Thus \(x \in B\).
+
+{\bf Case 2: $x \notin C$.} By definition of difference, \(x\in A-C\). By definition of $\Delta$, \(x\in A\Delta C\).
+Since \(A \Delta C = B \Delta C\), \(x \in B \Delta C\).
+
+By definition of $\Delta$, \(x \in B-C\) or \(x \in C-B\). Since \(x \notin C\), \(x \in C-B\) is impossible. Thus
+\(x \in B-C\), so by definition of difference \(x \in B\).
+
+Therefore \(A \subseteq B\).
+
+The reverse direction (\(B \subseteq A\)) has a similar, symmetric proof. (Swap the roles of $A$ and $B$ in the 
+above proof.)
+
+Therefore \(B \subseteq A\) and by definition of set equality, $A = B$.
+\end{proof}
+
+\subsection{Exercise 52}
+\((A \Delta B) \Delta C = A \Delta (B \Delta C)\)
+
+\begin{proof}
+Assume \(x \in (A \Delta B) \Delta C\). {\it [Want to show \(x \in A \Delta (B \Delta C)\).]}
+
+By definition of $\Delta$, \(x \in (A \Delta B) - C\) or \(x \in C-(A \Delta B)\).
+
+{\bf Case 1 (\(x \in (A \Delta B) - C\)):}
+
+By definition of difference, \(x \in A \Delta B\) and \(x \notin C\).
+
+By definition of $\Delta$ either \(x \in A - B\) or \(x \in B - A\).
+
+{\bf Subcase 1.1 (\(x \in A-B\)):}
+
+By definition of difference, \(x \in A\) and \(x \notin B\).
+
+Since \(x \notin B\), by definition of difference \(x \notin B-C\).
+
+Since \(x \notin C\), by definition of difference \(x \notin C-B\) either.
+
+So by definition of union, \(x \notin (B-C) \cup (C-B)\), in other words, \(x \notin B \Delta C\).
+
+So \(x \in A - (B \Delta C)\), thus by definition of union \(x \in [A - (B \Delta C)] \cup [(B \Delta C) - A]\), 
+in other words \(x \in A \Delta (B \Delta C)\).
+
+{\bf Subcase 1.2 (\(x \in B-A\)):}
+
+By definition of difference, \(x \in B\) and \(x \notin A\).
+
+Since \(x \in B\), by definition of difference \(x \in B-C\). Thus by definition of union \(x \in (B-C) \cup (C-B)\)
+or in other words \(x \in B \Delta C\).
+
+Since \(x \notin A\), by definition of difference \(x \in (B \Delta C) - A\). Thus by definition of union, 
+\(x \in [(B \Delta C) - A] \cup [A - (B \Delta C)]\), in other words \(x \in A \Delta (B \Delta C)\).
+
+{\bf Case 2 (\(x \in C - (A \Delta B)\)):}
+
+By definition of difference, \(x \in C\) and \(x \notin A \Delta B\).
+
+By definition of $\Delta$, \(x \notin A - B\) and \(x \notin B - A\).
+
+{\bf Subcase 2.1 (\(x \in A\)):} 
+
+Since \(x \notin A - B\), by definition of difference \(x \in B\).
+
+Since \(x \in B\), by definition of difference \(x \notin C - B\).
+
+Since \(x \in C\), by definition of difference \(x \notin B - C\).
+
+Thus by definition of union \(x \notin (B-C) \cup (C-B)\), in other words \(x \notin (B \Delta C)\).
+
+Since \(x \in A\), by definition of difference \(x \in A - (B \Delta C)\). 
+
+Then by definition of union \(x \in [A - (B \Delta C)] \cup [(B \Delta C) - A]\), in other words, 
+\(x \in A \Delta(B \Delta C)\). 
+
+{\bf Subcase 2.2 (\(x \notin A\)):}
+
+Since \(x \notin B-A\), by definition of difference \(x \notin B\).
+
+Since \(x \in C\), by definition of difference \(x \in C - B\). So by definition of union \(x \in (B-C) \cup (C-B)\),
+in other words \(x \in (B \Delta C)\).
+
+Since \(x \notin A\), by definition of difference \(x \in (B \Delta C) - A\). 
+
+Then by definition of union, \(x \in [A - (B \Delta C)] \cup [(B \Delta C) - A]\), in other words 
+\(x \in A \Delta (B \Delta C)\).
+
+Thus in all cases \(x \in A \Delta (B \Delta C)\). This proves that 
+\((A \Delta B) \Delta C \subseteq A \Delta (B \Delta C)\).
+
+{\it [The proof of the reverse direction, \(A \Delta (B \Delta C) \subseteq (A \Delta B) \Delta C\) is similar.]}
+\end{proof}
+
+\subsection{Exercise 53}
+Derive the set identity \(A \cup (A \cap B) = A\) from the properties listed in Theorem 6.2.2(1)-(9). Start by showing 
+that for every subset $B$ of a universal set $U$, \(U \cup B = U\). Then intersect both sides with $A$ and deduce the identity.
+
+\begin{proof}
+\(U \cup B = B \cup U = U\) by the commutative law and the universal bound law.
+
+Then \(A \cap (U \cup B) = A \cap U\). Now the right hand side is \(A \cap U = A\) by the identity law.
+
+The left hand side, by the distributive law, is: \(A \cap (U \cup B) = (A \cap U) \cup (A \cap B)\), which is, again
+by the identity law, \(= A \cup (A \cap B)\).
+
+Thus the left hand side equals the right hand side, in other words, \(A \cup (A \cap B) = A\).
+\end{proof}
+
+\subsection{Exercise 54}
+Derive the set identity \(A \cap (A \cup B) = A\) from the properties listed in Theorem 6.2.2(1)-(9). Start by showing 
+that for every subset $B$ of a universal set $U$, \(\es = \es \cap B\). Then take the union of both sides with $A$ 
+and deduce the identity.
+
+\begin{proof}
+\(\es = B \cap \es = \es \cap B\) by the universal bound law and the commutative law.
+
+Then \(A \cup \es = A \cup (\es \cap B)\). Now the left hand side is \(A \cup \es = A\) by the identity law.
+
+The right hand side is, by distributive law, \(A \cup (\es \cap B) = (A \cup \es) \cap (A \cup B)\), which is, by the
+identity law, \(= A \cap (A \cup B)\).
+
+Thus the right hand side equals the left hand side, in other words, \(A \cap (A \cup B) = A\).
+\end{proof}
+
 \end{document}
