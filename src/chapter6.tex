@@ -3648,4 +3648,1152 @@ identity law, \(= A \cap (A \cup B)\).
 Thus the right hand side equals the left hand side, in other words, \(A \cap (A \cup B) = A\).
 \end{proof}
 
+\section{Exercise Set 6.4}
+
+{\bf \cy In $1-3$ assume that $B$ is a Boolean algebra with operations $+$ and $\cdot$. Give the reasons needed to fill 
+in the blanks in the proofs using only the axioms for a Boolean algebra.}
+
+\subsection{Exercise 1}
+{\it Idempotent law for $\cdot$:} For every $a$ in $B$, \(a \cdot a = a\).
+
+{\bf Proof:} Let $a$ be any element of $B$. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+\(a\) & = & \(a \cdot 1\) & {\cy (a) \fbl} \\
+\(\) & = & \(a \cdot (a + \bar{a})\) & {\cy (b) \fbl} \\
+\(\) & = & \((a \cdot a) + (a \cdot \bar{a})\) & {\cy (c) \fbl} \\
+\(\) & = & \((a \cdot a) + 0\) & {\cy (d) \fbl} \\
+\(\) & = & \(a \cdot a\) & {\cy (e) \fbl}
+\end{tabular}
+\end{center}
+
+\begin{proof}
+{\cy (a)} because 1 is an identity for $\cdot$ 
+
+{\cy (b)} by the complement law for + 
+
+{\cy (c)} by the distributive law for $\cdot$ over +
+
+{\cy (d)} by the complement law for $\cdot$ 
+
+{\cy (e)} because 0 is an identity for +
+\end{proof}
+
+\subsection{Exercise 2}
+{\it Universal bound law for $+$:} For every $a$ in $B$, \(a + 1 = 1\).
+
+{\bf Proof:} Let $a$ be any element of $B$. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+\(a+1\) & = & \(a+(a+\bar{a})\) & {\cy (a) \fbl} \\
+\(\) & = & \((a+a)+\bar{a}\) & {\cy (b) \fbl} \\
+\(\) & = & \(a + \bar{a}\) & {\cy by Example 6.4.2} \\
+\(\) & = & \(1\) & {\cy (c) \fbl}
+\end{tabular}
+\end{center}
+
+\begin{proof}
+{\cy (a)} by the complement law for + 
+
+{\cy (b)} by the associative law for + 
+
+{\cy (c)} by the complement law for +
+\end{proof}
+
+\subsection{Exercise 3}
+{\it Absorption law for $\cdot$ over $+$:} For all $a, b$ in $B$, \((a + b) \cdot a = a\).
+
+{\bf Proof:} Let $a, b$ be any elements of $B$. Then
+
+\begin{center}
+\begin{tabular}{rcll}
+\((a+b) \cdot a\) & = & \(a \cdot (a+b)\) & {\cy(a)\fbl} \\
+\(\) & = & \(a \cdot a + a \cdot b\) & {\cy (b) \fbl} \\
+\(\) & = & \(a + a \cdot b\) & {\cy by exercise 1} \\
+\(\) & = & \(a \cdot 1 + a \cdot b\) & {\cy (c) \fbl} \\
+\(\) & = & \(a \cdot(1 + b)\) & {\cy (d) \fbl} \\
+\(\) & = & \(a \cdot(b + 1)\) & {\cy (e) \fbl} \\
+\(\) & = & \(a \cdot 1\) & {\cy by exercise 2} \\
+\(\) & = & \(a\) & {\cy (f) \fbl}
+\end{tabular}
+\end{center}
+
+\begin{proof}
+{\cy (a)} by the commutative law for $\cdot$
+
+{\cy (b)} by the distributive law for $\cdot$ over +
+
+{\cy (c)} by the identity law for 1 and $\cdot$
+
+{\cy (d)} by the distributive law for $\cdot$ over +
+
+{\cy (e)} by the commutative law for +
+
+{\cy (f)} by the identity law for 1 and $\cdot$
+\end{proof}
+
+{\bf \cy In $4-10$ assume that $B$ is a Boolean algebra with operations $+$ and $\cdot$. Prove each statement using 
+only the axioms for a Boolean algebra and statements proved in the text or in lower-numbered exercises.}
+
+\subsection{Exercise 4}
+{\it Universal bound for $0$:} For every $a$ in $B$, \(a \cdot 0 = 0\).
+
+\begin{proof}
+Assume $a$ is any element in $B$. Then
+\begin{center}
+\begin{tabular}{rcll}
+\(a \cdot 0\) & = & \(a \cdot (a \cdot \bar{a})\) & {\cy by the complement law for $\cdot$} \\
+& = & \((a \cdot a) \cdot \bar{a}\) & {\cy by the associative law for $\cdot$} \\
+& = & \(a \cdot \bar{a}\) & {\cy by exercise 1} \\
+& = & 0 & {\cy by the complement law for $\cdot$} \\
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 5}
+{\it Complements of $0$ and $1$:}
+
+\subsubsection{(a)}
+\(\bar{0} = 1\)
+
+\begin{proof}
+$0 \cdot 1 = 0$ because 1 is an identity for $\cdot$, and $0 + 1 = 1 + 0 = 1$ because + is commutative and 0 is an 
+identity for +. Thus, by the uniqueness of the complement law, $0 = 1$.
+\end{proof}
+
+\subsubsection{(b)}
+\(\bar{1} = 0\)
+
+\begin{proof}
+By the complement law, \(1 + \bar{1} = 1\). By the uniqueness of 0 law, \(\bar{1} = 0\).
+\end{proof}
+
+\subsection{Exercise 6}
+{\it Uniqueness of $0$:} There is only one element of $B$ that is an identity for $+$.
+
+\begin{proof}
+Suppose $0$ and $0'$ are elements of $B$ both of which are identities for +. Then both $0$ and $0'$ satisfy the 
+identity, complement, and universal bound laws. {\it [We will show that $0 = 0'$.]} By the identity law for +, for 
+every \(a \in B, a + 0 = a\) (*) and \(a + 0' = a\) (**). It follows that
+
+\begin{center}
+\begin{tabular}{rcll}
+\(0'\) & = & \(0' + 0\) & {\cy by (*) with \(a = 0'\)} \\
+& = & \(0 + 0'\) & {\cy by the commutative law for +} \\
+& = & \(0\) & {\cy by (**) with \(a = 0\)}
+\end{tabular}
+\end{center}
+
+{\it [This is what was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 7}
+{\it Uniqueness of $1$:} There is only one element of $B$ that is an identity for $\cdot$.
+
+\begin{proof}
+Suppose $1$ and $1'$ are elements of $B$ both of which are identities for $\cdot$. 
+
+{\it [Want to show $1 = 1'$.]}
+
+Then for every \(a \in B\), by the identity law for $\cdot$, \(a \cdot 1 = a\) (*) and \(a \cdot 1' = a\) (**). 
+
+\begin{center}
+\begin{tabular}{rcll}
+\(1'\) & = & \(1' \cdot 1\) & {\cy by (*) with \(a=1'\)} \\
+& = & \(1 \cdot 1'\) & {\cy by the commutative law for $\cdot$} \\
+& = & \(1\) & {\cy by (**) with \(a = 1\)}
+\end{tabular}
+\end{center}
+
+{\it [as was to be shown.]}
+\end{proof}
+
+\subsection{Exercise 8}
+{\it De Morgan’s law for $\cdot$:} For all $a$ and $b$ in $B$, \(\overline{a \cdot b} = \bar{a} + \bar{b}\). 
+({\it Hint:} Prove that \((a \cdot b) + (\bar{a} + \bar{b}) 
+= 1\) and that \((a \cdot b) \cdot (\bar{a} + \bar{b}) = 0\), and use the fact that \(a \cdot b\) has a unique complement.)
+
+\begin{proof}
+Suppose $B$ is a Boolean algebra and $a$ and $b$ are any elements of $B$. 
+
+{\it [We first prove that \((a \cdot b) + (\bar{a} + \bar{b}) = 1\).]} Now \((a \cdot b) + (\bar{a} + \bar{b})\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(((a \cdot b) + \bar{a}) + \bar{b}\) & {\cy by the associative law for +} \\
+= & \((\bar{a} + (a \cdot b)) + \bar{b}\) & {\cy by the commutative law for +} \\
+= & \([(\bar{a} + a) \cdot (\bar{a} + b)] + \bar{b}\) & {\cy by the distributive law of + over $\cdot$} \\
+= & \([(\bar{a} + b) \cdot (a + \bar{a})] + \bar{b}\) & {\cy by the commutative laws for + and $\cdot$} \\
+= & \([(\bar{a} + b) \cdot 1] + \bar{b}\) & {\cy by the complement law for +} \\
+= & \((\bar{a} + b) + \bar{b}\) & {\cy by the identity law for $\cdot$} \\
+= & \(\bar{a} + (b + \bar{b})\) & {\cy by the associative law for +} \\
+= & \(\bar{a} + 1\) & {\cy by the complement law for +} \\
+= & \(1\) & {\cy by the universal bound law for +}
+\end{tabular}
+\end{center}
+
+{\it [Next we prove that \((a \cdot b) \cdot (\bar{a} + \bar{b}) = 0\).]} Now \((a \cdot b) \cdot (\bar{a} + \bar{b})\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(((a \cdot b) \cdot \bar{a}) + ((a \cdot b) \cdot \bar{b})\) & {\cy by the distributive law of $\cdot$ over +} \\
+= & \((b \cdot (a \cdot \bar{a})) + (a \cdot (b \cdot \bar{b}))\) & {\cy by the commutative \& associative laws for $\cdot$} \\
+= & \((b \cdot 0) + (a \cdot 0)\) & {\cy by the complement law for $\cdot$} \\
+= & \(0 + 0\) & {\cy by the universal bound law for $\cdot$} \\
+= & \(0\) & {\cy by the identity law for +}
+\end{tabular}
+\end{center}
+
+Because both \((a \cdot b) + (\bar{a} + \bar{b}) = 1\) and \((a \cdot b) \cdot (\bar{a} + \bar{b}) = 0\), it follows, 
+by the uniqueness of the complement law, that \(\overline{a \cdot b} = \bar{a} + \bar{b}\).
+\end{proof}
+
+\subsection{Exercise 9}
+{\it De Morgan’s law for $+$:} For all $a$ and $b$ in $B$, \(\overline{a + b} = \bar{a} \cdot \bar{b}\). 
+
+\begin{proof}
+Similar to exercise 8, we need to show that \(\bar{a} \cdot \bar{b}\) is a complement of $a+b$. So we need to show: \((a+b) + (\bar{a} \cdot \bar{b}) = 1\) and 
+\((a+b) \cdot (\bar{a} \cdot \bar{b}) = 0\). Now \((a+b) + (\bar{a} \cdot \bar{b})\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(((a+b) + \bar{a}) \cdot ((a + b) + \bar{b})\) & {\cy by the distributive law of + over $\cdot$} \\
+= & \((b + (a + \bar{a})) \cdot (a + (b + \bar{b}))\) & {\cy by the associative and commutative laws for +} \\
+= & \((b + 1) \cdot (a + 1)\) & {\cy by the complement law for +} \\
+= & \(1 \cdot 1\) & {\cy by the universal bound law for +} \\
+= & \(1\) & {\cy by the identity law for $\cdot$}
+\end{tabular}
+\end{center}
+
+Now \((a+b) \cdot (\bar{a} \cdot \bar{b})\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \((\bar{a} \cdot \bar{b}) \cdot (a+b)\) & {\cy by the commutative law for $\cdot$} \\
+= & \((\bar{a}\cdot\bar{b})\cdot a + (\bar{a}\cdot\bar{b}) \cdot b\) & {\cy by distributive law of $\cdot$ over +} \\
+= &\(\bar{b}\cdot(a\cdot\bar{a})+\bar{a}\cdot(b\cdot\bar{b} )\)&{\cy by associative and commutative laws for $\cdot$}\\
+= & \(\bar{b} \cdot 0 + \bar{a} \cdot 0\) & {\cy by the complement law for $\cdot$} \\
+= & \(0 + 0\) & {\cy by the universal bound law for $\cdot$} \\
+= & \(0\) & {\cy by the identity law for +}
+\end{tabular}
+\end{center}
+
+Because both \((a + b) + (\bar{a} \cdot \bar{b}) = 1\) and \((a + b) \cdot (\bar{a} \cdot \bar{b}) = 0\), it follows, 
+by the uniqueness of the complement law, that \(\overline{a + b} = \bar{a} \cdot \bar{b}\).
+\end{proof}
+
+\subsection{Exercise 10}
+{\it Cancellation law:} For all $x, y$, and $z$ in $B$, if \(x + y = x + z\) and \(x \cdot y = x \cdot z\), then \(y = z\).
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+$y$ & = & \((y + x) \cdot y\) & {\cy by exercise 3} \\
+& = & \(y \cdot (x + y)\) & {\cy by the commutative laws for + and $\cdot$} \\
+& = & \(y \cdot (x + z)\) & {\cy by given assumption} \\
+& = & \((y \cdot x) + (y \cdot z)\) & {\cy by the distributive law of $\cdot$ over +} \\
+& = & \((x \cdot y) + (z \cdot y)\) & {\cy by the commutative law for $\cdot$} \\
+& = & \((x \cdot z) + (z \cdot y)\) & {\cy by given assumption} \\
+& = & \((z \cdot x) + (z \cdot y)\) & {\cy by the commutative law for $\cdot$} \\
+& = & \(z \cdot (x + y)\) & {\cy by the distributive law of $\cdot$ over +} \\
+& = & \(z \cdot (x + z)\) & {\cy by given assumption} \\
+& = & \(z \cdot x + z \cdot z\) & {\cy by the distributive law of $\cdot$ over +} \\
+& = & \(z \cdot x + z\) & {\cy by the idempotent law for $\cdot$} \\
+& = & \(z \cdot x + z \cdot 1\) & {\cy by the identity law for $\cdot$} \\
+& = & \(z \cdot (x + 1)\) & {\cy by the distributive law of $\cdot$ over +} \\
+& = & \(z \cdot 1\) & {\cy by the universal bound law for +} \\
+& = & \(z\) & {\cy by the identity law for $\cdot$}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 11}
+Let \(S = \{0, 1\}\), and define operations $+$ and $\cdot$ on $S$ by the following tables:
+
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{c|cc}
+\(\bm{+}\) & \(\bm{0}\) & \(\bm{1}\) \\
+\hline
+0 & 0 & 1 \\
+1 & 1 & 1 \\
+\end{tabular}
+\hspace{2cm}
+\begin{tabular}{c|cc}
+\(\bm{\cdot}\) & \(\bm{0}\) & \(\bm{1}\) \\
+\hline
+0 & 0 & 0 \\
+1 & 0 & 1 \\
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+
+\subsubsection{(a)}
+Show that the elements of $S$ satisfy the following properties:
+
+(i) the commutative law for $+$
+
+(ii) the commutative law for $\cdot$
+
+(iii) the associative law for $+$
+
+(iv) the associative law for $\cdot$
+
+(v) the distributive law for $+$ over $\cdot$
+
+(vi) the distributive law for $\cdot$ over $+$
+
+\begin{proof}
+Because $S$ has only two distinct elements, 0 and 1,
+
+(i) we only need to check that \(0 + 1 = 1 + 0\). This is true because both sums equal 1.
+
+(ii) we only need to check that \(0 \cdot 1 = 1 \cdot 0\). This is true because both products equal 0.
+
+(iii) we need to check 8 equations:
+
+\begin{tabular}{cll}
+  & \((0 + 0) + 0\) & \\
+= & \(0 + 0\) & {\cy by + table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 + (0 + 0)\) & \\
+= & \(0 + 0\) & {\cy by + table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+
+so \((0 + 0) + 0 = 0 + (0 + 0)\).
+
+\begin{tabular}{cll}
+  & \((0 + 0) + 1\) & \\
+= & \(0 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 + (0 + 1)\) & \\
+= & \(0 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((0 + 0) + 1 = 0 + (0 + 1)\).
+
+\begin{tabular}{cll}
+  & \((0 + 1) + 0\) & \\
+= & \(1 + 0\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 + (1 + 0)\) & \\
+= & \(0 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((0 + 1) + 0 = 0 + (1 + 0)\).
+
+\begin{tabular}{cll}
+  & \((1 + 0) + 0\) & \\
+= & \(1 + 0\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 + (0 + 0)\) & \\
+= & \(1 + 0\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((1 + 0) + 0 = 1 + (0 + 0)\).
+
+\begin{tabular}{cll}
+  & \((1 + 0) + 1\) & \\
+= & \(1 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 + (0 + 1)\) & \\
+= & \(1 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((1 + 0) + 1 = 1 + (0 + 1)\).
+
+\begin{tabular}{cll}
+  & \((1 + 1) + 0\) & \\
+= & \(1 + 0\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 + (1 + 0)\) & \\
+= & \(1 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((1 + 1) + 0 = 1 + (1 + 0)\).
+
+\begin{tabular}{cll}
+  & \((0 + 1) + 1\) & \\
+= & \(1 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 + (1 + 1)\) & \\
+= & \(0 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((0 + 1) + 1 = 0 + (1 + 1)\).
+
+\begin{tabular}{cll}
+  & \((1 + 1) + 1\) & \\
+= & \(1 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 + (1 + 1)\) & \\
+= & \(1 + 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \((1 + 1) + 1 = 1 + (1 + 1)\).
+
+(iv) we need to check 8 equations:
+
+\begin{tabular}{cll}
+  & \((0 \cdot 0) \cdot 0\) & \\
+= & \(0 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 \cdot (0 \cdot 0)\) & \\
+= & \(0 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((0 \cdot 0) \cdot 0 = 0 \cdot (0 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \((0 \cdot 0) \cdot 1\) & \\
+= & \(0 \cdot 1\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 \cdot (0 \cdot 1)\) & \\
+= & \(0 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((0 \cdot 0) \cdot 1 = 0 \cdot (0 \cdot 1)\).
+
+\begin{tabular}{cll}
+  & \((0 \cdot 1) \cdot 0\) & \\
+= & \(0 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 \cdot (1 \cdot 0)\) & \\
+= & \(0 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((0 \cdot 1) \cdot 0 = 0 \cdot (1 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \((1 \cdot 0) \cdot 0\) & \\
+= & \(0 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 \cdot (0 \cdot 0)\) & \\
+= & \(1 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((1 \cdot 0) \cdot 0 = 1 \cdot (0 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \((1 \cdot 0) \cdot 1\) & \\
+= & \(0 \cdot 1\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 \cdot (0 \cdot 1)\) & \\
+= & \(1 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((1 \cdot 0) \cdot 1 = 1 \cdot (0 \cdot 1)\).
+
+\begin{tabular}{cll}
+  & \((1 \cdot 1) \cdot 0\) & \\
+= & \(1 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 \cdot (1 \cdot 0)\) & \\
+= & \(1 \cdot 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((1 \cdot 1) \cdot 0 = 1 \cdot (1 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \((0 \cdot 1) \cdot 1\) & \\
+= & \(0 \cdot 1\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(0 \cdot (1 \cdot 1)\) & \\
+= & \(0 \cdot 1\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((0 \cdot 1) \cdot 1 = 0 \cdot (1 \cdot 1)\).
+
+\begin{tabular}{cll}
+  & \((1 \cdot 1) \cdot 1\) & \\
+= & \(1 \cdot 1\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \(1 \cdot (1 \cdot 1)\) & \\
+= & \(1 \cdot 1\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+so \((1 \cdot 1) \cdot 1 = 1 \cdot (1 \cdot 1)\).
+
+(v) we need to check 8 equations:
+
+\begin{tabular}{cll}
+  & \(0 + (0 \cdot 0)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 + 0) \cdot (0 + 0)\) & \\
+= & \(0 \cdot 0\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(0 + (0 \cdot 0) = (0 + 0) \cdot (0 + 0)\).
+
+\begin{tabular}{cll}
+  & \(0 + (0 \cdot 1)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 + 0) \cdot (0 + 1)\) & \\
+= & \(0 \cdot 1\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(0 + (0 \cdot 1) = (0 + 0) \cdot (0 + 1)\).
+
+\begin{tabular}{cll}
+  & \(0 + (1 \cdot 0)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 + 1) \cdot (0 + 0)\) & \\
+= & \(1 \cdot 0\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(0 + (1 \cdot 0) = (0 + 1) \cdot (0 + 0)\).
+
+\begin{tabular}{cll}
+  & \(1 + (0 \cdot 0)\) & \\
+= & \(1 + 0\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 + 0) \cdot (1 + 0)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(1 + (0 \cdot 0) = (1 + 0) \cdot (1 + 0)\).
+
+\begin{tabular}{cll}
+  & \(0 + (1 \cdot 1)\) & \\
+= & \(0 + 1\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 + 1) \cdot (0 + 1)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(0 + (1 \cdot 1) = (0 + 1) \cdot (0 + 1)\).
+
+\begin{tabular}{cll}
+  & \(1 + (0 \cdot 1)\) & \\
+= & \(1 + 0\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 + 0) \cdot (1 + 1)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(1 + (0 \cdot 1) = (1 + 0) \cdot (1 + 1)\).
+
+\begin{tabular}{cll}
+  & \(1 + (1 \cdot 0)\) & \\
+= & \(1 + 0\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 + 1) \cdot (1 + 0)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(1 + (1 \cdot 0) = (1 + 1) \cdot (1 + 0)\).
+
+\begin{tabular}{cll}
+  & \(1 + (1 \cdot 1)\) & \\
+= & \(1 + 1\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 + 1) \cdot (1 + 1)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+
+so \(1 + (1 \cdot 1) = (1 + 1) \cdot (1 + 1)\).
+
+(vi) we need to check 8 equations:
+
+\begin{tabular}{cll}
+  & \(0 \cdot (0 + 0)\) & \\
+= & \(0 \cdot 0\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 \cdot 0) + (0 \cdot 0)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+
+so \(0 \cdot (0 + 0) = (0 \cdot 0) + (0 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \(0 \cdot (0 + 1)\) & \\
+= & \(0 \cdot 1\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 \cdot 0) + (0 \cdot 1)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+
+so \(0 \cdot (0 + 1) = (0 \cdot 0) + (0 \cdot 1)\).
+
+\begin{tabular}{cll}
+  & \(0 \cdot (1 + 0)\) & \\
+= & \(0 \cdot 1\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 \cdot 1) + (0 \cdot 0)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+
+so \(0 \cdot (1 + 0) = (0 \cdot 1) + (0 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \(1 \cdot (0 + 0)\) & \\
+= & \(1 \cdot 0\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 \cdot 0) + (1 \cdot 0)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+
+so \(1 \cdot (0 + 0) = (1 \cdot 0) + (1 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \(1 \cdot (1 + 0)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 \cdot 1) + (1 \cdot 0)\) & \\
+= & \(1 + 0\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \(1 \cdot (1 + 0) = (1 \cdot 1) + (1 \cdot 0)\).
+
+\begin{tabular}{cll}
+  & \(1 \cdot (0 + 1)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 \cdot 0) + (1 \cdot 1)\) & \\
+= & \(0 + 1\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \(1 \cdot (0 + 1) = (1 \cdot 0) + (1 \cdot 1)\).
+
+\begin{tabular}{cll}
+  & \(0 \cdot (1 + 1)\) & \\
+= & \(0 \cdot 1\) & {\cy by + table} \\
+= & \(0\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((0 \cdot 1) + (0 \cdot 1)\) & \\
+= & \(0 + 0\) & {\cy by $\cdot$ table} \\
+= & \(0\) & {\cy by + table}
+\end{tabular}
+
+so \(0 \cdot (1 + 1) = (0 \cdot 1) + (0 \cdot 1)\).
+
+\begin{tabular}{cll}
+  & \(1 \cdot (1 + 1)\) & \\
+= & \(1 \cdot 1\) & {\cy by + table} \\
+= & \(1\) & {\cy by $\cdot$ table}
+\end{tabular}
+and
+\begin{tabular}{cll}
+  & \((1 \cdot 1) + (1 \cdot 1)\) & \\
+= & \(1 + 1\) & {\cy by $\cdot$ table} \\
+= & \(1\) & {\cy by + table}
+\end{tabular}
+
+so \(1 \cdot (1 + 1) = (1 \cdot 1) + (1 \cdot 1)\).
+\end{proof}
+
+\subsubsection{(b)}
+Show that 0 is an identity element for + and that 1 is an identity element for $\cdot$.
+
+\begin{proof}
+By the + table, we see that $0 + 0 = 0$ and $1 + 0 = 1$ therefore 0 is an identity element for +.
+
+By the $\cdot$ table, we see that $0 \cdot 1 = 0$ and $1 \cdot 1 = 1$ therefore 1 is an identity element for $\cdot$.
+\end{proof}
+
+\subsubsection{(c)}
+Define \(\bar{0} = 1\) and \(\bar{1} = 0\). Show that for every $a$ in $S$, \(a + \bar{a} = 1\) and 
+\(a \cdot \bar{a} = 0\). It follows from parts (a)-(c) that $S$ is a Boolean algebra with the operations + and $\cdot$.
+
+\begin{proof}
+\(0 + \bar{0} = 0 + 1 = 1\) by the + table, and \(1 + \bar{1} = 1 + 0 = 1\) by the + table.
+
+\(0 \cdot \bar{0} = 0 \cdot 1 = 0\) by the $\cdot$ table, and \(1 \cdot \bar{1} = 1 \cdot 0 = 0\) by the $\cdot$ table.
+\end{proof}
+
+{\bf \cy Exercises $12-15$ provide an outline for a proof that the associative laws, which were included as an axiom for a Boolean algebra, can be derived from the other four axioms. The outline is from Introduction to Boolean Algebra by S. Givant and P. Halmos, Springer, 2009. In order to avoid unneeded parentheses, assume that $\cdot$ takes precedence over $+$.}
+
+\subsection{Exercise 12}
+The universal bound law for + states that for every element $a$ in a Boolean algebra, \(a + 1 = 1\). The proof shown in 
+exercise 2 used the associative law for +. Rederive the law without using the associative law and using only the other 
+four axioms for a Boolean algebra.
+
+\begin{proof}
+The idempotent law for + is proved in Example 6.4.2 without using the associative laws. The idempotent law for $\cdot$ 
+is proved in Exercise 1 without using the associative laws. So we can freely use them here. 
+Let $a$ be any element of a Boolean algebra $B$. Then
+\begin{center}
+\begin{tabular}{rcll}
+\(a + 1\) & = & \((a + 1) \cdot 1\) & {\cy by the identity law for $\cdot$} \\
+& = & \((a + 1) \cdot (a + \bar{a})\) & {\cy by the complement law for +} \\
+& = & \([(a + 1) \cdot a] + [(a + 1) \cdot \bar{a}]\) & {\cy by the distributive law for $\cdot$ over +} \\
+& = & \([a \cdot (a + 1)] + [\bar{a} \cdot (a + 1)]\) & {\cy by the commutative law for $\cdot$} \\
+& = & \([(a \cdot a) + a \cdot 1] + [(\bar{a}\cdot a) + (\bar{a}\cdot 1) ]\) & 
+{\cy by the distributive law for $\cdot$ over +} \\
+& = & \([(a \cdot a) + a] + [(\bar{a}\cdot a) + \bar{a}]\) & {\cy by the identity law for $\cdot$} \\
+& = & \([a + a] + [(\bar{a}\cdot a) + \bar{a}]\) & {\cy by the idempotent law for $\cdot$} \\
+& = & \(a + [(\bar{a}\cdot a) + \bar{a}]\) & {\cy by the idempotent law for +} \\
+& = & \(a + [(a \cdot \bar{a}) + \bar{a}]\) & {\cy by the commutative law for $\cdot$} \\
+& = & \(a + [0 + \bar{a}]\) & {\cy by the complement law for $\cdot$} \\
+& = & \(a + [\bar{a} + 0]\) & {\cy by the commutative law for +} \\
+& = & \(a + \bar{a} = 1\) & {\cy by identity \& complement laws for +}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 13}
+The absorption law for + states that for all elements $a$ and $b$ in a Boolean algebra, \(a \cdot b + a = a\). Prove 
+this law without using the associative law and using only the other four axioms for a Boolean algebra plus the result 
+of exercise 12.
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rcll}
+\(a \cdot b + a\) & = & \(a \cdot b + a \cdot 1\) & {\cy by the identity law for $\cdot$} \\
+& = & \(a \cdot (b + 1)\) & {\cy by the distributive law for $\cdot$ over +} \\
+& = & \(a \cdot 1\) & {\cy by exercise 12} \\
+& = & \(a\) & {\cy by the identity for $\cdot$}
+\end{tabular}
+\end{center}
+for any elements $a, b$ of a Boolean algebra $B$.
+\end{proof}
+
+\subsection{Exercise 14}
+{\it Test for equality law:} For all elements $a, b$, and $c$ in a Boolean algebra, if \(b \cdot a = c \cdot a\) and 
+\(b \cdot \bar{a} = c \cdot \bar{a}\), then $b = c$. Without using the associative law, derive this law from the 
+other four laws in the axioms for a Boolean algebra.
+
+\begin{proof}
+Let $a, b, c$ be any elements of a Boolean algebra $B$ such that \(b \cdot a = c \cdot a\) and 
+\(b \cdot \bar{a} = c \cdot \bar{a}\). 
+\begin{center}
+\begin{tabular}{rcll}
+\(b\) & = & \(b \cdot (a + \bar{a})\) & {\cy by the complement law for +} \\
+& = & \((b \cdot a) + (b \cdot \bar{a})\) & {\cy by the distributive law for $\cdot$ over +} \\
+& = & \((c \cdot a) + (c \cdot \bar{a})\) & {\cy by assumption} \\
+& = & \(c \cdot (a + \bar{a})\) & {\cy by the distributive law for $\cdot$ over +} \\
+& = & \(c\) & {\cy by the complement law for +}
+\end{tabular}
+\end{center}
+\end{proof}
+
+\subsection{Exercise 15}
+The associative law for + states that for all elements $a, b$, and $c$ in a Boolean algebra, \(a+(b+c) = (a+b)+c\). 
+Show that this law, as well as the associative law for $\cdot$, can be derived from the other four axioms in the 
+definition and axioms for a Boolean algebra. Then explain how to use your work to obtain a derivation for the 
+associative law for $\cdot$.
+
+{\it Hints:} To prove this theorem, suppose $a, b$, and $c$ are any elements in a Boolean algebra $B$, and divide the 
+proof into three parts. 
+
+{\bf Part 1:} Prove that \((a + (b + c)) \cdot a = ((a + b) + c) \cdot a\). 
+
+{\bf Part 2:} Prove that \((a + (b + c)) \cdot \bar{a} = ((a + b) + c) \cdot \bar{a}\). 
+
+{\bf Part 3:} Use the results of parts 1 and 2 to prove that \(a + (b + c) = (a + b) + c\). You may use the 
+universal bound law for +, the absorption law for +, and the test for equality law from exercises 12, 13, and 14 
+because the associative laws were not used to derive these properties.
+
+\begin{proof}
+Suppose $a, b$, and $c$ are any elements in a Boolean algebra $B$,
+
+{\bf Proof of Part 1:} We show that both sides equal $a$.
+Now \(((a + b) + c) \cdot a\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(a \cdot ((a + b) + c)\) & {\cy by the commutative law for $\cdot$} \\
+= & \((a \cdot (a + b)) + (a \cdot c)\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \([(a \cdot a) + (a \cdot b)] + (a \cdot c)\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \([a + (a \cdot b)] + (a \cdot c)\) & {\cy by the idempotent law for $\cdot$} \\
+= & \([(a \cdot b) + a] + (a \cdot c)\) & {\cy by the commutative law for $+$} \\
+= & \(a + (a \cdot c)\) & {\cy by exercise 13} \\
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{cll}
+= & \((a \cdot c) + a\) & {\cy by the commutative law for +} \\
+= & \(a\) & {\cy by exercise 13}
+\end{tabular}
+\end{center}
+
+Now \((a + (b + c)) \cdot a\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(a \cdot (a + (b+c))\) & {\cy by the commutative law for $\cdot$} \\
+= & \((a \cdot a) + [a \cdot (b + c)]\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \(a + [a \cdot (b + c)]\) & {\cy by the idempotent law for $\cdot$} \\
+= & \(a \cdot 1 + [a \cdot (b + c)]\) & {\cy by the identity law for $\cdot$} \\
+= & \(a \cdot (1 + (b + c))\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \(a \cdot ((b + c) + 1)\) & {\cy by the commutative law for +} \\
+= & \(a \cdot 1\) & {\cy by exercise 12} \\
+= & \(a\) & {\cy by the identity law for $\cdot$}
+\end{tabular}
+\end{center}
+Since they both equal $a$, we have \((a + (b + c)) \cdot a = ((a + b) + c) \cdot a\).
+
+{\bf Proof of Part 2:} We show that both sides equal \(\bar{a} \cdot (b+c)\). Now \(((a + b) + c) \cdot \bar{a}\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(\bar{a} \cdot ((a + b) + c)\) & {\cy by the commutative law for $\cdot$} \\
+= & \((\bar{a} \cdot (a + b)) + (\bar{a} \cdot c)\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \([(\bar{a} \cdot a) + (\bar{a} \cdot b)] + (\bar{a} \cdot c)\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \([0 + (\bar{a} \cdot b)] + (\bar{a} \cdot c)\) & {\cy by the commutative and identity laws for $\cdot$} \\
+= & \((\bar{a} \cdot b) + (\bar{a} \cdot c)\) & {\cy by the identity law for +} \\
+= & \(\bar{a} \cdot (b + c)\) & {\cy by the distributive law for $\cdot$ over +}
+\end{tabular}
+\end{center}
+
+Now \((a + (b + c)) \cdot \bar{a}\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \(\bar{a} \cdot (a + (b+c))\) & {\cy by the commutative law for $\cdot$} \\
+= & \((\bar{a} \cdot a) + [\bar{a} \cdot (b + c)]\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \(0 + [\bar{a} \cdot (b + c)]\) & {\cy by the commutative and identity laws for $\cdot$} \\
+= & \(\bar{a} \cdot (b + c)\) & {\cy by the commutative and identity laws for +}
+\end{tabular}
+\end{center}
+
+Since they both equal \(\bar{a} \cdot (b + c)\), we have \((a + (b + c)) \cdot \bar{a} = ((a + b) + c) \cdot \bar{a}\).
+
+{\bf Proof of Part 3:} Now \((a + (b + c))\)
+
+\begin{center}
+\begin{tabular}{cll}
+= & \((a + (b + c)) \cdot 1\) & {\cy by the identity law for $\cdot$} \\
+= & \((a + (b + c)) \cdot (a + \bar{a})\) & {\cy by the identity law for +} \\
+= & \([(a + (b + c)) \cdot a] + [(a + (b + c)) \cdot \bar{a}]\) & {\cy by the distributive law for $\cdot$ over +} \\
+= & \([((a + b) + c) \cdot a] + [((a + b) + c) \cdot \bar{a}]\) & {\cy by Part 1 and Part 2} \\
+= & \(((a + b) + c) \cdot (a + \bar{a})\) & {\cy by the distributive law for $\cdot$ over +}
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{cll}
+= & \(((a + b) + c) \cdot 1\) & {\cy by the identity law for +} \\
+= & \(((a + b) + c)\) & {\cy by the identity law for $\cdot$}
+\end{tabular}
+\end{center}
+
+\end{proof}
+
+{\bf \cy In $16-21$ determine whether each sentence is a statement. Explain your answers.}
+
+\subsection{Exercise 16}
+This sentence is false.
+
+\begin{proof}
+The sentence is not a statement because it is both true and false. If the sentence were true, then because it declares 
+itself to be false, the sentence would be false. Therefore, the sentence is not true. On the other hand, if the 
+sentence were false, then it would be false that “This sentence is false,” and so the sentence would be true. 
+Consequently, the sentence is false. It follows that the sentence is both true and false.
+\end{proof}
+
+\subsection{Exercise 17}
+If 1 + 1 = 3, then 1 = 0.
+
+\begin{proof}
+This sentence is a statement because it is true. Recall that the only way for an if-then statement to be false is 
+for the hypothesis to be true and the conclusion false. In this case the hypothesis is not true. So regardless of what 
+the conclusion states, the sentence is true. (This is an example of a statement that is vacuously true, or true by 
+default.)
+\end{proof}
+
+\subsection{Exercise 18}
+\begin{tcolorbox}[colframe=black]
+The sentence in this box is a lie.
+\end{tcolorbox}
+
+\begin{proof}
+This sentence is not a statement because it is both true and false. If it is true, then the sentence in the box is a 
+lie, which means the sentence in the box is not true. Similarly, if it is false, then the sentence in the box is
+not a lie, therefore true.
+\end{proof}
+
+\subsection{Exercise 19}
+All positive integers with negative squares are prime.
+
+\begin{proof}
+This sentence is a statement, because it is true. It is equivalent to the statement: ``For all integers $n$, if 
+$n > 0$ and $n^2 < 0$, then $n$ is prime.'' There is no integer $n$ such that $n > 0$ and $n^2 < 0$, therefore the
+conditional ``if $n > 0$ and $n^2 < 0$, then $n$ is prime'' is vacuously true for every integer $n$.
+\end{proof}
+
+\subsection{Exercise 20}
+This sentence is false or 1 + 1 = 3.
+
+\begin{proof}
+This sentence is not a statement because it is both true and false. If the sentence is true, then, by definition of 
+an or statement, either the sentence is false or 1 + 1 = 3. But 1 + 1 $\neq$ 3, and so the sentence is false. On the 
+other hand, if the sentence is false, then (by DeMorgan’s law) both of the following must be true: “This sentence is 
+false” and “1 + 1 = 3.” But it is not true that 1 + 1 = 3. So it is impossible for the sentence to be false and hence 
+the sentence is true. Consequently, the sentence is both true and false.
+\end{proof}
+
+\subsection{Exercise 21}
+This sentence is false and 1 + 1 = 2.
+
+\begin{proof}
+This sentence is not a statement because it is both true and false. If it is true, being an ``and'' sentence, both
+parts must be true. ``1 + 1 = 2'' is true, so ``This sentence is false'' is also true, which implies this 
+sentence is false. Similarly if it is false, being an ``and'' statement, at least one of the parts is false. 
+``1 + 1 = 2'' is true, so ``This sentence is false'' must be false, which implies this sentence is true.
+\end{proof}
+
+\subsection{Exercise 22}
+
+\subsubsection{(a)}
+Assuming that the following sentence is a statement, prove that 1 + 1 = 3: If this sentence is true, then 1 + 1 = 3.
+
+\begin{proof}
+Assume A = this sentence is true, B = 1 + 1 = 3 and assume ``If A, then B'' is a statement. So ``If A, then B'' is 
+either true or false. So which is it? 
+
+If ``If A, then B'' is false, then the sentence is false, which means A is false, so ``If A, then B'' is true.
+Therefore ``If A, then B'' cannot be false, so it must be true (because we are assuming that it is a statement).
+
+Since ``If A, then B'' is true, the sentence is true, therefore A is true. Then by modus ponens B is true, in 
+other words, 1 + 1 = 3.
+\end{proof}
+
+\subsubsection{(b)}
+What can you deduce from part (a) about the status of “This sentence is true”? Why? 
+(This example is known as Löb’s paradox.)
+
+\begin{proof}
+``This sentence is true'' must be false, because if it's true, by part (a) it leads to the contradiction 1 + 1 = 3.
+\end{proof}
+
+\subsection{Exercise 23}
+The following two sentences were devised by the logician Saul Kripke. While not intrinsically paradoxical, they 
+could be paradoxical under certain circumstances. Describe such circumstances.
+
+(i) Most of Nixon’s assertions about Watergate are false.
+
+(ii) Everything Jones says about Watergate is true.
+
+(Hint: Suppose Nixon says (ii) and the only utterance Jones makes about Watergate is (i).)
+
+{\it Hint:} Suppose that apart from statement (ii), all of
+Nixon’s other assertions about Watergate are evenly split 
+between true and false.
+
+\begin{proof}
+The circumstances:
+
+1. Nixon says (ii).
+
+2. Jones says (i), and says nothing else about Watergate.
+
+3. Everything else Nixon says about Watergate (except (ii)) are split exactly between 50\% true and 50\% false.
+
+Assume (i) is true. So more than 50\% of what Nixon says about Watergate is false. This means (ii) must be false.
+So there is at least 1 thing Jones says about Watergate that is false. But Jones only says 1 thing about Watergate,
+which is (i). So (i) is false.
+
+Assume (i) is false. So it is not the case that more than 50\% of what Nixon says about Watergate is false. This means (ii) must be true. So everything Jones says about Watergate is true. But Jones only says 1 thing about Watergate, which is (i). So (i) is true.
+\end{proof}
+
+\subsection{Exercise 24}
+Can there exist a computer program that has as output a list of all the computer programs that do not list 
+themselves in their output? Explain your answer.
+
+\begin{proof}
+No. Suppose there exists a computer program P that has as output a list of all computer programs that do not list 
+themselves in their output. If P lists itself as output, then it would be on the output list of P, which consists of 
+all computer programs that do not list themselves in their output. Hence P would not list itself as output. But if P 
+does not list itself as output, then P would be a member of the list of all computer programs that do not list 
+themselves in their output, and this list is exactly the output of P. Hence P would list itself as output. This 
+analysis shows that the assumption of the existence of such a program P is contradictory, and so no such program exists.
+\end{proof}
+
+\subsection{Exercise 25}
+Can there exist a book that refers to all those books and only those books that do not refer to themselves? 
+Explain your answer.
+
+\begin{proof}
+No. Assume B is a book that refers to all those books and only those books that do not refer to themselves. If B 
+refers to itself, then B is a book that does not refer to itself, which is a contradiction. If B does not refer to
+itself, then since B refers to {\it ALL} the books that do not refer to themselves, B must be a book that does refer 
+to itself, a contradiction.
+\end{proof}
+
+\subsection{Exercise 26}
+Some English adjectives are descriptive of themselves (for instance, the word polysyllabic is polysyllabic) whereas 
+others are not (for instance, the word monosyllabic is not monosyllabic). The word heterological refers to an 
+adjective that does not describe itself. Is heterological heterological? Explain your answer.
+
+\begin{proof}
+Heterological is neither homological nor heterological. Assume X = ``heterological'' is heterological. Then X does 
+not describe itself, meaning, X is not heterological (hence  homological), a contradiction. Assume X is not 
+heterological (hence homological). Then X does describe itself, meaning, X is heterological, a contradiction.
+\end{proof}
+
+\subsection{Exercise 27}
+As strange as it may seem, it is possible to give a precise-looking verbal definition of an integer that, in 
+fact, is not a definition at all. The following was devised by an English librarian, G. G. Berry, and reported by 
+Bertrand Russell. Explain how it leads to a contradiction. Let $n$ be “the smallest integer not describable in fewer 
+than 12 English words.” (Note that the total number of strings consisting of 11 or fewer English words is finite.)
+
+\begin{proof}
+Assume $n$ is the definition of an integer. Then $n$ is describable in 11 words. This contradicts the definition of $n$.
+\end{proof}
+
+\subsection{Exercise 28}
+Is there an algorithm which, for a fixed quantity $a$ and any input algorithm $X$ and data set $D$, can determine 
+whether $X$ prints $a$ when run with data set $D$? Explain. (This problem is called the printing problem.)
+
+{\it Hint:} Show that any algorithm that solves the printing problem can be adapted to produce an algorithm 
+that solves the halting problem.
+
+\begin{proof}
+Assume there is such an algorithm, say $A$, that fits the given description.
+
+We will derive a contradiction by devising a new algorithm $B$ which uses $A$ to solve the halting problem.
+
+Here is algorithm $B$. 
+
+1. Assume we are given any algorithm $X$ and data set $D$.
+
+2. Run $X$ and $D$ with $A$. This tells us whether $X$ prints $a$ when run with data set $D$.
+
+3. If the answer to 2 is yes, consider the algorithm $Y$: ``run $X$, except whenever $X$ prints $a$, don't print $a$. 
+When $X$ halts, print $a$.'' Then $Y$ prints $a$ if and only if $X$ halts.
+
+3a. Run $Y$ and $D$ with $A$. This tells us whether $Y$ prints $a$ when run with data set $D$. Thus it tells us 
+whether $X$ halts or not.
+
+4. If the answer to 2 is no, consider the algorithm $Y$: ``run $X$, when $X$ halts print $a$.'' Then $Y$ prints $a$ 
+if and only if $X$ halts.
+
+4a. Run $Y$ and $D$ with $A$. This tells us whether $Y$ prints $a$ when run with data set $D$. Thus it tells us 
+whether $X$ halts or not.
+
+Thus $B$ solves the halting problem, which is a contradiction.
+\end{proof}
+
+\subsection{Exercise 29}
+Use a technique similar to that used to derive Russell’s paradox to prove that for any set A, \(\ps(A) \nsubseteq A\).
+
+\begin{proof}
+Assume \(\ps(A) \subseteq A\). Define \(B = \{x \in A \, | \, x \notin x\}\). By definition \(B \subseteq A\). 
+So \(B \in \ps(A)\). Since \(\ps(A) \subseteq A\), we have \(B \in A\).
+
+Now either $B \in B$ or $B \notin B$. If $B \in B$, then by definition of $B$, \(B \notin B\), contradiction.
+If \(B \notin B\), then \(B \in A\) and \(B \notin B\), therefore by definition of $B$, \(B \in B\), contradiction.
+
+{\it [Thus our supposition was false, and therefore \(\ps(A) \nsubseteq A\).]}
+\end{proof}
+
 \end{document}
