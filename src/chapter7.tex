@@ -1448,351 +1448,1138 @@ So, for all integers $k$ with $k \geq 1$, we have that \(\phi(2^{2k+1}) = 2^{2k}
 \section{Exercise Set 7.2}
 
 \subsection{Exercise 1}
+The definition of one-to-one is stated in two ways:
+\[
+\forall x_1, x_2 \in X, \text{ if } F(x_1) = F(x_2) \text{ then } x_1 = x_2
+\]
+and 
+\[
+\forall x_1, x_2 \in X, \text{ if } x_1 \neq x_2 \text{ then } F(x_1) \neq F(x_2).
+\]
+Why are these two statements logically equivalent?
 
 \begin{proof}
-
+The second statement is the contrapositive of the first.
 \end{proof}
 
 \subsection{Exercise 2}
+Fill in each blank with the word most or least.
+
+\subsubsection{(a)}
+A function $F$ is one-to-one if, and only if, each element in the co-domain of $F$ is the image of at \fbl one element 
+in the domain of $F$.
 
 \begin{proof}
+most
+\end{proof}
 
+\subsubsection{(b)}
+A function $F$ is onto if, and only if, each element in the co-domain of $F$ is the image of at \fbl one element in the 
+domain of $F$.
+
+\begin{proof}
+least
 \end{proof}
 
 \subsection{Exercise 3}
+When asked to state the definition of one-to-one, a student replies, “A function $f$ is one-to-one if, and only if, 
+every element of $X$ is sent by $f$ to exactly one element of $Y$.” Give a counterexample to show that the student’s 
+reply is incorrect.
 
 \begin{proof}
+One counterexample is given and explained below. Give a different counterexample and accompany it with an explanation. 
 
+\underline{Counterexample:} Consider \(X = \{a,b\}, Y = \{u,v\}\) and the function $f$ defined by\(f(a) = f(b) =u\).
+Observe that $a$ is sent to exactly one element of $Y$, namely, $u$, and $b$ is also sent to exactly one element of 
+$Y$, namely, $u$ also. So it is true that every element of $X$ is sent to exactly one element of $Y$. But $f$ is not 
+one-to-one because $f(a) = f(b)$ whereas $a \neq b$. {\it [Note that to say, “Every element of $X$ is sent to exactly 
+one element of $Y$” is just another way of saying that in the arrow diagram for the function there is only one arrow 
+coming out of each element of $X$. But this statement is part of the definition of any function, not just of a 
+one-to-one function.]}
 \end{proof}
 
 \subsection{Exercise 4}
+Let \(f: X \to Y\) be a function. True or false? A sufficient condition for $f$ to be one-to-one is that for
+every element $y$ in $Y$, there is at most one $x$ in $X$
+with \(f(x) = y\). Explain your answer.
 
 \begin{proof}
-
+True. Assume \(x_1, x_2 \in X\) and assume \(f(x_1) = f(x_2)\). {\it [We want to show \(x_1 = x_2\)].} Let 
+\(y = f(x_1) = f(x_2)\). By assumption there is at most one $x$ in $X$ such that $y = f(x)$. Thus \(x = x_1 = x_2\),
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 5}
+All but two of the following statements are correct ways to express the fact that a function $f$ is onto. 
+Find the two that are incorrect.
+
+\subsubsection{(a)}
+$f$ is onto $\iff$ every element in its co-domain is the image of some element in its domain.
 
 \begin{proof}
+Correct.
+\end{proof}
 
+\subsubsection{(b)}
+$f$ is onto $\iff$ every element in its domain has a corresponding image in its co-domain.
+
+\begin{proof}
+Incorrect.
+\end{proof}
+
+\subsubsection{(c)}
+$f$ is onto \(\iff  \forall y \in Y, \exists x \in X\) such that \(f(x) = y\).
+
+\begin{proof}
+Correct.
+\end{proof}
+
+\subsubsection{(d)}
+$f$ is onto \(\iff \forall x \in X, \exists y \in Y\) such that \(f(x) = y\).
+
+\begin{proof}
+Incorrect.
+\end{proof}
+
+\subsubsection{(e)}
+$f$ is onto $\iff$ the range of $f$ is the same as the co-domain of $f$.
+
+\begin{proof}
+Correct.
 \end{proof}
 
 \subsection{Exercise 6}
+Let \(X = \{1, 5, 9\}, Y = \{3, 4, 7\}\).
+
+\subsubsection{(a)}
+Define \(f: X \to Y\) by specifying that \(f(1) = 4, f(5) = 7, f(9) = 4\). Is $f$ one-to-one? Is $f$ onto? 
+Explain your answers.
 
 \begin{proof}
+Not 1-1: \(f(1) = f(9)\) but \(1 \neq 9\). Not onto: no $x \in X$ such that $f(x) = 3$.
+\end{proof}
 
+\subsubsection{(b)}
+Define \(g: X \to Y\) by specifying that \(g(1) = 7, g(5) = 3, g(9) = 4\). Is $g$ one-to-one? Is $g$ onto? 
+Explain your answers.
+
+\begin{proof}
+$g$ is 1-1, because \(g(1) \neq f(5), g(1) \neq g(9)\) and \(g(1) \neq g(9)\).
+
+$g$ is onto because each element of $Y$ is the image of some $x \in X$: \(3 = g(5), 4 = g(9), 7 = g(1)\).
 \end{proof}
 
 \subsection{Exercise 7}
+Let \(X = \{a, b, c, d\}\) and \(Y = \{e, f, g\}\). Define
+functions $F$ and $G$ by the arrow diagrams below.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.2.7.png}
+\end{figure}
+
+\subsubsection{(a)}
+Is $F$ one-to-one? Why or why not? Is it onto? Why or why not?
 
 \begin{proof}
+$F$ is not 1-1 because $F(c) = F(d)$ but $c \neq d$.
 
+$F$ is onto, because each element in $Y$ is the image of some element in $X$.
+\end{proof}
+
+\subsubsection{(b)}
+Is $G$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+\begin{proof}
+$G$ is 1-1 because $G(a) \neq G(b), G(a) \neq G(c)$ and $G(b) \neq G(c)$.
+
+$G$ is not onto, because there is no $x \in X$ such that $G(x) = g$.
 \end{proof}
 
 \subsection{Exercise 8}
+Let \(X = \{a, b, c\}\) and \(Y = \{d, e, f, g\}\). Define
+functions $H$ and $K$ by the arrow diagrams below.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.2.8.png}
+\end{figure}
+
+\subsubsection{(a)}
+Is $H$ one-to-one? Why or why not? Is it onto? Why or why not?
 
 \begin{proof}
+$H$ is not 1-1 because \(H(b) = H(c)\) but \(b \neq c\).
 
+$H$ is not onto, because there is no $x \in X$ such that $H(x) = g$.
+\end{proof}
+
+\subsubsection{(b)}
+Is $K$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+\begin{proof}
+$K$ is 1-1 because \(K(a) \neq K(b), K(a) \neq K(c)\) and \(K(b) \neq K(c)\).
+
+$K$ is not onto, because there is no $x \in X$ such that $K(x) = g$.
 \end{proof}
 
 \subsection{Exercise 9}
+Let \(X = \{1, 2, 3\}, Y = \{1, 2, 3, 4\}\), and \(Z = \{1, 2\}\).
+
+\subsubsection{(a)}
+Define a function \(f: X \to Y\) that is one-to-one but not onto.
 
 \begin{proof}
+One example of many is the following:
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.2.9.png}
+\end{figure}
+\end{proof}
 
+\subsubsection{(b)}
+Define a function \(g: X \to Z\) that is onto but not one-to-one.
+
+\begin{proof}
+Let \(g(1) = 1, g(2) = 2, g(3) = 2\).
+\end{proof}
+
+\subsubsection{(c)}
+Define a function \(h: X \to X\) that is neither one-to-one nor onto.
+
+\begin{proof}
+Let \(h(1) = 1, h(2) = 1, h(3) = 1, h(4) = 1\).
+\end{proof}
+
+\subsubsection{(d)}
+Define a function \(k: X \to X\) that is one-to-one and onto but is not the identity function on $X$.
+
+\begin{proof}
+Let \(k(1) = 2, k(2) = 3, k(3) = 4, k(4) = 1\).
 \end{proof}
 
 \subsection{Exercise 10}
+\subsubsection{(a)}
+Define \(f: \Z \to \Z\) by the rule \(f(n) = 2n\), for every integer $n$.
+
+(i) Is $f$ one-to-one? Prove or give a counterexample.
+
+(ii) Is $f$ onto? Prove or give a counterexample.
 
 \begin{proof}
+(i) $f$ is one-to-one. Suppose \(f(n_1) = f(n_2)\) for some integers $n_1$ and $n_2$. {\it [We must show that \(n_1 = 
+n_2\).]} By definition of \(f, 2n_1 = 2n_2\), and dividing both sides by 2 gives $n_1 = n_2$ {\it [as was to be shown].}
 
+(ii) $f$ is not onto. \underline{Counterexample:} Consider \(1 \in \Z\). We claim that \(1 \neq f(n)\), for any 
+integer $n$, because if there were an integer $n$ such that \(1 = f(n)\), then, by definition of \(f, 1 = 2n\). 
+Dividing both sides by 2 would give \(n = 1/2\). But $1/2$ is not an integer. Hence \(1 \neq f(n)\) for any integer 
+$n$, and so $f$ is not onto.
+\end{proof}
+
+\subsubsection{(b)}
+Let $2\Z$ denote the set of all even integers. That is, 
+\[
+2\Z = \{n \in \Z \,|\,n=2k, \text{ for some integer } k\}.
+\]
+Define \(h: \Z \to 2\Z\) by the rule \(h(n) = 2n\), for each integer $n$. Is $h$ onto? Prove or give a counterexample.
+
+\begin{proof}
+$h$ is onto. Suppose \(m \in 2\Z\). {\it [We must show that there exists an integer such that $h$ of that integer 
+equals $m$.]} Since \(m \in 2\Z, m = 2k\) for some integer $k$. Then \(h(k) = 2k = m\). Hence there exists an integer 
+(namely, $k$) such that \(h(k) = m\) {\it [as to be shown].}
 \end{proof}
 
 \subsection{Exercise 11}
+\subsubsection{(a)}
+Define \(g: \Z \to \Z\) by the rule \(g(n) = 4n - 5\), for every integer $n$.
+
+(i) Is $g$ one-to-one? Prove or give a counterexample.
+
+(ii) Is $g$ onto? Prove or give a counterexample.
 
 \begin{proof}
+$g$ is 1-1: assume \(n_1, n_2 \in \Z\) and \(g(n_1) = g(n_2)\). {\it [We want to show \(n_1 = n_2\)].} By $g$'s
+definition \(4n_1-5=4n_2-5\). Adding 5 to both sides and dividing both sides by 4 we get \(n_1 = n_2\).
 
+$g$ is not onto: there is no $n \in \Z$ such that $g(n) = 0$. Argue by contradiction and assume \(g(n) = 0\) for some
+\(n \in \Z\). Then \(4n-5 = 0\) so \(n = 5/4\) which is not an integer, a contradiction.
+\end{proof}
+
+\subsubsection{(b)}
+Define \(G: \R \to \R\) by the rule \(G(x) = 4x - 5\), for every real number $x$. Is $G$ onto? Prove or give a counterexample.
+
+\begin{proof}
+$G$ is onto. Suppose $y$ is any element of $\R$. {\it [We must show that there is an element $x$ in $\R$ such that 
+\(G(x) = y\). What would $x$ be if it exists? Scratch work shows that $x$ would have to equal \((y + 5)/4\). The proof 
+must then show that $x$ has the necessary properties.]} Let \(x = (y + 5)/4\). Then (1) \(x \in \R\), and (2) \(G(x) = 
+G((y + 5)/4) = 4[(y + 5)/4] - 5 = (y + 5) - 5 = y\) {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 12}
+\subsubsection{(a)}
+Define \(F: \Z \to \Z\) by the rule \(F(n) = 2 - 3n\), for each integer $n$.
+
+(i) Is $F$ one-to-one? Prove or give a counterexample.
+
+(ii) Is $F$ onto? Prove or give a counterexample.
 
 \begin{proof}
+$F$ is 1-1: assume \(n_1, n_2 \in \Z\) and \(F(n_1) = F(n_2)\). {\it [We want to show \(n_1 = n_2\).]} By $F$'s
+definition, \(2 - 3n_1 = 2-3n_2\). Subtracting 2 from both sides and dividing by $-3$ we get \(n_1 = n_2\).
 
+$F$ is not onto: there is no \(n \in \Z\) such that \(F(n) = 0\). Because otherwise \(2 - 3n = 0\) for some integer 
+$n$, but then \(n = 2/3\) which is not an integer, a contradiction.
+\end{proof}
+
+\subsubsection{(b)}
+Define \(G: \R \to \R\) by the rule \(G(x) = 2 - 3x\), for each real number $x$. Is $G$ onto? Prove or give a counterexample.
+
+\begin{proof}
+$G$ is 1-1 just like $F$ above. Same proof applies.
+
+$G$ is also onto: for every $y \in \R$ there exists an $x \in \R$ such that $G(x) = y$: let \(x = (y - 2) / (-3)\).
+Then \(\dps G(x) = G((y - 2) / (-3)) = 2 - 3 \cdot \frac{y-2}{-3} = 2 + (y-2) = y\).
 \end{proof}
 
 \subsection{Exercise 13}
+\subsubsection{(a)}
+Define \(H: \R \to \R\) by the rule \(H(x) = x^2\), for each real number $x$.
+
+(i) Is $H$ one-to-one? Prove or give a counterexample.
+
+(ii) Is $H$ onto? Prove or give a counterexample.
 
 \begin{proof}
+(i) $H$ is not one-to-one. \underline{Counterexample:} \(H(1) = 1 = H(-1)\) but \(1 \neq -1\).
 
+(ii) H is not onto. \underline{Counterexample:} \(H(x) \neq -1\) for any real number $x$ because \(H(x) = x^2\) and no 
+real numbers have negative squares.
+\end{proof}
+
+\subsubsection{(b)}
+Define \(K: \R^{nonneg} \to \R^{nonneg}\) by the rule \(K(x) = x^2\), for each nonnegative real number $x$. 
+Is $K$ onto? Prove or give a counterexample.
+
+\begin{proof}
+$K$ is onto. Given any \(y \in \R^{nonneg}\) let \(x = \sqrt{y}\). Then \(K(x) = K(\sqrt{y}) = (\sqrt{y})^2 = y\).
 \end{proof}
 
 \subsection{Exercise 14}
+Explain the mistake in the following “proof.”
+
+{\bf Theorem:} The function \(f: \Z \to \Z\) defined by the formula \(f(n) = 4n + 3\), for each integer $n$, is one-to-one.
+
+{\bf “Proof:} Suppose any integer $n$ is given. Then by definition of $f$, there is only one possible value for 
+$f(n)$, namely, \(4n + 3\). Hence $f$ is one-to-one.”
 
 \begin{proof}
-
+The “proof” claims that $f$ is one-to-one because for each integer $n$ there is only one possible value for $f(n)$. 
+But to say that for each integer $n$ there is only one possible value for $f(n)$ is just another way of saying 
+that $f$ satisfies one of the conditions necessary for it to be a function. To show that $f$ is one-to-one, one must 
+show that any integer $n$ has a different function value from that of the integer $m$ whenever \(n \neq m\).
 \end{proof}
 
+{\bf \cy In each of $15-18$ a function $f$ is defined on a set of real numbers. Determine whether or not $f$ is one-
+to-one and justify your answer.}
+
 \subsection{Exercise 15}
+\(\dps f(x) = \frac{x+1}{x}\), for each real number \(x \neq 0\)
 
 \begin{proof}
-
+$f$ is 1-1: Suppose \(f(x_1) = f(x_2)\) where $x_1$ and $x_2$ are nonzero real numbers. {\it [We must show that 
+\(x_1 = x_2\).]} By definition of $f$,
+\[
+\frac{x_1 + 1}{x_1} = \frac{x_2 + 1}{x_2}
+\]
+Cross-multiplying gives \(x_1x_2 + x_2 = x_1x_2 + x_1\) and subtracting $x_1x_2$ gives \(x_1 = x_2\).
 \end{proof}
 
 \subsection{Exercise 16}
+\(\dps f(x) = \frac{x}{x^2+1}\), for each real number \(x\)
 
 \begin{proof}
+$f$ is not one-to-one. \underline{Counterexample:} Note that
 
+\begin{center}
+\begin{tabular}{ccccccc}
+\(\dps\frac{x_1}{x_1^2+1}\) & = & \(\dps\frac{x_2}{x_2^2+1}\) & \(\implies\) & \(x_1x_2^2 + x_1\) & = & \(x_2x_1^2 + x_2\)\\
+&&&\(\implies\) & \(x_1x_2^2 - x_2x_1^2\) & = & \(x_2-x_1\)\\
+&&&\(\implies\) & \(x_1x_2(x_2-x_1)\) & = & \(x_2-x_1\)\\
+&&&\(\implies\) & \(x_1 = x_2\) & or & \(x_1x_2 = 1\).
+\end{tabular}
+\end{center}
+
+Thus take any $x_1$ and $x_2$ with $x_1 \neq x_2$ but $x_1x_2 = 1$. For instance, take 
+\(x_1 = 2\) and \(x_2 = 1/2\). Then \(f(x_1) = f(2) = 2/5\) and \(f(x_2) = f(1/2) = 2/5\), but $2 \neq 1/2$.
 \end{proof}
 
 \subsection{Exercise 17}
+\(\dps f(x) = \frac{3x-1}{x}\), for each real number \(x \neq 0\)
 
 \begin{proof}
-
+$f$ is 1-1: Assume \(x_1 \neq 0 \neq x_2\) and assume \(\frac{3x_1-1}{x_1} = \frac{3x_2-1}{x_2}\).
+{\it [We want to show \(x_1 = x_2\).]} Cross-multiplying gives \((3x_1-1)x_2 = (3x_2-1)x_1\). So
+\(3x_1x_2 - x_2 = 3x_1x_2 - x_1\). Canceling $3x_1x_2$ gives \(-x_2 = -x_1\), so \(x_1 = x_2\).
 \end{proof}
 
 \subsection{Exercise 18}
+\(\dps f(x) = \frac{x+1}{x-1}\), for each real number \(x \neq 1\)
 
 \begin{proof}
-
+$f$ is 1-1: Assume \(x_1 \neq 1 \neq x_2\) and assume \(\frac{x_1+1}{x_1-1} = \frac{x_2+1}{x_2-1}\).
+{\it [We want to show \(x_1 = x_2\).]} Cross-multiplying gives \((x_1+1)(x_2-1) = (x_2+1)(x_1-1)\). So
+\(x_1x_2 - x_1 + x_2 - 1 = x_1x_2 + x_1 - x_2 - 1\). Canceling $x_1x_2 - 1$ gives \(-x_1 + x_2 = x_1 - x_2\), so 
+\(2x_2 = 2x_1\) and dividing by 2 gives \(x_2 = x_1\).
 \end{proof}
 
 \subsection{Exercise 19}
+Referring to Example 7.2.3, assume that records with the following ID numbers are to be placed in sequence into 
+Table 7.2.1. Find the position into which each record is placed.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/7.2.1.png}
+\end{figure}
+
+\subsubsection{(a)}
+417302072
 
 \begin{proof}
+When 417302072 is divided by 11, the remainder is 0. So, \(417302072 \mod 11 = H(417302072) = 0\). 
+Since position 0 is unoccupied, the record is placed there.
+\end{proof}
 
+\subsubsection{(b)}
+364981703
+
+\begin{proof}
+When 364981703 is divided by 11, the remainder is 9. So, \(364981703 \mod 11 = H(364981703) = 9\). 
+Since position 9 is unoccupied, the record is placed there.
+\end{proof}
+
+\subsubsection{(c)}
+283090787
+
+\begin{proof}
+When 283090787 is divided by 11, the remainder is 1. So, \(283090787 \mod 11 = H(283090787) = 1\). Since position 1 
+is occupied, the record is placed in position 3.
 \end{proof}
 
 \subsection{Exercise 20}
+Define Floor\(: \R \to \Z\) by the formula Floor\((x) = \floor{x}\), for every real number $x$. 
+
+\subsubsection{(a)}
+Is Floor one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Floor is not one-to-one. \underline{Counterexample:} Floor(0) = 0 = Floor(1/2) but $0 \neq 1/2$.
+\end{proof}
 
+\subsubsection{(b)}
+Is Floor onto? Prove or give a counterexample.
+
+\begin{proof}
+Floor is onto. Suppose $m \in \Z$. {\it [We must show that there exists a real number $y$ such that Floor$(y) = m$.]} 
+Let $y = m$. Then Floor$(y)$ = Floor$(m) = m$ since $m$ is an integer. (Actually, Floor takes the value $m$ for all 
+real numbers in the interval \(m \leq x < m + 1\).) Hence there exists a real number $y$ such that Floor$(y) = m$ 
+{\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 21}
+Let $S$ be the set of all strings of 0’s and 1’s, and define \(L: S \to \Z^{nonneg}\) by \(L(s) =\) the length of 
+$s$, for every string $s$ in $S$.
+
+\subsubsection{(a)}
+Is $L$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+$L$ is not one-to-one. \underline{Counterexample:} \(L(0) = L(1) = 1\) but $1 \neq 0$.
+\end{proof}
 
+\subsubsection{(b)}
+Is $L$ onto? Prove or give a counterexample.
+
+\begin{proof}
+$L$ is onto. Suppose $n$ is a nonnegative integer. {\it [We must show that there exists a string $s$ in $S$ such that 
+\(L(s) = n\).]} Let
+\[
+s =
+\left\{
+\begin{tabular}{lr}
+\(\lambda\) (the null string) & if \(n = 0\) \\
+\(00\ldots0\) (with $n$ 0's) & if \(n > 0\)
+\end{tabular}
+\right.
+\]
+Then \(L(s) =\) the length of $s = n$ {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 22}
+Let $S$ be the set of all strings of 0’s and 1’s, and define \(D: S \to \Z\) as follows: for every string $s$ in 
+$S$, \(D(s) =\) the number of 1's in $s$ minus the number of 0's in $s$.
+
+\subsubsection{(a)}
+Is $D$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+No. \underline{Counterexample:} \(D(10) = 0 = D(01)\) but \(10 \neq 01\).
+\end{proof}
 
+\subsubsection{(b)}
+Is $D$ onto? Prove or give a counterexample.
+
+\begin{proof}
+Yes. Given any $n \in \Z$, if $n < 0$ then let $s$ be the string of $-n$ consecutive 0's. Then $D(s) = n$.
+Similarly if $n > 0$ then let $s$ be the string of $n$ consecutive 1's. Then $D(s) = n$.
+If $n = 0$ then $D(\lambda) = n$.
 \end{proof}
 
 \subsection{Exercise 23}
+Define \(F: \ps(\{a, b, c\}) \to \Z\) as follows: For every
+$A$ in \(\ps(\{a, b, c\})\), \(F(A) =\) the number of 
+elements in $A$.
+
+\subsubsection{(a)}
+Is $F$ one-to-one? Prove or give a counterexample. 
 
 \begin{proof}
+$F$ is not one-to-one. \underline{Counterexample:} Let \(A = \{a\}, B = \{b\}\). Then \(F(A) = F(B) = 1\) but \(A \neq B\).
+\end{proof}
 
+\subsubsection{(b)}
+Is $F$ onto? Prove or give a counterexample. 
+
+\begin{proof}
+No. \underline{Counterexample:} There are no subsets of $A$ with a negative number of, say, $-1$ elements.
 \end{proof}
 
 \subsection{Exercise 24}
+Let $S$ be the set of all strings of $a$’s and $b$’s, and define \(N: S \to \Z\) by \(N(s) =\) the number of $a$’s in 
+$s$, for each \(s \in S\).
+
+\subsubsection{(a)}
+Is $N$ one-to-one? Prove or give a counterexample. 
 
 \begin{proof}
+No. \underline{Counterexample:} $N(a) = 1 = N(ab)$ but $a \neq ab$.
+\end{proof}
 
+\subsubsection{(b)}
+Is $N$ onto? Prove or give a counterexample. 
+
+\begin{proof}
+No. \underline{Counterexample:} There are no strings with $-1$ $a$'s in it.
 \end{proof}
 
 \subsection{Exercise 25}
+Let $S$ be the set of all strings in $a$’s and $b$’s, and
+define \(C: S \to S\) by \(C(s) = as\), for each $s \in S$.
+($C$ is called concatenation by $a$ on the left.)
+
+\subsubsection{(a)}
+Is $C$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Yes. Assume \(C(s_1) = C(s_2)\). So \(as_1 = as_2\). Then $s_1$ and $s_2$ are the same string.
+\end{proof}
 
+\subsubsection{(b)}
+Is $C$ onto? Prove or give a counterexample.
+
+\begin{proof}
+No. \underline{Counterexample:} there is no string $s$ such that \(C(s) = b\) because $b$ has no $a$'s in it.
 \end{proof}
 
 \subsection{Exercise 26}
+Define \(S: \Z^+ \to \Z^+\) by the rule: For each integer $n$, $S(n) =$ the sum of the positive divisors of $n$.
+
+\subsubsection{(a)}
+Is $S$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+No. \underline{Counterexample:} \(S(6) = 1 + 2 + 3 + 6 = 12\) and \(S(11) = 1 + 11 = 12\) but \(6 \neq 11\).
+\end{proof}
 
+\subsubsection{(b)}
+Is $S$ onto? Prove or give a counterexample.
+
+\begin{proof}
+No. \underline{Counterexample:} In order for there to be a positive integer $n$ such that $S(n) = 5$, $n$ would have 
+to be less than 5. But \(S(1) = 1, S(2) = 3, S(3) = 4\), and \(S(4) = 7\). Hence there is no positive integer $n$ 
+such that \(S(n) = 5\).
 \end{proof}
 
 \subsection{Exercise 27}
+Let $D$ be the set of all finite subsets of positive integers, and define \(T: \Z^+ \to D\) by the following 
+rule: For every integer $n$, $T(n) =$ the set of all of the positive divisors of $n$.
+
+\subsubsection{(a)}
+Is $T$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Yes. Assume \(T(n_1) = T(n_2)\). {\it [We want to show \(n_1 = n_2\)].} Argue by contradiction and assume 
+\(n_1 \neq n_2\). Then either \(n_1 < n_2\) or \(n_1 > n_2\). In the first case, $n_2$ is a positive divisor of 
+$n_2$ so \(n_2 \in T(n_2)\). But since \(T(n_1) = T(n_2), n_2 \in T(n_1)\) too. So $n_2$ is a positive divisor of 
+$n_1$, contradiction. The other case is similar.
+\end{proof}
 
+\subsubsection{(b)}
+Is $T$ onto? Prove or give a counterexample.
+
+\begin{proof}
+No. \underline{Counterexample:} There is no \(n \in \Z^+\) such that \(T(n) = \{1, 2, 3\}\), any such $n$ would also 
+be divisible by 6, so \(T(n)\) would have to include 6 too.
 \end{proof}
 
 \subsection{Exercise 28}
+Define \(G: \R \times \R \to \R \times \R\) as follows: \(G(x, y) = (2y, -x)\) for every \((x, y) \in \R \times \R\).
+
+\subsubsection{(a)}
+Is $G$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Yes. Suppose \((x_1, y_1)\) and \((x_2, y_2)\) are any elements of \(\R \times \R\) such that \(G(x_1, y_1) = 
+G(x_ 2, y_2)\). {\it [We must show that \((x_1, y_1) = (x_2, y_2)\).]} Then, by definition of $G$, \((2y_1, -x_1) 
+= (2y_2, -x_2)\), and, by definition of ordered pair, \(2y_1 = 2y_2\) and \(-x_1 = -x_2\). Dividing both sides of 
+the equation on the left by 2 and both sides of the equation on the right by $-1$ gives that \(y_1 = y_2\) and 
+\(x_1 = x_2\), and so, by definition of ordered pair, \((x_1, y_1) = (x_2, y_2)\) {\it [as was to be shown].}
+\end{proof}
 
+\subsubsection{(b)}
+Is $G$ onto? Prove or give a counterexample.
+
+\begin{proof}
+Yes. Suppose \((u, v)\) is any element of \(\R \times \R\). {\it [We must show that there is an element \((x, y)\) in 
+\(\R \times \R\) such that \(G(x, y) = (u, v)\).]} Let \((x, y) = (-v, u/2)\). Then (1) \((x, y) \in \R \times \R\) 
+and (2) \(G(x, y) = (2y, -x) = (2(u/2), -(-v)) = (u, v)\) {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 29}
+Define \(H: \R \times \R \to \R \times \R\) as follows: \(H(x, y) = (x+1, 2-y)\) for every \((x, y) \in \R \times \R\).
+
+\subsubsection{(a)}
+Is $H$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Yes. Assume \(H(x_1, y_1) = H(x_2, y_2)\). {\it [We want to show that \(x_1 = x_2\) and \(y_1 = y_2)\).]}
+We have \((x_1+1, 2-y_1) = (x_2+1, 2-y_2)\). By definition of a tuple, \(x_1+1 = x_2+1\) and \(2-y_1 = 2-y_2\).
+Solving, we get \(x_1 = x_2\) and \(y_1 = y_2)\).
+\end{proof}
 
+\subsubsection{(b)}
+Is $H$ onto? Prove or give a counterexample.
+
+\begin{proof}
+Yes. Assume \((x,y) \in \R \times \R\) is any pair of real numbers. {\it [We want to show there exists a pair
+\((a, b) \in \R \times \R\) such that \(H(a,b) = (x,y)\).]} Let \(a = x-1, b = 2-y\). Then \(H(a, b) = (a+1, 2-b) = 
+(x-1+1, 2-(2-y)) = (x,y)\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 30}
+Define \(J: \Q \times \Q \to \R\) as follows: \(J(r, s) = r + \sqrt{2}s\) for every \((r, s) \in \Q \times \Q\).
+
+\subsubsection{(a)}
+Is $J$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Yes. Assume \(J(r_1, s_1) = J(r_2, s_2)\). {\it [We want to show that \(r_1 = r_2\) and \(s_1 = s_2)\).]}
+We have \(r_1 + \sqrt{2}s_1 = r_2 + \sqrt{2}s_2\). Moving terms around we get (*) \(r_1-r_2=\sqrt{2}(s_2-s_1)\).
+For the moment assume \(s_1 \neq s_2\). Then \(s_2 - s_1 \neq 0\). Dividing, we get
+\[
+\frac{r_1 - r_2}{s_2 - s_1} = \sqrt{2}.
+\]
+This is a contradiction, since the right hand side is an irrational number, and the left hand side is a rational
+number (being a ratio of differences of rational numbers). Thus our supposition was false and \(s_1 = s_2\). Going
+back to the equation (*), this gives \(r_1-r_2=\sqrt{2} \cdot 0 = 0\) and thus \(r_1 = r_2\), as was to be shown.
+\end{proof}
 
+\subsubsection{(b)}
+Is $J$ onto? Prove or give a counterexample.
+
+\begin{proof}
+No. \underline{Counterexample:} There are no rationals $(r, s)$ such that \(J(r,s) = \sqrt{3}\). Argue by contradiction
+and assume \(J(r,s) = \sqrt{3}\) for some rationals $r,s$. Then \(r + \sqrt{2}s = \sqrt{3}\). Squaring both sides, we
+get 
+\[
+(r + \sqrt{2}s)^2 = \sqrt{3}^2 \implies r^2 + 2rs\sqrt{2} + 2s^2 = 3 \implies \sqrt{2} = \frac{3 - r^2 - 2s^2}{2rs}.
+\]
+This is a contradiction, since the left hand side is irrational, and the right side is rational (being a ratio 
+of differences of products of rationals). Thus our supposition was false, and $J$ is not onto.
 \end{proof}
 
 \subsection{Exercise 31}
+Define \(F: \Z^+ \times \Z^+ \to \Z^+\) and \(G: \Z^+ \times \Z^+ \to \Z^+\) as follows: for each \((n, m) \in 
+\Z^+ \times \Z^+, F(n, m) = 3^n5^m\) and \(G(n, m) = 3^n6^m\).
+
+\subsubsection{(a)}
+Is $F$ one-to-one? Prove or give a counterexample.
 
 \begin{proof}
+Yes. Assume \(F(n_1, m_1) = F(n_2, m_2)\). Then \(3^{n_1}5^{m_1} = 3^{n_2}5^{n_2}\). Call this positive integer $z$.
+So we have two different prime factorizations of the same integer $z$. By the uniqueness part of the factorization
+theorem, the exponents are unique, therefore \(n_1 = n_2\) and \(m_1 = m_2\).
+\end{proof}
 
+\subsubsection{(b)}
+Is $G$ one-to-one? Prove or give a counterexample.
+
+\begin{proof}
+Yes. We can rewrite \(G(n, m) = 3^n6^m = 3^n (2 \cdot 3)^m = 3^n \cdot 2^m \cdot 3^m = 2^m \cdot 3^{m+n}\). Now 
+assume \(G(n_1, m_1) = G(n_2, m_2)\). Then \(2^{m_1} \cdot 3^{m_1+n_1} = 2^{m_2} \cdot 3^{m_2+n_2}\). Similar to part
+(a), by the uniqueness of prime factorizations, the exponents must be equal, so \(m_1 = m_2\) and 
+\(m_1 + n_1 = m_2 + n_2\). Using \(m_1 = m_2\) in the second equation we can cancel the $m$s to get \(n_1=n_2\).
 \end{proof}
 
 \subsection{Exercise 32}
+\subsubsection{(a)}
+Is \(\log_8 27 = \log_2 3\)? Why or why not?
 
 \begin{proof}
+1. Let \(x = \log_8 27, y = \log_2 3\).
 
+2. By 1 and definition of logarithm, \(8^x = 27\) and \(2^y = 3\).
+
+3. By 2 and laws of exponents, \((2^3)^x = 2^{3x} = (2^x)^3\) and \(27 = 3^3\). So \((2^x)^3 = 3^3\).
+
+4. By 3, taking the cube root of both sides, we get \(2^x = 3\).
+
+5. By 2 and 4, \(2^x = 2^y\). Applying \(\log_2\) to both sides, we get $x = y$.
 \end{proof}
 
-\subsection{Exercise 33}
+\subsubsection{(b)}
+Is \(\log_{16} 9 = \log_4 3\)? Why or why not?
 
 \begin{proof}
+1. Let \(x = \log_{16} 9, y = \log_4 3\).
 
+2. By 1 and definition of logarithm, \(16^x = 9\) and \(4^y = 3\).
+
+3. By 2 and laws of exponents, \((2^4)^x = 2^{4x} = (2^{2x})^2\) and \(9 = 3^2\). So \((2^{2x})^2 = 3^2\).
+Similarly \(2^{2y} = 3\).
+
+4. By 3, taking the square root of both sides, we get \(2^{2x} = 3\).
+
+5. By 2 and 4, \(2^{2x} = 2^{2y}\). Applying \(\log_2\) to both sides, we get $2x = 2y$ so $x = y$.
+\end{proof}
+
+{\bf \cy The properties of logarithm established in $33-35$ are used in Sections 11.4 and 11.5.}
+
+\subsection{Exercise 33}
+Prove that for all positive real numbers $b$, $x$, and $y$ with \(b \neq 1\),
+\[
+\log_b\left(\frac{x}{y}\right) = \log_b x - \log_b y.
+\]
+\begin{proof}
+Suppose that $b$, $x$, and $y$ are any positive real numbers such that \(b \neq 1\). Let \(u = \log_b(x)\) and 
+\(v = \log_b(y)\). By definition of logarithm, \(b^u = x\) and \(b_v = y\). By substitution, \(\frac{x}{y} = 
+\frac{b^u}{b^v} = b^{u-v}\) {\it [by (7.2.3) and the fact that \(b^{-v} = \frac{1}{b^v}\)].} Translating 
+\(\frac{x}{y} = b^{u-v}\) into logarithmic form gives \(\log_b \frac{x}{y} = u-v\), and so, by substitution, 
+\(\log_b \frac{x}{y} = \log_b(x) - \log_b(y)\), {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 34}
-
+Prove that for all positive real numbers $b$, $x$, and $y$ with \(b \neq 1\),
+\[
+\log_b(xy) = \log_b x + \log_b y.
+\]
 \begin{proof}
+1. Let \(z = \log_b(xy), m = \log_b x, n = \log_b y\).
 
+2. By 1 and definition of log, \(b^z = xy\).
+
+3. By 1 and definition of log, \(b^m = x\).
+
+4. By 1 and definition of log, \(b^n = y\).
+
+5. By 2, 3, 4, and law of exponents, \(b^z = xy = b^m \cdot b^n = b^{m+n}\).
+
+6. By 5, applying $\log_b$ to both sides, we get \(\log_b(b^z) = \log_b(b^{m+n})\), which gives $z = m+n$.
+
+7. By 1 and 6, \(\log_b(xy) = \log_b x + \log_b y\).
 \end{proof}
 
 \subsection{Exercise 35}
-
+Prove that for all real numbers $a$, $b$ and $x$ with $b$ and $x$ positive and \(b \neq 1\),
+\[
+\log_b (x^a) = a \log_b x.
+\]
 \begin{proof}
+1. Let \(z = \log_b(x^a), m = \log_b x\).
 
+2. By 1 and definition of log, \(b^z = x^a\).
+
+3. By 1 and definition of log, \(b^m = x\).
+
+4. By 3 and law of exponents, \((b^m)^a = x^a\) so \(b^{am} = x^a\).
+
+5. By 2 and 4, \(b^z = x^a = b^{am}\).
+
+6. By 5, applying $\log_b$ to both sides, we get \(\log_b(b^z) = \log_b(b^{am})\), which gives $z = am$.
+
+7. By 1 and 6, \(\log_b(x^a) = a \log_b x\).
 \end{proof}
 
+{\bf \cy Exercises 36 and 37 use the following definition: If \(f: \R \to \R\) and \(g: \R \to \R\) are functions, 
+then the function \((f + g): \R \to \R\) is defined by the formula \((f + g)(x) = f(x) + g(x)\) for every real number $x$.}
+
 \subsection{Exercise 36}
+If \(f: \R \to \R\) and \(g: \R \to \R\) are both one-to-one, is \(f + g\) also one-to-one? Justify your answer.
 
 \begin{proof}
-
+No. \underline{Counterexample:} Define \(f: \R \to \R\) and \(g: \R \to \R\) as follows: \(f(x) = x\) and \(g(x) = -x\) 
+for every real number $x$. Then $f$ and $g$ are both one-to-one {\it [because for all real numbers $x_1$ and $x_2$, 
+if \(f(x_1) = f(x_2)\) then \(x_1 = x_2\), and if \(g(x_1) = g(x_2)\) then \(-x_1 = -x_2\), so \(x_1 = x_2\) in this 
+case as well].} But \(f + g\) is not one-to-one {\it [because $f + g$ satisfies the equation \((f + g)(x) = x + 
+(-x) = 0\) for every real number $x$, and so, for instance, \((f + g)(1) = (f + g)(2)\) but $1 \neq 2$].}
 \end{proof}
 
 \subsection{Exercise 37}
+If \(f: \R \to \R\) and \(g: \R \to \R\) are both onto, is \(f + g\) also onto? Justify your answer.
 
 \begin{proof}
-
+No. Same counterexample as exercise 36 works. \(f(x) = x\) and \(g(x) = -x\) are both onto, but \((f+g)(x) = 0\) is not.
 \end{proof}
 
+{\bf \cy Exercises 38 and 39 use the following definition: If \(f: \R \to \R\) is a function and $c$ is a nonzero real 
+number, then the function \((c \cdot f): \R \to \R\) is defined by the formula \((c \cdot f)(x) = c \cdot (f(x))\) 
+for every real number $x$.}
+
 \subsection{Exercise 38}
+Let \(f: \R \to \R\) be a function and $c$ a nonzero real number. If $f$ is one-to-one, is \(c \cdot f\) also one-to-
+one? Justify your answer.
 
 \begin{proof}
-
+Yes. Let $f$ be a one-to-one function from $\R$ to $\R$, and let $c$ be any nonzero real number. Suppose 
+\((c \cdot f)(x_1) = (c \cdot f)(x_2)\). {\it [We must show that \(x_1 = x_2\).]} It follows by definition of 
+\((c \cdot f)\) that \(c \cdot (f(x1)) = c \cdot (f(x_2))\). Since \(c \neq 0\), we may divide both sides of the 
+equation by $c$ to obtain \(f(x_1) = f(x_2)\). And since $f$ is one-to-one, this implies that \(x_1 = x_2\), 
+{\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 39}
+Let \(f: \R \to \R\) be a function and $c$ a nonzero real number. If $f$ is onto, is \(c \cdot f\) also onto? 
+Justify your answer.
 
 \begin{proof}
-
+Yes. Suppose \(y \in \R\). {\it [We want to show there exists \(x \in \R\) such that \((c \cdot f)(x) = y\)].}
+Since \(c \neq 0\) and $f$ is onto, there exists \(z \in \R\) such that \(f(z) = y/c\). Let $x = z$. Then 
+\((c \cdot f)(x) = c \cdot f(x) = c \cdot f(z) = c \cdot (y/c) = y\), {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 40}
+Suppose \(F: X \to Y\) is one-to-one.
+
+\subsubsection{(a)}
+Prove that for every subset \(A \subseteq X, F^{-1}(F(A)) = A\).
 
 \begin{proof}
+Assume \(A \subseteq X\).
 
+1. Assume \(x \in F^{-1}(F(A))\). {\it [Want to show \(x \in A\).]}
+
+2. By 1 and definition of inverse image \(F^{-1}(F(A)) = \{t \in X \, | \, F(t) \in F(A)\}\) applied to $t = x$, we have \(x \in X\) and \(F(x) \in F(A)\).
+
+3. By 2 and definition of $F(A)$, there exists \(r \in A\) such that \(F(r) = F(x)\).
+
+4. By 3 and since $F$ is 1-1, $r = x$, hence \(x \in A\).
+
+5. By 1, 4 and definition of subset, \(F^{-1}(F(A)) \subseteq A\).
+
+{\it Now the reverse direction:}
+
+6. Assume \(x \in A\). {\it [Want to show \(x \in F^{-1}(F(A))\).]}
+
+7. By 6 and definition of $F(A)$, we have \(F(x) \in F(A)\).
+
+8. By 6 and 7, \(x \in X\) and \(F(x) \in F(A)\). So $x$ satisfies the definition of being a member of the inverse 
+image \(F^{-1}(F(A)) = \{t \in X \, | \, F(t) \in F(A)\}\) (with $t = x$). Therefore we have \(x \in F^{-1}(F(A))\).
+
+9. By 6, 8 and definition of subset, \(A \subseteq F^{-1}(F(A))\).
+
+{\it Conclusion:}
+
+10. By 5, 9 and definition of set equality, \(F^{-1}(F(A)) = A\).
+\end{proof}
+
+\subsubsection{(b)}
+Prove that for all subsets $A_1$ and $A_2$ in $X$, \(F(A_1 \cap A_2) = F(A_1) \cap F(A_2)\).
+
+\begin{proof}
+Assume \(A_1 \subseteq X, A_2 \subseteq X\).
+
+1. Assume \(y \in F(A_1 \cap A_2)\). {\it [Want to show \(y \in F(A_1) \cap F(A_2)\).]}
+
+2. By 1 and definition of \(F(A_1 \cap A_2)\), there exists \(x \in A_1 \cap A_2\) such that \(y = F(x)\).
+
+3. By 2 and definition of intersection, \(x \in A_1\) and \(x \in A_2\).
+
+4. By 3, and since $y = F(x)$, and by definitions of $F(A_1)$ and $F(A_2)$, \(y \in F(A_1)\) and \(y \in F(A_2)\).
+
+5. By 4 and definition of intersection, \(y \in F(A_1) \cap F(A_2)\).
+
+6. By 1, 5 and definition of subset, \(F(A_1 \cap A_2) \subseteq F(A_1) \cap F(A_2)\).
+
+{\it Now the reverse direction:}
+
+7. Assume \(y \in F(A_1) \cap F(A_2)\). {\it [Want to show \(y \in F(A_1 \cap A_2)\).]}
+
+8. By 7 and definition of intersection, \(y \in F(A_1)\) and \(y \in F(A_2)\).
+
+9. By 8 and definitions of \(F(A_1)\) and \(F(A_2)\), there exist \(x_1 \in A_1\) and \(x_2 \in A_2\) such that \(y = F(x_1)\) and \(y = F(x_2)\).
+
+10. By 9 and since $F$ is 1-1, \(x_1 = x_2\). 
+
+11. By 9, 10 and definition of intersection, \(x_1 \in A_1 \cap A_2\).
+
+12. By 11 and since \(y = F(x_1), y \in F(A_1 \cap A_2)\).
+
+13. By 7, 12 and definition of subset, \(F(A_1) \cap F(A_2) \subseteq F(A_1 \cap A_2)\).
+
+{\it Conclusion:}
+
+14. By 6, 13 and definition of set equality, \(F(A_1 \cap A_2) = F(A_1) \cap F(A_2)\).
 \end{proof}
 
 \subsection{Exercise 41}
+Suppose \(F: X \to Y\) is onto. Prove that for every subset \(B \subseteq Y, F(F^{-1}(B)) = B\).
 
 \begin{proof}
+Assume \(B \subseteq Y\).
 
+1. Assume \(y \in F(F^{-1}(B))\). {\it [Want to show \(y \in B\).]}
+
+2. By 1 and definition of \(F(F^{-1}(B))\), there exists \(x \in F^{-1}(B)\) such that \(F(x) = y\).
+
+3. By 2 and definition of inverse image \(F^{-1}(B) = \{t \in X \, | \, F(t) \in B\}\), we have \(F(x) \in B\).
+
+4. By 2 and 3, \(y = F(x) \in B\). So \(y \in B\).
+
+5. By 1, 4 and definition of subset, \(F(F^{-1}(B)) \subseteq B\).
+
+{\it Now the reverse direction:}
+
+6. Assume \(y \in B\). {\it [Want to show \(y \in F(F^{-1}(B))\).]}
+
+7. By 6 and since $F$ is onto, there exists \(x \in X\) such that \(F(x) = y\).
+
+8. By 6 and 7, \(x \in X\) and \(F(x) \in B\). So $x$ satisfies the definition of being a member of the inverse
+image \(F^{-1}(B) = \{t \in X \, | \, F(t) \in B\}\) (with $t = x$). So \(x \in F^{-1}(B)\).
+
+9. By 7 and 8, \(y = F(x) \in F(F^{-1}(B))\).
+
+10. By 6, 9 and definition of subset, \(B \subseteq F(F^{-1}(B))\).
+
+{\it Conclusion:}
+
+11. By 5, 10 and definition of set equality, \(F(F^{-1}(B)) = B\).
 \end{proof}
 
+{\bf \cy Let \(X = \{a, b, c, d, e\}\) and \(Y = \{s, t, u, v, w\}\). In each of 42 and 43 a one-to-one correspondence 
+\(F: X \to Y\) is defined by an arrow diagram. In each case draw an arrow diagram for \(F^{-1}\).}
+
 \subsection{Exercise 42}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.8]{../images/7.2.42.png}
+\end{figure}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.2.42.sol.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 43}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.2.43.png}
+\end{figure}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/7.2.43.sol.png}
+\end{figure}
 \end{proof}
 
+{\bf \cy In $44-55$ indicate which of the functions in the referenced exercise are one-to-one correspondences. For 
+each function that is a one-to-one correspondence, find the inverse function.}
+
 \subsection{Exercise 44}
-
+Exercise 10a
 \begin{proof}
-
+The function is not a one-to-one correspondence because it is not onto.
 \end{proof}
 
 \subsection{Exercise 45}
-
+Exercise 10b
 \begin{proof}
-
+The answer to exercise 10(b) shows that $h$ is onto. To show that $h$ is one-to-one, suppose \(h(n_1) = h(n_2)\). 
+By definition of $h$, this implies that \(2n_1 = 2n_2\). Dividing both sides by 2 gives \(n_1 = n_2\). Hence $h$ is 
+one-to-one, and so $h$ is a one-to-one correspondence. Given any even integer $m$, if \(m = h(n)\), then by 
+definition of \(h, m = 2n\), and so \(n = m/2\). Thus \(h^{-1}(m) = m/2\) for every \(m \in 2\Z\).
 \end{proof}
 
 \subsection{Exercise 46}
-
+Exercise 11a
 \begin{proof}
-
+The function $g$ is not a one-to-one correspondence because it is not onto. For instance, if $m = 2$, it is impossible 
+to find an integer $n$ such that \(g(n) = m\). (This is because if \(g(n) = m\), then \(4n - 5 = 2\), which implies 
+that \(n = 7/4\). Thus the only number $n$ with the property that \(g(n) = m\) is 7/4. But 7/4 is not an integer.)
 \end{proof}
 
 \subsection{Exercise 47}
-
+Exercise 11b
 \begin{proof}
-
+The answer to exercise 11b shows that $G$ is onto. In addition, $G$ is one-to-one. To prove this, suppose 
+\(G(x_1) = G(x_2)\) for some $x_1$ and $x_2$ in $\R$. {\it [We must show that \(x_1 = x_2\).]} By definition of $G$, 
+\(4x_1 - 5 = 4x_2 - 5\). Add 5 to both sides of this equation and divide both sides by 4 to obtain \(x_1 = x_2\) 
+{\it [as was to be shown]}. We claim that \(G^{-1}(y) = (y + 5)/4\) for each $y$ in $\R$. By definition of inverse 
+function, this is true if, and only if, \(G((y + 5)/4) = y\). But \(G((y+5)/4) = 4((y + 5)/4)-5=(y + 5) - 5 = y\), 
+and so it is the case that \(G^{-1}(y) = (y + 5)/4\) for each $y$ in $\R$.
 \end{proof}
 
 \subsection{Exercise 48}
-
+Exercise 12a
 \begin{proof}
-
+The function $F$ is not a one-to-one correspondence because it is not onto.
 \end{proof}
 
 \subsection{Exercise 49}
-
+Exercise 12b
 \begin{proof}
-
+The function $G$ is a one-to-one correspondence because it is both one-to-one and onto. As shown in the solution to
+exercise 12b, the inverse function is \(G^{-1}(y) = \frac{y-2}{-3}\).
 \end{proof}
 
 \subsection{Exercise 50}
-
+Exercise 21
 \begin{proof}
-
+The function $L$ is not a one-to-one correspondence because it is not 1-1.
 \end{proof}
 
 \subsection{Exercise 51}
-
+Exercise 22
 \begin{proof}
-
+The function $D$ is not a one-to-one correspondence because it is not 1-1.
 \end{proof}
 
 \subsection{Exercise 52}
+Exercise 15 with the co-domain taken to be the set of all real numbers not equal to 1
 
 \begin{proof}
-
+The answer to exercise 15 shows that $f$ is one-to-one, and if the co-domain is taken to be the set of all real numbers 
+not equal to 1, then $f$ is also onto. The reason is that given any real number \(y \neq 1\), if we take 
+\(x = \frac{1}{y-1}\), then $x$ is a real number and
+\[
+f(x) = f\left(\frac{1}{y-1}\right) = \frac{\frac{1}{y-1} + 1}{\frac{1}{y-1}} = \frac{1+(y-1)}{1} = y.
+\]
+Thus \(f^{-1}(y) = \frac{1}{y-1}\) for each real number \(y \neq 1\).
 \end{proof}
 
 \subsection{Exercise 53}
+Exercise 16 with the co-domain taken to be the set of all real numbers
 
 \begin{proof}
-
+The answer to exercise 16 shows that $f$ is not one-to-one. Therefore, it is not a one-to-one correspondence.
 \end{proof}
 
 \subsection{Exercise 54}
+Exercise 17 with the co-domain taken to be the set of all real numbers not equal to 3
 
 \begin{proof}
-
+The answer to exercise 17 shows that $f$ is 1-1. If the co-domain excludes 3, then it also becomes onto. Assume $y$ is
+any real number with \(y \neq 3\). Then letting \(y = \frac{3x-1}{x}\) and solving, we get \(x = \frac{1}{3-y}\)
+which is defined since \(y \neq 3\). Thus $f$ is a one-to-one correspondence and \(f^{-1}(y) = \frac{1}{3-y}\).
 \end{proof}
 
 \subsection{Exercise 55}
+Exercise 18 with the co-domain taken to be the set of all real numbers not equal to 1
 
 \begin{proof}
-
+The answer to exercise 18 shows that $f$ is 1-1. If the co-domain excludes 1, then it also becomes onto. Assume $y$ is
+any real number with \(y \neq 1\). Then letting \(y = \frac{x+1}{x-1}\) and solving, we get \(x=\frac{y+1}{y-1}\) 
+which is defined since \(y \neq 1\). Thus $f$ is a one-to-one correspondence and \(f^{-1}(y) = \frac{y+1}{y-1}\).
 \end{proof}
 
 \subsection{Exercise 56}
+In Example 7.2.8 a one-to-one correspondence was defined from the power set of $\{a, b\}$ to the set of all strings 
+of 0’s and 1’s that have length 2. Thus the elements of these two sets can be matched up exactly, and so the two 
+sets have the same number of elements.
+
+\subsubsection{(a)}
+Let \(X = \{x_1, x_2 , \ldots, x_n\}\) be a set with $n$ elements. Use Example 7.2.8 as a model to define a 
+one-to-one correspondence from \(\ps(X)\), the set of all subsets of $X$, to the set of all strings of 0’s and 1’s 
+that have length $n$.
 
 \begin{proof}
+Let $S_n$ be the set of all strings of 0's and 1's that have length $n$. 
 
+Define \(f : \ps(X) \to S_n\) as follows. For any subset $A$ of $X$, define $f(A)$ to be the string where, the $n$th 
+character in the string is 0 if \(x_i \notin A\), and 1 if \(x_i \in A\).
+
+For example, if $n=5$ and \(A = \{x_2, x_4\}\) then \(f(A) = 01010\).
+\end{proof}
+
+\subsubsection{(b)}
+In Section 9.2 we show that there are $2^n$ strings of 0’s and 1’s that have length $n$. What does this allow you to 
+conclude about the number of elements of $\ps(X)$? (This provides an alternative proof of Theorem 6.3.1.)
+
+\begin{proof}
+Since \(f: \ps(X) \to S_n\) is a one-to-one correspondence, \(\ps(X)\) has the same number of elements as \(S_n\). 
+Since \(S_n\) has $2^n$ elements, $\ps(X)$ also has $2^n$ elements.
 \end{proof}
 
 \subsection{Exercise 57}
+Write a computer algorithm to check whether a function from one finite set to another is one-to-one. Assume the 
+existence of an independent algorithm to compute values of the function.
 
 \begin{proof}
+Let a function $F$ be given and suppose the domain of $F$ is represented as a one-dimensional array 
+\(a[1], a[2], \ldots, a[n]\). 
 
+\begin{tabbing}
+\(answer \coloneqq\) ``one-to-one'' \\
+\(i \coloneqq 1\) \\
+{\bf while} \= (\(i \leq n-1\) and \(answer = \) ``one-to-one'') \\
+            \> \(j \coloneqq i + 1\) \\
+            \> {\bf while} \= (\(j \leq n\) and \(answer =\) ''one-to-one'') \\
+            \>             \> {\bf if} (\(F(a[i]) = F(a[j])\) and \(a[i] \neq a[j]\)) \\
+            \>             \> {\bf then} \(answer \coloneqq \) ``not one-to-one'' \\
+            \>             \> \(j \coloneqq j + 1\) \\
+            \> {\bf end while} \\
+\(i \coloneqq i + 1\) \\
+{\bf end while} \\
+{\bf return} $answer$
+\end{tabbing}
 \end{proof}
 
 \subsection{Exercise 58}
+Write a computer algorithm to check whether a function from one finite set to another is onto. Assume the existence of 
+an independent algorithm to compute values of the function.
 
 \begin{proof}
+Let a function $F$ be given and suppose the domain and the co-domain of $F$ are represented as one-dimensional arrays 
+\(a[1], a[2], \ldots, a[n]\) and \(b[1], b[2], \ldots, b[m]\).
 
+\begin{tabbing}
+\(answer \coloneqq\) ``onto'' \\
+\(i \coloneqq 1\) \\
+{\bf while} \= (\(i\leq m\) and \(answer = \) ``onto'') \\
+            \> \(found \coloneqq\) ``false'' \\
+            \> \(j \coloneqq 1\) \\
+            \> {\bf while} \= (\(j \leq n\) and \(found =\) ``false'') \\
+            \>             \> {\bf if} (\(b[i]=F(a[j])\))\\
+            \>             \> {\bf then} \(found \coloneqq \) ``true'' \\
+            \>             \> \(j \coloneqq j + 1\) \\
+            \> {\bf end while} \\
+            \> {\bf if} \(found = \) false \\
+            \> {\bf then} \(answer = \) ``not onto'' \\
+\(i \coloneqq i + 1\) \\
+{\bf end while} \\
+{\bf return} $answer$
+\end{tabbing}
 \end{proof}
 
 \end{document}

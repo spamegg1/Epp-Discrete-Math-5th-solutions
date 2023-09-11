@@ -214,6 +214,9 @@ pythontex-files-*/
 *.hst
 *.ver
 
+# VS Code
+.vscode/
+
 # easy-todo
 *.lod
 
