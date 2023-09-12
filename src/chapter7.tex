@@ -2582,188 +2582,555 @@ Let a function $F$ be given and suppose the domain and the co-domain of $F$ are 
 \end{tabbing}
 \end{proof}
 
-\end{document}
-
 \section{Exercise Set 7.3}
 
+{\bf \cy In each of 1 and 2, functions $f$ and $g$ are defined by arrow diagrams. Find \(g \circ f\) and 
+\(f \circ g\) and determine whether \(g \circ f\) equals \(f \circ g\).}
+
 \subsection{Exercise 1}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.3.1.png}
+\end{figure}
 
 \begin{proof}
+\(g \circ f\) is defined as follows:
+\begin{center}
+\begin{tabular}{ccccccc}
+\((g \circ f)(1)\) & = & \(g(f(1))\) & = & \(g(5)\) & = & 1\\
+\((g \circ f)(3)\) & = & \(g(f(3))\) & = & \(g(3)\) & = & 5\\
+\((g \circ f)(5)\) & = & \(g(f(5))\) & = & \(g(1)\) & = & 3\\
+\end{tabular}
+\end{center}
 
+\(f \circ g\) is defined as follows:
+\begin{center}
+\begin{tabular}{ccccccc}
+\((f \circ g)(1)\) & = & \(f(g(1))\) & = & \(f(3)\) & = & 3 \\
+\((f \circ g)(3)\) & = & \(f(g(3))\) & = & \(f(5)\) & = & 1 \\
+\((f \circ g)(5)\) & = & \(f(g(5))\) & = & \(f(1)\) & = & 5 \\
+\end{tabular}
+\end{center}
+
+Then \(g \circ f \neq f \circ g\) because, for example, \((g \circ f)(1) \neq (f \circ g)(1)\).
 \end{proof}
 
 \subsection{Exercise 2}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.3.2.png}
+\end{figure}
 
 \begin{proof}
+\(g \circ f\) is defined as follows:
 
+\begin{center}
+\begin{tabular}{ccccccc}
+\((g \circ f)(1)\) & = & \(g(f(1))\) & = & \(g(3)\) & = & 1\\
+\((g \circ f)(3)\) & = & \(g(f(3))\) & = & \(g(1)\) & = & 1\\
+\((g \circ f)(5)\) & = & \(g(f(5))\) & = & \(g(5)\) & = & 1\\
+\end{tabular}
+\end{center}
+
+\(f \circ g\) is defined as follows:
+
+\begin{center}
+\begin{tabular}{ccccccc}
+\((f \circ g)(1)\) & = & \(f(g(1))\) & = & \(f(1)\) & = & 3 \\
+\((f \circ g)(3)\) & = & \(f(g(3))\) & = & \(f(1)\) & = & 3 \\
+\((f \circ g)(5)\) & = & \(f(g(5))\) & = & \(f(1)\) & = & 3 \\
+\end{tabular}
+\end{center}
+
+Then \(g \circ f \neq f \circ g\) because, for example, \((g \circ f)(1) \neq (f \circ g)(1)\).
 \end{proof}
 
+{\bf \cy In 3 and 4, functions $F$ and $G$ are defined by formulas. Find \(G \circ F\) and \(F \circ G\) and 
+determine whether \(G \circ F\) equals \(F \circ G\).}
+
 \subsection{Exercise 3}
+\(F(x) = x^3\) and \(G(x) = x - 1\), for each real number $x$.
 
 \begin{proof}
+\((G \circ F)(x) = G(F(x)) = G(x^3) = x^3 - 1\) for every real number $x$.
 
+\((F \circ G)(x) = F(G(x)) = F(x - 1) = (x - 1)^3\) for every real number $x$.
+
+\(G \circ F \neq F \circ G\) because, for instance, \((G \circ F)(2) = 2^3 - 1 = 7\), 
+whereas \((F \circ G)(2) = (2 - 1)^3 = 1\).
 \end{proof}
 
 \subsection{Exercise 4}
+\(F(x) = x^5\) and \(G(x) = x^{1/5}\), for each real number $x$.
 
 \begin{proof}
+\((G \circ F)(x) = G(F(x)) = G(x^5) = (x^5)^{1/5} = x\) for every real number $x$.
 
+\((F \circ G)(x) = F(G(x)) = F(x^{1/5}) = (x^{1/5})^5 = x\) for every real number $x$.
+
+So \(G \circ F = F \circ G\).
 \end{proof}
 
 \subsection{Exercise 5}
+Define \(f: \R \to \R\) by the rule \(f(x) = -x\) for every real number $x$. Find \((f \circ f)(x)\).
 
 \begin{proof}
-
+\((f \circ f)(x) = f(f(x)) = f(-x) = -(-x) = x\).
 \end{proof}
 
 \subsection{Exercise 6}
+Define \(F: \Z \to \Z\) and \(G: \Z \to \Z\) by the rules \(F(a) = 7a\) and \(G(a) = a \mod 5\) for each integer $a$. 
+Find \((G \circ F)(0), (G \circ F)(1), (G \circ F)(2), (G \circ F)(3)\), and \((G \circ F)(4)\).
 
 \begin{proof}
+\((G \circ F)(0) = G(F(0)) = G(7 \cdot 0) = 0 \mod 5 = 0\),
 
+\((G \circ F)(1) = G(F(1)) = G(7 \cdot 1) = 7 \mod 5 = 2\),
+
+\((G \circ F)(2) = G(F(2)) = G(7 \cdot 2) = 14 \mod 5 = 4\),
+
+\((G \circ F)(3) = G(F(3)) = G(7 \cdot 3) = 21 \mod 5 = 1\),
+
+\((G \circ F)(4) = G(F(4)) = G(7 \cdot 4) = 28 \mod 5 = 3\).
 \end{proof}
 
 \subsection{Exercise 7}
+Define \(L: \Z \to \Z\) and \(M: \Z \to \Z\) by the rules \(L(a) = a^2\) and \(M(a) = a \mod 5\) for each integer $a$.
+
+\subsubsection{(a)}
+Find \((L \circ M)(12), (M \circ L)(12), (L \circ M)(9)\), and \((M \circ L)(9)\).
 
 \begin{proof}
+\((L \circ M)(12) = L(M(12)) = L(12 \mod 5) = L(2) = 2^2 = 4\).
 
+\((M \circ L)(12) = M(L(12)) = M(12^2) = M(144) = 144 \mod 5 = 4\).
+
+\((L \circ M)(9) = L(M(9)) = L(9 \mod 5) = L(4) = 4^2 = 16\).
+
+\((M \circ L)(9) = M(L(9)) = M(9^2) = M(81) = 81 \mod 5 = 1\).
+\end{proof}
+
+\subsubsection{(b)}
+Is \(L \circ M = M \circ L\)?
+
+\begin{proof}
+No, because \((L \circ M)(9) \neq (M \circ L)(9)\).
 \end{proof}
 
 \subsection{Exercise 8}
+Let $S$ be the set of all strings in $a$’s and $b$’s and let \(L: S \to \Z\) be the length function: For all strings 
+\(s \in S, L(s) =\) the number of characters in $s$. Let \(T: \Z \to \{0, 1, 2\}\) be the $\mod 3$ function: For 
+every integer \(n, T(n) = n \mod 3\).
+
+\subsubsection{(a)}
+\((T \circ L)(abaa) = ?\)
 
 \begin{proof}
+\((T \circ L)(abaa) = T(L(abaa)) = T(4) = 4 \mod 3 = 1\)
+\end{proof}
 
+\subsubsection{(b)}
+\((T \circ L)(baaab) = ?\)
+
+\begin{proof}
+\((T \circ L)(baaab) = T(L(baaab)) = T(5) = 5 \mod 3 = 2\)
+\end{proof}
+
+\subsubsection{(c)}
+\((T \circ L)(aaa) = ?\)
+
+\begin{proof}
+\((T \circ L)(aaa) = T(L(aaa)) = T(3) = 3 \mod 3 = 0\)
 \end{proof}
 
 \subsection{Exercise 9}
+Define \(F: \R \to \R\) and \(G: \R \to \Z\) by the following formulas: \(F(x) = x^2y^3\) and 
+\(G(x) = \floor{x}\) for every \(x \in \R\).
+
+\subsubsection{(a)}
+\((G \circ F)(2) = ?\)
 
 \begin{proof}
+\((G \circ F)(2) = G(F(2)) = G(2^2/3) = G(4/3) = \floor{4/3} = 1\)
+\end{proof}
 
+\subsubsection{(b)}
+\((G \circ F)(-3) = ?\)
+
+\begin{proof}
+\((G \circ F)(-3) = G(F(-3)) = G((-3)^2/3) = G(9/3) = \floor{3} = 3\)
+\end{proof}
+
+\subsubsection{(c)}
+\((G \circ F)(5) = ?\)
+
+\begin{proof}
+\((G \circ F)(5) = G(F(5)) = G(5^2/3) = G(25/3) = \floor{25/3} = 8\)
 \end{proof}
 
 \subsection{Exercise 10}
+Define \(F: \Z \to \Z\) and \(G: \Z \to \Z\) by the following formulas: \(F(n) = 2n\) and \(G(n)=\floor{n/2}\) 
+for every integer $n$.
+
+\subsubsection{(a)}
+Find \((G \circ F)(8)\), \((F \circ G)(8)\), \((G \circ F)(3)\) and \((F \circ G)(3)\).
 
 \begin{proof}
+\((G \circ F)(8) = G(F(8)) = G(16) = \floor{16/2} = 8\)
 
+\((F \circ G)(8) = F(G(8)) = F(\floor{8/2}) = 2 \cdot 4 = 8\)
+
+\((G \circ F)(3) = G(F(3)) = G(6) = \floor{6/2} = 3\)
+
+\((F \circ G)(3) = F(G(3)) = F(\floor{3/2}) = 2 \cdot 1 = 2\)
+\end{proof}
+
+\subsubsection{(b)}
+Is \(G \circ F = F \circ G\)? Explain.
+
+\begin{proof}
+No, because \((G \circ F)(3) \neq (F \circ G)(3)\).
 \end{proof}
 
 \subsection{Exercise 11}
+Define \(F: \R \to \R\) and \(G: \R \to \R\) by the rules 
+\(F(x) = 3x\) and \(G(x) = \floor{x/3}\) for every real number $x$.
+
+\subsubsection{(a)}
+Find \((G \circ F)(6)\), \((F \circ G)(6)\), \((G \circ F)(1)\) and \((F \circ G)(1)\).
 
 \begin{proof}
+\((G \circ F)(6) = G(F(6)) = G(18) = \floor{18/3} = 6\)
 
+\((F \circ G)(6) = F(G(6)) = F(\floor{6/3}) = 3 \cdot 2 = 6\)
+
+\((G \circ F)(1) = G(F(1)) = G(3) = \floor{3/3} = 1\)
+
+\((F \circ G)(1) = F(G(1)) = F(\floor{1/3}) = 3 \cdot 0 = 0\)
 \end{proof}
 
-\subsection{Exercise 12}
+\subsubsection{(b)}
+Is \(G \circ F = F \circ G\)? Explain.
 
 \begin{proof}
+No, because \((G \circ F)(1) \neq (F \circ G)(1)\).
+\end{proof}
 
+{\bf \cy The functions of each pair in $12-14$ are inverse to each other. For each pair, check that both compositions 
+give the identity function.}
+
+\subsection{Exercise 12}
+\(F: \R \to \R\) and \(F^{-1}: \R \to \R\) are defined by
+\[
+F(x) = 3x+2 \text{ and } F^{-1}(y) = \frac{y-2}{3}, \text{ for every } x, y \in \R.
+\]
+\begin{proof}
+\((F^{-1} \circ F)(x) = F^{-1}(F(x)) = F^{-1}(3x+2) = \frac{(3x+2)-2}{3} = x = I_{\R}(x)\) for every \(x \in\R\).
+Hence \(F^{-1} \circ F = I_{\R}\) by definition of equality of functions.
+
+\((F \circ F^{-1})(y) = F(F^{-1}(y)) = F(\frac{y-2}{3}) = 3 \cdot \frac{y-2}{3} + 2 = (y-2) + 2 = y = I_{\R}(y)\) for 
+every \(y \in\R\). Hence \(F \circ F^{-1} = I_{\R}\) by definition of equality of functions.
 \end{proof}
 
 \subsection{Exercise 13}
-
+\(G: \R^+ \to \R^+\) and \(G^{-1}: \R^+ \to \R^+\) are defined by
+\[
+G(x) = x^2 \text{ and } G^{-1}(y) = \sqrt{y}, \text{ for every } x, y \in \R.
+\]
 \begin{proof}
+\((G^{-1} \circ G)(x) = G^{-1}(G(x)) = G^{-1}(x^2) = \sqrt{x^2} = x = I_{\R}(x)\) for every \(x \in \R\).
+Hence \(G^{-1} \circ G = I_{\R}\) by definition of equality of functions.
 
+\((G \circ G^{-1})(y) = G(G^{-1}(y)) = G(\sqrt{y}) = (\sqrt{y})^2 = y = I_{\R}(y)\) for every \(y \in \R\). 
+Hence \(G \circ G^{-1} = I_{\R}\) by definition of equality of functions.
 \end{proof}
 
 \subsection{Exercise 14}
-
+$H$ and $H^{-1}$ are both defined from $\R - \{1\}$ to $\R - \{1\}$ by the formula
+\[
+H(x) = H^{-1}(x) = \frac{x+1}{x-1}, \text{ for every } x \in \R - \{1\}.
+\]
 \begin{proof}
-
+\[
+(H^{-1} \circ H)(x) = H^{-1}(H(x)) = H^{-1}\left(\frac{x+1}{x-1}\right)=\frac{\frac{x+1}{x-1}+1}{\frac{x+1}{x-1}-1} = 
+\frac{\frac{2x}{x-1}}{\frac{2}{x-1}} = x = I_{\R}(x)
+\]
+for every \(x \in \R\). Hence \(H^{-1} \circ H = I_{\R}\) by definition of equality of functions. The calculation for
+\((H \circ H^{-1})(x)\) is the same as above. Hence \(H \circ H^{-1} = I_{\R}\) by definition of equality of functions.
 \end{proof}
 
 \subsection{Exercise 15}
+Explain how it follows from the definition of logarithm that
+
+\subsubsection{(a)}
+\(\log_b(b^x) = x\), for every real number $x$.
 
 \begin{proof}
+By definition of logarithm with base $b$, for each real number $x$, \(\log_b(b^x)\) is the exponent to which $b$ 
+must be raised to obtain $b^x$. But this exponent is just $x$. So \(\log_b(b^x) = x\).
+\end{proof}
 
+\subsubsection{(b)}
+\(b^{\log_b x} = x\), for every positive real number $x$.
+
+\begin{proof}
+By definition of logarithm with base $b$, for each real number $x$, \(\log_b(x)\) is the exponent to which $b$ 
+must be raised to obtain $x$. So \(b^{\log_b(x)} = x\).
 \end{proof}
 
 \subsection{Exercise 16}
+Prove Theorem 7.3.1(b): If $f$ is any function from a set $X$ to a set $Y$, then \(I_Y \circ f = f\), where $I_Y$ is 
+the identity function on $Y$.
 
 \begin{proof}
-
+Suppose $f$ is any function from a set $X$ to a set $Y$. {\it [We want to show \((I_Y \circ f)(x) = f(x)\)]} for 
+every \(x \in X\). Indeed \((I_Y \circ f)(x) = I_Y(f(x)) = f(x)\) by definition of $I_Y$, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 17}
+Prove Theorem 7.3.2(b): If \(f: X \to Y\) is a one-to-one and onto function with inverse function \(f^{-1}:Y \to X\), 
+then \(f \circ f^{-1} = I_Y\), where \(I_Y\) is the identity function on $Y$.
 
 \begin{proof}
-
+{\it [We want to show that for every \(y \in Y, I_Y(y) = (f \circ f^{-1})(y)\)].} Assume \(y \in Y\). Since $f$ is 1-1 
+and onto, there is a unique \(x \in X\) such that \(f(x) = y\), and therefore, \(f^{-1}(y) = x\). Then
+\[
+(f \circ f^{-1})(y) = f(f^{-1}(y)) = f(x) = y = I_Y(y),
+\]
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 18}
+Suppose $Y$ and $Z$ are sets and \(g: Y \to Z\) is a one-to-one function. This means that if $g$ takes the same 
+value on any two elements of $Y$, then those elements are equal. Thus, for example, if $a$ and $b$ are elements of 
+$Y$ and \(g(a) = g(b)\), then it can be inferred that $a = b$. What can be inferred in the following situations?
+
+\subsubsection{(a)}
+$s_k$ and $s_m$ are elements of $Y$ and \(g(s_k) = g(s_m)\).
 
 \begin{proof}
+We can infer that \(s_k = s_m\).
+\end{proof}
 
+\subsubsection{(b)}
+$z/2$ and $t/2$ are elements of $Y$ and \(g(z/2) = g(t/2)\).
+
+\begin{proof}
+We can infer that \(z/2 = t/2\).
+\end{proof}
+
+\subsubsection{(c)}
+$f(x_1)$ and $f(x_2)$ are elements of $Y$ and \(g(f(x_1)) = g(f(x_2))\).
+
+\begin{proof}
+We can infer that \(f(x_1) = f(x_2)\).
 \end{proof}
 
 \subsection{Exercise 19}
+If \(f: X \to Y\) and \(g: Y \to Z\) are functions and \(g \circ f\) is one-to-one, must $g$ be one-to-one? 
+Prove or give a counterexample.
 
 \begin{proof}
+The answer is no. \underline{Counterexample:} Define $f$ and $g$ by the arrow diagrams below.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/7.3.19.png}
+\end{figure}
+
+Then \(g \circ f\) is one-to-one but $g$ is not one-to-one. 
+(This is one counterexample among many. Can you construct a different one?)
 \end{proof}
 
 \subsection{Exercise 20}
+If \(f: X \to Y\) and \(g: Y \to Z\) are functions and \(g \circ f\) is onto, must $f$ be onto? 
+Prove or give a counterexample.
 
 \begin{proof}
+The answer is no. \underline{Counterexample:} Define $f$ and $g$ by the arrow diagrams below.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/7.3.20.png}
+\end{figure}
+
+Then \(g \circ f\) is onto, because \((g \circ f)(x) = z\). But $f$ is not onto, because there is no \(e \in X\) such 
+that \(f(e) = y_2\).
 \end{proof}
 
 \subsection{Exercise 21}
+If \(f: X \to Y\) and \(g: Y \to Z\) are functions and \(g \circ f\) is one-to-one, must $f$ be one-to-one? 
+Prove or give a counterexample.
 
 \begin{proof}
+Yes. Suppose \(f: X \to Y\) and \(g: Y \to Z\) are functions and \(g \circ f\) is one-to-one. Assume 
+\(x_1, x_2 \in X\) and \(f(x_1) = f(x_2)\). {\it [We want to show \(x_1 = x_2\).]} Since \(f(x_1) = f(x_2)\), apply
+$g$ to both sides to get \(g(f(x_1)) = g(f(x_2))\), so by definition of \(g \circ f\), \((g \circ f)(x_1) = 
+(g \circ f)(x_2)\). Since \(g \circ f\) is 1-1, \(x_1 = x_2\), {\it [as was to be shown.]}
 
 \end{proof}
 
 \subsection{Exercise 22}
+If \(f: X \to Y\) and \(g: Y \to Z\) are functions and \(g \circ f\) is onto, must $g$ be onto? 
+Prove or give a counterexample.
 
 \begin{proof}
-
+Suppose \(f: X \to Y\) and \(g: Y \to Z\) are functions and \(g \circ f\) is onto. Assume \(z \in Z\). {\it [We want 
+to show there exists \(y \in Y\) such that \(g(y) = z\).]} Since \(g \circ f\) is onto, there exists \(x \in X\) such
+that \((g \circ f)(x) = z\). So \(g(f(x)) = z\). Let $y = f(x)\). Then \(y \in Y\) and \(g(y) = z\), 
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 23}
+Let \(f: W \to X, g: X \to Y\), and \(h: Y \to Z\) be functions. 
+Must \(h \circ (g \circ f) = (h \circ g) \circ f\)? 
+Prove or give a counterexample.
 
 \begin{proof}
-
+True. {\it [We want to show \((h \circ (g \circ f))(w) = ((h \circ g) \circ f)(w)\) for all \(w \in W\).]} Assume 
+\(w \in W\). Then by definition of \(h \circ (g \circ f)\)
+\[
+(h \circ (g \circ f))(w) = h((g \circ f)(w)) = h(g(f(w)))
+\]
+and by definition of \((h \circ g) \circ f\)
+\[
+((h \circ g) \circ f)(w) = (h \circ g)(f(w)) = h(g(f(w)))
+\]
+thus \((h \circ (g \circ f))(w) = ((h \circ g) \circ f)(w)\) {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 24}
+True or False? Given any set $X$ and given any functions \(f: X \to X, g: X \to X\), and \(h: X \to X\), if $h$ is 
+one-to-one and \(h \circ f = h \circ g\), then $f = g$. Justify your answer.
 
 \begin{proof}
-
+True. Suppose $X$ is any set and $f$, $g$, and $h$ are functions from $X$ to $X$ such that $h$ is one-to-one and 
+\(h \circ f = h \circ g\). {\it [We must show that for every $x$ in $X$, \(f(x) = g(x)\).]} Suppose $x$ is any 
+element in $X$. Because \(h \circ f = h \circ g\), we have that \((h \circ f)(x) = (h \circ g)(x)\) by definition of 
+equality of functions. Then, by definition of composition of functions, \(h(f(x)) = h(g(x))\). And since $h$ is one-
+to-one, this implies that \(f(x) = g(x)\) {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 25}
+True or False? Given any set $X$ and given any functions \(f: X \to X, g: X \to X\), and \(h: X \to X\), if $h$ is 
+one-to-one and \(f \circ h = g \circ h\), then $f = g$. Justify your answer.
 
 \begin{proof}
+Interestingly, if $X$ is a finite set then this statement is true, because if $h: X \to X$ is 1-1, and $X$ is finite,
+then $h$ is also onto, but this is not necessarily true if $X$ is infinite.
 
+False. \underline{Counterexample:} Let \(X = \Z\), and for all \(n \in \Z, h(n) = 2n\),
+\begin{center}
+\(
+f(n) =
+\left\{
+\begin{tabular}{ll}
+\(n\) & if $n$ is even \\
+\(5\) & if $n$ is odd
+\end{tabular}
+\right.
+\), and 
+\(
+g(n) =
+\left\{
+\begin{tabular}{ll}
+\(n\) & if $n$ is even \\
+\(3\) & if $n$ is odd
+\end{tabular}
+\right.
+\).
+\end{center}
+Then $h$ is one-to-one: if \(h(n_1) = h(n_2)\) then \(2n_1 = 2n_2\) therefore \(n_1 = n_2\).
+
+Also \(f \circ h = g \circ h\): for all \(n \in \Z\) we have \((f \circ h)(n) = f(h(n)) = f(2n) = 2n\) (since $2n$
+is even), and similarly \((g \circ h)(n) = g(h(n)) = g(2n) = 2n\), so \((f \circ h)(n) = (g \circ h)(n)\).
+
+But $f \neq g$, because \(f(1) = 5 \neq 3 = g(1)\).
 \end{proof}
 
+{\bf \cy In 26 and 27 find \((g \circ f)^{-1}, g^{-1}, f^{-1}\), and \(f^{-1} \circ g^{-1}\), and state how 
+\((g \circ f)^{-1}\) and \(f^{-1} \circ g^{-1}\) are related.}
+
 \subsection{Exercise 26}
+Let \(X = \{a, b, c\}, Y = \{x, y, z\}\), and \(Z = \{u, v, w\}\). Define \(f: X \to Y\) and \(g: Y \to Z\) by the 
+arrow diagrams below.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.3.26.png}
+\end{figure}
 
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/7.3.26.sol.png}
+\end{figure}
 
+The functions \((g \circ f)^{-1}\) and \(f^{-1} \circ g^{-1}\) are equal.
 \end{proof}
 
 \subsection{Exercise 27}
+Define \(f: \R \to \R\) and \(g: \R \to \R\) by the formulas \(f(x) = x + 3\) and \(g(x) = -x\) for each \(x \in R\).
 
 \begin{proof}
+\((g \circ f)(x) = g(f(x)) = g(x+3) = -x-3, (g \circ f)^{-1}(y) = -y-3\)
 
+\(g^{-1}(y) = -y, f^{-1}(y) = y - 3\)
+
+\((f^{-1} \circ g^{-1})(y) = f^{-1}(g^{-1}(y)) = f^{-1}(-y) = -y-3\)
+
+The functions \((g \circ f)^{-1}\) and \(f^{-1} \circ g^{-1}\) are equal.
 \end{proof}
 
 \subsection{Exercise 28}
+Prove or give a counterexample: If \(f: X \to Y\) and \(g: Y \to X\) are functions such that \(g \circ f = I_X\) and 
+\(f \circ g = I_Y\), then $f$ and $g$ are both one-to-one and onto and \(g = f^{-1}\).
 
 \begin{proof}
+{\bf $\bm{f}$ is 1-1:} Assume \(f(x_1) = f(x_2)\) for some \(x_1, x_2 \in X\). {\it [Want to show \(x_1 = x_2\).]}
+Since \(f(x_1) = f(x_2)\), we have \(g(f(x_1))=g(f(x_2))\). So \((g \circ f)(x_1) = (g \circ f)(x_2)\). 
+So \(I_X(x_1) = I_X(x_2)\), therefore \(x_1 = x_2\). {\it [as was to be shown.]}
 
+In a parallel way, we can prove $g$ is 1-1.
+
+{\bf $\bm{f}$ is onto:} Assume \(y \in Y\). {\it [Want to show there exists \(x \in X\) such that \(y = f(x)\).]}
+Let \(x = g(y)\). Then \(f(x) = f(g(y)) = (f \circ g)(y) = I_Y(y) = y\), {\it [as was to be shown.]}
+
+In a parallel way, we can prove $g$ is onto.
 \end{proof}
 
 \subsection{Exercise 29}
+Suppose \(f: X \to Y\) and \(g: Y \to Z\) are both one-to-one and onto. Prove that \((g \circ f)^{-1}\) exists and 
+that \((g \circ f)^{-1} = f^{-1} \circ g^{-1}\).
 
 \begin{proof}
+By Theorem 7.3.3 \(g \circ f\) is 1-1. By Theorem 7.3.4 \(g \circ f\) is onto. By Theorem 7.2.2 \((g \circ f)^{-1}\) 
+exists and has the inverse function property: for all \(x \in X, z \in Z, (g \circ f)^{-1}(z) = x\) if and only if 
+\((g \circ f)(x) = z\).
 
+{\it [We want to show that for all \(z \in Z, (g \circ f)^{-1}(z) = (f^{-1} \circ g^{-1})(z)\).]} Assume $z\in Z$.
+Let \(x = (g \circ f)^{-1}(z)\). By the inverse function property of \((g \circ f)^{-1}\), \((g \circ f)(x) = z\). 
+So \(g(f(x)) = z\). By the inverse function property of $g^{-1}$, \(g^{-1}(z) = f(x)\). Then by the inverse 
+function property of $f^{-1}$, \(f^{-1}(g^{-1}(z)) = x\).
+So \((g \circ f)^{-1}(z) = (f^{-1} \circ g^{-1})(z)\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 30}
+Let \(f: X \to Y\) and \(g: Y \to Z\). Is the following property true or false? For every subset $C$ in $Z$, 
+\((g \circ f)^{-1}(C) = f^{-1}(g^{-1}(C))\). Justify your answer.
 
 \begin{proof}
+1. By definition of inverse image, \(g^{-1}(C) = \{y \in Y \, | \, g(y) \in C\}\).
 
+2. By 1 and definition of inverse image, 
+\[
+f^{-1}(g^{-1}(C)) = \{x \in X \, | \, f(x) \in g^{-1}(C)\} = \{x \in X \, | \, g(f(x)) \in C\}.
+\]
+3. By definition of inverse image and $\circ$, 
+\[
+(g \circ f)^{-1}(C) = \{x \in X \, | \, (g \circ f)(x) \in C\} = \{x \in X \, | \, g(f(x)) \in C\}.
+\]
+4. By 2 and 3, \(f^{-1}(g^{-1}(C)) = (g \circ f)^{-1}(C)\).
 \end{proof}
 
 \section{Exercise Set 7.4}
@@ -2806,6 +3173,14 @@ Let a function $F$ be given and suppose the domain and the co-domain of $F$ are 
 
 \subsection{Exercise 7}
 
+\subsubsection{(a)}
+
+\begin{proof}
+
+\end{proof}
+
+\subsubsection{(b)}
+
 \begin{proof}
 
 \end{proof}
@@ -2901,6 +3276,14 @@ Let a function $F$ be given and suppose the domain and the co-domain of $F$ are 
 \end{proof}
 
 \subsection{Exercise 23}
+
+\subsubsection{(a)}
+
+\begin{proof}
+
+\end{proof}
+
+\subsubsection{(b)}
 
 \begin{proof}
 
