@@ -3136,247 +3136,840 @@ f^{-1}(g^{-1}(C)) = \{x \in X \, | \, f(x) \in g^{-1}(C)\} = \{x \in X \, | \, g
 \section{Exercise Set 7.4}
 
 \subsection{Exercise 1}
+When asked what it means to say that set $A$ has the same cardinality as set $B$, a student replies, “$A$ and $B$ are 
+one-to-one and onto.” What should the student have replied? Why?
 
 \begin{proof}
-
+The student should have replied that for $A$ to have the same cardinality as $B$ means that there is a function from 
+$A$ to $B$ that is one-to-one and onto. A set cannot have the property of being onto or one-to-one another set; only 
+a function can have these properties.
 \end{proof}
 
 \subsection{Exercise 2}
+Show that “there are as many squares as there are numbers” by exhibiting a one-to-one correspondence from the positive 
+integers, $\Z^+$, to the set $S$ of all squares of positive integers: \(S = \{n \in \Z^+ \, | \, n = k^2, 
+\text{ for some positive integer } k\}\).
 
 \begin{proof}
+Define a function \(f: \Z^+ \to S\) as follows: For every positive integer \(k, f(k) = k^2\). 
 
+{\it $f$ is one-to-one:} {\it [We must show that for all $k_1$ and \(k_2 \in \Z^+\), if \(f(k_1) = f(k_2)\) then 
+\(k_1 = k_2\).]} Suppose $k_1$ and $k_2$ are positive integers and \(f(k_1) = f(k_2)\). By definition of \(f, (k_1)^2 = (k_2)^2\), so \(k_1 = \pm k_2\). But $k_1$ and $k_2$ are positive. Hence \(k_1 = k_2\).
+
+{\it $f$ is onto:} {\it [We must show that for each \(n \in S\), there exists \(k \in \Z^+\) such that \(n = f(k)\).]} 
+Suppose \(n \in S\). By definition of \(S, n = k^2\) for some positive integer $k$. Then by definition of \(f, n = f(k)\).
+
+Since there is a one-to-one, onto function (namely, $f$) from $\Z^+$ to $S$, the two sets have the same cardinality.
 \end{proof}
 
 \subsection{Exercise 3}
+Let \(3\Z = \{n \in \Z \,|\, n = 3k, \text{ for some integer } k\}\). Prove that $\Z$ and $3\Z$ have the same 
+cardinality.
 
 \begin{proof}
-
+Define \(f: \Z \to 3\Z\) by the rule \(f(n) = 3n\) for each integer $n$. The function $f$ is one-to-one because for any 
+integers $n_1$ and $n_2$, if \(f(n_1) = f(n_2)\) then \(3n_1 = 3n_2\) and so \(n_1 = n_2\). Also $f$ is onto 
+because if $m$ is any element in $3\Z$, then \(m = 3k\) for some integer $k$. Then \(f(k) = 3k = m\) by definition of 
+$f$. Thus, since there is a function \(f: \Z \to 3\Z\) that is one-to-one and onto, $\Z$ has the same cardinality as $3\Z$.
 \end{proof}
 
 \subsection{Exercise 4}
+Let {\bf O} be the set of all odd integers. Prove that {\bf O} has the same cardinality as $2\Z$, the set of all even
+integers.
 
 \begin{proof}
-
+Define \(f: {\bf O} \to 2\Z\) with \(f(n) = n-1\). (Notice that $f$ is well-defined because, subtracting 1 from an odd 
+integer always gives an even integer.) $f$ is 1-1 because, if \(n_1 - 1 = n_2 - 1\) then \(n_1 = n_2\). $f$ is onto 
+because, given any even integer \(2n \in 2\Z\) there is an odd integer \(o = 2n+1\) such that 
+\(f(o) = f(2n+1) = 2n+1-1 = 2n\).
 \end{proof}
 
 \subsection{Exercise 5}
+Let $25\Z$ be the set of all integers that are multiples of 25. Prove that $25\Z$ has the same cardinality as $2\Z$, 
+the set of all even integers.
 
 \begin{proof}
-
+Define \(f: 25\Z \to 2\Z\) as follows: given any \(t \in 25\Z, t = 25n\) for some integer $n$. Then define \(f(t) = 
+2n\). In other words, \(f(t) = \frac{2}{25} \cdot t\). (Notice $f$ is well-defined because \(\frac{2}{25} \cdot 
+t\) is always an integer for all \(t \in 25\Z\)). $f$ is 1-1 because, if \(\frac{2}{25}t_1 = \frac{2}{25}t_2\) then 
+by canceling $\frac{2}{25}$ we get \(t_1 = t_2\). $f$ is onto because, given any even integer \(2n \in 2\Z\) there 
+exists \(t \in 25\Z\), namely \(t = \frac{25}{2} \cdot (2n) = 25n\) such that \(f(t) = f(25n) = \frac{2}{25}(25n) = 2n\).
 \end{proof}
 
 \subsection{Exercise 6}
+Use the functions $I$ and $J$ defined in the paragraph following Example 7.4.1 to show that even though there is a 
+one-to-one correspondence, $H$, from $2\Z$ to $\Z$, there is also a function from $2\Z$ to $Z$ that is one-to-one but 
+not onto and a function from $Z$ to $2\Z$ that is onto but not one-to-one. In other words, show that $I$ is one-to-one 
+but not onto, and show that $J$ is onto but not one-to-one.
 
 \begin{proof}
+Recall \(I: 2\Z \to \Z, I(n) = n\) and \(J: \Z \to 2\Z, J(n) = 2\floor{n/2}\) for each \(n \in \Z\).
 
+{\it I is 1-1:} Assume \(I(n_1) = I(n_2)\). Then by definition of \(I, n_1 = n_2\).
+
+{\it I is not onto:} Let \(n = 3\). There is no \(m \in 2\Z\) such that \(I(m) = n\). Why? Argue by contradiction
+and assume otherwise. Then \(I(m) = m = n\) so \(m = 3\). But \(3 \notin 2\Z\), contradiction.
+
+{\it J is not 1-1:} because \(J(2) = 2\floor{2/2} = 2 \cdot 1 = 2\) and \(J(3) = 2\floor{3/2} = 2 \cdot 1 = 2\). So
+\(J(2) = J(3)\) but \(2 \neq 3\).
+
+{\it J is onto:} Let \(m \in 2\Z\) be any even integer. So \(m = 2n\) for some integer $n$. Then there exists an 
+integer $k \in \Z$, namely $k = m$, such that \(J(k) = J(m) = J(2n) = 2\floor{(2n)/2} = 2\floor{n} = 2n = m\).
 \end{proof}
 
 \subsection{Exercise 7}
-
 \subsubsection{(a)}
+Check that the formula for $F$ given at the end of Example 7.4.2 produces the correct values for \(n = 1, 2, 3, 4\).
 
 \begin{proof}
+Recall that the formula is:
+\[
+F(n) =
+\left\{
+\begin{tabular}{ll}
+\(\frac{n}{2}\) & if $n$ is positive and even \\
+\(-\frac{n-1}{2}\) & if $n$ is positive and odd
+\end{tabular}
+\right.
+\]
+and it is supposed to give us the values \(F(1) = 0, F(2) = 1, F(3) = -1, F(4) = 2\).
 
+Let's check: 1 is odd, so \(F(1) = -\frac{1-1}{2} = 0\). 2 is even, so \(F(2) = \frac{2}{2} = 1\). 3 is odd, so
+\(F(3) = -\frac{3-1}{2} = -1\). 4 is even, so \(F(4) = \frac{4}{2} = 2\).
 \end{proof}
 
 \subsubsection{(b)}
+Use the floor function to write a formula for $F$ as a single algebraic expression for each positive integer $n$.
 
 \begin{proof}
-
+For each positive integer \(\dps n, F(n) = (-1)^n \floor{ \frac{n}{2}}\).
 \end{proof}
 
 \subsection{Exercise 8}
+Use the result of exercise 3 to prove that $3\Z$ is countable.
 
 \begin{proof}
-
+It was shown in Example 7.4.2 that $\Z$ is countably infinite, which means that $\Z^+$ has the same cardinality 
+as $\Z$. By exercise 3, $\Z$ has the same cardinality as $3\Z$. It follows by the transitive property of cardinality 
+(Theorem 7.4.1 (c)) that $\Z^+$ has the same cardinality as $3\Z$. Thus $3\Z$ is countably infinite {\it [by definition 
+of countably infinite]}, and hence $3\Z$ is countable {\it [by definition of countable].}
 \end{proof}
 
 \subsection{Exercise 9}
+Show that the set of all nonnegative integers is countable by exhibiting a one-to-one correspondence between $\Z^+$ 
+and \(\Z^{nonneg}\).
 
 \begin{proof}
-
+Define \(f: \Z^+ \to \Z^{nonneg}\) by \(f(n) = n-1\). $f$ is 1-1 because if \(n_1 - 1 = n_2 - 1\) then \(n_1 = n_2\).
+$f$ is onto because, for every \(n \in \Z^{nonneg}\) there is \(m \in \Z^+\), namely \(m = n+1\) such that 
+\(f(m) = f(n+1) = (n+1)-1 = n\).
 \end{proof}
 
+{\bf \cy In $10-14$ $S$ denotes the set of real numbers strictly between 0 and 1. That is, \(S = \{x \in \R \, | \, 
+0 < x < 1\}\).}
+
 \subsection{Exercise 10}
+Let \(U = \{x \in \R \,|\, 0 < x < 2\}\). Prove that $S$ and $U$ have the same cardinality.
 
 \begin{proof}
-
+Define \(f: S \to U\) by the rule \(f(x) = 2x\) for each real number $x$ in $S$. Then $f$ is one-to-one by the same 
+argument as in exercise 10a of Section 7.2 with $\R$ in place of $\Z$. Furthermore, $f$ is onto because if $y$ is 
+any element in $U$, then \(0 < y < 2\) and so \(0 < y/2 < 1\). Consequently, \(y/2 \in S\) and \(f(y/2)=2(y/2) = y\). 
+Hence $f$ is a one-to-one correspondence, and so $S$ and $U$ have the same cardinality.
 \end{proof}
 
 \subsection{Exercise 11}
+Let \(V = \{x \in \R \,|\, 2 < x < 5\}\). Prove that $S$ and $V$ have the same cardinality.
 
 \begin{proof}
-
+Define \(h: S \to V\) as follows: \(h(x) = 3x + 2\), for every \(x \in S\). $h$ is 1-1 because if \(3x_1 + 2 = 3x_2 
++ 2\) then \(3x_1 = 3x_2\) and \(x_1 = x_2\). $h$ is onto because, given any \(y \in V\), let \(x = (y-2)/3\). Since
+\(2 < y < 5\) we have \((2-2)/3 < x < (5-2)/3\), or \(0 < x < 1\) so \(x \in S\), and \(h(x) = h((y-2)/3) = 3(y-2)/3+2
+= (y-2)+2 = y\). Hence $h$ is a one-to-one correspondence, and so $S$ and $V$ have the same cardinality.
 \end{proof}
 
 \subsection{Exercise 12}
+Let $a$ and $b$ be real numbers with $a < b$, and suppose that \(W = \{x \in \R \,|\, a < x < b\}\). Prove that $S$
+and $W$ have the same cardinality.
 
 \begin{proof}
-
+Define \(f: S \to W\) as follows: \(f(x) = (b-a)x + a\), for every \(x \in S\). $f$ is 1-1 because if \((b-a)x_1 + a 
+= (b-a)x_2 + a\) then \((b-a)x_1 = (b-a)x_2\) and since \(b-a>0\) we can divide by \(b-a\) to get \(x_1 = x_2\). $f$ 
+is onto because, given any \(y \in W\), let \(x = (y-a)/(b-a)\). Since \(a < y < b\) we have \((a-a)/(b-a) < x < (b-
+a)/(b-a)\), or \(0 < x < 1\); so \(x \in S\), and \(f(x) = f((y-a)/(b-a))=(b-a)\cdot\frac{y-a}{b-a}+a = (y-a)+a = y\). 
+Hence $f$ is a one-to-one correspondence, and so $S$ and $W$ have the same cardinality.
 \end{proof}
 
 \subsection{Exercise 13}
+Draw the graph of the function $f$ defined by the following formula: For each real number $x$ with \(0 < x < 1\), 
+\(f(x) = \tan(\pi x - \frac{\pi}{2})\). Use the graph to explain why $S$ and $R$ have the same cardinality.
 
 \begin{proof}
+It is clear from the graph that $f$ is one-to-one (since it is increasing) and that the image of $f$ is all of $\R$ 
+(since the lines $x = 0$ and $x = 1$ are vertical asymptotes). Thus $S$ and $\R$ have the same cardinality.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/7.4.13.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 14}
+Define a function $g$ from the set of real numbers to $S$ by the following formula: For each real number $x$,
+\[
+g(x) = \frac{1}{2} \cdot \frac{x}{1 + |x|} + \frac{1}{2}.
+\]
+Prove that $g$ is a one-to-one correspondence. (It is possible to prove this statement either with calculus or 
+without it.) What conclusion can you draw from this fact?
 
 \begin{proof}
+{\bf $g$ is onto:} Given \(y \in S\) (so \(0 < y < 1\)) let
+\[
+x =
+\left\{
+\begin{tabular}{ll}
+\(\frac{1}{2} \cdot \frac{1}{-y} + 1\) & if \(0 < y \leq 1/2\) \\
+\(\frac{1}{2} \cdot \frac{1}{1-y} - 1\) & if \(1/2 < y < 1\)
+\end{tabular}
+\right.
+\]
+We claim that \(g(x) = y\).
 
+{\bf Case 1 (\(\bm{0 < y \leq 1/2})\):} Notice that \(-y \geq -1/2\), so \(\frac{1}{-y} \leq -2\), so \(\frac{1}{2} 
+\cdot \frac{1}{-y} \leq -1\), so \(\frac{1}{2} \cdot \frac{1}{-y} + 1 \leq 0\). Thus \(\left|\frac{1}{2} \cdot 
+\frac{1}{-y} + 1 \right| = \frac{1}{2} \cdot \frac{1}{y} - 1\). Then $g(x)$
+\begin{center}
+\begin{tabular}{llllll}
+= & \(\dps g\left(\frac{1}{2} \cdot \frac{1}{-y} + 1\right)\) & = & \(\dps \frac{1}{2} \cdot \frac{\frac{1}{2} \cdot 
+\frac{1}{-y} + 1}{1 + \left|\frac{1}{2} \cdot \frac{1}{-y} + 1 \right|} + \frac{1}{2}\) & = & \(\dps \frac{1}{2} \cdot 
+\frac{\frac{1}{2} \cdot \frac{1}{-y} + 1}{1 + \frac{1}{2} \cdot \frac{1}{y} - 1} + \frac{1}{2}\) \\
+= & \(\dps \frac{1}{2} \cdot \frac{\frac{1}{2}\cdot\frac{1}{-y} + 1}{\frac{1}{2} \cdot \frac{1}{y}} + \frac{1}{2}\) & 
+= & \(\dps y \cdot \left(\frac{1}{2}\cdot\frac{1}{-y} + 1\right) + \frac{1}{2}\) & = & \(\dps -\frac{1}{2} + y + 
+\frac{1}{2} = y\)
+\end{tabular}
+\end{center}
+
+{\bf Case 2 (\(\bm{1/2 < y < 1})\):} Notice that \(-1/2 > -y\), so \(1/2 > 1-y\), so \(2 < \frac{1}{1-y}\), so \(1 < 
+\frac{1}{2} \cdot \frac{1}{1-y}\), so \(0 < \frac{1}{2} \cdot \frac{1}{1-y} - 1\). Thus \(\left|\frac{1}{2} \cdot 
+\frac{1}{1-y} - 1 \right| = \frac{1}{2} \cdot \frac{1}{1-y} - 1\). Then $g(x)$
+\begin{center}
+\begin{tabular}{llllll}
+= & \(\dps g\left(\frac{1}{2} \cdot \frac{1}{1-y} - 1 \right)\) & = & \(\dps \frac{1}{2} \cdot \frac{\frac{1}{2} \cdot \frac{1}{1-y} - 1}{1 + \left|\frac{1}{2} \cdot \frac{1}{1-y} - 1 \right|} + \frac{1}{2}\) & = & \(\dps \frac{1}{2} \cdot \frac{\frac{1}{2} \cdot \frac{1}{1-y} - 1}{1 + \frac{1}{2} \cdot \frac{1}{1-y} - 1} + \frac{1}{2}\) \\ 
+= & \(\dps \frac{1}{2} \cdot \frac{\frac{2y-1}{2-2y}}{\frac{1}{2-2y}} + \frac{1}{2}\) & = & \(\dps \frac{2y-1}
+{2} + \frac{1}{2}\) & = & \(\dps y - \frac{1}{2} + \frac{1}{2} = y\)
+\end{tabular}
+\end{center}
+
+{\bf $g$ is 1-1:} Assume \(x_1, x_2 \in \R\) and \(g(x_1) = g(x_2)\). {\it [We want to show \(x_1 = x_2\)].} So
+\[
+\frac{1}{2} \cdot \frac{x_1}{1 + |x_1|} + \frac{1}{2} = \frac{1}{2} \cdot \frac{x_2}{1 + |x_2|} + \frac{1}{2}
+\]
+Subtracting 1/2 and multiplying by 2 we get \(\dps \frac{x_1}{1 + |x_1|} = \frac{x_2}{1 + |x_2|}\). Cross
+multiplying we get \(x_1(1+|x_2|) = x_2(1+|x_1|)\), so (*) \(x_1 + x_1|x_2| = x_2 + x_2|x_1|\). There are 4 cases:
+
+{\bf Case 1 (\(\bm{x_1 \geq 0, x_2 \geq 0}\)):} In this case \(|x_1| = x_1\) and \(|x_2| = x_2\). So (*) becomes
+\(x_1 + x_1x_2 = x_2 + x_2x_1\), after canceling we get \(x_1 = x_2\).
+
+{\bf Case 2 (\(\bm{x_1 \geq 0, x_2 \leq 0}\)):} In this case \(|x_1| = x_1\) and \(|x_2| = -x_2\). So (*) becomes
+\(x_1 - x_1x_2 = x_2 + x_2x_1\), solving for $x_1$ we get \(x_1 - 2x_1x_2 = x_2 \implies x_1(1-2x_2) = x_2\) so
+\(\dps x_1 = \frac{x_2}{1-2x_2}\). The left hand side is \(\geq 0\) while the right hand side is \(\leq 0\), which
+forces \(x_1 = x_2 = 0\). So \(x_1 = x_2\).
+
+{\bf Case 3 (\(\bm{x_1 \leq 0, x_2 \geq 0}\)):} In this case \(|x_1| = -x_1\) and \(|x_2| = x_2\). So (*) becomes
+\(x_1 + x_1x_2 = x_2 - x_2x_1\), solving for $x_2$ we get \(x_1 = x_2 - 2x_1x_2 \implies x_1 = x_2(1-2x_1)\) so
+\(\dps x_2 = \frac{x_1}{1-2x_1}\). The left hand side is \(\geq 0\) while the right hand side is \(\leq 0\), which
+forces \(x_1 = x_2 = 0\). So \(x_1 = x_2\).
+
+{\bf Case 4 (\(\bm{x_1 \leq 0, x_2 \leq 0}\)):} In this case \(|x_1| = -x_1\) and \(|x_2| = -x_2\). So (*) becomes
+\(x_1 - x_1x_2 = x_2 - x_2x_1\), after canceling we get \(x_1 = x_2\).
+
+{\bf Conclusion:} $S$ has the same cardinality as the set of real numbers.
 \end{proof}
 
 \subsection{Exercise 15}
+Show that the set of all bit strings (strings of 0’s and 1’s) is countable.
 
 \begin{proof}
-
+We can describe a one-to-one correspondence between this set and $\Z^+$ as follows: first consider the bit strings 
+of length 0, namely the empty string. Map it to 1. Then consider the bit strings of length 1, namely 0 and 1. Map
+them to 2 and 3. Then consider the bit strings of length 2, namely 00, 01, 10 and 11. Map them to 4,5,6,7. And so on.
+Generally, for each integer \(n \geq 0\) there are \(2^n\) bit strings of length $n$, and we map them to the positive
+integers between \(2^n\) (inclusive) and \(2^{n+1}-1\) (inclusive). This mapping is a one-to-one correspondence by
+definition, since we are never mapping two different bit strings to the same positive integer (so it's 1-1) and we
+are not skipping over any positive integer in the range (so it's onto).
 \end{proof}
 
 \subsection{Exercise 16}
+Show that $\Q$, the set of all rational numbers, is countable.
 
 \begin{proof}
-
+In Example 7.4.4 it was shown that there is a one-to-one correspondence from $\Z^+$ to $\Q^+$. This implies that the 
+positive rational numbers can be written as an infinite sequence: \(r_1, r_2, r_3, r_4, \ldots\). Now the set $\Q$ 
+of all rational numbers consists of the numbers in this sequence together with 0 and the negative rational numbers: 
+\(-r_1, -r_2, -r_3, -r_4, \ldots\). Let \(r_0 = 0\). Then the elements of the set of all rational numbers can be 
+“counted” as follows: \(r_0, r_1, -r_1, r_2, -r_2, r_3, -r_ 3, r_4, -r_4, \ldots\). In other words, we can define a 
+one-to-one correspondence as follows: for each integer \(n \geq 1\),
+\[
+G(x) =
+\left\{
+\begin{tabular}{ll}
+\(r_{n/2}\) & if \(n\) is even \\
+\(-r_{(n-1)/2}\) & if \(n\) is odd
+\end{tabular}
+\right.
+\]
+Therefore, $\Q$ is countably infinite and hence countable.
 \end{proof}
 
 \subsection{Exercise 17}
+Show that $\Q$, the set of all rational numbers, is dense along the number line by showing that given any two 
+rational numbers $r_1$ and $r_2$ with \(r_1 < r_2\), there exists a rational number $x$ such that \(r_1 < x < r_2\).
 
 \begin{proof}
+Assume $r_1$ and $r_2$ are any two rational numbers with \(r_1 < r_2\). Let \(x = (r_1 + r_2) / 2\). Then $x$ is a
+rational number, because $r_1 + r_2$ is rational (being the sum of two rationals) and thus $x$ is the ratio of two
+rational numbers. Now we want to show \(r_1 < x < r_2\).
 
+\(\bm{r_1 < x}:\) Since \(r_1 < r_2\), we have \(2r_1 < r_1 + r_2\). Dividing by 2 we get \(r_1 < (r_1 + r_2)/2 = x\).
+
+\(\bm{x < r_2}:\) Since \(r_1 < r_2\), we have \(r_1 + r_2 < 2r_2\). Dividing by 2 we get \(x = (r_1 + r_2)/2 < r_2\).
 \end{proof}
 
 \subsection{Exercise 18}
+Must the average of two irrational numbers always be irrational? Prove or give a counterexample.
 
 \begin{proof}
-
+No. \underline{Counterexample:} Both \(\pi\) and \(-\pi\) are irrational, but their average is 0, which is rational.
 \end{proof}
 
 \subsection{Exercise 19}
+Show that the set of all irrational numbers is dense along the number line by showing that given any two real numbers, there is an irrational number in between.
+
+{\it Hint:} Suppose $r$ and $s$ are real numbers with \(0 < r < s\). Let $n$ be an integer such that \(\dps \frac 
+{\sqrt{2}}{s-r} < n\), and let \(\dps m = \floor {\frac{nr}{\sqrt{2}}} + 1\). Show that \(\dps m-1 \leq \frac{nr}
+{\sqrt{2}} < m\), and use the fact that \(s = r + (s-r)\) to conclude that \(\dps r < \frac{\sqrt{2}m}{n} < s\).
 
 \begin{proof}
+(following the Hint)
 
+1. Suppose $r$ and $s$ are real numbers with \(0 < r < s\).
+
+2. By 1, \(0 < s - r\), so \(\dps \frac{\sqrt{2}}{s-r}\) is a positive real number.
+
+3. By 2 and Archimedean property, there is a positive integer $n$ such that \(\dps \frac{\sqrt{2}}{s-r} < n\).
+
+4. Define \(\dps m = \floor{\frac{nr}{\sqrt{2}}} + 1\). Then $m$ is an integer by definition of floor and $+$.
+
+5. By definition of floor, \(\dps \floor{\frac{nr}{\sqrt{2}}} \leq \frac{nr}{\sqrt{2}} < \floor{\frac{nr}
+{\sqrt{2}}}+1\). So \(\dps m-1 \leq\frac{nr}{\sqrt{2}}<m\).
+
+6. By 5, \(\dps\frac{nr}{\sqrt{2}} < m\), so \(\dps r < \frac{\sqrt{2}m}{n}\).
+
+7. By 3, \(\dps \frac{\sqrt{2}}{n} < s-r\). By 5, \(\dps \frac{\sqrt{2}(m-1)}{n} \leq r\).
+
+8. Since \(s = r + (s-r)\), by 7, \(\dps \frac{\sqrt{2}(m-1)}{n} + \frac{\sqrt{2}}{n} < r + (s-r) = s\). So
+\(\dps \frac{\sqrt{2}m}{n} < s\).
+
+9. By 6 and 8, \(\dps r < \frac{\sqrt{2}m}{n} < s\). 
+
+10. \(\dps \frac{\sqrt{2}m}{n}\) is irrational, since $m/n$ is rational and $\sqrt{2}$ is irrational, and the product 
+of a rational and an irrational is irrational.
+
+11. By 9 and 10, there is an irrational number between $r$ and $s$, as needed.
+
+{\it Generalizing to any real numbers $r < s$:}
+
+So far we have assumed \(0 < r < s\). Now we need to generalize the argument to any two real numbers $r < s$. 
+
+{\bf Case 1 ($\bm{r = 0}$):} Then $0 < s$, so let \(y = (r+s) / 2\) and notice $r = 0 < y < s$. So we can use the 
+above argument with $y$ instead of $r$ to obtain an irrational number $x$ between $y$ and $s$: \(y < x < s\), 
+which implies \(r < x < s\), as needed.
+
+{\bf Case 2 ($\bm{s = 0}$):} Then $r < 0$ so $0 < -r$, so we can use Case 1 with $s = 0$ and $-r$ instead of $r$ and 
+$s$ to get an irrational $x$ with \(0 = s < x < -r\), which means that \(r < -x < s\) (and $-x$ is also irrational), 
+as needed.
+
+Now for the rest ($r \neq 0$ and $s \neq 0$), there are 3 cases:
+
+{\bf Case 3 (\(\bm{0 < r < s}\)):} This is handled by the main argument above.
+
+{\bf Case 4 (\(\bm{r < s < 0}\)):} We have \(0 < -s < -r\), so we can use Case 1 to get an irrational $x$ such that
+\(-s < x < -r\), which implies \(r < -x < s\) (where $-x$ is also irrational), as needed.
+
+{\bf Case 5 (\(\bm{r < 0 < s}\)):} By Case 1 there is an irrational $x$ with \(0 < x < s\), so \(r < 0 < x < s\),
+thus \(r < x < s\) as needed.
 \end{proof}
 
 \subsection{Exercise 20}
+Give two examples of functions from $\Z$ to $\Z$ that are one-to-one but not onto.
 
 \begin{proof}
 
 \end{proof}
 
 \subsection{Exercise 21}
+Give two examples of functions from $\Z$ to $\Z$ that are onto but not one-to-one.
 
 \begin{proof}
-
+Define \(f: \Z \to \Z\) as follows:
+\[
+f(n) =
+\left\{
+\begin{tabular}{ll}
+\(n\) & if \(n \leq 0\) \\
+\(0\) & if \(n = 1\) \\
+\(n-1\) & if \(2 \leq n\)
+\end{tabular}
+\right.
+\]
+Then $f$ is not 1-1 because \(f(0) = f(1) = 0\) but \(0 \neq 1\). But $f$ is onto, because the first case covers 
+the range of all negative integers and 0, the second case covers 0, and the last case covers the range of all positive integers. Similarly
+\[
+g(n) =
+\left\{
+\begin{tabular}{ll}
+\(n\) & if \(n \leq 0\) \\
+\(0\) & if \(n = 1\) \\
+\(0\) & if \(n = 2\) \\
+\(n-2\) & if \(3 \leq n\)
+\end{tabular}
+\right.
+\]
+is also onto but not 1-1.
 \end{proof}
 
 \subsection{Exercise 22}
+Define a function \(g: \Z^+ \times \Z^+ \to \Z^+\) by the formula \(g(m, n) = 2^m3^n\) for all \((m, n) \in \Z^+ 
+\times \Z^+\). Show that $g$ is one-to-one and use this result to prove that \(\Z^+ \times \Z^+\) is countable.
 
 \begin{proof}
-
+Assume \(g(m_1, n_1) = g(m_2, n_2)\). Then \(2^{m_1}3^{n_1} = 2^{m_2}3^{n_2}\). So we have two prime factorizations of
+the same positive integer. By the uniqueness of prime factorizations, we have \(m_1 = m_2\) and \(n_1 = n_2\).
+Thus $g$ is 1-1. Then $g$ is a one-to-one correspondence between \(\Z^+ \times \Z^+\) and \(g(\Z^+ \times \Z^+)\).
+Since \(g(\Z^+ \times \Z^+) \subseteq \Z^+\) and $\Z^+$ is countable, by Theorem 7.4.3 \(g(\Z^+ \times \Z^+)\) is
+countable. Since $g$ is a one-to-one correspondence, \(\Z^+ \times \Z^+\) is countable.
 \end{proof}
 
 \subsection{Exercise 23}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/7.4.23.a.png}
+\end{figure}
 
 \subsubsection{(a)}
+Explain how to use the following diagram to show that \(\Z^{nonneg} \times \Z^{nonneg}\) and \(\Z^{nonneg}\) have 
+the same cardinality.
 
 \begin{proof}
+Define a function \(G: \Z^{nonneg} \to \Z^{nonneg} \times \Z^{nonneg}\) as follows: Let \(G(0) = (0, 0)\), and then 
+follow the arrows in the diagram, letting each successive ordered pair of integers be the value of $G$ for the next successive integer. Thus, for instance, 
 
+\(G(1) = (1, 0), G(2) = (0, 1), G(3) = (2, 0), G(4) = (1, 1), G(5) = (0, 2), G(6) = (3, 0)\), 
+
+\(G(7) = (2, 1), G(8) = (1, 2)\), and so forth.
 \end{proof}
 
 \subsubsection{(b)}
+Define a function \(H: \Z^{nonneg} \times \Z^{nonneg} \to \Z^{nonneg}\) by the formula 
+\[
+H(m, n) = n + \frac{(m+n)(m+n-1)}{2}
+\]
+for all nonnegative integers $m$ and $n$. Interpret the action of $H$ geometrically using the diagram of part (a).
 
 \begin{proof}
-
+Observe that if the top ordered pair of any given diagonal is $(k, 0)$, the entire diagonal (moving from top to 
+bottom) consists of \((k, 0), (k - 1, 1), (k - 2, 2), \ldots, (2, k - 2), (1, k - 1), (0, k)\). Thus for every 
+ordered pair \((m, n)\) within any given diagonal, the value of \(m + n\) is constant, and as you move down the 
+ordered pairs in the diagonal, starting at the top, the value of the second element of the pair keeps increasing by 1.
 \end{proof}
 
 \subsection{Exercise 24}
+Prove that the function $H$ defined analytically in exercise 23b is a one-to-one correspondence.
 
 \begin{proof}
+{\bf $\bm{H}$ is 1-1:} Assume \(H(m_1, n_1) = H(m_2, n_2)\). So
+\[
+n_1 + \frac{(m_1 + n_1)(m_1 + n_1 - 1)}{2} = n_2 + \frac{(m_2 + n_2)(m_2 + n_2 - 1)}{2}.
+\]
+Multiplying by 2 and moving everything to the left, we get
+\[
+2n_1 - 2n_2 + (m_1 + n_1)(m_1 + n_1 - 1) - (m_2 + n_2)(m_2 + n_2 - 1) = 0.
+\]
+???
 
+{\bf $\bm{H}$ is onto:} Assume \(z \in \Z^{nonneg}\). The set
+\[
+S = \{w \in \Z^{nonneg} \, | \, z \leq \frac{(w+1)w}{2}\}
+\]
+is nonempty, since \(z \in S\). By the well-ordering principle $S$ has a least element, say $y$. Therefore
+\[
+\frac{y(y-1)}{2} < z \leq \frac{(y+1)y}{2}
+\]
+So there exists \(n \in \Z^{nonneg}\) such that \(\dps z = \frac{y(y-1)}{2} + n\). Let \(m = y - n\). Then \(m \in \Z^{nonneg}\) and
+\[
+z = n + \frac{y(y-1)}{2} = n + \frac{(m+n)(m+n-1)}{2}
+\]
+Therefore \(H(m, n) = z\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 25}
+Prove that \(0.1999 \ldots = 0.2\).
 
 \begin{proof}
-
+Let \(x = 0.1999 \ldots\). Then \(10x = 1.9999 \ldots\) and \(100x = 19.9999 \ldots\). So \(100x - 10x = 18\), or
+\(90x = 18\). Thus \(x = 18/90 = 1/5 = 0.2\).
 \end{proof}
 
 \subsection{Exercise 26}
+Prove that any infinite set contains a countably infinite subset.
 
 \begin{proof}
+Let $A$ be an infinite set. Construct a countably infinite subset \(a_1, a_2, a_3, \ldots\) of $A$, by letting $a_1$ 
+be any element of $A$, letting $a_2$ be any element of $A$ other than $a_1$, letting $a_3$ be any element of $A$ other 
+than $a_1$ or $a_2$, and so forth. This process never stops (and hence \(a_1, a_2, a_3, \ldots\) is an infinite 
+sequence) because $A$ is an infinite set. More formally,
 
+1. Let $a_1$ be any element of $A$.
+
+2. For each integer \(n \neq 2\), let an be any element of \(A = \{a_1, a_2, a_3, \ldots, a_{n-1}\}\). Such an element 
+exists, for otherwise \(A - \{a_1, a_2, a_3, \ldots, a_{n-1}\}\) would be empty and $A$ would be finite.
 \end{proof}
 
 \subsection{Exercise 27}
+Prove that if $A$ is any countably infinite set, $B$ is any set, and \(g: A \to B\) is onto, then $B$ is countable.
 
 \begin{proof}
-
+Suppose $A$ is any countably infinite set, $B$ is any set, and \(g: A \to B\) is onto. Since $A$ is countably 
+infinite, there is a one-to-one correspondence \(f: \Z^+ \to A\). Then, in particular, $f$ is onto, and so by 
+Theorem 7.3.4, \(g \circ f\) is an onto function from \(\Z^+\) to $B$. Define a function \(h: B \to \Z^+\) as 
+follows: Suppose $x$ is any element of $B$. Since \(g \circ f\) is onto, \(\{m \in \Z^+ \, | \, (g \circ f)(m) = x\} 
+\neq \es\). Thus, by the well-ordering principle for the integers, this set has a least element. In other words, 
+there is a least positive integer $n$ with \((g \circ f)(n) = x\). Let $h(x)$ be this integer. We claim that $h$ is 
+one-to-one. Suppose \(h(x_1) = h(x_2) = n\). By definition of $h$, $n$ is the least positive integer with \((g \circ 
+f)(n) = x_1\). Moreover, by definition of $h$, $n$ is the least positive integer with \((g \circ f)(n) = x_2\). Hence 
+\(x_1 = (g \circ f)(n) = x_2\). Thus $h$ is a one-to-one correspondence between $B$ and a subset $S$ of positive 
+integers (the range of $h$). Since any subset of a countable set is countable (Theorem 7.4.3), $S$ is 
+countable, and so there is a one-to-one correspondence between $B$ and a countable set. It follows from the 
+transitive property of cardinality that $B$ is countable.
 \end{proof}
 
 \subsection{Exercise 28}
+Prove that a disjoint union of any finite set and any countably infinite set is countably infinite.
 
 \begin{proof}
+1. Assume \(A = \{a_1, \ldots, a_n\}\) is a finite set, $B$ is a countably infinite set, and $A$ and $B$ are disjoint.
 
+2. By 1 and definition of countably infinite, there is a one-to-one correspondence \(f: \Z^+ \to B\).
+
+3. Using $f$ from 2, define \(g: \Z^+ \to (A \cup B)\) as follows: for each \(i \in \Z^+\), let
+\[
+g(i) =
+\left\{
+\begin{tabular}{ll}
+\(a_i\) & if \(1 \leq i \leq n\) \\
+\(f(i - n)\) & if \(n+1 \leq i\).
+\end{tabular}
+\right.
+\]
+4. Then $g$ is 1-1: 
+
+Assume \(g(i) = g(j)\). Since $A$ and $B$ are disjoint by 1, either both $g(i)$ and $g(j)$ are in $A$, or they are 
+both in B. 
+
+4.1. If they are both in $A$ then \(a_i = a_j\), which implies $i = j$. 
+
+4.2. If they are both in $B$, then \(f(i-n) = f(j-n)\). Since $f$ is 1-1 by 2, \(i-n = j-n\), thus \(i = j\). 
+
+So $g$ is 1-1.
+
+5. And $g$ is onto: assume \(x \in A \cup B\).
+
+5.1. If \(x \in A\) then \(x = a_i\) for some \(i \in \{1, \ldots, n\}\), so \(g(i) = a_i = x\), {\it [as needed].}
+
+5.2. If \(x \in B\) then since $f$ is onto by 2, there exists \(m \in \Z^+\) such that \(f(m)=x\). Let \(i =m+n\).
+Then \(g(i) = g(m+n) = f(m+n-n) = f(m) = x\), {\it [as needed].}
+
+6. So by 4 and 5 $g$ is a one-to-one correspondence between \(\Z^+\) and \(A \cup B\).
 \end{proof}
 
 \subsection{Exercise 29}
+Prove that a union of any two countably infinite sets is countably infinite.
 
 \begin{proof}
+Suppose $A$ and $B$ are any two countably infinite sets. Then there are one-to-one correspondences \(f: \Z^+ \to A\) and \(g: \Z^+ \to B\).
 
+{\bf Case 1 (\(\bm{A \cap B = \es}\)):} In this case define \(h: \Z^+ \to A \cup B\) as follows: For every integer \(n \geq 1\),
+\[
+h(n) =
+\left\{
+\begin{tabular}{ll}
+\(f(n/2)\) & if $n$ is even \\
+\(g((n+1)/2)\) & if $n$ is odd.
+\end{tabular}
+\right.
+\]
+{\bf $h$ is one-to-one:} Assume \(h(n_1) = h(n_2)\). 
+
+Since \(A \cap B = \es\), $n_1$ and $n_2$ are either both odd or both even.
+
+If $n_1$ and $n_2$ are both even, then \(f(n_1/2) =f(n_2/2)\). Since $f$ is 1-1, \(n_1/2 = n_2/2\) so \(n_1 = n_2\). 
+
+If $n_1$ and $n_2$ are both odd, then \(g((n_1+1)/2) = g((n_2+1)/2)\). Since $g$ is 1-1, \((n_1+1)/2 = (n_2+1)/2\) 
+so \(n_1 = n_2\).
+
+{\bf $h$ is onto:} Assume \(x \in A \cup B\). 
+
+Since \(A \cap B = \es\), either \(x \in A\) or \(x \in B\).
+
+If \(x \in A\), since $f$ is onto, there is $n \in \Z^+$ such that \(f(n) = x\). Then \(h(2n) = f(2n/2) =f(n) = x\).
+
+If \(x \in B\), since $g$ is onto, there is $n \in \Z^+$ such that \(g(n) = x\). 
+Then \(h(2n-1) = g((2n-1+1)/2) = g(n) = x\).
+
+So $h$ is a one-to-one correspondence between \(\Z^+\) and \(A \cup B\). So \(A \cup B\) is countably infinite.
+
+{\bf Case 2 (\(\bm{A \cap B \neq \es}\)):} In this case let \(C = B - A\). Then \(A \cup B = A \cup C\) and \(A \cap C 
+= \es\). 
+
+If $C$ is countably infinite, then by Case 1 \(A \cup C\) is countably infinite. If $C$ is finite, then by exercise 
+28 \(A \cup C\) is countably infinite.
+
+Since \(A \cup B = A \cup C\), \(A \cup B\) is also countably infinite.
 \end{proof}
 
 \subsection{Exercise 30}
+Use the result of exercise 29 to prove that the set of all irrational numbers is uncountable.
+
+{\it Hint:} Use proof by contradiction and the fact that the set of all real numbers is uncountable.
 
 \begin{proof}
+Argue by contradiction and assume the set of all irrational numbers, let's call it $IR$, is countable.
 
+We know that the set of all rational numbers, $\Q$, is countable.
+
+By exercise 29, \(IR \cup \Q\) is countable. But \(IR \cup \Q = \R\), the set of all real numbers, which is 
+uncountable, contradiction.
+
+Thus our supposition was false and $IR$ is uncountable.
 \end{proof}
 
 \subsection{Exercise 31}
+Use the results of exercises 28 and 29 to prove that a union of any two countable sets is countable.
 
 \begin{proof}
+Consider the following cases: 
 
+(1) $A$ and $B$ are both finite: then \(A \cup B\) is also finite, therefore countable.
+
+(2) One of $A, B$ is finite and the other is countably infinite, and \(A \cap B = \es\): then by exercise 28 
+\(A \cup B\) is countably infinite.
+
+(3) One of $A, B$ is finite and the other is countably infinite, and \(A \cap B \neq \es\): 
+
+First assume $B$ is finite. Let \(C = B - A\). Notice \(A \cap C = \es\) and \(A \cup B = A \cup C\). Then $C$ is finite, so by exercise 28 \(A \cup C\) is countably infinite. Hence \(A \cup B\) is countably infinite.
+
+Now assume $A$ is finite. Let \(C = A - B\). Notice \(B \cap C = \es\) and \(A \cup B = B \cup C\). Then $C$ is finite, so by exercise 28 \(B \cup C\) is countably infinite. Hence \(A \cup B\) is countably infinite.
+
+(4) both $A$ and $B$ are countably infinite: then by exercise 29 \(A \cup B\) is countably infinite.
 \end{proof}
 
 \subsection{Exercise 32}
+Prove that \(\Z \times \Z\), the Cartesian product of the set of integers with itself, is countably infinite.
 
 \begin{proof}
+By Example 7.4.2, the function \(F:\Z^+ \to \Z\) defined by
+\[
+F(n) =
+\left\{
+\begin{tabular}{cl}
+\(\dps \frac{n}{2}\) & if $n$ is a positive even integer \\
+\(\dps -\frac{n-1}{2}\) & if $n$ is a positive odd integer
+\end{tabular}
+\right.
+\]
+is a one-to-one correspondence. Define \(G: \Z^+ \times \Z^+ \to \Z \times \Z\) by \(G(m, n) = (F(m), F(n))\).
 
+{\bf $G$ is 1-1:} Assume \(G(m_1, n_1) = G(m_2, n_2)\). Then \((F(m_1), F(n_1)) = (F(m_2), F(n_2))\). By definition
+of an ordered pair, \(F(m_1) = F(m_2)\) and \(F(n_1) = F(n_2)\). Since $F$ is 1-1, \(m_1 = m_2\) and \(n_1 =n_2\).
+So by definition of ordered pair, \((m_1, n_1) = (m_2, n_2)\).
+
+{\bf $G$ is onto:} Assume \((x,y) \in \Z \times \Z\). Since $F$ is onto, there exist \(m, n \in \Z^+\) such that 
+\(F(m) = x\) and \(F(n) = y\). Thus \(G(m,n) = (F(m),F(n)) = (x,y)\). 
+
+So $G$ is a one-to-one correspondence, thus \(\Z^+ \times \Z^+\) has the same cardinality as \(\Z \times \Z\). By 
+exercise 22, \(\Z^+ \times \Z^+\) has the same cardinality as \(\Z^+\). By the transitivity of cardinality, 
+\(\Z \times \Z\) has the same cardinality as \(\Z^+\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 33}
+Use the results of exercises 27, 31, and 32 to prove the following: If $R$ is the set of all solutions to all equations of the form \(x^2 + bx + c = 0\), where $b$ and $c$ are integers, then $R$ is countable.
 
 \begin{proof}
+1. By exercise 32, \(\Z \times \Z\) is countable.
 
+2. There is a one-to-one correspondence $F$ between \(\Z \times \Z\) and the set of quadratic functions \(S = \{f \, 
+| \, f(x) = x^2 + bx + c \text{ for some integers } b,c\}\), given by \(F(b,c) = f\) where \(f(x) = x^2 + bx + c\). 
+Thus $S$ is countable.
+
+3. Consider the subset $S_{1,2}$ of $S$ consisting of only those quadratic functions that have 1 or 2 solutions 
+(because some quadratics like \(f(x) = x^2+1\) have no real solutions). Then $S_{1,2}$ is countable by Theorem 7.4.3.
+
+4. We can split $S_{1,2}$ into two disjoint subsets $S_1$ and $S_2$, consisting of those quadratic functions that 
+have exactly 1 or exactly 2 real solutions, respectively. Then both $S_1$ and $S_2$ are countable by Theorem 7.4.3.
+
+5. Let $R_1$ and $R_2$ be sets of real numbers defined as the sets of solutions to all the quadratic functions in 
+$S_1$ and $S_2$, respectively.
+
+6. There is a function \(G: S_1 \to R_1\) given by, for each \(f \in S_1\), letting \(G(f) = \) the (one) real
+solution to $f(x) = 0$. $G$ is a one-to-one correspondence, because for any $r \in R_1$ there is only one $f \in S_1$
+which has $r$ as its only solution, namely \(f(x) = (x-r)^2\). So $R_1$ is countable.
+
+7. Each $f \in S_2$ has two distinct roots, so one root is smaller, the other is bigger. We can split $R_2$ into two 
+(possibly overlapping) subsets \(R_2^{small}\) and \(R_2^{big}\), by defining \(R_2^{small}\) to be the set of 
+the {\it smaller} solutions to quadratic functions in $S_2$, and \(R_2^{big}\) to be the set of the {\it bigger} 
+solutions to quadratic functions in $S_2$. Then there are onto functions \(H: S_2 \to R_2^{small}\) and \(J: S_2 \to 
+R_2^{big}\) defined by, for each $f \in S_2$, \(H(f) = \) the smaller root of $f$ and \(J(f) = \) the bigger root of 
+$f$, respectively. Therefore by exercise 27, both \(R_2^{small}\) and \(R_2^{big}\) are countable.
+
+8. By exercise 31 \(R_2^{small} \cup R_2^{big}\) is countable. Notice that \(R_2 \subseteq R_2^{small} \cup 
+R_2^{big}\), so by Theorem 7.4.3 \(R_2\) is countable.
+
+9. Finally, by exercise 31 \(R_1 \cup R_2\) is countable. Notice that \(R \subseteq R_1 \cup R_2\), so by Theorem 
+7.4.3 \(R\) is countable. 
 \end{proof}
 
 \subsection{Exercise 34}
+Let \(\ps(S)\) be the set of all subsets of $S$, and let $T$ be the set of all functions from $S$ to \(\{0,1\}\). 
+Show that \(\ps(S)\) and $T$ have the same cardinality.
 
 \begin{proof}
+Define a function \(f: \ps(S) \to T\) as follows: For each subset $A$ of $S$, let \(f(A)=\chi_A\), the characteristic 
+function of $A$, where \(\chi_A: S \to \{0, 1\}\) is defined by the rule: for every \(x \in S\),
+\[
+\chi_A(x) =
+\left\{
+\begin{tabular}{ll}
+1 & if \(x \in A\) \\
+0 & if \(x \notin A\).
+\end{tabular}
+\right.
+\]
+{\bf Show that $f$ is one-to-one:} Assume $A_1$ and $A_2$ are subsets of $S$ and \(\chi_{A_1} = \chi_{A_2}\). So for
+all \(x \in S\), \(\chi_{A_1}(x) = \chi_{A_2}(x)\). This means that if \(\chi_{A_1}(x) = \chi_{A_2}(x) = 1\) then
+\(x \in A_1\) and \(x \in A_2\), and if \(\chi_{A_1}(x) = \chi_{A_2}(x) = 0\) then \(x \notin A_1\) and \(x \notin 
+A_2\). So \(x \in A_1\) if and only if \(x \in A_2\) for all \(x \in S\), therefore \(A_1 = A_2\).
 
+{\bf Show that $f$ is onto:} Assume \(g: S \to \{0, 1\}\) is any function. Define \(A = \{x \in S \, | \, g(x)=1\}\).
+Notice that \(A \subseteq S\). Moreover, notice that \(g(x) = 1\) for all \(x \in A\) and \(g(x) = 0\) for all 
+\(x \notin A\). Therefore \(g(x) = \chi_A(x)\) for all \(x \in S\). Thus \(g = \chi_A\).
+
+So $f$ is a one-to-one correspondence between \(\ps(S)\) and $T$.
 \end{proof}
 
 \subsection{Exercise 35}
+Let $S$ be a set and let \(\ps(S)\) be the set of all subsets of $S$. Show that $S$ is “smaller than” \(\ps(S)\) 
+in the sense that there is a one-to-one function from $S$ to \(\ps(S)\) but there is no onto function from $S$ to 
+\(\ps(S)\).
 
 \begin{proof}
+Let \(g: S \to \ps(S)\) be defined by: \(g(s) = \{s\}\) for all \(s \in S\). Then $g$ is one-to-one: if \(g(r) = g(s)\)
+then \(\{r\} = \{s\}\), which implies $r = s$.
 
+Suppose there is an onto function \(f: S \to \ps(S)\). Let \(A = \{x\in S\,|\, x\notin f(x)\}\). Then \(A \in \ps(S)\) 
+and since $f$ is onto, there exists \(z \in S\) such that \(A = f(z)\). Now if \(z \in A\), then \(z \in f(z)\) 
+because \(A = f(z)\), but also \(z \notin f(z)\) by the definition of $A$, a contradiction. So \(z \notin A\). Then 
+\(z \notin f(z)\) because \(A = f(z)\), but since now \(z \notin f(z)\), $z$ satisfies the definition of being an 
+element of $A$, so \(z \in A\), a contradiction again. Thus our initial supposition was false, and there is no onto function \(f: S \to \ps(S)\).
 \end{proof}
 
 \subsection{Exercise 36}
+The Schroeder–Bernstein theorem states the following: If $A$ and $B$ are any sets with the property that there is a 
+one-to-one function from $A$ to $B$ and a one-to-one function from $B$ to $A$, then $A$ and $B$ have the same 
+cardinality. Use this theorem to prove that there are as many functions from \(\Z^+\) to \(\{0, 1, 2, 3, 4, 5, 6, 7, 
+8, 9\}\) as there are functions from \(\Z^+\) to \(\{0, 1\}\).
 
 \begin{proof}
+Let $R$ be the set of functions from \(\Z^+\) to \(\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}\).
 
+Let $S$ be the set of functions from \(\Z^+\) to \(\{0, 1,\}\).
+
+Define \(F: S \to R\) as follows: given $g \in S$, define $f \in R$ by \(f(z) = g(z)\) for all \(z \in \Z^+\). 
+
+$F$ is 1-1: assume \(f_1 = F(g_1), f_2 = F(g_2)\) and assume \(f_1 = f_2\). So by definition of \(f_1, f_2\), 
+\(g_1(z) = g_2(z)\) for all \(z \in \Z^+\), which implies \(g_1 = g_2\), {\it [as needed.]}
+
+Given \(f \in R\), we can think of $f$ as an infinite sequence that represents the decimal expansion of a real 
+number between 0 and 1. For example, if \(f(1) = 5, f(2) = 9, f(3) = 3, \ldots\) then $f$ corresponds to the real 
+number \(f_{dec} = 0.593...\) which is an infinite series written in terms of negative powers of 10:
+\[
+f_{dec} = 5 \cdot 10^{-1} + 9 \cdot 10^{-2} + 3 \cdot 10^{-3} + \cdots
+\]
+For every such number between 0 and 1 with infinite decimal expansion, there is a corresponding infinite {\it binary}
+expansion, which converges to the same real number but uses 0's and 1's in its digits. For the example of $f_{dec}$ 
+above, the corresponding binary expansion would be: \(f_{bin} = 0.1001011111001110111...\):
+\[
+f_{bin} = 1 \cdot 2^{-1} + 0 \cdot 2^{-2} + 0 \cdot 2^{-3} + 1 \cdot 2^{-4} + \cdots
+\]
+This infinite binary sequence can be viewed as a function \(g:\Z^+ \to\{0,1\}\).
+
+Define \(G: R \to S\) as \(G(f) = f_{bin}\) (viewed as a function) for each $f \in S$. $G$ is 1-1 by the uniqueness 
+of binary expansions, because both the decimal expansion and the binary expansion converge to the same real number.
+
+So there is a 1-1 function $R \to S$ and a 1-1 function $S \to R$. Then by the Schroeder-Bernstein theorem, $R$ and 
+$S$ have the same cardinality.
 \end{proof}
 
 \subsection{Exercise 37}
+Prove that if $A$ and $B$ are any countably infinite sets, then \(A \times B\) is countably infinite.
 
 \begin{proof}
+Since $A$ and $B$ are countable, their elements can be listed as \(A: a_1, a_2, a_3, \ldots\) and \(B: b_1, b_2, b_3, \ldots\). 
 
+We can represent the elements of \(A \times B\) in a grid:
+
+\begin{center}
+\begin{tabular}{cccc}
+\((a_1, b_1)\) & \((a_1, b_2)\) & \((a_1, b_3)\) & \(\ldots\) \\
+\((a_2, b_1)\) & \((a_2, b_2)\) & \((a_2, b_3)\) & \(\ldots\) \\
+\((a_3, b_1)\) & \((a_3, b_2)\) & \((a_3, b_3)\) & \(\ldots\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \\
+\end{tabular}
+\end{center}
+
+Define \(F: A \times B \to \Z^+ \times \Z^+\) by \(F(a_i, b_j) = (i, j)\). It is easy to see that $F$ is a one-to-one
+correspondence. Since \(\Z^+ \times \Z^+\) is countable by exercise 22, \(A \times B\) is also countable.
 \end{proof}
 
 \subsection{Exercise 38}
+Suppose \(A_1, A_2, A_3, \ldots\) is an infinite sequence of countable sets. Recall that 
+\[
+\bigcup_{i=1}^{\infty} A_i = \{x \, | \, x \in A_i \text{ for some positive integer } i\}. 
+\]
+Prove that $A$ is countable. (In other words, prove that a countably infinite union of countable sets is countable.)
 
 \begin{proof}
+First suppose \(A_1, A_2, A_3, \ldots\) are mutually disjoint.
 
+Since \(A_1, A_2, A_3, \ldots\) are all countable, their elements can be listed as:
+
+\begin{center}
+\begin{tabular}{ccccc}
+\(A_1:\) & \(a_1^1\) & \(a_1^2\) & \(a_1^3\) & \(\ldots\)\\
+\(A_2:\) & \(a_2^1\) & \(a_2^2\) & \(a_2^3\) & \(\ldots\)\\
+\(A_3:\) & \(a_3^1\) & \(a_3^2\) & \(a_3^3\) & \(\ldots\)\\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \\
+\end{tabular}
+\end{center}
+
+This listing also lists the elements of their union, \(\bigcup_{i=1}^{\infty} A_i\).
+
+Define \(F: \bigcup_{i=1}^{\infty} A_i \to \Z^+ \times \Z^+\) by \(F(a_i^j) = (i, j)\). It is easy to see that $F$ is 
+a one-to-one correspondence (since the union is disjoint). Therefore \(\bigcup_{i=1}^{\infty} A_i\) is countable.
+
+Now consider the general case, where the sets are not necessarily disjoint. We can replace them with sets \(B_1,
+B_2, B_3, \ldots\) that are disjoint, and such that \(\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i\)
+by discarding the duplicate elements. Then by the above argument, \(\bigcup_{i=1}^{\infty} B_i\) is countable, and
+then so is \(\bigcup_{i=1}^{\infty} A_i\).
 \end{proof}
 
 \end{document}
