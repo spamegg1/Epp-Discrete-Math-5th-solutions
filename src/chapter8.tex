@@ -527,501 +527,922 @@ Find the result of the query SELECT Patient\_ID\#, Name FROM S WHERE Primary\_Di
 
 \section{Exercise Set 8.2}
 
+{\bf \cy In $1-8$, a number of relations are defined on the set \(A = \{0, 1, 2, 3\}\). For each relation:
+
+a. Draw the directed graph.
+
+b. Determine whether the relation is reflexive.
+
+c. Determine whether the relation is symmetric.
+
+d. Determine whether the relation is transitive.
+
+Give a counterexample in each case in which the relation does not satisfy one of the properties.}
+
 \subsection{Exercise 1}
+\(R_1 = \{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{../images/8.2.1.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
-
+$R_1$ is not reflexive: \(2 \,\Ccancel{R_1} \, 2\).
 \end{proof}
 
 \subsubsection{(c)}
-
 \begin{proof}
-
+$R_1$ is not symmetric: \(2 \,R_1\, 3\) but \(3 \, \Ccancel{R_1} \,2\).
 \end{proof}
 
 \subsubsection{(d)}
-
 \begin{proof}
-
+$R_1$ is not transitive: \(1 \,R_1\, 0\) and \(0 \,R_1\, 3\) but \(1 \,\Ccancel{R_1}\, 3\).
 \end{proof}
 
 \subsection{Exercise 2}
+\(R_2 = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}\)
 
 \subsubsection{(a)}
-
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{../images/8.2.2.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
-
+$R_2$ is not reflexive: \(3 \, \Ccancel{R_2} \,3\).
 \end{proof}
 
 \subsubsection{(c)}
-
 \begin{proof}
-
+$R_2$ is not symmetric: \(2 \,R_2 \,3\) but \(3\, \Ccancel{R_2} \,2\).
 \end{proof}
 
 \subsubsection{(d)}
-
 \begin{proof}
-
+$R_2$ is not transitive: \(0\, R_2\, 1\) and \(1 \,R_2 \,2\) but \(0 \,\Ccancel{R_2}\, 2\).
 \end{proof}
 
 \subsection{Exercise 3}
+\(R_3 = \{(2, 3), (3, 2)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.2.3.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 
 \begin{proof}
-
+$R_3$ is not reflexive: \(0 \, \Ccancel{R_3} \,0\).
 \end{proof}
 
 \subsubsection{(c)}
 
 \begin{proof}
-
+$R_3$ is symmetric.
 \end{proof}
 
 \subsubsection{(d)}
 
 \begin{proof}
-
+$R_3$ is not transitive: \(2\, R_3\, 3\) and \(3 \,R_3 \,2\) but \(2 \,\Ccancel{R_3}\, 2\).
 \end{proof}
 
 \subsection{Exercise 4}
+\(R_4 = \{(1, 2), (2, 1), (1, 3), (3, 1)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.2.4.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 
 \begin{proof}
-
+$R_4$ is not reflexive: \(0 \, \Ccancel{R_4} \,0\).
 \end{proof}
 
 \subsubsection{(c)}
 
 \begin{proof}
-
+$R_4$ is symmetric.
 \end{proof}
 
 \subsubsection{(d)}
 
 \begin{proof}
-
+$R_4$ is not transitive: \(2\, R_4\, 1\) and \(1 \,R_4 \,3\) but \(2 \,\Ccancel{R_4}\, 3\).
 \end{proof}
 
 \subsection{Exercise 5}
+\(R_5 = \{(0, 0), (0, 1), (0, 2), (1, 2)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{../images/8.2.5.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 
 \begin{proof}
-
+$R_5$ is not reflexive: \(3 \, \Ccancel{R_5} \, 3\).
 \end{proof}
 
 \subsubsection{(c)}
 
 \begin{proof}
-
+$R_5$ is not symmetric: \(1 \,R_5 \,2\) but \(2\, \Ccancel{R_5} \,1\).
 \end{proof}
 
 \subsubsection{(d)}
 
 \begin{proof}
-
+$R_5$ is transitive.
 \end{proof}
 
 \subsection{Exercise 6}
+\(R_6 = \{(0, 1), (0, 2)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{../images/8.2.6.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 
 \begin{proof}
-
+$R_6$ is not reflexive: \(3 \, \Ccancel{R_6} \, 3\).
 \end{proof}
 
 \subsubsection{(c)}
 
 \begin{proof}
-
+$R_6$ is not symmetric: \(0 \,R_6 \,1\) but \(1\, \Ccancel{R_6} \,0\).
 \end{proof}
 
 \subsubsection{(d)}
 
 \begin{proof}
-
+$R_6$ is transitive.
 \end{proof}
 
 \subsection{Exercise 7}
+\(R_7 = \{(0, 3), (2, 3)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{../images/8.2.7.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 
 \begin{proof}
-
+$R_7$ is not reflexive: \(3 \, \Ccancel{R_7} \, 3\).
 \end{proof}
 
 \subsubsection{(c)}
 
 \begin{proof}
-
+$R_7$ is not symmetric: \(0 \,R_7 \, 3\) but \(3\, \Ccancel{R_7} \,0\).
 \end{proof}
 
 \subsubsection{(d)}
 
 \begin{proof}
-
+$R_7$ is transitive.
 \end{proof}
 
 \subsection{Exercise 8}
+\(R_8 = \{(0, 0), (1, 1)\}\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.35]{../images/8.2.8.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
 
 \begin{proof}
-
+$R_8$ is not reflexive: \(3 \, \Ccancel{R_8} \, 3\).
 \end{proof}
 
 \subsubsection{(c)}
 
 \begin{proof}
-
+$R_8$ is symmetric.
 \end{proof}
 
 \subsubsection{(d)}
 
 \begin{proof}
-
+$R_8$ is transitive.
 \end{proof}
 
+{\bf \cy In 9–33, determine whether the given relation is reflexive, symmetric, transitive, or none of these. 
+Justify your answers. }
+
 \subsection{Exercise 9}
+$R$ is the “greater than or equal to” relation on the set of real numbers: For every \(x, y \in \R, x \, R \, y \iff 
+x \geq y\).
 
 \begin{proof}
+{\bf \(\bm{R}\) is reflexive:} \(R\) is reflexive iff for every real number \(x, x \, R \, x\). By definition of 
+\(R\), this means that for every real number \(x, x \geq x\). In other words, for every real number \(x, x > x\) or 
+\(x = x\), which is true.
 
+{\bf \(\bm{R}\) is not symmetric:} \(R\) is symmetric iff for all real numbers \(x\) and \(y\), if \(x \, R \, y\) 
+then \(y \, R \, x\). By definition of \(R\), this means that for all real numbers \(x\) and \(y\), if \(x \geq y\) 
+then \(y \geq x\). The following counterexample shows that this is false. \(x = 1\) and \(y = 0\). Then \(x \geq y\), 
+but \(y \ngeq x\) because \(1 \geq 0\) and \(0 \ngeq 1\).
+
+{\bf \(\bm{R}\) is transitive:} \(R\) is transitive iff for all real numbers \(x, y\), and \(z\), if \(x \, R \, y\) 
+and \(y \, R \, z\) then \(x \, R \, z\). By definition of \(R\), this means that for all real numbers \(x, y\), and 
+\(z\), if \(x \geq y\) and \(y \geq z\) then \(x \geq z\). This is true by definition of \(\geq\) and the transitive 
+property of order for the real numbers. (See Appendix A, T18.)
 \end{proof}
 
 \subsection{Exercise 10}
+$C$ is the circle relation on the set of real numbers: For every \(x, y \in \R, x \, C \, y \iff x^2 + y^2 = 1\).
 
 \begin{proof}
+{\bf \(\bm{C}\) is not reflexive:} Let \(x = 0\). Then \(0^2 + 0^2 = 0 \neq 1\), therefore \(0 \Ccancel{C} 0\).
 
+{\bf \(\bm{C}\) is symmetric:} Assume \(x \, C \, y\). Then \(x^2 + y^2 = 1\). So \(y^2 + x^2 = 1\). So \(y\, C \, x\).
+
+{\bf \(\bm{C}\) is not transitive:} Let \(x = 1, y = 0, z = 1\). Then \(x \, C \, y\) because \(1^2 + 0^2 = 1\), and
+\(y \, C \, z\) because \(0^2 + 1^2 = 1\). However \(x \, \Ccancel{C} \, z\) because \(1^2 + 1^2 = 2 \neq 1\).
 \end{proof}
 
 \subsection{Exercise 11}
+$D$ is the relation defined on $\R$ as follows: For every \(x, y \in \R, x \, D \, y \iff xy \geq 0\).
 
 \begin{proof}
+{\bf \(\bm{D}\) is reflexive:} For all real numbers \(x, x \cdot x = x^2 \geq 0\) so \(x \, D \, x\).
 
+{\bf \(\bm{D}\) is symmetric:} Assume \(x \, D \, y\). Then \(xy \geq 0\). So \(yx \geq 0\). So \(y \, D \, x\). 
+
+{\bf \(\bm{D}\) is not transitive:} Let \(x = 1, y = 0, z = -1\). Then \(xy = 0 \geq 0\) so \(x \, D \, y\), and
+\(yz = 0 \geq 0\) so \(y \, D \, z\), but \(xz = -1 \ngeq 0\) so \(x \Ccancel{D} z\).
 \end{proof}
 
 \subsection{Exercise 12}
+$E$ is the congruence modulo 4 relation on $\Z$: For every \(m, n \in \Z, m \, E \, n \iff 4 \mid (m - n)\).
 
 \begin{proof}
+{\bf \(\bm{E}\) is reflexive:} For all \(m \in \Z, (m-m) = 0 = 4 \cdot 0\) so \(4 \mid (m-m)\) thus \(m\,E\,m\).
 
+{\bf \(\bm{E}\) is symmetric:} Assume \(m \, E \, n\). Then \(4\mid(m-n)\). So \(m-n = 4\cdot k\) for some integer $k$.
+So \(n-m = 4 \cdot (-k)\) where $-k$ is an integer. So \(4 \mid (n-m)\) and \(n \, E \, m\).
+
+{\bf \(\bm{E}\) is transitive:} Assume \(m \, E \, n\) and \(n \, E \, o\). Then \(4 \mid (m-n)\) and \(4\mid (n-o)\).
+So \(m-n = 4k\) and \(n-o = 4l\) for some integers \(k,l\). So \(m-o = (m-n) + (n-o) = 4k+4l = 4(k+l)\) where \(k+l\) 
+is an integer. Thus \(4 \mid (m-o)\) and \(m \,E\,o\).
 \end{proof}
 
 \subsection{Exercise 13}
+$F$ is the congruence modulo 5 relation on $\Z$: For every \(m, n \in \Z, m \, F \, n \iff 5 \mid (m - n)\).
 
 \begin{proof}
+{\bf \(\bm{F}\) is reflexive:} The proof is the same as in exercise 12.
 
+{\bf \(\bm{F}\) is symmetric:} The proof is the same as in exercise 12.
+
+{\bf \(\bm{F}\) is transitive:} The proof is the same as in exercise 12.
 \end{proof}
 
 \subsection{Exercise 14}
+$O$ is the relation defined on $\Z$ as follows: For every \(m, n \in \Z, m \, O \, n \iff m - n\) is odd.
 
 \begin{proof}
+{\bf \(\bm{O}\) is not reflexive:} \(0 - 0 = 0\) is even, therefore \(0 \Ccancel{O} 0\).
 
+{\bf \(\bm{O}\) is symmetric:} Assume \(m \, O \, n\). So \(m-n\) is odd. So \(m-n = 2k+1\) for some integer \(k\). So
+\(n-m = -2k-1 = 2(-k-1)+1\) where \(-k-1\) is an integer. So \(n-m\) is odd and \(n \, O \, m\).
+
+{\bf \(\bm{O}\) is not transitive:} \(2 - 1 = 1\) is odd so \(2 \, O \, 1\), and \(1 - 0 = 1\) is odd so \(1 \,O\,0\),
+but \(2-0 = 2\) is even so \(2 \Ccancel{O} 0\).
 \end{proof}
 
 \subsection{Exercise 15}
+$D$ is the “divides” relation on \(Z^+\): For all positive integers $m$ and \(n, m \, D \, n \iff m \mid n\).
 
 \begin{proof}
+{\bf \(\bm{D}\) is reflexive:} For all \(m \in \Z^+\) \(m = m \cdot 1\) therefore \(m \mid m\), so \(m \, D \, m\).
 
+{\bf \(\bm{D}\) is not symmetric:} \(3 \, D \, 6\) because \(3 \mid 6\) because \(6 = 3 \cdot 2\), but \(6 \Ccancel{D}
+3\) because \(6 \nmid 3\) since \(3 / 6 = 1/2\) is not an integer.
+
+{\bf \(\bm{D}\) is transitive:} Assume \(m \, D \, n\) and \(n \, D \, o\). Then \(m \mid n\) and \(n \mid o\). So
+\(n = mk\) and \(o = nl\) for some integers \(k, l\). So \(o = nl = (mk)l = m(kl)\) where \(kl\) is an integer. So
+\(m \mid o\) and \(m \, D \, o\).
 \end{proof}
 
 \subsection{Exercise 16}
+$A$ is the “absolute value” relation on $\R$: For all real numbers $x$ and $y$, \(x \, A \, y \iff |x| = |y|\).
 
 \begin{proof}
+{\bf \(\bm{A}\) is reflexive:} For all real numbers \(x, |x| = |x|\) so \(x \, A \, x\).
 
+{\bf \(\bm{A}\) is symmetric:} Assume \(x \, A \, y\) so \(|x| = |y|\). Then \(|y| = |x|\) so \(y \, A \, x\).
+
+{\bf \(\bm{A}\) is transitive:} Assume \(x \, A \, y\) and \(y \, A \, z\), so \(|x| = |y|\) and \(|y| = |z|\). Then
+\(|x| = |y| = |z|\) so \(x \, A \, z\).
 \end{proof}
 
 \subsection{Exercise 17}
+Recall that a prime number is an integer that is greater than 1 and has no positive integer divisors other than 1 
+and itself. (In particular, 1 is not prime.) A relation $P$ is defined on $\Z$ as follows: For every \(m, n \in \Z, m 
+\, P \, n \iff \exists\) a prime number $p$ such that \(p \mid m\) and \(p \mid n\).
 
 \begin{proof}
+{\bf \(\bm{P}\) is not reflexive:} There is no prime number $p$ such that \(p \mid 1\) and \(p \mid 1\). Thus
+\(1 \Ccancel{P} 1\).
 
+{\bf \(\bm{P}\) is symmetric:} Assume \(m \, P \, n\). So there is a prime number $p$ such that \(p \mid m\) and 
+\(p \mid n\). So \(p \mid n\) and \(p \mid m\), and thus \(n \, P \, m\).
+
+{\bf \(\bm{P}\) is not transitive:} Let \(m = 6, n = 15, o = 35\). Then the prime $p = 3$ divides both $m$ and $n$, so
+\(m \, P \, n\), and the prime $q = 5$ divides both $n$ and $o$, so \(n \, P \, o\), but there is no prime that divides
+both $m = 2 \cdot 3$ and $o = 5 \cdot 7$, so \(m \Ccancel{P} o\).
 \end{proof}
 
 \subsection{Exercise 18}
+Define a relation $Q$ on $\R$ as follows: For all real numbers $x$ and $y$, \(x \, Q \, y \iff x - y\) is 
+rational.
 
 \begin{proof}
+{\bf \(\bm{Q}\) is reflexive:} For all reals \(x \in \R, x-x = 0\) and 0 is rational, so \(x \, Q \, x\).
 
+{\bf \(\bm{Q}\) is symmetric:} Assume \(x \, Q \, y\). Then \(x - y\) is rational. Then \(y-x = -(x-y)\) is rational 
+(being the negative of a rational). So \(y \, Q \, x\).
+
+{\bf \(\bm{Q}\) is transitive:} Assume \(x \, Q \, y\) and \(y \, Q \, z\). Then \(x - y\) and \(y - z\) are rational.
+So \(x - z = (x-y) + (y-z)\) is also rational (being the sum of two rationals). Thus \(x \, Q \, z\).
 \end{proof}
 
 \subsection{Exercise 19}
+Define a relation $I$ on $\R$ as follows: For all real numbers $x$ and $y$, \(x \, I \, y \iff x - y\) is 
+irrational.
 
 \begin{proof}
+{\bf \(\bm{I}\) is not reflexive:} For all reals \(x \in \R, x - x = 0\) and 0 is not irrational, 
+so \(x \Ccancel{I} x\).
 
+{\bf \(\bm{I}\) is symmetric:} Assume \(x \, I \, y\). Then \(x - y\) is irrational. So \(y-x = -(x-y)\) is irrational 
+(being the negative of an irrational). So \(y \, I \, x\).
+
+{\bf \(\bm{I}\) is not transitive:} Let \(x = \sqrt{2}, y = 0, z = \sqrt{2}\). Then \(x \, I \, y\) because \(x - y = 
+\sqrt{2}\) is irrational. Also \(y \, I \, z\) because \(y - z = -\sqrt{2}\) is irrational. But \(x - z = 0\) is not
+irrational, thus \(x \Ccancel{I} z\).
 \end{proof}
 
 \subsection{Exercise 20}
+Let \(X = \{a, b, c\}\) and \(\ps(X)\) be the power set of $X$ (the set of all subsets of $X$). A relation {\bf E} is 
+defined on \(\ps(X)\) as follows: For every \(A, B \in \ps(X), A \,\textbf{E}\, B \iff \) the number of elements 
+in $A$ equals the number of elements in $B$.
 
 \begin{proof}
+{\bf E is reflexive:} For every \(A \in \ps(X)\), the number of elements in $A$ equals the number of elements in 
+$A$. So \(A \,\textbf{E}\, A\).
 
+{\bf E is symmetric:} Assume \(A \,\textbf{E}\, B\). Then the number of elements in $A$ equals the number of elements 
+in $B$. So, the number of elements in $B$ equals the number of elements in $A$. So \(B \,\textbf{E}\, A\).
+
+{\bf E is transitive:} Assume \(A \,\textbf{E}\, B\) and \(B \,\textbf{E}\, C\). Then the number of elements in $A$ 
+equals the number of elements in $B$, and the number of elements in $B$ equals the number of elements in $C$. So 
+the number of elements in $A$ equals the number of elements 
+in $C$. So \(A \,\textbf{E}\, C\).
 \end{proof}
 
 \subsection{Exercise 21}
+Let \(X = \{a, b, c\}\) and \(\ps(X)\) be the power set of $X$. A relation {\bf L} is defined on \(\ps(X)\) as 
+follows: For every \(A, B \in \ps(X), A \,\textbf{L}\, B \iff \) the number of elements in $A$ is less than the 
+number of elements in $B$.
 
 \begin{proof}
+{\bf L is not reflexive:} For all \(A \in \ps(X)\), the number of elements in $A$ is not less than the number of 
+elements in $A$. So \(A \,\Ccancel{\textbf{L}}\, A\).
 
+{\bf L is not symmetric:} Let \(A = \es, B = \{a\}\). Then the number of elements in $A$ (which is 0) is less than the 
+number of elements in $B$ (which is 1). So \(A \,\textbf{L}\, B\). But the number of elements in $B$ (which is 1) is 
+not less than the number of elements in $A$ (which is 0). So \(B\,\Ccancel{\textbf{L}}\, A\).
+
+{\bf L is transitive:} Assume \(A \, \textbf{L} \, B\) and \(B \, \textbf{L} \, C\). Then the number of elements in 
+$A$ is less than the number of elements in $B$, and the number of elements in $B$ is less than the number of 
+elements in $C$. Then the number of elements in $A$ is less than the number of elements in $C$. So \(A \, \textbf{L} \, C\).
 \end{proof}
 
 \subsection{Exercise 22}
+Let \(X = \{a, b, c\}\) and \(\ps(X)\) be the power set of $X$. A relation {\bf N} is defined on \(\ps(X)\) as 
+follows: For every \(A, B \in \ps(X), A \textbf{N} B \iff \) the number of elements in $A$ is not equal to the number 
+of elements in $B$.
 
 \begin{proof}
+{\bf N is not reflexive:} Let \(A = \{a\}\) which has 1 element. Then the number of elements in $A$ is equal to the number of elements in $A$. So \(A \,\Ccancel{\textbf{N}}\, A\).
 
+{\bf N is symmetric:} Assume \(A \,\textbf{N}\, B\). Then the number of elements in $A$ is not equal to the number 
+of elements in $B$. So the number of elements in $B$ is not equal to the number of elements in $A$, and 
+\(B \,\textbf{N}\, A\).
+
+{\bf N is not transitive:} Let \(A = \{a\}, B = \es, C = \{c\}\). Then \(A \,\textbf{N}\, B\) because $A$ has 1 
+element and $B$ has 0 elements, and $0 \neq 1$. Similarly \(B \,\textbf{N}\, C\). But \(A \,\Ccancel{\textbf{N}}\, C\)
+because both $A$ and $C$ have 1 element, and 1 = 1.
 \end{proof}
 
 \subsection{Exercise 23}
+Let $X$ be a nonempty set and \(\ps(X)\) the power set of $X$. Define the “subset” relation {\bf S} on \(\ps(X)\) as 
+follows: For every \(A, B \in \ps(X), A \,\textbf{S}\, B \iff A \subseteq B\).
 
 \begin{proof}
+{\bf S is reflexive:} For all \(A \in \ps(X), A \subseteq A\) therefore \(A \,\textbf{S}\, A\).
 
+{\bf S is not symmetric:} Let \(A = \{a\}, B = \{a, b\}\). Then \(A \subseteq B\), so \(A \,\textbf{S}\, B\). But 
+\(B \nsubseteq A\) therefore \(B \,\Ccancel{\textbf{S}}\, A\).
+
+{\bf S is transitive:} Assume \(A \,\textbf{S}\, B\) and \(B \,\textbf{S}\, C\). So \(A \subseteq B\) and 
+\(B \subseteq C\). Then by transitivity of subsets, \(A \subseteq C\), and \(A \,\textbf{S}\, C\).
 \end{proof}
 
 \subsection{Exercise 24}
+Let \(X\) be a nonempty set and \(\ps(X)\) the power set of $X$. Define the “not equal to” relation {\bf U} on 
+\(\ps(X)\) as follows: For every \(A, B \in \ps(X), A \textbf{U} B \iff A \neq B\).
 
 \begin{proof}
+{\bf U is not reflexive:} For every \(A \in \ps(X), A = A\) therefore \(A \, \Ccancel{\textbf{U}} \, A\).
 
+{\bf U is symmetric:} Assume \(A \, \textbf{U} \, B\). Then \(A \neq B\). So \(B \neq A\), and \(B \,\textbf{U} \, A\).
+
+{\bf U is not transitive:} Let \(X = \{x\}, A = \{x\}, B = \es, C = \{x\}\). Then \(A \, \textbf{U} \, B\) because 
+\(A \neq B\), and \(B\,\textbf{U}\,C\) because \(B \neq C\), but \(A = C\) so \(A \, \Ccancel{\textbf{U}} \, C\).
 \end{proof}
 
 \subsection{Exercise 25}
+Let $A$ be the set of all strings of $a$’s and $b$’s of length 4. Define a relation \(R\) on \(A\) as follows: For 
+every \(s, t \in A, s \, R \, t \iff s\) has the same first two characters as \(t\).
 
 \begin{proof}
+{\bf \(\bm{R}\) is reflexive:} For every string \(s \in A\), $s$ has the same first two characters as $s$. Thus
+\(s \, R \, s\).
 
+{\bf \(\bm{R}\) is symmetric:} Assume \(s \, R \, t\). Then $s$ has the same first two characters as $t$. Then $t$ has
+the same first two characters as $s$, so \(t \, R \, s\).
+
+{\bf \(\bm{R}\) is transitive:} Assume \(s \, R \, t\) and \(t \, R \, r\). Then $s$ has the same first two characters 
+as $t$, and $t$ has the same first two characters as $r$. So $s$ has the same first two characters as $r$, and 
+\(s \, R \, r\).
 \end{proof}
 
 \subsection{Exercise 26}
+Let \(A\) be the set of all strings of 0’s, 1’s, and 2’s that have length 4 and for which the sum of the characters 
+in the string is less than or equal to 2. Define a relation \(R\) on \(A\) as follows: For every \(s, t \in A, s \, R 
+\, t \iff\) the sum of the characters of \(s\) equals the sum of the characters of \(t\).
 
 \begin{proof}
+{\bf \(\bm{R}\) is reflexive:} For every \(s, \in A\), the sum of the characters of \(s\) equals the sum of the 
+characters of \(s\). So \(s \, R \, s\).
 
+{\bf \(\bm{R}\) is symmetric:} Assume \(s \, R \, t\). Then the sum of the characters of \(s\) equals the sum of the 
+characters of \(t\). So the sum of the characters of \(t\) equals the sum of the characters of \(s\), and \(s\,R\,t\).
+
+{\bf \(\bm{R}\) is transitive:} Assume \(s \, R \, t\) and \(t \, R \, r\). Then the sum of the characters of \(s\) 
+equals the sum of the characters of \(t\), and the sum of the characters of \(t\) equals the sum of the characters of 
+\(r\). So the sum of the characters of \(s\) equals the sum of the characters of \(r\), and \(s\,R\,r\).
 \end{proof}
 
 \subsection{Exercise 27}
+Let \(A\) be the set of all English statements. A relation {\bf I} is defined on \(A\) as follows: For every \(p, q 
+\in A, p \,\textbf{I}\, q \iff p \implies q\) is true.
 
 \begin{proof}
+{\bf I is reflexive:} For every \(p \in A, p \implies p\) is true, therefore \(p \, \textbf{I} \, p\).
 
+{\bf I is not symmetric:} Let $p$ be ``$1 is greater than 2$'' and let $q$ be ``2 is greater than 1''. So $p$ is 
+false and $q$ is true. Therefore \(p \implies q\) is true and \(q \implies p\) is false. So \(p \, \textbf{I} \, q\)
+but \(q \, \Ccancel{\textbf{I}} \, p\).
+
+{\bf I is transitive:} Assume \(p \, \textbf{I} \, q\) and \(q \, \textbf{I} \, r\). So \(p \implies q\) is true and
+\(q \implies r\) is true. By transitivity of implication, \(p \implies r\) is true, and \(p \, \textbf{I} \, r\).
 \end{proof}
 
 \subsection{Exercise 28}
+Let \(A = \R \times \R\). A relation {\bf F} is defined on \(A\) as follows: For every \((x_1, y_1)\) and \((x_2, y_2)
+\) in $A$, \((x_1, y_1) \textbf{F} (x_2, y_2) \iff x_1 = x_2\).
 
 \begin{proof}
+{\bf F is reflexive:} For every \((x, y) \in A, x = x\), therefore \((x, y) \textbf{F} (x, y)\).
 
+{\bf F is symmetric:} Assume \((x_1, y_1) \textbf{F} (x_2, y_2)\). Then \(x_1 = x_2\). Then \(x_2 = x_1\). So
+\((x_2, y_2) \textbf{F} (x_1, y_1)\).
+
+{\bf F is transitive:} Assume \((x_1, y_1) \textbf{F} (x_2, y_2)\) and \((x_2, y_2) \textbf{F} (x_3, y_3)\). Then
+\(x_1 = x_2\) and \(x_2 = x_3\). Thus \(x_1 = x_3\) and so \((x_1, y_1) \textbf{F} (x_3, y_3)\).
 \end{proof}
 
 \subsection{Exercise 29}
+Let \(A = \R \times \R\). A relation {\bf S} is defined on \(A\) as follows: For every \((x_1, y_1)\) and \((x_2, y_2)
+\) in \(A, (x_1, y_1) \textbf{S} (x_2, y_2) \iff y_1 = y_2\).
 
 \begin{proof}
+{\bf S is reflexive:}
 
+{\bf S is symmetric:}
+
+{\bf S is transitive:}
 \end{proof}
 
 \subsection{Exercise 30}
+Let \(A\) be the “punctured plane”; that is, \(A\) is the set of all points in the Cartesian plane except the origin 
+(0, 0). A relation \(R\) is defined on \(A\) as follows: For every \(p_1\) and \(p_2\) in \(A, p_1 \, R \, p_2 \iff 
+p_1\) and \(p_2\) lie on the same half line emanating from the origin.
 
 \begin{proof}
+{\bf \(\bm{R}\) is reflexive:} For all \(p \in A, p\) and \(p\) lie on the same half line emanating from the origin.
+So \(p \, R \, p\).
 
+{\bf \(\bm{R}\) is symmetric:} Assume \(p_1 \, R \, p_2\). Then \(p_1\) and \(p_2\) lie on the same half line 
+emanating from the origin. Then \(p_2\) and \(p_1\) lie on the same half line emanating from the origin. So
+\(p_2 \, R \, p_1\).
+
+{\bf \(\bm{R}\) is transitive:} First notice that for any \(p \in A\) there is exactly one half line emanating from 
+the origin on which $p$ lies.
+
+Assume \(p_1 \, R \, p_2\) and \(p_2 \, R \, p_3\). Then \(p_1\) and \(p_2\) lie on the same half line emanating from 
+the origin, say $l_1$. And \(p_2\) and \(p_3\) lie on the same half line emanating from the origin, say $l_2$. Since 
+$p_2$ lies on both $l_1$ and $l_2$, by the previous paragraph \(l_1 = l_2\). Then \(p_1\) and \(p_3\) lie on 
+the same half line emanating from the origin. So \(p_1 \, R \, p_3\).
 \end{proof}
 
 \subsection{Exercise 31}
+Let \(A\) be the set of people living in the world today. A relation \(R\) is defined on \(A\) as follows: For all 
+people \(p\) and \(q\) in \(A, p \, R \, q \iff p\) lives within 100 miles of \(q\).
 
 \begin{proof}
+{\bf \(\bm{R}\) is reflexive:} For every person $p$, $p$ lives within 0 miles of $p$, so in particular $p$ lives 
+within 100 miles of $p$. Therefore \(p \, R \, p\).
 
+{\bf \(\bm{R}\) is symmetric:} Assume \(p \, R \, q\). So $p$ lives within 100 miles of $q$. Then $q$ lives within 
+100 miles of $p$. Thus \(q \, R \, p\).
+
+{\bf \(\bm{R}\) is not transitive:} As a counterexample, take $p$ to be an inhabitant of Chicago, Illinois, $q$ an 
+inhabitant of Kankakee, Illinois, and $r$ an inhabitant of Champaign, Illinois. Then \(p \,R\, q\) because Chicago is 
+less than 100 miles from Kankakee, and \(q \,R\, r\) because Kankakee is less than 100 miles from Champaign, but 
+\(p \, \Ccancel{R}\, r\) because Chicago is not less than 100 miles from Champaign.
 \end{proof}
 
 \subsection{Exercise 32}
+Let \(A\) be the set of all lines in the plane. A relation \(R\) is defined on \(A\) as follows: For every \(l_1\) and 
+\(l_2\) in \(A, l_1 \, R \, l_2 \iff l_1\) is parallel to \(l_2\). (Assume that a line is parallel to itself.)
 
 \begin{proof}
+{\bf \(\bm{R}\) is reflexive:} For every line \(l \in A, l\) is parallel to itself, therefore \(l \, R \, l\).
 
+{\bf \(\bm{R}\) is symmetric:} Assume \(l_1 \, R \, l_2\). Then \(l_1\) is parallel to \(l_2\). Then \(l_2\) is 
+parallel to \(l_1\), so \(l_2 \, R \, l_1\).
+
+{\bf \(\bm{R}\) is transitive:} Assume \(l_1 \, R \, l_2\) and \(l_2 \, R \, l_3\). Then \(l_1\) is parallel to $l_2$
+and \(l_2\) is parallel to $l_3$. By transitivity of parallelism \(l_1\) is parallel to \(l_3\) so \(l_1 \, R \, l_3\).
 \end{proof}
 
 \subsection{Exercise 33}
+Let \(A\) be the set of all lines in the plane. A relation \(R\) is defined on \(A\) as follows: For every \(l_1\) and 
+\(l_2\) in \(A, l_1 \, R \, l_2 \iff l_1\) is perpendicular to \(l_2\).
 
 \begin{proof}
+{\bf \(\bm{R}\) is not reflexive:} For evert line $l$ in $A$, $l$ is not perpendicular to itself ($l$ is parallel to
+itself). Therefore \(l \,\Ccancel{R}\, l\).
 
+{\bf \(\bm{R}\) is symmetric:} Assume \(l_1 \, R \, l_2\). Then \(l_1\) is perpendicular to \(l_2\). Then \(l_2\) is 
+perpendicular to \(l_1\). So \(l_2 \, R \, l_1\).
+
+{\bf \(\bm{R}\) is not transitive:} Let $l_1$ be the line $y = 0$, let $l_2$ be the line $x = 0$ and $l_3$ be the 
+line $y = 1$. Then $l_2$ is perpendicular to both $l_1$ and $l_3$ so \(l_1 \, R \, l_2\) and \(l_2 \, R \, l_3\). But
+$l_1$ is parallel to $l_3$ so \(l_1 \, \Ccancel{R} \,l_3\).
 \end{proof}
 
+{\bf \cy In $34-36$, assume that $R$ is a relation on a set $A$. Prove or disprove each statement.}
+
 \subsection{Exercise 34}
+If \(R\) is reflexive, then \(R^{-1}\) is reflexive.
 
 \begin{proof}
-
+Suppose $R$ is any reflexive relation on a set $A$. {\it [We must show that \(R^{-1}\) is reflexive. To show this, 
+we must show that for every \(x\) in \(A, x \, R^{-1} x\).]} Given any element \(x\) in \(A\), since \(R\) is 
+reflexive, \(x \,R\, x\), and by definition of relation, this means that \((x, x) \in R\). It follows, by definition 
+of the inverse of a relation, that \((x, x) \in R^{-1}\), and so, by definition of relation, \(x \,R^{-1}\, x\) {\it 
+[as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 35}
+If \(R\) is symmetric, then \(R^{-1}\) is symmetric.
 
 \begin{proof}
-
+Assume \(R\) is symmetric. {\it [We want to show \(R^{-1}\) is symmetric.]} Assume \(x \, R^{-1} \, y\). We need to 
+show \(y \, R^{-1} \, x\). By definition of \(R^{-1}, y \, R \, x\). Since \(R\) is symmetric, \(x \, R \, y\). By
+definition of \(R^{-1}\) again, \(y \, R^{-1} \, x\).
 \end{proof}
 
 \subsection{Exercise 36}
+If \(R\) is transitive, then \(R^{-1}\) is transitive.
 
 \begin{proof}
-
+Assume \(R\) is transitive. {\it [We want to show \(R^{-1}\) is transitive.]} Assume \(x \, R^{-1} \, y\) and \(y \, 
+R^{-1} \, z\). We need to show \(x \, R^{-1} \, z\). By definition of \(R^{-1}, y \, R \, x\) and \(z \, R \, y\). 
+Since \(R\) is transitive, \(z \, R \, x\). By definition of \(R^{-1}\) again, \(x \, R^{-1} \, z\).
 \end{proof}
 
+{\bf \cy In $37-42$, assume that \(R\) and \(S\) are relations on a set \(A\). Prove or disprove each 
+statement.}
+
 \subsection{Exercise 37}
+If \(R\) and \(S\) are reflexive, is \(R \cap S\) reflexive? Why?
 
 \begin{proof}
-
+Yes. Suppose $R$ and $S$ are reflexive. {\it [To show that \(R \cap S\) is reflexive, we must show that \(\forall x 
+\in A, (x, x) \in R \cap S\).]} So suppose \(x \in A\). Since $R$ is reflexive, \((x, x) \in R\), and since $S$ is 
+reflexive, \((x, x) \in S\). Thus, by definition of intersection, \((x, x) \in R \cap S\) {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 38}
+If \(R\) and \(S\) are symmetric, is \(R \cap S\) symmetric? Why?
 
 \begin{proof}
-
+Yes. Suppose $R$ and $S$ are symmetric. {\it [To show that \(R \cap S\) is symmetric, we must show that \(\forall x,y 
+\in A\), if \((x, y) \in R \cap S\) then \((y, x) \in R \cap S\).]} So suppose \(x,y \in A\) and \((x, y) \in R 
+\cap S\). By definition of intersection \((x, y) \in R\) and \((x,y)\in S\). Since $R$ is symmetric, \((y,x)\in R\), 
+and since $S$ is symmetric, \((y, x) \in S\). Thus, by definition of intersection, \((y, x) \in R \cap S\) 
+{\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 39}
+If \(R\) and \(S\) are transitive, is \(R \cap S\) transitive? Why?
 
 \begin{proof}
-
+Yes. Suppose $R$ and $S$ are transitive. {\it [To show that \(R \cap S\) is transitive, we must show that \(\forall x,y 
+,z \in A\), if \((x, y) \in R \cap S\) and \((y, z) \in R \cap S\) then \((x, z) \in R \cap S\).]} So suppose \(x,y,z 
+\in A\) and \((x, y) \in R \cap S\) and \((y, z) \in R \cap S\). By definition of intersection \((x, y) \in R\) and 
+\((x,y)\in S\) and \((y, z) \in R\) and \((y,z)\in S\). Since $R$ is transitive, \((x,z)\in R\), and since $S$ is 
+transitive, \((x, z) \in S\). Thus, by definition of intersection, \((x, z) \in R \cap S\) {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 40}
+If \(R\) and \(S\) are reflexive, is \(R \cup S\) reflexive? Why?
 
 \begin{proof}
-
+Yes. To prove this we must show that for all $x$ in $A$, \((x, x) \in R \cup S\). So suppose \(x\) is a particular 
+but arbitrarily chosen element in \(A\). {\it [We must show that \((x, x) \in R \cup S\).]} Then \((x, x) \in R\) 
+because $R$ is reflexive, and hence \((x, x) \in R \cup S\) by definition of union, {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 41}
+If \(R\) and \(S\) are symmetric, is \(R \cup S\) symmetric? Why?
 
 \begin{proof}
-
+Yes. To prove this we must show that for all $x$ and $y$ in $A$, if \((x, y) \in R \cup S\) then \((y, x) \in R \cup 
+S\). So suppose \((x, y)\) is a particular but arbitrarily chosen element in \(R \cup S\). {\it [We must show that 
+\((y, x) \in R \cup S\).]} By definition of union, \((x, y) \in R\) or \((x, y) \in S\). In case \((x, y) \in R\), then 
+\((y, x) \in R\) because $R$ is symmetric, and hence \((y, x) \in R \cup S\) by definition of union. In case \((x, y) 
+\in S\) then \((y, x) \in S\) because $S$ is symmetric, and hence \((y, x) \in R \cup S\) by definition of union. Thus, 
+in both cases, \((y, x) \in R \cup S\) {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 42}
+If \(R\) and \(S\) are transitive, is \(R \cup S\) transitive? Why?
 
 \begin{proof}
-
+No. Let \(A = \{a,b,c,d\}, R = \{(a,b),(b,c),(a,c)\}, S = \{(c,a),(a,d),(c,d)\}\). Then $R$ and $S$ are transitive but
+\(R \cup S\) is not: \((a,c) \in R \cup S\) and \((c,a) \in R \cup S\) but \((a,a) \notin R \cup S\).
 \end{proof}
 
+{\bf \cy In \(43-50\), the following definitions are used: a relation on a set \(A\) is defined to be irreflexive if, 
+and only if, for every \(x \in A, x \, \Ccancel[cyan]{R} \, x\); asymmetric if, and only if, for every \(x, y \in A\) 
+if \(x \, R \, y\) then \(y \Ccancel[cyan]{R} x\); intransitive if, and only if, for every \(x, y, z \in A\), 
+if \(x R y\) and \(y R z\) then \(x \Ccancel[cyan]{R} z\). For each of the relations in the referenced exercise, 
+determine whether the relation is irreflexive, asymmetric, intransitive, or none of these.}
+
 \subsection{Exercise 43}
-
+Exercise 1
 \begin{proof}
-
+\(R_1\) is not irreflexive because \((0, 0) \in R_1\). \(R_1\) is not asymmetric because \((0, 1) \in R_1\) and 
+\((1, 0) \in R_1\). \(R_1\) is not intransitive because \((0, 1) \in R_1\) and \((1, 0) \in R_1\) and \((0, 0) \in R_1\).
 \end{proof}
 
 \subsection{Exercise 44}
-
+Exercise 2
 \begin{proof}
+Recall \(R_2 = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}\).
 
+\(R_2\) is not irreflexive because \((0, 0) \in R_2\).
+
+\(R_2\) is not asymmetric because \((0, 0) \in R_2\) and \((0, 0) \in R_2\).
+
+\(R_2\) is not intransitive because \((0, 0) \in R_2\) and \((0,1) \in R_2\) and \((0,1) \in R_2\).
 \end{proof}
 
 \subsection{Exercise 45}
-
+Exercise 3
 \begin{proof}
-
+$R_3$ is irreflexive because no element of $A$ is related by $R_3$ to itself. $R_3$ is not asymmetric because 
+\((2, 3) \in R_3\) and \((3, 2) \in R_3\). $R_3$ is intransitive. To see why, observe that $R_3$ consists only 
+of \((2, 3)\) and \((3, 2)\). Now \((2, 3) \in R_3\) and \((3, 2) \in R_3\) but \((2, 2) \notin R_3\). Also 
+\((3, 2) \in R_3\) and \((2, 3) \in R_3\) but \((3, 3) \notin R_3\).
 \end{proof}
 
 \subsection{Exercise 46}
-
+Exercise 4
 \begin{proof}
+Recall \(R_4 = \{(1, 2), (2, 1), (1, 3), (3, 1)\}\).
 
+\(R_4\) is irreflexive.
+
+\(R_4\) is not asymmetric because \((1, 2) \in R_4\) and \((2, 1) \in R_4\).
+
+\(R_4\) is intransitive.
 \end{proof}
 
 \subsection{Exercise 47}
-
+Exercise 5
 \begin{proof}
+Recall \(R_5 = \{(0, 0), (0, 1), (0, 2), (1, 2)\}\).
 
+\(R_5\) is not irreflexive because \((0,0) \in R_5\).
+
+\(R_5\) is not asymmetric because \((0, 0) \in R_5\) and \((0, 0) \in R_5\).
+
+\(R_5\) is not intransitive because \((0,1) \in R_5\) and \((1,2) \in R_5\) and \((0,2) \in R_5\).
 \end{proof}
 
 \subsection{Exercise 48}
-
+Exercise 6
 \begin{proof}
-
+Recall \(R_6 = \{(0, 1), (0, 2)\}\). \(R_6\) is irreflexive because no element of \(A\) is related by \(R_6\) to 
+itself. \(R_6\) is asymmetric because \(R_6\) consists only of \((0, 1)\) and \((0, 2)\) and neither \((1, 0)\) nor 
+\((2, 0)\) is in \(R_6\). \(R_6\) is not intransitive. Let \(x = y = z = 0\). Then \((x, y) \in R_6\) and 
+\((y, z) \in R_6\) and \((x, z) \in R_6\).
 \end{proof}
 
 \subsection{Exercise 49}
-
+Exercise 7
 \begin{proof}
+Recall \(R_7 = \{(0, 3), (2, 3)\}\).
 
+\(R_7\) is irreflexive, asymmetric and intransitive.
 \end{proof}
 
 \subsection{Exercise 50}
-
+Exercise 8
 \begin{proof}
-
+Recall \(R_8 = \{(0, 0), (1, 1)\}\). \(R_8\) is not irreflexive because \((0,0) \in R_8\). \(R_8\) is not 
+asymmetric because \((0,0) \in R_8\) and \((0,0) \in R_8\).
+\(R_8\) is intransitive.
 \end{proof}
 
+{\bf \cy In \(51-53, R, S\), and \(T\) are relations defined on \(A = \{0, 1, 2, 3\}\).}
+
 \subsection{Exercise 51}
+Let \(R = \{(0, 1), (0, 2), (1, 1), (1, 3), (2, 2), (3, 0)\}\). Find \(R^t\), the transitive closure of \(R\).
 
 \begin{proof}
+\(R^t = R \cup \{(0, 0), (0, 3), (1, 0), (3, 1), (3, 2), (3, 3), (0, 2), (1, 2)\} = \) 
 
+\(\{(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3), (2, 2), (3, 0), (3, 1), (3, 2), (3, 3)\}\).
 \end{proof}
 
 \subsection{Exercise 52}
+Let \(S = \{(0, 0), (0, 3), (1, 0), (1, 2), (2, 0), (3, 2)\}\). Find \(S^t\), the transitive closure of \(S\).
 
 \begin{proof}
+\(S^t = S \cup \{(0,2),(1,3),(2,2),(2,3),(3,3)\}\)
 
+\( = \{(0, 0), (0,2),(0, 3), (1, 0), (1, 2), (1,3),(2, 0),(2,2), (2,3),(3, 2),(3,3)\}\)
 \end{proof}
 
 \subsection{Exercise 53}
+Let \(T = \{(0, 2), (1, 0), (2, 3), (3, 1)\}\). Find \(T^t\), the transitive closure of \(T\).
 
 \begin{proof}
+\(T^t = T \cup \{(0,3),(0,1),(0,0),(1,2),(1,3),(1,1),(2,1),(2,0),(2,2),(3,0),(3,2),\)
 
+\((3,3)\} = \{(0,0),(0,1),(0, 2),(0,3), (1, 0),(1, 1),(1, 2),(1, 3), (2,0),(2,1),(2,2),(2, 3),\)
+
+\((3,0),(3,1),(3,2),(3, 1)\}\)
 \end{proof}
 
 \subsection{Exercise 54}
+Write a computer algorithm to test whether a relation \(R\) defined on a finite set \(A\) is reflexive, where 
+\(A = \{a[1], a[2], \ldots, a[n]\}\).
 
-\begin{proof}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: Test for Reflexivity} 
 
-\end{proof}
+{\it [The input for this algorithm is a binary relation $R$ defined on a set $A$, that is represented as the one-
+dimensional array \(a[1], a[2], \ldots, a[n].\) To test whether $R$ is reflexive, a variable called answer is 
+initially set equal to “yes,” and each element \(a[i]\) of $A$ is examined in turn to see whether it is related by $R$ 
+to itself. If any element is not related to itself by $R$, then answer is set equal to “no,” the while loop is not 
+repeated, and processing terminates.]}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf Input:} $n$ {\it [a positive integer]}, \(a[1], a[2], \ldots, a[n]\) {\it [a one-dimensional array representing a set $A$]}, $R$ {\it [a subset of \(A \times A\)]}
+
+\begin{tabbing}
+{\bf Alg}\={\bf orithm Body:} \\
+         \> \(i \coloneqq 1\), answer $\coloneqq$ ``yes''\\
+         \> {\bf whi}\={\bf le} (answer = ``yes'' and \(i \leq n\)) \\
+         \>          \> {\bf if} \((a[i], a[i]) \notin R\) {\bf then} answer \(\coloneqq\) ``no'' \\
+         \>          \>  \(i \coloneqq i+1\) \\
+         \> {\bf end while} \\
+{\bf Output:} answer {\it [a string]}
+\end{tabbing}
+\end{tcolorbox}
 
 \subsection{Exercise 55}
+Write a computer algorithm to test whether a relation \(R\) defined on a finite set \(A\) is symmetric, where 
+\(A = \{a[1], a[2], \ldots, a[n]\}\).
 
-\begin{proof}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: Test for Symmetry} 
 
-\end{proof}
+{\bf Input:} $n$ {\it [a positive integer]}, \(a[1], a[2], \ldots, a[n]\) {\it [a one-dimensional array representing a set $A$]}, $R$ {\it [a subset of \(A \times A\)]}
+
+\begin{tabbing}
+{\bf Alg}\={\bf orithm Body:} \\
+         \> \(i \coloneqq 1, j \coloneqq 1\), answer $\coloneqq$ ``yes''\\
+         \> {\bf whi}\= {\bf le} (answer = ``yes'' and \(i \leq n\)) \\
+         \>          \> {\bf whi}\={\bf le} (answer = ``yes'' and \(j \leq n\)) \\
+         \>          \>           \> {\bf if} \((a[i], a[j]) \in R\) and \((a[j], a[i]) \notin R\) {\bf then} 
+answer \(\coloneqq\) ``no'' \\
+         \>          \>           \> \(j \coloneqq j+1\) \\
+         \>          \> {\bf end while} \\
+         \>          \>  \(i \coloneqq i+1\) \\
+         \> {\bf end while} \\
+{\bf Output:} answer {\it [a string]}
+\end{tabbing}
+\end{tcolorbox}
 
 \subsection{Exercise 56}
+Write a computer algorithm to test whether a relation \(R\) defined on a finite set \(A\) is transitive, where 
+\(A = \{a[1], a[2], \ldots, a[n]\}\).
 
-\begin{proof}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: Test for Transitivity} 
 
-\end{proof}
+{\bf Input:} $n$ {\it [a positive integer]}, \(a[1], a[2], \ldots, a[n]\) {\it [a one-dimensional array representing a set $A$]}, $R$ {\it [a subset of \(A \times A\)]}
+
+{\bf Algorithm Body:}
+
+\(i \coloneqq 1, j \coloneqq 1, k \coloneqq 1\), answer $\coloneqq$ ``yes''
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=cyan]
+\begin{tabbing}
+{\bf whi}\= {\bf le} (answer = ``yes'' and \(i \leq n\)) \\
+         \> {\bf whi}\={\bf le} (answer = ``yes'' and \(j \leq n\)) \\
+         \>          \>{\bf whi}\={\bf le} (answer = ``yes'' and \(k \leq n\)) \\
+         \>          \>         \> {\bf if} \((a[i], a[j]) \in R\) and \((a[j], a[k]) \in R\) and \((a[i], a[k]) \notin R\) \\
+         \>          \>         \>  {\bf then} answer \(\coloneqq\) ``no'' \\
+         \>           \>        \> \(k \coloneqq k+1\) \\
+         \>           \> {\bf end while} \\
+         \>           \> \(j \coloneqq j+1\) \\
+         \> {\bf end while} \\
+         \>  \(i \coloneqq i+1\) \\
+{\bf end while} \\
+{\bf Output:} answer {\it [a string]}
+\end{tabbing}
+\end{tcolorbox}
 
 \section{Exercise Set 8.3}
 
