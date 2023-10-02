@@ -1310,8 +1310,7 @@ Exercise 6
 \begin{proof}
 Recall \(R_6 = \{(0, 1), (0, 2)\}\). \(R_6\) is irreflexive because no element of \(A\) is related by \(R_6\) to 
 itself. \(R_6\) is asymmetric because \(R_6\) consists only of \((0, 1)\) and \((0, 2)\) and neither \((1, 0)\) nor 
-\((2, 0)\) is in \(R_6\). \(R_6\) is not intransitive. Let \(x = y = z = 0\). Then \((x, y) \in R_6\) and 
-\((y, z) \in R_6\) and \((x, z) \in R_6\).
+\((2, 0)\) is in \(R_6\). \(R_6\) is intransitive.
 \end{proof}
 
 \subsection{Exercise 49}
@@ -1447,499 +1446,972 @@ Write a computer algorithm to test whether a relation \(R\) defined on a finite 
 \section{Exercise Set 8.3}
 
 \subsection{Exercise 1}
+Suppose that \(S = \{a, b, c, d, e\}\) and $R$ is a relation on $S$ such that \(a \,R\, b, b \,R\, c\), and 
+\(d \,R\, e\). List all of the following:
+\[
+c\,R\,b, c\,R\,c, a\,R\,c, b\,R\,a, a\,R\,d, e\,R\,a, e\,R\,d, c\,R\,a
+\]
+that must be true if $R$ is:
 
 \subsubsection{(a)}
-
+reflexive (but not symmetric or transitive)
 \begin{proof}
+\(c \,R\, c\)
 
 \end{proof}
 
 \subsubsection{(b)}
-
+symmetric (but not reflexive or transitive)
 \begin{proof}
-
+\(b \,R\, a, c \,R\, b, e \,R\, d\)
 \end{proof}
 
 \subsubsection{(c)}
-
+transitive (but not reflexive or symmetric)
 \begin{proof}
-
+\(a \,R\, c\)
 \end{proof}
 
 \subsubsection{(d)}
-
+an equivalence relation.
 \begin{proof}
-
+\(c \,R\, c, b \,R\, a, c \,R\, b, e \,R\, d, a \,R\, c, c \,R\, a\)
 \end{proof}
 
 \subsection{Exercise 2}
+Each of the following partitions of \(\{0, 1, 2, 3, 4\}\) induces a relation \(R\) on \(\{0, 1, 2, 3, 4\}\). In each 
+case, find the ordered pairs in \(R\).
 
 \subsubsection{(a)}
-
+\(\{0, 2\}, \{1\}, \{3, 4\}\)
 \begin{proof}
-
+\(R = \{(0, 0), (0, 2), (2, 0), (2, 2), (1, 1), (3, 3), (3, 4), (4, 3), (4, 4)\}\)
 \end{proof}
 
 \subsubsection{(b)}
-
+\(\{0\}, \{1, 3, 4\}, \{2\}\)
 \begin{proof}
-
+\(R = \{(0,0),(1,1),(3,3),(4,4),(1,3),(3,1),(1,4),(4,1),(3,4),(4,3),(2,2)\}\)
 \end{proof}
 
 \subsubsection{(c)}
+\(\{0\}, \{1, 2, 3, 4\}\)
 
 \begin{proof}
+\(R = \{(0,0),(1,1),(2,2),(3,3),(4,4),(1,2),(2,1),(1,3),(3,1),(1,4),(4,1),(2,3)\),
 
+\((3,2),(2,4),(4,2),(3,4),(4,3)\}\)
 \end{proof}
 
+{\bf \cy In each of $3-6$, the relation $R$ is an equivalence relation on $A$. As in example 8.3.5, first 
+find the specified equivalence classes. then state the number of distinct equivalence classes for $R$ and list them.}
+
 \subsection{Exercise 3}
+\(A = \{0, 1, 2, 3, 4\}, R = \{(0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4)\}\),
+equivalence classes: [0], [1], [2], [3]
 
 \begin{proof}
-
+\([0] = \{0, 4\}, [1] = \{1, 3\}, [2] = \{2\}, [3] = \{1, 3\}\). So there are three distinct equivalence classes: 
+\([0] = \{0, 4\} = [4], [1] = \{1, 3\} = [3], [2] = \{2\}\)
 \end{proof}
 
 \subsection{Exercise 4}
+\(A = \{a, b, c, d\}, R = \{(a, a), (b, b), (b, d), (c, c), (d, b), (d, d)\}\), classes: \([a], [b], [c], [d]\)
 
 \begin{proof}
-
+\([a] = \{a\}, [b] = \{b, d\}, [c] = \{c\}, [d] = \{b, d\}\). So there are four distinct equivalence classes: 
+\([a] = \{a\}, [b] = \{b, d\} = [d], [c] = \{c\}\).
 \end{proof}
 
 \subsection{Exercise 5}
+\(A = \{1, 2, 3, 4, \ldots, 20\}\). \(R\) is defined on \(A\) as follows: for all \(x, y \in A, x \,R\, y \iff 4 
+\mid (x - y)\). Equivalence classes: [1], [2], [3], [4], [5]
 
 \begin{proof}
+\([1] = \{1, 5, 9, 13, 17\}, [2] = \{2, 6, 10, 14, 18\}, [3] = \{3, 7, 11, 15, 19\}, [4] = \{4, 8, 12,\)
 
+\(16, 20\}, [5] = \{5, 9, 13, 17, 1\} = [1]\), four distinct equivalence classes: [1], [2], [3], [4]
 \end{proof}
 
 \subsection{Exercise 6}
+\(A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}\). \(R\) is defined on \(A\) as follows: for all \(x, y \in A, x \,R\, 
+y \iff 3 \mid (x - y)\). Equivalence classes: [0], [1], [2], [3]
 
 \begin{proof}
+\([0] = \{-3, 0, 3\}, [1] = \{-2, 1, 4\}, [2] = \{-4, -1, 2, 5\}, [3] = \{-3, 0, 3\}\)
 
+There are 3 distinct equivalence classes: [0], [1], [2]
 \end{proof}
 
+{\bf \cy In each of $7-14$, the relation $R$ is an equivalence relation on the set $A$. Find the distinct 
+equivalence classes of $R$.}
+
 \subsection{Exercise 7}
+\(A = \{(1, 3), (2, 4), (-4, -8), (3, 9), (1, 5), (3, 6)\}\). \(R\) is defined on \(A\) as follows: For every 
+\((a, b), (c, d) \in A, (a, b) \, R \, (c, d) \iff ad = bc\).
 
 \begin{proof}
-
+\(\{(1, 3), (3, 9)\}, \{(2, 4), (24, 28), (3, 6)\}, \{(1, 5)\}\)
 \end{proof}
 
 \subsection{Exercise 8}
+\(X = \{a, b, c\}\) and \(A = \ps(X)\). \(R\) is defined on \(A\) as follows: For all sets \(u, v\) in \(\ps(X)\), 
+\(u\, R\, v \iff N(u) = N(v)\). (That is, the number of elements in $u$ equals the number of elements in $v$.)
 
 \begin{proof}
-
+\(\{\es\}, \{\{a\}, \{b\}, \{c\}\}, \{\{a, b\}, \{a, c\}, \{b, c\}\}, \{\{a, b, c\}\}\)
 \end{proof}
 
 \subsection{Exercise 9}
+\(X = \{-1, 0, 1\}\) and \(A = \ps(X)\). \(R\) is defined on \(\ps(X)\) as follows: For all sets $s$ and $t$ in 
+\(\ps(X), s \, R\, t \iff\) the sum of the elements in $s$
+equals the sum of the elements in $t$.
 
 \begin{proof}
-
+\(\{\es, \{0\}, \{-1, 1\}, \{-1, 0, 1\}\}, \{\{-1\}, \{-1, 0\}\}, \{\{1\}, \{0, 1\}\}\)
 \end{proof}
 
 \subsection{Exercise 10}
+\(A = \{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}\). \(R\) is defined on \(A\) as follows: For all \(m, n \in \Z, 
+m \,R\, n \iff 3 \mid (m^2 - n^2)\).
 
 \begin{proof}
-
+\(\{-5, -4, -2, -1, 1, 2, 4, 5\}, \{-3, 0, 3\}\)
 \end{proof}
 
 \subsection{Exercise 11}
+\(A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4\}\). \(R\) is defined
+on \(A\) as follows: For every \((m, n) \in A, m \,R\, n 
+\iff 4 \mid (m^2 - n^2)\).
 
 \begin{proof}
-
+\(\{-4, -2, 0, 2, 4\}, \{-3, -1, 1, 3\}\)
 \end{proof}
 
 \subsection{Exercise 12}
+\(A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4\}\). \(R\) is defined on \(A\) as follows: For all \((m, n) \in A, m \,R\, n \iff
+5 \mid (m^2 - n^2)\).
 
 \begin{proof}
-
+\(\{-4, -1, 1, 4\}, \{-3, -2, 2, 3\}, \{0\}\)
 \end{proof}
 
 \subsection{Exercise 13}
+\(A\) is the set of all strings of length 4 in \(a\)’s and \(b\)’s. \(R\) is defined on \(A\) as follows: For all 
+strings \(s\) and \(t\) in \(A, s \,R\, t \iff s\) has the same first two characters as \(t\).
 
 \begin{proof}
+\(\{aaaa, aaab, aaba, aabb\}\), \(\{abaa, abab, abba, abbb\}\), \(\{baaa, baab, baba, babb\}\), 
 
+\(\{bbaa, bbab, bbba, bbbb\}\)
 \end{proof}
 
 \subsection{Exercise 14}
+\(A\) is the set of all strings of 0’s, 1’s, and 2’s that have length 4 and for which the sum of the characters in 
+the string is less than or equal to 2. \(R\) is defined on \(A\) as follows: For every \(s, t \in A, s \,R\, t \iff\) 
+the sum of the characters of \(s\) equals the sum of the characters of \(t\).
 
 \begin{proof}
+\(\{0000\}, \{0001, 0010, 0100, 1000\}, \{0011, 0101, 1001, 0110, 1010, 1100, 0002, 0020,\)
 
+\(0200, 2000\}\)
 \end{proof}
 
 \subsection{Exercise 15}
+Determine which of the following congruence relations are true and which are false.
 
 \subsubsection{(a)}
-
+\(17 \equiv 2 \pmod 5\)
 \begin{proof}
-
+True. \(17 - 2 = 15 = 5 \cdot 3\)
 \end{proof}
 
 \subsubsection{(b)}
-
+\(4 \equiv -5 \pmod 7\)
 \begin{proof}
-
+False. \(4 - (-5) = 9\) is not divisible by 7.
 \end{proof}
 
 \subsubsection{(c)}
-
+\(-2 \equiv -8 \pmod 3\)
 \begin{proof}
-
+True. \(-2 - (-8) = 6 = 3 \cdot 2\)
 \end{proof}
 
 \subsubsection{(d)}
-
+\(-6 \equiv -2 \pmod 2\)
 \begin{proof}
-
+True. \(-6 - (-2) = -4 = 2 \cdot (-2)\)
 \end{proof}
 
 \subsection{Exercise 16}
-
 \subsubsection{(a)}
+Let \(R\) be the relation of congruence modulo 3. Which of the following equivalence classes are equal? 
+\([7], [-4], [-6], [17], [4], [27], [19]\)
 
 \begin{proof}
-
+\([7] = [4] = [19], [-4] = [17], [-6] = [27]\)
 \end{proof}
 
 \subsubsection{(b)}
+Let \(R\) be the relation of congruence modulo 7. Which of the following equivalence classes are equal?
+\([35], [3], [-7], [12], [0], [-2], [17]\)
 
 \begin{proof}
-
+\([35] = [0] = [-7], [3] = [17], [12] = [-2]\)
 \end{proof}
 
 \subsection{Exercise 17}
-
 \subsubsection{(a)}
+Prove that for all integers $m$ and $n$, \(m \equiv n \pmod 3\) iff \(m \mod 3 = n \mod 3\).
 
 \begin{proof}
+\(\bm{(\implies)}\) Suppose $m, n$ are integers such that \(m \equiv n \pmod 3\). {\it [We want to show that \(m \mod 
+3 = n \mod 3\)].} By definition of congruence, \(3 \mid (m-n)\), and so, by definition of divisibility, \(m - n = 3a\) 
+for some integer $a$. Let \(r = m \mod 3\). Then \(m = 3b + r\) for some integer $b$. Since \(m - n = 3a\), it follows 
+that \(m - n = (3b + r) - n = 3a\), or, equivalently, \(n = 3(b - a) + r\). Now \(b - a\) is an integer and \(0 \leq r 
+< 3\). So, by definition of mod, \(n \mod 3 = r\), which equals \(m \mod 3\). 
 
+\(\bm{(\impliedby)}\) Suppose $m, n$ are integers such that \(m \mod 3 = n \mod 3\). {\it [We want to show that \(m 
+\equiv n \pmod 3\)].} Let \(r = m \mod 3 = n \mod 3\). Then, by definition of mod, \(m = 3p + r\) and \(n = 3q + 
+r\) for some integers $p$ and $q$. By substitution, \(m - n = (3p + r) - (3q + r) = 3(p - q)\). Since \(p - q\) is an 
+integer, it follows that \(3 \mid (m - n)\), and so, by definition of congruence, \(m \equiv n \pmod 3\).
 \end{proof}
 
 \subsubsection{(b)}
+Prove for all integers $d>0$ and $m,n$, \(m \equiv n \pmod d\) iff \(m \mod d = n \mod d\).
 
 \begin{proof}
+Assume $m,n,d$ are integers with $d > 0$.
 
+\(\bm{(\implies)}\) 
+1. Assume \(m \equiv n \pmod d\). 
+
+2. By 1 and definition of congruence, \(d \mid (m-n)\).
+
+3. By 2 and definition of divisibility, \(m-n = da\) for some integer $a$.
+
+4. Let \(r = m \mod d\). Then by definition of mod, \(m = db + r\) for some integer $b$ and \(0 \leq r < d\).
+
+5. By 3 and 4, \(m-n = (db+r) - n = da\), so \(n = (db+r) - da = d(b-a)+r\) where $b-a$ is an integer and \(0 \leq r < d\).
+
+6. By 5 and definition of mod, \(r = n \mod d\). Therefore \(n \mod d = r = m \mod d\).
+
+\(\bm{(\impliedby)}\)
+1. Assume \(m \mod d = n \mod d\). Let \(r = m \mod d = n \mod d\).
+
+2. By 1 and definition of mod, \(m = da+r\) and \(n = db+r\) for some integers $a,b$.
+
+3. By 2, \(m-n = da+r - (db+r) = d(a-b)\) where $a-b$ is an integer. Thus \(d \mid (m-n)\).
+
+4. By 3 and definition of congruence, \(m \equiv n \pmod d\).
 \end{proof}
 
 \subsection{Exercise 18}
 
 \subsubsection{(a)}
+Give an example of two sets that are distinct but not disjoint.
 
 \begin{proof}
-
+One possible answer: Let \(A = \{1, 2\}\) and \(B = \{2, 3\}\). Then \(A \neq B\), so \(A\) and \(B\) are distinct. 
+But \(A\) and \(B\) are not disjoint since \(2 \in A \cap B\).
 \end{proof}
 
 \subsubsection{(b)}
+Find sets \(A_1\) and \(A_2\) and elements \(x, y\), and \(z\) such that \(x\) and \(y\) are in \(A_1\) and \(y\) and 
+\(z\) are in \(A_2\) but \(x\) and \(z\) are not both in either of the sets \(A_1\) or \(A_2\).
 
 \begin{proof}
-
+Let \(A_1 = \{x, y\}, A_2 = \{y, z\}\).
 \end{proof}
+
+{\bf \cy In $19-31$, (1) prove that the relation is an equivalence relation, and (2) describe the distinct 
+equivalence classes of each relation.}
 
 \subsection{Exercise 19}
+\(A\) is the set of all students at your college.
 
 \subsubsection{(a)}
+\(R\) is the relation defined on \(A\) as follows: For every \(x\) and \(y\) in \(A\), \(x \,R\, y \iff x\) has 
+the same major (or double major) as \(y\). (Assume “undeclared” is a major.)
 
 \begin{proof}
+(1) \(R\) is reflexive because it is true that for each student \(x\) at a college, \(x\) has the same major (or 
+double major) as \(x\).
 
+\(R\) is symmetric because it is true that for all students \(x\) and \(y\) at a college, if \(x\) has the same major 
+(or double major) as \(y\), then \(y\) has the same major (or double major) as \(x\).
+
+\(R\) is transitive because it is true that for all students \(x, y\), and \(z\) at a college, if \(x\) has the 
+same major (or double major) as \(y\) and \(y\) has the same major (or double major) as \(z\), then \(x\) has the 
+same major (or double major) as \(z\). 
+
+\(R\) is an equivalence relation because it is reflexive, symmetric, and transitive.
+
+(2) There is one equivalence class for each major and double major at the college. Each class consists of all 
+students with that major (or double major).
 \end{proof}
 
 \subsubsection{(b)}
+\(S\) is the relation defined on \(A\) as follows: For every \(x, y \in A, x \,S\, y \iff x\) is the same age as \(y\).
 
 \begin{proof}
+(1) \(S\) is reflexive because for each student \(x\) at a college, \(x\) is the same age as \(x\).
 
+\(S\) is symmetric because it is true that for all students \(x\) and \(y\) at a college, if \(x\) is the same age as 
+\(y\), then \(y\) is the same age as \(x\).
+
+\(S\) is transitive because it is true that for all students \(x, y\), and \(z\) at a college, if \(x\) is the 
+same age as \(y\) and \(y\) is the same age as \(z\), then \(x\) is the same age as \(z\). 
+
+\(S\) is an equivalence relation because it is reflexive, symmetric, and transitive.
+
+(2) There is one equivalence class for each age at the college. Each class consists of all students with that age.
 \end{proof}
 
 \subsection{Exercise 20}
+\(E\) is the relation defined on \(\Z\) as follows: For every \(m, n \in \Z, m \,E\, n \iff 4 \mid (m - n)\).
 
 \begin{proof}
+(1) The solution to exercise 12 in Section 8.2 proved that \(E\) is reflexive, symmetric, and transitive. 
+Thus \(E\) is an equivalence relation.
 
+(2) Observe that for any integer \(a\), the equivalence class of \(a\) is
+
+\begin{tabular}{rcll}
+\([a]\) & = & \(\{x \in \Z \, | \, x \,E\, a\}\) & {\cy by definition of equivalence class} \\
+& = & \(\{x \in \Z \,|\, x - a \text{ is divisible by } 4\}\) & {\cy by definition of \(E\)} \\
+& = & \(\{x \in \Z \,|\, x - a = 4k \text{ for some integer } k\}\) & {\cy by definition of divisibility} \\
+& = & \(\{x \in \Z \,|\, x = 4k + a \text{ for some integer } k\}\) & {\cy by algebra.}
+\end{tabular}
+
+Now when any integer \(a\) is divided by 4, the only possible remainders are 0, 1, 2, and 3 and no integer has 
+two distinct remainders when it is divided by 4. Thus every integer is contained in exactly one of the following four 
+equivalence classes:
+
+\(\{x \in \Z \,|\, x = 4k \text{ for some integer } k\}\), 
+\(\{x \in \Z \,|\, x = 4k + 1 \text{ for some integer } k\}\), 
+
+\(\{x \in \Z \,|\, x = 4k + 2 \text{ for some integer } k\}\), 
+\(\{x \in \Z \,|\, x = 4k + 3 \text{ for some integer } k\}\)
 \end{proof}
 
 \subsection{Exercise 21}
+\(R\) is the relation defined on \(\Z\) as follows: For every \(m, n \in \Z, m \,R\, n \iff 7m - 5n\) is even.
 
 \begin{proof}
+(1) \(R\) is reflexive because for all \(m \in \Z, 7m - 5m = 2m\) is even, therefore \(m \, R \, m\).
 
+\(R\) is symmetric: assume \(m \,R\, n\). Then \(7m - 5n\) is even. So \(7m-5n=2k\) for some integer $k$. Then 
+\(7n-5m = (-5n+12n) + (7m-12m) = (12n-12m) + (7m-5n) = 2(6n-6m) + 2k = 2(6n-6m+k)\) where \(6n-6m+k\) is an 
+integer. Thus \(7n-5m\) is even and \(n \,R\, m\).
+
+\(R\) is transitive: assume \(m \,R\, n\) and \(n \,R\, o\). Then \(7m-5n=2k\) and \(7n-5o=2l\) for some integers
+\(k, l\). So \(7m-5o = (7m-5n+5n) + (-7n+7n-5o) = (7m-5n) + (5n-7n) + (7n-5o) = 2k - 2n + 2l = 2(k-n+l)\), where 
+\(k-n+l\) is an integer. So \(7m-5o\) is even and \(m \,R\, o\).
+
+(2) Assume \(m \,R\, n\). So \(7m-5n\) is even. By properties of even and odd integers, either \(7m\) and 
+\(5n\) are both even, or they are both odd. Since 7 and 5 are odd, and odd times odd is odd, this means that either
+$m$ and $n$ are both even, or they are both odd. Thus $R$ has two equivalence classes: the set of all even integers
+and the set of all odd integers.
 \end{proof}
 
 \subsection{Exercise 22}
+Let \(A\) be the set of all statement forms in three variables \(p, q\), and \(r\). {\bf R} is the relation 
+defined on \(A\) as follows: For all \(P\) and \(Q\) in \(A\), \(P \,{\bf R}\, Q \iff P\) and \(Q\) have the same 
+truth table.
 
 \begin{proof}
+(1) {\bf R} is reflexive because for all \(P \in A\), \(P\) and \(P\) have the same truth table, so \(P\,{\bf R}\, P\).
 
+{\bf R} is symmetric: assume \(P \,{\bf R}\, Q\). Then \(P\) and \(Q\) have the same truth table. Then \(Q\) and
+\(P\) have the same truth table, so \(Q \,{\bf R}\, P\).
+
+{\bf R} is transitive: assume \(P \,{\bf R}\, Q\) and \(Q \,{\bf R}\, S\). Then \(P\) and \(Q\), and \(Q\) and \(S\)
+have the same truth tables. So \(P\) and \(S\) have the same truth table, and \(P \,{\bf R}\, S\).
+
+(2) There is an equivalence class corresponding to every possible truth table in 3 variables $p,q,r$. There are 8
+lines in every truth table, and each line has 2 options (true or false), so there are \(2^8\) equivalence classes.
 \end{proof}
 
 \subsection{Exercise 23}
+Let \(P\) be a set of parts shipped to a company from various suppliers. \(S\) is the relation defined on \(P\) 
+as follows: For every \(x, y \in P, x \,S\, y \iff x\) has the same part number and is shipped from the same supplier 
+as \(y\).
 
 \begin{proof}
+(1) \(S\) is reflexive because for all \(x \in P\), \(x\) has the same part number and is shipped from the same 
+supplier as \(x\), so \(x \, S \, x\).
 
+\(S\) is symmetric: assume \(x \,S\, y\). Then \(x\) has the same part number and is shipped from the same supplier 
+as \(y\). So \(y\) has the same part number and is shipped from the same supplier as \(x\). Thus \(y \,S\, x\).
+
+\(S\) is transitive: assume \(x \,S\, y\) and \(y \,S\, z\). So \(x\) has the same part number and is shipped from 
+the same supplier as \(y\) and \(y\) has the same part number and is shipped from the same supplier as \(z\), so 
+\(x\) has the same part number and is shipped from the same supplier as \(z\). Therefore \(x \,S\, z\).
+
+(2) For each distinct part number shipped from each distinct supplier, there is a distinct equivalence class
+corresponding to that part number.
 \end{proof}
 
 \subsection{Exercise 24}
+Let \(A\) be the set of identifiers in a computer program. It is common for identifiers to be used for only a short 
+part of the execution time of a program and not to be used again to execute other parts of the program. In such cases, 
+arranging for identifiers to share memory locations makes efficient use of a computer’s memory capacity. Define a 
+relation \(R\) on \(A\) as follows: For all identifiers \(x\) and \(y\), \(x \,R\, y \iff\) the values of \(x\) and 
+\(y\) are stored in the same memory location during execution of the program.
 
 \begin{proof}
+(1) \(R\) is reflexive because for all identifiers \(x\), the values of \(x\) and \(x\) are stored in the same memory 
+location during execution of the program.
 
+\(R\) is symmetric: assume \(x \,R\, y\). Then the values of \(x\) and \(y\) are stored in the same memory 
+location during execution of the program. So the values of \(y\) and \(x\) are stored in the same memory location during execution of the program. So \(y \,R\, x\).
+
+\(R\) is transitive: assume \(x \,R\, y\) and \(y \,R\, z\). So the values of \(x\) and \(y\) are stored in the 
+same memory location during execution of the program, and the values of \(y\) and \(z\) are stored in the same memory 
+location during execution of the program. Then the values of \(x\) and \(z\) are stored in the same memory location 
+during execution of the program. So \(x \,R\, z\).
+
+(2) There is a distinct equivalence class corresponding to each distinct memory location during execution of the 
+program.
 \end{proof}
 
 \subsection{Exercise 25}
+\(A\) is the “absolute value” relation defined on \(\R\) as follows: For every \(x, y \in \R, x \,A\, y \iff |x| = |y|\).
 
 \begin{proof}
+(1) \(A\) is reflexive because for all \(x \in \R, |x| = |x|\), so \(x \, A \, x\).
 
+\(A\) is symmetric: assume \(x \,A\, y\). Then \(|x| = |y|\). So \(|y| = |x|\), and \(y \,A\, x\).
+
+\(A\) is transitive: assume \(x \,A\, y\) and \(y \,A\, z\). Then \(|x| = |y|\) and \(|y| = |z|\), so \(|x| = |z|\)
+and therefore \(x \,A\, z\).
+
+(2) There is a distinct equivalence class for each nonnegative real number. Each class is a set of the form
+\(\{x, -x\}\) where $x$ is a nonnegative real number.
 \end{proof}
 
 \subsection{Exercise 26}
+$D$ is the relation defined on \(\Z\) as follows: For every \(m, n \in \Z, m \,D\, n \iff 3 \mid (m^2 - n^2)\).
 
 \begin{proof}
+(1) \(D\) is reflexive because for all \(m \in \Z, m^2 - m^2 = 0 = 3 \cdot 0\), so \(3 \mid (m^2-m^2)\) and thus 
+\(m \,D\, m\).
 
+\(D\) is symmetric: assume \(m \,D\, n\). Then \(3 \mid (m^2 - n^2)\). Then \(m^2-n^2 = 3r\) for some integer $r$.
+Then \(n^2-m^2 = 3\cdot(-r)\) where $-r$ is an integer. So \(3 \mid (n^2-m^2)\) and thus \(n \,D\, m\).
+
+\(D\) is transitive: assume \(m \,D\, n\) and \(n \,D\, o\). So \(3 \mid (m^2-n^2)\) and \(3 \mid (n^2-o^2)\). So
+\(m^2-n^2 = 3r\) and \(n^2-o^2 = 3s\) for some integers $r,s$. Then \(m^2-o^2 = (m^2-n^2)+(n^2-o^2) = 3(r+s)\) 
+where $r+s$ is an integer. Therefore \(3 \mid (m^2-n^2)\) and \(m \,D\, o\).
+
+(2) There are two distinct equivalence classes: \([0] = \{\ldots, -6, -3, 0, 3, 6, \ldots\}\) and 
+\([1] = \{\ldots, -5, -4, -2, -1, 1, 2, 4, 5, \ldots\}\).
 \end{proof}
 
 \subsection{Exercise 27}
+\(R\) is the relation defined on \(\Z\) as follows: For every \((m, n) \in \Z, m \,R\, n \iff 4 \mid (m^2 - n^2)\).
 
 \begin{proof}
+(1) $R$ is an equivalence relation, the proofs are exactly the same as above in Exercise 26 (replace 3 with 4).
 
+(2) There are 2 distinct equivalence classes: [0] = the set of all even integers, [1] = the set of all odd integers.
+This is because, if we want \(4 \mid (m-n)(m+n)\), it is sufficient that both \(m-n\) and \(m+n\) are even; this is 
+the case when either both $m,n$ are odd or both $m,n$ are even.
 \end{proof}
 
 \subsection{Exercise 28}
+$I$ is the relation defined on $\R$ as follows: For every \(x, y \in \R, m \,I\, n \iff x - y\) is an integer.
 
 \begin{proof}
+(1) $I$ is reflexive because the difference between each real number and itself is 0, which is an integer.
 
+$I$ is symmetric because for all real numbers $x$ and $y$, if \(x - y\) is an integer, then \(y - x = (-1)(x - y)\), 
+which is also an integer.
+
+$I$ is transitive because for all real numbers \(x, y\), and \(z\), if \(x - y\) is an integer and \(y - z\) is an 
+integer, then \(x - z = (x - y) + (y - z)\) is the sum of two integers and thus is an integer.
+
+$I$ is an equivalence relation because it is reflexive, symmetric, and transitive.
+
+(2) There is one class for each real number $x$ with \(0 \leq x < 1\). The distinct classes are all sets of the form 
+\(\{y \in \R \,|\, y = n + x, \text{ for some integer } n\}\), where $x$ is a real number such that \(0 \leq x < 1\).
 \end{proof}
 
 \subsection{Exercise 29}
+Define $P$ on the set \(\R \times \R\) of ordered pairs of real numbers as follows: For every \((w, x), (y, z) \in \R 
+\times \R, (w, x) \,P\, (y, z) \iff w = y\).
 
 \begin{proof}
+(1) $P$ is reflexive because each ordered pair of real numbers has the same first element as itself. 
 
+$P$ is symmetric for the following reason: Suppose \((w, x)\) and \((y, z)\) are ordered pairs of real numbers such 
+that \((w, x) \,P\, (y, z)\). Then, by definition of $P$, \(w = y\). Now by the symmetric property of equality, this 
+implies that \(y = w\), and so, by definition of $P$, \((y, z) \,P\, (w, x)\).
+
+$P$ is transitive for the following reason: Suppose \((u, v), (w, x)\), and \((y, z)\) are ordered pairs of real 
+numbers such that \((u, v) \,P\, (w, x)\) and \((w, x) \,P\, (y, z)\). Then, by definition of $P$, \(u = w\) and 
+\(w = y\). It follows from the transitive property of equality that \(u = y\). Hence, by definition of $P$, \((u, v) \,P\, (y, z)\).
+
+$P$ is an equivalence relation because it is reflexive, symmetric, and transitive.
+
+(2) There is one equivalence class for each real number. The distinct equivalence classes are all sets of ordered 
+pairs \(\{(x, y) \in \R \times \R \,|\, x = a\}\), for each real number $a$. Equivalently, the equivalence classes 
+consist of all vertical lines in the Cartesian plane.
 \end{proof}
 
 \subsection{Exercise 30}
+Define $Q$ on the set \(\R \times \R\) as follows: For every \((w, x), (y, z) \in \R \times \R, (w, x) \,Q \, 
+(y, z) \iff x = z\).
 
 \begin{proof}
+(1) $Q$ is reflexive because for all \((w, x) \in \R \times \R, x = x\) so \((w, x) \,Q\, (w, x)\).
 
+$Q$ is symmetric: assume \((w, x) \,Q\, (y,z)\). Then \(x = z\). So \(z = x\) and thus \((y,z) \,Q\, (w, x)\).
+
+$Q$ is transitive: assume \((w, x) \,Q\, (y,z)\) and \((y,z) \,Q\, (s,t)\). Then \(x = z\) and \(z = t\). So 
+\(x = t\) and thus \((w,x) \,Q\, (s,t)\).
+
+(2) $Q$ has a distinct equivalence class, for each real number $a$, of the form \(\{(w,x) \in \R \times \R \,|\,
+x = a\}\).
 \end{proof}
 
 \subsection{Exercise 31}
+Let $P$ be the set of all points in the Cartesian plane except the origin. $R$ is the relation defined on $P$ as 
+follows: For every \(p_1\) and \(p_2\) in \(P, p_1 \,R\, p_2 \iff p_1\) and \(p_2\) lie on the same half-line 
+emanating from the origin.
 
 \begin{proof}
+(1) $R$ is reflexive: for every \(p \in P\), $p$ and $p$ lie on the same half-line emanating from the origin (namely
+the half-line that connects $p$ to the origin). Thus \(p \,R\, p\).
 
+$R$ is symmetric: assume \(p\,R\,q\). Then $p$ and $q$ lie on the same half-line $l$ emanating from the origin. Then 
+$q$ and $p$ lie on the same half-line $l$ emanating from the origin. Thus \(q \,R\,p\).
+
+$R$ is transitive: assume \(p \,R\,q\) and \(q \,R\,r\). Then $p$ and $q$ lie on the same half-line $l_1$ emanating 
+from the origin and $q$ and $r$ lie on the same half-line $l_2$ emanating from the origin. Then it must be that 
+\(l_1 = l_2\) since $q$ lies on both half-lines. Thus $p$ and $r$ lie on the same half-line emanating from the 
+origin, and \(p\,R\,r\).
+
+(2) Each equivalence class is a half-line $l$ emanating from the origin, containing all the points $p$ that lie on $l$.
 \end{proof}
 
 \subsection{Exercise 32}
+Let $A$ be the set of all straight lines in the Cartesian plane. Define a relation \(\parallel\) on $A$ as follows: 
+For every $l_1$ and $l_2$ in $A$, \(l_1 \parallel l_2 \iff l_1\) is parallel to $l_2$. Then \(\parallel\) is an 
+equivalence relation on $A$. Describe the equivalence classes of this relation. 
 
 \begin{proof}
+There is one equivalence class for each real number $t$ such that \(0 \leq t < \pi\). One line in each class goes 
+through the origin, and that line makes an angle of $t$ with the positive horizontal axis.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.3.32.png}
+\end{figure}
+
+Alternatively, there is one equivalence class for every
+possible slope: all real numbers plus “undefined.”
 \end{proof}
 
 \subsection{Exercise 33}
+Let $A$ be the set of points in the rectangle with $x$ and $y$ coordinates between 0 and 1. That is, 
+\[A = \{(x, y) \in \R \times \R \,|\, 0 \leq x \leq 1 \text{ and } 0 \leq y \leq 1\}.
+\] 
+Define a relation $R$ on $A$ as follows: For all \((x_1, y_1)\) and \((x_2, y_2)\) in $A$, 
+
+\begin{center}
+\begin{tabular}{ccccccc}
+\((x_1, y_1) \,R\, (x_2, y_2) \iff\) &\((x_1, y_1)\) & = & \((x_2, y_2);\) & or \\
+&\(x_1=0\) & and & \(x_2=1\) & and & \(y_1 = y_2\); & or \\
+&\(x_1=1\) & and & \(x_2=0\) & and & \(y_1 = y_2\); & or \\
+&\(y_1=0\) & and & \(y_2=1\) & and & \(x_1 = x_2\); & or \\
+&\(y_1=1\) & and & \(y_2=0\) & and & \(x_1 = x_2\). 
+\end{tabular}
+\end{center}
+
+In other words, all points along the top edge of the rectangle are related to the points along the bottom edge  
+directly beneath them, and all points directly opposite each other along the left and right edges are related to  
+each other. The points in the interior of the rectangle are not related to anything other than themselves. Then $R$ is 
+an equivalence relation on $A$. Imagine gluing together all the points that are in the same equivalence class. Describe 
+the resulting figure.
 
 \begin{proof}
+Gluing the top and bottom edges of the rectangle results in a horizontal cylinder. Then, if we also glue the left and
+right circular ends of this cylinder, we get a doughnut shaped figure:
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.2]{../images/8.3.33.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 34}
+The documentation for the computer language Java recommends that when an “equals method” is defined for an object, it 
+be an equivalence relation. That is, if $R$ is defined as follows: \(x \,R\, y \iff x.equals(y)\) for all objects in 
+the class, then $R$ should be an equivalence relation. Suppose that in trying to optimize some of the mathematics 
+of a graphics application, a programmer creates an object called a point, consisting of two coordinates in the plane. 
+The programmer defines an equals method as follows: If $p$ and $q$ are any points, then \(p.equals(q)\) iff the 
+distance from $p$ to $q$ is less than or equal to $c$ where $c$ is a small positive number that depends on the 
+resolution of the computer display. Is the programmer’s equals method an equivalence relation? Justify your answer.
 
 \begin{proof}
-
+No. If points \(p, q\), and $r$ all lie on a straight line with $q$ in the middle, and if $p$ is $c$ units from $q$ 
+and $q$ is $c$ units from $r$, then $p$ is more than $c$ units from $r$.
 \end{proof}
 
 \subsection{Exercise 35}
+Find an additional representative circuit for the input/output table of Example 8.3.9.
 
 \begin{proof}
+Recall that the output table is:
 
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|cc|c|}
+\hline
+\multicolumn{2}{|c|}{\cy Input} & {\cy Output} \\
+\hline
+\(\bm{P}\) & \(\bm{Q}\) & \(\bm{R}\) \\
+\hline
+1 & 1 & 0 \\
+\hline
+1 & 0 & 0 \\
+\hline
+0 & 1 & 0 \\
+\hline
+0 & 0 & 1 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+
+And two representative circuits for this table were given:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.3.35.png}
+\end{figure}
+
+Here is another:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.3.35.2.png}
+\end{figure}
 \end{proof}
 
+{\bf \cy Let $R$ be an equivalence relation on a set $A$. Prove each of the statements in $36-41$ directly from the 
+definitions of equivalence relation and equivalence class without using the results of Lemma 8.3.2, Lemma 8.3.3, or 
+Theorem 8.3.4.}
+
 \subsection{Exercise 36}
+For every $a$ in $A$, \(a \in [a]\).
 
 \begin{proof}
-
+Suppose $R$ is an equivalence relation on a set $A$ and \(a \in A\). Because $R$ is an equivalence relation, $R$ is 
+reflexive, and because $R$ is reflexive, each element of $A$ is related to itself by $R$. In particular \(a\,R\,a\). 
+Hence, by definition of equivalence class, \(a \in [a]\).
 \end{proof}
 
 \subsection{Exercise 37}
+For every $a$ and $b$ in $A$, if \(b \in [a]\) then \(a \,R\, b\).
 
 \begin{proof}
-
+Yes, by definition of \([a], b \in [a] \iff b \,R\,a\). So \(b \,R\, a\). By symmetry, \(a \,R\, b\).
 \end{proof}
 
 \subsection{Exercise 38}
+For every \(a, b\), and \(c\) in \(A\), if \(b \,R\, c\) and \(c \in [a]\) then \(b \in [a]\).
 
 \begin{proof}
-
+Suppose $R$ is an equivalence relation on a set $A$ and \(a, b\), and $c$ are elements of $A$ with \(b \,R\, c\) and 
+\(c \in [a]\). Since \(c \in [a]\), then \(c \,R\, a\) by definition of equivalence class. Now \(R\) is transitive 
+because \(R\) is an equivalence relation. Thus, since \(b \,R\, c\) and \(c \,R\, a\), then \(b \,R\, a\). It follows 
+that \(b \in [a]\) by definition of equivalence class.
 \end{proof}
 
 \subsection{Exercise 39}
+For every $a$ and $b$ in $A$, if \([a] = [b]\) then \(a \,R\, b\).
 
 \begin{proof}
-
+Assume \([a] = [b]\). By Exercise 36 \(b \in [b]\), and since \([a] = [b]\) we have \(b \in [a]\). So by Exercise 
+37 \(a \,R\, b\).
 \end{proof}
 
 \subsection{Exercise 40}
+For every \(a, b\), and \(x\) in \(A\), if \(a \,R\, b\) and \(x \in [a]\) then \(x \in [b]\).
 
 \begin{proof}
-
+Suppose \(a, b\), and \(x\) are in \(A, a \,R\, b\), and \(x \in [a]\). By definition of equivalence class, 
+\(x \,R\, a\). So \(x \,R\, a\) and \(a \,R\, b\), and thus, by transitivity, \(x \,R\, b\). Hence \(x \in [b]\).
 \end{proof}
 
 \subsection{Exercise 41}
+For every $a$ and $b$ in $A$, if \(a \in [b]\) then \([a] = [b]\).
 
 \begin{proof}
+Assume \(x \in [a]\). Then \(x \,R\, a\) by definition of \([a]\). Since \(a \in [b]\), by Exercise 37 \(b \,R\, a\).
+By symmetry, \(a \,R\, b\). Then by transitivity \(x \,R\, b\). So \(x \in [b]\) by definition of \([b]\). Thus 
+\([a] \subseteq [b]\).
 
+Assume \(x \in [b]\). Then \(x \,R\, b\) by definition of \([b]\). Since \(a \in [b]\), by Exercise 37 \(b \,R\, a\).
+Then by transitivity \(x \,R\, a\). So \(x \in [a]\) by definition of \([a]\). Thus \([b] \subseteq [a]\).
+
+So by definition of set equality \([a] = [b]\).
 \end{proof}
 
 \subsection{Exercise 42}
+Let $R$ be the relation defined in Example 8.3.12: \((a,b) \,R\, (c,d) \iff ad = bc\).
 
 \subsubsection{(a)}
+Prove that $R$ is reflexive.
 
 \begin{proof}
-
+For all \(a \in \Z, b \in \Z - \{0\}, ab = ba\), therefore \((a,b) \,R\, (a,b)\). So $R$ is reflexive.
 \end{proof}
 
 \subsubsection{(b)}
+Prove that $R$ is symmetric.
 
 \begin{proof}
-
+Assume \((a,b) \,R\, (c,d)\). Then \(ad = bc\). So \(bc = ad\) and thus \((c,d) \,R\, (a,b)\). So $R$ is symmetric.
 \end{proof}
 
 \subsubsection{(c)}
+List four distinct elements in [(1, 3)].
 
 \begin{proof}
-
+One possible answer: \((2, 6), (-2, -6), (3, 9), (-3, -9)\).
 \end{proof}
 
 \subsubsection{(d)}
+List four distinct elements in [(2, 5)].
 
 \begin{proof}
-
+One possible answer: \((4, 10), (6, 15), (8, 20), (10, 25)\).
 \end{proof}
 
 \subsection{Exercise 43}
+In Example 8.3.12, define operations of addition (+) and multiplication (\(\cdot\)) as follows: For every \((a, b), 
+(c, d) \in A, [(a, b)] + [(c, d)] = [(ad + bc, bd)]\) and \([(a, b)] \cdot [(c, d)] = [(ac, bd)]\).
 
 \subsubsection{(a)}
+Prove that this addition is well defined. That is, show that if \([(a, b)] = [(a', b')]\) and \([(c, d)] = [(c', 
+d')]\), then \([(ad + bc, bd)] = [(a'd' + b'c', b'd')]\).
 
 \begin{proof}
-
+Suppose that \((a, b), (a', b'), (c, d)\), and \((c', d')\) are any elements of \(A\) such that \([(a, b)]=[(a', b')]\) 
+and \([(c, d)] = [(c', d')]\). By definition of \(R, ab' = ba'\) (*) and \(cd' = dc'\) (**). We must show that 
+\([(a, b)] + [(c, d)] = [(a', b')] + [(c', d')]\). By definition of the addition on \(A\), this equation is true 
+if, and only if, \([(ad + bc, bd)] = [(a'd' + b'c', b'd')]\). And, by definition of the relation, this equation is 
+true if, and only if, \((ad + bc)b'd' = bd(a'd' + b'c')\). After multiplying out, this becomes \(adb'd' + bcb'd' = 
+bda'd' + bdb'c'\), and regrouping, turns it into \((ab')(dd') + (cd')(bb') = (ba')(dd') + (dc')(bb')\). 
+Substituting the values from (*) and (**) shows that this last equation is true. 
 \end{proof}
 
 \subsubsection{(b)}
+Prove that this multiplication is well defined. That is, show that if \([(a, b)] = [(a', b')]\) and \([(c, d)] = 
+[(c', d')]\), then \([(ac, bd)] = [(a'c', b'd')]\).
 
 \begin{proof}
+1. Assume \([(a, b)] = [(a', b')]\) and \([(c, d)] = [(c', d')]\).
 
+2. By 1 and the definition of equivalence classes of $R$, \((a,b) \,R\, (a',b')\) and \((c,d) \,R\, (c',d')\).
+
+3. By 2 and definition of $R$, \(ab' = ba'\) and \(cd' = dc'\).
+
+4. By 3, multiplying the left hand sides together and the right hand sides together, \(ab'cd' = ba'dc'\).
+
+5. By 4 and commutativity, reorganizing, \((ac)(b'd') = (bd)(a'c')\).
+
+6. By 5 and definition of $R$, \((ad, bc) \,R\, (a'c', b'd')\).
+
+7. By 6 and definition of equivalence classes of $R$, \([(ad, bc)] = [(a'c', b'd')]\).
 \end{proof}
 
 \subsubsection{(c)}
+Show that \([(0, 1)]\) is an identity element for addition. That is, show that for any \((a, b) \in A, [(a, b)] + [(0, 
+1)] = [(0, 1)] + [(a, b)] = [(a, b)]\).
 
 \begin{proof}
-
+Suppose that \((a, b)\) is any element of \(A\). We must show that \([(a, b)] + [(0, 1)] = [(a, b)]\). By definition 
+of the addition on \(A\), this equation is true if, and only if, \([(a \cdot 1 + b \cdot 0, b \cdot 1)]=[(a, b)]\). 
+And this last equation is true because \(a \cdot 1 + b \cdot 0 = a\) and \(b \cdot 1 = b\).
 \end{proof}
 
 \subsubsection{(d)}
+Find an identity element for multiplication. That is, find \((i, j)\) in \(A\) so that for every \((a, b)\) in \(A\), 
+\([(a, b)] \cdot [(i, j)] = [(i, j)] \cdot [(a, b)] = [(a, b)]\).
 
 \begin{proof}
-
+The multiplicative identity is \((1,1)\). Indeed, by definition of multiplication on \(A\), \([(a, b)] \cdot 
+[(1, 1)] = [(a \cdot 1, b \cdot 1)] = [(a,b)]\) and \([(1, 1)] \cdot [(a, b)] = [(1 \cdot a, 1 \cdot b)] = [(a,b)]\).
 \end{proof}
 
 \subsubsection{(e)}
+For any \((a, b) \in A\), show that \([(-a, b)]\) is an inverse for \([(a, b)]\) for addition. That is, show that 
+\([(-a, b)] + [(a, b)] = [(a, b)] + [(-a, b)] = [(0, 1)]\).
 
 \begin{proof}
-
+Suppose that \((a, b)\) is any element of \(A\). We must show that \([(a, b)] + [(-a, b)] = [(-a, b)] + [(a, b)] = 
+[(0, 1)]\). By definition of the addition on \(A\), this equation is true if, and only if, \([(ab + b(-a), bb)] = 
+[(0, 1)]\), or, equivalently, \([(0, bb)] = [(0, 1)]\). By definition of the relation, this last equation is true if, 
+and only if, \(0 \cdot 1 = bb \cdot 0\), which is true.
 \end{proof}
 
 \subsubsection{(f)}
+Given any \((a, b) \in A\) with \(a \neq 0\), find an inverse for \([(a, b)]\) for multiplication. That is, find 
+\((c, d)\) in \(A\) so that \([(a, b)] \cdot [(c, d)] = [(c, d)] \cdot [(a, b)] = [(i, j)]\), where \([(i, j)]\) is 
+the identity element you found in part (d).
 
 \begin{proof}
+Given \([(a,b)]\) we want to find \([(c,d)]\) such that \([(a,b)] \cdot [(c,d)] = [(ac,bd)] = [(1,1)]\). 
 
+So by the definition of equivalence classes of $R$ on $A$, \((ac,bd)\) is related to \((1,1)\) by $R$, in other words 
+\(ac \cdot 1 = bd \cdot 1\), or \(ac = bd\). Then let \((c,d) = (b,a)\). So \(ac = ab = ba = bd\), therefore 
+\((ac,bd) \,R\, (1,1)\) and thus \([(ac,bd)] = [(1,1)]\), in other words \([(a,b)] \cdot [(c,d)] = [(1,1)]\).
+
+Similarly we can prove that \([(c,d)] \cdot [(a,b)] = [(1,1)]\).
 \end{proof}
 
 \subsection{Exercise 44}
+Let \(A = Z^+ \times Z^+\). Define a relation \(R\) on \(A\) as follows: For every \((a, b)\) and \((c, d)\) in 
+\(A, (a, b) \,R\, (c, d) \iff a + d = c + b\).
 
 \subsubsection{(a)}
+Prove that $R$ is reflexive.
 
 \begin{proof}
-
+Let \((a, b)\) be any element of \(Z^+ \times Z^+\). We must show that \((a, b) \,R\, (a, b)\). By definition of 
+$R$, this relationship holds if, and only if, \(a + b = b + a\). But this equation is true by the commutative law of 
+addition for real numbers. Hence \(R\) is reflexive.
 \end{proof}
 
 \subsubsection{(b)}
+Prove that $R$ is symmetric.
 
 \begin{proof}
-
+Assume \((a, b) \,R\, (c, d)\). Then by definition of $R$, \(a + d = c + b\). So \(c + b = a + d\). Thus 
+\((c, d) \,R\, (a, b)\) by definition of $R$. So $R$ is symmetric.
 \end{proof}
 
 \subsubsection{(c)}
+Prove that $R$ is transitive.
 
 \begin{proof}
-
+Assume \((a, b) \,R\, (c, d)\) and \((c, d)\,R\,(e, f)\). By definition of $R$, \(a + d=c + b\) and \(c + f=e + d\).
+Adding the two equations we get \(a+d+c+f = c+b+e+d\). Canceling \(c+d\) on both sides we get \(a+f = e+b\), thus
+\((a,b) \,R\, (e,f)\) so $R$ is transitive.
 \end{proof}
 
 \subsubsection{(d)}
+List five elements in [(1, 1)].
 
 \begin{proof}
-
+One possible answer: (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)
 \end{proof}
 
 \subsubsection{(e)}
+List five elements in [(3, 1)].
 
 \begin{proof}
-
+One possible answer: (4, 2), (5, 3), (6, 4), (7, 5), (8, 6)
 \end{proof}
 
 \subsubsection{(f)}
+List five elements in [(1, 2)].
 
 \begin{proof}
-
+One possible answer: (1, 2), (2, 3), (3, 4), (4, 5), (5, 6)
 \end{proof}
 
 \subsubsection{(g)}
+Describe the distinct equivalence classes of $R$.
 
 \begin{proof}
-
+Observe that for any positive integers $a$ and $b$, the equivalence class of \((a, b)\) consists of all ordered 
+pairs in \(Z^+ \times Z^+\) for which the difference between the first and second coordinates equals \(a - b\). 
+Thus there is one equivalence class for each integer: positive, negative, and zero. Each positive integer \(n\) 
+corresponds to the class of \((n + 1, 1)\); each negative integer \(-n\) corresponds to the class of \((1, n + 1)\); 
+and zero corresponds to the class \((1, 1)\).
 \end{proof}
 
 \subsection{Exercise 45}
+The following argument claims to prove that the requirement that an equivalence relation be reflexive is redundant. In 
+other words, it claims to show that if a relation is symmetric and transitive, then it is reflexive. Find the 
+mistake in the argument.
+
+“Proof: Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and transitive. For any two elements $x$ and 
+$y$ in $A$, if \(x \,R\, y\) then \(y \,R\, x\) since $R$ is symmetric. Thus it follows by transitivity that 
+\(x \,R\, x\), and hence $R$ is reflexive.”
 
 \begin{proof}
-
+The conclusion \(x \,R\, x\) only follows under the assumption that \(x \,R\, y\), which has not been 
+discharged from the proof. (See next exercise.)
 \end{proof}
 
 \subsection{Exercise 46}
+Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and transitive. Prove the following: If for every 
+$x$ in $A$ there is a $y$ in $A$ such that \(x \,R\, y\), then $R$ is an equivalence relation.
 
 \begin{proof}
-
+Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and transitive. Assume $x$ is any element in $A$. 
+By the assumption, there exists $y$ in $A$ such that \(x \,R\, y\). Then \(y \,R\, x\) since $R$ is symmetric. Thus 
+it follows by transitivity that \(x \,R\, x\), and hence $R$ is reflexive. Hence $R$ is an equivalence relation.
 \end{proof}
 
 \subsection{Exercise 47}
+Refer to the quote at the beginning of this section to answer the following questions.
 
 \subsubsection{(a)}
+What is the name of the Knight’s song called?
 
 \begin{proof}
-
+... The name of the song is called ‘Haddocks’ Eyes.’
 \end{proof}
 
 \subsubsection{(b)}
+What is the name of the Knight’s song?
 
 \begin{proof}
-
+The name really is ‘The Aged Aged Man.’
 \end{proof}
 
 \subsubsection{(c)}
+What is the Knight’s song called?
 
 \begin{proof}
-
+“Ways and Means”
 \end{proof}
 
 \subsubsection{(d)}
+What is the Knight’s song?
 
 \begin{proof}
-
+The song really is ‘A-sitting on a Gate’
 \end{proof}
 
 \subsubsection{(e)}
+What is your (full, legal) name?
 
 \begin{proof}
-
+Spam, Egg
 \end{proof}
 
 \subsubsection{(f)}
+What are you called?
 
 \begin{proof}
-
+Spam
 \end{proof}
 
 \subsubsection{(g)}
+What are you? (Do not answer this on paper; just think about it.)
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \section{Exercise Set 8.4}
