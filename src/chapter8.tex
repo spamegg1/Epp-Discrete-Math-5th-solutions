@@ -2417,435 +2417,1125 @@ What are you? (Do not answer this on paper; just think about it.)
 \section{Exercise Set 8.4}
 
 \subsection{Exercise 1}
-
 \subsubsection{(a)}
+Use the Caesar cipher to encrypt the message WHERE SHALL WE MEET.
 
 \begin{proof}
-
+ZKHUH VKDOO ZH PHHW
 \end{proof}
 
 \subsubsection{(b)}
+Use the Caesar cipher to decrypt the message LQ WKH FDIHWHULD.
 
 \begin{proof}
-
+IN THE CAFETERIA
 \end{proof}
 
 \subsection{Exercise 2}
-
 \subsubsection{(a)}
+Use the Caesar cipher to encrypt the message AN APPLE A DAY.
 
 \begin{proof}
-
+DQ DSSOH D GDB
 \end{proof}
 
 \subsubsection{(b)}
+Use the Caesar cipher to decrypt the message NHHSV WKH GRFWRU DZDB.
 
 \begin{proof}
-
+KEEPS THE DOCTOR AWAY
 \end{proof}
 
 \subsection{Exercise 3}
+Let \(a = 25, b = 19, n = 3\).
 
 \subsubsection{(a)}
+Verify that \(3 \mid (25 - 19)\).
 
 \begin{proof}
-
+The relation \(3 \mid (25 - 19)\) is true because \(25 - 19 = 6\) and \(3 \mid 6\) (since \(6 = 3 \cdot 2\)).
 \end{proof}
 
 \subsubsection{(b)}
+Explain why \(25 \equiv 19 \pmod 3\).
 
 \begin{proof}
-
+By definition of congruence modulo \(n\), to show that \(25 \equiv 19 \pmod 3\), one must show that \(3 \mid (25-19)\). 
+This was verified in part (a).
 \end{proof}
 
 \subsubsection{(c)}
+What value of \(k\) has the property that \(25 = 19 + 3k\)?
 
 \begin{proof}
-
+To show that \(25 = 19 + 3k\) for some integer \(k\), one solves the equation for \(k\) and checks that the result is 
+an integer. In this case, \(k = (25 - 19)/3 = 2\), which is an integer. Thus \(25 = 19 + 2 \cdot 3\).
 \end{proof}
 
 \subsubsection{(d)}
+What is the (nonnegative) remainder obtained when 25 is divided by 3? When 19 is divided by 3?
 
 \begin{proof}
-
+When 25 is divided by 3, the remainder is 1 because \(25 = 3 \cdot 8 + 1\). When 19 is divided by 3, the remainder is 
+also 1 because \(19 = 3 \cdot 6 + 1\). Thus 25 and 19 have the same remainder when divided by 3.
 \end{proof}
 
 \subsubsection{(e)}
+Explain why \(25 \mod 3 = 19 \mod 3\).
 
 \begin{proof}
-
+By definition, \(25 \mod 3\) is the remainder obtained when 25 is divided by 3, and \(19 \mod 3\) is the remainder 
+obtained when 19 is divided by 3. In part (d) these two numbers were shown to be equal.
 \end{proof}
 
 \subsection{Exercise 4}
+Let \(a = 68, b = 33, n = 7\).
 
 \subsubsection{(a)}
+Verify that \(7 \mid (68 - 33)\).
 
 \begin{proof}
-
+The relation \(7 \mid (68 - 33)\) is true because \(68 - 33 = 35\) and \(7 \mid 35\) (since \(35 = 7 \cdot 5\)).
 \end{proof}
 
 \subsubsection{(b)}
+Explain why \(68 \equiv 33 \pmod 7\).
 
 \begin{proof}
-
+By definition of congruence modulo \(n\), to show that \(68 \equiv 33 \pmod 7\), one must show that \(7 \mid (68-33)\). 
+This was verified in part (a).
 \end{proof}
 
 \subsubsection{(c)}
+What value of $k$ has the property that \(68 = 33 + 7k\)?
 
 \begin{proof}
-
+To show that \(68 = 33 + 7k\) for some integer \(k\), one solves the equation for \(k\) and checks that the result is 
+an integer. In this case, \(k = (68 - 33)/7 = 5\), which is an integer. Thus \(68 = 33 + 7 \cdot 5\).
 \end{proof}
 
 \subsubsection{(d)}
+What is the (nonnegative) remainder obtained when 68 is divided by 7? When 33 is divided by 7?
 
 \begin{proof}
-
+When 68 is divided by 7, the remainder is 5 because \(68 = 7 \cdot 9 + 5\). When 33 is divided by 7, the remainder is 
+also 5 because \(33 = 7 \cdot 4 + 5\). Thus 68 and 33 have the same remainder when divided by 7.
 \end{proof}
 
 \subsubsection{(e)}
+Explain why \(68 \mod 7 = 33 \mod 7\).
 
 \begin{proof}
-
+By definition, \(68 \mod 7\) is the remainder obtained when 68 is divided by 7, and \(33 \mod 7\) is the remainder 
+obtained when 33 is divided by 7. In part (d) these two numbers were shown to be equal.
 \end{proof}
 
 \subsection{Exercise 5}
+Prove the transitivity of modular congruence. That is, prove that for all integers \(a, b, c\), and \(n\) with 
+\(n > 1\), if \(a \equiv b \pmod n\) and \(b \equiv c \pmod n\) then \(a \equiv c \pmod n\).
 
 \begin{proof}
+1. Assume \(a \equiv b \pmod n\) and \(b \equiv c \pmod n\).
 
+2. By 1 and definition of modular congruence, \(n \mid (a-b)\) and \(n \mid (b-c)\).
+
+3. By 2 and definition of divides, \(a-b = en\) and \(b-c = fn\) for some integers \(e,f\).
+
+4. By 3, adding the equations we get \(a-c = (a-b)+(b-c) = en + fn = (e+f)n\) where \(e+f\) is an integer.
+
+5. By 4 and definition of divides, \(n \mid (a-c)\).
+
+6. By 5 and definition of modular congruence, \(a \equiv c \pmod n\).
 \end{proof}
 
 \subsection{Exercise 6}
+Prove that the distinct equivalence classes of the relation of congruence modulo \(n\) are the sets \([0], [1], [2], 
+\ldots, [n - 1]\), where for each \(a = 0, 1, 2, \ldots, n - 1, [a] = \{m \in \Z \,|\, m \equiv a \pmod n\}\).
 
 \begin{proof}
+Assume \(a \in \Z\). By the quotient-remainder theorem, \(a = nq + r\) for some integers \(q,r\) with \(0 \leq r < n\).
+So \(a \equiv r \pmod n\) and by definition of \([r], a \in [r]\). Since \(0 \leq r < n\), $a$ belongs to one of the 
+sets \([0], [1], [2], \ldots, [n - 1]\).
 
+Now we need to show the sets \([0], [1], [2], \ldots, [n - 1]\) are distinct equivalence classes. Assume \(0\leq a<n\)
+and \(0 \leq b < n\). We need to show that if \([a] = [b]\) then \(a = b\). 
+
+Assume \([a] = [b]\). Since \(a \equiv a \pmod n\), by definition of \([a], a \in [a]\). Since \([a] = [b], a \in [b]\). Then by definition of \([b]\), \(a \equiv b \pmod n\). So \(n \mid (a-b)\). So \(a-b = kn\) for some integer $k$. Notice that since \(0\leq a < n\) and \(0 \leq b < n\), we have \(-n < a-b < n\). Therefore $k=0$. So $a=b$.
+
+We have shown that every integer belongs to one of the classes \([0], [1], [2], \ldots, [n-1]\), and we have show 
+that these classes are all distinct.
 \end{proof}
 
 \subsection{Exercise 7}
+Verify the following statements.
 
 \subsubsection{(a)}
+\(128 \equiv 2 \pmod 7\) and \(61 \equiv 5 \pmod 7\)
 
 \begin{proof}
-
+\(128 \equiv 2 \pmod 7\) because \(128 - 2 = 126 = 7 \cdot 18\),
+\(61 \equiv 5 \pmod 7\) because \(61 - 5 = 56 = 7 \cdot 8\)
 \end{proof}
 
 \subsubsection{(b)}
+\((128 + 61) \equiv (2 + 5) \pmod 7\)
 
 \begin{proof}
-
+\(128 + 61 \equiv (2 + 5) \pmod 7\) because \(128 + 61 = 189, 2 + 5 = 7\), and \(189 - 7 = 182 = 7 \cdot 26\).
 \end{proof}
 
 \subsubsection{(c)}
+\((128 - 61) \equiv (2 - 5) \pmod 7\)
 
 \begin{proof}
-
+\(128 - 61 \equiv (2 - 5) \pmod 7\) because \(128 - 61 = 67, 2 - 5 = -3\), and \(67 - (-3) = 70 = 7 \cdot 10\).
 \end{proof}
 
 \subsubsection{(d)}
+\((128 \cdot 61) \equiv (2 \cdot 5) \pmod 7\)
 
 \begin{proof}
-
+\(128 \cdot 61 \equiv (2 \cdot 5) \pmod 7\) because \(128 \cdot 61 = 7808, 2 \cdot 5 = 10\), and \(7808 - (10) = 7798 
+= 7 \cdot 1114\).
 \end{proof}
 
 \subsubsection{(e)}
+\(128^2 \equiv 2^2 \pmod 7\)
 
 \begin{proof}
-
+\(128^2 \equiv 2^2 \pmod 7\) because \(128^2 = 16384, 2^2 = 4\), and \(16384 - 4 = 16380 = 7 \cdot 2340\).
 \end{proof}
 
 \subsection{Exercise 8}
+Verify the following statements.
 
 \subsubsection{(a)}
+\(45 \equiv 3 \pmod 6\) and \(104 \equiv 2 \pmod 6\)
 
 \begin{proof}
+\(45 \equiv 3 \pmod 6\) because \(45 - 3 = 42 = 6 \cdot 7\)
 
+\(104 \equiv 2 \pmod 6\) because \(104 - 2 = 102 = 6 \cdot 17\)
 \end{proof}
 
 \subsubsection{(b)}
+\((45 + 104) \equiv (3 + 2) \pmod 6\)
 
 \begin{proof}
-
+\(45 + 104 \equiv (3 + 2) \pmod 6\) because \(45 + 104 = 149, 3 + 2 = 5\), and \(149 - 5 = 144 = 6 \cdot 24\).
 \end{proof}
 
 \subsubsection{(c)}
+\((45 - 104) \equiv (3 - 2) \pmod 6\)
 
 \begin{proof}
-
+\(45 - 104 \equiv (3 - 2) \pmod 6\) because \(45 - 104 = -59, 3 - 2 = 1\), and \(-59 - (1) = -60 = 6 \cdot (-10)\).
 \end{proof}
 
 \subsubsection{(d)}
+\((45 \cdot 104) \equiv (3 \cdot 2) \pmod 6\)
 
 \begin{proof}
-
+\(45 \cdot 104 \equiv (3 \cdot 2) \pmod 6\) because \(45 \cdot 104 = 4680, 3 \cdot 2 = 6\), and \(4680 - (6) = 4674 
+= 6 \cdot 779\).
 \end{proof}
 
 \subsubsection{(e)}
+\(45^2 \equiv 3^2 \pmod 6\)
 
 \begin{proof}
-
+\(45^2 \equiv 3^2 \pmod 6\) because \(45^2 = 2025, 3^2 = 9\), and \(2025 - 9 = 2016 = 6 \cdot 336\).
 \end{proof}
 
+{\bf \cy In $9-11$, prove each of the given statements, assuming that \(a, b, c, d\), and \(n\) are integers with 
+\(n > 1\) and that \(a \equiv c \pmod n\) and \(b \equiv d \pmod n\).}
+
 \subsection{Exercise 9}
+\((a + b) \equiv (c + d) \pmod n\)
 
 \subsubsection{(a)}
 
 \begin{proof}
-
+Suppose \(a, b, c, d\), and \(n\) are integers with \(n > 1, a \equiv c \pmod n\), and \(b \equiv d \pmod n\). By 
+Theorem 8.4.1, \(a - c = nr\) and \(b - d = ns\) for some integers \(r\) and \(s\). Then \((a + b) - (c + d) = 
+(a - c) + (b - d) = nr + ns = n(r + s)\). Now \(r + s\) is an integer, and so, by Theorem 8.4.1, 
+\(a + b \equiv (c + d) \pmod n\).
 \end{proof}
 
 \subsubsection{(b)}
+\((a - b) \equiv (c - d) \pmod n\)
 
 \begin{proof}
-
+Suppose \(a, b, c, d\), and \(n\) are integers with \(n > 1, a \equiv c \pmod n\), and \(b \equiv d \pmod n\). By 
+Theorem 8.4.1, \(a - c = nr\) and \(b - d = ns\) for some integers \(r\) and \(s\). Then \((a - b) - (c - d) = 
+(a - c) - (b - d) = nr - ns = n(r - s)\). Now \(r - s\) is an integer, and so, by Theorem 8.4.1, 
+\(a - b \equiv (c - d) \pmod n\).
 \end{proof}
 
 \subsection{Exercise 10}
+\(a^2 \equiv c^2 \pmod n\)
 
 \begin{proof}
-
+Suppose \(a, c\), and \(n\) are integers with \(n > 1\) and \(a \equiv c \pmod n\). By Theorem 8.4.1, \(a - c = nr\) 
+for some integers \(r\). Then \(a^2-c^2 = (a-c)(a+c) = nr(a+c)\). Now \(r(a+c)\) is an integer, and so, by Theorem 
+8.4.1, \(a^2 \equiv c^2 \pmod n\).
 \end{proof}
 
 \subsection{Exercise 11}
+\(a^m \equiv c^m \pmod n\) for every integer \(m \geq 1\) (Use mathematical induction on \(m\).)
 
 \begin{proof}
+{\it Show that \(a \equiv c \pmod n\)}: This holds by assumption.
 
+{\it Show that for every integer \(m \geq 1\) if \(a^m \equiv c^m \pmod n\) then \(a^{m+1} \equiv c^{m+1} \pmod 
+n\):} Assume \(m \geq 1\) and \(a^m \equiv c^m \pmod n\). We also know that \(a \equiv c \pmod n\) by assumption, so 
+\(a-c = ns\) for some integer $s$. Then
+
+\begin{center}
+\begin{tabular}{rcl}
+\(a^{m+1} - c^{m+1}\) & = & \((a-c)(a^{m} + a^{m-1}c + \ldots + ac^{m-1} + c^{m})\) \\
+& = & \(ns(a^{m} + a^{m-1}c + \ldots + ac^{m-1} + c^{m})\) \\
+\end{tabular}
+\end{center}
+
+therefore \(n \mid (a^{m+1}-c^{m+1})\), so by definition of congruence, \(a^{m+1} \equiv c^{m+1} \pmod n\).
 \end{proof}
 
 \subsection{Exercise 12}
-
 \subsubsection{(a)}
+Prove that for every integer \(n \geq 0, 10^n \equiv 1 \pmod 9\).
 
 \begin{proof}
+Let the property \(P(n)\) be the congruence \(10^n \equiv 1 \pmod 9\).
 
+{\bf Show that \(P(0)\) is true:} When \(n = 0\), the left-hand side of the congruence is \(10^0 = 1\) and the right-
+hand side is also 1.
+
+{\bf Show that for every integer \(k \geq 0\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let \(k\) be any 
+integer with \(k \geq 0\), and suppose \(P(k)\) is true. That is, suppose \(10^k \equiv 1 \pmod 9\). (*) {\it [This 
+is the inductive hypothesis.]} By Theorem 8.4.1, \(10 \equiv 1 \pmod 9\) (**) because \(10 - 1 = 9 = 9 \cdot 1\). 
+And by Theorem 8.4.3, we can multiply the left- and right-hand sides of (*) and (**) to obtain \(10^k \cdot 10 \equiv 
+1 \cdot 1 \pmod 9\), or, equivalently, \(10^{k+1} \equiv 1 \pmod 9\). Hence \(P(k + 1)\) is true.
+
+Alternative Proof: Note that \(10 \equiv 1 \pmod 9\) because \(10 - 1 = 9\) and \(9 \mid 9\). Thus by Theorem 
+8.4.3(4), \(10^n \equiv 1^n \equiv 1 \pmod 9\).
 \end{proof}
 
 \subsubsection{(b)}
+Use part (a) to prove that a positive integer is divisible by 9 if, and only if, the sum of its digits is divisible by 9.
 
 \begin{proof}
+Assume \(n\) is a positive integer. We can write \(n\) in base 10 expansion:
+\[
+n = a_k \cdot 10^k + a_{k-1} \cdot 10^{k-1} + \cdots + a_1 \cdot 10 + a_0 \cdot 10^0
+\]
+where \(a_k, \ldots, a_0\) are the decimal digits of $n$.
 
+{\it [We want to show $n$ is divisible by 9 if and only if \(a_k + a_{k-1} + \cdots +a_1+ a_0\) is divisible by 9.]}
+
+By part (a), \(10^k \equiv 10^{k-1} \equiv \cdots \equiv 10^1 \equiv 10^0 \equiv 1 \pmod 9\). Therefore
+\[
+n \equiv a_k \cdot 10^k + a_{k-1} \cdot 10^{k-1} + \cdots + a_1 \cdot 10 + a_0 \cdot 10^0 \equiv a_k \cdot 1 + \cdots + 
+a_1 \cdot 1 + a_0 \cdot 1 \pmod 9
+\]
+If \(n\) is divisible by 9, \(n \equiv 0 \pmod 9\), so by the above congruence, \(a_k +\cdots+a_0 \equiv 0 \pmod 9\), 
+so \(a_k + \cdots + a_0\) is divisible by 9. Similarly if \(a_k + \cdots + a_0\) is divisible by 9 then $n$ is 
+divisible by 9 by the same reasoning.
 \end{proof}
 
 \subsection{Exercise 13}
-
 \subsubsection{(a)}
+Prove that for every integer \(n \geq 1, 10^n \equiv (-1)^n \pmod{11}\).
 
 \begin{proof}
+Let the property \(P(n)\) be the congruence \(10^n \equiv (-1)^n \pmod{11}\).
 
+{\bf Show that \(P(0)\) is true:} When \(n = 0\), the left-hand side of the congruence is \(10^0 = 1\) and the right-
+hand side is also \((-1)^n = 1\).
+
+{\bf Show that for every integer \(k \geq 0\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let \(k\) be any 
+integer with \(k \geq 0\), and suppose \(P(k)\) is true. That is, suppose \(10^k \equiv (-1)^k \pmod{11}\). (*) {\it 
+[This is the inductive hypothesis.]} By Theorem 8.4.1, \(10 \equiv -1 \pmod{11}\) (**) because \(10 - (-1) = 11 = 11 
+\cdot 1\). And by Theorem 8.4.3, we can multiply the left- and right-hand sides of (*) and (**) to obtain \(10^k \cdot 
+10 \equiv (-1)^k \cdot (-1) \pmod{11}\), or, equivalently, \(10^{k+1} \equiv (-1)^{k+1} \pmod{11}\). Hence \(P(k + 1)\) is true.
 \end{proof}
 
 \subsubsection{(b)}
+Use part (a) to prove that a positive integer is divisible by 11 if, and only if, the alternating sum of its digits is 
+divisible by 11. (For instance, the alternating sum of the digits of 82,379 is \(8 - 2 + 3 - 7 + 9 = 11\) and 
+\(82,379 = 11 \cdot 7489\).)
 
 \begin{proof}
+Assume \(n\) is a positive integer. We can write \(n\) in base 10 expansion:
+\[
+n = a_k \cdot 10^k + a_{k-1} \cdot 10^{k-1} + \cdots + a_1 \cdot 10 + a_0 \cdot 10^0
+\]
+where \(a_k, \ldots, a_0\) are the decimal digits of $n$.
 
+{\it [We want to show $n$ is divisible by 11 if and only if \(a_k \cdot (-1)^k + a_{k-1} \cdot (-1)^{k-1} + \cdots + 
+a_1 \cdot (-1)^1 + a_0 \cdot (-1)^0\) is divisible by 11.]}
+
+By part (a), \(10^k \equiv (-1)^{k} \pmod {11}\). Therefore
+\[
+n \equiv a_k \cdot (-1)^k + a_{k-1} \cdot (-1)^{k-1} + \cdots + a_1 \cdot (-1)^1 + a_0 \cdot (-1)^0 \pmod{11}
+\]
+If \(n\) is divisible by 11, \(n \equiv 0 \pmod{11}\), so by the above congruence, \(a_k \cdot (-1)^k + \cdots + a_0 
+\cdot (-1)^0 \equiv 0 \pmod{11}\), so \(a_k \cdot (-1)^k + \cdots + a_0 \cdot (-1)^0\) is divisible by 11. Similarly 
+if \(a_k + \cdots + a_0\) is divisible by 11 then $n$ is 
+divisible by 11 by the same reasoning.
 \end{proof}
 
 \subsection{Exercise 14}
+Use the technique of Example 8.4.4 to find \(14^2 \mod 55, 14^4 \mod 55, 14^8 \mod 55\), and \(14^{16} \mod 55\).
 
 \begin{proof}
-
+\begin{tabular}{lclclcl}
+\(14^1 \mod 55\) & = & \(14\) \\
+\(14^2 \mod 55\) & = & \(196 \mod 55\) & = & \(31\) \\
+\(14^4 \mod 55\) & = & \((14^2 \mod 55)^2 \mod 55\) & = & \(31^2 \mod 55\) & = & \(26\) \\
+\(14^8 \mod 55\) & = & \((14^4 \mod 55)^2 \mod 55\) & = & \(26^2 \mod 55\) & = & \(16\) \\
+\(14^{16} \mod 55\) & = & \((14^8 \mod 55)^2 \mod 55\) & = & \(16^2 \mod 55\) & = & \(36\)
+\end{tabular}
 \end{proof}
 
 \subsection{Exercise 15}
+Use the result of exercise 14 and the technique of Example 8.4.5 to find \(14^{27} \mod 55\).
 
 \begin{proof}
+\(14^{27} \mod 55 = 14^{16+8+2+1} \mod 55\)
 
+\begin{tabular}{rcl}
+& = & \((14^{16} \mod 55)(14^8 \mod 55)(14^2 \mod 55)(14 \mod 55) \mod 55\) \\
+& = & \(36 \cdot 16 \cdot 31 \cdot 14 \mod 55 = 249985 \mod 55 = 9\)
+\end{tabular}
 \end{proof}
 
+{\bf \cy In $16-18$, use the techniques of example 8.4.4 and example 8.4.5 to find the given numbers.}
+
 \subsection{Exercise 16}
+\(675^{307} \mod 713\)
 
 \begin{proof}
+Note that \(307 = 256 + 32 + 16 + 2 + 1\).
 
+\begin{tabular}{lclclcl}
+\(675^1 \mod 713\) & = & \(675\) \\
+\(675^2 \mod 713\) & = & \(455625 \mod 713\) & = & \(18\)\\
+\(675^4 \mod 713\) & = & \(18^2 \mod 713\) & = & \(324\) \\
+\(675^8 \mod 713\) & = & \(324^2 \mod 713\) & = & \(104976 \mod 713\) & = & \(165\) \\
+\(675^{16} \mod 713\) & = & \(165^2 \mod 713\) & = & \(27225 \mod 713\) & = & \(131\) \\
+\(675^{32} \mod 713\) & = & \(131^2 \mod 713\) & = & \(17161 \mod 713\) & = & \(49\) \\
+\(675^{64} \mod 713\) & = & \(49^2 \mod 713\) & = & \(2401 \mod 713\) & = & \(262\) \\
+\(675^{128} \mod 713\) & = & \(262^2 \mod 713\) & = & \(68644 \mod 713\) & = & \(196\) \\
+\(675^{256} \mod 713\) & = & \(196^2 \mod 713\) & = & \(38416 \mod 713\) & = & \(627\)
+\end{tabular}
+
+So \(675^{307} \mod 713\) = \(675^{256 + 32 + 16 + 2 + 1} \mod 713\) = \((675^{256} \cdot 675^{32} \cdot 675^{16} 
+\cdot 675^{2} \cdot 675^{1}) \mod 713\) = \((627 \cdot 49 \cdot 131 \cdot 18 \cdot 675) \mod 713\) = \(48900262950 
+\mod 713 = 3\)
 \end{proof}
 
 \subsection{Exercise 17}
+\(89^{307} \mod 713\)
 
 \begin{proof}
+Note that \(307 = 256 + 32 + 16 + 2 + 1\).
 
+\begin{tabular}{lclclcl}
+\(89^1 \mod 713\) & = & \(89\) \\
+\(89^2 \mod 713\) & = & \(7921 \mod 713\) & = & \(78\)\\
+\(89^4 \mod 713\) & = & \(78^2 \mod 713\) & = & \(380\) \\
+\(89^8 \mod 713\) & = & \(380^2 \mod 713\) & = & \(144400 \mod 713\) & = & \(374\) \\
+\(89^{16} \mod 713\) & = & \(374^2 \mod 713\) & = & \(139876 \mod 713\) & = & \(128\) \\
+\(89^{32} \mod 713\) & = & \(128^2 \mod 713\) & = & \(16384 \mod 713\) & = & \(698\) \\
+\(89^{64} \mod 713\) & = & \(698^2 \mod 713\) & = & \(487204 \mod 713\) & = & \(225\) \\
+\(89^{128} \mod 713\) & = & \(225^2 \mod 713\) & = & \(50625 \mod 713\) & = & \(2\) \\
+\(89^{256} \mod 713\) & = & \(2^2 \mod 713\) & = & \(4\)
+\end{tabular}
+
+So \(89^{307} \mod 713\) = \(89^{256 + 32 + 16 + 2 + 1} \mod 713\) = \((89^{256} \cdot 89^{32} \cdot 89^{16} 
+\cdot 89^{2} \cdot 89^{1}) \mod 713\) = \((4 \cdot 698 \cdot 128 \cdot 78 \cdot 89) \mod 713\) = \(2480904192 \mod 
+713 = 15\)
 \end{proof}
 
 \subsection{Exercise 18}
+\(48^{307} \mod 713\)
 
 \begin{proof}
+Note that \(307 = 256 + 32 + 16 + 2 + 1\).
 
+\begin{tabular}{lclclcl}
+\(48^1 \mod 713\) & = & \(48\) \\
+\(48^2 \mod 713\) & = & \(2304 \mod 713\) & = & \(165\)\\
+\(48^4 \mod 713\) & = & \(165^2 \mod 713\) & = & \(131\) \\
+\(48^8 \mod 713\) & = & \(131^2 \mod 713\) & = & \(17161 \mod 713\) & = & \(49\) \\
+\(48^{16} \mod 713\) & = & \(49^2 \mod 713\) & = & \(2401 \mod 713\) & = & \(262\) \\
+\(48^{32} \mod 713\) & = & \(262^2 \mod 713\) & = & \(68644 \mod 713\) & = & \(196\) \\
+\(48^{64} \mod 713\) & = & \(196^2 \mod 713\) & = & \(38416 \mod 713\) & = & \(627\) \\
+\(48^{128} \mod 713\) & = & \(627^2 \mod 713\) & = & \(393129 \mod 713\) & = & \(266\) \\
+\(48^{256} \mod 713\) & = & \(266^2 \mod 713\) & = & \(70756 \mod 713\) & = & \(169\)
+\end{tabular}
+
+So \(48^{307} \mod 713\) = \(48^{256 + 32 + 16 + 2 + 1} \mod 713\) = \((48^{256} \cdot 48^{32} \cdot 48^{16} 
+\cdot 48^{2} \cdot 48^{1}) \mod 713\) = \((169 \cdot 196 \cdot 262 \cdot 165 \cdot 48) \mod 713\) = \(68733624960 
+\mod 713 = 12\)
 \end{proof}
 
+{\bf \cy In $19-24$, use the RSA cipher from examples 8.4.9 and 8.4.10. In $19-21$, translate the message into its 
+numeric equivalent and encrypt it. In $22-24$, decrypt the ciphertext and translate the result into letters of the 
+alphabet to discover the message.}
+
 \subsection{Exercise 19}
+HELLO
 
 \begin{proof}
-
+The letters in HELLO translate numerically into 08, 05, 12, 12, and 15. By Example 8.4.9, the H is encrypted as 17. To 
+encrypt E, we compute \(5^3 \mod 55 = 15\). To encrypt L, we compute \(12^3 \mod 55 = 23\). And to encrypt O, we 
+compute \(15^3 \mod 55 = 20\). Thus the ciphertext is 17 15 23 23 20. (In practice, individual letters of the alphabet 
+are grouped together in blocks during encryption so that deciphering cannot be accomplished through knowledge of 
+frequency patterns of letters or words.)
 \end{proof}
 
 \subsection{Exercise 20}
+WELCOME
 
 \begin{proof}
-
+The letters in WELCOME translate numerically into 23, 05, 12, 03, 15, 13 and 05. To encrypt W, we compute \(23^3 \mod 
+55 = 12\). To encrypt E, we compute \(5^3 \mod 55 = 15\). To encrypt L, we compute \(12^3 \mod 55 = 23\). To encrypt 
+C, we compute \(3^3 \mod 55 = 27\). To encrypt O, we compute \(15^3 \mod 55 = 20\). And to encrypt M, we compute 
+\(13^3 \mod 55 = 52\). Thus the ciphertext is 12 15 23 27 20 52 15.
 \end{proof}
 
 \subsection{Exercise 21}
+EXCELLENT
 
 \begin{proof}
-
+The letters in EXCELLENT translate numerically into 05, 24,  03, 05, 12, 12, 05, 14 and 20. To encrypt E, we compute 
+\(5^3 \mod 55 = 15\). To encrypt X, we compute \(24^3 \mod 55 = 19\). To encrypt C, we compute \(3^3 \mod 55 = 27\). 
+To encrypt L, we compute \(12^3 \mod 55 = 23\). To encrypt N, we compute \(14^3 \mod 55 = 49\). To encrypt T, we 
+compute \(20^3 \mod 55 = 25\). Thus the ciphertext is 15 19 27 15 23 23 15 49 25.
 \end{proof}
 
 \subsection{Exercise 22}
+13 20 20 09
 
 \begin{proof}
+By Example 8.4.10, the decryption key is 27. Thus the residues modulo 55 for \(13^{27}, 20^{27}\), and \(9^{27}\) 
+must be found and then translated into letters of the alphabet. Because \(27 = 16 + 8 + 2 + 1\), we first perform 
+the following computations:
 
+\begin{tabular}{lll}
+\(13^{1} \equiv 13 \pmod{55}\) & \(20^{1} \equiv 20 \pmod{55}\) & \(9^{1} \equiv 9 \pmod{55}\) \\
+\(13^{2} \equiv 4 \pmod{55}\) & \(20^{2} \equiv 15 \pmod{55}\) & \(9^{2} \equiv 26 \pmod{55}\) \\
+\(13^{4} \equiv 4^2 \equiv 16 \pmod{55}\) & \(20^{4} \equiv 15^2 \equiv 5 \pmod{55}\) & \(9^{4} \equiv 26^2 \equiv 16 
+\pmod{55}\) \\
+\(13^{8} \equiv 16^2 \equiv 36 \pmod{55}\) & \(20^{8} \equiv 5^2 \equiv 25 \pmod{55}\) & \(9^{8} \equiv 16^2 \equiv 36 \pmod{55}\) \\
+\(13^{16} \equiv 36^2 \equiv 31\pmod{55}\) & \(20^{16} \equiv 25^2 \equiv 20 \pmod{55}\) & \(9^{16} \equiv 36^2 
+\equiv 31 \pmod{55}\)
+\end{tabular}
+
+Then we compute
+
+\begin{center}
+\begin{tabular}{lclcl}
+\(13^{27} \mod 55\) & = & \((31 \cdot 36 \cdot 4 \cdot 13) \mod 55\) & = & 7 \\
+\(20^{27} \mod 55\) & = & \((20 \cdot 25 \cdot 15 \cdot 20) \mod 55\) & = & 15 \\
+\(9^{27} \mod 55\) & = & \((31 \cdot 36 \cdot 26 \cdot 9) \mod 55\) & = & 4
+\end{tabular}
+\end{center}
+
+Finally, because 7, 15, and 4 translate into letters as G, O, and D, we see that the message is GOOD.
 \end{proof}
 
 \subsection{Exercise 23}
-
+08 05 15
 \begin{proof}
+By Example 8.4.10, the decryption key is 27. Thus the residues modulo 55 for \(8^{27}, 5^{27}\), and \(15^{27}\) 
+must be found and then translated into letters of the alphabet. Because \(27 = 16 + 8 + 2 + 1\), we first perform 
+the following computations:
 
+\begin{tabular}{lll}
+\(8^{1} \equiv 8 \pmod{55}\) & \(5^{1} \equiv 5 \pmod{55}\) & \(15^{1} \equiv 15 \pmod{55}\) \\
+\(8^{2} \equiv 9 \pmod{55}\) & \(5^{2} \equiv 25 \pmod{55}\) & \(15^{2} \equiv 5 \pmod{55}\) \\
+\(8^{4} \equiv 9^2 \equiv 26 \pmod{55}\) & \(5^{4} \equiv 25^2 \equiv 20 \pmod{55}\) & \(15^{4} \equiv 5^2 \equiv 25 
+\pmod{55}\) \\
+\(8^{8} \equiv 26^2 \equiv 16 \pmod{55}\) & \(5^{8} \equiv 20^2 \equiv 15 \pmod{55}\) & \(15^{8} \equiv 25^2 \equiv 20 \pmod{55}\) \\
+\(8^{16} \equiv 16^2 \equiv 36 \pmod{55}\) & \(5^{16} \equiv 15^2 \equiv 5 \pmod{55}\) & \(15^{16} \equiv 20^2 
+\equiv 15 \pmod{55}\)
+\end{tabular}
+
+Then we compute
+
+\begin{center}
+\begin{tabular}{lclcl}
+\(8^{27} \mod 55\) & = & \((36 \cdot 16 \cdot 9 \cdot 8) \mod 55\) & = & 2 \\
+\(5^{27} \mod 55\) & = & \((5 \cdot 15 \cdot 25 \cdot 5) \mod 55\) & = & 25 \\
+\(15^{27} \mod 55\) & = & \((15 \cdot 20 \cdot 5 \cdot 15) \mod 55\) & = & 5
+\end{tabular}
+\end{center}
+
+Finally, because 2, 25, and 5 translate into letters as B, Y, and E, we see that the message is BYE.
 \end{proof}
 
 \subsection{Exercise 24}
-
+51 14 49 15
 \begin{proof}
+By Example 8.4.10, the decryption key is 27. Thus the residues modulo 55 for \(51^{27},14^{27}\), and \(49^{27}\) 
+must be found and then translated into letters of the alphabet (\(15^{27}\) translates to E). Because \(27 = 16 + 
+8 + 2 + 1\), we first perform the following computations:
 
+\begin{tabular}{lll}
+\(51^{1} \equiv 51 \pmod{55}\) & \(14^{1} \equiv 14 \pmod{55}\) & \(49^{1} \equiv 49 \pmod{55}\) \\
+\(51^{2} \equiv 16 \pmod{55}\) & \(14^{2} \equiv 31 \pmod{55}\) & \(49^{2} \equiv 36 \pmod{55}\) \\
+\(51^{4} \equiv 16^2 \equiv 36 \pmod{55}\) & \(14^{4} \equiv 31^2 \equiv 26 \pmod{55}\) & \(49^{4} \equiv 36^2 
+\equiv 31 \pmod{55}\) \\
+\(51^{8} \equiv 36^2 \equiv 31 \pmod{55}\) & \(14^{8} \equiv 26^2 \equiv 16 \pmod{55}\) & \(49^{8} \equiv 31^2 \equiv 26 \pmod{55}\) \\
+\(51^{16} \equiv 31^2 \equiv 26 \pmod{55}\) & \(14^{16} \equiv 16^2 \equiv 36 \pmod{55}\) & \(49^{16} \equiv 26^2 
+\equiv 16 \pmod{55}\)
+\end{tabular}
+
+Then we compute
+
+\begin{center}
+\begin{tabular}{lclcl}
+\(51^{27} \mod 55\) & = & \((26 \cdot 31 \cdot 16 \cdot 51) \mod 55\) & = & 6 \\
+\(14^{27} \mod 55\) & = & \((36 \cdot 16 \cdot 31 \cdot 14) \mod 55\) & = & 9 \\
+\(49^{27} \mod 55\) & = & \((16 \cdot 26 \cdot 36 \cdot 49) \mod 55\) & = & 14
+\end{tabular}
+\end{center}
+
+Finally, because 6, 9, 24 and 15 translate into letters as F, I, N, and E, we see that the message is FINE.
 \end{proof}
 
 \subsection{Exercise 25}
+Use Theorem 5.2.2 to prove that if $a$ and $n$ are integers greater than 1 and \(a^n - 1\) is prime, then \(a = 2\) and 
+$n$ is prime.
 
 \begin{proof}
+By Theorem 5.2.2, using $a$ in place of $r$ and \(n - 1\)
+in place of $n$, we have \(1 + a + \cdots + a^{n-1} = 
+\frac{a^n-1}{a-1}\). Multiplying both sides by \(a - 1\) gives \(a^n - 1 = (a-1)(1 + a + a^2 + \cdots + a^{n-1})\).
+So \(a-1 \mid (a^n - 1)\). Since \(a^n-1\) is prime, this forces \(a-1 = 1\) so \(a = 2\). 
 
+So \(2^n-1\) is prime. Argue by contradiction and assume $n$ is not prime. So \(n = ab\) for some integers 
+\(1 < a,b < n\). Then by Theorem 5.2.2,
+\[
+2^{n} - 1 = 2^{ab} - 1 = (2^a)^b - 1^b = (2^a - 1)((2^a)^{b-1} + (2^a)^{b-2} + \cdots + 1)
+\]
+where both \(2^a-1 > 1\) and \((2^a)^{b-1} + (2^a)^{b-2} + \cdots + 1 > 1\), so \(2^n - 1\) is not prime, a 
+contradiction. So $n$ is prime.
 \end{proof}
 
+{\bf \cy In 26 and 27, use the extended euclidean algorithm to find the greatest common divisor of the given numbers 
+and express it as a linear combination of the two numbers.}
+
 \subsection{Exercise 26}
+6664 and 765
 
 \begin{proof}
+{\cy Step 1:} \(6664 = 765 \cdot 8 + 544\), and so \(544 = 6664 - 765 \cdot 8\)
 
+{\cy Step 2:} \(765 = 544 \cdot 1 + 221\), and so \(221 = 765 - 544\)
+
+{\cy Step 3:} \(544 = 221 \cdot 2 + 102\), and so \(102 = 544 - 221 \cdot 2\)
+
+{\cy Step 4:} \(221 = 102 \cdot 2 + 17\), and so \(17 = 221 - 102 \cdot 2\)
+
+{\cy Step 5:} \(102 = 17 \cdot 6 + 0\)
+
+Thus gcd\((6664, 765) = 17\) (which is the remainder obtained just before the final division). Substitute back 
+through steps $4-1$ to express 17 as a linear combination of 6664 and 765:
+
+\begin{tabular}{rclcl}
+\(17\) & = & \(221 - 102 \cdot 2\) & = & \(\) \\
+\(\) & = & \(221 - (554 - 221 \cdot 2)\) & = & \(221 \cdot 5 - 544 \cdot 2\) \\
+\(\) & = & \((765 - 544) \cdot 5 - 544 \cdot 2\) & = & \(765 \cdot 5 - 544 \cdot 7\) \\
+\(\) & = & \(765 \cdot 5 - (6664 - 765 \cdot 8) \cdot 7 \) & = & \((-7) \cdot 6664 + 61 \cdot 765\).
+\end{tabular}
+
+(When you have finished this final step, it is wise to verify that you have not made a mistake by checking that 
+the final expression really does equal the greatest common divisor.)
 \end{proof}
 
 \subsection{Exercise 27}
+4158 and 1568
 
 \begin{proof}
+{\cy Step 1:} \(4158 = 1568 \cdot 2 + 1022\), and so \(1022 = 4158 - 1568 \cdot 2\)
 
+{\cy Step 2:} \(1568 = 1022 \cdot 1 + 546\), and so \(546 = 1568 - 1022\)
+
+{\cy Step 3:} \(1022 = 546 \cdot 1 + 476\), and so \(476 = 1022 - 546\)
+
+{\cy Step 4:} \(546 = 476 \cdot 1 + 70\), and so \(70 = 546 - 476\)
+
+{\cy Step 5:} \(476 = 70 \cdot 6 + 56\), and so \(56 = 476 - 70 \cdot 6\)
+
+{\cy Step 6:} \(70 = 56 \cdot 1 + 14\), and so \(14 = 70 - 56\)
+
+{\cy Step 7:} \(56 = 14 \cdot 4 + 0\).
+
+Thus gcd\((4158, 1568) = 14\) (which is the remainder obtained just before the final division). Substitute back 
+through steps $7-1$ to express 14 as a linear combination of 4158 and 1568:
+
+\begin{tabular}{rclcl}
+\(14\) & = & \(70 - 56\) & = & \(\) \\
+\(\) & = & \(70 - (476 - 70 \cdot 6)\) & = & \(70 \cdot 7 - 476\) \\
+\(\) & = & \((546 - 476) \cdot 7 - 476\) & = & \(546 \cdot 7 - 476 \cdot 8\) \\
+\(\) & = & \(546 \cdot 7 - (1022 - 546) \cdot 8\) & = & \(546 \cdot 15 - 1022 \cdot 8\) \\
+\(\) & = & \((1568 - 1022) \cdot 15 - 1022 \cdot 8\) & = & \(1568 \cdot 15 - 1022 \cdot 23\) \\
+\(\) & = & \(1568 \cdot 15 - (4158 - 1568 \cdot 2) \cdot 23\) & = & \(1568 \cdot 61 - 4158 \cdot 23\)
+\end{tabular}
 \end{proof}
 
+{\bf \cy Exercises 28 and 29 refer to the following formal version of the extended euclidean algorithm.}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm 8.4.1 Extended Euclidean Algorithm}
+
+{\bf Input:} $A, B$ {\it [integers with \(A > B > 0\)]}
+
+\begin{tabbing}
+{\bf Algorithm Body:} \\
+\(a \coloneqq A, b \coloneqq B, s \coloneqq 1, t \coloneqq 0, u \coloneqq 0, v \coloneqq 1\) \\
+{\it [pre-condition: \(a = sA + tB\) and \(b = uA + vB\)]} \\
+{\bf wh}\={\bf ile} (\(b \neq 0\)) {\it [loop invariant: \(a = sA + tB, b = uA + vB, gcd(a,b) = gcd(A,B)\)]} \\
+        \> \(r \coloneqq a \mod b, q \coloneqq a \text{ div } b, a \coloneqq b, b \coloneqq r\) \\
+        \> \(u_{new} \coloneqq s-uq, v_{new} \coloneqq t-vq\) \\
+        \> \(s \coloneqq u, t \coloneqq v, u \coloneqq u_{new}, v \coloneqq v_{new}\) \\
+{\bf end while} \\
+gcd \(\coloneqq a\), {\it [post-condition: \(gcd(A,B) = a = sA + tB\)]} \\
+{\bf Output:} gcd {\it [a positive integer]}, \(s,t\) {\it [integers]}
+\end{tabbing}
+\end{tcolorbox}
+
+{\bf \cy In 28 and 29, for the given values of $A$ and $B$, make a table showing the value of \(s, t\), and \(sA + tB\) 
+before the start of the while loop and after each iteration of the loop.}
+
 \subsection{Exercise 28}
-
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\(\bm{a}\) & 330 & 156 & 18 & 12 & 6 \\
+\hline
+\(\bm{b}\) & 156 & 18 & 12 & 6 & 0 \\
+\hline
+\(\bm{r}\) & & 18 & 12 & 6 & 0 \\
+\hline
+\(\bm{q}\) & & 2 & 8 & 1 & 2 \\
+\hline
+\(\bm{s}\) & 1 & 0 & 1 & $-8$ & 9 \\
+\hline
+\(\bm{t}\) & 0 & 1 & $-2$ & 17 & $-19$ \\
+\hline
+\(\bm{u}\) & 0 & 1 & $-8$ & 9 & $-26$ \\
+\hline
+\(\bm{v}\) & 1 & $-2$ & 17 & $-19$ & 55 \\
+\hline
+\(\bm{u_{new}}\) & & 1 & $-8$ & 9 & $-26$ \\
+\hline
+\(\bm{v_{new}}\) & & $-2$ & 17 & $-19$ & 55 \\
+\hline
+\(\bm{sA+tB}\) & 330 & 156 & 18 & 12 & 6 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 29}
-
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\(\bm{a}\) & 284 & 168 & 116 & 52 & 12 & 4 \\
+\hline
+\(\bm{b}\) & 168 & 116 & 52 & 12 & 4 & 0 \\
+\hline
+\(\bm{r}\) & & 116 & 52 & 12 & 4 & 0 \\
+\hline
+\(\bm{q}\) & & 1 & 1 & 2 & 4 & 3 \\
+\hline
+\(\bm{s}\) & 1 & 0 & 1 & $-1$ & 3 & $-13$ \\
+\hline
+\(\bm{t}\) & 0 & 1 & $-1$ & 2 & $-5$ & 22 \\
+\hline
+\(\bm{u}\) & 0 & 1 & $-1$ & 3 & $-13$ & 42 \\
+\hline
+\(\bm{v}\) & 1 & $-1$ & 2 & $-5$ & 22 & $-71$ \\
+\hline
+\(\bm{u_{new}}\) & & 1 & $-1$ & 3 & $-13$ & 42 \\
+\hline
+\(\bm{v_{new}}\) & & $-1$ & 2 & $-5$ & 22 & $-71$ \\
+\hline
+\(\bm{sA+tB}\) & 284 & 168 & 116 & 52 & 12 & 4 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 30}
+Finish the proof of Theorem 8.4.5 by proving that if \(a, b\), and $c$ are as in the proof, then \(c \mid b\).
 
 \begin{proof}
-
+By the quotient-remainder theorem \(b = cp + r\) for some integers \(p,r\) with \(0 \leq r < c\). Then \(r = b - cp\)
+and substituting \(c = as+bt\), we get \(r = b - cp = b-(as+bt)p = b - asp - bpt = b(1-pt) - asp\), so $r$ is a 
+linear combination of $a$ and $b$. If \(r > 0\) then $r$ would be in $S$, so $r$ would be a smaller element of $S$
+than $c$, a contradiction. Hence $r = 0$ and \(b = cp\) which implies \(c \mid b\).
 \end{proof}
 
 \subsection{Exercise 31}
-
 \subsubsection{(a)}
+Find an inverse for 210 modulo 13.
 
 \begin{proof}
+{\cy Step 1:} \(210 = 13 \cdot 16 + 2\), and so \(2 = 210 - 16 \cdot 13\)
 
+{\cy Step 2:} \(13 = 2 \cdot 6 + 1\), and so \(1 = 13 - 2 \cdot 6\)
+
+{\cy Step 3:} \(6 = 1 \cdot 6 + 0\), and so \(gcd(210, 13) = 1\)
+
+Substitute back through steps 2 and 1: 
+\(1 = 13 - 2 \cdot 6 = 13 - (210 - 16 \cdot 13) \cdot 6 = (-6) \cdot 210 + 97 \cdot 13\)
+
+Thus \(210 \cdot (-6) \equiv 1 \pmod{13}\), and so \(-6\) is an inverse for 210 modulo 13.
 \end{proof}
 
 \subsubsection{(b)}
+Find a positive inverse for 210 modulo 13.
 
 \begin{proof}
-
+Compute \(13 - 6 = 7\). Note that \(7 \equiv -6 \pmod{13}\) because \(7 - (-6) = 13 = 13 \cdot 1\). Thus, by Theorem 
+8.4.3(3), \(210 \cdot 7 \equiv 210 \cdot (-6) \pmod{13}\). By part (a), \(-6\) is an inverse for 210 modulo 13, and so 
+\(210 \cdot (-6) \equiv 1 \pmod{13}\). It follows, by the symmetric and transitive properties of congruence, that 
+\(210 \cdot 7 \equiv 1 \pmod{13}\), and so 7 is a positive inverse for 210 modulo 13.
 \end{proof}
 
 \subsubsection{(c)}
+Find a positive solution for the congruence \(210x \equiv 8 \pmod{13}\).
 
 \begin{proof}
-
+This problem can be solved using either the result of part (a) or that of part (b). By part (b) \(210 \cdot 7 \equiv 1 
+\pmod{13}\). Multiply both sides by 8 and apply Theorem 8.4.3(3) to obtain \(210\cdot 56 \equiv 8 \pmod{13}\). Thus 
+a positive solution for \(210x \equiv 8 \pmod{13}\) is \(x = 56\). Note that the least positive residue corresponding 
+to this solution is also a solution. By Theorem 8.4.1, \(56 \equiv 4 \pmod{13}\) because \(56 = 13 \cdot 4 + 4\), and 
+so, by Theorem 8.4.3(3), \(210 \cdot 56 \equiv 210 \cdot 4 \equiv 9 \pmod{13}\). This shows that 4 is also a solution 
+for the congruence, and because \(0 \leq 4 < 13\), 4 is the least positive solution for the congruence.
 \end{proof}
 
 \subsection{Exercise 32}
-
 \subsubsection{(a)}
+Find an inverse for 41 modulo 660.
 
 \begin{proof}
+{\cy Step 1:} \(660 = 41 \cdot 16 + 4\), and so \(4 = 660 - 41 \cdot 16\)
 
+{\cy Step 2:} \(41 = 4 \cdot 10 + 1\), and so \(1 = 41 - 4 \cdot 10\)
+
+{\cy Step 3:} \(4 = 1 \cdot 4 + 0\), and so \(gcd(660, 41) = 1\)
+
+Substitute back through steps 2 and 1: 
+\(1 = 41 - 4 \cdot 10 = 41 - (660 - 41 \cdot 16) \cdot 10 = (-10) \cdot 660 + 161 \cdot 41\)
+
+Thus \(41 \cdot 161 \equiv 1 \pmod{660}\), and so \(161\) is an inverse for 41 modulo 660.
 \end{proof}
 
 \subsubsection{(b)}
+Find the least positive solution for the following congruence: \(41x \equiv 125 \pmod{660}\).
 
 \begin{proof}
-
+By part (a) \(41 \cdot 161 \equiv 1 \pmod{660}\). Multiply both sides by 125 and apply Theorem 8.4.3(3) to obtain 
+\(41 \cdot 20125 \equiv 125 \pmod{660}\). Thus a positive solution for \(41x \equiv 125 \pmod{660}\) is 
+\(x = 20125\). Note that the least positive residue corresponding to this solution is also a solution. By 
+Theorem 8.4.1, \(20125 \equiv 325 \pmod{660}\) because \(20125 = 660 \cdot 30 + 325\), and so, by Theorem 
+8.4.3(3), \(41 \cdot 20125 \equiv 41 \cdot 325 \equiv 125 \pmod{660}\). This shows that 325 is also a solution for 
+the congruence, and because \(0 \leq 325 < 660\), 325 is the least positive solution for the congruence.
 \end{proof}
 
 \subsection{Exercise 33}
+Use Theorem 8.4.5 to prove that for all integers \(a, b\), and $c$, if \(gcd(a, b) = 1\) and \(a \mid c\) and \(b \mid 
+c\), then \(ab \mid c\).
 
 \begin{proof}
+Since \(gcd(a,b) = 1\), by Theorem 8.4.5 \(1 = as+bt\) for some integers \(s,t\).
 
+Since \(a \mid c, au = c\) for some integer $u$. Since \(b \mid c, bv = c\) for some integer $v$.
+
+Since \(1 = as+bt\), multiplying by $c$ we get \(c = cas + cbt = (bv)as + (au)bt = ab(sv + tu)\).
+
+Notice that \(sv+tu\) is an integer, thus \(ab \mid c\).
 \end{proof}
 
 \subsection{Exercise 34}
+Give a counterexample to show that the statement of exercise 33 is false if the hypothesis that \(gcd(a, b)=1\) 
+is removed.
 
 \begin{proof}
-
+Let \(a = 4, b = 6, c = 12\). Then \(gcd(a,b) = gcd(4,6) = 2 \neq 1\). And \(a \mid c\) because \(12 = 4 \cdot 3\) and
+\(b \mid c\) because \(12 = 6 \cdot 2\). But \(ab \nmid c\) because \(4 \cdot 6 = 24 \nmid 12\).
 \end{proof}
 
 \subsection{Exercise 35}
+Corollary 8.4.7 guarantees the existence of an inverse modulo $n$ for an integer $a$ when $a$ and $n$ are 
+relatively prime. Use Euclid’s lemma to prove that the inverse is unique modulo $n$. In other words, show that if 
+$s$ and $t$ are any two integers whose product with $a$ is congruent to 1 modulo $n$, then $s$ and $t$ are congruent 
+to each other modulo $n$.
 
 \begin{proof}
-
+Let $a$ be any integer and let $n$ be any positive integer, and suppose $s$ and $t$ are any inverses for a modulo $n$. Thus \(as \equiv 1 \pmod n\) and \(at \equiv 1 \pmod n\). Note that \(ast = (as) \cdot t = (at) \cdot s\). By Theorem 
+8.4.3(3), \((as) \cdot t \equiv t \pmod n\) and \((at) \cdot s \equiv s \pmod n\). Thus, by symmetry and 
+transitivity of congruence modulo $n$, \(s \equiv t \pmod n\). Because $s$ and $t$ were chosen arbitrarily, we 
+conclude that any two inverses for a are congruent modulo $n$.
 \end{proof}
 
+{\bf \cy In 36, 37, 39, and 40, use the RSA cipher with public key \(n = 713 = 23 \cdot 31\) and \(e = 43\). In 36 
+and 37, encode the messages into their numeric equivalents and encrypt them. In 39 and 40, decrypt the given 
+ciphertext and find the original messages.}
+
 \subsection{Exercise 36}
-
+HELP
 \begin{proof}
+The numeric equivalents of H, E, L, and P are 08, 05, 12, and 16. To encrypt these letters, the following quantities 
+must be computed: \(8^{43} \mod 713, 5^{43} \mod 713, 12^{43} \mod 713\), and \(16^{43} \mod 713\). We use the 
+fact that 43 = 32 + 8 + 2 + 1.
 
+\begin{tabular}{lclcll}
+\(8^1\)&=&\(8\)&=&\(\)&\(\mod 713\) \\
+\(8^2\)&=&\(64\)&=&\(\)&\(\mod 713\) \\
+\(8^4\)&=&\(64^2\)&=&\(531\)&\(\mod 713\) \\
+\(8^8\)&=&\(531^2\)&=&\(326\)&\(\mod 713\) \\
+\(8^{16}\)&=&\(326^2\)&=&\(39\)&\(\mod 713\) \\
+\(8^{32}\)&=&\(39^2\)&=&\(95\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(8^{43} \mod 713 = (95 \cdot 326 \cdot 64 \cdot 8) \mod 713 = 233\).
+
+\begin{tabular}{lclcll}
+\(5^1\)&=&\(5\)&=&\(\)&\(\mod 713\) \\
+\(5^2\)&=&\(25\)&=&\(\)&\(\mod 713\) \\
+\(5^4\)&=&\(625\)&=&\(\)&\(\mod 713\) \\
+\(5^8\)&=&\(625^2\)&=&\(614\)&\(\mod 713\) \\
+\(5^{16}\)&=&\(614^2\)&=&\(532\)&\(\mod 713\) \\
+\(5^{32}\)&=&\(532^2\)&=&\(676\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(5^{43} \mod 713 = (676 \cdot 614 \cdot 25 \cdot 5) \mod 713 = 129\).
+
+\begin{tabular}{lclcll}
+\(12^1\)&=&\(12\)&=&\(\)&\(\mod 713\) \\
+\(12^2\)&=&\(144\)&=&\(\)&\(\mod 713\) \\
+\(12^4\)&=&\(144^2\)&=&\(59\)&\(\mod 713\) \\
+\(12^8\)&=&\(59^2\)&=&\(629\)&\(\mod 713\) \\
+\(12^{16}\)&=&\(629^2\)&=&\(639\)&\(\mod 713\) \\
+\(12^{32}\)&=&\(639^2\)&=&\(485\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(12^{43} \mod 713 = (485 \cdot 629 \cdot 144 \cdot 12) \mod 713 = 48\).
+
+\begin{tabular}{lclcll}
+\(16^1\)&=&\(16\)&=&\(\)&\(\mod 713\) \\
+\(16^2\)&=&\(256\)&=&\(\)&\(\mod 713\) \\
+\(16^4\)&=&\(256^2\)&=&\(653\)&\(\mod 713\) \\
+\(16^8\)&=&\(653^2\)&=&\(35\)&\(\mod 713\) \\
+\(16^{16}\)&=&\(35^2\)&=&\(512\)&\(\mod 713\) \\
+\(16^{32}\)&=&\(512^2\)&=&\(473\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(12^{43} \mod 713 = (473 \cdot 35 \cdot 256 \cdot 16) \mod 713 = 128\).
+
+Therefore, the encrypted message is 233 129 048 128. (Again, note that in practice, individual letters of the 
+alphabet are grouped together in blocks during encryption so that deciphering cannot be accomplished through 
+knowledge of frequency patterns of letters or words. We kept them separate so that the numbers in the computations 
+would be smaller and easier to work with.)
 \end{proof}
 
 \subsection{Exercise 37}
-
+COME
 \begin{proof}
+The numeric equivalents of C, O, M, and E are 03, 15, 13, and 05. The letter E was encrypted in Exercise 36 as 129. 
+To encrypt the other letters, the following quantities must be computed: \(3^{43} \mod 713, 15^{43} \mod 713\), and 
+\(13^{43} \mod 713\). We use the fact that 43 = 32 + 8 + 2 + 1.
 
+\begin{tabular}{lclcll}
+\(3^1\)&=&\(3\)&=&\(\)&\(\mod 713\) \\
+\(3^2\)&=&\(9\)&=&\(\)&\(\mod 713\) \\
+\(3^4\)&=&\(9^2\)&=&\(81\)&\(\mod 713\) \\
+\(3^8\)&=&\(81^2\)&=&\(144\)&\(\mod 713\) \\
+\(3^{16}\)&=&\(144^2\)&=&\(59\)&\(\mod 713\) \\
+\(3^{32}\)&=&\(59^2\)&=&\(629\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(3^{43} \mod 713 = (629 \cdot 144 \cdot 9 \cdot 3) \mod 713 = 675\).
+
+\begin{tabular}{lclcll}
+\(15^1\)&=&\(15\)&=&\(\)&\(\mod 713\) \\
+\(15^2\)&=&\(225\)&=&\(\)&\(\mod 713\) \\
+\(15^4\)&=&\(225^2\)&=&\(2\)&\(\mod 713\) \\
+\(15^8\)&=&\(2^2\)&=&\(4\)&\(\mod 713\) \\
+\(15^{16}\)&=&\(4^2\)&=&\(16\)&\(\mod 713\) \\
+\(15^{32}\)&=&\(16^2\)&=&\(256\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(15^{43} \mod 713 = (256 \cdot 4 \cdot 225 \cdot 15) \mod 713 = 89\).
+
+\begin{tabular}{lclcll}
+\(13^1\)&=&\(13\)&=&\(\)&\(\mod 713\) \\
+\(13^2\)&=&\(169\)&=&\(\)&\(\mod 713\) \\
+\(13^4\)&=&\(169^2\)&=&\(41\)&\(\mod 713\) \\
+\end{tabular}
+
+\begin{tabular}{lclcll}
+\(13^8\)&=&\(41^2\)&=&\(255\)&\(\mod 713\) \\
+\(13^{16}\)&=&\(255^2\)&=&\(142\)&\(\mod 713\) \\
+\(13^{32}\)&=&\(142^2\)&=&\(200\)&\(\mod 713\) 
+\end{tabular}
+
+Thus the ciphertext is \(13^{43} \mod 713 = (200 \cdot 255 \cdot 169 \cdot 13) \mod 713 = 476\).
+
+Therefore, the encrypted message is 675 089 476 129.
 \end{proof}
 
 \subsection{Exercise 38}
+Find the least positive inverse for 43 modulo 660.
 
 \begin{proof}
+{\cy Step 1:} \(660 = 43 \cdot 15 + 15\), so \(15 = 660 - 43 \cdot 15\)
 
+{\cy Step 2:} \(43 = 15 \cdot 2 + 13\), so \(13 = 43 - 15 \cdot 2\)
+
+{\cy Step 3:} \(15 = 13 \cdot 1 + 2\), so \(2 = 15 - 13 \cdot 1\)
+
+{\cy Step 4:} \(13 = 2 \cdot 6 + 1\), so \(1 = 13 - 2 \cdot 6\)
+
+{\cy Step 5:} \(2 = 1 \cdot 2 + 0\), so \(gcd(660, 43) = 1\).
+
+Stepping back through steps 4-1 we get: \(1 = 13 - 2 \cdot 6 = 13 - (15 - 13) \cdot 6 = 7 \cdot 13 - 6 \cdot 15\)
+
+\(= 7 \cdot (43 - 15 \cdot 2) - 6 \cdot 15 = 7 \cdot 43 - 20 \cdot 15\) 
+
+\(= 7 \cdot 43 - 20 \cdot (660 - 43 \cdot 15) = 307 \cdot 43 - 20 \cdot 660\)
+
+So \(307 \cdot 43 \equiv 1 \pmod{660}\) and since \(0 \leq 307 < 660\), 307 is the least positive inverse of 43.
 \end{proof}
 
 \subsection{Exercise 39}
+675 089 089 048
 
 \begin{proof}
-
+By Exercise 37, 675 decrypts to C and 089 decrypts to O. By Exercise 36, 048 decrypts to L. So the plaintext is COOL.
 \end{proof}
 
 \subsection{Exercise 40}
+028 018 675 129
 
 \begin{proof}
+Similarly, 675 = C, 129 = E. We must decrypt 028 and 018. By exercise 38, the decryption key, $d$, is 307. So we must
+compute \(28^{307} \mod 713\) and \(18^{307} \mod 713\). We use the fact 307 = 256 + 32 + 16 + 2 + 1.
 
+\begin{tabular}{lclcll}
+\(28^1\)&=&\(28\)&=&\(\)&\(\mod 713\) \\
+\(28^2\)&=&\(784\)&=&\(71\)&\(\mod 713\) \\
+\(28^4\)&=&\(71^2\)&=&\(50\)&\(\mod 713\) \\
+\(28^8\)&=&\(50^2\)&=&\(361\)&\(\mod 713\) \\
+\(28^{16}\)&=&\(361^2\)&=&\(555\)&\(\mod 713\) \\
+\(28^{32}\)&=&\(555^2\)&=&\(9\)&\(\mod 713\) \\
+\(28^{64}\)&=&\(9^2\)&=&\(81\)&\(\mod 713\) \\
+\(28^{128}\)&=&\(81^2\)&=&\(144\)&\(\mod 713\) \\
+\(28^{256}\)&=&\(144^2\)&=&\(59\)&\(\mod 713\) \\
+\end{tabular}
+
+Thus the ciphertext is \(28^{307} \mod 713 = (59 \cdot 9 \cdot 555 \cdot 71 \cdot 28) \mod 713 = 14\), which is N.
+
+\begin{tabular}{lclcll}
+\(18^1\)&=&\(18\)&=&\(\)&\(\mod 713\) \\
+\(18^2\)&=&\(324\)&=&\(\)&\(\mod 713\) \\
+\(18^4\)&=&\(324^2\)&=&\(165\)&\(\mod 713\) \\
+\(18^8\)&=&\(165^2\)&=&\(131\)&\(\mod 713\) \\
+\(18^{16}\)&=&\(131^2\)&=&\(49\)&\(\mod 713\) \\
+\(18^{32}\)&=&\(49^2\)&=&\(262\)&\(\mod 713\) \\
+\(18^{64}\)&=&\(262^2\)&=&\(196\)&\(\mod 713\) \\
+\(18^{128}\)&=&\(196^2\)&=&\(627\)&\(\mod 713\) \\
+\(18^{256}\)&=&\(627^2\)&=&\(266\)&\(\mod 713\) \\
+\end{tabular}
+
+Thus the ciphertext is \(18^{307} \mod 713 = (266 \cdot 262 \cdot 49 \cdot 324 \cdot 18) \mod 713 = 9\), which is I.
+
+So the plaintext is NICE.
 \end{proof}
 
 \subsection{Exercise 41}
-
 \subsubsection{(a)}
+Use mathematical induction and Euclid’s lemma to prove that for every positive integer $s$, if $p$ and \(q_1, q_2, 
+\ldots, q_s\) are prime numbers and \(p \mid q_1q_2 \cdots q_s\), then \(p=q_i\) for some $i$ with \(1\leq i \leq s\).
 
 \begin{proof}
+Let $P(s)$ be the statement: ``if $p$ and \(q_1, q_2, \ldots, q_s\) are prime numbers and \(p \mid q_1q_2 \cdots 
+q_s\), then \(p=q_i\) for some $i$ with \(1\leq i \leq s\).''
 
+{\bf Show \(P(1)\) is true:} Assume \(p \mid q_1\). Since $p$ and $q_1$ are both prime, \(p = q_1\) as needed.
+
+{\bf Show that for any integer \(s \geq 1\) if \(P(s)\) is true then \(P(s+1)\) is true:} Assume \(P(s)\), and assume
+$p$ and \(q_1, q_2, \ldots, q_{s+1}\) are prime numbers and \(p \mid q_1q_2 \cdots q_s q_{s+1}\). 
+
+Let \(a = q_1q_2 \cdots q_s\). Then \(p \mid a q_{s+1}\), and either \(p = q_{s+1}\), or by Euclid’s lemma 
+\(p \mid q_1q_2 \cdots q_s\), in which case \(p = q_i\) for some \(1 \leq i \leq s\) by the inductive hypothesis.
 \end{proof}
 
 \subsubsection{(b)}
+The uniqueness part of the unique factorization theorem for the integers says that given any integer $n$, if \(n = p_1 
+p_2 \cdots p_r = q_1q_2 \cdots q_s\) for some positive integers $r$ and $s$ and prime numbers \(p1 \leq p2 \leq 
+\cdots \leq p_r\) and \(q1 \leq q_2 \leq \cdots \leq q_s\), then \(r = s\) and \(p_i = q_i\) for every integer $i$ with 
+\(1 \leq i \leq r\).
+
+Use the result of part (a) to fill in the details of the following sketch of a proof: Suppose that $n$ is an integer 
+with two different prime factorizations: \(n = p_1 p_2 \cdots p_t = q_1 q_2 \cdots q_u\). All the prime factors 
+that appear on both sides can be canceled (as many times as they appear on both sides) to arrive at the situation where 
+\(p_1 p_2 \cdots p_r = q_1 q_2 \cdots q_s, p_1 \leq p_2 \leq \cdots \leq p_r, q_1 \leq q_2 \leq \cdots \leq q_s\), 
+and \(p_i \neq q_j\) for any integers $i$ and $j$. Then use part (a) to deduce a contradiction, and conclude that the 
+prime factorization of $n$ is unique except, possibly, for the order in which the prime factors are written.
 
 \begin{proof}
+Assume \(p_1 p_2 \cdots p_r = q_1 q_2 \cdots q_s, p_1 \leq p_2 \leq \cdots \leq p_r, q_1 \leq q_2 \leq \cdots \leq 
+q_s\), and \(p_i \neq q_j\) for any integers $i$ and $j$.
 
+Notice \(p_1 \mid q_1 q_2 \cdots q_s\). Then by part (a), \(p_1 = q_i\) for some \(1 \leq i \leq s\). This contradicts
+the fact that \(p_1 \neq q_j\) for any integer and $j$.
+
+{\it Conclusion:} Our supposition was false, so $n$ does not have two different prime factorizations. Thus the 
+prime factorization of $n$ is unique except, possibly, for the order in which the prime factors are written.
 \end{proof}
 
 \subsection{Exercise 42}
+According to Fermat’s little theorem, if $p$ is a prime number and $a$ and $p$ are relatively prime, then \(a^{p-1} 
+\equiv 1 \pmod p\). Verify that this theorem gives correct results for the following:
+
+\subsubsection{(a)}
+\(a = 15\) and \(p = 7\)
 
 \begin{proof}
+\(a^{p-1} = 15^6 = 11390625 \equiv 1 \pmod 7\) because \(11390625 - 1 = 7 \cdot 1627232\).
+\end{proof}
 
+\subsubsection{(b)}
+\(a = 8\) and \(p = 11\)
+
+\begin{proof}
+\(a^{p-1} = 8^{10} = 1073741824 \equiv 1 \pmod 11\) because \(1073741824 - 1 = 11 \cdot 97612893\).
 \end{proof}
 
 \subsection{Exercise 43}
+Fermat’s little theorem can be used to show that a number is not prime by finding a number a relatively prime to $p$ 
+with the property that \(a^{p-1} \not\equiv 1 \pmod p\). However, it cannot be used to show that a number is prime. 
+Find an example to illustrate this fact. That is, find integers $a$ and $p$ such that $a$ and $p$ are relatively 
+prime and \(a^{p-1} \equiv 1 \pmod p\) but $p$ is not prime.
 
 \begin{proof}
-
+Let \(a = 5, p = 4\). Then $a$ and $p$ are relatively prime, and \(a^{p-1} = 5^{4-1}=5^3 = 125 \equiv 1 \pmod 4\)
+because \(125 - 1 = 124 = 4 \cdot 31\), but $p$ is not prime because \(4 = 2 \cdot 2\).
 \end{proof}
 
 \section{Exercise Set 8.5}
