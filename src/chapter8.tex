@@ -3541,451 +3541,939 @@ because \(125 - 1 = 124 = 4 \cdot 31\), but $p$ is not prime because \(4 = 2 \cd
 \section{Exercise Set 8.5}
 
 \subsection{Exercise 1}
+Each of the following is a relation on \(\{0, 1, 2, 3\}\). Draw directed graphs for each relation, and indicate which 
+relations are antisymmetric.
 
 \subsubsection{(a)}
+\(R_1 = \{(0, 0), (0, 2), (1, 0), (1, 3), (2, 2), (3, 0), (3, 1)\}\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.1.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
+\(R_2 = \{(0, 1), (0, 2), (1, 1), (1, 2), (1, 3), (2, 2), (3, 2)\}\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.1.b.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(c)}
+\(R_3 = \{(0, 0), (0, 3), (1, 0), (1, 3), (2, 2), (3, 3),(3, 2)\}\)
 
 \begin{proof}
-
+\(R_3\) is antisymmetric: there are no cases where \(a \,R\, b\) and \(b \,R\, a\) and \(a \neq b\).
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.1.c.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(d)}
+\(R_4 = \{(0, 0), (1, 0), (1, 2), (1, 3), (2, 0), (2, 1),(3, 2), (3, 0)\}\)
 
 \begin{proof}
-
+\(R_4\) is not antisymmetric: \(1 \,R\, 2\) and \(2 \,R\, 1\) and \(1 \neq 2\).
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.1.d.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 2}
+Let $P$ be the set of all people in the world and define a relation $R$ on $P$ as follows: For all people $x$ and $y$, 
+\(x \,R\, y \iff x\) is no older than $y$. Is $R$ antisymmetric? Prove or give a counterexample.
 
 \begin{proof}
-
+$R$ is not antisymmetric. Let $x$ and $y$ be any two distinct people of the same age. Then \(x \,R\, y\) and 
+\(y \,R\, x\) but \(x \neq y\).
 \end{proof}
 
 \subsection{Exercise 3}
+Let $S$ be the set of all strings of $a$’s and $b$’s. Define a relation $R$ on $S$ as follows: For every \(s, t 
+\in S, s \,R\, t \iff L(s) \leq L(t)\), where \(L(x)\) denotes the length of a string $x$. Is $R$ antisymmetric? 
+Prove or give a counterexample.
 
 \begin{proof}
-
+$R$ is not antisymmetric. Let \(s = a, t = b\). Then \(L(s) = L(t) = 1\) so both \(L(s) \leq L(t)\) and \(L(t) \leq 
+L(s)\), so \(s \,R\, t\) and \(t \,R\,s\) but \(s \neq t\).
 \end{proof}
 
 \subsection{Exercise 4}
+Let $R$ be the “less than” relation on $\R$, the set of all real numbers: For every \(x, y \in \R, x \,R\, y \iff x < 
+y\). Is $R$ antisymmetric? Prove or give a counterexample.
 
 \begin{proof}
-
+Yes. If \(x \neq y\) are two real numbers and \(x < y\) then \(y \nless x\).
 \end{proof}
 
 \subsection{Exercise 5}
+Let $\R$ be the set of all real numbers and define a relation $R$ on \(\R \times \R\) as follows: For every 
+\((a, b)\) and \((c, d)\) in \(\R \times R, (a, b) \,R\, (c, d) \iff\) either \(a < c\) or both \(a = c\) and 
+\(b \leq d\). Is $R$ a partial order relation? Prove or give a counterexample.
 
 \begin{proof}
+$R$ is a partial order relation.
 
+{\bf $R$ is reflexive:} Suppose \((a, b) \in \R \times \R\). Then \((a, b) \,R\, (a, b)\) because \(a = a\) and 
+\(b \leq b\).
+
+{\bf $R$ is antisymmetric:} Suppose \((a, b)\) and \((c, d)\) are ordered pairs of real numbers such that \((a, b) \,R 
+\, (c, d)\) and \((c, d) \,R\, (a, b)\). Then either \(a < c\) or both \(a = c\) and \(b \leq d\) and either \(c < a\) 
+or both \(c = a\) and \(d \leq b\). Thus \(a \leq c\) and \(c \leq a\) and so \(a = c\). Consequently, \(b \leq d\) 
+and \(d \leq b\) and so \(b = d\). Hence \((a, b) = (c, d)\).
+
+{\bf $R$ is transitive:} Suppose \((a, b), (c, d)\), and \((e, f)\) are ordered pairs of real numbers such that 
+\((a, b) \,R\, (c, d)\) and \((c, d) \,R\, (e, f)\). Then either \(a < c\) or both \(a = c\) and \(b \leq d\) and 
+either \(c < e\) or both \(c = e\) and \(d \leq f\).
+
+It follows that one of the following cases must occur.
+
+{\bf Case 1 (\(a < c\) and \(c < e\)):} Then by transitivity of \(<\), \(a < e\), and so \((a, b) \,R\, 
+(e, f)\) by definition of \(R\).
+
+{\bf Case 2 (\(a < c\) and \(c = e\)):} Then by substitution, \(a < e\), and so \((a, b) \,R\, (e, f)\) by 
+definition of \(R\).
+
+{\bf Case 3 (\(a = c\) and \(c < e\)):} Then by substitution, \(a < e\), and so \((a, b) \,R\, (e, f)\) by 
+definition of \(R\).
+
+{\bf Case 4 (\(a = c\) and \(c = e\)):} Then by definition of \(R\), \(b \leq d\) and \(d \leq f\), and so by 
+transitivity of \(\leq\), \(b \leq f\). Hence \(a = e\) and \(b \leq f\), and so \((a, b) \,R\, (e, f)\) by definition 
+of \(R\).
+
+In each case, \((a, b) \,R\, (e, f)\). Therefore, \(R\) is transitive. Since \(R\) is reflexive, antisymmetric, and 
+transitive, \(R\) is a partial order relation.
 \end{proof}
 
 \subsection{Exercise 6}
+Let $P$ be the set of all people who have ever lived and define a relation $R$ on $P$ as follows: For every \(r, s 
+\in P, r \,R\, s \iff r\) is an ancestor of \(s\) or \(r = s\). Is $R$ a partial order relation? Prove or give a 
+counterexample.
 
 \begin{proof}
+$R$ is a partial order relation.
 
+{\bf $R$ is reflexive:} For all \(r \in P, r = r\) therefore \(r \,R\, r\).
+
+{\bf $R$ is antisymmetric:} Assume \(r \,R\, s\) and \(s \,R\, r\). {\it [We want to show \(r = s\).]} 
+
+Since \(r \,R\, s\), either \(r=s\) or $r$ is an ancestor of $s$. If \(r=s\) then there is nothing to show. So assume
+$r$ is an ancestor of $s$.
+
+Since \(s \,R\, r\), either \(s=r\) or $s$ is an ancestor of $r$. If $s=r$ then there is nothing to show. So assume
+$s$ is an ancestor of $r$.
+
+So both $r$ is an ancestor of $s$ and $s$ is an ancestor of $r$. This is not possible unless \(r=s\).
+
+{\bf $R$ is transitive:} Assume \(r \,R\, s\) and \(s \,R\, t\). {\it [We want to show \(r \,R\, t\).]} Either $r=s$ or
+$r$ is an ancestor of $s$.
+
+{\bf Case 1 (\(r=s\)):} Either $s=t$ or $s$ is an ancestor of $t$. If $s=t$ then $r=s=t$ so \(r \,R\, t\). If $s$ is 
+an ancestor of $t$, then since $r=s$, $r$ is an ancestor of $t$, thus \(r \,R\, t\) again.
+
+{\bf Case 2 ($r$ is an ancestor of $s$):} Either $s=t$ or $s$ is an ancestor of $t$. If $s=t$ then since $r$ is an 
+ancestor of $s$, $r$ is an ancestor of $t$, thus \(r \,R\, t\). If $s$ is an ancestor of $t$, then by transitivity of 
+ancestry, $r$ is an ancestor of $t$, so \(r \,R\, t\) again.
 \end{proof}
 
 \subsection{Exercise 7}
+Define a relation $R$ on $\Z$, the set of all integers as follows: For every \(m, n \in \Z, m \,R\, n \iff\) every 
+prime factor of $m$ is a prime factor of $n$. Is $R$ a partial order relation? Prove or give a counterexample.
 
 \begin{proof}
-
+$R$ is not antisymmetric: let \(m = 2, n = 4\). Then \(m \,R\, n\) and \(n \,R\, m\) but \(m \neq n\).
 \end{proof}
 
 \subsection{Exercise 8}
+Define a relation $R$ on $\Z$, the set of all integers as follows: For every \(m, n \in \Z, m \,R\, n \iff m + n\) 
+is even. Is $R$ a partial order relation? Prove or give a counterexample.
 
 \begin{proof}
+$R$ is not a partial order relation because $R$ is not antisymmetric.
 
+\underline{Counterexample:} \(1 \,R\, 3\) (because \(1 + 3\) is even) and \(3 \,R\, 1\) (because \(3 + 1\) is even) 
+but \(1 \neq 3\).
 \end{proof}
 
 \subsection{Exercise 9}
+Define a relation $R$ on $\R$, the set of all real numbers as follows: For every \(x,y\in\R,x\,R\,y\iff x^2\leq y^2\). 
+Is $R$ a partial order relation? Prove or give a counterexample.
 
 \begin{proof}
-
+$R$ is not antisymmetric: let \(x = -2, y = 2\). Then \(x^2 = 4 = y^2\) so both \(x \,R\, y\) and \(y \,R\, x\) but
+\(x \neq y\).
 \end{proof}
 
 \subsection{Exercise 10}
+Suppose $R$ and $S$ are antisymmetric relations on a set $A$. Must \(R \cup S\) also be antisymmetric? Explain.
 
 \begin{proof}
-
+No. \underline{Counterexample:} Define relations $R$ and $S$ on the set \(\{1, 2\}\) as follows: \(R = \{(1, 2)\}\) 
+and \(S = \{(2, 1)\}\). Then both $R$ and $S$ are antisymmetric, but \(R \cup S = \{(1, 2), (2, 1)\}\) is not antisymmetric because \((1, 2) \in R \cup S\) and \((2, 1) 
+\in R \cup S\) but \(1 \neq 2\).
 \end{proof}
 
 \subsection{Exercise 11}
+Let \(A = \{a, b\}\), and suppose \(A\) has the partial order relation \(R = \{(a, a),(a, b), (b, b)\}\). 
+Let \(S\) be the set of all strings in \(a\)’s and \(b\)’s and let be the corresponding lexicographic order on \(S\). 
+Indicate which of the following statements are true, and for each true statement cite as a reason part (1), (2), or 
+(3) of the definition of lexicographic order given in Theorem 8.5.1.
 
 \subsubsection{(a)}
+\(aab \preceq aaba\)
 
 \begin{proof}
-
+True, by (1).
 \end{proof}
 
 \subsubsection{(b)}
+\(bbab \preceq bba\)
 
 \begin{proof}
-
+False. \(bba \preceq bbab\) by (1).
 \end{proof}
 
 \subsubsection{(c)}
+\(\lambda \preceq aba\)
 
 \begin{proof}
-
+True, by (3).
 \end{proof}
 
 \subsubsection{(d)}
+\(aba \preceq abb\)
 
 \begin{proof}
-
+True, by (2).
 \end{proof}
 
 \subsubsection{(e)}
+\(bbab \preceq bbaa\)
 
 \begin{proof}
-
+False. \(bbaa \preceq bbab\) by (2).
 \end{proof}
 
 \subsubsection{(f)}
+\(ababa \preceq ababaa\)
 
 \begin{proof}
-
+True, by (1).
 \end{proof}
 
 \subsubsection{(g)}
+\(bbaba \preceq bbabb\)
 
 \begin{proof}
-
+True, by (2).
 \end{proof}
 
 \subsection{Exercise 12}
+Prove Theorem 8.5.1.
+
+{\it Note:} The errata for the book has a correction for this theorem:
+
+{\bf 550 - Theorem 8.5.1} In \#2 (line 7), change each $m$ to a $k$. (5 changes)
+
+But the errata does not mention what $k$ is. The problem with (2) in the Theorem is this: it requires $s$ and $t$ to
+be the same {\it only except for the LAST character of $s$.} This does not work, since it is possible for $t$ to 
+be much shorter than $s$ and still be bigger: \(aaaaaaaaa \preceq z\) for example.
+
+So here $k$ should refer to any length up to $m$, so that, if the first $k-1$ characters of $s$ and $t$ are the same, 
+and they differ at {\it some point} where $t$ has a ``bigger'' character, then $t$ is bigger: \(aaaaaaaaa 
+\preceq z\) for example. Here $k = 1$ because $s$ and $t$ have their first $1-1 = 0$ characters the same. 
+
+Notice that $k$ has to be less than or equal to the lengths of both $s$ and $t$.
+
+So we can rephrase (2) as follows:
+
+If there exists an integer $k$ such that \(1 \leq k \leq min(m,n)\), the first $k-1$ characters of $s$ and $t$ are 
+the same, \(s_k \,R\, t_k\) and \(s_k \neq t_k\), then \(s \preceq t\).
+
+This makes the proofs below {\it a lot more} complicated. But it has to be done! Following these proofs can be very
+difficult; when you have trouble, always write down some examples like the ones above.
 
 \begin{proof}
+Let $m,n,o$ be the lengths of $s,t,u$ and let \(s_i, t_i, u_i\) be the $i$th characters of $s$, $t$ and $u$, 
+respectively, for each \(1 \leq i \leq max(m, n, o)\). (Note that $m,n$ and $o$ could be 0, in which case \(s_i\), \(t_i\) and \(u_i\) are not defined.)
 
+{\bf \(\bm{\preceq}\) is reflexive:} For any string $s$, \(m \leq m\), and the first $m$ characters of $s$ and $s$ 
+are the same. Therefore by (1), \(s \preceq s\).
+
+{\bf \(\bm{\preceq}\) is antisymmetric:} Assume \(s \preceq t\) and \(t \preceq s\). {\it [We want to show $s=t$.]} 
+
+{\bf Case 1: \(\bm{s \preceq t}\) because of (1).} Then \(m \leq n\) where both $m$ and $n$ are positive, and the first 
+$m$ characters of $s$ and $t$ are the same. 
+
+Now consider the fact \(t \preceq s\). 
+
+This cannot be because of (3) since $n$ is positive and therefore \(t \neq \lambda\).
+
+It cannot be because of (2) either, because there is no integer $k$ such that \(1 \leq k \leq min(m,n)\) and \(s_k \neq t_k\) since the first $m$ characters of $s$ and $t$ are the same and the length of $s$ is $m$.
+
+So it must be because of (1). Then \(n \leq m\), so \(m = n\). Since the first $m$ characters of $s$ and $t$ are the 
+same, and they both have length $m$, \(s = t\).
+
+{\bf Case 2: \(\bm{s \preceq t}\) because of (2).} So there is an integer $k$ such that \(1 \leq k \leq min(m,n)\), the 
+first $k-1$ characters of $s$ and $t$ are the same, \(s_k \neq t_k\) and \(s_k \,R\, t_k\). 
+
+Now consider the fact \(t \preceq s\). 
+
+This cannot be because of (3) since $n$ is positive and therefore \(t \neq \lambda\). 
+
+It cannot be because of (1) either, since \(s_k \neq t_k\). 
+
+So it must be because of (2). So there is an integer $j$ such that \(1 \leq j \leq min(n,m)\), the first $j-1$ 
+characters of $t$ and $s$ are the same, \(t_j \neq s_j\), and \(t_j \,R\, s_j\). 
+
+Since the first $k-1$ characters of $s$ and $t$ are the same, the first $j-1$ characters of $s$ and $t$ are the 
+same, the $j$th characters are different, and the $k$th characters are different, all of this forces $j=k$. So 
+\(s_k \,R\, t_k\) and \(t_k \,R\, s_k\). Since $R$ is antisymmetric, \(s_k = t_k\), a contradiction. 
+So this case is not possible.
+
+{\bf Case 3: \(\bm{s \preceq t}\) because of (3).} Then \(s = \lambda\). So \(t \preceq \lambda\). Since (1) and (2)
+require positive string lengths for both strings, this must be because of (3) as well. Thus \(t=\lambda\) and \(s=t\).
+
+{\bf \(\bm{\preceq}\) is transitive:} Assume \(s\preceq t\) and \(t\preceq u\). {\it[We want to show \(s\preceq u\).]}
+
+{\bf Case 1: \(\bm{s \preceq t}\) because of (1).} Then \(m \leq n\) where both $m$ and $n$ are positive, and the first 
+$m$ characters of $s$ and $t$ are the same. 
+
+Now consider the fact \(t \preceq u\). 
+
+This cannot be because of (3) since $n$ is positive and therefore \(t \neq \lambda\). 
+
+If it is because of (1) then \(n \leq o\) and the first $n$ characters of $t$ and $u$ are the same. Then the first $m$
+characters of $s$ and $u$ are the same, since \(m \leq n \leq o\), so \(s \preceq u\) by (1).
+
+If it is because of (2) then there is an integer $k$ such that \(1 \leq k \leq min(n,o)\), the first $k-1$ characters 
+of $t$ and $u$ are the same, \(t_k \neq u_k\) and \(t_k \,R\, u_k\).
+
+If \(m \leq k-1\) then the first $m$ characters of $s$ and $u$ are the same, so \(s \preceq u\) by (1).
+
+If \(k \leq m\) then the first $k-1$ characters of $s$ and $u$ are the same, \(s_k = t_k \neq u_k\) and \(s_k = t_k \,R\, u_k\), so \(s \preceq u\) by (2).
+
+{\bf Case 2: \(\bm{s \preceq t}\) because of (2).} So there is an integer $k$ such that \(1 \leq k \leq min(m,n)\), the 
+first $k-1$ characters of $s$ and $t$ are the same, \(s_k \neq t_k\) and \(s_k \,R\, t_k\). 
+
+Now consider the fact \(t \preceq u\). 
+
+This cannot be because of (3) since $n$ is positive and therefore \(t \neq \lambda\). 
+
+If it is because of (1), then \(n \leq o\) and the first $n$ characters of $t$ and $u$ are the same. Then the first
+$k-1$ characters of $s$ and $u$ are the same, \(s_k \neq t_k = u_k\) and \(s_k \,R\, t_k = u_k\). Therefore 
+\(s \preceq u\) by (2).
+
+If it is because of (2), then there is an integer $j$ such that \(1 \leq j \leq min(n, o)\), the first $j-1$ 
+characters of $t$ and $u$ are the same, \(t_j \neq u_j\) and \(t_j \,R\, u_j\).
+
+Let \(i = min(j,k)\). Then the first $i-1$ characters of $s$ and $u$ are the same, \(s_i \neq u_i\) and \(s_i \,R\,
+u_i\). Therefore \(s \preceq u\) by (2).
+
+{\bf Case 3: \(\bm{s \preceq t}\) because of (3).} Then \(s = \lambda\). So \(s \preceq u\) by (3).
 \end{proof}
 
 \subsection{Exercise 13}
+Let \(A = \{a, b\}\). Describe all partial order relations on \(A\).
 
 \begin{proof}
-
+\(R_1 = \{(a, a), (b, b)\}, R_2 = \{(a, a), (b, b), (a, b)\}, R_3 = \{(a, a), (b, b), (b, a)\}\)
 \end{proof}
 
 \subsection{Exercise 14}
+Let \(A = \{a, b, c\}\).
 
 \subsubsection{(a)}
+Describe all partial order relations on \(A\) for which \(a\) is a maximal element.
 
 \begin{proof}
+\(R_1 = \{(a, a), (b, b), (c, c)\}\), \(R_2 = \{(a, a), (b, b), (c, c), (b, a)\}\)
 
+\(R_3 = \{(a, a), (b, b), (c, c), (c, a)\}\), \(R_4 = \{(a, a), (b, b), (c, c), (b, a), (c, a)\}\)
+
+\(R_5 = \{(a, a), (b, b), (c, c), (c, b), (c, a)\}\), \(R_6 = \{(a, a), (b, b), (c, c), (b, c), (b, a)\}\)
+
+\(R_7 = \{(a, a), (b, b), (c, c), (c, b), (b, a), (c, a)\}\), \(R_8 = \{(a, a), (b, b), (c, c), (b, c), (b, a), (c, a)\}\)
+
+\(R_9 = \{(a, a), (b, b), (c, c), (b, c)\}\), \(R_{10} = \{(a, a), (b, b), (c, c), (c, b)\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Describe all partial order relations on \(A\) for which \(a\) is a minimal element.
 
 \begin{proof}
+\(R_1 = \{(a, a), (b, b), (c, c)\}\), \(R_2 = \{(a, a), (b, b), (c, c), (a, b)\}\)
+
+\(R_3 = \{(a, a), (b, b), (c, c), (a, c)\}\), \(R_4 = \{(a, a), (b, b), (c, c), (a, b), (a, c)\}\)
+
+\(R_5 = \{(a, a), (b, b), (c, c), (b, c), (a, c)\}\), \(R_6 = \{(a, a), (b, b), (c, c), (c, b), (a, b)\}\)
+
+\(R_7 = \{(a, a), (b, b), (c, c), (c, b), (a, b), (a, c)\}\), \(R_8 = \{(a, a), (b, b), (c, c), (b, c), (a, b), (a, c)\}\)
+
+\(R_9 = \{(a, a), (b, b), (c, c), (b, c)\}\), \(R_{10} = \{(a, a), (b, b), (c, c), (c, b)\}\)
 
 \end{proof}
 
 \subsection{Exercise 15}
+Suppose a relation $R$ on a set $A$ is reflexive, symmetric, transitive, and antisymmetric. What can you 
+conclude about $R$? Prove your answer.
+
+{\it Hint:} $R$ is the identity relation on $A$: \(x \,R\, x\) for each \(x \in A\), and \(x\,\Ccancel{R}\,y\) if 
+\(x \neq y\).
 
 \begin{proof}
-
+Since $R$ is reflexive, symmetric, transitive, it's an equivalence relation. Consider any element \(a \in A\) and
+consider its equivalence class \([a]\). If \(b \in [a]\) then \(a \,R\, b\). By symmetry \(b \,R\, a\). By 
+antisymmetry, \(a = b\). So \([a] = \{a\}\). Every element of $A$ is its own equivalence class. Moreover we also 
+proved that \(a \,R\, b\) if and only if \(a = b\). In other words, if \(a \neq b\) then \(a \,\Ccancel{R}\, b\).
+So $R$ is the identity relation on $A$.
 \end{proof}
 
 \subsection{Exercise 16}
+Consider the “divides” relation on each of the following sets A. Draw the Hasse diagram for each relation.
 
 \subsubsection{(a)}
+\(A = \{1, 2, 4, 5, 10, 15, 20\}\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/8.5.16.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
+\(A = \{2, 3, 4, 6, 8, 9, 12, 18\}\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.16.b.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 17}
+Consider the “subset” relation on \(\ps(S)\) for each of the following sets $S$. 
+Draw the Hasse diagram for each relation.
+
+\subsubsection{(a)}
+\(S = \{0, 1\}\)
 
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.17.a.png}
+\end{figure}
+\end{proof}
 
+\subsubsection{(b)}
+\(S = \{0, 1, 2\}\)
+
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.17.b.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 18}
+Let \(S = \{0, 1\}\) and consider the partial order relation $R$ defined on \(S \times S\) as follows: For all 
+ordered pairs \((a, b)\) and \((c, d)\) in \(S \times S, (a, b) \,R\, (c, d) \iff\) either \(a <c\) or both \(a= c\) 
+and \(b \leq d\), where \(<\) denotes the usual “less than” and \(\leq\) denotes the usual “less than or equal to” 
+relation for real numbers. Draw the Hasse diagram for $R$.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.18.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 19}
+Let \(S = \{0, 1\}\) and consider the partial order relation $R$ defined on \(S \times S\) as follows: For all 
+ordered pairs \((a, b)\) and \((c, d)\) in \(S \times S, (a, b) \,R\, (c, d) \iff\) \(a \leq c\) and \(b \leq d\), 
+where \(\leq\) denotes the usual “less than or equal to” relation for real numbers. Draw the Hasse diagram for $R$.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.19.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 20}
+Let \(S = \{0, 1\}\) and consider the partial order relation $R$ defined on \(S \times S \times S\) as follows: 
+For all ordered triples \((a, b, c)\) and \((d, e, f)\) in \(S \times S \times S, (a, b, c) \,R\, (d, e, f) \iff\) 
+\(a \leq d, b \leq e\) and \(c \leq f\), where \(\leq\) denotes the usual “less than or equal to” relation for real 
+numbers. Draw the Hasse diagram for $R$.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.20.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 21}
+Consider the “divides” relation defined on the set \(A = \{1, 2, 2^2, 2^3, \ldots, 2^n\}\), where $n$ is a 
+nonnegative integer.
 
 \subsubsection{(a)}
+Prove that this relation is a total order relation on $A$.
 
 \begin{proof}
-
+{\it [We must show that for all $a$ and $b$ in $A$, \(a \mid b\) or \(b \mid a\).]} Let $a$ and $b$ be particular 
+but arbitrarily chosen elements of $A$. By definition of $A$, there are nonnegative integers $r$ and $s$ such that 
+\(a = 2^r\) and \(b = 2^s\). Now either \(r \leq s\) or \(s < r\). If \(r \leq s\), then \(b = 2^s = 2^r \cdot 2^{s-r} 
+= a \cdot 2^{s-r}\), where \(s - r \geq 0\). It follows, by definition of divisibility, that \(a \mid b\). By a similar 
+argument, if \(s < r\), then \(b \mid a\). Hence either \(a \mid b\) or \(b \mid a\), {\it [as was to be shown].}
 \end{proof}
 
 \subsubsection{(b)}
+Draw the Hasse diagram for this relation for \(n = 4\).
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.21.b.png}
+\end{figure}
 \end{proof}
 
+{\bf \cy In $22-29$, find all greatest, least, maximal, and minimal elements for the relations in each of the 
+referenced exercises.}
+
 \subsection{Exercise 22}
-
+Exercise 16(a)
 \begin{proof}
-
+greatest element: none; least element: 1; maximal elements: 15, 20; minimal element: 1
 \end{proof}
 
 \subsection{Exercise 23}
-
+Exercise 16(b)
 \begin{proof}
-
+greatest element: none; least element: none; maximal elements: 8, 12, 18; minimal elements: 2, 3
 \end{proof}
 
 \subsection{Exercise 24}
-
+Exercise 17(a)
 \begin{proof}
-
+greatest element: \(\{0, 1\}\); least element: \(\es\); maximal element: \(\{0, 1\}\); minimal element: \(\es\)
 \end{proof}
 
 \subsection{Exercise 25}
-
+Exercise 17(b)
 \begin{proof}
-
+greatest element: \(\{0,1,2\}\); least element: \(\es\); maximal elements: \(\{0,1,2\}\); minimal elements: \(\es\)
 \end{proof}
 
 \subsection{Exercise 26}
-
+Exercise 18
 \begin{proof}
-
+greatest element: (1, 1); least element: (0, 0); maximal element: (1, 1); minimal element: (0, 0)
 \end{proof}
 
 \subsection{Exercise 27}
-
+Exercise 19
 \begin{proof}
-
+greatest element: (1,1); least element: (0,0); maximal elements: (1,1); minimal elements: (0,0)
 \end{proof}
 
 \subsection{Exercise 28}
-
+Exercise 20
 \begin{proof}
-
+greatest element: (1,1,1); least element: (0,0,0); maximal elements: (1,1,1); minimal elements: (0,0,0)
 \end{proof}
 
 \subsection{Exercise 29}
-
+Exercise 21
 \begin{proof}
-
+greatest element: \(2^n\); least element: 1; maximal elements: \(2^n\); minimal elements: 1
 \end{proof}
 
 \subsection{Exercise 30}
+Each of the following sets is partially ordered with respect to the “less than or equal to” relation, \(\leq\), 
+for real numbers. In each case, determine whether the set has a greatest or least element.
 
 \subsubsection{(a)}
-
+\(\R\)
 \begin{proof}
+No greatest element, no least element
 
 \end{proof}
 
 \subsubsection{(b)}
-
+\(\{x \in \R \,|\, 0 \leq x \leq 1\}\)
 \begin{proof}
-
+Least element is 0, greatest element is 1
 \end{proof}
 
 \subsubsection{(c)}
-
+\(\{x \in \R \,|\, 0 < x < 1\}\)
 \begin{proof}
-
+No greatest element, no least element
 \end{proof}
 
 \subsubsection{(d)}
-
+\(\{x \in \Z \,|\, 0 < x < 10\}\)
 \begin{proof}
-
+Least element is 1, greatest element is 9
 \end{proof}
 
 \subsection{Exercise 31}
+Let \(A = \{a, b, c, d\}\), and let \(R\) be the relation \(R = \{(a, a), (b, b), (c, c), (d, d), (c, a), (a, d)\),
+
+\((c, d), (b, c), (b, d), (b, a)\}\). Is \(R\) a total order on \(A\)? Justify your answer.
 
 \begin{proof}
-
+$R$ is a total order relation because it is reflexive, antisymmetric, and transitive (so it is a partial order) 
+and because \([b, c, a, d]\) is a chain that contains every element of \(A: b \,R\, c, c \,R\, a\), and \(a \,R\, d\).
 \end{proof}
 
 \subsection{Exercise 32}
+Let \(A = \{a, b, c, d\}\), and let \(R\) be the relation \(R = \{(a, a), (b, b), (c, c), (d, d), (c, b), (a, d)\), 
+
+\((b, a), (b, d), (c, d), (c, a)\}\). Is \(R\) a total order on \(A\)? Justify your answer.
 
 \begin{proof}
-
+$R$ is a total order relation because it is reflexive, antisymmetric, and transitive (so it is a partial order) 
+and because \([c, b, a, d]\) is a chain that contains every element of \(A: c \,R\, b, b \,R\, a\), and \(a \,R\, d\).
 \end{proof}
 
 \subsection{Exercise 33}
+Consider the set \(A = \{12, 24, 48, 3, 9\}\) ordered by the “divides” relation. Is $A$ totally ordered with respect 
+to the relation? Justify your answer.
 
 \begin{proof}
-
+The relation is reflexive, antisymmetric and transitive, but it's not a total order: there is no chain that includes 
+all 5 elements of $A$, since 9 does not divide any of the larger elements 12, 24, 48.
 \end{proof}
 
 \subsection{Exercise 34}
+Suppose that $R$ is a partial order relation on a set $A$ and that $B$ is a subset of $A$. The restriction of $R$ to 
+$B$ is defined as follows: 
+\[
+R' = \{(x,y)\,|\,x\in B, y \in B, \text{ and } (x, y) \in R\}.
+\] 
+In other words, two elements of $B$ are related by $R'$ if, and only if, they are related by $R$. Prove that the 
+restriction of $R$ to $B$ is a partial order relation on $B$. (In less formal language, this says that a subset of a 
+partially ordered set is partially ordered.)
 
 \begin{proof}
+{\bf $R'$ is reflexive:} For all \(b \in B\), since \(B \subseteq A\), we have \(b \in A\). Since $R$ is reflexive, 
+\(b \,R\, b\). Thus by definition of $R'$, \(b \,R'\, b\).
 
+{\bf $R'$ is antisymmetric:} Assume \(b_1, b_2 \in B\) and assume \(b_1 \,R'\, b_2\) and \(b_2 \,R'\, b_1\). By 
+definition of $R'$, \(b_1 \,R\, b_2\) and \(b_2 \,R\, b_1\). Since $R$ is antisymmetric, \(b_1 = b_2\).
+
+{\bf $R'$ is transitive:} Assume \(b_1, b_2, b_3 \in B\) and assume \(b_1 \,R'\, b_2\) and \(b_2 \,R'\, b_3\). By
+definition of $R'$, \(b_1 \,R\, b_2\) and \(b_2 \,R\, b_3\). Since $R$ is transitive, \(b_1 \,R\, b_3\). Since
+both \(b_1\) and \(b_2\) are in $B$, by definition of $R'$, \(b_1 \,R'\, b_3\).
 \end{proof}
 
 \subsection{Exercise 35}
+The set \(\ps(\{w, x, y, z\})\) is partially ordered with respect to the “subset” relation \(\subseteq\). Find a 
+chain of length 4 in \(\ps(\{w, x, y, z\})\).
 
 \begin{proof}
-
+One possible solution: \(\es \subseteq \{w\} \subseteq \{w, x\} \subseteq \{w, x, y\} \subseteq \{w, x, y, z\}\)
 \end{proof}
 
 \subsection{Exercise 36}
+The set \(A = \{2, 4, 3, 6, 12, 18, 24\}\) is partially ordered with respect to the “divides” relation. Find a 
+chain of length 3 in \(A\).
 
 \begin{proof}
-
+One possible solution: \(2 \mid 6 \mid 12 \mid 24\)
 \end{proof}
 
 \subsection{Exercise 37}
+Find a chain of length 2 for the relation defined in exercise 19.
 
 \begin{proof}
-
+\((0,0) \,R\, (1,0) \,R\, (1,1)\)
 \end{proof}
 
 \subsection{Exercise 38}
+Prove that a partially ordered set is totally ordered if, and only if, it is a chain.
 
 \begin{proof}
-
+Suppose $A$ is a partially ordered set with respect to a relation \(\preceq\). By definition of total order, $A$ is 
+totally ordered if, and only if, any two elements of $A$ are comparable. By definition of chain, this is true if, 
+and only if, $A$ is a chain.
 \end{proof}
 
 \subsection{Exercise 39}
+Suppose that $A$ is a totally ordered set. Use mathematical induction to prove that for any integer \(n \geq 1\), every 
+subset of $A$ with $n$ elements has both a least element and a greatest element.
 
 \begin{proof}
+Let $A$ be a set that is totally ordered with respect to a relation \(\preceq\), and let the property \(P(n)\) be the 
+sentence “Every subset of $A$ with $n$ elements has both a least element and a greatest element.”
 
+{\bf Show that \(P(1)\) is true:} If \(A = \es\), then \(P(1)\) is true by default. So assume that \(A\) has at 
+least one element, and suppose \(S = \{a_1\}\) is a subset of \(A\) with one element. Because \(\preceq\) is 
+reflexive, \(a_1 \preceq a_1\). So, by definition of least element and greatest element, \(a_1\) is both a least 
+element and a greatest element of \(S\), and thus the property is true for \(n = 1\).
+
+{\bf Show that for every integer \(k \geq 1\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let $k$ be any integer 
+with \(k \geq 1\), and suppose that any subset of $A$ with $k$ elements has both a least element and a greatest 
+element. {\it [Inductive hypothesis.]} 
+
+We must show that any subset of $A$ with \(k + 1\) elements has both a least element and a greatest element. If $A$ has 
+fewer than \(k + 1\) elements, then the statement is true by default. So assume that $A$ has at least \(k + 1\) 
+elements and that \(S = \{a_1, a_2, \ldots, a_{k+1}\}\) is a subset of $A$ with \(k + 1\) elements. By inductive 
+hypothesis, \(S - \{a_{k+1}\}\) has both a least element $s$ and a greatest element $t$. Now because $A$ is totally 
+ordered, \(a_{k+1}\) and $s$ are comparable. If \(a_{k+1} \preceq s\), then, by transitivity of \(\preceq, a_{k+1}\) 
+is the least element of $S$; otherwise, $s$ remains the least element of $S$. And if \(t \preceq a_{k+1}\), then, 
+by transitivity of \(\preceq, a_{k+1}\) is the greatest element of $S$; otherwise, $t$ remains the greatest element 
+of $S$. Thus $S$ has both a greatest element and a least element, {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 40}
+Prove that a nonempty, finite, partially ordered set has
 
 \subsubsection{(a)}
+at least one minimal element,
 
 \begin{proof}
+Suppose not. Suppose $A$ is a nonempty, finite set that is partially ordered with respect to a relation \(\preceq\), 
+and suppose no element of $A$ is minimal. Construct a sequence of elements \(x_1, x_2, x_3, \ldots\) of $A$ as 
+follows: 
 
+1. Pick any element of $A$ and call it \(x_1\).
+
+2. For each \(i = 2, 3, 4, \ldots\), pick \(x_i\) to be an element of $A$ for which \(x_i \preceq x_{i-1}\) and \(x_i 
+\neq x_{i-1}\). (Such an element must exist because otherwise \(x_{i-1}\) would be minimal, and we are 
+supposing that no element of $A$ is minimal.)
+
+Now \(x_i \neq x_j\) for any \(i \neq j\): 
+
+Because otherwise, if \(x_i = x_j\), where \(i < j\), then on the one hand, \(x_j \preceq x_{j-1} \preceq \cdots 
+\preceq x_{i+1} \preceq x_i\) and so \(x_j \preceq x_{i+1}\). On the other hand, since \(x_i = x_j\) and \(x_{i+1} 
+\preceq x_i\), then \(x_{i+1} \preceq x_j\). Hence by antisymmetry, \(x_j = x_{i+1}\), and so \(x_i = x_{i+1}\) 
+because \(x_i = x_j\). But this contradicts the definition of the sequence \(x_1, x_2 , x_3, \ldots\).
+
+Thus \(x_1, x_2, x_3, \ldots\) is an infinite sequence of distinct elements, and consequently 
+
+\(\{x_1, x_2, x_3, \ldots\}\) is an infinite subset of the finite set $A$, which is impossible. Hence the supposition 
+is false and we conclude that any partially ordered subset of a finite set has a minimal element.
 \end{proof}
 
 \subsubsection{(b)}
+at least one maximal element.
 
 \begin{proof}
-
+The proof is almost identical to part (a), except replace ``minimal'' with ``maximal'' and replace \(x_i \preceq 
+x_{i-1}\) with \(x_{i-1} \preceq x_i\). Also replace \(x_j \preceq x_{j-1} \preceq \cdots \preceq x_{i+1}\preceq x_i\)
+with \(x_i \preceq x_{i+1} \preceq \cdots \preceq x_{j-1} \preceq x_j\), and \(x_j \preceq x_{i+1}\) with \(x_{i+1} 
+\preceq x_j\), and so on.
 \end{proof}
 
 \subsection{Exercise 41}
+Prove that a finite, partially ordered set has
 
 \subsubsection{(a)}
+at most one greatest element,
 
 \begin{proof}
-
+Suppose not. Suppose $A$ is a finite set that is partially ordered with respect to a relation \(\preceq\), and suppose 
+two distinct elements \(a, b\) of $A$ are both greatest, with \(a \neq b\). Then by definition of greatest, \(a 
+\preceq b\) and \(b \preceq a\). By antisymmetry, \(a = b\), a contradiction.
 \end{proof}
 
 \subsubsection{(b)}
+at most one least element.
 
 \begin{proof}
-
+The proof is almost identical. Replace ``greatest'' with ``least''.
 \end{proof}
 
 \subsection{Exercise 42}
+Draw a Hasse diagram for a partially ordered set that has two maximal elements and two minimal elements and is such 
+that each element is comparable to exactly two other elements.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.42.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 43}
+Draw a Hasse diagram for a partially ordered set that has three maximal elements and three minimal elements and is 
+such that each element is either greater than or less than exactly two other elements.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.43.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 44}
+Use the algorithm given in the text to find a topological sorting for the relation of exercise 16(a) that is different from the “less than or equal to” relation \(\leq\).
 
 \begin{proof}
-
+One such total order is 1, 5, 2, 15, 10, 4, 20.
 \end{proof}
 
 \subsection{Exercise 45}
+Use the algorithm given in the text to find a topological sorting for the relation of exercise 16(b) that is different from the “less than or equal to” relation \(\leq\).
 
 \begin{proof}
-
+One such total order is 3, 2, 9, 6, 18, 4, 12, 8.
 \end{proof}
 
 \subsection{Exercise 46}
+Use the algorithm given in the text to find a topological sorting for the relation of exercise 19.
 
 \begin{proof}
-
+One such total order is (0, 0), (1, 0), (0, 1), (1, 1).
 \end{proof}
 
 \subsection{Exercise 47}
+Use the algorithm given in the text to find a topological sorting for the relation of exercise 20.
 
 \begin{proof}
-
+One such total order is (0,0,0), (0,0,1), (0,1,0), (1,0,0), (1,1,0), (1,0,1), (0,1,1), (1,1,1).
 \end{proof}
 
 \subsection{Exercise 48}
+Use the algorithm given in the text to find a topological sorting for the “subset” relation on \(\ps(\{a, b, c, d\})\).
 
 \begin{proof}
+One such total order is \(\es, \{a\}, \{b\}, \{c\}, \{d\}, \{a,b\}, \{a,c\}, \{a,d\}, \{b,c\}, \{b,d\}\),
 
+\(\{c,d\}, \{a,b,c\}, \{a,b,d\}, \{a,c,d\}, \{b,c,d\}, \{a,b,c,d\}\)
 \end{proof}
 
 \subsection{Exercise 49}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.1.png}
+\end{figure}
+
+Refer to the prerequisite structure shown in Figure 8.5.1.
 
 \subsubsection{(a)}
+Find a list of six noncomparable courses that is different from the list given in the text.
 
 \begin{proof}
+The list given in the text was: 350, 360, 345, 301, 230, 200.
 
+Here is another: 350, 390, 345, 301, 230, 200.
 \end{proof}
 
 \subsubsection{(b)}
+Find two topological sortings that are different from the one given in the text.
 
 \begin{proof}
+The one given in the text was: 140, 150, 141, 155, 200, 225, 230, 300, 250, 301, 340, 345, 350, 360, 390.
 
+Here is another: 150, 140, 141, 155, 200, 225, 230, 300, 250, 301, 340, 345, 350, 360, 390.
+
+Here is another: 140, 150, 141, 155, 200, 225, 230, 250, 350, 300, 301, 340, 345, 360, 390.
 \end{proof}
 
 \subsection{Exercise 50}
+A set $S$ of jobs can be ordered by writing \(x \preceq y\) to mean that either \(x = y\) or \(x\) must be done before 
+\(y\), for all \(x\) and \(y\) in \(S\). The following is a Hasse diagram for this relation for a particular set \(S\) 
+of jobs.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/8.5.50.png}
+\end{figure}
 
 \subsubsection{(a)}
+If one person is to perform all the jobs, one after another, find an order in which the jobs can be done.
 
 \begin{proof}
-
+One possible answer: 1, 6, 10, 9, 5, 7, 2, 4, 8, 3
 \end{proof}
 
 \subsubsection{(b)}
+Suppose enough people are available to perform any number of jobs simultaneously.
+
+(i) If each job requires one day to perform, what is the least number of days needed to perform all ten jobs?
+
+(ii) What is the maximum number of jobs that can be performed at the same time?
 
 \begin{proof}
+(i) Jobs 1, 9, 2 can be performed on day 1. Jobs 10, 6, 8 can be performed on day 2. Jobs 5, 7 can be performed on 
+day 3. Job 4 can be performed on day 4. Finally job 3 can be performed on day 5, which is the least number of days.
 
+(ii) At most 3 jobs can be performed at the same time.
 \end{proof}
 
 \subsection{Exercise 51}
+Suppose the tasks described in Example 8.5.12 require the following performance times:
+
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|}
+\hline
+{\bf \cy Task} & {\bf \cy Immediately Preceding Tasks} & {\bf \cy Time Needed to Perform Task} \\
+\hline
+1 &  & 9 hours \\
+\hline
+2 & 1 & 7 hours \\
+\hline
+3 & 1 & 4 hours \\
+\hline
+4 & 2 & 5 hours \\
+\hline
+5 & 2, 3 & 7 hours \\
+\hline
+6 & 4 & 3 hours \\
+\hline
+7 & 2, 3 & 2 hours \\
+\hline
+8 & 4, 5 & 4 hours \\
+\hline
+9 & 6, 7, 8 & 6 hours \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 
 \subsubsection{(a)}
+What is the minimum time required to assemble a car?
 
 \begin{proof}
+This is the Hasse diagram:
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/8.5.51.png}
+\end{figure}
+
+If we fill the diagram we get the following minimum times:
+
+{\bf Task 1}: 9 hours, 
+
+{\bf Task 2} (depends on 1): 9+7 = 16 hours, {\bf Task 3} (depends on 1): 9+4 = 13 hours,
+
+{\bf Task 4} (depends on 2): 16+5 = 21 hours, {\bf Task 5} (depends on 2 and 3): max(16, 13) + 7 = 23 hours, 
+{\bf Task 7} (depends on 2 and 3): max(16, 13) + 2 = 18 hours,
+
+{\bf Task 6} (depends on 4): 23+3 = 26 hours, {\bf Task 8} (depends on 4 and 5): max(21, 23) + 4 = 27 hours,
+
+{\bf Task 9} (depends on 6, 7 and 8): max(26, 18, 27) + 6 = 33 hours.
 \end{proof}
 
 \subsubsection{(b)}
+Find a critical path for the assembly process.
 
 \begin{proof}
-
+Critical path: 1, 2, 5, 8, 9 because 9+7+7+4+6 is exactly 33 hours.
 \end{proof}
 
 \end{document}
