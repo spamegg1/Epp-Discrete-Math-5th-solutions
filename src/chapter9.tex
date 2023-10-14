@@ -1,16 +1,10 @@
 \documentclass[14pt]{extarticle}
 
 \usepackage[table]{xcolor} % colored lines for tables
-\usepackage[normalem]{ulem} % strike through text
+%\usepackage[normalem]{ulem} % strike through text
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref}
 \usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel}
-\usepackage{minted,tcolorbox,bm}
-
-\usepackage[mathscr]{euscript}
-\let\euscr\mathscr
-\let\mathscr\relax
-\usepackage[scr]{rsfso}
-\newcommand{\ps}{\mathscr{P}} % for the Power set P
+\usepackage{tcolorbox,bm}
 
 \newtheorem{defn}{Definition}
 \newtheorem{thm}{Theorem}
@@ -57,361 +51,606 @@
 \section{Exercise Set 9.1}
 
 \subsection{Exercise 1}
+Toss two coins 30 times and make a table showing the relative frequencies of 0, 1, and 2 heads. How do your 
+values compare with those shown in Table 9.1.1?
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|}
+\hline
+{\bf\cy Event} & {\bf\cy Freq.} & {\bf\cy Rel. freq.} \\
+\hline
+2 heads obtained & 7 & 23.33\% \\
+\hline
+1 head obtained & 16 & 53.33\% \\
+\hline
+0 heads obtained & 7 & 23.33\% \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 2}
+In the example of tossing two quarters, what is the probability that at least one head is obtained? that coin 
+$A$ is a head? that coins $A$ and $B$ are either both
+heads or both tails?
 
 \begin{proof}
-
+3/4, 1/2, 1/2
 \end{proof}
 
+{\bf \cy In $3-6$ use the sample space given in example 9.1.1. Write each event as a set and compute its 
+probability.}
+
 \subsection{Exercise 3}
+The event that the chosen card is red and is not a face card.
 
 \begin{proof}
+\(\{1\diamondsuit, 2\diamondsuit, 3\diamondsuit, 4\diamondsuit, 5\diamondsuit, 6\diamondsuit, 7\diamondsuit, 
+8\diamondsuit, 9\diamondsuit, 10\diamondsuit, 1\heartsuit, 2\heartsuit, 3\heartsuit, 4\heartsuit, 5\heartsuit\), 
 
+\(6\heartsuit, 7\heartsuit, 8\heartsuit, 9\heartsuit, 10\heartsuit\}\), probability \(= 20/52 \approx 38.5\%\)
 \end{proof}
 
 \subsection{Exercise 4}
+The event that the chosen card is black and has an even number on it.
 
 \begin{proof}
-
+\(\{2\spadesuit, 4\spadesuit, 6\spadesuit, 8\spadesuit, 10\spadesuit, 2\clubsuit, 4\clubsuit, 6\clubsuit, 
+8\clubsuit, 10\clubsuit\}\), probability \(= 10/52 \approx 19.2\%\)
 \end{proof}
 
 \subsection{Exercise 5}
+The event that the denomination of the chosen card is at least 10 (counting aces high).
 
 \begin{proof}
+\(\{10\spadesuit, J\spadesuit, Q\spadesuit, K\spadesuit, A\spadesuit, 10\diamondsuit, J\diamondsuit, Q\diamondsuit, 
+K\diamondsuit, A\diamondsuit, 10\heartsuit, J\heartsuit, Q\heartsuit, K\heartsuit, A\heartsuit\), 
 
+\(10\clubsuit, J\clubsuit, Q\clubsuit, K\clubsuit, A\clubsuit\}\), probability \(= 20/52=5/13 \approx 38.5\%\)
 \end{proof}
 
 \subsection{Exercise 6}
+The event that the denomination of the chosen card is at most 4 (counting aces high).
 
 \begin{proof}
-
+\(\{2\clubsuit, 2\heartsuit, 2\spadesuit, 2\diamondsuit, 3\clubsuit, 3\heartsuit, 3\spadesuit, 3\diamondsuit, 
+4\clubsuit, 4\heartsuit, 4\spadesuit, 4\diamondsuit\}\), probability \(= 12/52 \approx 23.0\%\)
 \end{proof}
 
+{\bf \cy In $7-10$, use the sample space given in example 9.1.2. Write each of the following events as a set and 
+compute its probability.}
+
 \subsection{Exercise 7}
+The event that the sum of the numbers showing face up is 8.
 
 \begin{proof}
-
+\(\{26, 35, 44, 53, 62\}\), probability \(= 5/36 \approx 13.9\%\)
 \end{proof}
 
 \subsection{Exercise 8}
+The event that the numbers showing face up are the same.
 
 \begin{proof}
-
+\(\{11, 22, 33, 44, 55, 66\}\), probability \(= 6/36 \approx 16.6\%\)
 \end{proof}
 
 \subsection{Exercise 9}
+The event that the sum of the numbers showing face up is at most 6.
 
 \begin{proof}
-
+\(\{11, 12, 13, 14, 15, 21, 22, 23, 24, 31, 32, 33, 41, 42, 51\}\), prob. \(= 15/36 \approx 41.6\%\)
 \end{proof}
 
 \subsection{Exercise 10}
+The event that the sum of the numbers showing face up is at least 9.
 
 \begin{proof}
-
+\(\{36, 45, 46, 54, 55, 56, 63, 64, 65, 66\}\), probability \(= 10/36 \approx 27.7\%\)
 \end{proof}
 
 \subsection{Exercise 11}
+Suppose that a coin is tossed three times and the side showing face up on each toss is noted. Suppose also that on 
+each toss heads and tails are equally likely. Let \(HHT\) indicate the outcome heads on the first two tosses and 
+tails on the third, \(THT\) the outcome tails on the first and third tosses and heads on the second, and so forth.
 
 \subsubsection{(a)}
+List the eight elements in the sample space whose outcomes are all the possible head-tail sequences obtained in the 
+three tosses.
 
 \begin{proof}
-
+\(\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Write each of the following events as a set and find its probability:
+
+(i) The event that exactly one toss results in a head.
+
+(ii) The event that at least two tosses result in a head.
+
+(iii) The event that no head is obtained.
 
 \begin{proof}
+(i) \(\{HTT, THT, TTH\}\), probability \(= 3/8 = 37.5\%\)
 
+(ii) \(\{HHT, HTH, THH, HHH\}\), probability \(= 4/8 = 50.0\%\)
+
+(iii) \(\{TTT\}\), probability \(= 1/8 = 12.5\%\)
 \end{proof}
 
 \subsection{Exercise 12}
+Suppose that each child born is equally likely to be a boy or a girl. Consider a family with exactly three children. 
+Let \(BBG\) indicate that the first two children born are boys and the third child is a girl, let \(GBG\) indicate 
+that the first and third children born are girls and the second is a boy, and so forth.
 
 \subsubsection{(a)}
+List the eight elements in the sample space whose outcomes are all possible genders of the three children.
 
 \begin{proof}
-
+\(\{BBB, BBG, BGB, BGG, GBB, GBG, GGB, GGG\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Write each of the events in the next column as a set and find its probability.
+
+(i) The event that exactly one child is a girl.
+
+(ii) The event that at least two children are girls.
+
+(iii) The event that no child is a girl.
 
 \begin{proof}
+(i) \(\{GBB, BGB, BBG\}\), probability \(= 3/8 = 37.5\%\)
 
+(ii) \(\{GGB, GBG, BGG, GGG\}\), probability \(= 4/8 = 50\%\)
+
+(iii) \(\{BBB\}\), probability \(= 1/8 = 12.5\%\)
 \end{proof}
 
 \subsection{Exercise 13}
+Suppose that on a true/false exam you have no idea at all about the answers to three questions. You choose answers 
+randomly and therefore have a 50–50 chance of being correct on any one question. Let \(CCW\) indicate that you were 
+correct on the first two questions and wrong on the third, let \(WCW\) indicate that you were wrong on the first and 
+third questions and correct on the second, and so forth.
 
 \subsubsection{(a)}
+List the elements in the sample space whose outcomes are all possible sequences of correct and incorrect responses 
+on your part.
 
 \begin{proof}
-
+\(\{CCC, CCW, CWC, CWW, WCC, WCW, WWC, WWW\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Write each of the following events as a set and find its probability:
+
+(i) The event that exactly one answer is correct.
+
+(ii) The event that at least two answers are correct.
+
+(iii) The event that no answer is correct.
 
 \begin{proof}
+(i) \(\{CWW, WCW, WWC\}\), probability \(= 3/8 = 37.5\%\)
 
+(ii) \(\{CCW, CWC, WCC, CCC\}\), probability \(= 4/8 = 50\%\)
+
+(iii) \(\{WWW\}\), probability \(= 1/8 = 12.5\%\)
 \end{proof}
 
 \subsection{Exercise 14}
+Three people have been exposed to a certain illness. Once exposed, a person has a 50-50 chance of actually becoming ill.
 
 \subsubsection{(a)}
+What is the probability that exactly one of the people becomes ill?
 
 \begin{proof}
-
+probability \(= 3/8 = 37.5\%\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that at least two of the people become ill?
 
 \begin{proof}
-
+probability \(= 4/8 = 50\%\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that none of the three people becomes ill?
 
 \begin{proof}
-
+probability \(= 1/8 = 12.5\%\)
 \end{proof}
 
 \subsection{Exercise 15}
+When discussing counting and probability, we often consider situations that may appear frivolous or of little practical 
+value, such as tossing coins, choosing cards, or rolling dice. The reason is that these relatively simple examples 
+serve as models for a wide variety of more complex situations in the real world. In light of this remark, 
+comment on the relationship between your answer to exercise 11 and your answers to exercises $12-14$.
 
 \begin{proof}
-
+The answers to exercises 11, 12, 13, 14 are the same, because all 4 situations are modeled exactly the same way.
+They each consist of 3 instances of the same event, each of which has 2 possible outcomes with 50\% probability (heads 
+or tails, boy or girl, correct or incorrect, ill or not ill). They each have a sample space with 8 elements 
+following the same pattern.
 \end{proof}
 
 \subsection{Exercise 16}
+Two faces of a six-sided die are painted red, two are painted blue, and two are painted yellow. The die is rolled 
+three times, and the colors that appear face up on the first, second, and third rolls are recorded.
+
 
 \subsubsection{(a)}
+Let \(BBR\) denote the outcome where the color appearing face up on the first and second rolls is blue and the color 
+appearing face up on the third roll is red. Because there are as many faces of one color as of any other, the 
+outcomes of this experiment are equally likely. List all 27 possible outcomes.
 
 \begin{proof}
+\(\{RRR, RRB, RRY, RBR, RBB, RBY, RYR, RYB, RYY,\) 
 
+\(BRR, BRB, BRY, BBR, BBB, BBY, BYR, BYB, BYY,\)
+
+\(YRR, YRB, YRY, YBR, YBB, YBY, YYR, YYB, YYY\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Consider the event that all three rolls produce different colors. One outcome in this event is \(RBY\) and another 
+\(RYB\). List all outcomes in the event. What is the probability of the event?
 
 \begin{proof}
-
+\(\{RBY, RYB, YBR, BRY, BYR, YRB\}\), probability \(= 6/27 = 2/9 \approx 22.2\%\)
 \end{proof}
 
 \subsubsection{(c)}
+Consider the event that two of the colors that appear face up are the same. One outcome in this event is \(RRB\) and 
+another is \(RBR\). List all outcomes in the event. What is the probability of the event?
 
 \begin{proof}
+\(\{RRB, RBR, BRR, RRY, RYR, YRR, BBR, BRB, RBB, BBY, BYB, YBB,\)
 
+\(YYR, YRY, RYY, YYB, YBY, BYY\}\), probability \(= 18/27 = 2/3 \approx 66.6\%\)
 \end{proof}
 
 \subsection{Exercise 17}
+Consider the situation described in exercise 16.
 
 \subsubsection{(a)}
+Find the probability of the event that exactly one of the colors that appears face up is red.
 
 \begin{proof}
+\(\{RBB, RBY, RYB, RYY, BRB, BRY, BBR, BYR, YRB, YRY, YBR, YYR\}\), 
 
+probability \(= 12/27 = 4/9 \approx 44.4\%\)
 \end{proof}
 
 \subsubsection{(b)}
+Find the probability of the event that at least one of the colors that appears face up is red.
 
 \begin{proof}
+\(\{RRR, RRB, RRY, RBR, RBB, RBY, RYR, RYB, RYY, BRR, BRB, BRY,\) 
 
+\(BBR, BYR, YRR, YRB, YRY, YBR, YYR\}\), probability \(= 20/27 \approx 74\%\)
 \end{proof}
 
 \subsection{Exercise 18}
+An urn contains two blue balls (denoted \(B_1\) and \(B_2\)) and one white ball (denoted \(W\)). One ball is 
+drawn, its color is recorded, and it is replaced in the urn. Then another ball is drawn, and its color is recorded.
 
 \subsubsection{(a)}
+Let \(B_1 W\) denote the outcome that the first ball drawn is \(B_1\) and the second ball drawn is \(W\). Because the 
+first ball is replaced before the second ball is drawn, the outcomes of the experiment are equally likely. List all 
+nine possible outcomes of the experiment.
 
 \begin{proof}
-
+\(\{B_1B_1, B_1B_2, B_1W, B_2B_1, B_2B_2, B_2W, WB_1, WB_2, WW\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Consider the event that the two balls that are drawn are both blue. List all outcomes in the event. 
+What is the probability of the event?
 
 \begin{proof}
-
+\(\{B_1B_1, B_1B_2, B_2B_1, B_2B_2\}\), probability \(= 4/9 \approx 44.4\%\)
 \end{proof}
 
 \subsubsection{(c)}
+Consider the event that the two balls that are drawn are of different colors. List all outcomes in the event. 
+What is the probability of the event?
 
 \begin{proof}
-
+\(\{B_1W, B_2W, WB_1, WB_2\}\), probability \(= 4/9 \approx 44.4\%\)
 \end{proof}
 
 \subsection{Exercise 19}
+An urn contains two blue balls (denoted \(B_1\) and \(B_2\)) and three white balls (denoted \(W_1, W_2\), and 
+\(W_3\)). One ball is drawn, its color is recorded, and it is replaced in the urn. Then another ball is drawn and its 
+color is recorded.
 
 \subsubsection{(a)}
+Let \(B_1 W_2\) denote the outcome that the first ball drawn is \(B_1\) and the second ball drawn is \(W_2\). 
+Because the first ball is replaced before the second ball is drawn, the outcomes of the experiment are equally 
+likely. List all 25 possible outcomes of the experiment.
 
 \begin{proof}
+\(\{B_1B_1, B_1B_2, B_1W_1, B_1W_2, B_1W_3\), 
 
+\(B_2B_1, B_2B_2, B_2W_1, B_2W_2, B_2W_3\), 
+
+\(W_1B_1, W_1B_2, W_1W_1, W_1W_2, W_1W_3\), 
+
+\(W_2B_1, W_2B_2, W_2W_1, W_2W_2, W_2W_3\), 
+
+\(W_3B_1, W_3B_2, W_3W_1, W_3W_2, W_3W_3\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Consider the event that the first ball that is drawn is blue. List all outcomes in the event. 
+What is the probability of the event?
 
 \begin{proof}
+\(\{B_1B_1, B_1B_2, B_1W_1, B_1W_2, B_1W_3, B_2B_1, B_2B_2, B_2W_1, B_2W_2, B_2W_3\}\), 
 
+probability \(= 10/25 = 40\%\)
 \end{proof}
 
 \subsubsection{(c)}
+Consider the event that only white balls are drawn. List all outcomes in the event. 
+What is the probability of the event?
 
 \begin{proof}
+\(\{W_1W_1, W_1W_2, W_1W_3, W_2W_1, W_2W_2, W_2W_3, W_3W_1, W_3W_2, W_3W_3\}\)
 
+probability \(= 9/25 = 36\%\)
 \end{proof}
 
 \subsection{Exercise 20}
+Refer to Example 9.1.3. Suppose you are appearing on a game show with a prize behind one of five closed doors: A, B, C, 
+D, and E. If you pick the correct door, you win the prize. You pick door A. The game show host then opens one of the 
+other doors and reveals that there is no prize behind it. Then the host gives you the option of staying with your 
+original choice of door A or switching to one of the other doors that is still closed.
 
 \subsubsection{(a)}
+If you stick with your original choice, what is the probability that you will win the prize?
 
 \begin{proof}
+There are 5 cases. 
 
+In Case 1, the prize is behind door A. In this case if I stick with door A, I would win.
+
+In the remaining 4 cases, the prize is behind one of the doors B,C,D,E. In these cases if I stick with door A, I 
+would lose. 
+
+Each case has 20\% probability. If I stick with door A, I can only win in Case 1. Therefore the probability that I 
+win the prize is 20\%.
 \end{proof}
 
 \subsubsection{(b)}
+If you switch to another door, what is the probability that you will win the prize?
 
 \begin{proof}
-
+Like above, if I switch to another door, I lose in Case 1, and I have a 1/4 chance of winning in each of the other 4 
+cases. Therefore the probability that I win the prize is 25\%.
 \end{proof}
 
 \subsection{Exercise 21}
-
 \subsubsection{(a)}
+How many positive two-digit integers are multiples of 3?
 
 \begin{proof}
-
+Between 10 and 99 (inclusive), the multiples of 3 are: \(12, 15, 18, \ldots, 93, 96, 99\). Notice that
+\(12 = 3 \cdot {\cy 4}\) and \(99 = 3 \cdot {\cy 33}\). So there are as many positive two-digit integers that are 
+multiples of 3 as there are integers from 4 to 33 inclusive. By Theorem 9.1.1 there are 33 - 4 + 1 = 30 such
+integers.
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a randomly chosen positive two-digit integer is a multiple of 3?
 
 \begin{proof}
-
+There are \(99 - 10 + 1 = 90\) positive two-digit integers in all, and by part (a), 30 of these are multiples of 3. So 
+the probability that a randomly chosen positive two-digit integer is a multiple of 3 is \(30/90=1/3 \approx 33.3\%\).
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that a randomly chosen positive two-digit integer is a multiple of 4?
 
 \begin{proof}
-
+Of the integers from 10 through 99 that are multiples of 4, the smallest is 12 \((= 4 \cdot 3)\) and the largest is 96 
+\((= 4 \cdot 24)\). Thus there are \(24 - 3 + 1 = 22\) two-digit integers that are multiples of 4. Hence the 
+probability that a randomly chosen two-digit integer is a multiple of 4 is \(22/90 \approx 36.6\%\).
 \end{proof}
 
 \subsection{Exercise 22}
-
 \subsubsection{(a)}
+How many positive three-digit integers are multiples of 6?
 
 \begin{proof}
-
+They are \(102, 108, 114, \ldots, 984, 990, 996\). Notice \(102 = 6 \cdot 17\) and \(996 = 6 \cdot 166\). So there 
+are \(166 - 17 + 1 = 150\) such integers.
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a randomly chosen positive three-digit integer is a multiple of 6?
 
 \begin{proof}
-
+There are \(999 - 100 + 1 = 900\) positive three-digit integers. So the probability is, by part (a), 
+\(150/900 = 1/6 \approx 16.6\%\).
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that a randomly chosen positive three-digit integer is a multiple of 7?
 
 \begin{proof}
-
+Multiples of 7 are \(7 \cdot 15 = 105, 7 \cdot 16 = 112, \ldots, 7 \cdot 141 = 987, 7 \cdot 142 = 994\). So there
+are \(142 - 15 + 1 = 128\) such integers, then the probability is \(128/900 = 32/225 \approx 14.22\%\).
 \end{proof}
 
 \subsection{Exercise 23}
+Suppose \(A[1], A[2], A[3], \ldots, A[n]\) is a one-dimensional array and \(n > 50\).
 
 \subsubsection{(a)}
+How many elements are in the array?
 
 \begin{proof}
-
+$n$ elements.
 \end{proof}
 
 \subsubsection{(b)}
+How many elements are in the subarray \(A[4], A[5], \ldots, A[39]\)?
 
 \begin{proof}
-
+\(39 - 4 + 1 = 36\) elements.
 \end{proof}
 
 \subsubsection{(c)}
+If \(3 \leq m \leq n\), what is the probability that a randomly chosen array element is in the subarray 
+\(A[3], A[4], \ldots, A[m]\)?
 
 \begin{proof}
-
+There are \(m - 3 + 1 = m-2\) elements in the subarray. There are $n$ elements in the array. So the probability is 
+\(\frac{m-2}{n}\).
 \end{proof}
 
 \subsubsection{(d)}
-
+What is the probability that a randomly chosen array element is in the subarray shown below if \(n = 39\)?
+\[A[\floor{n/2}], A[\floor{n/2}+1], \ldots, A[n]\]
 \begin{proof}
-
+\(\floor{39/2} = \floor{19.5} = 19\), therefore there are \(39 - 19 + 1 = 21\) elements in the subarray, and there 
+are 39 elements in the array, so the probability is \(21/39 \approx 53.84\%\).
 \end{proof}
 
 \subsection{Exercise 24}
+Suppose \(A[1], A[2], \ldots, A[n]\) is a one-dimensional array and \(n \geq 2\). Consider the sub-array 
+\(A[1], A[2], \ldots, A[\floor{n/2}]\).
 
 \subsubsection{(a)}
+How many elements are in the sub-array (i) if $n$ is even? and (ii) if $n$ is odd?
 
 \begin{proof}
+(i) There are \(\floor{\frac{n}{2}} = \frac{n}{2}\) elements in the sub-array.
 
+(ii) There are \(\floor{\frac{n}{2}} = \frac{n-1}{2}\) elements in the sub-array.
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a randomly chosen array element is in the sub-array (i) if $n$ is even? and 
+(ii) if $n$ is odd?
 
 \begin{proof}
+There are $n$ elements in the array, so
 
+(i) The probability that an element is in the given sub-array is \(\frac{n/2}{n} = \frac{1}{2}\),
+
+(i) The probability that an element is in the given sub-array is \(\frac{(n-1)/2}{n} = \frac{n-1}{2n}\).
 \end{proof}
 
 \subsection{Exercise 25}
+Suppose \(A[1], A[2], \ldots, A[n]\) is a one-dimensional array and \(n \geq 2\). Consider the sub-array 
+\(A[\floor{n/2}], A[\floor{n/2}+1], \ldots, A[n]\).
 
 \subsubsection{(a)}
+How many elements are in the sub-array (i) if $n$ is even? and (ii) if $n$ is odd?
 
 \begin{proof}
+(i) There are \(n - \floor{\frac{n}{2}} + 1 = n - \frac{n}{2} + 1 = \frac{n+2}{2}\) elements in the sub-array.
 
+(ii) There are \(n-\floor{\frac{n}{2}}+1 = n-\frac{n-1}{2} + 1 = \frac{n+3}{2}\) elements in the sub-array.
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a randomly chosen array element is in the sub-array (i) if $n$ is even? and 
+(ii) if $n$ is odd?
 
 \begin{proof}
+There are $n$ elements in the array, so
 
+(i) The probability that an element is in the given sub-array is \(\frac{(n+2)/2}{n} = \frac{n+2}{2n}\),
+
+(i) The probability that an element is in the given sub-array is \(\frac{(n+3)/2}{n} = \frac{n+3}{2n}\).
 \end{proof}
 
 \subsection{Exercise 26}
+What is the 27th element in the one-dimensional array \(A[42], A[43], \ldots, A[100]\)?
 
 \begin{proof}
-
+Let $k$ be the 27th element in the array. By Theorem 9.1.1, \(k - 42 + 1 = 27\), and so \(k = 42 + 27 - 1 = 68\). 
+Thus the 27th element in the array is \(A[68]\).
 \end{proof}
 
 \subsection{Exercise 27}
+What is the 62nd element in the one-dimensional array \(B[29], B[30], \ldots, B[100]\)?
 
 \begin{proof}
-
+Let $k$ be the 62nd element in the array. By Theorem 9.1.1, \(k - 29 + 1 = 62\), and so \(k = 29 + 62 - 1 = 90\). 
+Thus the 62th element in the array is \(A[90]\).
 \end{proof}
 
 \subsection{Exercise 28}
+If the largest of 56 consecutive integers is 279, what is the smallest?
 
 \begin{proof}
-
+Let $m$ be the smallest of the integers. By Theorem 9.1.1, \(279 - m + 1 = 56\), and so \(m = 279 - 56 + 1 = 224\). 
+Thus the smallest of the integers is 224.
 \end{proof}
 
 \subsection{Exercise 29}
+If the largest of 87 consecutive integers is 326, what is the smallest?
 
 \begin{proof}
-
+Let $m$ be the smallest of the integers. By Theorem 9.1.1, \(326 - m + 1 = 87\), and so \(m = 326 - 87 + 1 = 240\). 
+Thus the smallest of the integers is 240.
 \end{proof}
 
 \subsection{Exercise 30}
+How many even integers are between 1 and 1,001?
 
 \begin{proof}
-
+They are \(2 = 2 \cdot 1, 4 = 2 \cdot 2, \ldots, 998 = 2 \cdot 499, 1000 = 2 \cdot 500\). So there are 500 of them.
 \end{proof}
 
 \subsection{Exercise 31}
+How many integers that are multiples of 3 are between 1 and 1,001?
 
 \begin{proof}
-
+They are \(3 = 3 \cdot 1, 6 = 3 \cdot 2, \ldots, 996 = 3 \cdot 332, 999 = 3 \cdot 333\). So there are 333 of them.
 \end{proof}
 
 \subsection{Exercise 32}
+A certain non-leap year has 365 days, and January 1 occurs on a Monday.
+
+\subsubsection{(a)}
+How many Sundays are in the year?
 
 \begin{proof}
+Sundays occur on days 7, 14, 21, \(\ldots\), 364 of the year. Since \(7 = 7 \cdot 1\) and \(364 = 7 \cdot 52\),
+there are 52 Sundays in the year.
+\end{proof}
 
+\subsubsection{(b)}
+How many Mondays are in the year?
+
+\begin{proof}
+For each Sunday, there is a Monday in the same week. However there is also the 365th day, which comes directly
+after the last Sunday, which is the 364th day. Therefore there are \(52 + 1 = 53\) Mondays in the year.
 \end{proof}
 
 \subsection{Exercise 33}
+Prove Theorem 9.1.1. (Let $m$ be any integer and prove the theorem by mathematical induction on $n$.)
 
 \begin{proof}
+Let $m$ be any integer and let \(P(n)\) be the statement ``if \(m \leq n\), then there are \(n - m + 1\) integers 
+from $m$ to $n$ inclusive.'' The base case is \(n=m\).
 
+{\bf Show $P(m)$ is true:} There is only one integer from $m$ to $m$ inclusive, namely $m$ itself. And \(n - m + 1
+ = m - m + 1 = 1\), so $P(m)$ is true.
+
+{\bf Show that for any integer \(k \geq m\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq m\) and
+assume there are \(k-m+1\) integers from $m$ to $k$ inclusive. Then there is one more integer, namely \(k+1\),
+from $m$ to $k+1$ inclusive, thus there are \((k-m+1)+1 = (k+1)-m+1\) integers from $m$ to $k+1$ inclusive. So 
+\(P(k+1)\) is true.
 \end{proof}
 
 \section{Exercise Set 9.2}
