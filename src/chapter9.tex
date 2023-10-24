@@ -4,7 +4,7 @@
 %\usepackage[normalem]{ulem} % strike through text
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref}
 \usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel}
-\usepackage{tcolorbox,bm}
+\usepackage{tcolorbox,bm,minted}
 
 \newtheorem{defn}{Definition}
 \newtheorem{thm}{Theorem}
@@ -1791,723 +1791,1651 @@ Use arrows to write all permutations of \(\{1, 2, 3, 4\}\) that keep no elements
 \section{Exercise Set 9.3}
 
 \subsection{Exercise 1}
-
 \subsubsection{(a)}
+How many bit strings consist of from one through four digits? (Strings of different lengths are considered 
+distinct. Thus 10 and 0010 are distinct strings.)
 
 \begin{proof}
+Think of creating a bit string with $n$ bits as an $n$-step process where a general step $k$ is to place either a 0 or 
+a 1 in the $k$th position. Since there are two ways to do this for each position, by the multiplication rule, the 
+number of bit strings of length $k$ is $2^k$. Now the set of all bit strings consisting of from 1 through 4 bits can 
+be broken into four disjoint subsets:
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/9.3.1.a.png}
+\end{figure}
+
+Applying the addition rule to the figure shows that there are \(2 + 2^2 + 2^3 + 2^4 = 30\) bit strings consisting of 
+from one through four bits.
 \end{proof}
 
 \subsubsection{(b)}
+How many bit strings consist of from five through eight digits?
 
 \begin{proof}
-
+By reasoning similar to that of part (a), there are \(2^5 + 2^6 + 2^7 + 2^8 = 480\) bit strings of from five through 
+eight bits.
 \end{proof}
 
 \subsection{Exercise 2}
-
 \subsubsection{(a)}
+How many strings of hexadecimal digits consist of from one through three digits? (Recall that hexadecimal numbers are 
+constructed using the 16 digits 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.)
 
 \begin{proof}
-
+\(16^1 + 16^2 + 16^3 = 16 + 256 + 4096 = 4368\)
 \end{proof}
 
 \subsubsection{(b)}
+How many strings of hexadecimal digits consist of from two through five digits?
 
 \begin{proof}
-
+\(16^2 + 16^3 + 16^4 + 16^5 = 256 + 4096 + 65536 + 1048576 = 1118464\)
 \end{proof}
 
 \subsection{Exercise 3}
-
 \subsubsection{(a)}
+How many integers from 1 through 999 do not have any repeated digits?
 
 \begin{proof}
+The set of integers from 1 through 999 with no repeated digit can be broken into three disjoint subsets: those from 
+1 through 9, those from 1 through 99, and those from 100 through 999. Now constructing an integer from 100 through 
+999 with no repeated digit can be thought of as a three-step process.
 
+{\cy Step 1:} Choose a digit for the left-most position (where there are 9 choices because 0 cannot be chosen).
+
+{\cy Step 2:} Choose a digit for the middle position (where there are also 9 choices because the digit in the left-most 
+position cannot be reused but 0 can be used).
+
+{\cy Step 3:} Choose a digit for the right-most position (where there are 8 choices because neither of the other two 
+digits can be reused). 
+
+Thus there are \(9 \cdot 9 \cdot 8\) integers from 100 through 999 with no repeated digit. Similar reasoning shows 
+that there are \(9 \cdot 9\) integers from 10 through 99 with no repeated digit. Finally, there are clearly 9 
+integers from 1 through 9 with no repeated digit. Hence, by the addition rule, the number of integers from 1 through 
+999 with no repeated digit is \(9 + 9 \cdot 9 + 9 \cdot 9 \cdot 8 = 738\).
 \end{proof}
 
 \subsubsection{(b)}
+How many integers from 1 through 999 have at least one repeated digit?
 
 \begin{proof}
+Let 
 
+$x$ = number of integers from 1 through 999 with at least one repeated digit,
+
+$y$ = total number of integers from 1 through 999,
+
+$z$ = number of integers from 1 through 999 with no repeated digits.
+
+Then \(x = y - z = 999 - 738 = 261\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that an integer chosen at random from 1 through 999 has at least one repeated digit?
 
 \begin{proof}
-
+The probability that an integer chosen at random has at least one repeated digit is \(261/999 \approx 26.1\%\).
 \end{proof}
 
 \subsection{Exercise 4}
+How many arrangements in a row of no more than three letters can be formed using the letters of the word NETWORK 
+(with no repetitions allowed)?
 
 \begin{proof}
+Use the multiplication rule to count the elements in each of the three sets containing 1, 2, and 3 letters, 
+respectively. Then, because these sets are disjoint, use the addition rule to compute the total number of elements 
+in the three sets taken together.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/9.3.4.png}
+\end{figure}
+
+Applying the addition rule to the figure above shows that there are \(7 + 7 \cdot 6 + 7 \cdot 6 \cdot 5 = 259\) 
+arrangements of three letters of the word NETWORK if repetition of letters is not permitted.
 \end{proof}
 
 \subsection{Exercise 5}
-
 \subsubsection{(a)}
+How many five-digit integers (integers from 10,000 through 99,999) are divisible by 5?
 
 \begin{proof}
+Let 
 
+$x$ = number of integers from 10,000 through 99,999 that are divisible by 5,
+
+$y$ = number of integers from 1 through 99,999 that are divisible by 5 = \(100,000 / 5 - 1 = 20,000 - 1 = 19,999\),
+
+$z$ = number of integers from 1 through 9999 that are divisible by 5 = \(10,000 / 5 - 1 = 2000 - 1 = 1999\).
+
+Then \(x = y - z = 19,999 - 1999 = 18,000\).
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a five-digit integer chosen at random is divisible by 5?
 
 \begin{proof}
-
+There are \(99,999 - 10,000 + 1 = 90,000\) five-digit integers. So: \(18,000 / 90,000 = 1/5 = 20\%\).
 \end{proof}
 
 \subsection{Exercise 6}
+In a certain state, all license plates consist of from four to six symbols chosen from the 26 uppercase letters of the 
+Roman alphabet together with the ten digits 0–9.
 
 \subsubsection{(a)}
+How many license plates are possible if repetition of symbols is allowed?
 
 \begin{proof}
+In this exercise the 26 letters in the alphabet plus the 10 digits give a total of 36 symbols that can be used on a 
+license plate.
 
+Imagine constructing a license plate with 4 symbols as a four-step process: {\cy step 1} is to fill in the first symbol, {\cy step 2} is to fill in the second symbol, {\cy step 3} is to fill in the third symbol, and {\cy step 4} is to fill in the fourth symbol. Because any one of the 36 symbols can be used in each step, by the multiplication rule, the number of license plates that use four symbols is \(36^4\). Similarly, the number that use 5 symbols is \(36^5\), and the number that use six symbols is \(36^6\). Thus because license plates can have anywhere from 4 to 6 symbols, the total number of plates with repeated symbols allowed is \(36^4 + 36^5 + 36^6 = 2,238,928,128\).
 \end{proof}
 
 \subsubsection{(b)}
+How many license plates do not contain any repeated symbols?
 
 \begin{proof}
-
+When repetition is not allowed, the number of license plates that use four symbols is \(36 \cdot 35 \cdot 34 
+\cdot 33\). The reason is that in the second step the symbol used in the first step cannot be used, so there are 
+only 35 choices for the second step. In the third step, neither of the symbols used in the first two steps can be 
+used, and so there are only 34 choices for the third step. And in the fourth step, none of the symbols used in the 
+first three steps can be used, and so there are only 33 choices for the fourth step. Similarly, the number of 
+license plates that use 5 symbols is \(36 \cdot 35 \cdot 34 \cdot 33 \cdot 32\), and the number that use six symbols is 
+\(36 \cdot 35 \cdot 34 \cdot 33 \cdot 32 \cdot 31\). Thus the total number of license plates is \(36 \cdot 35 \cdot 
+34 \cdot 33 + 36 \cdot 35 \cdot 34 \cdot 33 \cdot 32 + 36 \cdot 35 \cdot 34 \cdot 33 \cdot 32 \cdot 31 = 
+1,449,063,000\).
 \end{proof}
 
 \subsubsection{(c)}
+How many license plates have at least one repeated symbol?
 
 \begin{proof}
-
+Consider two sets: the set of plates with repetition not allowed and the set of plates that have a repeated symbol. 
+Note that these two sets have no elements in common, and that since every license plate either has a repeated symbol 
+or does not have a repeated symbol, every license plate considered in part (a) is in one of the two sets. In other 
+words, the set of all license plates with repetition allowed is composed of two disjoint subsets: the set of 
+plates with repetition not allowed and the set of plates that have a repeated symbol. Thus, by the difference rule, 
+the number of license plates with a repeated symbol is the difference between the number of plates with repetition 
+allowed minus the number of plates with repetition not allowed: \(2,238,928,128 - 1,449,063,000 = 789,865,128\).
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability that a license plate chosen at random has at least one repeated symbol?
 
 \begin{proof}
-
+The probability that a license plate chosen at random has at least one repeated symbol is 
+\(789,865,128 / 2,238,928,128 \approx 35.3\%\).
 \end{proof}
 
 \subsection{Exercise 7}
+At a certain company, passwords must be from 3–5 symbols long and composed from the 26 uppercase letters of the 
+Roman alphabet, the ten digits 0–9, and the 14 symbols !, @, \#, \$, \%, \^\,, \&, *, (, ), -, +, \{, and \}.
 
 \subsubsection{(a)}
+How many passwords are possible if repetition of symbols is allowed?
 
 \begin{proof}
+The 26 letters in the alphabet plus the 10 digits plus the 14 special characters give a total of 50 symbols that can 
+be used. By the multiplication rule, the number of passwords with 3, 4, and 5 symbols is \(50^3, 50^4\), and 
+\(50^5\). Since the sets consisting of these passwords are disjoint, by the addition rule, the number of passwords is 
 
+\(50^3 + 50^4 + 50^5 = 318,875,000\).
 \end{proof}
 
 \subsubsection{(b)}
+How many passwords contain no repeated symbols?
 
 \begin{proof}
+There are \(50 \cdot 49 \cdot 48 = 117600\) passwords of length 3 with no repeated symbols.
 
+There are \(50 \cdot 49 \cdot 48 \cdot 47 = 5527200\) passwords of length 4 with no repeated symbols.
+
+There are \(50 \cdot 49 \cdot 48 \cdot 47 \cdot 46 = 254251200\) passwords of length 5 with no repeated symbols.
+
+So by the addition rule, the total is \(254251200 + 5527200 + 117600 = 259,896,000\).
 \end{proof}
 
 \subsubsection{(c)}
+How many passwords have at least one repeated symbol?
 
 \begin{proof}
-
+\(318,875,000 - 259,896,000 = 58,979,000\)
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability that a password chosen at random has at least one repeated symbol?
 
 \begin{proof}
-
+\(58,979,000 / 318,875,000 \approx 18.5\% \)
 \end{proof}
 
 \subsection{Exercise 8}
+In a certain country license plates consist of zero or one digit followed by four or five uppercase letters from the 
+Roman alphabet.
 
 \subsubsection{(a)}
+How many different license plates can the country produce?
+
+{\it Hint:} One approach is to divide the license plates into four groups depending on the number of digits and 
+letters they contain. Another approach is to consider creating a license plate as a two-step process: step 1: 
+either choose one digit or do not choose a digit; and step 2: choose 4 or 5 letters.
 
 \begin{proof}
+There are four groups: 1. No digit, 4 letters, 2. One digit, 4 letters, 3. No digit, 5 letters, 4. One digit, 5 
+letters.
 
+First group has \(26^4\) possibilities. Second group has \(10 \cdot 26^4\) possibilities.
+
+Third group has \(26^5\) possibilities. Fourth group has \(10 \cdot 26^5\) possibilities.
+
+In total: \(26^4 + 10 \cdot 26^4 + 26^5 + 10 \cdot 26^5 = 11(26^4 + 26^5) = 11 \cdot 26^4 (1 + 26) = 11 \cdot 26^4 
+\cdot 27 = 135,721,872\)
 \end{proof}
 
 \subsubsection{(b)}
+How many license plates have no repeated letter?
 
 \begin{proof}
+Choosing 4 non-repeated letters, no digit: \(26 \cdot 25 \cdot 24 \cdot 23 = 358,800\), with one digit: \(10 \cdot 
+358,800 = 3,588,000\)
 
+Choosing 5 non-repeated letters, no digit: \(26 \cdot 25 \cdot 24 \cdot 23 \cdot 22 = 7,893,600\), with one digit:
+\(10 \cdot 7,893,600 = 78,936,000\)
+
+Total: \(358,800 + 3,588,000 + 7,893,600 + 78,936,000 = 90,776,400\)
 \end{proof}
 
 \subsubsection{(c)}
+How many license plates have at least one repeated letter?
 
 \begin{proof}
-
+\(135,721,872 - 90,776,400 = 44,945,472\)
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability that a license plate has a repeated letter?
 
 \begin{proof}
-
+\(44,945,472 / 135,721,872 \approx 33.11\%\)
 \end{proof}
 
 \subsection{Exercise 9}
-
 \subsubsection{(a)}
+Consider the following algorithm segment:
+
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} 4 \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} $i$ \\
+          \>           \> {\it [Statements in body of inner loop.]} \\
+          \>           \> {\it [None contain branching statements that lead outside the loop.]} \\
+          \> {\bf next} $j$ \\
+{\bf next} $i$
+\end{tabbing}
+
+How many times will the inner loop be iterated when the algorithm is implemented and run?
 
 \begin{proof}
+Each column of the table below corresponds to a pair of values of $i$ and $j$ for which the inner loop will be 
+iterated.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/9.3.9.a.png}
+\end{figure}
+
+Since there are \(1 + 2 + 3 + 4 = 10\) columns, the inner loop will be iterated ten times.
 \end{proof}
 
 \subsubsection{(b)}
+Let $n$ be a positive integer, and consider the following algorithm segment:
+
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} $n$ \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} $i$ \\
+          \>           \> {\it [Statements in body of inner loop.]} \\
+          \>           \> {\it [None contain branching statements that lead outside the loop.]} \\
+          \> {\bf next} $j$ \\
+{\bf next} $i$
+\end{tabbing}
+
+How many times will the inner loop be iterated when the algorithm is implemented and run?
 
 \begin{proof}
-
+\(1 + 2 + \cdots + n = n(n+1)/2\)
 \end{proof}
 
 \subsection{Exercise 10}
+A calculator has an eight-digit display and a decimal point that is located at the extreme right of the number 
+displayed, or at the extreme left, or between any pair of digits. The calculator can also display a minus sign at the 
+extreme left of the number. How many distinct numbers can the calculator display? (Note that certain numbers are 
+equal, such as 1.9, 1.90, and 01.900, and should, therefore, not be counted twice.)
 
 \begin{proof}
+Let's solve this problem for a 1-digit display, then 2-digit, and so on. Also, let's first solve the problem only
+for nonnegative numbers.
 
+{\bf 1-digit display:} First let's consider nonnegative numbers. A number $x$ can be in the range \(0 \leq x < 1\)
+(if the decimal point is on the left) or in the range \(1 \leq x < 10\) (if the decimal point is on the right).
+
+For the first range there are 10 possibilities: \(.0, .1, .2, .3, .4, .5, .6, .7, .8, .9\);
+
+for the second range we cannot allow the digit to be 0, otherwise \(x < 1\), so there are only 9 possibilities: 
+\(1., 2., 3., 4., 5., 6., 7., 8., 9.\);
+
+so we have \(10^1 + (10^1 - 1) = 19\) nonnegative numbers.
+
+{\bf 2-digit display:} First let's consider nonnegative numbers. A number $x$ can be in the range \(0 \leq x < 1\)
+(if the decimal point is on the left) or in the range \(1 \leq x < 10\) (if the decimal point is in the middle) or in 
+the range \(10 \leq x < 100\) (if the decimal point is on the right).
+
+For the first range there are \(10^2\) possibilities: \(.00, .01, \ldots, .09, .10, .11, \ldots, .99\); 
+
+for the second range we cannot allow the left-most digit to be 0, otherwise \(x < 1\), so there are only 90 
+possibilities: \(1.0, 1.1, 1.2, \ldots, 9.9\);
+
+for the third range there are also 90 possibilities: \(10., 11., 12., \ldots, 99.\) because, similarly, the first digit 
+cannot be zero; so we have \(10^2 + 10^1 \cdot (10^1 - 1) + 10^1 \cdot (10^1 - 1) = 100 + 90 + 90 = 280\) nonnegative 
+numbers.
+
+{\bf 3-digit display:} A number $x$ can be in one of the ranges \(0 \leq x < 1\) or \(1 \leq x < 10\) or \(10 \leq x 
+< 100\) or \(100 \leq x < 1000\).
+
+Similar to the above, we have \(10^3 + 10^2 \cdot (10^1 - 1) + 10^2 \cdot (10^1 - 1) + 10^2 \cdot (10^1 - 1) = 
+1000 + 900 + 900 + 900 = 3700\) nonnegative numbers.
+
+So the general formula for $n$ digits is: \(10^n + n \cdot 10^{n-1} \cdot 9\). For an $n=8$-digit display, there are
+\(10^8 + 8 \cdot 10^7 \cdot 9 = 100,000,000 + 10,000,000 \cdot 72 = 820,000,000\) unique nonnegative numbers.
+
+{\bf Conclusion:} 820,000,000 nonnegative and 820,000,000 nonpositive numbers (obtained by putting the negative sign
+in front of them) gives 1,640,000,000 numbers. However 0 and \(-0\) are the same, so it's 1,639,999,999 numbers.
 \end{proof}
 
 \subsection{Exercise 11}
 \subsubsection{(a)}
+How many ways can the letters of the word QUICK be arranged in a row?
 
 \begin{proof}
-
+The answer is the number of permutations of the five letters in QUICK, which equals \(5! = 120\).
 \end{proof}
 
 \subsubsection{(b)}
+How many ways can the letters of the word QUICK be arranged in a row if the Q and the U must remain next to each other 
+in the order QU?
 
 \begin{proof}
-
+Because \boxed{QU} (in order) is to be considered as a single unit, the answer is the number of permutations of 
+the four symbols \boxed{QU}, I, C, K. This is \(4! = 24\).
 \end{proof}
 
 \subsubsection{(c)}
+How many ways can the letters of the word QUICK be arranged in a row if the letters QU must remain together but may be 
+in either the order QU or the order UQ?
 
 \begin{proof}
-
+By part (b), there are 4! arrangements of \boxed{QU}, I, C, K. Similarly, there are 4! arrangements of \boxed{QU}, I, 
+C, K. Therefore, by the addition rule, there are \(4! + 4! = 48\) arrangements in all.
 \end{proof}
 
 \subsection{Exercise 12}
-
 \subsubsection{(a)}
+How many ways can the letters of the word THEORY be arranged in a row?
 
 \begin{proof}
-
+\(6! = 720\)
 \end{proof}
 
 \subsubsection{(b)}
+How many ways can the letters of the word THEORY be arranged in a row if T and H must remain next to each other 
+as either TH or HT?
 
 \begin{proof}
-
+\(5! + 5! = 240\)
 \end{proof}
 
 \subsection{Exercise 13}
+A group of eight people are attending the movies together.
 
 \subsubsection{(a)}
+Two of the eight insist on sitting side-by-side. In how many ways can the eight be seated together in a row?
 
 \begin{proof}
+Let
 
+$x$ = the number of ways to place eight people in a row keeping $A$ and $B$ together,
+
+$y$ = the number of ways to arrange \boxed{AB}, C, D, E, F, G, H,
+
+$z$ = the number of ways to arrange \boxed{BA}, C, D, E, F, G, H.
+
+Then \(x = y+z = 7!+7! = 5040+5040 = 10080\).
 \end{proof}
 
 \subsubsection{(b)}
+Two of the people do not like each other and do not want to sit side-by-side. Now how many ways can the eight be seated 
+together in a row?
 
 \begin{proof}
+Let
 
+$x$ = the number of ways to place eight people in a row keeping $A$ and $B$ apart,
+
+$y$ = the number of ways to place eight people in a row,
+
+$z$ = the number of ways to place eight people in a row keeping $A$ and $B$ together.
+
+By part (a) $z = 10080$. So \(x = y-z = 8!-10080 = 40320-10080 = 30240\).
 \end{proof}
 
 \subsection{Exercise 14}
+An early compiler recognized variable names according to the following rules: Numeric variable names had to begin 
+with a letter, and then the letter could be followed by another letter or a digit or by nothing at all. String 
+variable names had to begin with the symbol \$ followed by a letter, which could then be followed by another letter or 
+a digit or by nothing at all. How many distinct variable names were recognized by this compiler?
 
 \begin{proof}
-
+the number of variable names = the number of numeric variable names + the number of string variable names = 
+\((26 + 26 \cdot 36) + (26 + 26 \cdot 36) = 1924\).
 \end{proof}
 
 \subsection{Exercise 15}
+Identifiers in a certain database language must begin with a letter, and then the letter may be followed by other 
+characters, which can be letters, digits, or underscores (\_). However, 82 keywords (all consisting of 15 or fewer 
+characters) are reserved and cannot be used as identifiers. How many identifiers with 30 or fewer characters are 
+possible? (Write the answer using summation notation and evaluate it using a formula from Section 5.2.)
 
 \begin{proof}
+For the first character there are 26 choices (letters).
 
+For other characters there are 37 choices (letters, digits, or underscore).
+
+So, there are \(26\) length 1 identifiers, \(26 \cdot 37\) length-2 identifiers, ..., and \(26 \cdot 37^{29}\) 
+length-3 identifiers. So the number of identifiers with 30 or fewer characters is:
+\[
+26+26 \cdot 37 + \cdots + 26 \cdot 37^{29} = 26(1+37+37^2+\cdots+37^{29}) = 26 \cdot \frac{37^{30}-1}{37-1}
+\]
 \end{proof}
 
 \subsection{Exercise 16}
-
 \subsubsection{(a)}
+If any seven digits could be used to form a telephone number, how many seven-digit telephone numbers would not 
+have any repeated digits?
 
 \begin{proof}
-
+\(10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 = 604,800\)
 \end{proof}
 
 \subsubsection{(b)}
+How many seven-digit telephone numbers would have at least one repeated digit?
 
 \begin{proof}
+Let $x$ = the number of phone numbers with at least one repeated digit,
 
+$y$ = the total number of phone numbers,
+
+$z$ = the number of phone numbers with no repeated digits,
+
+then \(x = y - z = 10^7 - 604,800 = 9,395,200\).
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that a randomly chosen seven-digit telephone number would have at least one repeated digit?
 
 \begin{proof}
-
+\(9,395,200 / 10,000,000 \approx 93.95\%\)
 \end{proof}
 
 \subsection{Exercise 17}
 \subsubsection{(a)}
+How many strings of four hexadecimal digits do not have any repeated digits?
 
 \begin{proof}
-
+\(16 \cdot 15 \cdot 14 \cdot 13 = 43680\)
 \end{proof}
 
 \subsubsection{(b)}
+How many strings of four hexadecimal digits have at least one repeated digit?
 
 \begin{proof}
-
+\(16^4 - 43680 = 65536 - 43680 = 21856\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that a randomly chosen string of four hexadecimal digits has at least one repeated digit?
 
 \begin{proof}
-
+\(21856 / 65536 \approx 33.34\)
 \end{proof}
 
 \subsection{Exercise 18}
+Just as the difference rule gives rise to a formula for the probability of the complement of an event, so the addition 
+and inclusion/exclusion rules give rise to formulas for the probability of the union of mutually disjoint events and 
+for a general union of (not necessarily mutually exclusive) events.
 
 \subsubsection{(a)}
+Prove that for mutually disjoint events $A$ and $B$, \(P(A \cup B) = P(A) + P(B)\).
 
 \begin{proof}
-
+Let $A$ and $B$ be mutually disjoint events in a sample space $S$. By the addition rule, \(N(A \cup B) = N(A) + 
+N(B)\). Therefore, by the equally likely probability formula,
+\[
+P(A \cup B)=\frac{N(A\cup B)}{N(S)}=\frac{N(A)+N(B)}{N(S)}= \frac{N(A)}{N(S)} + \frac{N(B)}{N(S)} = P(A) + P(B).
+\]
 \end{proof}
 
 \subsubsection{(b)}
+Prove that for any events $A$ and $B$, \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\).
 
 \begin{proof}
-
+Let $A$ and $B$ be any events in a sample space $S$. By the inclusion / exclusion rule, \(N(A \cup B) = N(A) + N(B) -
+N(A \cap B)\). Therefore, by the equally likely probability formula,
+\[
+P(A \cup B) = \frac{N(A \cup B)}{N(S)}=\frac{N(A) + N(B) - N(A \cap B)}{N(S)}= \frac{N(A)}{N(S)} + \frac{N(B)}{N(S)} -
+\frac{N(A \cap B)}{N(S)}
+\]
+\(= P(A) + P(B) - P(A \cap B)\).
 \end{proof}
 
 \subsection{Exercise 19}
+A combination lock requires three selections of numbers, each from 1 through 39. Suppose the lock is constructed in 
+such a way that no number may be used twice in a row but the same number may occur both first and third. For 
+example, 20 13 20 would be acceptable, but 20 20 13 would not. How many different combinations are possible?
 
 \begin{proof}
-
+There are 39 choices for the first selection. Then 38 choices for the second selection. Now there are 38 choices
+for the third selection: it cannot be the same as the second selection, but it can be the same as the first. So 
+by the multiplication rule \(39 \cdot 38 \cdot 38\) possible combinations.
 \end{proof}
 
 \subsection{Exercise 20}
-
 \subsubsection{(a)}
+How many integers from 1 through 100,000 contain the digit 6 exactly once?
 
 \begin{proof}
+Use strings of five digits to represent integers from 1 to 100,000 that contain the digit 6 exactly once. For example, 
+use 00306 to represent 306. Strings of six digits are not needed because 100,000 does not contain a 6. Imagine 
+constructing a five-digit string that contains exactly one 6 as a five-step operation to fill in five positions with 
+five digits: \(\underset{1}{\fbl} \underset{2}{\fbl} \underset{3}{\fbl} \underset{4}{\fbl} \underset{5}{\fbl}\).
 
+{\cy Step 1:} Choose one of the five positions for the 6.
+
+{\cy Step 2:} Choose a digit for the left-most remaining position.
+
+{\cy Step 3:} Choose a digit for the next remaining position to the right.
+
+{\cy Step 4:} Choose a digit for the next remaining position to the right.
+
+{\cy Step 5:} Choose a digit for the right-most position.
+
+Since there are 5 choices for step 1 (any one of the five positions) and 9 choices for each of steps 2–5 (any digit 
+except 6), by the multiplication rule, the number of ways to perform this operation is \(5 \cdot 9 \cdot 9 \cdot 9 
+\cdot 9 = 32,805\). Hence there are 32,805 integers from 1 to 100,000 that contain the digit 6 exactly once.
 \end{proof}
 
 \subsubsection{(b)}
+How many integers from 1 through 100,000 contain the digit 6 at least once?
 
 \begin{proof}
+Let $x$ = the number of integers from 1 through 100,000,
 
+$y$ = the number of integers from 1 through 100,000, that do not contain the digit 6,
+
+$z$ = the number of integers from 1 through 100,000, that contain the digit 6 at least once.
+
+Then \(z = x - y = 100,000 - (9^5 + 1) = 40950\).
 \end{proof}
 
 \subsubsection{(c)}
+If an integer is chosen at random from 1 through 100,000, what is the probability that it contains two or more occurrences of the digit 6?
 
 \begin{proof}
+Let $x$ = the number of integers from 1 through 100,000, that contain the digit 6 at least once,
 
+$y$ = the number of integers from 1 through 100,000, that contain the digit 6 exactly once,
+
+$z$ = the number of integers from 1 through 100,000, that contain the digit 6 two or more times.
+
+Then \(z = x - y = 40950 - 32805 = 8145\). Then the probability is \(8145/100000 = 8.145\%\)
 \end{proof}
 
 \subsection{Exercise 21}
+Six new employees, two of whom are married to each other, are to be assigned six desks that are lined up in a row. If 
+the assignment of employees to desks is made randomly, what is the probability that the married couple will have 
+nonadjacent desks? (Hint: The event that the couple have nonadjacent desks is the complement of the event that they 
+have adjacent desks.)
 
 \begin{proof}
-
+There are \(6! = 720\) possible assignments. The number of assignments where the married couple are adjacent is 
+\(2 \cdot 5! = 240\) since we can think of the adjacent married couple as one, and with the remaining 4 employees, 
+there are 5 people to assign desks, but we can also switch the married couple's positions. So \(720-240 = 480\) 
+assignments have the married couple in nonadjacent desks. The probability is \(480/720 = 2/3\).
 \end{proof}
 
 \subsection{Exercise 22}
-
 \subsubsection{(a)}
+Consider strings of length $n$ over the set \(\{a, b, c, d\}\). How many such strings contain at least one pair of 
+adjacent characters that are the same?
 
 \begin{proof}
+Let $x$ = the total number of all strings = \(4^n\), 
 
+$y$ = the number of strings that have no pairs of adjacent 
+characters that are the same = \(4 \cdot \underbrace{3 \cdot \cdots \cdot 3}_{n-1 \text{ times}} = 4 \cdot 3^{n-1}\),
+
+$z$ = the number of strings contain at least one pair of 
+adjacent characters that are the same = \(x - y = 4^n - 4 
+\cdot 3^{n-1}\).
 \end{proof}
 
 \subsubsection{(b)}
+If a string of length ten over \(\{a, b, c, d\}\) is chosen at random, what is the probability that it contains at 
+least one pair of adjacent characters that are the same?
 
 \begin{proof}
-
+When $n=10$, the number of all strings is \(4^{10} = 1048576\) and the number of strings that contain at least 
+one pair of adjacent characters that are the same is \(4^{10} - 4 \cdot 3^9 = 1048576 - 4 \cdot 19683 = 969844\)
+so the probability is \(969844 / 1048576 \approx 92.49\%\).
 \end{proof}
 
 \subsection{Exercise 23}
-
 \subsubsection{(a)}
+How many integers from 1 through 1,000 are multiples of 4 or multiples of 7?
 
 \begin{proof}
+Let $A$ = the set of integers that are multiples of 4 and $B$ = the set of integers that are multiples of 7. Then 
+\(A \cap B\) = the set of integers that are multiples of 28. 
 
+Now \(N(A) = 250\) because
+
+\begin{center}
+\begin{tabular}{ccccccccccc}
+1&2&3&4&5&6&7&8& \(\ldots\) &999&1000 \\
+&&&\(\updownarrow\)&&&&\(\updownarrow\)&&&\(\updownarrow\) \\
+&&&\(4 \cdot 1\)&&&&\(4 \cdot 2\)& \(\ldots\) &&\(4 \cdot 250\) \\
+\end{tabular}
+\end{center}
+
+or equivalently, because \(1000 = 4 \cdot 250\). Also \(N(B) = 142\) because
+
+\begin{center}
+\begin{tabular}{cccccccccccccc}
+1&2&3&4&5&6&7& \(\ldots\) &14& \(\ldots\) &994&995& \(\ldots\) &1000 \\
+&&&&&&\(\updownarrow\)&&\(\updownarrow\)&&\(\updownarrow\)&& \\
+&&&&&&\(7 \cdot 1\)&&\(7 \cdot 2\)&&\(7 \cdot 142\)&& \\
+\end{tabular}
+\end{center}
+
+or equivalently because \(1000 = 7 \cdot 142 + 6\). And \(N(A \cap B) = 35\) because
+
+\begin{center}
+\begin{tabular}{ccccccccccc}
+1&2&3& \(\ldots\) &28& \(\ldots\) &56& \(\ldots\) &980& \(\ldots\) &1000 \\
+&&&&\(\updownarrow\)&&\(\updownarrow\)&&\(\updownarrow\)&& \\
+&&&&\(28 \cdot 1\)&&\(28 \cdot 2\)&&\(28 \cdot 35\)&& \\
+\end{tabular}
+\end{center}
+
+or equivalently because \(1000 = 28 \cdot 35 + 20\). So \(N(A \cup B) = 250 + 142 - 35 = 357\).
 \end{proof}
 
 \subsubsection{(b)}
+Suppose an integer from 1 through 1,000 is chosen at random. Use the result of part (a) to find the probability that the integer is a multiple of 4 or a multiple of 7.
 
 \begin{proof}
-
+\(357/1000 = 35.7\%\)
 \end{proof}
 
 \subsubsection{(c)}
+How many integers from 1 through 1,000 are neither multiples of 4 nor multiples of 7?
 
 \begin{proof}
-
+\(1000-357 = 643\)
 \end{proof}
 
 \subsection{Exercise 24}
-
 \subsubsection{(a)}
+How many integers from 1 through 1,000 are multiples of 2 or multiples of 9?
 
 \begin{proof}
-
+\(\floor{1000 / 2} = 500\) multiples of 2, \(\floor{1000 / 9} = 111\) multiples of 9, and \(\floor{1000 / 18} = 55\)
+multiples of 18 (which are double-counted). So: \(500 + 111 - 55 = 556\).
 \end{proof}
 
 \subsubsection{(b)}
+Suppose an integer from 1 through 1,000 is chosen at random. Use the result of part (a) to find the probability that the integer is a multiple of 2 or a multiple of 9.
 
 \begin{proof}
-
+\(556/1000=55.6\%\)
 \end{proof}
 
 \subsubsection{(c)}
+How many integers from 1 through 1,000 are neither multiples of 2 nor multiples of 9?
 
 \begin{proof}
-
+\(1000-556=444\)
 \end{proof}
 
 \subsection{Exercise 25}
+{\it Counting Strings:}
 
 \subsubsection{(a)}
+Make a list of all bit strings of lengths 0, 1, 2, 3, and 4 that do not contain the bit pattern 111.
 
 \begin{proof}
-
+\(\lambda\), 0, 1, 00, 01, 10, 11, 000, 001, 010, 100, 011, 101, 110, 0000, 0001, 0010, 0011, 0100, 0101, 0110, 1000, 1001, 1010, 1011, 1100, 1101
 \end{proof}
 
 \subsubsection{(b)}
+For each integer \(n \geq 0\), let \(d_n =\) the number of bit strings of length $n$ that do not contain the bit 
+pattern 111. Find \(d_0, d_1, d_2, d_3\), and \(d_4\).
 
 \begin{proof}
-
+\(d_0 = 1, d_1 = 2, d_2 = 4, d_3 = 7, d_4 = 13\)
 \end{proof}
 
 \subsubsection{(c)}
+Find a recurrence relation for \(d_0, d_1, d_2, \ldots\).
 
 \begin{proof}
-
+Let $k$ be an integer with \(k \geq 3\). Any string of length $k$ that does not contain the bit pattern 111 starts 
+either with a 0 or with a 1. If it starts with a 0, this can be followed by any string of \(k - 1\) bits that does 
+not contain the pattern 111. There are \(d_{k-1}\) of these. If the string starts with a 1, then the first two 
+bits are 10 or 11. If the first two bits are 10, then these can be followed by any string of \(k - 2\) bits that does 
+not contain the pattern 111. There are \(d_{k-2}\) of these. If the string starts with a 11, then the third bit 
+must be 0 (because the string does not contain 111), and these three bits can be followed by any string of \(k - 3\) 
+bits that does not contain the pattern 111. There are \(d_{k-3}\) of these. Therefore, for every integer 
+\(k \geq 3, d_k = d_{k-1} + d_{k-2} + d_{k-3}\).
 \end{proof}
 
 \subsubsection{(d)}
+Use the results of parts (b) and (c) to find the number of bit strings of length 5 that do not contain the pattern 
+111.
 
 \begin{proof}
-
+\(d_5 = d_4 + d_3 + d_2 = 13+7+4 = 24\)
 \end{proof}
 
 \subsection{Exercise 26}
+{\it Counting Strings:} Consider the set of all strings of
+$a$’s, $b$’s, and $c$’s.
 
 \subsubsection{(a)}
+Make a list of all of these strings of lengths 0, 1, 2, and 3 that do not contain the pattern $aa$.
 
 \begin{proof}
+Length 0: \(\lambda\), Length 1: \(a, b, c\), Length 2: \(\Ccancel{aa}, ab, ac, ba, bb, bc, ca, cb, cc\),
 
+Length 3: \(\Ccancel{aaa}, \Ccancel{aab}, \Ccancel{aac}, aba, abb, abc, aca, acb, acc\), 
+\(\Ccancel{baa}, bab, bac, bba, bbb, bbc, bca, bcb, bcc\), 
+\(\Ccancel{caa}, cab, cac, cba, cbb, cbc, cca, ccb, ccc\).
 \end{proof}
 
 \subsubsection{(b)}
+For each integer \(n \geq 0\), let \(s_n =\) the number of strings of $a$’s, $b$’s, and $c$’s of length $n$ that do 
+not contain the pattern $aa$. Find \(s_0, s_1, s_2\), and \(s_3\).
 
 \begin{proof}
-
+\(s_0 = 1, s_1 = 3, s_2 = 8, s_3 = 22\)
 \end{proof}
 
 \subsubsection{(c)}
+Find a recurrence relation for \(s_0, s_1, s_2, \ldots\).
 
 \begin{proof}
+Let $s$ be a string of length $k$ that does not contain the pattern $aa$. 
 
+If $x$ starts with $b$ or $c$ then it can be followed by any string of length $k-1$ that does not contain the 
+pattern $aa$. There are \(s_{k-1}\) of those, so there are \(2s_{k-1}\) such strings which $x$ can be: \(s_{k-1}\) of 
+them starting with $b$ and \(s_{k-1}\) of them starting with $c$.
+
+If $x$ starts with $a$ then it can be followed by a $b$ or a $c$ and then a string of length $k-2$ that does not 
+contain the pattern $aa$. There are \(s_{k-2}\) of those, so there are \(2s_{k-2}\) such strings that $x$ can be: 
+\(s_{k-2}\) of them starting with $ab$ and \(s_{k-2}\) of them starting with $ac$.
+
+So \(s_k = 2s_{k-1} + 2s_{k-2}\).
 \end{proof}
 
 \subsubsection{(d)}
+Use the results of parts (b) and (c) to find the number of strings of $a$’s, $b$’s, and $c$’s of length four that do 
+not contain the pattern $aa$.
 
 \begin{proof}
-
+\(s_4 = 2s_3 + 2s_2 = 2(22+8) = 60\).
 \end{proof}
 
 \subsubsection{(e)}
+Use the technique described in Section 5.8 to find an explicit formula for \(s_0, s_1, s_2, \ldots\).
 
 \begin{proof}
-
+\(s_k = 2s_{k-1} + 2s_{k-2}\) so the characteristic equation is \(t^2 - 2t-2 = 0\) which has the solutions
+\[
+\frac{2 \pm \sqrt{(-2)^2 - 4(1)(-2)}}{2} = \frac{2 \pm \sqrt{4+8}}{2} = \frac{2 \pm 2\sqrt{3}}{2} = 1 \pm \sqrt{3}
+\]
+The general solution has the form \(s_k = A(1+\sqrt{3})^k + B(1-\sqrt{3})^k\). When $k=0$ we have
+\[
+s_0 = 1 = A(1+\sqrt{3})^0 + B(1-\sqrt{3})^0 = A+B
+\]
+which gives $B = 1-A$; and when $k=1$ we have 
+\[
+s_1 = 3 = A(1+\sqrt{3})^1 + B(1-\sqrt{3})^1 = A+B + \sqrt{3}(A-B)
+\]
+so we get \(3 = 1 + \sqrt{3}(A - (1-A)) = 1+\sqrt{3}(2A-1)\), solving we get \(\frac{2}{\sqrt{3}} = 2A-1\) so 
+\(\frac{1}{\sqrt{3}} + \frac{1}{2} = A\). Then \(B = \frac{1}{2} - \frac{1}{\sqrt{3}}\). So
+\[
+s_n = \left(\frac{1}{2} + \frac{1}{\sqrt{3}}\right)(1+\sqrt{3})^n + \left(\frac{1}{2} - \frac{1}{\sqrt{3}}\right)
+(1-\sqrt{3})^n
+\]
 \end{proof}
 
 \subsection{Exercise 27}
+For each integer \(n \geq 0\), let \(a_k\) be the number of bit strings of length $n$ that do not contain the pattern 
+101.
 
 \subsubsection{(a)}
+Show that \(a_k = a_{k-1} + a_{k-3} + a_{k-4} + \cdots + a_0 + 2\), for every integer \(k \geq 3\).
 
 \begin{proof}
+Assume \(k \geq 3\) and $s$ is a string of length $k$ that does not contain the pattern 101.
 
+If $s$ begins with a 0 then it can be followed by a string of length $k-1$ that does not contain the pattern 101.
+There are \(a_{k-1}\) of these.
+
+If $s$ begins with a 1 then consider the following. If it begins with:
+
+100 then it can be followed by a string of length $k-3$ that does not contain the pattern 101, and there are 
+\(a_{k-3}\) of them,
+
+1100 then it can be followed by a string of length $k-4$ that does not contain the pattern 101, and there are 
+\(a_{k-4}\) of them,
+
+11100 then it can be followed by a string of length $k-5$ that does not contain the pattern 101, and there are 
+\(a_{k-5}\) of them,
+
+\(\underbrace{11\ldots 1}_{k-3}00\), then it can be followed by a string of length $k-(k-1) = 1$ that does not 
+contain the pattern 101, and there are \(a_1\) of them,
+
+\(\underbrace{11\ldots 1}_{k-2}00\), then it can be followed by a string of length $k-k = 0$ that does not 
+contain the pattern 101, and there are \(a_0\) of them,
+
+\(\underbrace{11\ldots 1}_{k-1}\), then it can be followed by 1 or 0, and there are \(2\) of them.
+
+So \(a_k= a_{k-1} + a_{k-3} + a_{k-4} + \cdots + a_0 + 2\).
 \end{proof}
 
 \subsubsection{(b)}
+Use the result of part (a) to show that if \(k \geq 3\), then \(a_k = 2a_{k-1} - a_{k-2} + a_{k-3}\).
 
 \begin{proof}
+By part (a) we have \(a_{k-1} = a_{k-2} + a_{k-4} + a_{k-5} + \cdots + a_0 + 2\).
 
+So \(a_{k-1} + a_{k-3} = a_{k-2} + a_{k-3} + a_{k-4} + a_{k-5} + \cdots + a_0 + 2\).
+
+So \(a_{k-1} - a_{k-2} + a_{k-3} = a_{k-3} + a_{k-4} + a_{k-5} + \cdots + a_0 + 2\).
+
+So \(2a_{k-1} - a_{k-2} + a_{k-3} = a_{k-1} + a_{k-3} + a_{k-4} + a_{k-5} + \cdots + a_0 + 2\).
+
+Notice the right-hand side is equal to \(a_k\) by part (a).
 \end{proof}
 
 \subsection{Exercise 28}
+For each integer \(n \geq 2\) let \(a_n\) be the number of permutations of \(\{1, 2, 3, \ldots, n\}\) in which no 
+number is more than one place removed from its “natural” position. Thus \(a_1 = 1\) since the one permutation of 
+\(\{1\}\), namely, 1, does not move 1 from its natural position. Also, \(a_2 = 2\) since neither of the two 
+permutations of \(\{1, 2\}\), namely, 12 and 21, moves either number more than one place from its natural position.
 
 \subsubsection{(a)}
+Find \(a_3\).
 
 \begin{proof}
-
+\(a_3 = 3\) (The three permutations that do not move more than one place from their “natural” positions are 213, 132, 
+and 123.)
 \end{proof}
 
 \subsubsection{(b)}
+Find a recurrence relation for \(a_1, a_2, a_3, \ldots\).
 
 \begin{proof}
+Let's try to see a relationship between \(a_2 = 2\) and \(a_3 = 3\). We need to add the new element 3. Since we 
+cannot move 3 more than one from its natural position, it can be in position 2 or 3. If it's in position 3, like 
+\_\_3, then both of the permutations from \(a_2\) work: 123, 213. If it's in position 2, then 2 must be in position 
+3: \_23, so there is only one possibility left: 123.
 
+Let's find $a_4$. There are \(4! = 24\) permutations of \(\{1,2,3,4\}\), but there are only 5 which do not move more
+more than one place: 1234, 2134, 1243, 2143, 1324. So \(a_4 = 5\). 
+
+But how is it obtained from \(a_3\)? There are 3 permutations in $a_3$: 123, 132, 213. Now we need to add 
+the element 4 to them. 4 can be either in position 3 or position 4. If it's in position 4, like \_\_\_4, then all 
+the permutations from $a_3$ work: 1234, 2134, 1324. If 4 is in position 3, then 3 must be in position 4: \_\_43, so now
+there are $a_2$ ways to fill the two spots: 1243, 2143.
+
+So we can see that the general form of the recurrence is: \(a_n = a_{n-1} + a_{n-2}\).
 \end{proof}
 
 \subsection{Exercise 29}
+Refer to Example 9.3.5.
 
 \subsubsection{(a)}
+Write the following IP address in dotted decimal form: 11001010 00111000 01101011 11101110
 
 \begin{proof}
+\(11001010_2 = 2 + 23 + 26 + 27 = 202\)
 
+\(00111000_2 = 23 + 24 + 25 = 56\)
+
+\(01101011_2 = 1 + 2 + 23 + 25 + 26 = 107\)
+
+\(11101110_2 = 2 + 22 + 23 + 25 + 26 + 27 = 238\)
+
+So the answer is 202.56.107.238.
 \end{proof}
 
 \subsubsection{(b)}
+How many Class A networks can there be?
 
 \begin{proof}
-
+The network ID for a Class A network consists of 8 bits and begins with 0. If all possible combinations of eight 0’s 
+and 1’s that start with a 0 were allowed, there would be 2 choices (0 or 1) for each of the 7 positions from the 
+second through the eighth. This would give \(2^7 = 128\) possible ID’s. But because neither 00000000 nor 01111111 is 
+allowed, the total is reduced by 2, so there are 126 possible Class A networks.
 \end{proof}
 
 \subsubsection{(c)}
+What is the dotted decimal form of the IP address for a computer in a Class A network?
 
 \begin{proof}
-
+Let \(w.x.y.z\) be the dotted decimal form of the IP address for a computer in a Class A network. Because the 
+network IDs for a Class A network go from 00000001 (= 1) through 01111110 (= 126), $w$ can be any integer from 1 
+through 126. In addition, each of \(x, y\), and \(z\) can be any integer from 0 (= 00000000) through 255 (= 
+11111111), except that \(x, y\), and \(z\) cannot all be 0 simultaneously and cannot all be 255 simultaneously.
 \end{proof}
 
 \subsubsection{(d)}
+How many host IDs can there be for a Class A network?
 
 \begin{proof}
-
+Twenty-four positions are allocated for the host ID in a Class A network. If each could be either 0 or 1, there 
+would be \(2^{24} = 16,777,216\) possible host IDs. But neither all 0’s nor all 1’s is allowed, which reduces the 
+total by 2. Thus there are 16,777,214 possible host IDs in a Class A network.
 \end{proof}
 
 \subsubsection{(e)}
+How many Class C networks can there be?
 
 \begin{proof}
-
+The network ID for a Class C network consists of 24 bits and begins with 110. There are 2 choices (0 or 1) for each 
+of the 21 positions from the fourth through the twenty-fourth. This gives \(2^{21}\) possible ID’s. 
 \end{proof}
 
 \subsubsection{(f)}
+What is the dotted decimal form of the IP address for a computer in a Class C network?
 
 \begin{proof}
+Let \(w.x.y.z\) be the dotted decimal form of the IP address for a computer in a Class C network. The 
+network IDs for a Class C network go from 110000000000000000000000 through 110111111111111111111111.
 
+If we break these down into chunks of 8 bits and convert them to binary, we get:
+
+\(11000000_2 = 192_{10}, 00000000_2 = 0_{10}, 00000000_2 = 0_{10}\),
+
+\(11011111_2 = 223_{10}, 11111111_2 = 255_{10}, 11111111_2 = 255_{10}\).
+
+As dotted decimals they range from 192.0 to 223.255. So \(192 \leq w \leq 223\), \(0 \leq x \leq 255\), 
+\(0 \leq y \leq 255\), \(0 \leq z \leq 255\).
 \end{proof}
 
 \subsubsection{(g)}
+How many host IDs can there be for a Class C network?
 
 \begin{proof}
-
+There are only 8 bits for host IDs in a Class C network, but a host ID may not consist of either all 0’s or all 1’s. 
+Therefore \(2^8 - 2 = 254\) host IDs.
 \end{proof}
 
 \subsubsection{(h)}
+How can you tell, by looking at the first of the four numbers in the dotted decimal form of an IP address, what 
+kind of network the address is from? Explain.
 
 \begin{proof}
-
+For Class A networks \(0 \leq w \leq 126\), for Class B networks \(128 \leq w \leq 191\), for Class C networks 
+\(192 \leq w \leq 223\). So we can tell from this info what kind of network an address is from.
 \end{proof}
 
 \subsubsection{(i)}
+An IP address is 140.192.32.136. What class of network does it come from?
 
 \begin{proof}
-
+Observe that \(140 = 128 + 8 + 4 = 10001100_2\), which begins with 10. Thus the IP address comes from a Class B 
+network. An alternative solution uses the result of Example 9.3.5: Network IDs for Class B networks range from 128 
+through 191. Thus, since \(128 \leq 140 \leq 191\), the given IP address is from a Class B network.
 \end{proof}
 
 \subsubsection{(j)}
+An IP address is 202.56.107.238. What class of network does it come from?
 
 \begin{proof}
-
+For Class C networks we have \(192 \leq w \leq 223\), and 202 is in this range, so it the address belongs to a Class
+C network.
 \end{proof}
 
 \subsection{Exercise 30}
+A row in a classroom has $n$ seats. Let \(s_n\) be the number of ways nonempty sets of students can sit in the row 
+so that no student is seated directly adjacent to any other student. (For instance, a row of three seats could contain 
+a single student in any of the seats or a pair of students in the two outer seats. Thus \(s_3 = 4\).) Find a 
+recurrence relation for \(s_1, s_2, s_3, \ldots\).
 
 \begin{proof}
+Let us denote students with a * and empty seats with a . .
 
+$n=1$: The seats . can be filled as *, so \(s_1 = 1\).
+
+$n=2$: The seats .. can be filled as *. or .*, so \(s_2 = 2\).
+
+$n=3$: The seats ... can be filled as *.., .*., ..*, or *.*, so \(s_3 = 4\).
+
+$n=4$: The seats .... can be filled as *..., .*.., ..*., ...*, *.*., *..*, or .*.*, so \(s_4 = 7\).
+
+$n=5$: The seats ..... can be filled as *...., .*..., ..*.., ...*., ....*, *.*.., *..*., *...*, .*.*., .*..*, 
+..*.*  or *.*.*, so \(s_5 = 12\).
+
+$n=6$: The seats ...... can be filled as *....., .*...., ..*..., ...*.., ....*., .....*, *.*..., *..*.., *...*., *....*, .*.*.., .*..*., .*...*, ..*.*., ..*..*, ...*.*, *.*.*., *.*..*, *..*.*, or .*.*.*, so \(s_6 = 20\).
+
+So the recurrence is \(s_n = s_{n-1}+s_{n-2}+1\). This makes sense as follows: we can take the $n-1$ seat patterns
+and add an empty seat . to the right end (there are \(s_{n-1}\) of them); we can take the $n-2$ seat patterns 
+and add a .* at the right end (there are \(s_{n-2}\) of them), and we have \(\underbrace{.....}_{n-1}*\) finally.
 \end{proof}
 
 \subsection{Exercise 31}
+Assume that birthdays are equally likely to occur in any one of the 12 months of the year.
 
 \subsubsection{(a)}
+Given a group of four people, A, B, C, and D, what is the total number of ways in which birth months could be 
+associated with A, B, C, and D? (For instance, A and B might have been born in May, C in September, and D in 
+February. As another example, A might have been born in January, B in June, C in March, and D in October.)
 
 \begin{proof}
-
+There are 12 possible birth months for A, 12 for B, 12 for C, and 12 for D, so the total is \(12^4 = 20,736\).
 \end{proof}
 
 \subsubsection{(b)}
+How many ways could birth months be associated with A, B, C, and D so that no two people would share the same birth 
+month?
 
 \begin{proof}
-
+If no two people share the same birth month, there are 12 possible birth months for A, 11 for B, 10 for C, and 9 for 
+D. Thus the total is \(12 \cdot 11 \cdot 10 \cdot 9 = 11,880\).
 \end{proof}
 
 \subsubsection{(c)}
+How many ways could birth months be associated with A, B, C, and D so that at least two people would share the same 
+birth month?
 
 \begin{proof}
-
+If at least two people share the same birth month, the total number of ways birth months could be associated with A, B, C, and D is \(20,736 - 11,880 = 8,856\).
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability that at least two people out of A, B, C, and D share the same birth month?
 
 \begin{proof}
-
+The probability that at least two of the four people share the same birth month is \(8,856 / 20,736 \approx 42.7\%\).
 \end{proof}
 
 \subsubsection{(e)}
+How large must $n$ be so that in any group of $n$ people, the probability that two or more share the same birth month 
+is at least 50\%?
 
 \begin{proof}
-
+When there are five people, the probability that at least two share the same birth month is \(\frac{12^5 - 12 \cdot 
+11 \cdot 10 \cdot 9 \cdot 8}{12^5} \approx 61.8\%\), and when there are more than five people, the probability is 
+even greater. Thus, since the probability for four people is less than 50\%, the group must contain five or more 
+people for the probability to be at least 50\% that two or more share the same birth month. 
 \end{proof}
 
 \subsection{Exercise 32}
+Assuming that all years have 365 days and all birthdays occur with equal probability, how large must $n$ be so that 
+in any randomly chosen group of $n$ people, the probability that two or more have the same birthday is at least 1/2? 
+(This is called the birthday problem. Many people find the answer surprising.)
 
 \begin{proof}
-
+The probability that two out of $n$ people share the same birthday is
+\[
+\frac{365^n - 365 \cdot 364 \cdot \cdots \cdot (365-n+1)}{365^n}
+\]
+We want this to be \(\geq 50\%\). By trying values on the calculator I found that for $n=23$ it's \(\approx 50.73\%\)
+and for $n=22$ it's \(\approx 47.57\%\) so $n=23$ is the smallest value.
 \end{proof}
 
 \subsection{Exercise 33}
+A college conducted a survey to explore the academic interests and achievements of its students. It asked 
+students to place checks beside the numbers of all the statements that were true of them. Statement \#1 was “I was 
+on the Dean’s list last term,” statement \#2 was “I belong to an academic club, such as the math club or the Spanish 
+club,” and statement \#3 was “I am majoring in at least two subjects.” Out of a sample of 100 students, 28 checked \#1, 
+26 checked \#2, and 14 checked \#3, 8 checked both \#1 and \#2, 4 checked both \#1 and \#3, 3 checked both \#2 and 
+\#3, and 2 checked all three statements.
 
 \subsubsection{(a)}
+How many students checked at least one of the statements?
 
 \begin{proof}
-
+The number of students who checked at least one of the statements is \(N(H) + N(C) + N(D) - N(H \cap C) - 
+N(H \cap D) - N(C \cap D) + N(H \cap C \cap D) = 28 + 26 + 14 - 8 - 4 - 3 + 2 = 55\).
 \end{proof}
 
 \subsubsection{(b)}
+How many students checked none of the statements?
 
 \begin{proof}
-
+By the difference rule, the number of students who checked none of the statements is the total number of students 
+minus the number who checked at least one statement. This is \(100 - 55 = 45\).
 \end{proof}
 
 \subsubsection{(c)}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.3.33.c.1.png}
+\end{figure}
+
+Let H be the set of students who checked \#1, C the set of students who checked \#2, and D the set of students who 
+checked \#3. Fill in the numbers for all eight regions of the diagram.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.3.33.c.2.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(d)}
+How many students checked \#1 and \#2 but not \#3?
 
 \begin{proof}
-
+The number of students who checked \#1 and \#2 but not \#3 is \(N(H \cap D) - N(H \cap C \cap D) = 8 - 2 = 6\).
 \end{proof}
 
 \subsubsection{(e)}
+How many students checked \#2 and \#3 but not \#1?
 
 \begin{proof}
-
+The number of students who checked \#2 and \#3 but not \#1 is \(N(C \cap D) - N(H \cap C \cap D) = 3 - 2 = 1\).
 \end{proof}
 
 \subsubsection{(f)}
+How many students checked \#2 but neither of the other two?
 
 \begin{proof}
-
+The number of students who checked \#2 but not \#1 or \#3 is \(N(C) - N(C \cap (H \cup D)) = 17 - (6+2+1) = 8\).
 \end{proof}
 
 \subsection{Exercise 34}
+A study was done to determine the efficacy of three different drugs: A, B, and C, in relieving headache pain. 
+Over the period covered by the study, 50 subjects were given the chance to use all three drugs. The following 
+results were obtained: 
+
+21 reported relief from drug A
+
+21 reported relief from drug B
+
+31 reported relief from drug C
+
+9 reported relief from both drugs A and B
+
+14 reported relief from both drugs A and C
+
+15 reported relief from both drugs B and C
+
+41 reported relief from at least one of the drugs.
+
+Note that some of the 21 subjects who reported relief from drug A may also have reported relief from drugs B or C. A 
+similar occurrence may be true for the other data.
 
 \subsubsection{(a)}
+How many people got relief from none of the drugs?
 
 \begin{proof}
-
+\(50-41=9\)
 \end{proof}
 
 \subsubsection{(b)}
+How many people got relief from all three drugs?
 
 \begin{proof}
-
+By the Inclusion-Exclusion Principle,
+\[
+N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C).
+\]
+By using the values given in the problem, we get
+\[
+41 = 21 + 21 + 31 - 9 - 14 - 15 + N(A \cap B \cap C).
+\]
+Solving we get \(N(A \cap B \cap C) = 6\).
 \end{proof}
 
 \subsubsection{(c)}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.3.34.c.1.png}
+\end{figure}
+
+Let A be the set of all subjects who got relief from drug A, B the set of all subjects who got relief from drug B, 
+and C the set of all subjects who got relief from drug C. Fill in the numbers for all eight regions of the diagram.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.3.34.c.2.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(d)}
+How many subjects got relief from A only?
 
 \begin{proof}
-
+4
 \end{proof}
 
 \subsection{Exercise 35}
+An interesting use of the inclusion/exclusion rule is to check survey numbers for consistency. For example, suppose 
+a public opinion polltaker reports that out of a national sample of 1,200 adults, 675 are married, 682 are from 20 to 
+30 years old, 684 are female, 195 are married and are from 20 to 30 years old, 467 are married females, 318 are 
+females from 20 to 30 years old, and 165 are married females from 20 to 30 years old. Are the polltaker’s 
+figures consistent? Could they have occurred as a result of an actual sample survey?
 
 \begin{proof}
+Let M = the set of married people in the sample,
 
+Y = the set of people between 20 and 30 in the sample, and
+
+F = the set of females in the sample.
+
+Then the number of people in the set \(M \cup Y \cup F\) is less than or equal to the size of the sample. And so 
+
+\begin{tabular}{rcl}
+1,200 & \(\geq\) & \(N(M \cup Y \cup F)\) \\
+& = & \(N(M) + N(Y) + N(F) - N(M \cap Y)\) \\
+&   & \(-N(M \cap F) -N(Y \cap F) + N(M \cap Y \cap F)\) \\ 
+& = & \(675 + 682 + 684 - 195 - 467 - 318 + 165\) \\
+& = & 1,226.
+\end{tabular}
+
+This is impossible since \(1,200 < 1,226\), so the polltaker’s figures are inconsistent. They could not have 
+occurred as a result of an actual sample survey.
 \end{proof}
 
 \subsection{Exercise 36}
-
+Fill in the reasons for each step below. If $A$ and $B$ are sets in a finite universe $U$, then
+\begin{center}
+\begin{tabular}{rcll}
+\(N(A \cap B)\) & = & \(N(U) - N((A \cap B)^c)\) & {\cy (a) \fbl} \\
+& = & \(N(U) - N(A^c \cup B^c)\) & {\cy (b) \fbl} \\
+& = & \(N(U) - (N(A^c) + N(B^c) - N(A^c \cap B^c))\) & {\cy (c) \fbl}
+\end{tabular}
+\end{center}
 \begin{proof}
+(a) because 
+\begin{center}
+\begin{tabular}{rcll}
+\(A \cap B\) & = & \((A \cap B) \cap U\) & by identity law \\
+& = & \(U \cap (A \cap B)\) & by commutative law \\
+& = & \(U \cap ((A \cap B)^c)^c\) & by double complement law \\
+& = & \(U - (A \cap B)^c\) & by set difference law \\
+\end{tabular}
+\end{center}
+and because \(N(U - (A \cap B)^c) = N(U) - N((A \cap B)^c)\).
 
+(b) by De Morgan laws (c) by inclusion-exclusion principle for 2 sets
 \end{proof}
 
+{\bf \cy For each of exercises $37-39$, the number of elements in a certain set can be found by computing the 
+number in a larger universe that are not in the set and subtracting this from the total in the larger universe. In 
+each of these, as was the case for the solution to example 9.3.6(b), De Morgan’s laws and the inclusion / exclusion 
+rule can be used.}
+
 \subsection{Exercise 37}
+How many positive integers less than 1,000 have no common factors with 1,000?
 
 \begin{proof}
-
+Let $A$ be the set of all positive integers less than 1,000 that are not multiples of 2, and let $B$ be the set of all 
+positive integers less than 1,000 that are not multiples of 5. Since the only prime factors of 1,000 are 2 and 5, the 
+number of positive integers that have no common factors with 1,000 is \(N(A \cap B)\). Let the universe $U$ be the 
+set of all positive integers less than 1,000. Then \(A^c\) is the set of positive integers less than 1,000 that are 
+multiples of 2, \(B^c\) is the set of positive integers less than 1,000 that are multiples of 5, and \(A^c \cap 
+B^c\) is the set of positive integers less than 1,000 that are multiples of 10. By one of the procedures discussed in 
+Section 9.1 or 9.2, it is easily found that \(N(A^c) = 499, N(B^c) = 199\), and \(N(A^c \cap B^c) = 99\). Thus, by the 
+inclusion/exclusion rule, \(N(A^c \cup B^c) = N(A^c) + N(B^c) - N(A^c \cap B^c) = 499 + 199 - 99 = 599\). But by 
+De Morgan’s law, \(N(A^c \cup B^c) = N((A \cap B)^c)\), and so (*) \(N((A \cap B)^c) = 599\). Now since \((A \cap B)^c 
+= U - (A \cap B)\), by the difference rule we have (**) \(N((A \cap B)^c) = N(U) - N(A \cap B)\). Equating the 
+right-hand sides of (*) and (**) gives \(N(U) - N(A \cap B) = 599\). And because \(N(U) = 999\), we conclude that \(999 
+- N(A \cap B) = 599\), or, equivalently, \(N(A \cap B) = 999 - 599 = 400\). So there are 400 positive integers less 
+than 1,000 that have no common factor with 1,000.
 \end{proof}
 
 \subsection{Exercise 38}
+How many permutations of \(abcde\) are there in which the first character is \(a, b\), or $c$ and the last character is \(c, d\), or $e$?
 
 \begin{proof}
+{\bf Case 1: first character is $a$.} For the last character there are 3 choices: \(c, d, e\). Then the middle
+3 characters can be permuted in \(3!\) ways. So \(3 \cdot 3! = 3 \cdot 6 = 18\) possibilities.
 
+{\bf Case 2: first character is $b$.} For the last character there are 3 choices: \(c, d, e\). Then the middle
+3 characters can be permuted in \(3!\) ways. So \(3 \cdot 3! = 3 \cdot 6 = 18\) possibilities.
+
+{\bf Case 3: first character is $c$.} For the last character there are 2 choices: \(d, e\). Then the middle
+3 characters can be permuted in \(3!\) ways. So \(2 \cdot 3! = 2 \cdot 6 = 12\) possibilities.
+
+In total, there are \(18+18+12 = 48\) permutations in which the first character is \(a, b\), or $c$ and the last 
+character is \(c, d\), or $e$.
 \end{proof}
 
 \subsection{Exercise 39}
+How many integers from 1 through 999,999 contain each of the digits 1, 2, and 3 at least once? ({\it Hint:} For each 
+\(i = 1, 2\), and 3, let \(A_i\) be the set of all integers from 1 through 999,999 that do not contain the digit $i$.)
 
 \begin{proof}
+Let \(A_1, A_2, A_3\) be the sets of all integers from 1 through 999,999 that do not contain the digits 1, 2, 3,
+respectively.
 
+\(N(A_1) = 9^6 - 1\) because, excluding the digit 1, there are 9 choices for each digit, for a total of \(9^6\), but
+one of them, namely 000,000 corresponds to 0 which is out of the range 1 through 999,999.
+
+Similarly \(N(A_2) = N(A_3) = 9^6-1\).
+
+\(N(A_1 \cap A_2) = 8^6 - 1\) because, excluding the digits 1 and 2, there are 8 choices for each digit, for a total of 
+\(8^6\), but one of them, namely 000,000 corresponds to 0 which is out of the range 1 through 999,999.
+
+Similarly \(N(A_1 \cap A_3) = N(A_2 \cap A_3) = 8^6 - 1\).
+
+Finally \(N(A_1 \cap A_2 \cap A_3) = 7^6-1\) by a similar argument to the above arguments. 
+
+Now by the inclusion / exclusion principle, \(N(A_1 \cup A_2 \cup A_3) = N(A_1) + N(A_2) + N(A_3) - N(A_1 \cap A_2) 
+- N(A_1 \cap A_3) - N(A_2 \cap A_3) + N(A_1 \cap A_2 \cap A_3) = 3(9^6-1) - 3(8^6-1) + 7^6-1 = 925,539\)
+
+So the number of integers that do not contain at least one of the digits 1,2,3 is 925,539. Then \(999,999 - 925,539 = 
+74460\) integers contain all three of the digits 1,2,3.
+
+We can verify this with a computer:
+\begin{minted}{scala}
+scala> var count = 0
+var count: Int = 0
+                                                                                                                        
+scala> for i <- 1 to 999999 do
+     |   if "123".forall(c => i.toString.contains(c)) then
+     |     count += 1
+     | 
+scala> count
+val res0: Int = 74460
+\end{minted}
 \end{proof}
 
+{\bf \cy For 40 and 41, use the definition of the Euler phi function \(\phi\) from Section 7.1, exercises $51-53$.}
+
 \subsection{Exercise 40}
+Use the inclusion/exclusion principle to prove the following: If \(n = pq\), where $p$ and $q$ are distinct prime numbers, then \(\phi(n) = (p - 1)(q - 1)\).
+
+{\it Hint:} Let $A$ and $B$ be the sets of all positive integers less than or equal to $n$ that are divisible by 
+$p$ and $q$, respectively. Then \(\phi(n) = n - N(A \cup B)\).
 
 \begin{proof}
+(following the Hint) 
 
+Notice \(N(A) = q\) since there are $q$ multiples of $p$ from 1 to $n$: \(p, 2p, 3p, \ldots, (q-1)p, qp = n\).
+Similarly \(N(B) = p\).
+
+Notice \(N(A \cap B) = 1\) since \(n = pq\) is the only number from 1 through $n$ that is divisible by both $p$ and $q$.
+
+By the inclusion / exclusion principle, \(N(A \cup B) = N(A) + N(B) - N(A \cap B) = q + p - 1\). So \(\phi(n) = n - 
+(q+p-1) = pq-q-p+1 = q(p-1) - (p-1) = (p-1)(q-1)\).
 \end{proof}
 
 \subsection{Exercise 41}
+Use the inclusion/exclusion principle to prove the following: If \(n = pqr\), where \(p, q\), and \(r\) are 
+distinct prime numbers, then \(\phi(n) = (p - 1)(q - 1)(r - 1)\).
 
 \begin{proof}
+We can use an approach similar to Exercise 40. Let \(P, Q, R\) be the sets of positive integers less than or equal to
+$n$ that are divisible by \(p,q,r\) respectively. 
 
+Then \(N(P) = qr, N(Q) = pr, N(R) = pq\) by similar arguments. 
+
+Now \(N(P \cap Q) = r\) because: if an integer is divisible by both $p$ and $q$ then it is divisible by $pq$ since $p$ 
+and $q$ are both prime; and there are $r$ multiples of $pq$ from 1 through $n$: \(pq, 2pq, 3pq, \ldots, (r-1)pq, rpq = n\).
+
+By similar arguments \(N(P \cap R) = q\) and \(N(Q \cap R) = p\). Finally \(N(P \cap Q \cap R) = 1\) because \(n=pqr\)
+itself is the only integer divisible by all 3 primes.
+
+By the inclusion / exclusion principle, \(N(P \cup Q \cup R) = N(P) + N(Q) + N(R) - N(P \cap Q) -N(P \cap R) - N(Q 
+\cap R) + N(P \cap Q \cap R) = qr + pr + pq - r - q - p + 1\).
+
+\(N(P \cup Q \cup R)\) is the number of integers that are divisible by at least one of \(p,q,r\), thus \(\phi(n) = 
+n - N(P \cup Q \cup R) = pqr - qr + pr + pq - r - q - p + 1\), which, after factoring, equals \((p-1)(q-1)(r-1)\).
 \end{proof}
 
 \subsection{Exercise 42}
+A gambler decides to play successive games of blackjack until he loses three times in a row. (Thus the gambler 
+could play five games by losing the first, winning the second, and losing the final three or by winning the first 
+two and losing the final three. These possibilities can be symbolized as LWLLL and WWLLL.) Let \(g_n\) be the number 
+of ways the gambler can play $n$ games.
 
 \subsubsection{(a)}
+Find \(g_3, g_4\), and \(g_5\).
 
 \begin{proof}
+3 games: LLL so \(g_3 = 1\). \,\,\, 4 games: WLLL so \(g_4 = 1\). 
 
+5 games: LWLLL, WWLLL so \(g_5 = 2\).
 \end{proof}
 
 \subsubsection{(b)}
+Find \(g_6\).
 
 \begin{proof}
-
+6 games: WWWLLL, LWWLLL, WLWLLL, LLWLLL so \(g_6 = 4\).
 \end{proof}
 
 \subsubsection{(c)}
+Find a recurrence relation for \(g_3, g_4, g_5, \ldots\).
+
+{\it Hint:} If \(k \geq 6\), any sequence of $k$ games must begin with W, LW, or LLW.
 
 \begin{proof}
-
+By the Hint we can see that for \(k \geq 6, g_k = g_{k-1} + g_{k-2} + g_{k-3}\).
 \end{proof}
 
 \subsection{Exercise 43}
+A derangement of the set \(\{1, 2, \ldots, n\}\) is a permutation that moves every element of the set away from 
+its “natural” position. Thus 21 is a derangement of \(\{1, 2\}\), and 231 and 312 are derangements of \(\{1, 2, 3\}\). 
+For each positive integer $n$, let \(d_n\) be the number of derangements of the set \(\{1, 2, \ldots, n\}\).
 
 \subsubsection{(a)}
+Find \(d_1, d_2\), and \(d_3\).
 
 \begin{proof}
+\(d_1 = 0\) because the only permutation of the set \(\{1\}\) is 1, which cannot move 1 from its natural position.
 
+\(d_2 = 1\) because the only two permutations of the set \(\{1,2\}\) are 12 and 21, and only 21 moves both 1 and 2 
+away from their natural positions.
+
+\(d_3 = 2\) because there are 6 permutations of the set \(\{1,2,3\}\): 123, 132, 213, 231, 312, 321; and only 231 
+and 312 move every element away from their natural positions.
 \end{proof}
 
 \subsubsection{(b)}
+Find \(d_4\).
 
 \begin{proof}
+There are 24 permutations: 1234, 1243, 1324, 1342, 1423, 1432, 2134, 2143, 2314, 2341, 2413, 2431, 3124, 3142, 3214, 
+3241, 3412, 3421, 4123, 4132, 4213, 4231, 4312, 4321.
 
+The only ones that move every element away from their natural positions are: 2143, 2341, 2413, 3142, 3412, 3421, 
+4123, 4312, 4321.
+
+So \(d_4 = 9\).
 \end{proof}
 
 \subsubsection{(c)}
+Find a recurrence relation for \(d_1, d_2, d_3, \ldots\).
+
+{\it Hint:} Divide the set of all derangements into two subsets: one subset consists of all derangements in which 
+the number 1 changes places with another number, and the other subset consists of all derangements in which the 
+number 1 goes to position \(i \neq 1\) but $i$ does not go to position 1. The answer is \(d_k = (k - 1)d_{k-1} + (k-1)
+d_{k-2}\). Can you justify it?
 
 \begin{proof}
+(following the Hint) 
 
+Consider a derangement in the first subset. Then 1 switches places with another number $i$. There are $k-1$ other 
+numbers that 1 can switch places with. For each one of them, then the remaining \(k-2\) numbers have to also 
+derange, and there are \(d_{k-2}\) ways to do that. Thus the number of derangements in the first subset is 
+\((k-1)d_{k-2}\).
+
+Consider a derangement in the second subset. Then 1 moves to position $i$ for some number $i$. There are $k-1$ 
+choices for this $i$. For each one of these choices, there are \(d_{k-1}\) ways to derange the remaining $k-1$ 
+numbers. Why? 
+
+Because number $i$ cannot go to position 1, but it can go to any one of the remaining $k-2$ positions, and similarly 
+any other number $j$ (\(j \neq 1, j \neq i\)) can go to $k-2$ positions (any position except $j$ and $i$), so this 
+situation is the same as derangements of $k-1$ elements. 
+
+Thus the number of derangements in the second subset is \((k-1)d_{k-1}\). So the total is: 
+\(d_k = (k - 1)d_{k-1} + (k - 1)d_{k-2}\).
 \end{proof}
 
 \subsection{Exercise 44}
+Note that a product \(x_1x_2x_3\) may be parenthesized in two different ways: \((x_1x_2)x_3\) and \(x_1(x_2x_3)\). 
+Similarly, there are several different ways to parenthesize \(x_1x_2x_3x_4\). Two such ways are \((x_1x_2)(x_3x_4)\) 
+and \(x_1((x_2 x_3)x_4)\). Let \(P_n\) be the number of different ways to parenthesize the product \(x_1x_2 \ldots 
+x_n\). Show that if \(P_1 = 1\), then 
+\[
+P_n = \sum_{k=1}^{n-1} P_k P_{n-k} \text{ for every integer  } n \geq 2. 
+\]
+(It turns out that the sequence \(P_1, P_2, P_3, \ldots\) is the same as the sequence of Catalan numbers: 
+\(P_n = C_{n-1}\) for every integer \(n \geq 1\). See Example 5.6.4.)
 
 \begin{proof}
+Consider the product \(x_1x_2 \ldots x_n\). All the different ways to parenthesize it can be classified as 
+follows: split it into two products \(x_1\) and \(x_2 \ldots x_n\), or into \(x_1x_2\) and \(x_3 \ldots x_n\),
+or into \(x_1x_2x_3\) and \(x_4 \ldots x_n\), \(\ldots\), or into \(x_1x_2 \ldots x_{n-1}\) and \(x_n\).
 
+By the addition rule, $P_n$ is the sum of the number of ways each one of these product pairs can be parenthesized.
+
+For each of the product pairs, by the product rule, the number of ways to parenthesize the product pair is the 
+product of the numbers of ways to parenthesize each product.
+
+There are \(P_1\) ways to parenthesize \(x_1\) and \(P_{n-1}\) ways to parenthesize \(x_2 \ldots x_n\), so 
+there are \(P_1P_{n-1}\) ways to parenthesize their product.
+
+Similarly there are \(P_2\) ways to parenthesize \(x_1x_2\) and \(P_{n-2}\) ways to parenthesize \(x_3 \ldots x_n\), so 
+there are \(P_2P_{n-2}\) ways to parenthesize their product.
+
+And so on. Therefore \(P_n = \sum_{k=1}^{n-1} P_k P_{n-k}\) for every \(n \geq 2\).
 \end{proof}
 
 \subsection{Exercise 45}
+Use mathematical induction to prove Theorem 9.3.1: ``Suppose a finite set $A$ equals the union of $k$ distinct 
+mutually disjoint subsets \(A_1, A_2, \ldots, A_k\). Then \(N(A) = N(A_1) + N(A_2) + \ldots + N(A_k)\).''
 
 \begin{proof}
+Let \(P(n)\) be the statement ``if a finite set $A$ equals the union of $n$ distinct mutually disjoint subsets 
+\(A_1, A_2, \ldots, A_n\) then \(N(A) = N(A_1) + N(A_2) + \cdots + N(A_n)\).''
 
+{\bf Show that \(P(1)\) is true:} In this case \(A = A_1\) therefore \(N(A) = N(A_1)\), so \(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(P(k)\) is true and 
+assume \(A\) is a finite set that equals the union of $k+1$ mutually disjoint subsets \(A_1, \ldots, A_k, A_{k+1}\).
+{\it [We want to show \(N(A) = N(A_1) + N(A_2) + \cdots + N(A_{k+1})\)]}.
+
+Let \(A' = A_1 \cup \cdots \cup A_k\). Then \(A'\) is a finite set that equals the union of $k$ mutually disjoint 
+subsets \(A_1, \ldots, A_k\). By the inductive hypothesis \(N(A') = N(A_1) + N(A_2) + \cdots + N(A_k)\).
+
+Notice that since \(A_1, \ldots, A_{k+1}\) are mutually disjoint, \(A' = A_1 \cup \cdots \cup A_k\) and \(A_{k+1}\) 
+are also disjoint. So \(N(A) = N(A' \cup A_{k+1}) = N(A') + N(A_{k+1})=N(A_1) +N(A_2) + \cdots + N(A_k) + N(A_{k+1})\), 
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 46}
+Prove the inclusion/exclusion rule for two sets $A$ and $B$ by showing that \(A \cup B\) can be partitioned into 
+\(A \cap B\), \(A - (A \cap B)\), and \(B - (A \cap B)\), and then using the addition and difference rules. 
+(See the hint for exercise 39 in Section 6.2.)
 
 \begin{proof}
+{\bf Claim:} \(A \cup B = (A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)]\) and \((A \cap B), A-(A \cap B)\) 
+and \(B-(A \cap B)\) are mutually disjoint sets.
 
+{\it Proof of Claim.} 
+
+{\it First to prove the equality:}
+
+1. Assume \(x \in A \cup B\). 
+
+2. By definition of union, \(x \in A\) or \(x \in B\).
+
+3. {\bf Case 1: \(x \in A\).}
+
+3.1 {\bf Case 1.1: \(x \in B\).} Then by definition of intersection, \(x \in A \cap B\). So by definition of union
+\(x \in (A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)]\).
+
+3.2 {\bf Case 1.2: \(x \notin B\).} Then by definition of intersection, \(x \notin A \cap B\). So by definition of 
+difference \(x \in A - (A \cap B)\). So by definition of union, \(x \in (A \cap B) \cup [A - (A \cap B)] \cup 
+[B - (A \cap B)]\).
+
+4. {\bf Case 2: \(x \in B\).} Similar to Case 1. We conclude \(x \in (A \cap B) \cup [A - (A \cap B)] \cup 
+[B - (A \cap B)]\).
+
+5. By 3 and 4, \(x \in (A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)]\).
+
+6. By 1, 5 and definition of subset, \(A \cup B \subseteq (A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)]\).
+
+7. Assume \(x \in (A \cap B) \cup [A - (A \cap B)] \cup 
+[B - (A \cap B)]\).
+
+8. By definition of union, \(x \in A \cap B\) or \(x \in A - (A \cap B)\) or \(x \in B - (A \cap B)\).
+
+9. {\bf Case 1: \(x \in A \cap B\).} By definition of intersection \(x \in A\) and \(x \in B\). So by definition
+of union, \(x \in A \cup B\).
+
+10. {\bf Case 2: \(x \in A - (A \cap B)\).} By definition of difference, \(x \in A\) and \(x \notin A \cap B\). So by 
+definition of union, \(x \in A \cup B\).
+
+11. {\bf Case 3: \(x \in B - (A \cap B)\).} By definition of difference, \(x \in B\) and \(x \notin A \cap B\). So by 
+definition of union, \(x \in A \cup B\).
+
+12. By 9, 10 and 11, \(x \in A \cup B\).
+
+13. By 7, 12 and definition of subset, \((A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)] \subseteq A \cup B\).
+
+14. By 6, 13 and definition of set equality \((A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)] = A \cup B\).
+
+{\it Now to prove that the three sets are mutually disjoint:}
+
+Assume \(x \in A \cap B\). We want to show \(x \notin A - (A \cap B)\) and \(x \notin B - (A \cap B)\). 
+
+Argue by contradiction and assume \(x \in A - (A \cap B)\). Then by definition of difference \(x \in A\) and \(x \notin 
+A \cap B\), contradicting \(x \in A\cap B\). Similarly we can prove \(x \notin B - (A \cap B)\).
+
+Assume \(x \in A - (A \cap B)\). We want to show \(x \notin A \cap B\) and \(x \notin B - (A \cap B)\). 
+
+By definition of difference, \(x \in A\) and \(x \notin A \cap B\). Then by definition of intersection either 
+\(x \notin A\) or \(x \notin B\). The first case \(x \notin A\) contradicts the fact that \(x\in A\), so \(x\notin B\). 
+So by definition of intersection \(x \notin A \cap B\) (otherwise \(x \in B\), contradiction) and by definition of 
+difference \(x \notin B - (A \cap B)\) either (otherwise \(x \in B\), contradiction).
+
+Assume \(x \in B - (A \cap B)\). We want to show \(x \notin A \cap B\) and \(x \notin A - (A \cap B)\). This proof is 
+very similar to the case above.
+
+{\it [end of proof of the Claim.]}
+
+By the claim \(N(A \cup B) = N((A \cap B) \cup [A - (A \cap B)] \cup [B - (A \cap B)])\).
+
+Since these sets are disjoint by the claim, by the addition rule \(N(A \cup B) = N(A \cap B) + N(A - (A \cap B)) + N(B 
+- (A \cap B)).\)
+
+By the difference rule \(N(A - (A \cap B)) = N(A) - N(A \cap B)\) and \(N(B - (A \cap B)) = N(B) - N(A \cap B)\).
+Substituting these into the equation above, we get
+\[
+N(A \cup B) = N(A \cap B) + N(A) - N(A \cap B) + N(B) - N(A \cap B) = N(A) + N(B) - N(A \cap B)
+\]
+{\it [which proves the Inclusion / Exclusion principle for two sets.]}
 \end{proof}
 
 \subsection{Exercise 47}
@@ -2517,23 +3445,148 @@ Use arrows to write all permutations of \(\{1, 2, 3, 4\}\) that keep no elements
 \end{proof}
 
 \subsection{Exercise 48}
+Use mathematical induction to prove the general inclusion/exclusion rule: If \(A_1, \ldots, A_n\) are finite sets, 
+then \(N(A_1 \cup A_2 \cup \cdots \cup A_n)\)
+\begin{center}
+\begin{tabular}{l}
+= \(\dps \sum_{1 \leq i \leq n}N(A_i) - \sum_{1 \leq i < j \leq n} N(A_i \cap A_j) + \sum_{1 \leq i < j < k \leq n} 
+N(A_i \cap A_j \cap A_k)\) \\
+\(\dps - \cdots + (-1)^{n+1} N(A_1 \cap A_2 \cap \cdots \cap A_n)\) 
+\end{tabular}
+\end{center}
+(The notation \(\sum_{1 \leq i < j \leq n} N(A_i \cap A_j)\) means that quantities of the form \(N(A_i \cap A_j)\) 
+are to be added together for all integers $i$ and $j$ with \(1 \leq i < j \leq n\).)
+
+{\it Hint:} Use the associative law for sets from Theorem 6.2.2 and the generalized distributive law for sets from 
+exercise 40, Section 6.2.
 
 \begin{proof}
+Let \(P(n)\) be the statement: ``if \(A_1, \ldots, A_n\) are finite sets then the equation above is true.''
 
+{\bf Show that \(P(1)\) is true:} When \(n=1\) the equation becomes \(N(A_1) = \sum_{1 \leq i \leq 1} N(A_1)\), with 
+all the other sums becoming empty sums, since \(1 \leq i < j \leq 1\) is impossible for integers $i,j$. Both sides are
+equal to \(N(A_1)\) therefore $P(1)$ is true.
+
+{\bf Show that for any integer \(n \geq 1\) if \(P(n)\) is true then \(P(n+1)\) is true:} Assume \(n \geq 1\) and 
+assume \(P(n)\) is true. Assume \(A_1, \ldots, A_{n+1}\) are finite sets. {\it [We want to prove \(P(n+1)\).]}
+
+Let \(B = \bigcup_{i=1}^n A_i\). Notice \(\bigcup_{i=1}^{n+1}A_i = B \cup A_{n+1}\). Then by the inclusion / exclusion principle for two sets,
+\[
+N\left(\bigcup_{i=1}^{n+1}A_i\right) = N(B \cup A_{n+1}) = N(B) + N(A_{n+1}) - N(B \cap A_{n+1}) \hspace{2cm} (1)
+\]
+By the inductive hypothesis
+\[
+N(B) = \sum_{1 \leq i \leq n} N(A_i) - \sum_{1 \leq i < j \leq n} N(A_i \cap A_j) + \cdots + (-1)^{n+1} N(A_1 \cap A_2 \cap \cdots \cap A_n) \,\,\, (2)
+\]
+By the generalized distributive law,
+\[
+B \cap A_{n+1} = (A_1 \cap A_{n+1}) \cup (A_2 \cap A_{n+1}) \cup \cdots \cup (A_k \cap A_{n+1}) = \bigcup_{i=1}^{n} 
+(A_i \cap A_{n+1})
+\]
+By the inductive hypothesis again, \(N(B \cap A_{n+1}) = N\left(\bigcup_{i=1}^{n} (A_i \cap A_{n+1}) \right)\)
+\begin{center}
+\begin{tabular}{l}
+= \(\dps \sum_{1 \leq i \leq n} N(A_i \cap A_{n+1}) - \sum_{1 \leq i < j \leq n} N((A_i \cap A_{n+1}) \cap 
+(A_j \cap A_{n+1}))\) \\
+\(\dps + \cdots + (-1)^{n+1}N\left(\bigcap_{i=1}^n (A_i \cap A_{n+1})\right)\) \hspace{4cm} (3)
+\end{tabular}
+\end{center}
+Now let's try to substitute and combine all the terms. 
+
+The term \(N(B)\) in (1) will be replaced by the right hand side of (2), and the term \(N(B \cap A_{n+1})\) in (1) will
+be replaced by the right hand side of (3). So let's imagine we've done that already, and start combining terms in (1).
+
+The term \(\dps \sum_{1 \leq i \leq n} N(A_i)\) on the right hand side of (2), and the term \(N(A_{n+1})\) in (1), 
+can be combined into: \(\dps \sum_{1 \leq i \leq n+1} N(A_i)\).
+
+The term \(\dps\sum_{1 \leq i < j \leq n} N(A_i \cap A_j)\) in (2) and the term \(\dps\sum_{1 \leq i \leq n} N(A_i \cap 
+A_{n+1})\) on the right side of (3) can be combined into \(\dps\sum_{1 \leq i < j \leq n+1} N(A_i \cap A_j)\). Why? 
+The first sum has all the two-way intersections between all the \(A_i\) from 1 to $n$, and the second sum has all the 
+two-way intersections of the \(A_i\) from 1 to $n$ with \(A_{n+1}\). Putting them together we end up with all 
+the two-way intersections between all the \(A_i\) from 1 to $n+1$. Both of these sums have negative signs (the second 
+sum gets a negative sign from \(N(B \cap A_{n+1})\)).
+
+Notice that the next term in (3) is, by the associative law and the idempotent law for intersection:
+\[
+\sum_{1 \leq i < j \leq n} N((A_i \cap A_{n+1}) \cap (A_j \cap A_{n+1})) = \sum_{1 \leq i < j \leq n} N(A_i \cap 
+A_j \cap A_{n+1})
+\]
+
+So, similarly the term \(\dps \sum_{1 \leq i < j < k \leq n} N(A_i \cap A_j \cap A_k)\) in (2) and the term \(\dps 
+\sum_{1 \leq i < j \leq n} N(A_i \cap A_j \cap A_{n+1})\) in (3) can be combined into \(\dps \sum_{1 \leq i < j < k 
+\leq n+1} N(A_i \cap A_j \cap A_k)\) because the first sum has all the three-way intersections between \(A_i\) from 1 
+to $n$, and the second sum has all the three-way intersections of \(A_{n+1}\) with the $A_i$ from 1 to $n$.
+Both sums have a positive sign (the second sum has a double negative sign, one from \(N(B \cap A_{n+1})\) in (1) and
+another from itself).
+
+All the other $i$-way intersection term sums from (2) and (3) can be combined in a similar way. So we end up with: 
+\(\dps N\left(\bigcup_{i=1}^{n+1}A_i\right)\)
+\begin{center}
+\begin{tabular}{l}
+= \(\dps \sum_{1 \leq i \leq n+1}N(A_i) - \sum_{1 \leq i < j \leq n+1} N(A_i \cap A_j) + \sum_{1 \leq i < j < k \leq 
+n+1} N(A_i \cap A_j \cap A_k)\) \\
+\(\dps - \cdots + (-1)^{n+2} N(A_1 \cap A_2 \cap \cdots \cap A_{n+1})\) 
+\end{tabular}
+\end{center}
+which proves \(P(n+1)\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 49}
+A circular disk is cut into $n$ distinct sectors, each shaped like a piece of pie and all meeting at the center 
+point of the disk. Each sector is to be painted red, green, yellow, or blue in such a way that no two adjacent sectors 
+are painted the same color. Let \(S_n\) be the number of ways to paint the disk.
 
 \subsubsection{(a)}
+Find a recurrence relation for \(S_k\) in terms of \(S_{k-1}\) and \(S_{k-2}\) for each integer \(k \geq 4\).
+
+{\it Hint:} Use the solution method described in Section 5.8. The answer is \(S_k = 2S_{k-1} + 3S_{k-2}\) for every 
+integer \(k \geq 4\).
 
 \begin{proof}
+NOTE: I have to assume, without any extra information, that the disk is FIXED, in other words, rotation, flipping etc.
+are considered different ways to paint.
 
+For example, for \(n=3\) consider the clockwise paintings starting from the sector that occupies 12 o'clock: 
+
+RGB and RBG: in both paintings, R is adjacent to G and B, G is adjacent to R and B, B is adjacent to R and G. In 
+another way, they are equivalent if we traverse the second disk counter-clockwise.
+
+YBG and BGY: These would be equivalent if rotation is allowed, because it amounts to choosing a different starting point.
+
+{\it On to the problem:}
+
+Consider a disk cut into \(k\) sectors and painted as described in the problem. Number the sectors as \(s_1, s_2, 
+\ldots, s_k\). So \(s_k\) and \(s_1\) are adjacent, therefore of different colors. There are two cases: either 
+\(s_1\) and \(s_{k-1}\) are painted the same color, or not.
+
+{\bf Case 1: \(s_1\) and \(s_{k-1}\) are painted the same color.} In this case \(s_k\) can be painted one of the 
+other 3 colors. Now remove \(s_k\) from the disk. The remaining \(k-1\) sectors can be considered a disk of 
+\(k-2\) sectors, by merging \(s_1\) and \(s_{k-1}\) (since they are painted the same color). There are \(S_{k-2}\) 
+ways to color this remaining disk. Therefore there are \(3S_{k-2}\) ways to color the original \(k\)-sector disk.
+
+{\bf Case 2: \(s_1\) and \(s_{k-1}\) are painted different colors.} In this case \(s_k\) can be painted with one of 
+the remaining 2 colors. Now remove \(s_k\) from the disk. The remaining \(k-1\) sectors form a valid painting by 
+making \(s_1\) and \(s_{k-1}\) adjacent (since they are painted with different colors). There are \(S_{k-1}\) ways 
+to paint this remaining disk. Therefore there are \(2S_{k-1}\) ways to color the original \(k\)-sector disk.
+
+By the addition rule \(S_k = 2S_{k-1} + 3S_{k-2}\).
 \end{proof}
 
 \subsubsection{(b)}
+Find an explicit formula for \(S_n\) for \(n \geq 2\).
 
 \begin{proof}
+\(S_2 = 12\) because there are 4 colors to paint \(s_1\), 3 colors to paint \(s_2\).
 
+\(S_3 = 24\) because there are 4 colors to paint \(s_1\), 3 colors to paint \(s_2\), and, since \(s_3\) is adjacent to 
+both \(s_1\) and \(s_2\), there are 2 colors to paint \(s_3\).
+
+The characteristic equation is \(t^2 - 2t - 3 = 0\) so \((t-3)(t+1) = 0\) which gives \(t = -1, 3\). So the general
+form of the solution is \(S_n = A \cdot (-1)^n + B \cdot 3^n\).
+
+Solving \(S_2 = 12 = A(-1)^2 + B \cdot 3^2\) we get \(12 = A + 9B\). Solving \(S_3 = 24 = A(-1)^3 + B \cdot 3^3\) we get \(24 = -A + 27B\). Adding these two equations together gives \(36 = 36B\) so \(B = 1\) and \(A = 3\). 
+
+Thus \(S_n = 3\cdot(-1)^n + 3^n\) for all \(n \geq 2\).
 \end{proof}
 
 \section{Exercise Set 9.4}
