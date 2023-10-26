@@ -3043,11 +3043,11 @@ females from 20 to 30 years old, and 165 are married females from 20 to 30 years
 figures consistent? Could they have occurred as a result of an actual sample survey?
 
 \begin{proof}
-Let M = the set of married people in the sample,
+Let \(M\) = the set of married people in the sample,
 
-Y = the set of people between 20 and 30 in the sample, and
+\(Y\) = the set of people between 20 and 30 in the sample, and
 
-F = the set of females in the sample.
+\(F\) = the set of females in the sample.
 
 Then the number of people in the set \(M \cup Y \cup F\) is less than or equal to the size of the sample. And so 
 
@@ -3439,9 +3439,36 @@ N(A \cup B) = N(A \cap B) + N(A) - N(A \cap B) + N(B) - N(A \cap B) = N(A) + N(B
 \end{proof}
 
 \subsection{Exercise 47}
+Prove the inclusion/exclusion rule for three sets.
 
 \begin{proof}
-
+Let \(A,B,C\) be any sets. {\it [We want to show that]}
+\[
+N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C).
+\]
+By the Inclusion / Exclusion Principle for two sets, applied to the two sets \(A \cup B\) and \(C\),
+\[
+N((A \cup B) \cup C) = N(A \cup B) + N(C) - N((A \cup B) \cap C) \hspace{2cm} (1)
+\]
+By the Inclusion / Exclusion Principle for two sets, applied to the two sets \(A\) and \(B\),
+\[
+N(A \cup B) = N(A) + N(B) - N(A \cap B) \hspace{2cm} (2)
+\]
+By the distributive law \((A \cup B) \cap C = (A \cap C) \cup (B \cap C)\). By Inclusion / Exclusion again, 
+\[
+N((A \cap C) \cup (B \cap C)) = N(A \cap C) + N(B \cap C) - N((A \cap C) \cap (B \cap C)) \hspace{1cm} (3)
+\]
+Notice \((A \cap C) \cap (B \cap C) = A \cap B \cap C\). Substituting this together with (2) and (3) into (1) we get
+\(N((A \cup B) \cup C)\)
+\begin{center}
+\begin{tabular}{cl}
+= & \(N(A \cup B) + N(C) - N((A \cup B) \cap C)\) \\
+= & \([N(A) + N(B) - N(A \cap B)] + N(C) - N((A \cap C) \cup (B \cap C))\) \\
+= & \([N(A) + N(B) - N(A \cap B)] + N(C) - [N(A \cap C) + N(B \cap C) - N(A \cap B \cap C)]\) \\
+= & \(N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C)\) \\
+\end{tabular}
+\end{center}
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 48}
@@ -3592,299 +3619,605 @@ Thus \(S_n = 3\cdot(-1)^n + 3^n\) for all \(n \geq 2\).
 \section{Exercise Set 9.4}
 
 \subsection{Exercise 1}
-
 \subsubsection{(a)}
+If 4 cards are selected from a standard 52-card deck, must at least 2 be of the same suit? Why?
 
 \begin{proof}
-
+No. For instance, the aces of the four different suits could be selected.
 \end{proof}
 
 \subsubsection{(b)}
+If 5 cards are selected from a standard 52-card deck, must at least 2 be of the same suit? Why?
 
 \begin{proof}
+Yes. Let \(x_1,x_2,x_3,x_4,x_5\) be five cards. Consider the function \(S\) that sends each card to its suit.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.4.1.b.png}
+\end{figure}
+
+By the pigeonhole principle, \(S\) is not one-to-one: \(S(x_i) = S(x_j)\) for some two cards \(x_i\) and \(x_j\). 
+Hence at least two cards have the same suit.
 \end{proof}
 
 \subsection{Exercise 2}
-
 \subsubsection{(a)}
+If 13 cards are selected from a standard 52-card deck, must at least 2 be of the same denomination? Why?
 
 \begin{proof}
-
+No, for example the 13 selected cards might have these denominations: 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A.
 \end{proof}
 
 \subsubsection{(b)}
+If 20 cards are selected from a standard 52-card deck, must at least 2 be of the same denomination? Why?
 
 \begin{proof}
-
+Yes, since \(20 > 13\) and there are only 13 distinct denominations, by the Pigeonhole Principle at least 2 of 
+them must be the same.
 \end{proof}
 
 \subsection{Exercise 3}
+A small town has only 500 residents. Must there be 2 residents who have the same birthday? Why?
 
 \begin{proof}
+Yes. Denote the residents by \(x_1, x_2, \ldots, x_{500}\). Consider the function \(B\) from residents to birthdays 
+that sends each resident to his or her birthday:
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.4.3.png}
+\end{figure}
+
+By the pigeonhole principle, \(B\) is not one-to-one: \(B(x_i) = B(x_j)\) for some two residents \(x_i\) and 
+\(x_j\). Hence at least two residents have the same birthday.
 \end{proof}
 
 \subsection{Exercise 4}
+In a group of 700 people, must there be 2 who have the same first and last initials? Why?
 
 \begin{proof}
-
+There are 26 letters in the Roman Alphabet, so there are \(26 \cdot 26 = 676\) possibilities for a first and last
+initials combination. Since \(700 > 676\), by the Pigeonhole Principle at least 2 people must have the same initials.
 \end{proof}
 
 \subsection{Exercise 5}
-
 \subsubsection{(a)}
+Given any set of four integers, must there be two that have the same remainder when divided by 3? Why?
 
 \begin{proof}
+Yes. There are only three possible remainders that can be obtained when an integer is divided by 3: 0, 1, and 2. 
+Thus, by the pigeonhole principle, if four integers are each divided by 3, then at least two of them must have the 
+same remainder. More formally, call the integers \(n_1, n_2, n_3\), and \(n_4\), and consider the function \(R\) 
+that sends each integer to the remainder obtained when that integer is divided by 3:
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.4.5.a.png}
+\end{figure}
+
+By the pigeonhole principle, \(R\) is not one-to-one: \(R(n_i) = R(n_j)\) for some two integers \(n_i\) and 
+\(n_j\). Hence at least two integers must have the same remainder.
 \end{proof}
 
 \subsubsection{(b)}
+Given any set of three integers, must there be two that have the same remainder when divided by 3? Why?
 
 \begin{proof}
-
+No. For instance, \(\{0, 1, 2\}\) is a set of three integers no two of which have the same remainder when 
+divided by 3.
 \end{proof}
 
 \subsection{Exercise 6}
-
 \subsubsection{(a)}
+Given any set of seven integers, must there be two that have the same remainder when divided by 6? Why?
 
 \begin{proof}
-
+Yes. The possible remainders are 0, 1, 2, 3, 4, 5 and there are 6 possibilities. Since \(7 > 6\), by the Pigeonhole 
+Principle at least two of the seven integers must have the same remainder. More formally we can think of \(\mod 6\) as 
+a function defined on the set of seven integers: \(M: \{x_1 ,x_2,x_3,x_4 , x_5 , x_6 , x_7\} \to \{0, 1, 2, 3, 4, 5\}\) 
+and \(M\) is not one-to-one because the domain has 7 elements while the range only has 6.
 \end{proof}
 
 \subsubsection{(b)}
+Given any set of seven integers, must there be two that have the same remainder when divided by 8? Why?
 
 \begin{proof}
-
+No, for example \(\{0, 1, 2, 3, 4, 5, 6, 7\}\) is a set of seven integers no two of which have the same remainder.
 \end{proof}
 
 \subsection{Exercise 7}
+Let \(S = \{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}\). Suppose six integers are chosen from \(S\). Must there be two 
+integers whose sum is 15? Why?
 
 \begin{proof}
+Notice that \(3 + 12 = 15\), \(4 + 11 = 15\), \(5 + 10 = 15\), \(6 + 9 = 15\), and \(7 + 8 = 15\). 
 
+We can divide \(S\) into five sets: \(\{3, 12\}\), \(\{4, 11\}\), \(\{5, 10\}\), \(\{6, 9\}\), \(\{7, 8\}\). 
+
+By the Pigeonhole Principle, when 6 integers are chosen from \(S\), two of them will belong to the same set among 
+these 5 sets. Therefore when 6 integers are chosen from \(S\) there must be two integers whose sum is 15.
 \end{proof}
 
 \subsection{Exercise 8}
+Let \(T = \{1, 2, 3, 4, 5, 6, 7, 8, 9\}\). Suppose five integers are chosen from \(T\). Must there be two integers 
+whose sum is 10? Why?
 
 \begin{proof}
-
+No, for example \(\{1,2,3,4,5\}\) contains no two integers whose sum is 10.
 \end{proof}
 
 \subsection{Exercise 9}
-
 \subsubsection{(a)}
+If seven integers are chosen from between 1 and 12 inclusive, must at least one of them be odd? Why?
 
 \begin{proof}
+Yes.
 
+{\it Solution 1:} Only six of the numbers from 1 to 12 are even (namely, 2, 4, 6, 8, 10, 12), so at most six even 
+numbers can be chosen from between 1 and 12 inclusive. Hence if seven numbers are chosen, at least one must be odd.
+
+{\it Solution 2:} Partition the set of all integers from 1 through 12 into six subsets (the pigeonholes), each 
+consisting of an odd and an even number: \(\{1, 2\}\), \(\{3, 4\}\), \(\{5, 6\}\), \(\{7, 8\}\), \(\{9, 10\}\), 
+\(\{11, 12\}\). If seven integers (the pigeons) are chosen from among 1 through 12, then, by the pigeonhole principle, 
+at least two must be from the same subset. But each subset contains one odd and one even number. Hence at least one of 
+the seven numbers is odd.
+
+{\it Solution 3: (a formal version of Solution 2):} Let
+\(S = \{x_1, x_2, x_3, x_4, x_5, x_6, x_7\}\) be a set of 
+seven numbers chosen from the set \(T = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}\), and let \(P\) be the following 
+partition of \(T: \{1, 2\}, \{3, 4\}, \{5, 6\}, \{7, 8\}, \{9, 10\}\), and \(\{11, 12\}\). Since each element of 
+\(S\) lies in exactly one subset of the partition, we can define a function \(F\) from \(S\) to \(P\) by letting 
+\(F(x_i)\) be the subset that contains \(x_i\).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.4.9.a.png}
+\end{figure}
+
+Since \(S\) has 7 elements and \(P\) has 6 elements, by the pigeonhole principle, \(F\) is not one-to-one. Thus two 
+distinct numbers of the seven are sent to the same subset, which implies that these two numbers are the two distinct 
+elements of the subset. Therefore, since each pair consists of one odd and one even integer, one of the seven numbers 
+is odd.
 \end{proof}
 
 \subsubsection{(b)}
+If ten integers are chosen from between 1 and 20 inclusive, must at least one of them be even? Why?
 
 \begin{proof}
-
+No. For instance, none of the 10 numbers 1, 3, 5, 7,
+9, 11, 13, 15, 17, 19 is even.
 \end{proof}
 
 \subsection{Exercise 10}
+If \(n + 1\) integers are chosen from the set \(\{1, 2, 3, \ldots, 2n\}\), where \(n\) is a positive integer, must at 
+least one of them be odd? Why?
 
 \begin{proof}
-
+Yes. There are \(n\) even integers in the set \(\{1, 2, 3, \ldots, 2n\}\), namely, \(2(= 2 \cdot 1), 4(= 2 \cdot 2)\), \(6(= 2 \cdot 3), \ldots, 2n(= 2 \cdot n)\). So the maximum number of even integers that can be chosen is \(n\). Thus 
+if \(n + 1\) integers are chosen, at least one of them must be odd.
 \end{proof}
 
 \subsection{Exercise 11}
+If \(n + 1\) integers are chosen from the set \(\{1, 2, 3, \ldots, 2n\}\), where \(n\) is a positive integer, must at 
+least one of them be even? Why?
 
 \begin{proof}
-
+Yes. The set contains \(n\) odd integers: \(1, 3, 5, \ldots, 2n-1\). Since \(n+1 > n\), by the Pigeonhole Principle at least one of the chosen integers must be even.
 \end{proof}
 
 \subsection{Exercise 12}
+How many cards must you pick from a standard 52-card deck to be sure of getting at least 1 red card? Why?
 
 \begin{proof}
-
+The answer is 27. There are only 26 black cards in a standard 52-card deck, so at most 26 black cards can be 
+chosen. Hence if 27 are taken, at least one must be red.
 \end{proof}
 
 \subsection{Exercise 13}
+Suppose six pairs of similar-looking boots are thrown together in a pile. How many individual boots must you pick 
+to be sure of getting a matched pair? Why?
 
 \begin{proof}
-
+6 pairs means 12 boots. So we must pick at least 7 individual boots to get a matching pair. Because the 12 
+boots are split into 6 pairs, and since \(7>6\), by the Pigeonhole Principle the 7 picked boots must contain two
+boots from one of the pairs.
 \end{proof}
 
 \subsection{Exercise 14}
+How many integers from 0 through 60 must you pick in order to be sure of getting at least one that is odd? at least 
+one that is even?
 
 \begin{proof}
-
+There are 61 integers from 0 through 60. Of these, 31 are even \((0 = 2 \cdot 0, 2 = 2 \cdot 1, 4 = 2 \cdot 2, 
+\ldots, 60 = 2 \cdot 30)\) and so 30 are odd. Hence if 32 integers are chosen, at least one must be odd, and if 31 
+integers are chosen, at least one must be even.
 \end{proof}
 
 \subsection{Exercise 15}
+If \(n\) is a positive integer, how many integers from 0
+through \(2n\) must you pick in order to be sure of getting 
+at least one that is odd? at least one that is even?
 
 \begin{proof}
-
+There are \(2n+1\) integers from 0 through \(2n\). Of these, \(n+1\) are even \((0 = 2 \cdot 0, 2 = 2 \cdot 1, 4 
+= 2 \cdot 2, \ldots, 2n = 2 \cdot n)\) and so \(n\) are odd. Hence if \(n+2\) integers are chosen, at least one 
+must be odd, and if \(n+1\) integers are chosen, at least one must be even.
 \end{proof}
 
 \subsection{Exercise 16}
+How many integers from 1 through 100 must you pick in order to be sure of getting one that is divisible by 5?
 
 \begin{proof}
-
+There are 20 that are divisible by 5: \(5 = 5 \cdot 1, \ldots, 100 = 5 \cdot 20\). The remaining 80 integers are
+not divisible by 5. So we must pick at least 81 integers.
 \end{proof}
 
 \subsection{Exercise 17}
+How many integers must you pick in order to be sure that at least two of them have the same remainder when divided by 7?
 
 \begin{proof}
-
+The answer is 8. (There are only seven possible remainders for division by 7: 0, 1, 2, 3, 4, 5, 6. Hence if 8 are 
+chosen, at least two must be the same.)
 \end{proof}
 
 \subsection{Exercise 18}
+How many integers must you pick in order to be sure that at least two of them have the same remainder when divided by 15?
 
 \begin{proof}
-
+The answer is 16, since there are 15 possible remainders modulo 15: \(0, 1, 2, \ldots, 14\).
 \end{proof}
 
 \subsection{Exercise 19}
+How many integers from 100 through 999 must you pick in order to be sure that at least two of them have a digit in 
+common? (For example, 256 and 530 have the digit 5 in common.)
 
 \begin{proof}
-
+The answer is 10. Each integer we pick will use up at least 1 of the 10 possible digits. So the maximum number of 
+integers we can pick without any two integers having a digit in common is 9. 
 \end{proof}
 
 \subsection{Exercise 20}
-
 \subsubsection{(a)}
+If repeated divisions by 20,483 are performed, how many distinct remainders can be obtained?
 
 \begin{proof}
-
+The answer is 20,483 because the possible remainders are \(0, 1, 2, \ldots, 20482\).
 \end{proof}
 
 \subsubsection{(b)}
+When 5/20483 is written as a decimal, what is the maximum length of the repeating section of the representation?
 
 \begin{proof}
-
+The length of the repeating section of the decimal representation of 5/20483 is less than or equal to 20,482. 
+The reason is that 20,482 is the number of nonzero remainders that can be obtained when a number is divided by 
+20,483. Thus, in the long-division process of dividing 5 by 20,483, either some remainder is 0 and the decimal 
+expansion terminates, or only nonzero remainders are obtained and at some point within the first 20,482 
+successive divisions, a nonzero remainder is repeated. At that point the digits in the developing decimal expansion 
+begin to repeat because the sequence of successive remainders repeats those previously obtained.
 \end{proof}
 
 \subsection{Exercise 21}
+When 683/1493 is written as a decimal, what is the maximum length of the repeating section of the representation?
 
 \begin{proof}
-
+The length of the repeating section of the decimal representation of 683/1493 is less than or equal to 1492. 
+The reason is that 1492 is the number of nonzero remainders that can be obtained when a number is divided by 1493. 
+Thus, in the long-division process of dividing 683 by 1493, either some remainder is 0 and the decimal expansion 
+terminates, or only nonzero remainders are obtained and at some point within the first 1492 successive divisions, a 
+nonzero remainder is repeated. At that point the digits in the developing decimal expansion begin to repeat because 
+the sequence of successive remainders repeats those previously obtained.
 \end{proof}
 
 \subsection{Exercise 22}
+Is \(0.101001000100001000001 \ldots\) (where each string of 0’s is one longer than the previous one) rational or 
+irrational?
 
 \begin{proof}
-
+This number is irrational because the decimal expansion neither terminates nor repeats.
 \end{proof}
 
 \subsection{Exercise 23}
+Is \(56.556655566655556666 \ldots\)  (where the strings of 5’s and 6’s become longer in each repetition) rational or 
+irrational?
 
 \begin{proof}
-
+This number is irrational because the decimal expansion neither terminates nor repeats.
 \end{proof}
 
 \subsection{Exercise 24}
+Show that within any set of thirteen integers chosen from 2 through 40, there are at least two integers with a common 
+divisor greater than 1.
 
 \begin{proof}
-
+Let \(A\) be the set of the thirteen chosen numbers, and let \(B\) be the set of all prime numbers between 1 and 40. 
+Note that \(B = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37\}\). For each \(x\) in \(A\), let \(F(x)\) be the 
+smallest prime number that divides \(x\). Since \(A\) has 13 elements and \(B\) has 12 elements, by the pigeonhole 
+principle \(F\) is not one-to-one. Thus \(F(x_1) = F(x_2)\) for some \(x_1 \neq x_2\) in \(A\). By definition of \(F\), 
+this means that the smallest prime number that divides \(x_1\) equals the smallest prime number that divides 
+\(x_2\). Therefore, two numbers in \(A\); namely, \(x_1\) and \(x_2\); have a common divisor greater than 1. 
+{\it [Strictly speaking, only integers less than or equal to 20 can divide integers less than or equal to 40. So we 
+could have made the set \(B\) even smaller.]}
 \end{proof}
 
 \subsection{Exercise 25}
+In a group of 30 people, must at least 3 have been born in the same month? Why?
 
 \begin{proof}
-
+This follows from the generalized pigeonhole principle with 30 pigeons, 12 pigeonholes, and \(k = 2\), using the fact that \(30 > 2 \cdot 12\).
 \end{proof}
 
 \subsection{Exercise 26}
+In a group of 30 people, must at least 4 have been born in the same month? Why?
 
 \begin{proof}
-
+No. For instance, the birthdays of the 30 people could be distributed as follows: three birthdays in each of the six 
+months January through June and two birthdays in each of the six months July through December.
 \end{proof}
 
 \subsection{Exercise 27}
+In a group of 2,000 people, must at least 5 have the same birthday? Why?
 
 \begin{proof}
-
+\(2000 = 365 \cdot 5 + 175\) so \(2000 > 365 \cdot 5\), so yes.
 \end{proof}
 
 \subsection{Exercise 28}
+A programmer writes 500 lines of computer code in 17 days. Must there have been at least 1 day when the programmer 
+wrote 30 or more lines of code? Why?
 
 \begin{proof}
-
+\(17 \cdot 29 = 493 < 500\) so yes.
 \end{proof}
 
 \subsection{Exercise 29}
+A certain college class has 40 students. All the students in the class are known to be from 17 through 34 years of 
+age. You want to make a bet that the class contains at least \(x\) students of the same age. How large can you 
+make \(x\) and yet be sure to win your bet?
 
 \begin{proof}
-
+The answer is \(x = 3\). There are 18 years from 17 through 34. Now \(40 > 18 \cdot 2\), so by the generalized 
+pigeonhole principle, you can be sure that there are at least \(x = 3\) students of the same age. However, since 
+\(18 \cdot 3 > 40\), you cannot be sure of having more than three students with the same age. (For instance, three 
+students could be each of the ages 17 through 20, and two could be each of the ages from 21 through 34.) So \(x\) 
+cannot be taken to be greater than 3.
 \end{proof}
 
 \subsection{Exercise 30}
+A penny collection contains twelve 1967 pennies, seven 1968 pennies, and eleven 1971 pennies. If you are to pick some 
+pennies without looking at the dates, how many must you pick to be sure of getting at least five pennies from the 
+same year?
 
 \begin{proof}
-
+The answer is \(4 \cdot 3 + 1 = 13\). Since there are 3 different years, with \(4 \cdot 3 = 12\) coins, we may get
+4 of each year. Then one more penny guarantees that we get at least 5 pennies from the same year.
 \end{proof}
 
 \subsection{Exercise 31}
+A group of 15 executives are to share 5 assistants. Each executive is assigned exactly 1 assistant, and no assistant 
+is assigned to more than 4 executives. Show that at least 3 assistants are assigned to 3 or more executives.
+
+{\it Hint:} Use the same type of reasoning as in Example 9.4.6.
 
 \begin{proof}
-
+Argue by contradiction and suppose not. Suppose that 2 (or fewer) assistants are assigned to 3 or more executives.
+In this case what is the maximum number of executives that are assigned an assistant? At most 2 assistants can be 
+assigned to at most 4 executives for a maximum of \(2 \cdot 4 = 8\) executives, and the remaining 3 assistants can be
+assigned to at most 2 executives, for a maximum of \(3 \cdot 2 = 6\) executives, for a total maximum of \(8+6=14\)
+executives, which is a contradiction since there are 15 executives and \(15 > 14\).
 \end{proof}
 
 \subsection{Exercise 32}
+Let \(A\) be a set of six positive integers each of which is less than 13. Show that there must be two distinct 
+subsets of \(A\) whose elements when added up give the same sum. (For example, if \(A = \{5, 12, 10, 1, 3, 4\}\), then 
+the elements of the subsets \(S_1 = \{1, 4, 10\}\) and \(S_2 = \{5, 10\}\) both add up to 15.)
+
+{\it Hints:} (1) The number of subsets of the six integers
+is \(2^6 = 64\). (2) Since each integer is less than 13, 
+the largest possible sum is 57. (Why? How is this sum obtained?)
 
 \begin{proof}
+To clarify (2) in the Hint, the largest subset size is 6, and the largest possible 6 elements are 7, 8, 9, 10, 11, 12
+which add up to \(7+8+9+10+11+12 = 57\). The smallest possible sum is 0 for the empty subset of \(A\).
 
+Consider a function \(F\) from subsets of \(A\) to the set of positive integers from 0 to 57 defined by \(F(S) = \) 
+the sum of all the elements of \(S\). Since the domain has 64 elements, and the co-domain has 58 elements (\(0,\ldots, 
+57\)), and  \(64 > 57\), by the Pigeonhole Principle \(F\) is not one-to-one. Therefore \(F(S_1) = F(S_2)\) for two 
+distinct subsets \(S_1, S_2\) of \(A\), which means the sums of elements of \(S_1\) and \(S_2\) are equal.
 \end{proof}
 
 \subsection{Exercise 33}
+Let \(A\) be a set of six positive integers each of which is less than 15. Show that there must be two distinct 
+subsets of A whose elements when added up give the same sum. (Thanks to Jonathan Goldstine for this problem.)
+
+{\it Hint:} The power set of \(A\) has \(2^6 = 64\) elements, and so there are 63 nonempty subsets of \(A\). 
+Let \(k\) be the smallest number in \(A\). Then the sums over the elements in the nonempty subsets of \(A\) lie in 
+the range from \(k\) through \(k + 10 + 11 + 12 + 13 + 14 = k + 60\). How many numbers are in this range?
 
 \begin{proof}
+Let \(k\) be the smallest integer in \(A\).
 
+To clarify the Hint, there are 61 numbers in the range from \(k\) through \(k+60\). 
+
+Consider a function \(F\) from the nonempty subsets of \(A\) to the set of positive integers from \(k\) to \(k+60\) 
+defined by \(F(S) = \) the sum of all the elements of \(S\). Since the domain has 63 elements, and the co-domain 
+has 61 elements (\(k, k+1 \ldots, 60\)), and \(63 > 61\), by the Pigeonhole Principle \(F\) is not one-to-one. 
+Therefore \(F(S_1) = F(S_2)\) for two distinct subsets \(S_1, S_2\) of \(A\), which means the sums of elements of 
+\(S_1\) and \(S_2\) are equal.
 \end{proof}
 
 \subsection{Exercise 34}
+Let \(S\) be a set of ten integers chosen from 1 through 50. Show that the set contains at least two different (but 
+not necessarily disjoint) subsets of four integers that add up to the same number. (For instance, if the ten numbers 
+are \(\{3, 8, 9, 18, 24, 34, 35, 41, 44, 50\}\), the subsets can be taken to be \(\{8, 24, 34, 35\}\) and 
+\(\{9, 18, 24, 50\}\). The numbers in both of these add up to 101.)
 
 \begin{proof}
+There are \(\binom{10}{4} = \frac{10 \cdot 9 \cdot 8 \cdot 7}{4 \cdot 3 \cdot 2 \cdot 1} = 210\) subsets of \(S\) with
+four elements.
 
+The four element subset with the smallest possible sum is \(\{1,2,3,4\}\) which adds up to 10, and the four element
+subset with the largest possible sum is \(\{47,48,49,50\}\) which adds up to 194.
+
+Consider a function \(F\) from the four element subsets of \(S\) to the set of positive integers from \(10\) to 
+\(194\) defined by \(F(A) = \) the sum of all the elements of \(A\). Since the domain has 210 elements, and the co-
+domain has \(194-10+1 = 185\) elements and \(210 > 185\), by the Pigeonhole Principle \(F\) is not one-to-one. 
+Therefore \(F(S_1) = F(S_2)\) for two distinct subsets \(S_1, S_2\) of \(S\), which means the sums of elements of 
+\(S_1\) and \(S_2\) are equal.
 \end{proof}
 
 \subsection{Exercise 35}
+Given a set of 52 distinct integers, show that there must be 2 whose sum or difference is divisible by 100.
+
+{\it Hint:} Let \(X\) be the set consisting of the given 52 positive integers, and let \(Y\) be the set containing the 
+following elements: \(\{00, 50\}, \{01, 99\}, \{02, 98\}, \ldots, \{48, 52\}, \{49, 51\}\). Define a function \(F\) 
+from \(X\) to \(Y\) by the rule \(F(x) =\) the set containing the last two digits of \(x\). Use the pigeonhole 
+principle to argue that \(F\) is not one-to-one, and show how the desired conclusion follows.
 
 \begin{proof}
+(following the Hint)
 
+The domain of \(F\) has 52 elements, while the co-domain has 50 elements. Since \(52 > 50\), by the Pigeonhole 
+Principle, \(F\) is not one-to-one. So there are two distinct integers \(x,y\) such that \(F(x) = F(y)\).
+
+By definition of \(F\), \(x = 100 \cdot m + F(x)\) and \(y = 100 \cdot n + F(y)\) for some integers \(m,n\). 
+
+Since every element of \(Y\) has its elements add up to 100, we have \(F(x) + F(y) = 100\).
+
+So \(x \pm y = 100m \pm 100n + (F(x) + F(y)) = 100(m \pm n) + 100 = 100(m \pm n+1)\). Therefore \(x \pm y\) is 
+divisible by 100.
 \end{proof}
 
 \subsection{Exercise 36}
+Show that if 101 integers are chosen from 1 to 200 inclusive, there must be 2 with the property that one is 
+divisible by the other.
+
+{\it Hint:} Write the 101 integers as \(x_1, x_2, x_3, \ldots, x_{101}\), and represent each \(x_i\) as 
+\(a_i \cdot 2^{k_i}\) where \(a_i\) is odd and \(k_i \geq 0\). Now \(1 < x_i \leq 200\), and so \(1 \leq a_i \leq 
+199\) for every \(i\). Use the fact that there are only 100 odd integers from 1 to 199 inclusive.
 
 \begin{proof}
+(following the Hint)
 
+Since there are only 100 odd integers from 1 to 199 inclusive, there exist \(i, j\) such that \(1 \leq i \leq 
+101, 1 \leq j \leq 101, i \neq j\) and \(a_i = a_j\). If \(k_i < k_j\) then \(x_j\) is divisible by \(x_i\) because 
+\[
+x_j = a_j \cdot 2^{k_j} = a_i \cdot 2^{k_j} = a_i \cdot 2^{k_i} \cdot 2^{k_j-k_i} = x_i \cdot 2^{k_j-k_i},
+\]
+where \(k_j - k_i > 0\) so \(2^{k_j-k_i}\) is an integer. Similarly if \(k_j < k_i\) then \(x_i\) is divisible by
+\(x_j\). (Note that \(k_i = k_j\) is not possible since all the \(x_i\)s are distinct, so \(x_i \neq x_j\).)
 \end{proof}
 
 \subsection{Exercise 37}
 \subsubsection{(a)}
+Suppose \(a_1, a_2, \ldots, a_n\) is a sequence of \(n\) integers none of which is divisible by \(n\). Show that at 
+least one of the differences \(a_i - a_j\) (for \(i \neq j\)) must be divisible by \(n\).
 
 \begin{proof}
+By the quotient-remainder theorem 
+\[
+a_1 = q_1 \cdot n + r_1, \,\,\,\, a_2 = q_2 \cdot n + r_2,  \ldots, a_n = q_n \cdot n + r_n 
+\]
+for some integers \(q_1, \ldots, q_n\) and \(r_1, \ldots, r_n\) where \(0 < r_i < n\) for all \(i = 1,\ldots,n\).
+Notice that \(r_i \neq 0\) because we are given that none of the \(a_i\) are divisible by \(n\).
 
+Since there are \(n\) integers \(r_1, \ldots, r_n\) from 1 through \(n-1\) and \(n > n-1\), by the Pigeonhole 
+Principle two of the \(r_i\)'s are equal; i.e. there exist \(j, k\) such that \(j \neq k\) and \(r_j = r_k\).
+
+So \(a_j - a_k = q_j \cdot n + r_j - (q_k \cdot n + r_k) = n(q_j - q_k) + (r_j - r_k) = n(q_j-q_k)\), therefore
+\(a_j-a_k\) is divisible by \(n\).
 \end{proof}
 
 \subsubsection{(b)}
+Show that every finite sequence \(x_1, x_2, \ldots, x_n\) of \(n\) integers has a consecutive subsequence 
+\(x_{i+1}, x_{i+2}, \ldots, x_j\) whose sum is divisible by \(n\). (For instance, the sequence 3, 4, 17, 7, 16 has the 
+consecutive subsequence 17, 7, 16 whose sum is divisible by 5.) (From: James E. Schultz and William F. Burger, “An 
+Approach to Problem-Solving Using Equivalence Classes Modulo \(n\),” College Mathematics Journal (15), No. 5, 
+1984, 401–405.)
+
+{\it Hint:} For each \(k = 1, 2, \ldots, n\), let \(a_k = x_1 + x_2 + \cdots + x_k\). If some \(a_k\) is divisible by 
+\(n\), then the problem is solved: the consecutive subsequence is \(x_1, x_2, \ldots, x_k\). If no \(a_k\) is 
+divisible by \(n\), then \(a_1, a_2, a_3, \ldots, a_n\) satisfies the hypothesis of part (a). Hence \(a_j - a_i\) 
+is divisible by \(n\) for some integers \(i\) and \(j\) with \(j > i\). Write \(a_j - a_i\) in terms of the 
+\(x_i\)’s to derive the given conclusion.
 
 \begin{proof}
-
+(following the Hint) For the \(i < j\) as mentioned above,
+\[
+a_j - a_i = (x_1 + \cdots + x_j) - (x_1 + \cdots x_i) = x_{i+1} + \cdots x_j
+\]
+is divisible by \(n\), so the desired consecutive subsequence is \(x_{i+1}, \ldots, x_j\).
 \end{proof}
 
 \subsection{Exercise 38}
+Observe that the sequence 12, 15, 8, 13, 7, 18, 19, 11, 14, 10 has three increasing subsequences of length four: 12, 
+15, 18, 19; 12, 13, 18, 19; and 8, 13, 18, 19. It also has one decreasing subsequence of length four: 15, 13, 11, 10. 
+Show that in any sequence of \(n^2 + 1\) distinct real numbers, there must be a sequence of length \(n + 1\) that 
+is either strictly increasing or strictly decreasing.
+
+{\it Hint:} Let \(a_1, a_2, \ldots, a_{n^2+1}\) be any sequence of \(n^2 + 1\) distinct real numbers, and suppose 
+that this sequence contains neither a strictly increasing subsequence of length \(n + 1\) nor a strictly decreasing 
+subsequence of length \(n + 1\). Let \(S\) be the set of all ordered pairs of integers \((i, d)\), where \(1 \leq i 
+\leq n\) and \(1 \leq d \leq n\). For each term \(a_k\) in the sequence, let \(F(a_k) = (i_k, d_k)\), where \(i_k\) is 
+the length of the longest increasing sequence starting at \(a_k\), and \(d_k\) is the length of the longest decreasing 
+sequence starting at \(a_k\). Suppose that \(F\) is one-to-one and derive a contradiction.
 
 \begin{proof}
+(following the Hint)
 
+The domain of \(F\) has \(n^2+1\) elements \(a_1, \ldots, a_{n^2+1}\) and the co-domain of \(F\) has \(n^2\) elements
+(because \(S\) is the Cartesian product of \(\{1, \ldots, n\}\) with itself). By the Pigeonhole Principle \(F\) is 
+not one-to-one. So there exist \(j,l\) such that \(1 \leq j < l \leq n\) and \(F(a_j) = F(a_l)\). So \((i_j, d_j)\) 
+equals \((i_l, d_l)\). So the lengths of the longest increasing sequences starting at \(a_j\) and \(a_l\) are 
+equal, and the lengths of the longest decreasing sequences starting at \(a_j\) and \(a_l\) are equal. Since \(a_j \neq 
+a_l\), this is a contradiction: if \(a_j < a_l\) then we can take the longest increasing sequence starting at 
+\(a_l\), add \(a_j\) to the beginning of it, and get a new increasing sequence of length \(i_l + 1 = i_j + 1\) 
+starting at \(a_j\), which is longer than \(i_j\).
 \end{proof}
 
 \subsection{Exercise 39}
+What is the largest number of elements that a set of integers from 1 through 100 can have so that no one integer 
+in the set is divisible by another? ({\it Hint:} Imagine writing all the integers from 1 through 100 in the form 
+\(2^k \cdot m\), where \(k \geq 0\) and \(m\) is odd.)
 
 \begin{proof}
+(following the Hint) If \(1 \leq 2^k \cdot m \leq 100\) then \(1 \leq m \leq 99\). There are 50 odd integers \(m\)
+from 1 through 99. For any set of 51 integers, since \(51 > 50\), by the Pigeonhole Principle there are two integers 
+\(x = 2^j \cdot m_j\) and \(y = 2^k \cdot m_k\) such that \(m_j = m_k\) so either \(x \mid y\) or \(y \mid x\).
 
+Moreover the set \(\{51, 52, \ldots, 99, 100\}\) have no two integers where one divides the other, because 
+\(51 \cdot 2 = 102 > 100, 52 \cdot 2 = 104 > 100, \ldots\), so no multiple of any of these integers stay within the 
+range from 51 to 100.
+
+So we have an example of a set of integers with 50 elements with no two elements where one divides the other, and we 
+have proof that in any 51-element set of integers, there must be two where one divides the other. Thus the largest
+number of elements is 50.
 \end{proof}
 
 \subsection{Exercise 40}
+Suppose \(X\) and \(Y\) are finite sets, \(X\) has more elements than \(Y\), and \(F: X \to Y\) is a function. By 
+the pigeonhole principle, there exist elements \(a\) and \(b\) in \(X\) such that \(a \neq b\) and \(F(a) = F(b)\). 
+Write a computer algorithm to find such a pair of elements \(a\) and \(b\).
 
-\begin{proof}
-
-\end{proof}
+\begin{tcolorbox}[colframe=cyan]
+{\bf Input:} \(X\) {\it [a finite set represented by the array]} \(X[1], \ldots, X[n]\). \\
+{\bf Algorithm Body:} \\
+\(found \coloneqq false, i \coloneqq 0\)
+\end{tcolorbox}
+\begin{tcolorbox}[colframe=cyan]
+\begin{tabbing}
+{\bf wh}\={\bf ile} (\(i \leq n-1\) and \(found = false\)) \\
+        \> \(j \coloneqq 0\) \\
+        \> {\bf wh}\={\bf ile} (\(j \leq n\) and \(found = false\))\\
+        \>         \> {\bf if} (\(F(X[i]) = F(X[j])\) and \(X[i] \neq X[j]\)) \\
+        \>         \> {\bf then} \(found = true\) \\
+        \>         \> \(j \coloneqq j+1\) \\
+        \> {\bf end while} \\
+        \> \(i \coloneqq i+1\) \\
+{\bf end while} \\
+{\bf Output:} \(a \coloneqq X[i-1], b \coloneqq X[j-1]\) 
+\end{tabbing}
+\end{tcolorbox}
 
 \section{Exercise Set 9.5}
 
