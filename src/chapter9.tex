@@ -5268,245 +5268,525 @@ remaining 44 cards: \(\binom{44}{1}\). The result is
 \end{proof}
 
 \section{Exercise Set 9.6}
-
 \subsection{Exercise 1}
-
 \subsubsection{(a)}
+According to Theorem 9.6.1, how many 5-combinations with repetition allowed can be chosen from a set of three elements?
 
 \begin{proof}
-
+\(\dps \binom{5+3-1}{5} = \binom{7}{5} = \frac{7 \cdot 6}{2} = 21\)
 \end{proof}
 
 \subsubsection{(b)}
+List all of the 5-combinations that can be chosen with repetition allowed from the set \(\{1, 2, 3\}\).
 
 \begin{proof}
-
+The three elements of the set are 1, 2, and 3. The 5-combinations are \([1, 1, 1, 1, 1]\), \([1, 1, 1, 1, 2]\), 
+\([1, 1, 1, 1, 3]\), \([1, 1, 1, 2, 2]\), \([1, 1, 1, 2, 3]\), \([1, 1, 1, 3, 3]\), \([1, 1, 2, 2, 2]\), \([1, 1, 2, 2, 3]\), 
+\([1, 1, 3, 3, 3]\), \([1, 2, 2, 2, 2]\), \([1, 2, 2, 2, 3]\), \([1, 2, 2, 3, 3]\), \([1, 2, 3, 3, 3]\), \([1, 3, 3, 3, 3]\), 
+\([2, 2, 2, 2, 2]\), \([2, 2, 2, 2, 3]\), \([2, 2, 2, 3, 3]\), \([2, 2, 3, 3, 3]\), \([2, 3, 3, 3, 3]\), and 
+\([3, 3, 3, 3, 3]\).
 \end{proof}
 
 \subsection{Exercise 2}
-
 \subsubsection{(a)}
+According to Theorem 9.6.1, how many multisets of size four can be chosen from a set of three elements?
 
 \begin{proof}
-
+\(\dps \binom{4+3-1}{4} = \binom{6}{4} = \frac{6 \cdot 5}{2} = 15\)
 \end{proof}
 
 \subsubsection{(b)}
+List all of the multisets of size four that can be chosen from the set \(\{x, y, z\}\).
 
 \begin{proof}
+\(\{x, x, x, x\}\), \(\{x, x, x, y\}\), \(\{x, x, x, z\}\),
+\(\{x, x, y, y\}\), \(\{x, x, y, z\}\), \(\{x, x, z, z\}\),
 
+\(\{x, y, y, y\}\), \(\{x, y, y, z\}\), \(\{x, y, z, z\}\),
+\(\{x, z, z, z\}\), \(\{y, y, z, z\}\), \(\{y, y, y, z\}\),
+
+\(\{y, z, z, z\}\), \(\{y, y, y, y\}\), \(\{z, z, z, z\}\).
 \end{proof}
 
 \subsection{Exercise 3}
+A bakery produces six different kinds of pastry, one of which is éclairs. Assume there are at least 20 pastries of each 
+kind.
 
 \subsubsection{(a)}
+How many different selections of twenty pastries are there?
 
 \begin{proof}
-
+\(\dps \binom{20+6-1}{20} = \binom{25}{20} = 53,130\)
 \end{proof}
 
 \subsubsection{(b)}
+How many different selections of twenty pastries are there if at least three must be éclairs?
 
 \begin{proof}
+If at least three are éclairs, then 17 additional pastries are selected from six kinds. The number of selections is 
+\(\dps \binom{17+6-1}{17} = \binom{22}{17} = 26,334\).
 
+{\it Note:} In parts (a) and (b), it is assumed that the selections being counted are unordered.
 \end{proof}
 
 \subsubsection{(c)}
+How many different selections of twenty pastries contain at most two éclairs?
 
 \begin{proof}
-
+Let T be the set of selections of pastry that may be any one of the six kinds, let \(E_{\geq 3}\) be the set of selections 
+containing three or more éclairs, and let \(E_{\geq 2}\) be the set of selections containing two or fewer éclairs. Notice
+that \(T = E_{\geq 2} \cup E_{\geq 3}\) and \(E_{\geq 2} \cap E_{\geq 3} = \es\). So by the inclusion / exclusion principle
+\(N(T) = N(E_{\geq 2}) + N(E_{\geq 3}) - N(\es)\), and by parts (a) and (b) \(53,130 = N(E_{\geq 2}) + 26,334 - 0\) and
+solving, we get \(N(E_{\geq 2}) = 26,976\).
 \end{proof}
 
 \subsection{Exercise 4}
+A camera shop stocks eight different types of batteries, one of which is type A76. Assume there are at least 30 batteries 
+of each type.
 
 \subsubsection{(a)}
+How many ways can a total inventory of 30 batteries be distributed among the eight different types?
 
 \begin{proof}
-
+\(\binom{30+8-1}{30} = \binom{37}{30} = 10,295,472\)
 \end{proof}
 
 \subsubsection{(b)}
+How many ways can a total inventory of 30 batteries be distributed among the eight different types if the inventory must include at least four A76 batteries?
 
 \begin{proof}
-
+We need to choose 26 more batteries: \(\binom{26+8-1}{26} = \binom{33}{26} = 4,272,048\)
 \end{proof}
 
 \subsubsection{(c)}
+How many ways can a total inventory of 30 batteries be distributed among the eight different types if the inventory 
+includes at most three A76 batteries?
 
 \begin{proof}
-
+Same reasoning as in Exercise 3(c), \(10,295,472 - 4,272,048 = 6,023,424\)
 \end{proof}
 
 \subsection{Exercise 5}
+If \(n\) is a positive integer, how many 4-tuples of integers from 1 through \(n\) can be formed in which the elements of 
+the 4-tuple are written in increasing order but are not necessarily distinct? In other words, how many 4-tuples of 
+integers \((i, j, k, m)\) are there with \(1 \leq i \leq j \leq k \leq m \leq n\)?
 
 \begin{proof}
-
+The answer equals the number of 4-combinations with repetition allowed that can be formed from a set of \(n\) elements. It is
+\(\binom{4+n-1}{4} = \binom{n+3}{4} = \frac{(n+3)(n+2)(n+1)n}{4 \cdot 3 \cdot 2 \cdot 1}\).
 \end{proof}
 
 \subsection{Exercise 6}
+If \(n\) is a positive integer, how many 5-tuples of integers from 1 through \(n\) can be formed in which the elements of 
+the 5-tuple are written in decreasing order but are not 
+necessarily distinct? In other words, how many 5-tuples of 
+integers \((h, i, j, k, m)\) are there with \(n \geq h \geq i 
+\geq j \geq k \geq m \geq 1\)?
 
 \begin{proof}
-
+The answer equals the number of 5-combinations with repetition allowed that can be formed from a set of \(n\) elements. It is
+\(\binom{5+n-1}{5} = \binom{n+4}{5} = \frac{(n+4)(n+3)(n+2)(n+1)n}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}\).
 \end{proof}
 
 \subsection{Exercise 7}
+Another way to count the number of nonnegative integral solutions to an equation of the form \(x_1 + x_2 + \ldots + 
+x_n = m\) is to reduce the problem to one of finding the number of \(n\)-tuples \((y_1, y_2, \ldots, y_n)\) with 
+\(0 \leq y_1 \leq y_2 \leq \ldots \leq y_n \leq m\). The reduction results from letting \(y_i = x_1 + x_2 + \ldots + 
+x_i\) for each \(i = 1, 2, \ldots, n\). Use this approach to derive a general formula for the number of nonnegative 
+integral solutions to \(x_1 + x_2 + \ldots + x_n = m\).
 
 \begin{proof}
-
+Let the \(y_i\) be defined as above. If \(x_1 + x_2 + \ldots + x_n = m\) then \(y_n = m\). So we need to find the number of
+ways to choose \(n-1\) integers \(0 \leq y_1 \leq \cdots \leq y_{n-1} \leq m\). There are \(m+1\) integers to choose from: 
+\(0, 1, \ldots, m\). So this can be done in \(\binom{(m+1) + (n-1) - 1}{n-1} = \binom{n+m-1}{n-1}\) ways.
 \end{proof}
 
+{\bf \cy In 8 and 9, how many times will the innermost loop be iterated when the algorithm segment is implemented and run? 
+Assume \(n, m, k\), and \(j\) are positive integers.}
+
 \subsection{Exercise 8}
+\begin{tabbing}
+{\bf for} \=\(m \coloneqq 1\) to \(n\) \\
+          \>{\bf for} \=\(k \coloneqq 1\) to \(m\) \\
+          \>         \>{\bf for} \=\(j\coloneqq 1\) to \(k\)\\
+          \>         \>         \>{\bf for} \=\(i \coloneqq 1\) to \(j\) \\
+          \>         \>         \>          \>{\it [Statements in the body of the inner loop, none} \\
+          \>         \>         \>          \>{\it containing branching statements that lead outside the loop]} \\
+          \>         \>         \>{\bf next} \(i\) \\
+          \>         \>{\bf next} \(j\) \\
+          \>{\bf next} \(k\) \\
+{\bf next} \(m\)
+\end{tabbing}
 
 \begin{proof}
-
+As in Example 9.6.4, the answer is the same as the number of quadruples of integers \((i, j, k, m)\) for which \(1 \leq i 
+\leq j \leq k \leq m \leq n\). By exercise 5, this number is \(\binom{n+3}{4} = \frac{(n+3)(n+2)(n+1)n}{24}\)
 \end{proof}
 
 \subsection{Exercise 9}
+\begin{tabbing}
+{\bf for} \=\(k \coloneqq 1\) to \(n\) \\
+          \>{\bf for} \=\(j\coloneqq k\) to \(n\) \\
+          \>         \>{\bf for} \=\(i \coloneqq j\) to \(n\) \\
+          \>         \>          \>{\it [Statements in the body of the inner loop, none} \\
+          \>         \>          \>{\it containing branching statements that lead outside the loop]} \\
+          \>         \>{\bf next} \(i\) \\
+          \>{\bf next} \(j\) \\
+{\bf next} \(k\)
+\end{tabbing}
 
 \begin{proof}
-
+As in Example 9.6.4, the answer is the same as the number of triples of integers \((i, j, k)\) for which \(1 \leq k \leq j 
+\leq i \leq n\). By Example 9.6.4 this number is \(\binom{n+2}{3} = \frac{(n+2)(n+1)n}{6}\).
 \end{proof}
 
+{\bf \cy In 10–14, find how many solutions there are to the given equation that satisfy the given condition.}
+
 \subsection{Exercise 10}
+\(x_1 + x_2 + x_3 = 20\), each \(x_i\) is a nonnegative integer.
 
 \begin{proof}
-
+Think of the number 20 as divided into 20 individual units and the variables \(x_1, x_2\), and \(x_3\) as three categories 
+into which these units are placed. The number of units in category \(x_i\) indicates the value of \(x_i\), in a solution 
+of the equation. By Theorem 9.6.1, the number of ways to select 20 objects from the three categories is 
+\(\binom{20+3-1}{20} = \binom{22}{20} = 231\), so there are 231 non-negative integer solutions to the equation.
 \end{proof}
 
 \subsection{Exercise 11}
+\(x_1 + x_2 + x_3 = 20\), each \(x_i\) is a positive integer.
 
 \begin{proof}
-
+The analysis for this exercise is the same as for exercise 10 except that since each \(x_i \geq 1\), we can imagine taking 3 
+of the 20 units, placing one in each category \(x_1, x_2\), and \(x_3\), and then distributing the remaining 17 units 
+among the three categories. The number of ways to do this is \(\binom{17+3-1}{17} = \binom{19}{17} = \frac{19 \cdot 18}{2} = 
+171\), so there are 171 positive integer solutions to the equation.
 \end{proof}
 
 \subsection{Exercise 12}
+\(y_1 + y_2 + y_3 + y_4 = 30\), each \(y_i\) is a nonnegative integer.
 
 \begin{proof}
-
+Like Exercise 10, the answer is \(\binom{30+4-1}{30} = \binom{33}{30} = \binom{33}{3} = \frac{33 \cdot 32 \cdot 31}{3 
+\cdot 2 \cdot 1} = 11 \cdot 16 \cdot 31 = 5456\).
 \end{proof}
 
 \subsection{Exercise 13}
+\(y_1 + y_2 + y_3 + y_4 = 30\), each \(y_i\) is an integer that is at least 2.
 
 \begin{proof}
-
+Like in Exercise 11, we can think of taking 8 units and placing 2 units into each one of \(y_1,y_2,y_3,y_4\) and then
+distributing the remaining 22 units among the 4 categories. So \(\binom{22+4-1}{22} = \binom{25}{22} = \binom{25}{3} = 
+\frac{25 \cdot 24 \cdot 23}{3 \cdot 2 \cdot 1} = 2300\).
 \end{proof}
 
 \subsection{Exercise 14}
+\(a + b + c + d + e = 500\), each of \(a, b, c, d\), and \(e\) is an integer that is at least 10.
 
 \begin{proof}
-
+Like Exercise 13, place 10 units into each one of the 5 categories, then distribute the remaining 450 units. The 
+answer is \(\binom{450+5-1}{450} = \binom{454}{450} = 1,746,858,751\).
 \end{proof}
 
 \subsection{Exercise 15}
+For how many integers from 1 through 99,999 is the sum of their digits equal to 10?
 
 \begin{proof}
+Pad integers with zeros on the left. So think of single digit numbers as 00001, 00002, etc., think of two-digit numbers as 
+00012, 00064 etc., and so on.
 
+So we need to distribute 10 units into 5 buckets, or digits. There are \(\binom{10+5-1}{10} = \binom{14}{10} = 1001\) ways 
+to do that.
+
+However, some of the possibilities are not allowed. We cannot distribute all 10 units into a single digit, like 0-0-0-0-10,
+0-0-0-10-0, 0-0-10-0-0, 0-10-0-0-0, 10-0-0-0-0. There are 5 violations, so the answer is \(1001-5 = 996\).
+
+We can verify this with some code:
+\begin{minted}{scala}
+scala> var count = 0
+var count: Int = 0
+scala> for i <- 1 to 999999 do
+     |   if i.toString.map(_.asDigit).sum == 10 then
+     |     count += 1
+     | 
+scala> count
+val res0: Int = 996
+\end{minted}
 \end{proof}
 
 \subsection{Exercise 16}
+Consider the situation in Example 9.6.2. (5 different types of soft drinks.)
 
 \subsubsection{(a)}
+Suppose the store has only six cans of lemonade but at least 15 cans of each of the other four types of soft drink. In how 
+many different ways can fifteen cans of soft drink be selected?
 
 \begin{proof}
+Let \(T\) be the set of all possible selections assuming that there are at least 15 cans of each type. Then \(N(T) = 
+\binom{15+5-1}{15} = \binom{19}{15} = 3876\).
 
+Let \(L_{\geq 7}\) be the set of all possible selections with at least 7 cans of lemonade. We can think of these selections
+as selecting \(15-7=8\) cans of soft drink from 5 types. So \(N(L_{\geq 7}) = \binom{8+5-1}{8} = \binom{12}{8} = 495\).
+
+Let \(L_{\leq 6}\) be the set of all possible selections with at most 6 cans of lemonade. Then \(L_{\leq 6} \cap L_{\geq 7} 
+= \es\) and \(T = L_{\leq 6} \cup L_{\geq 7}\), thus \(N(L_{\leq 6}) = N(T) - N(L_{\geq 7}) = 3876 - 495 = 3381\).
 \end{proof}
 
 \subsubsection{(b)}
+Suppose that the store has only five cans of root beer and only six cans of lemonade but at least 15 cans of each of the 
+other three types of soft drink. In how many different ways can fifteen cans of soft drink be selected?
 
 \begin{proof}
+Let \(T, L_{\leq 6}, L_{\geq 7}\) be as in the solution to part (a). We know \(T = L_{\leq 6}\cup L_{\geq 7}\) and 
+\(L_{\leq 6} \cap L_{\geq 7} = \es\).
 
-\end{proof}
+Let \(R_{\leq 5}, R_{\geq 6}\) be the set of all possible selections with, at most 5, and at least 6, cans of root beer, 
+respectively. Similarly we know \(T = R_{\leq 5}\cup R_{\geq 6}\) and \(R_{\leq 5} \cap R_{\geq 6} = \es\).
 
-\subsubsection{(c)}
+We want to find \(N(R_{\leq 5} \cap L_{\leq 6})\). In part (a) we found \(N(L_{\geq 7}) = 495\) and \(N(L_{\leq 6}) = 3381\).
 
-\begin{proof}
+Since \(T = R_{\leq 5} \cup R_{\geq 6}\) and \(L_{\leq 6} \subseteq T\), we have by De Morgan laws
+\[
+L_{\leq 6} = L_{\leq 6} \cap T = L_{\leq 6} \cap (R_{\leq 5} \cup R_{\geq 6}) = (L_{\leq 6} \cap R_{\leq 5}) \cup 
+(L_{\leq 6} \cap R_{\geq 6})
+\]
+Notice that \((L_{\leq 6} \cap R_{\leq 5})\) and \((L_{\leq 6} \cap R_{\geq 6})\) are disjoint, since \(R_{\leq 5}\) and
+\(R_{\geq 6}\) are disjoint. So by the Inclusion / Exclusion Principle and above,
+\[
+N(L_{\leq 6}) = N(L_{\leq 6} \cap R_{\leq 5}) + N(L_{\leq 6} \cap R_{\geq 6}).
+\]
+Then \(N(L_{\leq 6} \cap R_{\leq 5}) = 3381 - N(L_{\leq 6} \cap R_{\geq 6})\). We need to calculate \(N(L_{\leq 6} \cap 
+R_{\geq 6})\). 
 
+First, let's find \(N(R_{\geq 6})\). This is similar to how we found \(N(L_{\geq 7})\) in part (a). Think of having chosen 6
+cans of root beer, then distributing the remaining \(15-6=9\) cans among the 5 types: \(\binom{9+5-1}{9} = 715\).
+
+Since \(T = L_{\leq 6} \cup L_{\geq 7}\) and \(R_{\geq 6} \subseteq T\), we have by De Morgan laws
+\[
+R_{\geq 6} = R_{\geq 6} \cap T = R_{\geq 6} \cap (L_{\leq 6} \cup L_{\geq 7}) = (R_{\geq 6} \cap L_{\leq 6}) \cup 
+(R_{\geq 6} \cap L_{\geq 7})
+\]
+Notice that \((R_{\geq 6} \cap L_{\leq 6})\) and \((R_{\geq 6} \cap L_{\geq 7})\) are disjoint, since \(L_{\leq 6}\) and
+\(L_{\geq 7}\) are disjoint. So by the Inclusion / Exclusion Principle and above,
+\[
+N(R_{\geq 6}) = N(R_{\geq 6} \cap L_{\leq 6}) + N(R_{\geq 6} \cap L_{\geq 7}).
+\]
+Then \(N(R_{\geq 6} \cap L_{\leq 6}) = 715 - N(R_{\geq 6} \cap L_{\geq 7})\). 
+
+Let's calculate \(N(R_{\geq 6} \cap L_{\geq 7})\). We can think of it as having 6 cans of root beer and 7 cans of 
+lemonade, then distributing the remaining \(15-(6+7) = 2\) cans among the 5 types of drinks. This can be done in 
+\(\binom{2+5-1}{2} = \binom{6}{2} = 15\) ways. 
+
+Then \(N(R_{\geq 6} \cap L_{\leq 6}) = 715 - 15 = 700\), so \(N(L_{\leq 6} \cap R_{\leq 5}) = 3381 - 700 = 2681\).
 \end{proof}
 
 \subsection{Exercise 17}
-
 \subsubsection{(a)}
+A store sells 8 colors of balloons with at least 30 of each color. How many different combinations of 30 balloons can be 
+chosen?
 
 \begin{proof}
-
+\(\binom{30+8-1}{30} = \binom{37}{30} = 10,295,472\)
 \end{proof}
 
 \subsubsection{(b)}
+If the store has only 12 red balloons but at least 30 of each other color of balloon, how many combinations of balloons can 
+be chosen?
 
 \begin{proof}
-
+Using a notation similar to the previous exercise, \(T = R_{\leq 12} \cup R_{\geq 13}\) and \(R_{\leq 12} \cap 
+R_{\geq 13} = \es\), so by Inclusion / Exclusion \(N(T) = N(R_{\leq 12}) + N(R_{\geq 13})\). By part (a) \(N(T) = 
+10,295,472\) and by an argument similar to previous exercises \(N(R_{\geq 13}) = \binom{17+8-1}{17} = \binom{24}{17} = 
+346,104\) so \(N(R_{\leq 12}) = 10,295,472 - 346,104 = 9,949,368\).
 \end{proof}
 
 \subsubsection{(c)}
+If the store has only 8 blue balloons but at least 30 of each other color of balloon, how many combinations of balloons can 
+be chosen?
 
 \begin{proof}
-
+Again by a similar reasoning \(N(T) = N(B_{\leq 8}) + N(B_{\geq 9})\) and \(N(B_{\geq 9}) = \binom{21 + 8 - 1}{21}
+= \binom{28}{21} = 1,184,040\), so \(N(B_{\leq 8}) = 10,295,472 - 1,184,040 = 9,111,432\).
 \end{proof}
 
 \subsubsection{(d)}
+If the store has only 12 red balloons and only 8 blue balloons but at least 30 of each other color of balloon, how many 
+combinations of balloons can be chosen?
 
 \begin{proof}
+Similar to part (c) of the previous exercise. We need to find \(N(R_{\leq 12} \cap B_{\leq 8})\). We have \(T = B_{\leq 8}
+\cup B_{\geq 9}\) and \(B_{\leq 8} \cap B_{\geq 9} = \es\), so
+\[
+R_{\leq 12} = R_{\leq 12} \cap T = R_{\leq 12} \cap (B_{\leq 8} \cup B_{\geq 9}) = (R_{\leq 12} \cap B_{\leq 8}) \cup
+(R_{\leq 12} \cap B_{\geq 9})
+\]
+Again \((R_{\leq 12} \cap B_{\leq 8})\) and \((R_{\leq 12} \cap B_{\geq 9})\) are disjoint. By the Inclusion / Exclusion
+Principle 
+\[
+N(R_{\leq 12}) = N(R_{\leq 12} \cap B_{\leq 8}) + N(R_{\leq 12} \cap B_{\geq 9})
+\]
+So by part (b), \(N(R_{\leq 12} \cap B_{\leq 8}) = 9,949,368 - N(R_{\leq 12} \cap B_{\geq 9})\).
 
+Since \(T = R_{\leq 12} \cup R_{\geq 13}\) and \(B_{\geq 9} \subseteq T\) we have by De Morgan laws
+\[
+B_{\geq 9} = B_{\geq 9} \cap T = B_{\geq 9} \cap (R_{\leq 12} \cup R_{\geq 13}) = (B_{\geq 9} \cap R_{\leq 12}) \cup 
+(B_{\geq 9} \cap R_{\geq 13})
+\]
+We can find \(N(B_{\geq 9} \cap R_{\geq 13})\) as follows: choose 13 red balloons and 9 blue balloons, then distribute 
+the remaining \(30 - (13+9) = 8\) balloons among 8 colors, which can be done in \(\binom{8+8-1}{8} = \binom{15}{8} = 
+6435\) ways.
+
+So \(N(B_{\geq 9}) = N(B_{\geq 9} \cap R_{\leq 12}) + N(B_{\geq 9} \cap R_{\geq 13})\) which gives \(1,184,040 = 
+N(B_{\geq 9} \cap R_{\leq 12}) + 6435\), so \(N(B_{\geq 9} \cap R_{\leq 12}) = 1,184,040 - 6435 = 1,177,605\).
+
+Then \(N(R_{\leq 12} \cap B_{\leq 8}) = 9,949,368 - 1,177,605 = 8,771,763\).
 \end{proof}
 
 \subsection{Exercise 18}
+A large pile of coins consists of pennies, nickels, dimes, and quarters. (4 types of coins)
 
 \subsubsection{(a)}
+How many different collections of 30 coins can be chosen if there are at least 30 of each kind of coin?
 
 \begin{proof}
-
+\(\binom{30+4-1}{30} = \binom{33}{30} = 5456\)
 \end{proof}
 
 \subsubsection{(b)}
+If the pile contains only 15 quarters but at least 30 of each other kind of coin, how many collections of 30 coins can be 
+chosen?
 
 \begin{proof}
-
+Similar notation as before: \(N(T) = N(Q_{\leq 15}) + N(Q_{\geq 16})\). We can find \(N(Q_{\geq 16})\) as follows:
+choose 16 quarters, then distribute the remaining \(30-16=14\) coins among 4 types, which can be done in \(\binom{14+4-1}{14} 
+= \binom{17}{14} = 680\) ways. By part (a) \(N(T) = 5456\) so \(N(Q_{\leq 15}) = 5456 - 680 = 4776\).
 \end{proof}
 
 \subsubsection{(c)}
+If the pile contains only 20 dimes but at least 30 of each other kind of coin, how many collections of 30 coins can be 
+chosen?
 
 \begin{proof}
-
+Similar to part (b). Choose 21 dimes then distribute the remaining \(30-21=9\) coins among 4 types in \(N(D_{\geq 21}) 
+= \binom{9+4-1}{9} = \binom{12}{9} = 220\) ways. So \(N(D_{\leq 20}) = 5456 - 220 = 5236\).
 \end{proof}
 
 \subsubsection{(d)}
+If the pile contains only 15 quarters and only 20 dimes but at least 30 of each other kind of coin, how many collections of 
+30 coins can be chosen?
 
 \begin{proof}
+Again similar arguments, so skipping the details. We want \(N(Q_{\leq 15} \cap D_{\leq 20})\). We can find \(N(Q_{\geq 
+16})\) as before: \(\binom{(30-16)+4-1}{30-16} = \binom{17}{14} = 680\) and \(N(D_{\geq 21}) = \binom{(30-21)+4-1}{30-21} 
+= \binom{12}{9} = 220\). 
 
+So \(N(Q_{\leq 15}) = N(T) - N(Q_{\geq 16}) = 5456 - 680 = 4776\) and \(N(D_{\leq 20}) = N(T) - N(D_{\geq 21}) = 5456 - 
+220 = 5236\). Using similar arguments as before:
+\[
+Q_{\leq 15} = Q_{\leq 15} \cap T = Q_{\leq 15} \cap (D_{\leq 20} \cup D_{\geq 21}) = (Q_{\leq 15} \cap D_{\leq 20}) \cup
+(Q_{\leq 15} \cap D_{\geq 21})
+\]
+So \(N(Q_{\leq 15}) = N(Q_{\leq 15} \cap D_{\leq 20}) + N(Q_{\leq 15} \cap D_{\geq 21})\) and \(N(Q_{\leq 15} \cap 
+D_{\leq 20}) = N(Q_{\leq 15}) - N(Q_{\leq 15} \cap D_{\geq 21}) = 4776 - N(Q_{\leq 15} \cap D_{\geq 21})\).
+\[
+D_{\geq 21} = D_{\geq 21} \cap T = D_{\geq 21} \cap (Q_{\leq 15} \cup Q_{\geq 16}) = (D_{\geq 21} \cap Q_{\leq 15}) \cup
+(D_{\geq 21} \cap Q_{\geq 16}).
+\]
+Notice that \(N(D_{\geq 21} \cap Q_{\geq 16}) = 0\) because this would require at least 37 coins. So \(N(D_{\geq 21}) = 
+N(D_{\geq 21} \cap Q_{\leq 15}) + N(D_{\geq 21} \cap Q_{\geq 16})\) and \(N(D_{\geq 21} \cap Q_{\leq 15}) = N(D_{\geq 21}) 
+- N(D_{\geq 21} \cap Q_{\geq 16}) = 220 - 0 = 220\).
+
+Finally \(N(Q_{\leq 15} \cap D_{\leq 20}) = 4776 - 220 = 4556\).
 \end{proof}
 
 \subsection{Exercise 19}
+Suppose the bakery in exercise 3 has only ten éclairs but has at least twenty of each of the other kinds of pastry. (6 kinds
+of pastry.)
 
 \subsubsection{(a)}
+How many different selections of twenty pastries are there?
 
 \begin{proof}
-
+\(N(E_{\leq 10}) = N(T) - N(E_{\geq 10}) = 53130 - \binom{(20-10)+6-1}{20-10} = 53130 - \binom{15}{10} = 53130 -
+3003 = 50127\).
 \end{proof}
 
 \subsubsection{(b)}
+Suppose in addition to having only ten éclairs, the bakery has only eight napoleon slices. How many different selections of twenty pastries are there?
 
 \begin{proof}
+We need \(N(E_{\leq 10} \cap S_{\leq 8})\).
+\[
+E_{\leq 10} = E_{\leq 10} \cap T = E_{\leq 10} \cap (S_{\leq 8} \cup S_{\geq 9}) = (E_{\leq 10} \cap S_{\leq 8}) \cup (E_{\leq 10} \cap S_{\geq 9})
+\]
+So \(N(E_{\leq 10} \cap S_{\leq 8}) = N(E_{\leq 10}) - N(E_{\leq 10} \cap S_{\geq 9}) = 50127 - N(E_{\leq 10} \cap 
+S_{\geq 9})\).
+\[
+S_{\geq 9} = S_{\geq 9} \cap T = S_{\geq 9} \cap (E_{\leq 10} \cup E_{\geq 11}) = (S_{\geq 9} \cap E_{\leq 10}) \cup 
+(S_{\geq 9} \cap E_{\geq 11})
+\]
+So \(N(S_{\geq 9} \cap E_{\leq 10}) = N(S_{\geq 9}) - N(S_{\geq 9} \cap E_{\geq 11}) = \binom{(20-9)+6-1}{20-9} - 
+\binom{(20-(9+11))+6-1}{20-(9+11)} = \binom{16}{11} - \binom{5}{0} = 4368-1 = 4367\).
 
+Finally \(N(E_{\leq 10} \cap S_{\leq 8}) = 50127 - 4367 = 45760\).
 \end{proof}
 
 \subsection{Exercise 20}
+Suppose the camera shop in exercise 4 can obtain at most ten A76 batteries but can get at least 30 of each of the other 
+types. (8 different types)
 
 \subsubsection{(a)}
+How many ways can a total inventory of 30 batteries be distributed among the eight different types?
 
 \begin{proof}
-
+Similar notation to previous exercises. By Exercise 4, \(N(T) = 10,295,472\). We can find \(N(A76_{\geq 11})\) as follows:
+choose 11 A76 batteries, then distribute the remaining \(30-11=19\) batteries among 8 types: \(\binom{19+8-1}{19} = 
+\binom{26}{19} = 657,800\). So \(N(A76_{\leq 10}) = 10,295,472 - 657,800 = 9,637,672\).
 \end{proof}
 
 \subsubsection{(b)}
+Suppose that in addition to being able to obtain only ten A76 batteries, the store can get only six of type D303. How many 
+ways can a total inventory of 30 batteries be distributed among the eight different types?
 
 \begin{proof}
+We need to find \(N(A76_{\leq 10} \cap D303_{\leq 6})\). Now \(A76_{\leq 10} = \)
+\[
+A76_{\leq 10} \cap T = A76_{\leq 10} \cap (D303_{\leq 6} \cup D303_{\geq 7}) = (A76_{\leq 10} \cap 
+D303_{\leq 6}) \cup (A76_{\leq 10} \cap D303_{\geq 7})
+\]
+So \(N(A76_{\leq 10} \cap D303_{\leq 6}) = N(A76_{\leq 10}) - N(A76_{\leq 10} \cap D303_{\geq 7}) = 9,637,672 - 
+N(A76_{\leq 10} \cap D303_{\geq 7})\). Now \(D303_{\geq 7} = D303_{\geq 7} \cap T = \)
+\[
+D303_{\geq 7} \cap (A76_{\leq 10} \cup A76_{\geq 11}) = (D303_{\geq 7} \cap A76_{\leq 10}) \cup (D303_{\geq 7} \cap 
+A76_{\geq 11})
+\]
+So \(N(D303_{\geq 7} \cap A76_{\leq 10}) = N(D303_{\geq 7}) - N(D303_{\geq 7} \cap A76_{\geq 11})\). 
 
+Now by arguments similar to before, \(N(D303_{\geq 7}) = \binom{23+8-1}{23} = \binom{30}{23} = 2,035,800\) and 
+\(N(D303_{\geq 7} \cap A76_{\geq 11}) = \binom{(30-18)+8-1}{30-18} = \binom{19}{12} = 50,388\), thus \(N(D303_{\geq 7} 
+\cap A76_{\leq 10}) = 2,035,800 - 50,388 = 1,985,412\).
+
+Finally \(N(A76_{\leq 10} \cap D303_{\leq 6}) = 9,637,672 - 
+1,985,412 = 7,652,260\).
 \end{proof}
 
 \subsection{Exercise 21}
+Observe that the number of columns in the trace table for Example 9.6.4 can be expressed as the sum \(1 + (1 + 2) + (1 + 
+2 + 3) + \cdots + (1 + 2 + \cdots + n)\). Explain why this is so, and show how this sum simplifies to the same expression 
+given in the solution of Example 9.6.4. (Hint: A formula from exercise 13 in Section 5.2 will be helpful.)
 
 \begin{proof}
+When \(k=1\), \(j\) ranges from 1 to \(k=1\), and \(i\) ranges from 1 to \(j=1\), so there is 1 column.
 
+When \(k=2\), \(j\) ranges first from 1 to \(k=1\), and then from 1 to \(k=2\); and \(i\) ranges first from 1 to \(j=1\), 
+then again from 1 to \(j=1\), and then from 1 to \(j=2\), so there are 1 + (1+2) columns.
+
+When \(k=3\), \(j\) ranges first from 1 to \(k=1\), and then from 1 to \(k=2\) and then from 1 to \(k=3\); and \(i\) ranges 
+first from 1 to \(j=1\), then again from 1 to \(j=1\) and then from 1 to \(j=2\), and then again from 1 to \(j=1\) then again 
+from 1 to \(j=2\) and then from 1 to \(j=3\), so there are 1 + (1+2) + (1+2+3) columns.
+
+And so on. So the overall sum has the form \(\dps \sum_{i=1}^{n}(1+\cdots+i)\). Since \(1+\cdots+i = \frac{i(i+1)}{2}\),
+it becomes \(\dps \sum_{i=1}^{n}\frac{i(i+1)}{2} = \frac{1}{2}\sum_{i=1}^{n}i(i+1)\). Now by Exercise 13 in 5.2, we have
+\(\dps \frac{1}{2}\sum_{i=1}^{n}i(i+1) = \frac{1}{2} \cdot \frac{(n+1)(n+1-1)(n+1+1)}{3} = \frac{(n+1)n(n+2)}{6}\).
 \end{proof}
 
 \section{Exercise Set 9.7}
