@@ -34,8 +34,9 @@
 \newcommand{\ceil}[1]{{\left\lceil#1\right\rceil}}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 \newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
+\newcommand\Cyancel[2][cyan]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
-\renewcommand{\arraystretch}{1.2}
+\setlength{\extrarowheight}{15pt}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -56,7 +57,6 @@ Toss two coins 30 times and make a table showing the relative frequencies of 0, 
 values compare with those shown in Table 9.1.1?
 
 \begin{proof}
-\begin{center}
 \arrayrulecolor{cyan}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -70,7 +70,6 @@ values compare with those shown in Table 9.1.1?
 \hline
 \end{tabular}
 \arrayrulecolor{black} % change it back!
-\end{center}
 \end{proof}
 
 \subsection{Exercise 2}
@@ -516,8 +515,9 @@ There are \(m - 3 + 1 = m-2\) elements in the subarray. There are $n$ elements i
 \end{proof}
 
 \subsubsection{(d)}
-What is the probability that a randomly chosen array element is in the subarray shown below if \(n = 39\)?
-\[A[\floor{n/2}], A[\floor{n/2}+1], \ldots, A[n]\]
+What is the probability that a randomly chosen array element is in the subarray \\
+\(A[\floor{n/2}], A[\floor{n/2}+1], \ldots, A[n]\) if \(n = 39\)?
+
 \begin{proof}
 \(\floor{39/2} = \floor{19.5} = 19\), therefore there are \(39 - 19 + 1 = 21\) elements in the subarray, and there 
 are 39 elements in the array, so the probability is \(21/39 \approx 53.84\%\).
@@ -663,7 +663,7 @@ Suppose team $A$ wins the first three games. How many ways can the World Series 
 \begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.6]{../images/9.2.1.png}
+\includegraphics[scale=0.43]{../images/9.2.1.png}
 \end{figure}
 
 There are five ways to complete the series: $A$, \(B-A\), \(B-B-A\), \(B-B-B-A\), and \(B-B-B-B\).
@@ -675,7 +675,7 @@ Suppose team $A$ wins the first two games. How many ways can the World Series be
 \begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.3]{../images/9.2.2.png}
+\includegraphics[scale=0.25]{../images/9.2.2.png}
 \end{figure}
 
 There are 15 ways: AA, ABA, ABBA, ABBBA, ABBBB, BAA, BABA, BABBA, BABBB, BBAA, BBABA, BBABB, BBBAA, BBBAB, BBBB.
@@ -703,7 +703,7 @@ games? (Draw a tree.)
 \begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.4]{../images/9.2.5.png}
+\includegraphics[scale=0.31]{../images/9.2.5.png}
 \end{figure}
 
 There are seven ways: \(XXX, XXYX, XXYY, XYXX, XYXY, XYY, Y\).
@@ -880,8 +880,7 @@ How many hexadecimal numbers begin with one of the digits 3 through B, end with 
 5 digits long?
 
 \begin{proof}
-Think of creating a hexadecimal number that satisfies the given requirements as a five-step process. 
-
+Think of creating a hexadecimal number that satisfies the given requirements as a five-step process. \\
 {\cy Step 1:} Choose the left-most hexadecimal digits. It can be any of the 9 hexadecimal digits from 3 through B.
 
 {\cy Steps 2-4:} Choose the three hexadecimal digits for the middle three positions. Each can be any of the 16 
@@ -1028,8 +1027,7 @@ How many integers from 10 through 99 have distinct digits?
 
 \begin{proof}
 (the number of ways to pick the first digit) \(\times\) (the number of ways to pick the second digit) = 
-\(9 \cdot 9 = 81\).
-
+\(9 \cdot 9 = 81\). \\
 Another solution is to start with the solution to part (a), which is 90, and subtract the number of integers that have 
 the same digit repeated, of which there are 9: 11, 22, 33, 44, 55, 66, 77, 88, 99.
 \end{proof}
@@ -1693,10 +1691,10 @@ Let \(Q(n)\) be the statement: ``for every integer $r$ with \(1 \leq r \leq n\),
 \(P(n,r) = n(n - 1)(n - 2) \cdots (n - r + 1)\).''
 
 {\bf Show that \(Q(1)\) is true:} There is only one 1-permutation of a set of 1 element, and when \(n=r=1\)
-the formula \(n(n - 1)(n - 2) \cdots (n - r + 1)\) is equal to 1. Therefore \(Q(1)\) is true.
+the formula \(n(n - 1)(n - 2) \cdots (n - r + 1)\) is equal to 1. Therefore \(Q(1)\) is true. \\
+{\bf Show that for any integer \(k \geq 1\) if \(Q(k)\) is true then \(Q(k+1)\) is true:} 
 
-{\bf Show that for any integer \(k \geq 1\) if \(Q(k)\) is true then \(Q(k+1)\) is true:} Assume \(k \geq 1\) and 
-assume for every integer $r$ with \(1 \leq r \leq k\), \(P(k,r) = k(k - 1)(k - 2) \cdots (k - r + 1)\). 
+Assume \(k \geq 1\) and assume for every integer $r$ with \(1 \leq r \leq k\), \(P(k,r) = k(k - 1)(k - 2) \cdots (k-r+1)\). 
 {\it [This is the inductive hypothesis.]}
 
 We want to show that for every integer $r$ with \(1 \leq r \leq k+1\), \(P(k+1,r) = (k+1)k(k-1) \cdots (k-r + 2)\).
@@ -1803,7 +1801,7 @@ be broken into four disjoint subsets:
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.6]{../images/9.3.1.a.png}
+\includegraphics[scale=0.45]{../images/9.3.1.a.png}
 \end{figure}
 
 Applying the addition rule to the figure shows that there are \(2 + 2^2 + 2^3 + 2^4 = 30\) bit strings consisting of 
@@ -1884,14 +1882,14 @@ How many arrangements in a row of no more than three letters can be formed using
 (with no repetitions allowed)?
 
 \begin{proof}
-Use the multiplication rule to count the elements in each of the three sets containing 1, 2, and 3 letters, 
-respectively. Then, because these sets are disjoint, use the addition rule to compute the total number of elements 
-in the three sets taken together.
-
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.6]{../images/9.3.4.png}
+\includegraphics[scale=0.5]{../images/9.3.4.png}
 \end{figure}
+
+Use the multiplication rule to count the elements in each of the three sets containing 1, 2, and 3 letters, respectively. 
+Then, because these sets are disjoint, use the addition rule to compute the total number of elements in the three sets 
+taken together.
 
 Applying the addition rule to the figure above shows that there are \(7 + 7 \cdot 6 + 7 \cdot 6 \cdot 5 = 259\) 
 arrangements of three letters of the word NETWORK if repetition of letters is not permitted.
@@ -2078,12 +2076,11 @@ Consider the following algorithm segment:
 How many times will the inner loop be iterated when the algorithm is implemented and run?
 
 \begin{proof}
-Each column of the table below corresponds to a pair of values of $i$ and $j$ for which the inner loop will be 
-iterated.
+Each column of the table below corresponds to a pair of values of $i$ and $j$ for which the inner loop will be iterated.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.6]{../images/9.3.9.a.png}
+\includegraphics[scale=0.5]{../images/9.3.9.a.png}
 \end{figure}
 
 Since there are \(1 + 2 + 3 + 4 = 10\) columns, the inner loop will be iterated ten times.
@@ -2202,15 +2199,13 @@ A group of eight people are attending the movies together.
 Two of the eight insist on sitting side-by-side. In how many ways can the eight be seated together in a row?
 
 \begin{proof}
-Let
+Let $x$ = the number of ways to arrange \boxed{AB}, C, D, E, F, G, H,
 
-$x$ = the number of ways to place eight people in a row keeping $A$ and $B$ together,
+$y$ = the number of ways to arrange \boxed{BA}, C, D, E, F, G, H,
 
-$y$ = the number of ways to arrange \boxed{AB}, C, D, E, F, G, H,
+$z$ = the number of ways to place eight people in a row keeping $A$ and $B$ together.
 
-$z$ = the number of ways to arrange \boxed{BA}, C, D, E, F, G, H.
-
-Then \(x = y+z = 7!+7! = 5040+5040 = 10080\).
+Then \(z = x+y = 7!+7! = 5040+5040 = 10080\).
 \end{proof}
 
 \subsubsection{(b)}
@@ -2218,22 +2213,20 @@ Two of the people do not like each other and do not want to sit side-by-side. No
 together in a row?
 
 \begin{proof}
-Let
+Let $x$ = the number of ways to place eight people in a row,
 
-$x$ = the number of ways to place eight people in a row keeping $A$ and $B$ apart,
+$y$ = the number of ways to place eight people in a row keeping $A$ and $B$ together,
 
-$y$ = the number of ways to place eight people in a row,
+$z$ = the number of ways to place eight people in a row keeping $A$ and $B$ apart.
 
-$z$ = the number of ways to place eight people in a row keeping $A$ and $B$ together.
-
-By part (a) $z = 10080$. So \(x = y-z = 8!-10080 = 40320-10080 = 30240\).
+By part (a) $y = 10080$. So \(z = x-y = 8!-10080 = 40320-10080 = 30240\).
 \end{proof}
 
 \subsection{Exercise 14}
-An early compiler recognized variable names according to the following rules: Numeric variable names had to begin 
-with a letter, and then the letter could be followed by another letter or a digit or by nothing at all. String 
-variable names had to begin with the symbol \$ followed by a letter, which could then be followed by another letter or 
-a digit or by nothing at all. How many distinct variable names were recognized by this compiler?
+An early compiler recognized variable names according to the following rules: Numeric variable names had to begin with a 
+letter, and then the letter could be followed by another letter or a digit or by nothing at all. String variable names 
+had to begin with the symbol \$ followed by a letter, which could then be followed by another letter or a digit or by 
+nothing at all. How many distinct variable names were recognized by this compiler?
 
 \begin{proof}
 the number of variable names = the number of numeric variable names + the number of string variable names = 
@@ -2252,10 +2245,8 @@ For the first character there are 26 choices (letters).
 For other characters there are 37 choices (letters, digits, or underscore).
 
 So, there are \(26\) length 1 identifiers, \(26 \cdot 37\) length-2 identifiers, ..., and \(26 \cdot 37^{29}\) 
-length-3 identifiers. So the number of identifiers with 30 or fewer characters is:
-\[
-26+26 \cdot 37 + \cdots + 26 \cdot 37^{29} = 26(1+37+37^2+\cdots+37^{29}) = 26 \cdot \frac{37^{30}-1}{37-1}
-\]
+length-3 identifiers. So the number of identifiers with 30 or fewer characters is: \\
+\(26+26 \cdot 37 + \cdots + 26 \cdot 37^{29} = 26(1+37+37^2+\cdots+37^{29}) = 26 \cdot \frac{37^{30}-1}{37-1}\)
 \end{proof}
 
 \subsection{Exercise 16}
@@ -2391,13 +2382,10 @@ Then \(z = x - y = 100,000 - (9^5 + 1) = 40950\).
 If an integer is chosen at random from 1 through 100,000, what is the probability that it contains two or more occurrences of the digit 6?
 
 \begin{proof}
-Let $x$ = the number of integers from 1 through 100,000, that contain the digit 6 at least once,
-
-$y$ = the number of integers from 1 through 100,000, that contain the digit 6 exactly once,
-
-$z$ = the number of integers from 1 through 100,000, that contain the digit 6 two or more times.
-
-Then \(z = x - y = 40950 - 32805 = 8145\). Then the probability is \(8145/100000 = 8.145\%\)
+Let $x$ = the number of integers from 1 through 100,000, that contain the digit 6 at least once, $y$ = the number of 
+integers from 1 through 100,000, that contain the digit 6 exactly once, $z$ = the number of integers from 1 through 
+100,000, that contain the digit 6 two or more times. Then \(z = x - y = 40950 - 32805 = 8145\). The probability is 
+\(8145 / 100000 = 8.145\%\)
 \end{proof}
 
 \subsection{Exercise 21}
@@ -2419,14 +2407,9 @@ Consider strings of length $n$ over the set \(\{a, b, c, d\}\). How many such st
 adjacent characters that are the same?
 
 \begin{proof}
-Let $x$ = the total number of all strings = \(4^n\), 
-
-$y$ = the number of strings that have no pairs of adjacent 
-characters that are the same = \(4 \cdot \underbrace{3 \cdot \cdots \cdot 3}_{n-1 \text{ times}} = 4 \cdot 3^{n-1}\),
-
-$z$ = the number of strings contain at least one pair of 
-adjacent characters that are the same = \(x - y = 4^n - 4 
-\cdot 3^{n-1}\).
+Let $x$ = the total number of all strings = \(4^n\), $y$ = the number of strings that have no pairs of adjacent characters 
+that are the same = \(4 \cdot \underbrace{3 \cdot \cdots \cdot 3}_{n-1 \text{ times}} = 4 \cdot 3^{n-1}\), $z$ = the number 
+of strings contain at least one pair of adjacent characters that are the same = \(x - y = 4^n - 4 \cdot 3^{n-1}\).
 \end{proof}
 
 \subsubsection{(b)}
@@ -2445,37 +2428,29 @@ How many integers from 1 through 1,000 are multiples of 4 or multiples of 7?
 
 \begin{proof}
 Let $A$ = the set of integers that are multiples of 4 and $B$ = the set of integers that are multiples of 7. Then 
-\(A \cap B\) = the set of integers that are multiples of 28. 
-
-Now \(N(A) = 250\) because
-
-\begin{center}
+\(A \cap B\) = the set of integers that are multiples of 28. Now \(N(A) = 250\) because
 \begin{tabular}{ccccccccccc}
 1&2&3&4&5&6&7&8& \(\ldots\) &999&1000 \\
 &&&\(\updownarrow\)&&&&\(\updownarrow\)&&&\(\updownarrow\) \\
 &&&\(4 \cdot 1\)&&&&\(4 \cdot 2\)& \(\ldots\) &&\(4 \cdot 250\) \\
 \end{tabular}
-\end{center}
 
 or equivalently, because \(1000 = 4 \cdot 250\). Also \(N(B) = 142\) because
 
-\begin{center}
+
 \begin{tabular}{cccccccccccccc}
 1&2&3&4&5&6&7& \(\ldots\) &14& \(\ldots\) &994&995& \(\ldots\) &1000 \\
 &&&&&&\(\updownarrow\)&&\(\updownarrow\)&&\(\updownarrow\)&& \\
 &&&&&&\(7 \cdot 1\)&&\(7 \cdot 2\)&&\(7 \cdot 142\)&& \\
 \end{tabular}
-\end{center}
 
 or equivalently because \(1000 = 7 \cdot 142 + 6\). And \(N(A \cap B) = 35\) because
 
-\begin{center}
 \begin{tabular}{ccccccccccc}
 1&2&3& \(\ldots\) &28& \(\ldots\) &56& \(\ldots\) &980& \(\ldots\) &1000 \\
 &&&&\(\updownarrow\)&&\(\updownarrow\)&&\(\updownarrow\)&& \\
 &&&&\(28 \cdot 1\)&&\(28 \cdot 2\)&&\(28 \cdot 35\)&& \\
 \end{tabular}
-\end{center}
 
 or equivalently because \(1000 = 28 \cdot 35 + 20\). So \(N(A \cup B) = 250 + 142 - 35 = 357\).
 \end{proof}
@@ -2772,17 +2747,13 @@ of the 21 positions from the fourth through the twenty-fourth. This gives \(2^{2
 What is the dotted decimal form of the IP address for a computer in a Class C network?
 
 \begin{proof}
-Let \(w.x.y.z\) be the dotted decimal form of the IP address for a computer in a Class C network. The 
-network IDs for a Class C network go from 110000000000000000000000 through 110111111111111111111111.
+Let \(w.x.y.z\) be the dotted decimal form of the IP address for a computer in a Class C network. The network IDs for a 
+Class C network go from 110000000000000000000000 through 110111111111111111111111. If we break these down into chunks 
+of 8 bits and convert them to binary, we get: \(11000000_2 = 192_{10}, 00000000_2 = 0_{10}, 00000000_2 = 0_{10}\), 
+\(11011111_2 = 223_{10}, 11111111_2 = 255_{10}, 11111111_2 = 255_{10}\). As dotted decimals they range from 192.0 to 
+223.255. 
 
-If we break these down into chunks of 8 bits and convert them to binary, we get:
-
-\(11000000_2 = 192_{10}, 00000000_2 = 0_{10}, 00000000_2 = 0_{10}\),
-
-\(11011111_2 = 223_{10}, 11111111_2 = 255_{10}, 11111111_2 = 255_{10}\).
-
-As dotted decimals they range from 192.0 to 223.255. So \(192 \leq w \leq 223\), \(0 \leq x \leq 255\), 
-\(0 \leq y \leq 255\), \(0 \leq z \leq 255\).
+So \(192 \leq w \leq 223\), \(0 \leq x \leq 255\), \(0 \leq y \leq 255\), \(0 \leq z \leq 255\).
 \end{proof}
 
 \subsubsection{(g)}
@@ -2932,11 +2903,6 @@ minus the number who checked at least one statement. This is \(100 - 55 = 45\).
 \end{proof}
 
 \subsubsection{(c)}
-\begin{figure}[ht!]
-\centering
-\includegraphics[scale=0.5]{../images/9.3.33.c.1.png}
-\end{figure}
-
 Let H be the set of students who checked \#1, C the set of students who checked \#2, and D the set of students who 
 checked \#3. Fill in the numbers for all eight regions of the diagram.
 
@@ -3015,7 +2981,7 @@ Solving we get \(N(A \cap B \cap C) = 6\).
 \subsubsection{(c)}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/9.3.34.c.1.png}
+\includegraphics[scale=0.4]{../images/9.3.34.c.1.png}
 \end{figure}
 
 Let A be the set of all subjects who got relief from drug A, B the set of all subjects who got relief from drug B, 
@@ -3024,7 +2990,7 @@ and C the set of all subjects who got relief from drug C. Fill in the numbers fo
 \begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/9.3.34.c.2.png}
+\includegraphics[scale=0.4]{../images/9.3.34.c.2.png}
 \end{figure}
 \end{proof}
 
@@ -3076,10 +3042,10 @@ Fill in the reasons for each step below. If $A$ and $B$ are sets in a finite uni
 (a) because 
 \begin{center}
 \begin{tabular}{rcll}
-\(A \cap B\) & = & \((A \cap B) \cap U\) & by identity law \\
-& = & \(U \cap (A \cap B)\) & by commutative law \\
-& = & \(U \cap ((A \cap B)^c)^c\) & by double complement law \\
-& = & \(U - (A \cap B)^c\) & by set difference law \\
+\(A \cap B\) & = & \((A \cap B) \cap U\) & {\cy by identity law} \\
+& = & \(U \cap (A \cap B)\) & {\cy by commutative law} \\
+& = & \(U \cap ((A \cap B)^c)^c\) & {\cy by double complement law} \\
+& = & \(U - (A \cap B)^c\) & {\cy by set difference law} \\
 \end{tabular}
 \end{center}
 and because \(N(U - (A \cap B)^c) = N(U) - N((A \cap B)^c)\).
@@ -3149,20 +3115,16 @@ Similarly \(N(A_1 \cap A_3) = N(A_2 \cap A_3) = 8^6 - 1\).
 Finally \(N(A_1 \cap A_2 \cap A_3) = 7^6-1\) by a similar argument to the above arguments. 
 
 Now by the inclusion / exclusion principle, \(N(A_1 \cup A_2 \cup A_3) = N(A_1) + N(A_2) + N(A_3) - N(A_1 \cap A_2) 
-- N(A_1 \cap A_3) - N(A_2 \cap A_3) + N(A_1 \cap A_2 \cap A_3) = 3(9^6-1) - 3(8^6-1) + 7^6-1 = 925,539\)
-
+- N(A_1 \cap A_3) - N(A_2 \cap A_3) + N(A_1 \cap A_2 \cap A_3) = 3(9^6-1) - 3(8^6-1) + 7^6-1 = 925,539\). \\
 So the number of integers that do not contain at least one of the digits 1,2,3 is 925,539. Then \(999,999 - 925,539 = 
-74460\) integers contain all three of the digits 1,2,3.
-
+74460\) integers contain all three of the digits 1,2,3. \\
 We can verify this with a computer:
 \begin{minted}{scala}
 scala> var count = 0
 var count: Int = 0
-                                                                                                                        
 scala> for i <- 1 to 999999 do
      |   if "123".forall(c => i.toString.contains(c)) then
      |     count += 1
-     | 
 scala> count
 val res0: Int = 74460
 \end{minted}
@@ -3611,8 +3573,8 @@ both \(s_1\) and \(s_2\), there are 2 colors to paint \(s_3\).
 The characteristic equation is \(t^2 - 2t - 3 = 0\) so \((t-3)(t+1) = 0\) which gives \(t = -1, 3\). So the general
 form of the solution is \(S_n = A \cdot (-1)^n + B \cdot 3^n\).
 
-Solving \(S_2 = 12 = A(-1)^2 + B \cdot 3^2\) we get \(12 = A + 9B\). Solving \(S_3 = 24 = A(-1)^3 + B \cdot 3^3\) we get \(24 = -A + 27B\). Adding these two equations together gives \(36 = 36B\) so \(B = 1\) and \(A = 3\). 
-
+Solving \(S_2 = 12 = A(-1)^2 + B \cdot 3^2\) we get \(12 = A + 9B\). Solving \(S_3 = 24 = A(-1)^3 + B \cdot 3^3\) we get 
+\(24 = -A + 27B\). Adding these two equations together gives \(36 = 36B\) so \(B = 1\) and \(A = 3\). 
 Thus \(S_n = 3\cdot(-1)^n + 3^n\) for all \(n \geq 2\).
 \end{proof}
 
@@ -3666,7 +3628,7 @@ that sends each resident to his or her birthday:
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/9.4.3.png}
+\includegraphics[scale=0.4]{../images/9.4.3.png}
 \end{figure}
 
 By the pigeonhole principle, \(B\) is not one-to-one: \(B(x_i) = B(x_j)\) for some two residents \(x_i\) and 
@@ -3693,7 +3655,7 @@ that sends each integer to the remainder obtained when that integer is divided b
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/9.4.5.a.png}
+\includegraphics[scale=0.4]{../images/9.4.5.a.png}
 \end{figure}
 
 By the pigeonhole principle, \(R\) is not one-to-one: \(R(n_i) = R(n_j)\) for some two integers \(n_i\) and 
@@ -3731,12 +3693,10 @@ Let \(S = \{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}\). Suppose six integers are chosen
 integers whose sum is 15? Why?
 
 \begin{proof}
-Notice that \(3 + 12 = 15\), \(4 + 11 = 15\), \(5 + 10 = 15\), \(6 + 9 = 15\), and \(7 + 8 = 15\). 
-
-We can divide \(S\) into five sets: \(\{3, 12\}\), \(\{4, 11\}\), \(\{5, 10\}\), \(\{6, 9\}\), \(\{7, 8\}\). 
-
-By the Pigeonhole Principle, when 6 integers are chosen from \(S\), two of them will belong to the same set among 
-these 5 sets. Therefore when 6 integers are chosen from \(S\) there must be two integers whose sum is 15.
+Notice that \(3 + 12 = 15\), \(4 + 11 = 15\), \(5 + 10 = 15\), \(6 + 9 = 15\), and \(7 + 8 = 15\). We can divide \(S\) into 
+five sets: \(\{3, 12\}\), \(\{4, 11\}\), \(\{5, 10\}\), \(\{6, 9\}\), \(\{7, 8\}\). By the Pigeonhole Principle, when 6 
+integers are chosen from \(S\), two of them will belong to the same set among these 5 sets. Therefore when 6 integers are 
+chosen from \(S\) there must be two integers whose sum is 15.
 \end{proof}
 
 \subsection{Exercise 8}
@@ -3810,23 +3770,23 @@ Yes. The set contains \(n\) odd integers: \(1, 3, 5, \ldots, 2n-1\). Since \(n+1
 How many cards must you pick from a standard 52-card deck to be sure of getting at least 1 red card? Why?
 
 \begin{proof}
-The answer is 27. There are only 26 black cards in a standard 52-card deck, so at most 26 black cards can be 
-chosen. Hence if 27 are taken, at least one must be red.
+The answer is 27. There are only 26 black cards in a standard 52-card deck, so at most 26 black cards can be chosen. Hence 
+if 27 are taken, at least one must be red.
 \end{proof}
 
 \subsection{Exercise 13}
-Suppose six pairs of similar-looking boots are thrown together in a pile. How many individual boots must you pick 
-to be sure of getting a matched pair? Why?
+Suppose six pairs of similar-looking boots are thrown together in a pile. How many individual boots must you pick to be sure 
+of getting a matched pair? Why?
 
 \begin{proof}
-6 pairs means 12 boots. So we must pick at least 7 individual boots to get a matching pair. Because the 12 
-boots are split into 6 pairs, and since \(7>6\), by the Pigeonhole Principle the 7 picked boots must contain two
-boots from one of the pairs.
+6 pairs means 12 boots. So we must pick at least 7 individual boots to get a matching pair. Because the 12 boots are split 
+into 6 pairs, and since \(7>6\), by the Pigeonhole Principle the 7 picked boots must contain two boots from one of the 
+pairs.
 \end{proof}
 
 \subsection{Exercise 14}
-How many integers from 0 through 60 must you pick in order to be sure of getting at least one that is odd? at least 
-one that is even?
+How many integers from 0 through 60 must you pick in order to be sure of getting at least one that is odd? at least one that 
+is even?
 
 \begin{proof}
 There are 61 integers from 0 through 60. Of these, 31 are even \((0 = 2 \cdot 0, 2 = 2 \cdot 1, 4 = 2 \cdot 2, 
@@ -3840,8 +3800,7 @@ through \(2n\) must you pick in order to be sure of getting
 at least one that is odd? at least one that is even?
 
 \begin{proof}
-There are \(2n+1\) integers from 0 through \(2n\). Of these, \(n+1\) are even \((0 = 2 \cdot 0, 2 = 2 \cdot 1, 4 
-= 2 \cdot 2, \ldots, 2n = 2 \cdot n)\) and so \(n\) are odd. Hence if \(n+2\) integers are chosen, at least one 
+There are \(n+1\) even and \(n\) odd integers from 0 through \(2n\). Hence if \(n+2\) integers are chosen, at least one 
 must be odd, and if \(n+1\) integers are chosen, at least one must be even.
 \end{proof}
 
@@ -3857,8 +3816,7 @@ not divisible by 5. So we must pick at least 81 integers.
 How many integers must you pick in order to be sure that at least two of them have the same remainder when divided by 7?
 
 \begin{proof}
-The answer is 8. (There are only seven possible remainders for division by 7: 0, 1, 2, 3, 4, 5, 6. Hence if 8 are 
-chosen, at least two must be the same.)
+The answer is 8, since there are 7 possible remainders modulo 7: \(0, 1, 2, 3, 4, 5, 6\).
 \end{proof}
 
 \subsection{Exercise 18}
@@ -3873,8 +3831,8 @@ How many integers from 100 through 999 must you pick in order to be sure that at
 common? (For example, 256 and 530 have the digit 5 in common.)
 
 \begin{proof}
-The answer is 10. Each integer we pick will use up at least 1 of the 10 possible digits. So the maximum number of 
-integers we can pick without any two integers having a digit in common is 9. 
+Each integer we pick will use at least 1 of the 10 possible digits. The maximum number of integers we can pick without 
+two integers having a digit in common is 9. 
 \end{proof}
 
 \subsection{Exercise 20}
@@ -3936,8 +3894,6 @@ smallest prime number that divides \(x\). Since \(A\) has 13 elements and \(B\) 
 principle \(F\) is not one-to-one. Thus \(F(x_1) = F(x_2)\) for some \(x_1 \neq x_2\) in \(A\). By definition of \(F\), 
 this means that the smallest prime number that divides \(x_1\) equals the smallest prime number that divides 
 \(x_2\). Therefore, two numbers in \(A\); namely, \(x_1\) and \(x_2\); have a common divisor greater than 1. 
-{\it [Strictly speaking, only integers less than or equal to 20 can divide integers less than or equal to 40. So we 
-could have made the set \(B\) even smaller.]}
 \end{proof}
 
 \subsection{Exercise 25}
@@ -4018,8 +3974,7 @@ the largest possible sum is 57. (Why? How is this sum obtained?)
 
 \begin{proof}
 To clarify (2) in the Hint, the largest subset size is 6, and the largest possible 6 elements are 7, 8, 9, 10, 11, 12
-which add up to \(7+8+9+10+11+12 = 57\). The smallest possible sum is 0 for the empty subset of \(A\).
-
+which add up to \(7+8+9+10+11+12 = 57\). The smallest possible sum is 0 for the empty subset of \(A\). \\
 Consider a function \(F\) from subsets of \(A\) to the set of positive integers from 0 to 57 defined by \(F(S) = \) 
 the sum of all the elements of \(S\). Since the domain has 64 elements, and the co-domain has 58 elements (\(0,\ldots, 
 57\)), and  \(64 > 57\), by the Pigeonhole Principle \(F\) is not one-to-one. Therefore \(F(S_1) = F(S_2)\) for two 
@@ -4028,16 +3983,15 @@ distinct subsets \(S_1, S_2\) of \(A\), which means the sums of elements of \(S_
 
 \subsection{Exercise 33}
 Let \(A\) be a set of six positive integers each of which is less than 15. Show that there must be two distinct 
-subsets of A whose elements when added up give the same sum. (Thanks to Jonathan Goldstine for this problem.)
+subsets of A whose elements when added up give the same sum. 
 
 {\it Hint:} The power set of \(A\) has \(2^6 = 64\) elements, and so there are 63 nonempty subsets of \(A\). 
 Let \(k\) be the smallest number in \(A\). Then the sums over the elements in the nonempty subsets of \(A\) lie in 
 the range from \(k\) through \(k + 10 + 11 + 12 + 13 + 14 = k + 60\). How many numbers are in this range?
 
 \begin{proof}
-Let \(k\) be the smallest integer in \(A\).
-
-To clarify the Hint, there are 61 numbers in the range from \(k\) through \(k+60\). 
+Let \(k\) be the smallest integer in \(A\). To clarify the Hint, there are 61 numbers in the range from \(k\) through 
+\(k+60\). 
 
 Consider a function \(F\) from the nonempty subsets of \(A\) to the set of positive integers from \(k\) to \(k+60\) 
 defined by \(F(S) = \) the sum of all the elements of \(S\). Since the domain has 63 elements, and the co-domain 
@@ -4200,11 +4154,12 @@ the pigeonhole principle, there exist elements \(a\) and \(b\) in \(X\) such tha
 Write a computer algorithm to find such a pair of elements \(a\) and \(b\).
 
 \begin{tcolorbox}[colframe=cyan]
-{\bf Input:} \(X\) {\it [a finite set represented by the array]} \(X[1], \ldots, X[n]\). \\
-{\bf Algorithm Body:} \\
+{\bf Input:} \(X\) {\it [a finite set represented by the array]} \(X[1], \ldots, X[n]\). 
+
+{\bf Algorithm Body:}
+
 \(found \coloneqq false, i \coloneqq 0\)
-\end{tcolorbox}
-\begin{tcolorbox}[colframe=cyan]
+
 \begin{tabbing}
 {\bf wh}\={\bf ile} (\(i \leq n-1\) and \(found = false\)) \\
         \> \(j \coloneqq 0\) \\
@@ -4278,14 +4233,14 @@ Write an equation relating \(P(8,3)\) and \(\binom{8}{3}\).
 Use Theorem 9.5.1 to compute each of the following.
 
 \subsubsection{(a)}
-\(\dps \binom{6}{0}\)
+\(\binom{6}{0}\)
 
 \begin{proof}
 \(\dps \binom{6}{0} = \frac{6!}{0!(6-0)!} = \frac{\Ccancel[cyan]{6!}}{1 \cdot \Ccancel[cyan]{6!}} = 1\)
 \end{proof}
 
 \subsubsection{(b)}
-\(\dps \binom{6}{1}\)
+\(\binom{6}{1}\)
 
 \begin{proof}
 \(\dps \binom{6}{1} = \frac{6!}{1!(6-1)!} = \frac{6 \cdot \Ccancel[cyan]{5!}}{1 \cdot \Ccancel[cyan]{5!}} = 6\)
@@ -4323,20 +4278,20 @@ Use Theorem 9.5.1 to compute each of the following.
 \end{proof}
 
 \subsubsection{(g)}
-\(\dps \binom{6}{6}\)
+\(\binom{6}{6}\)
 
 \begin{proof}
-\(\dps \binom{6}{6} = \frac{6!}{6!(6-6)!} = \frac{\Ccancel[cyan]{6!}}{\Ccancel[cyan]{6!} \cdot 1} = 1\)
+\(\binom{6}{6} = \frac{6!}{6!(6-6)!} = \frac{\Ccancel[cyan]{6!}}{\Ccancel[cyan]{6!} \cdot 1} = 1\)
 \end{proof}
 
 \subsection{Exercise 6}
 A student council consists of 15 students.
 
 \subsubsection{(a)}
-In how many ways can a committee of six be selected from the membership of the council?
+In how many ways can a committee of six be selected from the council?
 
 \begin{proof}
-\(\dps \binom{15}{6} = \frac{15!}{(15-6)!6!} = \frac{\Ccancel[red]{15} \cdot \Ccancel{14}^{{}^{{}^7}} 
+\(\binom{15}{6} = \frac{15!}{(15-6)!6!} = \frac{\Ccancel[red]{15} \cdot \Ccancel{14}^{{}^{{}^7}} 
 \cdot 13 \cdot \Ccancel[green]{12} \cdot 11 \cdot \Ccancel{10}^{{}^{{}^5}} \cdot \Ccancel[cyan]{9!}}
 {\Ccancel[cyan]{9!} \cdot \Ccancel[green]{6} \cdot \Ccancel[red]{5} \cdot \Ccancel{4} \cdot \Ccancel[red]{3} 
 \cdot \Ccancel[green]{2}} = 7 \cdot 13 \cdot 11 \cdot 5 = 5005\)
@@ -4427,10 +4382,8 @@ Suppose seven team members are women and six are men.
 (iii) How many groups of seven can be chosen that contain at most three women?
 
 \begin{proof}
-(i) \(\binom{7}{4}\binom{6}{3} = 35 \cdot 20 = 700\) 
-
-(ii) total number of groups of seven \(-\) the number of all-female groups of seven = \(\binom{13}{7} - \binom{7}{7}
- = 1716 - 1 = 1715\)
+(i) \(\binom{7}{4}\binom{6}{3} = 35 \cdot 20 = 700\), (ii) total number of groups of seven \(-\) the number of all-female 
+groups of seven = \(\binom{13}{7} - \binom{7}{7} = 1716 - 1 = 1715\)
 
 (iii) Zero women: not possible, since we need a group of seven and there are only six men; One woman: \(\binom{7}{1}
 \binom{6}{6} = 7\); Two women: \(\binom{7}{2}\binom{6}{5} = 21 \cdot 6 = 126\); Three women: \(\binom{7}{3}\binom{6}{4} 
@@ -4492,12 +4445,9 @@ Suppose the exam instructions specify that at most one of questions 1 and 2 may 
 different choices of ten questions are there?
 
 \begin{proof}
-The number of ten questions that include Q1 but not Q2 = \(\binom{12}{9} = 220\)
-
-The number of ten questions that include Q2 but not Q1 = \(\binom{12}{9} = 220\)
-
-The number of ten questions that include neither Q1 nor Q2 = \(\binom{12}{10} = 66\)
-
+Include Q1 but not Q2 = \(\binom{12}{9} = 220\),
+include Q2 but not Q1 = \(\binom{12}{9} = 220\),
+include neither Q1 nor Q2 = \(\binom{12}{10} = 66\),
 \(220 + 220 + 66 = 506\)
 \end{proof}
 
@@ -4551,7 +4501,7 @@ royal flush
 \begin{proof}
 (1) 4 (because there are as many royal flushes as there are suits)
 
-(2) \(\dps \frac{4}{\binom{52}{5}} = \frac{4}{2,598,960} = 0.000001539\)
+(2) \(\dps \frac{4}{\binom{52}{5}} = \frac{4}{2,598,960} = 0.000001539 = 0.0001539\%\)
 \end{proof}
 
 \subsubsection{(b)}
@@ -4562,7 +4512,7 @@ straight flush
 9-10-J-Q-K, 10-J-Q-K-A; and these can be flushes in 4 ways (since there are 4 suits). So \(10 \cdot 4 = 40\). But 4 of
 these are royal flushes, so \(40 - 4 = 36\) straight flushes.
 
-(2) \(\dps \frac{36}{\binom{52}{5}} = \frac{36}{2,598,960} = 0.000013852\)
+(2) \(\dps \frac{36}{\binom{52}{5}} = \frac{36}{2,598,960} = 0.000013852 = 0.0013852\%\)
 \end{proof}
 
 \subsubsection{(c)}
@@ -4572,7 +4522,7 @@ four of a kind
 (1) There are 13 possible four of a kinds. For each for of a kind, there are 48 ways to choose the fifth card. 
 So \(13 \cdot 48 = 624\).
 
-(2) \(\dps \frac{624}{\binom{52}{5}} = \frac{624}{2,598,960} = 0.000240096\)
+(2) \(\dps \frac{624}{\binom{52}{5}} = \frac{624}{2,598,960} = 0.000240096 = 0.0240096\%\)
 \end{proof}
 
 \subsubsection{(d)}
@@ -4594,7 +4544,7 @@ So either choose a three of a kind (52 choices) then choose a two of a kind from
 total of \(52 \cdot 72 = 3744\), or vice versa: choose a two of a kind (78 choices) then a three of a kind from the 
 remaining \(52-4=48\) for a total of \(78 \cdot 48 = 3744\).
 
-(2) \(\dps \frac{3744}{\binom{52}{5}} = \frac{3744}{2,598,960} = 0.001440576\)
+(2) \(\frac{3744}{\binom{52}{5}} = \frac{3744}{2,598,960} = 0.001440576 = 0.1440576\%\)
 \end{proof}
 
 \subsubsection{(e)}
@@ -4602,9 +4552,8 @@ flush
 
 \begin{proof}
 (1) There are 4 suits, for each suit there are \(\binom{13}{5} = 1287\) ways to choose 5 cards of that suit, for a total of
-\(4 \cdot 1287 = 5148\) flushes. 40 of them are royal or straight flushes, so \(5148-40 = 5108\) flushes.
-
-(2) \(\dps \frac{5108}{\binom{52}{5}} = \frac{5108}{2,598,960} = 0.001965402\)
+\(4 \cdot 1287 = 5148\) flushes. 40 of them are royal or straight flushes, so \(5148-40 = 5108\) flushes. \,\,\,\,
+(2) \(\frac{5108}{\binom{52}{5}} = \frac{5108}{2,598,960} = 0.001965402 = 0.1965402\%\)
 \end{proof}
 
 \subsubsection{(f)}
@@ -4613,9 +4562,8 @@ straight
 \begin{proof}
 (1) There are 10 straights. For each straight, there are \(4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 = 1024\) ways to choose the
 cards (since each value has 4 copies). So \(10 \cdot 1024 = 10240\) straights. By (b), 40 of these are royal or straight 
-flushes, so \(10240-40 = 10200\) non-royal, non-flush straights.
-
-(2) \(\dps \frac{10200}{\binom{52}{5}} = \frac{10200}{2,598,960} = 0.003924647\)
+flushes, so \(10240-40 = 10200\) non-royal, non-flush straights. \,\,\,\,
+(2) \(\frac{10200}{\binom{52}{5}} = \frac{10200}{2,598,960} = 0.003924647 = 0.3924647\%\)
 \end{proof}
 
 \subsubsection{(g)}
@@ -4625,9 +4573,8 @@ three of a kind
 (1) 13 values to make three of a kind, for each value \(\binom{4}{3} = 4\) ways to choose 3 out of 4 suits, for a
 total of \(13 \cdot 4 = 52\) three of a kinds. To fill the rest of the hand we need two more cards. These two cards may
 not include the same value, otherwise it becomes a four of a kind. So choose 2 values from 12 values in: \(\binom{12}{2} = 
-66\) ways, and for each one, 4 ways to choose a suit. In total: \(52 \cdot 66 \cdot 4 \cdot 4 = 54912\).
-
-(2) \(\dps \frac{54912}{\binom{52}{5}} = \frac{54912}{2,598,960} = 0.021128451\)
+66\) ways, and for each one, 4 ways to choose a suit. In total: \(52 \cdot 66 \cdot 4 \cdot 4 = 54912\). \\
+(2) \(\frac{54912}{\binom{52}{5}} = \frac{54912}{2,598,960} = 0.021128451 = 2.1128451\%\)
 \end{proof}
 
 \subsubsection{(h)}
@@ -4637,25 +4584,22 @@ one pair
 (1) 13 values to make one pair, for each value \(\binom{4}{2} = 6\) ways to choose 2 out of 4 suits, for a total of 
 \(13 \cdot 6 = 78\) pairs. We need to choose 3 more cards from the remaining 50, but these three may not include the same
 value, otherwise it becomes three or four of a kind. So choose 3 values out of 12, which can be done in \(\binom{12}{3} = 
-220\) ways, and for each value, 4 ways to choose a suit. In total: \(78 \cdot 220 \cdot 4 \cdot 4 \cdot 4 = 1,098,240\).
-
-(2) \(\dps \frac{1,098,240}{\binom{52}{5}} = \frac{1,098,240}{2,598,960} = 0.422569028\)
+220\) ways, and for each value, 4 ways to choose a suit. In total: \(78 \cdot 220 \cdot 4 \cdot 4 \cdot 4 = 1,098,240\).\\
+(2) \(\frac{1,098,240}{\binom{52}{5}} = \frac{1,098,240}{2,598,960} = 0.422569028 = 42.2569028\%\)
 \end{proof}
 
 \subsubsection{(i)}
 neither a repeated denomination nor five of the same suit nor five adjacent denominations
 
 \begin{proof}
-(1) Repeated denomination means one pair, two pairs, three of a kind, full house or four of a kind. Five of the same suit is 
-a flush. Five adjacent denominations is a straight. So we want: no pairs (one or two), no 3 or 4 of a kinds (or full 
-houses), no flushes, no straights.
+(1) Total number of all poker hands is 2,598,960. There are 4 royal flushes, 36 straight flushes, 624 four of a kinds, 5108
+flushes, 10200 straights, 3744 full houses, 54912 three of a kinds, 123,552 two pairs, 1,098,240 one pairs. 
 
-Total number of all poker hands is 2,598,960. There are 4 royal flushes, 36 straight flushes, 624 four of a kinds, 5108
-flushes, 10200 straights, 3744 full houses, 54912 three of a kinds, 123,552 two pairs, 1,098,240 one pairs. So
+So we simply subtract these from the total number of all hands:
 \[
 2,598,960 - (4 + 36 + 624 + 5108 + 10200 + 3744 + 54912 + 123,552 + 1,098,240) = 1,302,540
 \]
-(2) \(\dps \frac{1,302,540}{\binom{52}{5}} = \frac{1,302,540}{2,598,960} = 0.501177394\)
+(2) \(\frac{1,302,540}{\binom{52}{5}} = \frac{1,302,540}{2,598,960} = 0.501177394 = 50.1177394\%\)
 \end{proof}
 
 \subsection{Exercise 12}
@@ -4833,12 +4777,10 @@ orderings.
 \begin{proof}
 The answer in the exercise was 34650. Now:
 
-Choose a position for the M: \(\binom{11}{1} = 11\)
-
+Choose a position for the M: \(\binom{11}{1} = 11\), 
 Choose a position for the I's: \(\binom{10}{4} = 210\)
 
-Choose a position for the S's: \(\binom{6}{4} = 15\)
-
+Choose a position for the S's: \(\binom{6}{4} = 15\), 
 Choose a position for the P's: \(\binom{2}{2} = 1\)
 
 Result = \(11 \cdot 210 \cdot 15 \cdot 1 = 34650\)
@@ -4924,12 +4866,8 @@ How many different paths can a rook follow from the bottom-left square of the bo
 board if all moves are to the right or upward?
 
 \begin{proof}
-The rook must move seven squares to the right and seven squares up, so let 
-
-\(x\) = the number of paths the rook can take,
-
-\(y\) =  the number of of orderings of seven R’s and seven U’s, where R stands for “right” and U stands for “up”,
-
+The rook must move seven squares to the right and seven squares up, so let \(x\) = the number of paths the rook can 
+take, \(y\) =  the number of of orderings of seven R’s and seven U’s, where R stands for “right” and U stands for “up”,
 then \(x = y\) and by Theorem 9.5.2 \(x = y = \frac{14!}{7!7!} = 3432\).
 \end{proof}
 
@@ -5147,10 +5085,10 @@ There are \(c_{m-1,n-1} \cdot \binom{n}{n-1}\) onto functions in the second cate
 an \(n-1\) element subset of the co-domain, then \(c_{m-1,n-1}\) ways to send the first \(m-1\) domain elements onto that
 subset, and 1 way to send the remaining domain element to the remaining co-domain element.
 
-The same argument shows that the two categories are disjoint. So \(c_{m,n} = n(c_{m-1,n} + c_{m-1,n-1})\). 
+By the same argument, the two categories are disjoint. So \(c_{m,n} = n(c_{m-1,n} + c_{m-1,n-1})\). 
 
-We can confirm the formula with the earlier parts. In parts (a), (c), (d), (e) we found \(c_{3,2} = 6\), \(c_{3,3} = 6\),  
-\(c_{4,2} = 14\) and \(c_{4,3} = 36\). By the formula \(36 = c_{4,3} = 3(c_{3,3} + c_{3,2}) = 3(6+6)\) which holds true.
+We can confirm the formula: in parts (a), (c), (d), (e) we found \(c_{3,2} = 6\), \(c_{3,3} = 6\), \(c_{4,2} = 14\) and 
+\(c_{4,3} = 36\). By the formula \(36 = c_{4,3} = 3(c_{3,3} + c_{3,2}) = 3(6+6)\), true.
 \end{proof}
 
 \subsection{Exercise 27}
@@ -5223,7 +5161,7 @@ Consider the set \(P\) of all permutations of an \(n\) element set \(A = \{a_1, 
 
 Let us divide \(P\) into subsets. For each \(r\)-element subset \(B\) of \(A\), let \(P_B \subseteq P\) be the set of 
 permutations where, the first \(r\) elements are a permutation of \(B\), and the remaining \(n-r\) elements are a permutation 
-of the remaining elements \(A - A_r\).
+of the remaining elements \(A - B\).
 
 To give an example, take \(n = 4, r = 2, B = \{a_2, a_4\}\), so \(P_B = \{a_2a_4a_1a_3, a_2a_4a_3a_1\), \\ \(a_4a_2a_1a_3, 
 a_4a_2a_3a_1\}\).
@@ -5233,7 +5171,6 @@ There are \(r!\) ways to permute the \(r\) elements of \(B\), and there are \((n
 
 Then each subset \(P_B \subseteq P\) contains \(r!(n-r)!\) permutations. By the division rule given in the problem, there 
 are \(\dps \frac{n!}{r!(n-r)!}\) such subsets of \(P\).
-
 Each one of these subsets \(P_B \subseteq P\) corresponds one-to-one to an \(r\)-element subset \(B\) of \(A\). So there are 
 as many ways of choosing an \(r\)-element subset of \(A\) as there are subsets \(P_B\) of \(P\).
 \end{proof}
@@ -5292,7 +5229,7 @@ The three elements of the set are 1, 2, and 3. The 5-combinations are \([1, 1, 1
 According to Theorem 9.6.1, how many multisets of size four can be chosen from a set of three elements?
 
 \begin{proof}
-\(\dps \binom{4+3-1}{4} = \binom{6}{4} = \frac{6 \cdot 5}{2} = 15\)
+\(\binom{4+3-1}{4} = \binom{6}{4} = \frac{6 \cdot 5}{2} = 15\)
 \end{proof}
 
 \subsubsection{(b)}
@@ -5316,7 +5253,7 @@ kind.
 How many different selections of twenty pastries are there?
 
 \begin{proof}
-\(\dps \binom{20+6-1}{20} = \binom{25}{20} = 53,130\)
+\(\binom{20+6-1}{20} = \binom{25}{20} = 53,130\)
 \end{proof}
 
 \subsubsection{(b)}
@@ -5324,7 +5261,7 @@ How many different selections of twenty pastries are there if at least three mus
 
 \begin{proof}
 If at least three are éclairs, then 17 additional pastries are selected from six kinds. The number of selections is 
-\(\dps \binom{17+6-1}{17} = \binom{22}{17} = 26,334\).
+\(\binom{17+6-1}{17} = \binom{22}{17} = 26,334\).
 
 {\it Note:} In parts (a) and (b), it is assumed that the selections being counted are unordered.
 \end{proof}
@@ -5333,11 +5270,11 @@ If at least three are éclairs, then 17 additional pastries are selected from si
 How many different selections of twenty pastries contain at most two éclairs?
 
 \begin{proof}
-Let T be the set of selections of pastry that may be any one of the six kinds, let \(E_{\geq 3}\) be the set of selections 
-containing three or more éclairs, and let \(E_{\geq 2}\) be the set of selections containing two or fewer éclairs. Notice
-that \(T = E_{\geq 2} \cup E_{\geq 3}\) and \(E_{\geq 2} \cap E_{\geq 3} = \es\). So by the inclusion / exclusion principle
-\(N(T) = N(E_{\geq 2}) + N(E_{\geq 3}) - N(\es)\), and by parts (a) and (b) \(53,130 = N(E_{\geq 2}) + 26,334 - 0\) and
-solving, we get \(N(E_{\geq 2}) = 26,976\).
+Let \(T\) be the set of selections of pastry that may be any one of the six kinds, let \(E_{\geq 3}\) be the set of 
+selections containing three or more éclairs, and let \(E_{\geq 2}\) be the set of selections containing two or fewer éclairs. 
+Notice that \(T = E_{\geq 2} \cup E_{\geq 3}\) and \(E_{\geq 2} \cap E_{\geq 3} = \es\). So by the inclusion / exclusion 
+principle \(N(T) = N(E_{\geq 2}) + N(E_{\geq 3}) - N(\es)\), and by parts (a) and (b) \(53,130=N(E_{\geq 2}) + 26,334 - 0\) 
+and solving, we get \(N(E_{\geq 2}) = 26,976\).
 \end{proof}
 
 \subsection{Exercise 4}
@@ -5725,9 +5662,8 @@ S_{\geq 9} = S_{\geq 9} \cap T = S_{\geq 9} \cap (E_{\leq 10} \cup E_{\geq 11}) 
 (S_{\geq 9} \cap E_{\geq 11})
 \]
 So \(N(S_{\geq 9} \cap E_{\leq 10}) = N(S_{\geq 9}) - N(S_{\geq 9} \cap E_{\geq 11}) = \binom{(20-9)+6-1}{20-9} - 
-\binom{(20-(9+11))+6-1}{20-(9+11)} = \binom{16}{11} - \binom{5}{0} = 4368-1 = 4367\).
-
-Finally \(N(E_{\leq 10} \cap S_{\leq 8}) = 50127 - 4367 = 45760\).
+\binom{(20-(9+11))+6-1}{20-(9+11)} = \binom{16}{11} - \binom{5}{0} = 4368-1 = 4367\). Finally \(N(E_{\leq 10} \cap 
+S_{\leq 8}) = 50127 - 4367 = 45760\).
 \end{proof}
 
 \subsection{Exercise 20}
@@ -5784,375 +5720,631 @@ When \(k=3\), \(j\) ranges first from 1 to \(k=1\), and then from 1 to \(k=2\) a
 first from 1 to \(j=1\), then again from 1 to \(j=1\) and then from 1 to \(j=2\), and then again from 1 to \(j=1\) then again 
 from 1 to \(j=2\) and then from 1 to \(j=3\), so there are 1 + (1+2) + (1+2+3) columns.
 
-And so on. So the overall sum has the form \(\dps \sum_{i=1}^{n}(1+\cdots+i)\). Since \(1+\cdots+i = \frac{i(i+1)}{2}\),
+And so on. So the overall sum has the form \(\sum_{i=1}^{n}(1+\cdots+i)\). 
+
+Since \(1+\cdots+i = \frac{i(i+1)}{2}\),
 it becomes \(\dps \sum_{i=1}^{n}\frac{i(i+1)}{2} = \frac{1}{2}\sum_{i=1}^{n}i(i+1)\). Now by Exercise 13 in 5.2, we have
 \(\dps \frac{1}{2}\sum_{i=1}^{n}i(i+1) = \frac{1}{2} \cdot \frac{(n+1)(n+1-1)(n+1+1)}{3} = \frac{(n+1)n(n+2)}{6}\).
 \end{proof}
 
 \section{Exercise Set 9.7}
+{\bf \cy In \(1-4\), use theorem 9.5.1 to compute the values of the indicated quantities. (assume \(n\) is an integer.)}
 
 \subsection{Exercise 1}
-
+\(\binom{n}{0}\), for \(n \geq 0\)
 \begin{proof}
-
+\(\frac{n!}{0!(n-0)!} = \frac{\Cyancel{n!}}{1 \cdot \Cyancel{n!}} = 1\)
 \end{proof}
 
 \subsection{Exercise 2}
-
+\(\binom{n}{1}\), for \(n \geq 1\)
 \begin{proof}
-
+\(\dps \frac{n\Cyancel{(n-1)!}}{1!\Cyancel{(n-1)!}} = n\)
 \end{proof}
 
 \subsection{Exercise 3}
-
+\(\binom{n}{2}\), for \(n \geq 2\)
 \begin{proof}
-
+\(\dps \frac{n(n-1)\Cyancel{(n-2)!}}{2!\Cyancel{(n-2)!}} = \frac{n(n-1)}{2}\)
 \end{proof}
 
 \subsection{Exercise 4}
-
+\(\binom{n}{3}\), for \(n \geq 3\)
 \begin{proof}
-
+\(\dps \frac{n(n-1)(n-2)\Cyancel{(n-3)!}}{3!\Cyancel{(n-3)!}} = \frac{n(n-1)(n-2)}{6}\)
 \end{proof}
 
 \subsection{Exercise 5}
+Use Theorem 9.5.1 to prove algebraically that \(\binom{n}{r} = \binom{n}{n-r}\), for integers \(n,r\) with \(0\leq r\leq n\).
+(This can be done by direct calculation; it is not necessary to use mathematical induction.)
 
 \begin{proof}
-
+Suppose \(n\) and \(r\) are nonnegative integers and \(r \leq n\). Then
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps\binom{n}{r}\) & = & \(\dps\frac{n!}{r!(n-r)!}\) & {\cy by Theorem 9.5.1} \\
+& = & \(\dps\frac{n!}{(n-(n-r))!(n-r)!}\) & {\cy since \(n-(n-r) = r\)} \\
+& = & \(\dps\frac{n!}{(n-r)!(n-(n-r))!}\) & {\cy by commutativity} \\
+& = & \(\dps\binom{n}{n-r}\) & {\cy by Theorem 9.5.1}
+\end{tabular}
+\end{center}
 \end{proof}
 
+{\bf \cy Justify the equations in \(6-9\) either by deriving them from formulas in Example 9.7.1 or by direct computation 
+from Theorem 9.5.1. Assume \(m, n, k\), and \(r\) are integers.}
+
 \subsection{Exercise 6}
-
+\(\binom{m+k}{m+k-1} = m+k\), for \(m+k \geq 1\)
 \begin{proof}
+{\it Solution 1:} Apply formula (9.7.2) with \(m + k\) in place of \(n\). This is legal because \(m + k \geq 1\).
 
+{\it Solution 2:}
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps\binom{m+k}{m+k-1}\) & = & \(\dps\frac{(m+k)!}{(m+k-1)![(m+k)-(m+k-1)]!}\) & {\cy by Theorem 9.5.1} \\
+& = & \(\dps\frac{(m+k)(m+k-1)!}{(m+k-1)![m+k-m-k+1]!}\) & {\cy by algebra} \\
+& = & \(\dps\frac{(m+k)(m+k-1)!}{(m+k-1)! \cdot 1!} = m+k\) & {\cy by algebra}
+\end{tabular}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 7}
+\(\binom{n+3}{n+1} = \frac{(n+3)(n+2)}{2}\), for \(n \geq -1\)
 
 \begin{proof}
-
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps\binom{n+3}{n+1}\) & = & \(\dps\frac{(n+3)!}{(n+1)![(n+3)-(n+1)]!}\) & {\cy by Theorem 9.5.1} \\
+& = & \(\dps\frac{(n+3)(n+2)(n+1)!}{(n+1)! \cdot 2!}\) & {\cy by algebra} \\
+& = & \(\dps\frac{(n+3)(n+2)}{2}\) & {\cy by algebra}
+\end{tabular}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 8}
-
+\(\binom{k-r}{k-r} = 1\), for \(k-r \geq 0\)
 \begin{proof}
-
+\(\binom{k-r}{k-r} = \frac{(k-r)!}{(k-r)![(k-r)-(k-r)]!} = \frac{\Cyancel{(k-r)!}}{\Cyancel{(k-r)!} \cdot 0!} = 1\)
 \end{proof}
 
 \subsection{Exercise 9}
-
+\(\binom{2(n+1)}{2n} = (n+1)(2n+1)\), for \(n \geq 0\)
 \begin{proof}
-
+\(\binom{2(n+1)}{2n} = \frac{(2n+2)!}{(2n)!(2n+2-2n)!} = \frac{(2n+2)(2n+1)(2n)!}{(2n)!\cdot 2!}=\frac{(2n+2)(2n+1)}{2} 
+= (n+1)(2n+1)\)
 \end{proof}
 
 \subsection{Exercise 10}
-
 \subsubsection{(a)}
+Use Pascal’s triangle given in Table 9.7.1 to compute the values of \(\binom{6}{2}, \binom{6}{3}, \binom{6}{4}, 
+\binom{6}{5}\).
 
 \begin{proof}
+\(\binom{6}{2} = \binom{5}{2} + \binom{5}{1} = 10 + 5 = 15\),
+\(\binom{6}{3} = \binom{5}{3} + \binom{5}{2} = 10 + 10 = 20\)
 
+\(\binom{6}{4} = \binom{5}{4} + \binom{5}{3} = 5 + 10 = 15\),
+\(\binom{6}{5} = \binom{5}{5} + \binom{5}{4} = 1 + 5 = 6\)
 \end{proof}
 
 \subsubsection{(b)}
+Use the result of part (a) and Pascal’s formula to compute 
+\(\binom{7}{3}, \binom{7}{4}, \binom{7}{5}\).
 
 \begin{proof}
+\(\binom{7}{3} = \binom{6}{3} + \binom{6}{2} = 20 + 15 = 35\),
+\(\binom{7}{4} = \binom{6}{4} + \binom{6}{3} = 15 + 20 = 35\)
 
+\(\binom{7}{5} = \binom{6}{5} + \binom{6}{4} = 6 + 15 = 21\)
 \end{proof}
 
 \subsubsection{(c)}
+Complete the row of Pascal’s triangle that corresponds to \(n = 7\).
 
 \begin{proof}
-
+1 7 21 35 35 21 7 1
 \end{proof}
 
 \subsection{Exercise 11}
+The row of Pascal’s triangle that corresponds to \(n = 8\) is as follows: 1 8 28 56 70 56 28 8 1. What is the row that 
+corresponds to \(n = 9\)?
 
 \begin{proof}
-
+1 9 26 84 126 126 84 26 9 1
 \end{proof}
 
 \subsection{Exercise 12}
+Use Pascal’s formula repeatedly to derive a formula for \(\binom{n+3}{r}\) in terms of values of \(\binom{n}{k}\) with 
+\(k \leq r\). (Assume \(n\) and \(r\) are integers with \(n \geq r \geq 3\).)
 
 \begin{proof}
-
+\(\binom{n+3}{r} = \binom{n+2}{r} + \binom{n+2}{r-1} = \left[\binom{n+1}{r} + \binom{n+1}{r-1}\right] + 
+\left[\binom{n+1}{r-1} + \binom{n+1}{r-2}\right]\)
+\newpage
+\(= \left[\left(\binom{n}{r} + \binom{n}{r-1}\right) + \left(\binom{n}{r-1} + \binom{n}{r-2}\right)\right] + 
+\left[\left(\binom{n}{r-1} + \binom{n}{r-2}\right) + \left(\binom{n}{r-2} + \binom{n}{r-3}\right)\right]\)
 \end{proof}
 
 \subsection{Exercise 13}
-
+Use Pascal’s formula to prove by mathematical induction that if \(n\) is an integer and \(n \geq 1\), then
+\[
+\sum_{i=2}^{n+1}\binom{i}{2} = \binom{2}{2} + \cdots + \binom{n+1}{2} = \binom{n+2}{3}.
+\]
 \begin{proof}
+Let \(P(n)\) be the statement of the formula above.
 
+{\bf Show that \(P(1)\) is true:} The left hand side is \(\sum_{i=2}^{1+1}\binom{i}{2} = \binom{2}{2} = 1\) and the 
+right side is \(\binom{1+2}{3} = \binom{3}{3} = 1\). So \(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq 1\) is any
+integer such that \(\sum_{i=2}^{k+1} \binom{i}{2} = \binom{k+2}{3}\). {\it [This is the inductive hypothesis.]}
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps \sum_{i=2}^{k+2} \binom{i}{2}\) & = & \(\dps \sum_{i=2}^{k+1} \binom{i}{2} + \binom{k+2}{2}\) & {\cy separating last 
+term} \\
+& = & \(\dps \binom{k+2}{3} + \binom{k+2}{2}\) & {\cy by inductive hypothesis} \\
+& = & \(\dps \binom{(k+2)+1}{3}\) & {\cy by Pascal's formula} \\
+& = & \(\dps \binom{k+3}{3}\) & {\cy by algebra}
+\end{tabular}
+\end{center}
+which is the right-hand side of \(P(k + 1)\) {\it [as was to be shown]}. {\it [Since we have proved the basis step and the 
+inductive step, we conclude that \(P(n)\) is true for all \(n \geq 1\).]}
 \end{proof}
 
 \subsection{Exercise 14}
+Prove that if \(n\) is an integer and \(n \geq 1\), then \(1 \cdot 2 + 2 \cdot 3 + \cdots + n(n + 1) = 2 \binom{n+2}{3}\).
 
 \begin{proof}
-
+By Exercise 3, \(\binom{i}{2} = \frac{i(i-1)}{2}\). 
+So \(1 \cdot 2 + 2 \cdot 3 + \cdots + n(n + 1) = 2 \left( \frac{1 \cdot 2}{2} + \cdots + \frac{n(n+1)}{2}\right) = 
+2\left(\binom{2}{2} + \cdots + \binom{n+1}{2}\right)\).
+By Exercise 13, the last expression is equal to \(2 \binom{n+2}{3}\).
 \end{proof}
 
 \subsection{Exercise 15}
-
+Prove the following generalization of exercise 13: Let \(r\) be a fixed nonnegative integer. For every integer \(n\) with 
+\(n \geq r\),
+\[
+\sum_{i=r}^{n}\binom{i}{r} = \binom{n+1}{r+1}
+\]
 \begin{proof}
+Let \(P(n)\) be the statement of the equation above.
 
+{\bf Show that \(P(r)\) is true:} The left hand side is 
+\(\sum_{i=r}^r \binom{i}{r} = \binom{r}{r} = 1\), the right 
+hand side is \(\binom{r+1}{r+1} = 1\). {\it [So \(P(r)\) is true.]} 
+
+{\bf Show that for any integer \(k \geq r\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq r\) and assume 
+\(\sum_{i=r}^{k}\binom{i}{r} = \binom{k+1}{r+1}\). {\it [This is the inductive hypothesis.]} Then
+\begin{center}
+\begin{tabular}{rcll}
+\(\dps \sum_{i=r}^{k+1} \binom{i}{r}\) & = & \(\dps \sum_{i=r}^{k} \binom{i}{r} + \binom{k+1}{r}\) & {\cy separating last 
+term} \\
+& = & \(\dps \binom{k+1}{r+1} + \binom{k+1}{r}\) & {\cy by inductive hypothesis} \\
+& = & \(\dps \binom{(k+1)+1}{r+1}\) & {\cy by Pascal's formula} \\
+& = & \(\dps \binom{k+2}{r+1}\) & {\cy by algebra}
+\end{tabular}
+\end{center}
+which is the right-hand side of \(P(k + 1)\) {\it [as was to be shown]}. {\it [Since we have proved the basis step and the 
+inductive step, we conclude that \(P(n)\) is true for all \(n \geq r\).]}
 \end{proof}
 
 \subsection{Exercise 16}
+Think of a set with \(m + n\) elements as composed of two parts, one with \(m\) elements and the other with \(n\) 
+elements. Give a combinatorial argument to show that
+\[
+\binom{m+n}{r} = \binom{m}{0}\binom{n}{r} + \binom{m}{1}\binom{n}{r-1} + \cdots + \binom{m}{r}\binom{n}{0}
+\]
+where \(m\) and \(n\) are positive integers and \(r\) is an integer that is less than or equal to both \(m\) and \(n\). 
+This identity gives rise to many useful additional identities involving the quantities \(\binom{n}{k}\). Because Alexander 
+Vandermonde published an influential article about it in 1772, it is generally called the Vandermonde convolution. However, it was known at least in the 1300s in China by Chu Shih-chieh.
 
 \begin{proof}
+This follows from the addition and multiplication rules. We want to choose \(r\) elements from a set \(K\) of \(m+n\) 
+elements. We can think of \(K\) as the union of two disjoint sets \(M\) and \(N\) of \(m\) and \(n\) elements respectively. 
+The possibilities for an \(r\) element subset are:
 
+0 elements from \(M\) and \(r\) elements from \(N\) (\(\binom{m}{0}\binom{n}{r}\) ways to choose),
+
+1 element from \(M\) and \(r-1\) elements from \(N\) (\(\binom{m}{1}\binom{n}{r-1}\) ways to choose),
+
+\(\vdots\)
+
+\(r\) elements from \(M\) and 0 elements from \(N\) (\(\binom{m}{r}\binom{n}{0}\) ways to choose).
+
+These possibilities are disjoint, then the formula follows by the addition rule.
 \end{proof}
 
 \subsection{Exercise 17}
-
+Prove that for every integer \(n \geq 0\),
+\[
+\binom{n}{0}^2 + \binom{n}{1}^2 + \cdots + \binom{n}{n}^2 = \binom{2n}{n}.
+\]
 \begin{proof}
-
+By the previous exercise, with \(m=n\) and \(r=n\), we get
+\[
+\binom{n+n}{n} = \binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1} + \cdots + \binom{n}{n}\binom{n}{0}
+\]
+Since \(\binom{n}{i} = \binom{n}{n-i}\) for all \(i = 0, 1, \ldots, n\), we have \(\binom{n}{n} = \binom{n}{0}\) and
+\(\binom{n}{n-1} = \binom{n}{1}\) and so on. Therefore
+\[
+\binom{2n}{n} = \binom{n}{0}\binom{n}{0} + \binom{n}{1}\binom{n}{1} + \cdots + \binom{n}{n}\binom{n}{n}
+\]
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 18}
-
+Let \(m\) be any nonnegative integer. Use mathematical induction and Pascal’s formula to prove that for every integer 
+\(n \geq 0\),
+\[
+\binom{m}{0} + \binom{m+1}{1} + \cdots + \binom{m+n}{n} = \binom{m+n+1}{n}
+\]
 \begin{proof}
+Let \(P(n)\) be the statement above.
 
+{\bf Show that \(P(0)\) is true:} The left hand side is \(\binom{m}{0} = 1\) and the right hand side is \(\binom{m+1}
+{0} = 1\), so \(P(0)\) is true.
+
+{\bf Show that for any integer \(k \geq 0\), if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq 0\) and assume
+\[
+\binom{m}{0} + \binom{m+1}{1} + \cdots + \binom{m+k}{k} = \binom{m+k+1}{k} \,\,\, {\cy \from P(k) \text{(inductive hypothesis)}}
+\]
+Then \(\binom{m}{0} + \binom{m+1}{1} + \cdots + \binom{m+k}{k}+ \binom{m+k+1}{k+1} = \binom{m+k+1}{k} + \binom{m+k+1}{k+1}\)
+by the inductive hypothesis. By Pascal's formula \(\binom{m+k+1}{k} + \binom{m+k+1}{k+1} = \binom{m+k+2}{k+1}\),
+which proves \(P(k+1)\).
 \end{proof}
 
+{\bf \cy Use the binomial theorem to expand the expressions in \(19-27\).}
+
 \subsection{Exercise 19}
-
+\((1+x)^7\)
 \begin{proof}
-
+\(1 + 7x + 21x^2 + 35x^3 + 35x^4 + 21x^5 + 7x^6 + x^7\)
 \end{proof}
 
 \subsection{Exercise 20}
-
+\((p+q)^6\)
 \begin{proof}
-
+\(p^6 + 6p^5q + 15p^4q^2 + 20p^3q^3 + 15p^2q^4 + 6pq^5 + q^6\)
 \end{proof}
 
 \subsection{Exercise 21}
-
+\((1-x)^6\)
 \begin{proof}
-
+\(1 - 6x + 15x^2 - 20x^3 + 15x^4 - 6x^5 + x^6\)
 \end{proof}
 
 \subsection{Exercise 22}
-
+\((u-v)^5\)
 \begin{proof}
-
+\(u^5 -5u^4v +10u^3v^2 -10u^2v^3 +5uv^4 -v^5\)
 \end{proof}
 
 \subsection{Exercise 23}
-
+\((p-2q)^4\)
 \begin{proof}
-
+\(p^4 - 8p^3q + 24p^2q^2 - 32pq^3 + 16q^4\)
 \end{proof}
 
 \subsection{Exercise 24}
-
+\((u-3v)^4\)
 \begin{proof}
-
+\(u^4 - 12u^3v + 54u^2v^2 - 108uv^3 + 81v^4\)
 \end{proof}
 
 \subsection{Exercise 25}
-
+\(\left(x+\frac{1}{x}\right)^5\)
 \begin{proof}
-
+\(x^5 + 5x^3 + 10x + \frac{10}{x} + \frac{5}{x^3} + \frac{1}{x^5}\)
 \end{proof}
 
 \subsection{Exercise 26}
-
+\(\left(\frac{3}{a}-\frac{a}{3}\right)^5\)
 \begin{proof}
-
+\(\frac{243}{a^5} - \frac{135}{a^3} + \frac{30}{a} - \frac{10a}{3} + \frac{5a^3}{27} - \frac{a^5}{243}\)
 \end{proof}
 
 \subsection{Exercise 27}
-
+\(\left(x^2+\frac{1}{x}\right)^5\)
 \begin{proof}
-
+\(x^{10} + 5x^7 + 10x^4 + 10x + \frac{5}{x^2} + \frac{1}{x^5}\)
 \end{proof}
 
 \subsection{Exercise 28}
+In Example 9.7.5 it was shown that \((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5\). Evaluate \((a + b)^6\) by 
+substituting the expression above into the equation \((a + b)^6 = (a + b)(a + b)^5\) and then multiplying out and 
+combining like terms.
 
 \begin{proof}
-
+\((a + b)^6\) = \((a + b)(a + b)^5\) = \((a+b)(a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5)\) = \((a^6 + 5a^5b + 
+10a^4b^2 + 10a^3b^3 + 5a^2b^4 + ab^5)\) + \((a^5b + 5a^4b^2 + 10a^3b^3 + 10a^2b^4 + 5ab^5 + b^6)\) = \(a^6 + 6a^5b + 15a^4b^2 + 20a^3b^3 + 15a^2b^4 + 6ab^5 + b^6\)
 \end{proof}
 
+{\bf \cy In \(29-34\), find the coefficient of the given term when the expression is expanded by the binomial theorem.}
+
 \subsection{Exercise 29}
-
+\(x^6y^3\) in \((x+y)^9\)
 \begin{proof}
-
+The term is \(\binom{9}{3}x^6y^3 = 84x^6y^3\), so the coefficient is 84.
 \end{proof}
 
 \subsection{Exercise 30}
-
+\(x^7\) in \((2x+3)^{10}\)
 \begin{proof}
-
+The term is \(\binom{10}{3}(2x)^7 3^3 = 120(128x^7)(27)\), so the coefficient is \(120 \cdot 128 \cdot 27 = 414,720\).
 \end{proof}
 
 \subsection{Exercise 31}
-
+\(a^5b^7\) in \((a-2b)^{12}\)
 \begin{proof}
-
+The term is \(\dps \binom{12}{7}a^5(-2b)^7 = 792a^5(-128b^7)\), so the coefficient is \(792 \cdot (-128) = -101,376\).
 \end{proof}
 
 \subsection{Exercise 32}
-
+\(u^{16}v^4\) in \((u^2-v^2)^{10}\)
 \begin{proof}
-
+The term is \(\dps \binom{10}{2}(u^2)^8(-v^2)^2 = 45u^{16}v^4\), so the coefficient is 45.
 \end{proof}
 
 \subsection{Exercise 33}
-
+\(p^{16}q^7\) in \((3p^2-2q)^{15}\)
 \begin{proof}
-
+The term is \(\dps \binom{15}{7}(3p^2)^8(-2q)^7 = 6435(3^8)(-2)^7p^{16}q^7\), so the coefficient is \(-6435 \cdot 3^8 
+\cdot 2^7 = -5,404,164,480\).
 \end{proof}
 
 \subsection{Exercise 34}
-
+\(x^9y^{10}\) in \((2x-3y^2)^{14}\)
 \begin{proof}
-
+The term is \(\binom{14}{5}(2x)^9(-3y)^5 = 2002(512)(-243)x^9y^5\), so the coefficient is \(-2002 \cdot 512 \cdot 
+243 = -249,080,832\).
 \end{proof}
 
 \subsection{Exercise 35}
-
+As in the proof of the binomial theorem, transform the summation
+\[
+\sum_{k=0}^{n}\binom{m}{k}a^{m-k}b^{k+1}
+\]
+by making the change of variable \(j = k + 1\).
 \begin{proof}
-
+\[
+\sum_{k=0}^{n}\binom{m}{k}a^{m-k}b^{k+1} = \sum_{j=1}^{n+1}\binom{m}{j-1}a^{m-(j-1)}b^j
+\]
 \end{proof}
 
+{\bf \cy Use the binomial theorem to prove each statement in \(36-41\).}
+
 \subsection{Exercise 36}
+For every integer \(n \geq 1\),
+\[
+\binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \cdots + (-1)^n \binom{n}{n} = 0.
+\]
+({\it Hint:} Use the fact that \(1 + (-1) = 0\).)
 
 \begin{proof}
-
+By the binomial theorem
+\[
+0 = 1-1 = (1-1)^n = \sum_{i=0}^{n}\binom{n}{i}1^{n-i}(-1)^i = \binom{n}{0} - \binom{n}{1} + \cdots + (-1)^n \binom{n}{n}
+\]
 \end{proof}
 
 \subsection{Exercise 37}
+For every integer \(n \geq 0\), \( 3^n = \binom{n}{0} + 2\binom{n}{1} + 2^2\binom{n}{2} + \cdots + 2^n\binom{n}{n}.\)
 
 \begin{proof}
-
+By the binomial theorem \(3^n = (1+2)^n = \sum_{i=0}^{n}\binom{n}{i}1^{n-i}2^i = \binom{n}{0} + 2\binom{n}{1} + \cdots 
++ 2^n\binom{n}{n}\).
 \end{proof}
 
 \subsection{Exercise 38}
+For every integer \(m \geq 0\), \(\dps \sum_{i=0}^{m} (-1)^i \binom{m}{i}2^{m-i} = 1\).
 
 \begin{proof}
-
+By the binomial theorem \(1 = 1^m = (2-1)^m = \sum_{i=0}^{m} (-1)^i \binom{m}{i}2^{m-i}\).
 \end{proof}
 
 \subsection{Exercise 39}
+For every integer \(n \geq 0\), \(\dps \sum_{i=0}^{n} (-1)^i \binom{n}{i}3^{n-i} = 2^n\).
 
 \begin{proof}
-
+By the binomial theorem \(2^n = (3-1)^n = \sum_{i=0}^{n} (-1)^i \binom{n}{i}3^{n-i}.\)
 \end{proof}
 
 \subsection{Exercise 40}
+For every integer \(n \geq 0\) and for every nonnegative real number \(x\), \(1 + nx \leq (1 + x)^n\).
 
 \begin{proof}
-
+By the binomial theorem
+\[
+(1+x)^n = \sum_{i=0}^{n} \binom{n}{i}1^{n-i}x^i = 1 + nx + \binom{n}{2}x^2 + \cdots + x^n
+\]
+Since \(x \geq 0\) we have \(\binom{n}{2}x^2 + \cdots + x^n \geq 0\), therefore \((1+x)^n \geq 1 + nx\).
 \end{proof}
 
 \subsection{Exercise 41}
-
+For every integer \(n \geq 1\),
+\[
+\binom{n}{0} - \frac{1}{2}\binom{n}{1} + \frac{1}{2^2}\binom{n}{2} - \frac{1}{2^3}\binom{n}{3} + \cdots + (-1)^{n-1}
+\frac{1}{2^{n-1}}\binom{n}{n-1} =
+\left\{
+\begin{tabular}{ll}
+\(0\) & if \(n\) is even \\
+\(\frac{1}{2^{n-1}}\) & if \(n\) is odd
+\end{tabular}
+\right.
+\]
 \begin{proof}
-
+By the binomial theorem, 
+\[
+\frac{1}{2^n} = (1-\frac{1}{2})^n = \binom{n}{0}- \frac{1}{2}\binom{n}{1} + \frac{1}{2^2} \binom{n}{2} - \cdots + 
+(-1)^{n-1} \frac{1}{2^{n-1}} \binom{n}{n-1} + (-1)^{n} \frac{1}{2^{n}}\binom{n}{n}
+\]
+Notice that \(\binom{n}{n} = 1\), so moving the last term of the right hand side to the left, we get
+\[
+\frac{1}{2^n} - (-1)^{n} \frac{1}{2^{n}} = \binom{n}{0}- \frac{1}{2}\binom{n}{1} + \frac{1}{2^2} \binom{n}{2} - \cdots 
++ (-1)^{n-1} \frac{1}{2^{n-1}} \binom{n}{n-1}
+\]
+Finally notice that the left hand side is 0 when \(n\) is even, and \(2 \cdot \frac{1}{2^n} = \frac{1}{2^{n-1}}\) when
+\(n\) is odd, {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 42}
+Use mathematical induction to prove that for every integer \(n \geq 1\), if \(S\) is a set with \(n\) elements, then \(S\) 
+has the same number of subsets with an even number of elements as with an odd number of elements. Use this fact to give a 
+combinatorial argument to justify the identity of Exercise 36.
 
 \begin{proof}
+Let \(P(n)\) be the statement ``if \(S\) is a set with \(n\) elements, then \(S\) has the same number of subsets with an 
+even number of elements as with an odd number of elements.''
 
+{\bf Show that \(P(1)\) is true:} If \(S = \{s\}\) has only 1 element, then there is only 1 subset with an even number of
+elements, which is \(\es\), and there is only 1 subset with an odd number of elements, which is \(\{s\}\). Since \(1=1\),
+\(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq 1\) and assume
+\(P(k)\) is true. Assume \(S = \{s_1, \ldots, s_{k+1}\}\) is a set with \(k+1\) elements.
+
+Define \(S' = \{s_1, \ldots, s_k\}\). Then \(S'\) has \(k\) elements. Let \(S'_{even}\) be the set of subsets of \(S'\) 
+with an even number of elements, and let \(S'_{odd}\) be the set of subsets of \(S'\) with an odd number of elements. By 
+the inductive hypothesis, \(S'_{even}\) and \(S'_{odd}\) have the same number of elements, say \(N\). 
+
+Let \(S_{even}\) be the set of subsets of \(S\) with an even number of elements, and let \(S_{odd}\) be the set of subsets 
+of \(S\) with an odd number of elements.
+
+\(S_{even}\) is the disjoint union of two sets: \(S_{even} = S'_{even} \cup A\) where \(A\) is the set of subsets of \(S\) with an even number of elements that contain \(s_{k+1}\).
+
+Similarly \(S_{odd}\) is the disjoint union of two sets: \(S_{odd} = S'_{odd} \cup B\) where \(B\) is the set of subsets 
+of \(S\) with an odd number of elements that contain \(s_{k+1}\).
+
+Notice that there is a 1-1 correspondence between \(A\) and \(S'_{odd}\): if \(X \in A\) then \((X - \{s_{k+1}\}) \in 
+S'_{odd}\), and vice versa. So \(A\) has \(N\) elements too.
+
+Similarly notice that there is a 1-1 correspondence between \(B\) and \(S'_{even}\): if \(X \in B\) then \((X - \{s_{k+1}\}) \in S'_{even}\), and vice versa. So \(B\) has \(N\) elements too.
+
+This shows that both \(S_{even}\) and \(S_{odd}\) each have \(2N\) elements, {\it [as was to be shown.]}
+
+The identity of Exercise 36 can be interpreted as follows: the positive terms \(\binom{n}{0},\binom{n}{2},\ldots\) correspond 
+to the number of ways to choose the subsets with an even number of elements; and the negative terms \(\binom{n}{1}, 
+\binom{n}{3}, \ldots\) correspond to the number of ways to choose the subsets with an odd number of elements. By this 
+exercise, the sums of these two quantities are equal, so if we subtract them, we get 0, which proves the identity.
 \end{proof}
 
+{\bf \cy Express each of the sums in \(43-54\) in closed form (without using a summation symbol and without using an 
+ellipsis \(\ldots\)).}
+
 \subsection{Exercise 43}
-
+\(\sum_{k=0}^{n} \binom{n}{k} 5^{k}\)
 \begin{proof}
-
+By the binomial theorem this is \((1+5)^n = 6^n\).
 \end{proof}
 
 \subsection{Exercise 44}
-
+\(\dps \sum_{i=0}^{m} \binom{m}{i} 4^{i}\)
 \begin{proof}
-
+By the binomial theorem this is \((1+4)^m = 5^m\).
 \end{proof}
 
 \subsection{Exercise 45}
-
+\(\dps \sum_{i=0}^{n} \binom{n}{i} x^{i}\)
 \begin{proof}
-
+By the binomial theorem this is \((1+x)^n\).
 \end{proof}
 
 \subsection{Exercise 46}
-
+\(\dps \sum_{k=0}^{m} \binom{m}{k} 2^{m-k}x^k\)
 \begin{proof}
-
+By the binomial theorem this is \((2+x)^m\).
 \end{proof}
 
 \subsection{Exercise 47}
-
+\(\dps \sum_{j=0}^{2n} (-1)^j \binom{2n}{j} x^{j}\)
 \begin{proof}
-
+By the binomial theorem this is \((1-x)^{2n}\).
 \end{proof}
 
 \subsection{Exercise 48}
-
+\(\dps \sum_{r=0}^{n} \binom{n}{r} x^{2r}\)
 \begin{proof}
-
+By the binomial theorem this is \((1+x^2)^n\).
 \end{proof}
 
 \subsection{Exercise 49}
-
+\(\dps \sum_{i=0}^{m} \binom{m}{i} p^{m-i}q^{2i}\)
 \begin{proof}
-
+By the binomial theorem this is \((p+q^2)^m\).
 \end{proof}
 
 \subsection{Exercise 50}
-
+\(\dps \sum_{k=0}^{n} \binom{n}{k} \frac{1}{2^k}\)
 \begin{proof}
-
+By the binomial theorem this is \((1+\frac{1}{2})^n = \frac{3^n}{2^n}\).
 \end{proof}
 
 \subsection{Exercise 51}
-
+\(\dps \sum_{i=0}^{m} (-1)^{i} \binom{m}{i} \frac{1}{2^i}\)
 \begin{proof}
-
+By the binomial theorem this is \((1-\frac{1}{2})^m = \frac{1}{2^m}\).
 \end{proof}
 
 \subsection{Exercise 52}
-
+\(\dps \sum_{k=0}^{n} \binom{n}{k} 3^{2n-2k}2^{2k}\)
 \begin{proof}
-
+By the binomial theorem this is \((3^2+2^2)^n = 13^n\).
 \end{proof}
 
 \subsection{Exercise 53}
-
+\(\dps \sum_{i=0}^{n} (-1)^i \binom{n}{i} 5^{n-i}2^i\)
 \begin{proof}
-
+By the binomial theorem this is \((5-2)^n = 3^n\).
 \end{proof}
 
 \subsection{Exercise 54}
-
+\(\dps \sum_{k=0}^{n} (-1)^k \binom{n}{k} 3^{2n-2k}2^{2k}\)
 \begin{proof}
-
+By the binomial theorem this is \((3^2-2^2)^n = 5^n\).
 \end{proof}
 
 \subsection{Exercise 55}
+(For students who have studied calculus.)
 
 \subsubsection{(a)}
-
+Explain how the equation below follows from the binomial theorem: 
+\[
+(1+x)^n = \sum_{k=0}^{n} \binom{n}{k} x^k
+\]
 \begin{proof}
-
+By the binomial theorem \((1+x)^n = \sum_{k=0}^{n} \binom{n}{k} 1^{n-k}x^k\) but \(1^{n-k}=1\) for all \(k= 0, \ldots, n\)
+so the equation follows.
 \end{proof}
 
 \subsubsection{(b)}
+Write the formula obtained by taking the derivative of both sides of the equation in part (a) with respect to \(x\).
 
 \begin{proof}
-
+\(n(1+x)^{n-1} = \sum_{k=1}^n \binom{n}{k}kx^{k-1}\)
 \end{proof}
 
 \subsubsection{(c)}
+Use the result of part (b) to derive the formulas below.
+
+(i) \(\dps 2^{n-1} = \frac{1}{n}\left[\binom{n}{1} + 2\binom{n}{2} + \cdots + n\binom{n}{n}\right]\)
+
+(ii) \(\dps \sum_{k=0}^{n} k \binom{n}{k} (-1)^k = 0\)
 
 \begin{proof}
+(i) Let \(x = 1\) in the result of part (b): \(n(1+1)^{n-1} = \sum_{k=1}^n \binom{n}{k}k \cdot 1^{k-1}\) which gives 
+\(n2^{n-1} = \sum_{k=1}^n \binom{n}{k}k = \binom{n}{1} + \cdots + n\binom{n}{n}\). Dividing by \(n\) gives us the 
+desired result.
 
+(ii) Let \(x = -1\) in the result of part (b): \(n(1-1)^{n-1} = \sum_{k=1}^n \binom{n}{k}k (-1)^{k-1}\) which gives 
+\(0 = \sum_{k=1}^n \binom{n}{k}k (-1)^{k-1}\). Multiplying by \(-1\) gives us the desired result.
 \end{proof}
 
 \subsubsection{(d)}
+Express \(\dps \sum_{k=1}^{n} k \binom{n}{k} 3^k\) in closed form (without using a summation sign or ellipsis).
 
 \begin{proof}
-
+\(\dps \sum_{k=1}^{n} k \binom{n}{k} 3^k = 3 \sum_{k=1}^{n} k \binom{n}{k} 3^{k-1} = 3n(1+3)^{n-1} = 3n4^{n-1}\)
 \end{proof}
 
 \section{Exercise Set 9.8}
