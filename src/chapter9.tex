@@ -36,7 +36,7 @@
 \newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
 \newcommand\Cyancel[2][cyan]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
-\setlength{\extrarowheight}{15pt}
+\setlength{\extrarowheight}{10pt}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -1882,17 +1882,17 @@ How many arrangements in a row of no more than three letters can be formed using
 (with no repetitions allowed)?
 
 \begin{proof}
-\begin{figure}[ht!]
-\centering
-\includegraphics[scale=0.5]{../images/9.3.4.png}
-\end{figure}
-
 Use the multiplication rule to count the elements in each of the three sets containing 1, 2, and 3 letters, respectively. 
 Then, because these sets are disjoint, use the addition rule to compute the total number of elements in the three sets 
 taken together.
 
-Applying the addition rule to the figure above shows that there are \(7 + 7 \cdot 6 + 7 \cdot 6 \cdot 5 = 259\) 
+Applying the addition rule to the figure below shows that there are \(7 + 7 \cdot 6 + 7 \cdot 6 \cdot 5 = 259\) 
 arrangements of three letters of the word NETWORK if repetition of letters is not permitted.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.3.4.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 5}
@@ -4655,14 +4655,14 @@ In how many of the possible outcomes is at most one head obtained?
 How many 16-bit strings contain exactly seven 1’s?
 
 \begin{proof}
-\(\binom{16}{7}\binom{9}{9} = 11440\)
+\(\dps\binom{16}{7}\binom{9}{9} = 11440\)
 \end{proof}
 
 \subsubsection{(b)}
 How many 16-bit strings contain at least thirteen 1’s?
 
 \begin{proof}
-\(\binom{16}{13} + \binom{16}{14} + \binom{16}{15} + \binom{16}{16} = 560 + 120 + 16 + 1 = 697\)
+\(\dps\binom{16}{13} + \binom{16}{14} + \binom{16}{15} + \binom{16}{16} = 560 + 120 + 16 + 1 = 697\)
 \end{proof}
 
 \subsubsection{(c)}
@@ -4792,14 +4792,14 @@ How many distinguishable ways can the letters of the word HULLABALOO be arranged
 
 \begin{proof}
 HULLABALOO contains: 1 H, 1 U, 3 L's, 2 A's, 1 B, 2 O's, a total of \(1+1+3+2+1+2 = 10\) letters. By Theorem 9.5.2,
-\(\frac{10!}{1!1!3!2!1!2!} = 151,200\).
+\(\dps\frac{10!}{1!1!3!2!1!2!} = 151,200\).
 \end{proof}
 
 \subsubsection{(b)}
 How many distinguishable orderings of the letters of HULLABALOO begin with U and end with L?
 
 \begin{proof}
-Now we have 1 H, 2 L's, 2 A's, 1 B, 2 O's, so \(\frac{8!}{1!2!2!1!2!} = 5040\)
+Now we have 1 H, 2 L's, 2 A's, 1 B, 2 O's, so \(\dps\frac{8!}{1!2!2!1!2!} = 5040\)
 \end{proof}
 
 \subsubsection{(c)}
@@ -5720,7 +5720,7 @@ When \(k=3\), \(j\) ranges first from 1 to \(k=1\), and then from 1 to \(k=2\) a
 first from 1 to \(j=1\), then again from 1 to \(j=1\) and then from 1 to \(j=2\), and then again from 1 to \(j=1\) then again 
 from 1 to \(j=2\) and then from 1 to \(j=3\), so there are 1 + (1+2) + (1+2+3) columns.
 
-And so on. So the overall sum has the form \(\sum_{i=1}^{n}(1+\cdots+i)\). 
+And so on. So the overall sum has the form \(\dps\sum_{i=1}^{n}(1+\cdots+i)\). 
 
 Since \(1+\cdots+i = \frac{i(i+1)}{2}\),
 it becomes \(\dps \sum_{i=1}^{n}\frac{i(i+1)}{2} = \frac{1}{2}\sum_{i=1}^{n}i(i+1)\). Now by Exercise 13 in 5.2, we have
@@ -5774,7 +5774,7 @@ Suppose \(n\) and \(r\) are nonnegative integers and \(r \leq n\). Then
 from Theorem 9.5.1. Assume \(m, n, k\), and \(r\) are integers.}
 
 \subsection{Exercise 6}
-\(\binom{m+k}{m+k-1} = m+k\), for \(m+k \geq 1\)
+\(\dps\binom{m+k}{m+k-1} = m+k\), for \(m+k \geq 1\)
 \begin{proof}
 {\it Solution 1:} Apply formula (9.7.2) with \(m + k\) in place of \(n\). This is legal because \(m + k \geq 1\).
 
@@ -5789,7 +5789,7 @@ from Theorem 9.5.1. Assume \(m, n, k\), and \(r\) are integers.}
 \end{proof}
 
 \subsection{Exercise 7}
-\(\binom{n+3}{n+1} = \frac{(n+3)(n+2)}{2}\), for \(n \geq -1\)
+\(\dps\binom{n+3}{n+1} = \frac{(n+3)(n+2)}{2}\), for \(n \geq -1\)
 
 \begin{proof}
 \begin{center}
@@ -6132,7 +6132,7 @@ By the binomial theorem
 For every integer \(n \geq 0\), \( 3^n = \binom{n}{0} + 2\binom{n}{1} + 2^2\binom{n}{2} + \cdots + 2^n\binom{n}{n}.\)
 
 \begin{proof}
-By the binomial theorem \(3^n = (1+2)^n = \sum_{i=0}^{n}\binom{n}{i}1^{n-i}2^i = \binom{n}{0} + 2\binom{n}{1} + \cdots 
+By the binomial theorem \(\dps 3^n = (1+2)^n = \sum_{i=0}^{n}\binom{n}{i}1^{n-i}2^i = \binom{n}{0} + 2\binom{n}{1} + \cdots 
 + 2^n\binom{n}{n}\).
 \end{proof}
 
@@ -6348,215 +6348,448 @@ Express \(\dps \sum_{k=1}^{n} k \binom{n}{k} 3^k\) in closed form (without using
 \end{proof}
 
 \section{Exercise Set 9.8}
-
 \subsection{Exercise 1}
-
+In any sample space \(S\), what is \(P(\es)\)?
 \begin{proof}
-
+0
 \end{proof}
 
 \subsection{Exercise 2}
+Suppose \(A, B\), and \(C\) are mutually exclusive events in a sample space \(S\), \(A \cup B \cup C = S\), and \(A\) and 
+\(B\) have probabilities 0.3 and 0.5, respectively.
 
+\subsubsection{(a)}
+What is \(P(A \cup B)\)? 
 \begin{proof}
+By probability axiom 3, \(P(A \cup B) = P(A) + P(B) = 0.3 + 0.5 = 0.8\).
+\end{proof}
 
+\subsubsection{(b)}
+What is \(P(C)\)?
+\begin{proof}
+Because \(A \cup B \cup C = S\) and because \(A, B\), and \(C\) are mutually exclusive events, \(C = S - (A \cup B)\). 
+Thus, by the formula for the probability of the complement of an event, \(P(C) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.8 
+= 0.2\).
 \end{proof}
 
 \subsection{Exercise 3}
+Suppose \(A\) and \(B\) are mutually exclusive events in a sample space \(S\), \(C\) is another event in \(S\), 
+\(A \cup B \cup C = S\), and \(A\) and \(B\) have probabilities 0.4 and 0.2, respectively.
 
 \subsubsection{(a)}
-
+What is \(P(A \cup B)\)?
 \begin{proof}
-
+Mutually exclusive means \(A \cap B = \es\). So \(P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.4+0.2-0 = 0.6\)
 \end{proof}
 
 \subsubsection{(b)}
-
+Is it possible that \(P(C) = 0.2\)? Explain.
 \begin{proof}
-
+Since \(A \cup B \cup C = S\), we have \(P(A \cup B \cup C) = P(S) = 1\). We also have \(P(A \cup B \cup C) = P(A \cup B) + 
+P(C) - P((A \cup B) \cap C)\). Using these together we get \(1 = 0.6 + 0.2 - P((A \cup B) \cap C)\) which is impossible, 
+since the right hand side is \(\leq 0.8\).
 \end{proof}
 
 \subsection{Exercise 4}
+Suppose \(A\) and \(B\) are events in a sample space \(S\) with probabilities 0.8 and 0.7, respectively. Suppose also 
+that \(P(A \cap B) = 0.6\). What is \(P(A \cup B)\)?
 
 \begin{proof}
-
+\(P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.8+0.7-0.6 = 0.9\)
 \end{proof}
 
 \subsection{Exercise 5}
+Suppose \(A\) and \(B\) are events in a sample space \(S\) and suppose that \(P(A) = 0.6, P(B^c) = 0.4\), and \(P(A \cap B)
+= 0.2\). What is \(P(A \cup B)\)?
 
 \begin{proof}
-
+\(P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.6 + (1-P(B^c)) - 0.2 = 0.6 + 1 - 0.4 - 0.2 = 1\)
 \end{proof}
 
 \subsection{Exercise 6}
+Suppose \(U\) and \(V\) are events in a sample space \(S\) and suppose that \(P(U^c) = 0.3, P(V) = 0.6\), and \(P(U^c \cup 
+V^c) = 0.4\). What is \(P(U \cup V)\)?
 
 \begin{proof}
-
+\(P(U \cup V) = P(U) + P(V) - P(U \cap V) = (1-P(U^c)) + 0.6 - (1 - P((U \cap V)^c)) = (1-0.3) + 0.6 - (1-P(U^c \cup V^c))\)
+\(= 0.7 + 0.6 - (1-0.4) = 0.7\)
 \end{proof}
 
 \subsection{Exercise 7}
+Suppose a sample space \(S\) consists of three outcomes: 0, 1, and 2. Let \(A = \{0\}, B = \{1\}\), and \(C = \{2\}\), and 
+suppose \(P(A) = 0.4\) and \(P(B) = 0.3\). Find each of the following:
 
 \subsubsection{(a)}
-
+\(P(A \cup B)\)
 \begin{proof}
-
+\(P(A \cup B) = 0.4 + 0.3 = 0.7\)
 \end{proof}
 
 \subsubsection{(b)}
-
+\(P(C)\)
 \begin{proof}
-
+\(P(C) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.7 = 0.3\)
 \end{proof}
 
 \subsubsection{(c)}
-
+\(P(A \cup C)\)
 \begin{proof}
-
+\(P(A \cup C) = 0.4 + 0.3 = 0.7\)
 \end{proof}
 
 \subsubsection{(d)}
-
+\(P(A^c)\)
 \begin{proof}
-
+\(P(A^c) = 1 - P(A) = 1 - 0.4 = 0.6\)
 \end{proof}
 
 \subsubsection{(e)}
-
+\(P(A^c \cap B^c)\)
 \begin{proof}
-
+\(P(A^c \cap B^c) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.7 = 0.3\)
 \end{proof}
 
 \subsubsection{(f)}
-
+\(P(A^c \cup B^c)\)
 \begin{proof}
-
+\(P(A^c \cup B^c) = P((A \cap B)^c) = P(\es^c) = P(S) = 1\)
 \end{proof}
 
 \subsection{Exercise 8}
+Redo exercise 7 assuming that \(P(A) = 0.5\) and \(P(B) = 0.4\).
 
 \begin{proof}
+\(P(A \cup B) = 0.5 + 0.4 = 0.9\)
 
+\(P(C) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.9 = 0.1\)
+
+\(P(A \cup C) = 0.5 + 0.1 = 0.6\)
+
+\(P(A^c) = 1 - P(A) = 1 - 0.5 = 0.5\)
+
+\(P(A^c \cap B^c) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.9 = 0.1\)
+
+\(P(A^c \cup B^c) = P((A \cap B)^c) = P(\es^c) = P(S) = 1\)
 \end{proof}
 
 \subsection{Exercise 9}
+Let \(A\) and \(B\) be events in a sample space \(S\), and let \(C = S - (A \cup B)\). Suppose \(P(A) = 0.4, P(B) = 0.5\), 
+and \(P(A \cap B) = 0.2\). Find each of the following:
 
 \subsubsection{(a)}
-
+\(P(A \cup B)\)
 \begin{proof}
-
+\(P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.4 + 0.5 - 0.2 = 0.7\)
 \end{proof}
 
 \subsubsection{(b)}
-
+\(P(C)\)
 \begin{proof}
-
+\(P(C) = P(S - (A \cup B)) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.7 = 0.3\)
 \end{proof}
 
 \subsubsection{(c)}
-
+\(P(A^c)\)
 \begin{proof}
-
+\(P(A^c) = 1 - P(A) = 1 - 0.4 = 0.6\)
 \end{proof}
 
 \subsubsection{(d)}
-
+\(P(A^c \cap B^c)\)
 \begin{proof}
-
+\(P(A^c \cap B^c) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.7 = 0.3\)
 \end{proof}
 
 \subsubsection{(e)}
-
+\(P(A^c \cup B^c)\)
 \begin{proof}
-
+\(P(A^c \cup B^c) = P((A \cap B)^c) = 1 - P(A \cap B) = 1 - 0.2 = 0.8\)
 \end{proof}
 
 \subsubsection{(f)}
-
+\(P(B^c \cap C)\)
 \begin{proof}
-
+\(B^c \cap C = B^c \cap (S - (A \cup B)) = B^c \cap (A \cup B)^c\) = \(B^c \cap (A^c \cap B^c) = B^c \cap A^c\), so \(P(B^c \cap C) = P(B^c \cap A^c) = 0.3\)
 \end{proof}
 
 \subsection{Exercise 10}
+Redo exercise 9 assuming that \(P(A) = 0.7, P(B) = 0.3\), and \(P(A \cap B) = 0.1\).
 
 \begin{proof}
+\(P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.7 + 0.3 - 0.1 = 0.9\)
 
+\(P(C) = P(S - (A \cup B)) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.9 = 0.1\)
+
+\(P(A^c) = 1 - P(A) = 1 - 0.7 = 0.3\)
+
+\(P(A^c \cap B^c) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.9 = 0.1\)
+
+\(P(A^c \cup B^c) = P((A \cap B)^c) = 1 - P(A \cap B) = 1 - 0.1 = 0.9\)
+
+\(B^c \cap C = B^c \cap (S - (A \cup B)) = B^c \cap (A \cup B)^c\) = \(B^c \cap (A^c \cap B^c) = B^c \cap A^c\), so \(P(B^c \cap C) = P(B^c \cap A^c) = 0.1\)
 \end{proof}
 
 \subsection{Exercise 11}
+Prove that if \(S\) is any sample space and \(U\) and \(V\) are events in \(S\) with \(U \subseteq V\), then \(P(U) \leq 
+P(V)\).
 
 \begin{proof}
-
+\(U \subseteq V\) implies \(V = U \cup (V - U)\). Notice \(U \cap (V - U) = \es\). Thus \(P(V) = P(U) + P(V-U) - P(U \cap 
+(V-U)) = P(U) + P(V-U) - 0 = P(U) + P(V-U) \geq P(U)\) because \(P(V-U) \geq 0\).
 \end{proof}
 
 \subsection{Exercise 12}
+Prove that if \(S\) is any sample space and \(U\) and \(V\) are any events in \(S\), then \(P(V-U) = P(V) - P(U \cap V)\).
 
 \begin{proof}
+Notice \(U \cup V = U \cup (V - U)\) and \(U \cap (V-U) = \es\). We can write \(P(U \cup V)\) in two ways:
 
+\(P(U \cup V) = P(U) + P(V) - P(U \cap V)\), and
+
+\(P(U \cup V) = P(U) + P(V-U) - P(U \cap (V-U)) = P(U) + P(V-U) - P(\es) = P(U) + P(V-U) - 0 = P(U) + P(V-U)\)
+
+The left hand sides are equal, so we set the right hand sides equal to each other: 
+
+\(P(U) + P(V) - P(U \cap V) = P(U) + P(V-U)\). 
+
+Canceling \(P(U)\) on both sides we get \(P(V) - P(U \cap V) = P(V-U)\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 13}
+Use the axioms for probability and mathematical induction to prove that for each integer \(n \geq 2\), if \(A_1, A_2, A_3,
+\ldots, A_n\) are any mutually disjoint events in a sample space \(S\), then \(P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup 
+A_n) = \sum_{k=1}^n P(A_k)\).
 
 \begin{proof}
+Let \(Q(n)\) be the statement: ``if \(A_1, A_2, A_3, \ldots, A_n\) are any mutually disjoint events in a sample space 
+\(S\), then \(P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k=1}^n P(A_k)\).''
 
+{\bf Show that \(Q(2)\) is true:} Assume \(A_1, A_2\) are mutually disjoint. Then \(A_1 \cap A_2 = \es\). So
+\(P(A_1 \cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2) = P(A_1) + P(A_2) - P(\es) = P(A_1) + P(A_2) - 0 = P(A_1) + P(A_2)\).
+This is the right hand side \(\sum_{k=1}^2 P(A_k)\), so \(Q(2)\) is true.
+
+{\bf Show that for any integer \(k \geq 2\), if \(Q(k)\) is true then \(Q(k+1)\) is true:} Assume \(k \geq 2\) and assume
+\(Q(k)\) is true. Assume \(A_1, \ldots, A_{k+1}\) are mutually disjoint events.
+
+Let \(A = A_1 \cup \cdots \cup A_k\). Notice that \(A \cap A_{k+1} = \es\) since the sets are all mutually disjoint. So 
+\(P(A \cap A_{k+1})= P(\es) = 0\) and thus \(P(A \cup A_{k+1}) = P(A) + P(A_{k+1}) - P(A \cap A_{k+1}) = P(A) + P(A_{k+1})\).
+
+By the induction hypothesis \(P(A) = \sum_{i=1}^k P(A_i)\), so \(P(A \cup A_{k+1}) = P(A) + P(A_{k+1}) = \sum_{i=1}^k P(A_i)
++ P(A_{k+1}) = \sum_{i=1}^{k+1} P(A_i)\), which proves \(Q(k+1)\).
 \end{proof}
 
 \subsection{Exercise 14}
+A lottery game offers \$2 million to the grand prize winner, \$20 to each of 10,000 second prize winners, and \$4 to each of 
+50,000 third prize winners. The cost of the lottery is \$2 per ticket. Suppose that 1.5 million tickets are sold. What is the 
+expected gain or loss of a ticket?
 
 \begin{proof}
-
+{\it Solution 1:} The net gain of grand prize winner is \(\$2,000,000 - \$2 = \$1,999,998\). Each of the 10,000 second 
+prize winners has a net gain of \(\$20 - \$2 = \$18\), and each of the 50,000 third prize winners has a net gain of \(\$4 
+- \$2 = \$2\). The number of people who do not win anything is \(1,500,000 - 1 - 10,000 - 50,000 = 1,439,999\), and each of 
+these people has a net loss of \(\$2\). Because all of the 1,500,000 tickets have an equal chance of winning a prize, the 
+expected gain or loss of a ticket is 
+\[ 
+\frac{1}{1500000}(\$1,999,998 \cdot 1 + \$18 \cdot 10000 + \$2 \cdot 50000 + (-\$2) \cdot 1,439,999) = -\$0.40.
+\]
+{\it Solution 2:} The total income to the lottery organizer is \$2 (per ticket) \(\cdot\) 1,500,000 (tickets) = \$3,000,000. 
+The payout the lottery organizer must make is \(\$2,000,000 + (\$20)(10,000) + (\$4)(50,000) = \$2,400,000\), so the net 
+gain to the lottery organizer is \$600,000, which amounts to \(\frac{\$600,000}{1,500,000} = \$0.40\) per ticket. Thus the 
+expected net loss to a purchaser of a ticket is \$0.40.
 \end{proof}
 
 \subsection{Exercise 15}
+A company offers a raffle whose grand prize is a \$40,000 new car. Additional prizes are a \$1,000 television and a \$500 
+computer. Tickets cost \$20 each. Ticket income over the cost of the prizes will be donated to charity. If 3,000 tickets are 
+sold, what is the expected gain or loss of each ticket?
 
 \begin{proof}
+Each of the 3,000 tickets has the same chance as any other of  winning the raffle, and so \(p_k = \frac{1}{3,000}\) for each 
+\(k = 1, 2, 3, \cdots, 3,000\).
 
+Let \(a_i\) be the net gain for an individual ticket \(a_i\), where \(a_1 = 39,980\) (the net gain for the grand-prize 
+ticket, which is 40,000 dollars minus the \$20 cost of the winning ticket), \(a_2 = 980\) (the net gain for the 
+television), \(a_3 = 480\) (the net gain for the computer). Since the remaining tickets lose \$20 each, \(a_4 = \cdots =
+a_{3000} = -20\).
+
+The expected value of a ticket is therefore
+\[
+\sum_{k=1}^{3000}a_kp_k = \frac{1}{3000}\sum_{k=1}^{3000}a_k =  \frac{1}{3000}(39,980+980+480+(-20) \cdot 2997) \approx -6.17
+\]
 \end{proof}
 
 \subsection{Exercise 16}
+An urn contains four balls numbered 2, 2, 5, and 6. If a person selects a set of two balls at random, what is the 
+expected value of the sum of the numbers on the balls?
 
 \begin{proof}
-
+Let \(2_1\) and \(2_2\) denote the two balls with the number 2, and let 5 and 6 denote the other two balls. There are 
+\(\binom{4}{2} = 6\) subsets of 2 balls that can be chosen from the urn. The following table shows the sums of the 
+numbers on the balls in each set and the corresponding probabilities:
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|l|c|c|}
+\hline
+{\bf Subset} & {\bf Sum \(s\)} & {\bf Probability that the sum = \(s\)} \\
+\hline
+\(\{2_1, 2_2\}\) & 4 & 1/6 \\
+\hline
+\(\{2_1,5\}, \{2_2,5\}\) & 7 & 2/6 \\
+\hline
+\(\{2_1,6\}, \{2_2,6\}\) & 8 & 2/6 \\
+\hline
+\(\{5,6\}\) & 11 & 1/6 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+So the expected value is \(4\cdot\frac{1}{6} + 7\cdot \frac{2}{6} + 8 \cdot \frac{2}{6} + 11 \cdot \frac{1}{6} = 7.5\)
 \end{proof}
 
 \subsection{Exercise 17}
+An urn contains five balls numbered 1, 2, 2, 8, and 8. If a person selects a set of two balls at random, what is the 
+expected value of the sum of the numbers on the balls?
 
 \begin{proof}
-
+Let \(2_1\) and \(2_2\) denote the two balls with the number 2, let \(8_1, 8_2\) denote the two balls with the number 8, 
+and let 1 denote the other ball. There are \(\binom{5}{2} = 10\) subsets of 2 balls that can be chosen from the urn. The 
+following table shows the sums of the numbers on the balls in each set and the corresponding probabilities:
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|l|c|c|}
+\hline
+{\bf Subset} & {\bf Sum \(s\)} & {\bf Probability that the sum = \(s\)} \\
+\hline
+\(\{2_1, 2_2\}\) & 4 & 1/10 \\
+\hline
+\(\{2_1,1\}, \{2_2,1\}\) & 3 & 2/10 \\
+\hline
+\(\{2_1,8_1\}, \{2_2,8_1\}, \{2_2,8_1\}, \{2_2,8_2\}\) & 10 & 4/10 \\
+\hline
+\(\{1,8_1\}, \{1,8_2\}\) & 9 & 2/10 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+So the expected value is \(4 \cdot \frac{1}{10} + 3 \cdot \frac{2}{10} + 10 \cdot \frac{4}{10} + 9 \cdot \frac{2}{10} = 
+6.8\)
 \end{proof}
 
 \subsection{Exercise 18}
+An urn contains five balls numbered 1, 2, 2, 8, and 8. If a person selects a set of three balls at random, what is the 
+expected value of the sum of the numbers on the balls?
 
 \begin{proof}
-
+There are \(\binom{5}{3} = 10\) subsets of 3 balls that can be chosen from the urn. The following table shows the sums of the 
+numbers on the balls in each set and the corresponding probabilities:
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|l|c|c|}
+\hline
+{\bf Subset} & {\bf Sum \(s\)} & {\bf Probability that sum = \(s\)} \\
+\hline
+\(\{1, 2_1, 2_2\}\) & 5 & 1/10 \\
+\hline
+\(\{1,2_1,8_1\}, \{1,2_2,8_1\}, \{1,2_1,8_2\}, \{1,2_2,8_2\}\) & 11 & 4/10 \\
+\hline
+\(\{1,8_1,8_2\}\) & 17 & 1/10 \\
+\hline
+\(\{2_1,2_2,8_1\}, \{2_1,2_2,8_2\}\) & 12 & 2/10 \\
+\hline
+\(\{2_1,8_1,8_2\}, \{2_2,8_1,8_2\}\) & 18 & 2/10 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
+So the expected value is \(5 \cdot \frac{1}{10} + 11 \cdot \frac{4}{10} + 17 \cdot \frac{1}{10} + 12 \cdot \frac{2}{10} + 
+18 \cdot \frac{2}{10} = 12.6\)
 \end{proof}
 
 \subsection{Exercise 19}
+When a pair of balanced dice are rolled and the sum of the numbers showing face up is computed, the result can be any 
+number from 2 to 12, inclusive. What is the expected value of the sum?
 
 \begin{proof}
-
+The following table displays the sum of the numbers showing face up on the dice. The top row represents one of the dice, 
+and the leftmost column represents the other die. Each cell in the remaining \(6 \times 6\) part of the table represents an 
+outcome whose probability is 1/36. We can count the number of ways a particular sum can be obtained by looking at the 
+bottom-left-to-top-right diagonals. For example there are 6 ways to obtain a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1. Thus 
+the expected value of the sum is \(\frac{1}{36}(2 \cdot 1 + 3 \cdot 2 + 4 \cdot 3 + 5 \cdot 4 + 6 \cdot 5 + 7 \cdot 6 + 8 \cdot 5 + 9 \cdot 4 + 10 \cdot 3 + 11 \cdot 2 + 12 \cdot 1) = \frac{252}{36} = 7\).
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{c|c|c|c|c|c|c|}
+Dice&1&2&3&4&5&6 \\
+\hline
+1&2&3&4&5&6&7 \\
+\hline
+2&3&4&5&6&7&8 \\
+\hline
+3&4&5&6&7&8&9 \\
+\hline
+4&5&6&7&8&9&10 \\
+\hline
+5&6&7&8&9&10&11 \\
+\hline
+6&7&8&9&10&11&12 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 20}
+Suppose a person offers to play a game with you. In this game, when you draw a card from a standard 52-card deck, if the card 
+is a face card (J, Q, K) you win \$3, and if the card is anything else you lose \$1. If you agree to play the game, 
+what is your expected gain or loss?
 
 \begin{proof}
-
+There are 12 face cards in a 52 card deck. So the expected value is \(3 \cdot \frac{12}{52} + (-1) \cdot \frac{40}{52}
+= \frac{36-40}{52} \approx -0.07\), or, in other words, a 7.7 cent loss.
 \end{proof}
 
 \subsection{Exercise 21}
+A person pays \$1 to play the following game: The person tosses a fair coin four times. If no heads occur, the person 
+pays an additional \$2, if one head occurs, the person pays an additional \$1, if two heads occur, the person just loses the 
+initial dollar, if three heads occur, the person wins \$3, and if four heads occur, the person wins \$4. What is the person’s 
+expected gain or loss?
 
 \begin{proof}
-
+There are 16 possible outcomes in the sample space. \\
+No heads can occur in 1 way, in which case the person gets \(-1-2 = \$-3\). \\
+One head can occur in 4 ways, in which case the person gets \(-1-1 = \$-2\). \\
+Two heads can occur in 6 ways, in which case the person gets \(\$-1\). \\
+Three heads can occur in 4 ways, in which case the person gets \(-1+3 = \$2\). \\
+Four heads can occur in 1 way, in which case the person gets \(-1+4= \$3\). \\
+So the expected value is \((-3) \cdot \frac{1}{16} + (-2) \cdot \frac{4}{16} + (-1) \cdot \frac{6}{16} + 2 \cdot 
+\frac{4}{16} + 3 \cdot \frac{1}{16} = \$-6/16.\)
 \end{proof}
 
 \subsection{Exercise 22}
+A fair coin is tossed until either a head comes up or four tails are obtained. What is the expected number of tosses?
 
 \begin{proof}
-
+The possibilities are: H, TH, TTH, TTTH, TTTT, with expected number of tosses 1, 2, 3, 4, 4; and probabilities 1/2, 1/4, 
+1/8, 1/16, 1/16, respectively. So \(1 \cdot \frac{1}{2} + 2 \cdot \frac{1}{4} + 3 \cdot \frac{1}{8} + 4 \cdot \frac{1}{16} 
++ 4 \cdot \frac{1}{16} = \frac{30}{16} = 1.875\) is the expected number of tosses.
 \end{proof}
 
 \subsection{Exercise 23}
+A gambler repeatedly bets that a die will come up 6 when rolled. Each time the die comes up 6, the gambler wins \$1; 
+each time it does not, the gambler loses \$1. He will quit playing either when he is ruined or when he wins \$300. If 
+\(P_n\) is the probability that the gambler is ruined when he begins play with \(\$n\), then \(P_{k-1} = \frac{1}{6}P_k + 
+\frac{5}{6} P_{k-2}\) for every integer \(k\) with \(2 \leq k \leq 300\). Also \(P_0 = 1\) and \(P_{300} = 0\). Find an 
+explicit formula for \(P_n\) and use it to calculate \(P_{20}\). (Exercise 33 in Section 9.9 asks you to derive the 
+recurrence relation for this sequence.)
 
 \begin{proof}
-
+Solving, we get \(P_k = 6P_{k-1} - 5P_{k-2}\). The characteristic equation is \(r^2 - 6r + 5 = 0\) with roots
+\(r = 1,5\). The general solution is \(P_n = A+B \cdot 5^n\). Applying initial conditions \(P_0 = 1 = A + B\) and \(P_{300}
+= 0 = A + B \cdot 5^{300}\) and solving both for \(A\) we get \(A = -B \cdot 5^{300} = 1-B\), solving for \(B\) we get 
+\(\dps B = \frac{1}{1-5^{300}}\) and \(\dps A = 1 - \frac{1}{1-5^{300}}\). So
+\[
+P_n = 1 - \frac{1}{1-5^{300}} + \frac{1}{1-5^{300}} \cdot 5^n
+\]
+Then \(\dps P_{20}=1-\frac{1}{1-5^{300}} + \frac{1}{1-5^{300}} \cdot 5^{20} = \frac{5^{20}-5^{300}}{1-5^{300}} \approx 1\).
 \end{proof}
 
 \section{Exercise Set 9.9}
