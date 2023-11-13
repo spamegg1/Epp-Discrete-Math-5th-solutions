@@ -416,23 +416,21 @@ original choice of door A or switching to one of the other doors that is still c
 If you stick with your original choice, what is the probability that you will win the prize?
 
 \begin{proof}
-There are 5 cases. 
+Either the prize is behind A or not.
 
 In Case 1, the prize is behind door A. In this case if I stick with door A, I would win.
 
-In the remaining 4 cases, the prize is behind one of the doors B,C,D,E. In these cases if I stick with door A, I 
-would lose. 
+In the other case, the prize is behind one of the other 3 doors. In these cases if I stick with door A, I would lose. 
 
-Each case has 20\% probability. If I stick with door A, I can only win in Case 1. Therefore the probability that I 
-win the prize is 20\%.
+First case has 20\% probability (as given originally). If I stick with door A, I can only win in Case 1. Therefore the probability that I win the prize is 20\%.
 \end{proof}
 
 \subsubsection{(b)}
 If you switch to another door, what is the probability that you will win the prize?
 
 \begin{proof}
-Like above, if I switch to another door, I lose in Case 1, and I have a 1/4 chance of winning in each of the other 4 
-cases. Therefore the probability that I win the prize is 25\%.
+Like above, if I switch to another door, I lose in Case 1, and I have a 4/5 chance of winning in the second case. But I have 
+to pick one of the 3 doors, so the probability that I win the prize is \(\frac{4}{5} \cdot \frac{1}{3} = 4/15 \approx 26.7\%\).
 \end{proof}
 
 \subsection{Exercise 21}
@@ -6793,439 +6791,867 @@ Then \(\dps P_{20}=1-\frac{1}{1-5^{300}} + \frac{1}{1-5^{300}} \cdot 5^{20} = \f
 \end{proof}
 
 \section{Exercise Set 9.9}
-
 \subsection{Exercise 1}
+Suppose \(P(A|B) = 1/2\) and \(P(A \cap B) = 1/6\). What is \(P(B)\)?
 
 \begin{proof}
-
+\(P(B) = \frac{P(A \cap B)}{P(A | B)} = \frac{1/6}{1/2} = 1/3\)
 \end{proof}
 
 \subsection{Exercise 2}
+Suppose \(P(X|Y) = 1/3\) and \(P(Y) = 1/4\). What is \(P(X \cap Y)\)?
 
 \begin{proof}
-
+\(P(X \cap Y) = P(X|Y)P(Y) = (1/3)(1/4) = 1/12\)
 \end{proof}
 
 \subsection{Exercise 3}
+The instructor of a discrete mathematics class gave two tests. Twenty-five percent of the students received an A on the first 
+test and 15\% of the students received A’s on both tests. What percent of the students who received A’s on the first test 
+also received A’s on the second test?
 
 \begin{proof}
-
+Let \(A_1, A_2\) be the percentage of students who got an A in tests 1,2 respectively. Then \(P(A_1) = 0.25, P(A_1 \cap A_2)
+= 0.15\). Getting an A on test 1 is independent of getting an A on test 2. Thus \(P(A_2 | A_1) = \frac{P(A_1 \cap A_2)}
+{P(A_1)} = \frac{0.15}{0.25} = 3/5 = 60\%.\)
 \end{proof}
 
 \subsection{Exercise 4}
-
 \subsubsection{(a)}
+Prove that if \(A\) and \(B\) are any events in a sample space \(S\), with \(P(B) \neq 0\), then \(P(A^c | B) = 1 - P(A|B)\).
 
 \begin{proof}
+Suppose \(S\) is any sample space and \(A\) and \(B\) are any events in \(S\) such that \(P(B) \neq 0\). Note that \\
+(1) \(A \cup A^c = S\) by the complement law for \(\cup\). \\
+(2) \(B \cap S = B\) by the identity law for \(\cap\). \\
+(3) \(B \cap (A \cup A^c) = (A \cap B) \cup (A^c \cap B)\) by the distributive law and commutative laws for sets. \\
+(4) \((A \cap B) \cap (A^c \cap B) = \es\) by the complement law for \(\cap\) and the commutative and associative laws for 
+sets.
 
+Thus \(B = (A \cap B) \cup (A^c \cap B)\), and, by probability axiom 3, \(P(B) = P (A \cap B) + P (A^c \cap B)\). Therefore, 
+\(P(A^c \cap B) = P(B) - P(A \cap B)\). By definition of conditional probability, it follows that \(P(A^c | B) = 
+\frac{P(A^c \cap B)}{P(B)} = \frac{P(B) - P(A \cap B)}{P(B)} = 1 - \frac{P(A \cap B)}{P(B)} = 1 - P(A | B)\).
 \end{proof}
 
 \subsubsection{(b)}
+Explain how the result in part (a) justifies the following statements: 
+
+(1) If the probability of a false positive on a test for a condition is 4\%, then there is a 96\% probability that a 
+person who does not have the condition will have a negative test result. 
+
+(2) If the probability of a false negative on a test for a condition is 1\%, then there is a 99\% probability that a 
+person who does have the condition will test positive for it.
 
 \begin{proof}
+(1) Let \\
+\(A\): the event that a test for the condition is positive, \\ \(B\): the event that a person does not have the condition. \\
+Then \\
+\(A|B\): the event that a person tests positive, given that they do not have the condition; in other words, {\it a false 
+positive}, therefore \(P(A|B) = 0.04\), \\
+\(A^c|B\): the event that a person tests negative, given that they do not have the condition. \\
+Assume \(P(B) \neq 0\). (This makes sense, otherwise all people in the world would have the condition!) \\
+Then by part (a) \(P(A^c | B) = 1 - P(A|B) = 1-0.04 = 0.96\). By this result and above explanation, there is a 96\% chance
+that someone who does not have the condition will test negative.
 
+(2) Let \\
+\(A\): the event that a test for the condition is negative, \\ \(B\): the event that a person has the condition. \\
+Then \\
+\(A|B\): the event that a person tests negative, given that they have the condition; in other words, {\it a false 
+negative}, therefore \(P(A|B) = 0.01\), \\
+\(A^c|B\): the event that a person tests positive, given that they have the condition. \\
+Assume \(P(B) \neq 0\). (This makes sense, otherwise nobody in the world would have the condition!) \\
+Then by part (a) \(P(A^c | B) = 1 - P(A|B) = 1-0.01 = 0.99\). By this result and above explanation, there is a 99\% chance
+that someone who has the condition will test positive.
 \end{proof}
 
 \subsection{Exercise 5}
+Suppose that \(A\) and \(B\) are events in a sample space \(S\) and that \(P(A), P(B)\), and \(P(A | B)\) are known. 
+Derive a formula for \(P(A | B^c)\).
 
 \begin{proof}
+1. By previous exercises about sets we have \(A = (A \cap B) \cup (A \cap B^c)\), and \((A \cap B) \cap (A \cap B^c) = 
+\es\). So \(P((A \cap B) \cap (A \cap B^c)) = 0\).
 
+2. By 1 and probability axioms, \(P(A) = P(A \cap B) + P(A \cap B^c) - P((A \cap B) \cap (A \cap B^c)) = P(A \cap B) +
+P(A \cap B^c) - 0 = P(A \cap B) + P(A \cap B^c)\). So \(P(A \cap B^c) = P(A) - P(A \cap B)\).
+
+3. By definition of conditional probability, \(P(A | B^c) = \frac{P(B^c \cap A)}{P(B^c)} = \frac{P(A \cap B^c)}{1-P(B)}\).
+Then by 2, \(P(A | B^c) = \frac{P(A) - P(A \cap B)}{1-P(B)}\).
+
+4. Again by definition of conditional probability, \(P(A|B) = \frac{P(B \cap A)}{P(B)}\) so \(P(B \cap A) = P(A|B)P(B)\).
+
+5. Substituting 4 into 3 we get \(P(A | B^c) = \frac{P(A) - P(A|B)P(B)}{1-P(B)}\).
 \end{proof}
 
 \subsection{Exercise 6}
+An urn contains 25 red balls and 15 blue balls. Two are chosen at random, one after the other, without replacement.
 
 \subsubsection{(a)}
+Use a tree diagram to help calculate the following probabilities: the probability that both balls are red, the 
+probability that the first ball is red and the second is not, the probability that the first ball is not red and the second 
+is red, the probability that neither ball is red.
 
 \begin{proof}
+Let \(R_1\) be the probability that the first ball is red, and let \(R_2\) be the probability that the second ball is red. 
+Then \(R_1^c\) is the probability that the first ball is not red, and \(R_2^c\) is the probability that the second ball is 
+not red. The tree diagram shows the various relations among the probabilities.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/9.9.6.a.png}
+\end{figure}
 \end{proof}
 
 \subsubsection{(b)}
-
+What is the probability that the second ball is red?
 \begin{proof}
-
+This is the event \((R_1 \cap R_2) \cup (R_1^c \cap R_2)\) and notice that these two events are disjoint, so it is \(\frac{5}
+{8} \cdot \frac{8}{13} + \frac{3}{8} \cdot \frac{25}{39} = \frac{5}{13} + \frac{25}{104} = \frac{65}{104}= \frac{5}{8}\).
 \end{proof}
 
 \subsubsection{(c)}
-
+What is the probability that at least one of the balls is red?
 \begin{proof}
-
+This is the event \((R_1 \cap R_2) \cup (R_1 \cap R_2^c) \cup (R_1^c \cap R_2)\) and notice that these three events are 
+mutually disjoint, so it's \(\frac{5}{8} \cdot \frac{8}{13} + \frac{5}{8}\cdot\frac{5}{13} + \frac{3}{8} \cdot \frac{25}{39}
+= \frac{5}{13} + \frac{25}{104} + \frac{25}{104} = \frac{90}{104} = \frac{45}{52}\).
 \end{proof}
 
 \subsection{Exercise 7}
+Redo exercise 6 assuming that the urn contains 30 red balls and 40 blue balls.
 
 \begin{proof}
+(a) \(P(R_1) = 30 / (30+40) = 3/7, P(R_1^c) = 40 / (30+40) = 4/7, P(R_2 | R_1) = 29/69, P(R_2^c | R_1) = 40/69, P(R_2 | 
+R_1^c) = 30/69, P(R_2^c | R_1^c) = 39/69\)
 
+(b) \(P(R_2) = P(R_2 | R_1) + P(R_2 | R_1^c) = \frac{29}{69} + \frac{30}{69} = \frac{59}{69}\)
+
+(c) \(P(R_1 \cap R_2) + P(R_1^c \cap R_2) + P(R_1 \cap R_2^c) = P(R_1)P(R_2|R_1) + P(R_1^c)P(R_2|R_1^c) + P(R_1)P(R_2^c|R_1) 
+= \frac{3}{7}\frac{29}{69} + \frac{4}{7}\frac{30}{69} + \frac{3}{7}\frac{40}{69} = \frac{3 \cdot 29 + 4 \cdot 30 + 
+3 \cdot 40}{7 \cdot 69} = 327/483 = 0.677018634\)
 \end{proof}
 
 \subsection{Exercise 8}
+A pool of 10 semifinalists for a job consists of 7 men and 3 women. Because all are considered equally qualified, the names 
+of two of the semifinalists are drawn, one after the other, at random, to become finalists for the job.
 
 \subsubsection{(a)}
-
+What is the probability that both finalists are women?
 \begin{proof}
-
+Let \(W_1\) be the event that the first semifinalist chosen is a women, \\
+Let \(W_2\) be the event that a woman is chosen on the second draw. \\
+\(P(W_1 \cap W_2) = P(W_1)P(W_2 | W_1) = \frac{3}{10} \cdot \frac{2}{9} = \frac{1}{15}\).
 \end{proof}
 
 \subsubsection{(b)}
-
+What is the probability that both finalists are men?
 \begin{proof}
-
+Let \(M_1\) be the event that a man is chosen in the first draw, \\
+Let \(M_2\) be the event that a man is chosen in the second drawn. \\
+\(P(M_1 \cap M_2) = P(M_1)P(M_2 | M_1) = \frac{7}{10} \cdot \frac{6}{9} = \frac{7}{15}\).
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that one finalist is a woman and the other is a man?
 
 \begin{proof}
+Notice the events \(W_1 \cap M_2\) and \(W_2 \cap M_1\) are disjoint. So \(P((W_1 \cap M_2) \cup (W_2 \cap M_1)) = 
+P(W_1 \cap M_2) + P(W_2 \cap M_1)\).
 
+\(P(W_1 \cap M_2) = P(W_1)P(M_2 | W_1) = \frac{3}{10} \cdot \frac{7}{9} = \frac{7}{30}\)
+
+\(P(W_2 \cap M_1) = P(M_1 \cap W_2) = P(M_1)P(W_2 | M_1) = \frac{7}{10} \cdot \frac{3}{9} = \frac{7}{30}\)
+
+So the answer is \(\frac{7}{30} + \frac{7}{30} = \frac{7}{15}\).
 \end{proof}
 
 \subsection{Exercise 9}
+Prove Bayes’ theorem for \(n = 2\). That is, prove that if a sample space \(S\) is a union of mutually disjoint events 
+\(B_1\) and \(B_2\), if \(A\) is an event in \(S\) with \(P(A) \neq 0\), and if \(k = 1\) or \(k = 2\), then 
+\[
+P(B_k | A) = \frac{P(A| B_k)P(B_k)}{P(A | B_1) P(B_1) + P(A | B_2) P(B_2)}
+\]
+{\it Hint:} Use the facts that \(P(B_k | A) = \frac{P(B_k \cap A)}{P(A)}\) and \((A \cap B_1) \cup (A \cap B_2) = A\).
 
 \begin{proof}
+(following the Hint) 
 
+1. We have \(P(B_k | A) = \frac{P(B_k \cap A)}{P(A)}\). 
+
+2. By definition of conditional probability \(P(B_k \cap A) = P(A|B_k)P(B_k)\).
+
+3. Since \(B_1\) and \(B_2\) are disjoint, \(A \cap B_1\) and \(A \cap B_2\) are disjoint.
+
+4. By the fact \((A \cap B_1) \cup (A \cap B_2) = A\), we have \(P(A) = P((A \cap B_1) \cup (A \cap B_2))\).
+
+5. By 3 and 4, \(P(A) = P(A \cap B_1) + P(A \cap B_2)\). 
+
+6. By 1,2,3,4,5,
+\[
+P(B_k | A) = \frac{P(B_k \cap A)}{P(A)} = \frac{P(A|B_k)P(B_k)}{P(A \cap B_1) + P(A \cap B_2)}
+= \frac{P(A|B_k)P(B_k)}{P(A|B_1)P(B_1) + P(A|B_2)P(B_2)}.
+\]
 \end{proof}
 
 \subsection{Exercise 10}
-
+Prove the full version of Bayes’ theorem.
 \begin{proof}
-
+The proof is the same as in Exercise 9, except now in Step 5 we have
+\[
+P(A) = P(A \cap B_1) + P(A \cap B_2) + \cdots + P(A \cap B_n)
+\]
+and in Step 6, the denominator becomes
+\[
+P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + \cdots + P(A|B_n)P(B_n).
+\]
+The proof does not require mathematical induction.
 \end{proof}
 
 \subsection{Exercise 11}
+One urn contains 12 blue balls and 7 white balls, and a second urn contains 8 blue balls and 19 white balls. An urn is 
+selected at random, and a ball is chosen from the urn.
 
 \subsubsection{(a)}
-
+What is the probability that the chosen ball is blue?
 \begin{proof}
-
+Let \(U_1\) be the event that the first urn is chosen, \(U_2\) the event that the second urn is chosen, and \(B\) the event 
+that the chosen ball is blue. Then \(P(B|U_1) = \frac{12}{19}\) and \(P(B|U_2) = \frac{8}{27}\). So \(P(B \cap U_1) = P(B|
+U_1)P(U_1) = \frac{12}{19}\frac{1}{2} = \frac{6}{19}\), and \(P(B \cap U_2) = P(B|U_2)P(U_2) = \frac{8}{27}\frac{1}{2} = 
+\frac{4}{27}\). Now \(B\) is the disjoint union of \(B \cap U_1\) and \(B \cap U_2\). So \(P(B)P(U_1|B) = P(B \cap U_1) +
+P(B \cap U_2) = \frac{6}{19} + \frac{4}{27} \approx 46.4\%\).
 \end{proof}
 
 \subsubsection{(b)}
+If the chosen ball is blue, what is the probability that it came from the first urn?
 
 \begin{proof}
-
+Given that the chosen ball is blue, the probability that it came from the first urn is \(P(U_1|B)\). By Bayes’ theorem and 
+the computations in part (a),
+\[
+P(U_1|B) = \frac{P(B|U_1)P(U_1)}{P(B|U_1)P(U_1) + P(B|U_2)P(U_2)} = \frac{(12/19)(1/2)}{(12/19)(1/2) + (8/27)(1/2)}
+\approx 68.1\%
+\]
 \end{proof}
 
 \subsection{Exercise 12}
+Redo exercise 11 assuming that the first urn contains 4 blue balls and 16 white balls and the second urn contains 10 blue 
+balls and 9 white balls.
 
 \begin{proof}
+(a) \(P(B|U_1) = \frac{4}{20}\) and \(P(B|U_2) = \frac{10}{19}\). So \(P(B \cap U_1) = P(B|U_1)P(U_1) = \frac{4}{20} \cdot 
+\frac{1}{2} = \frac{1}{10}\), and \(P(B \cap U_2) = P(B|U_2) P(U_2) = \frac{10}{19} \cdot \frac{1}{2} = \frac{5}{19}\). Now 
+\(B\) is the disjoint union of \(B \cap U_1\) and \(B \cap U_2\). So \(P(B)P(U_1|B) = P(B \cap U_1) + P(B \cap U_2) = 
+\frac{1}{10} + \frac{5}{19} = \frac{69}{190} \approx 36.3\%\).
 
+(b) Given that the chosen ball is blue, the probability that it came from the first urn is \(P(U_1|B)\). By Bayes’ theorem 
+and the computations in part (a),
+\[
+P(U_1|B) = \frac{P(B|U_1)P(U_1)}{P(B|U_1)P(U_1) + P(B|U_2)P(U_2)} = \frac{1/10}{1/10 + 5/19} = \frac{19}{69}
+\approx 27.5\%
+\]
 \end{proof}
 
 \subsection{Exercise 13}
+One urn contains 10 red balls and 25 green balls, and a second urn contains 22 red balls and 15 green balls. A ball is chosen 
+as follows: First an urn is selected by tossing a loaded coin with probability 0.4 of landing heads up and probability 0.6 
+of landing tails up. If the coin lands heads up, the first urn is chosen; otherwise, the second urn is chosen. Then a ball is 
+picked at random from the chosen urn.
 
 \subsubsection{(a)}
+What is the probability that the chosen ball is green? ({\it Hint:} 52.9\%)
 
 \begin{proof}
+Let \(U_1, U_2\) be the events where the chosen urn is 1,2 respectively. So \(P(U_1) = 0.4, P(U_2) = 0.6 \). 
 
+Let \(G\) be the event where the chosen ball is green. Then \(P(G|U_1) = \frac{25}{10+25} = \frac{5}{7}, P(G|U_2) = 
+\frac{15}{22+15} = \frac{15}{37}\). 
+
+Then \(P(G) = P(G|U_1)P(U_1) + P(G|U_2)P(U_2) = \frac{5}{7} \cdot 0.4 + \frac{15}{37} \cdot 0.6 = \frac{2}{7} + \frac{9}
+{37} = \frac{137}{259} \approx 52.9\%\)
 \end{proof}
 
 \subsubsection{(b)}
+If the chosen ball is green, what is the probability that it was picked from the first urn? ({\it Hint:} 54\%)
 
 \begin{proof}
-
+\(P(U_1|G) = \frac{P(G|U_1)P(U_1)}{P(G|U_1)P(U_1) + P(G|U_2)P(U_2)} = \frac{2/7}{(2/7) + (9/37)} = \frac{2}{7} \cdot
+\frac{259}{137} = \frac{518}{959} \approx 54\%\)
 \end{proof}
 
 \subsection{Exercise 14}
+A drug-screening test is used in a large population of people of whom 4\% actually use drugs. Suppose that the false 
+positive rate is 3\% and the false negative rate is 2\%. Thus a person who uses drugs tests positive for them 98\% of the 
+time, and a person who does not use drugs tests negative for
+them 97\% of the time.
 
 \subsubsection{(a)}
+What is the probability that a randomly chosen person who tests positive for drugs actually uses drugs?
 
 \begin{proof}
+Let \(pos, neg, dr, nodr\) be the events that a randomly chosen person tests positive, negative, uses drugs, and does 
+not use drugs, respectively.
 
+We're given: \(P(dr) = 0.04, P(nodr) = 1 - 0.04 = 0.96, P(pos|nodr) = 0.03, P(neg|dr) = 0.02, P(pos|dr) = 1 - 0.02 = 
+0.98, P(neg|nodr) = 1 - 0.03 = 0.97\).
+
+Then \(P(dr|pos) = \frac{P(pos|dr)P(dr)}{P(pos|dr)P(dr) + P(pos|nodr)P(nodr)} = \frac{0.98 \cdot 0.04}{0.98 \cdot 0.04
++ 0.03 \cdot 0.96} = 0.576470588 \approx 57.6\%\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a randomly chosen person who tests negative for drugs does not use drugs?
 
 \begin{proof}
-
+\(P(nodr|neg) = \frac{P(neg|nodr)P(nodr)}{P(neg|nodr) P(nodr) + P(neg|dr)P(dr)} = \frac{0.97 \cdot 0.96}{0.97 \cdot 0.96 + 0.02 \cdot 0.04} = 0.999141631 \approx 99.9\%\)
 \end{proof}
 
 \subsection{Exercise 15}
+Two different factories both produce a certain automobile part. The probability that a component from the first factory 
+is defective is 2\%, and the probability that a component from the second factory is defective is 5\%. In a supply of 180 of 
+the parts, 100 were obtained from the first factory and 80 from the second factory.
 
 \subsubsection{(a)}
+What is the probability that a part chosen at random from the 180 is from the first factory?
 
 \begin{proof}
-
+Let \(A,B,D\) be the events that a part chosen at random came from the first factory, the second factory, or is defective,
+respectively. We are given \(P(D|A) = 0.02, P(D|B) = 0.05, P(A) = \frac{100}{180} = \frac{5}{9}, P(B) = \frac{80}{180} = 
+\frac{4}{9}\). The answer is \(P(A) = 5/9\).
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that a part chosen at random from the 180 is from the second factory?
 
 \begin{proof}
-
+4/9.
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that a part chosen at random from the 180 is defective?
 
 \begin{proof}
-
+Since \(A\) and \(B\) are disjoint events, \(D|A\) and \(D|B\) are disjoint events. So \(P(D) = P(D|A)P(A) + P(D|B)P(B) = 
+0.02 \cdot \frac{5}{9} + 0.05 \cdot \frac{4}{9} = \frac{1}{30} \approx 3.3\%\).
 \end{proof}
 
 \subsubsection{(d)}
+If the chosen part is defective, what is the probability that it came from the first factory?
 
 \begin{proof}
-
+\(P(A|D) = \frac{P(D|A)P(A)}{P(D|A)P(A) + P(D|B)P(B)} = \frac{0.02 \cdot \frac{5}{9}}{0.02 \cdot \frac{5}{9} + 0.05 
+\cdot \frac{4}{9}} = \frac{1/90}{1/90 + 2/90} = 1/3 \approx 33.3\%\).
 \end{proof}
 
 \subsection{Exercise 16}
+Three different suppliers X, Y, and Z provide produce for a grocery store. Twelve percent of produce from X is superior 
+grade, 8\% of produce from Y is superior grade, and 15\% of produce from Z is superior grade. The store obtains 20\% of 
+its produce from X, 45\% from Y, and 35\% from Z.
 
 \subsubsection{(a)}
+If a piece of produce is purchased, what is the probability that it is superior grade?
 
 \begin{proof}
-
+\(\dps \frac{20}{100} \cdot \frac{12}{100} + \frac{45}{100} \cdot \frac{8}{100} + \frac{35}{100} \cdot \frac{15}{100} = 
+\frac{240+360+525}{10000} = 0.1125 = 11.25\%\)
 \end{proof}
 
 \subsubsection{(b)}
+If a piece of produce in the store is superior grade, what is the probability that it is from X?
 
 \begin{proof}
-
+Let X, Y, Z, S be the events that the produce is from X, Y, Z or superior grade, respectively. Then \(P(X|S)\)
+\[
+\begin{array}{cl}
+= & \dps \frac{P(S|X)P(X)}{P(S|X)P(X) + P(S|Y)P(Y) + P(S|Z)P(Z)} \\
+= & \dps \frac{\frac{20}{100} \cdot \frac{12}{100}}
+{\frac{20}{100} \cdot \frac{12}{100} + \frac{45}{100} \cdot \frac{8}{100} + \frac{35}{100} \cdot \frac{15}{100}}
+= \dps \frac{240/10000}{1125/10000} = 240/1125 \approx 21.3\%
+\end{array}
+\]
 \end{proof}
 
 \subsection{Exercise 17}
+Prove that if \(A\) and \(B\) are events in a sample space \(S\) with the property that \(P(A|B) = P(A)\) and 
+\(P(A) \neq 0\), then \(P(B|A) = P(B)\).
 
 \begin{proof}
-
+Suppose \(A\) and \(B\) are events in a sample space \(S\), and \(P(A|B) = P(A) \neq 0\). Then
+\[
+P(B|A) = \frac{P(B\cap A)}{P(A)} = \frac{P(A|B)P(B)}{P(A)} = \frac{P(A)P(B)}{P(A)} = P(B).
+\]
 \end{proof}
 
 \subsection{Exercise 18}
+Prove that if \(P(A \cap B) = P(A) \cdot P(B), P(A) \neq 0\), and \(P(B) \neq 0\), then \(P(A|B) = P(A)\) and 
+\(P(B|A) = P(B)\).
 
 \begin{proof}
-
+\(P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)} = P(A)\). Then by Exercise 17, \(P(B|A) = P(B)\).
 \end{proof}
 
 \subsection{Exercise 19}
+A pair of fair dice, one blue and the other gray, are rolled. Let \(A\) be the event that the number face up on the blue die 
+is 2, and let \(B\) be the event that the number face up on the gray die is 4 or 5. Show that \(P(A|B) = P(A)\) and 
+\(P(B|A) = P(B)\).
 
 \begin{proof}
-
+As in Example 6.9.1, the sample space is the set of all 36 outcomes obtained from rolling the two dice and noting the 
+numbers showing face up on each. Then \(A = \{21, 22, 23, 24, 25, 26\}, B = \{14, 24, 34, 44, 54, 64, 15, 25, 35, 45, 55, 
+65\}\), and \(A \cap B = \{24, 25\}\). Since the dice are fair (so all outcomes are equally likely), \(P(A) = 6/36, P(B) = 
+12/36\), and \(P(A \cap B) = 36\). By definition of conditional probability, \(P(A|B) = \frac{P(A \cap B)}{P(B)} = 
+\frac{2/36}{12/36} = 1/6\) and \(P(B|A) = \frac{P(A \cap B)}{P(A)} = \frac{2/36}{6/36} = 1/3\). Hence \(P(A|B) = P(A)\) 
+and \(P(B|A) = P(B)\).
 \end{proof}
 
 \subsection{Exercise 20}
+Suppose a fair coin is tossed three times. Let \(A\) be the event that a head appears on the first toss, and let \(B\) be 
+the event that an even number of heads is obtained. Show that \(P(A|B) = P(A)\) and \(P(B|A) = P(B)\).
 
 \begin{proof}
-
+The sample space is \(S = \{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\}\). Then \(A = \{HHH, HHT, HTH, HTT\}\) and \(P(A) = 4/8 
+= 1/2\); and \(B = \{HHT, HTH\), \(THH, TTT\}\) and \(P(B) = 4/8 = 1/2\). Now \(A \cap B = \{HHT, HTH\}\) so \(P(A|B) = 
+\frac{P(A \cap B)}{P(B)} = \frac{2/8}{4/8} = 1/2 = P(A)\) and \(P(B|A) = \frac{P(A \cap B)}{P(A)} = \frac{2/8}{4/8} = 1/2 = 
+P(B)\).
 \end{proof}
 
 \subsection{Exercise 21}
+If \(A\) and \(B\) are events in a sample space \(S\) and \(A \cap B = \es\), what must be true in order for \(A\) and \(B\) 
+to be independent? Explain.
 
 \begin{proof}
-
+For independence we need \(P(A \cap B) = P(A)P(B)\). Since \(P(A \cap B) = P(\es) = 0\) either \(P(A) = 0\) or \(P(B) = 
+0\), or both.
 \end{proof}
 
 \subsection{Exercise 22}
+Prove that if \(A\) and \(B\) are independent events in a sample space \(S\), then \(A^c\) and \(B\) are also 
+independent, and so are \(A^c\) and \(B^c\).
 
 \begin{proof}
+Assume \(A\) and \(B\) are independent.
 
+1. By definition of independence \(P(A \cap B) = P(A)P(B)\).
+
+2. By Demorgan's law, \(A^c \cap B^c = (A \cup B)^c\) so \(P(A^c \cap B^c) = P(A \cup B)^c = 1 - P(A \cup B)\).
+
+3. By 2, \(P(A^c \cap B^c) = 1 - (P(A) + P(B) - P(A \cap B)) = 1 - P(A) - P(B) + P(A \cap B)\).
+
+4. By 1 and 3, \(P(A^c \cap B^c) = 1 - P(A) - P(B) + P(A)P(B) = (1-P(A))(1-P(B))\).
+
+5. By 4, \(P(A^c \cap B^c) = P(A^c)P(B^c)\). So \(A^c\) and \(B^c\) are independent.
+
+6. Similarly \(B = (A^c \cap B) \cup (A \cap B)\) where \(A^c \cap B\) and \(A \cap B\) are disjoint.
+
+7. By 6 and independence, \(P(B) = P(A^c \cap B) + P(A \cap B) = P(A^c \cap B) + P(A)P(B)\).
+
+8. By 7, \(P(B) - P(A)P(B) = P(A^c \cap B)\) so \(P(A^c \cap B) = P(B)(1-P(A)) = P(B)P(A^c)\) so \(A^c\) and \(B\) are
+independent.
 \end{proof}
 
 \subsection{Exercise 23}
+A student taking a multiple-choice exam does not know the answers to two questions. All have five choices for the 
+answer. For one of the two questions, the student can eliminate two answer choices as incorrect but has no idea 
+about the other answer choices. For the other question, the student has no clue about the correct answer at all. Assume 
+that whether the student chooses the correct answer on one of the questions does not affect whether the student chooses the 
+correct answer on the other question.
 
 \subsubsection{(a)}
+What is the probability that the student will answer both questions correctly?
 
 \begin{proof}
+Let \(A\) be the event that the student answers the first question correctly, and let \(B\) be the event that the 
+student answers the second question correctly. Because two choices can be eliminated on the first question, 
+\(P(A) = 1/3\), and because no choices can be eliminated on the second question, \(P(B) = 1/5\). Thus \(P(A^c) = 2/3\) and 
+\(P(B^c) = 4/5\). 
 
+\(P(A \cap B) = P(A)P(B) = 1/3 \cdot 1/5 = 1/15 \approx 6.7\%\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that the student will answer exactly one of the questions correctly?
 
 \begin{proof}
-
+The probability that the student answers exactly one question correctly is \(P((A \cap B^c) \cup (A^c \cap B)) = P(A \cap 
+B^c) + P(A^c \cap B) = P(A)P(B^c) + P(A^c)P(B) = 1/3 \cdot 4/5 + 2/3 \cdot 1/5 = 6/15 = 2/5 = 40\%\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that the student will answer neither question correctly?
 
 \begin{proof}
+One solution is to say that the probability that the student answers both questions incorrectly is \(P(A^c \cap B^c)\), and 
+\(P(A^c \cap B^c) = P(A^c)P(B^c)\) by the result of exercise 22. Thus the answer is \(P(A^c)P(B^c) = 2/3 \cdot 4/5 = 8/15 
+\approx 53.3\%\)
 
+Another solution uses the fact that the event that the student answers both questions incorrectly is the complement of the 
+event that the student answers at least one question correctly. Thus, by the results of parts (a) and (b), the 
+answer is \(1-(1/15+2/5) = 1-7/15 = 8/15 \approx 53.3\%\)
 \end{proof}
 
 \subsection{Exercise 24}
+A software company uses two quality assurance (QA) checkers X and Y to check an application for bugs. X misses 12\% of the bugs and Y misses 15\%. Assume that the QA checkers work independently.
 
 \subsubsection{(a)}
+What is the probability that a randomly chosen bug will be missed by both QA checkers?
 
 \begin{proof}
-
+Let \(X, Y\) be the events that a randomly chosen bug is missed by proofreader X, Y, respectively. So \(P(X) = 0.12\),
+\(P(Y) = 0.15\), and by independence \(P(X \cap Y) = P(X)P(Y) = 0.12 \cdot 0.15 = 0.018 = 1.8\%\).
 \end{proof}
 
 \subsubsection{(b)}
+If the program contains 1,000 bugs, what number can be expected to be missed?
 
 \begin{proof}
-
+\(0.018 \cdot 1000 = 18\) bugs.
 \end{proof}
 
 \subsection{Exercise 25}
+A coin is loaded so that the probability of heads is 0.7 and the probability of tails is 0.3. Suppose that the coin is 
+tossed twice and that the results of the tosses are independent.
 
 \subsubsection{(a)}
-
+What is the probability of obtaining exactly two heads?
 \begin{proof}
-
+HH = \(0.7 \cdot 0.7 = 0.49\)
 \end{proof}
 
 \subsubsection{(b)}
-
+What is the probability of obtaining exactly one head?
 \begin{proof}
-
+HT = \(0.7 \cdot 0.3 = 0.21\) + TH = \(0.3 \cdot 0.7 = 0.21\) = 0.42  
 \end{proof}
 
 \subsubsection{(c)}
-
+What is the probability of obtaining no heads?
 \begin{proof}
-
+TT = \(0.3 \cdot 0.3 = 0.09\)
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability of obtaining at least one head?
 
 \begin{proof}
-
+HT + TH + HH = 0.21 + 0.21 + 0.49 = 0.91, or 1 - TT = 1 - 0.09 = 0.91.
 \end{proof}
 
 \subsection{Exercise 26}
+Describe a sample space and events \(A, B\), and \(C\), where \(P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)\) but 
+\(A, B\), and \(C\) are not pairwise independent.
 
 \begin{proof}
+Let \(S = \{a, b, c\}, A = \{a,b\}, B = \{b,c\}, C = \es\). 
 
+Then \(P(A) = 2/3, P(B) = 2/3, P(C) = 0\), \(A \cap B = \{b\}\) and \(A \cap B \cap C = \es\), so 
+\[
+P(A \cap B \cap C) = 0 = (2/3) \cdot (2/3) \cdot 0 = P(A) \cdot P(B) \cdot P(C);
+\] 
+but \(P(A \cap B) = 1/3 \neq (2/3) \cdot (2/3) = P(A) \cdot P(B)\) so \(A\) and \(B\) are not independent, hence \(A,B\)
+and \(C\) are not pairwise independent.
 \end{proof}
 
 \subsection{Exercise 27}
+The example used to introduce conditional probability described a family with two children each of whom was equally 
+likely to be a boy or a girl. The example showed that if it is known that one child is a boy, the probability that the other 
+child is a boy is 1/3. Now imagine the same kind of family—two children each of whom is equally likely to be a boy or a girl. 
+Suppose you meet one of the children and that child is a boy. What is the probability that the other child is a boy? 
+Explain. (Be careful. The answer may surprise you.)
 
 \begin{proof}
+1/2 but why? I don't get it. It might be hidden in the vague meanings of the words ``meeting'' and ``known''. This is the 
+best explanation I can come up with:
 
+Consider the 4 possibilities BB, BG, GB, GG in terms of ``the order of meeting them''. This means that, in the case of BG,
+we first meet a boy, then we meet a girl. So if we meet the first child, and it's a boy, then the possibilities are BB and
+BG (GB is not possible because we first met a boy). Then the second child has 1/2 chance to be a boy.
+
+Whereas, in the original example of ``it is known that one child is a boy'', this meeting order is disregarded, so there
+are three possibilities: BG, GB, BB.
+
+If you ask me, this is really stupid and playing with the vague meanings of words. Because once we meet a boy, we know
+there is at least one boy, so we are back in the ``same knowledge state'' as the original example.
+
+{\it EDIT:} Turns out this is a well-known ``paradox'' called Sisters Paradox (where the question is asked with girl instead
+of boy). Here is an interesting excerpt from Jukka Corander:
+
+I have earlier done an experiment by asking this question from two separate audiences; one consisting of people with rigorous 
+mathematical background, the other one consisting of scientists in general (ranging from economics to history). 
+Without exceptions, members of the mathematical audience answered that the probability equals 1/3 and members of the 
+other audience answered that it equals 1/2. The general audience referred to common sense when motivating their 
+answer, but the mathematically oriented audience backed up their reasoning with a calculation referring to the very 
+definition of conditional probability.
+
+Most maths sources present this problem as an example of the mathematically untrained people have concerning understanding 
+conditional probabilities. In roughly 99 out of 100 sources, the solution given to the problem equals 1/3, and these 
+sources typically claim that people who claim the answer to equal 1/2, are blatantly wrong. In fact, more rarely any 
+sources (one is Dr. Math at the web) provide an analysis of the problem at more depth, and show that both 1/3 and 1/2 are 
+correct answers, and moreover, that 1/2 can be a more reasonable answer under certain circumstances. 
+
+The ambiguity arises from the fact that the problem formulation doesn’t state exactly in probabilistic terms how 
+you gained the information about the existence of the girl in this particular family. To really solve the problem in a more 
+realistic way, one needs to assume a probabilistic model which generates your observation.
+
+End Quote.
+
+So my thoughts were right and the problem is ambiguously stated. Unfortunately probability is full of such ill-posed,
+poorly structured / stated problems. 
+
+The trick here is how ``knowing'' and ``meeting'' work in detail. In the ``meeting order'' (1/2) explanation we are 
+assuming that parents put their two children in some fixed order, and made an agreement that the ``first'' child must 
+meet strangers before the ``second''. So, if we meet a boy first, it's either BB or BG. But it might easily as well be 
+that we are in the case GB, if the parents did no such ordering / agreement, or the way we acquire our information / 
+make our observation / ``meet'' one of the children is not affected by such arrangements; then we'd get 1/3.
 \end{proof}
 
 \subsection{Exercise 28}
+A coin is loaded so that the probability of heads is 0.7 and the probability of tails is 0.3. Suppose that the coin is 
+tossed ten times and that the results of the tosses are mutually independent.
 
 \subsubsection{(a)}
-
+What is the probability of obtaining exactly seven heads?
 \begin{proof}
-
+\(\binom{10}{7} \cdot (0.7)^7 \cdot (0.3)^3 = 0.26682792 \approx 26.7\%\)
 \end{proof}
 
 \subsubsection{(b)}
-
+What is the probability of obtaining exactly ten heads?
 \begin{proof}
-
+\((0.7)^{10} = 0.028247525 \approx 2.8\%\)
 \end{proof}
 
 \subsubsection{(c)}
-
+What is the probability of obtaining no heads?
 \begin{proof}
-
+\((0.3)^{10} = 0.000005905 \approx 0.0006\%\)
 \end{proof}
 
 \subsubsection{(d)}
-
+What is the probability of obtaining at least one head?
 \begin{proof}
-
+\(1 - 0.000005905 \approx 99.999\%\)
 \end{proof}
 
 \subsection{Exercise 29}
+Suppose that ten items are chosen at random from a large batch delivered to a company. The manufacturer claims that just 3\% 
+of the items in the batch are defective. Assume that the batch is large enough so that even though the selection is made 
+without replacement, the number 0.03 can be used to approximate the probability that any one of the ten items is 
+defective. In addition, assume that because the items are chosen at random, the outcomes of the choices are mutually 
+independent. Finally, assume that the manufacturer’s claim is correct.
 
 \subsubsection{(a)}
-
+What is the probability that none of the ten is defective?
 \begin{proof}
-
+\(\binom{10}{0} \cdot (0.03)^0 \cdot (1 - 0.03)^{10} \approx 73.7\%\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that at least one of the ten is defective?
 
 \begin{proof}
-
+\(1 - 0.737424127 = 0.262575873 \approx 26.2\%\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that exactly four of the ten are defective?
 
 \begin{proof}
-
+\(\binom{10}{4} \cdot (0.03)^4 \cdot (1 - 0.03)^{10-4} = 210 \cdot 0.00000081 \cdot 0.832972005 = 0.000141689 \approx 
+0.014\%\)
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability that at most two of the ten are defective?
 
 \begin{proof}
+Exactly zero defective: \(\approx 73.7\%\)
 
+Exactly one defective: \(\binom{10}{1} \cdot (0.03)^1 \cdot (1 - 0.03)^{10-1} = 0.228069318 \approx 22.8\%\)
+
+Exactly two defective: \(\binom{10}{2} \cdot (0.03)^2 \cdot (1 - 0.03)^{10-2} = 0.031741606 \approx 3.2\%\)
+
+At most two defective: \(\approx 73.7+22.8+3.2 = 99.7\%\)
 \end{proof}
 
 \subsection{Exercise 30}
+Suppose the probability of a false positive result on a mammogram is 4\% and that radiologists’ interpretations of 
+mammograms are mutually independent in the sense that whether or not a radiologist finds a positive result on one mammogram 
+does not influence whether or not a radiologist finds a positive result on another mammogram. Assume that a woman has 
+a mammogram every year for ten years.
 
 \subsubsection{(a)}
+What is the probability that she will have no false positive results during that time?
 
 \begin{proof}
-
+\((0.96)^{10} = 0.664832636 \approx 66.5\%\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that she will have at least one false positive result during that time?
 
 \begin{proof}
-
+The probability that a woman will have at least one false positive result over a period of ten years is 
+\(1 - (0.96)^{10} \approx 33.5\%\).
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that she will have exactly two false positive results during that time?
 
 \begin{proof}
-
+\(\binom{10}{2} \cdot (0.04)^{2} \cdot (0.96)^{8} = 0.05194005 \approx 5.2\%\)
 \end{proof}
 
 \subsubsection{(d)}
+Suppose that the probability of a false negative result on a mammogram is 2\%, and assume that the probability that a 
+randomly chosen woman has breast cancer is 0.0002.
+
+(i) If a woman has a positive test result one year, what is the probability that she actually has breast cancer?
+
+(ii) If a woman has a negative test result one year, what is the probability that she actually has breast cancer?
 
 \begin{proof}
+Let \(A\) be the event that the result is positive, \(B\) be the event that the result is negative and \(C\) be the event 
+that a woman has breast cancer. So \(P(C) = 0.0002\) and \(P(C^c) = 0.9998\).
 
+(i) \(P(A|C)\) is the probability that the result is positive given that a woman has breast cancer. If it's for 1 year, then 
+there is a true positive 1 year, and false positives for the other 9 years. Therefore \(P(A|C) = \binom{10}{1} \cdot 
+(0.96)^1 \cdot (0.04)^9 = 10 \cdot \frac{96}{100} \cdot \frac{4^9}{10^{18}} = \frac{25,165,824}{10^{19}} = 
+0.000000000002516582 \approx 0\%\).
+
+\(P(A|C^c)\) is the probability that the result is positive given that a woman does not have breast cancer. If it's for 1 
+year, then there is a false positive for 1 year, and true positives for the other 9 years. Therefore \(P(A|C^c) = 
+\binom{10}{1} \cdot (0.04)^1 \cdot (0.96)^9 = 0.277013598\).
+
+We want to find \(P(C|A)\). By Bayes' theorem, \(P(C|A) =\)
+\[
+\frac{P(A|C)P(C)}{P(A|C)P(C) + P(A|C^c)P(C^c)} = \frac{0 \cdot 0.0002}{0 \cdot 0.0002 + 0.277013598 \cdot 0.9998} \approx 0\%
+\]
+(ii) \(P(B|C)\) is the probability that the result is negative given that a woman has breast cancer. If it's for 1 year, then 
+there is a false negative 1 year, and no false negatives for the other 9 years. Therefore \(P(B|C) = \binom{10}{1} \cdot 
+(0.02)^1 \cdot (0.98)^9 = 0.166749552\).
+
+\(P(B|C^c)\) is the probability that the result is negative given that a woman does not have breast cancer. If it's for 1 
+year, then there is a true negative for 1 year, and false negatives for the other 9 years. Therefore \(P(B|C^c) = 
+\binom{10}{1} \cdot (0.98)^1 \cdot (0.02)^9 = 10 \cdot \frac{98}{100} \cdot \frac{512}{10^{18}} = 
+0.0000000000000050176 \approx 0\%\).
+
+We want to find \(P(C|B)\). By Bayes' theorem, \(P(C|B) =\)
+\[
+\frac{P(B|C)P(C)}{P(B|C)P(C) + P(B|C^c)P(C^c)} = \frac{0.166749552 \cdot 0.0002}{0.166749552 \cdot 0.0002 + 0 
+\cdot 0.9998} \approx 100\%
+\]
 \end{proof}
 
 \subsection{Exercise 31}
+Empirical data indicate that approximately 103 out of every 200 children born are male. Hence the probability of a newborn 
+being male is about 51.5\%. Suppose that a family has six children, and suppose that the genders of all the children are
+mutually independent.
 
 \subsubsection{(a)}
+What is the probability that none of the children is male?
 
 \begin{proof}
-
+Female: 48.5\%, so \((0.485)^6 = 0.013015188 \approx 1.3\%\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that at least one of the children is male?
 
 \begin{proof}
-
+\(1 - 0.013015188 = 0.986984812 \approx 98.7\%\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that exactly five of the children are male?
 
 \begin{proof}
-
+\(\binom{6}{5} \cdot (0.485)^1 \cdot (0.515)^5 = 0.105421486 \approx 10.54\%\)
 \end{proof}
 
 \subsection{Exercise 32}
+A person takes a multiple-choice exam in which each question has four possible answers. Suppose that the person has no idea 
+about the answers to three of the questions and simply chooses randomly for each one.
 
 \subsubsection{(a)}
+What is the probability that the person will answer all three questions correctly?
 
 \begin{proof}
-
+\(\binom{3}{3} \cdot (1/4)^3 \cdot (3/4)^0 = 1/64\)
 \end{proof}
 
 \subsubsection{(b)}
+What is the probability that the person will answer exactly two questions correctly?
 
 \begin{proof}
-
+\(\binom{3}{2} \cdot (1/4)^2 \cdot (3/4)^1 = 9/64\)
 \end{proof}
 
 \subsubsection{(c)}
+What is the probability that the person will answer exactly one question correctly?
 
 \begin{proof}
-
+\(\binom{3}{1} \cdot (1/4)^1 \cdot (3/4)^2 = 27/64\)
 \end{proof}
 
 \subsubsection{(d)}
+What is the probability that the person will answer no questions correctly?
 
 \begin{proof}
-
+\(\dps \binom{3}{0} \cdot (1/4)^0 \cdot (3/4)^3 = 27/64\)
 \end{proof}
 
 \subsubsection{(e)}
+Suppose that the person gets one point of credit for each correct answer and that 1/3 point is deducted for each 
+incorrect answer. What is the expected value of the person’s score for the three questions?
 
 \begin{proof}
-
+All 3 correct: 3 points, exactly 2 correct: \(2-1/3 = 5/3\) points, exactly 1 correct: \(1 - 2/3 = 1/3\) points, no 
+correct: \(-3 \cdot (1/3) = -1\) points. So the expected value is
+\[
+\frac{1}{64} \cdot 3 + \frac{9}{64} \cdot \frac{5}{3} + \frac{27}{64} \cdot \frac{1}{3} + \frac{27}{64} \cdot (-1) =
+\frac{9 + 45 + 27 - 81}{192} = 0
+\]
 \end{proof}
 
 \subsection{Exercise 33}
+In exercise 23 of Section 9.8, let \(C_k\) be the event that the gambler has \(k\) dollars, wins the next roll of the die, 
+and is eventually ruined, let \(D_k\) be the event that the gambler has \(k\) dollars, loses the next roll of the die, and 
+is eventually ruined, and let \(P_k\) be the probability that the gambler is eventually ruined if he has \(k\) dollars. Use 
+the probability axioms and the definition of conditional probability to derive the equation 
+\(P_{k-1} = \frac{1}{6}P_k + \frac{5}{6}P_{k-2}\).
 
 \begin{proof}
+Notice that \(C_k\) and \(D_k\) are disjoint events for every \(k\), since one requires winning and the other losing. Also 
+note that \(E_k = C_k \cup D_k\) is the event of being eventually ruined from \(k\) dollars. So by axioms of 
+probability \(P_k = P(E_k) = P(C_k) + P(D_k)\). Let's try to find \(P_{k-1} = P(C_{k-1}) + P(D_{k-1})\). 
 
+\(C_{k-1}\) is the event that the gambler starts with \(\$k-1\), wins \$1 (which brings him up to \(\$k\)), and is 
+eventually ruined. Notice that this is the same as the event of winning and then \(E_k\). So by the multiplication rule 
+\(P(C_{k-1}) = \frac{1}{6} \cdot P(E_k) = \frac{1}{6}P_k\).
+
+\(D_{k-1}\) is the event that the gambler starts with \(\$k-1\), loses \$1 (which brings him to \(\$k-2\)), and is 
+eventually ruined. Notice that this is the same as the event of losing and then \(E_{k-2}\). So by the multiplication rule 
+\(P(D_{k-1}) = \frac{5}{6} \cdot P(E_{k-2}) = \frac{5}{6}P_{k-2}\).
+
+Using the results above, \(P_{k-1} = \frac{1}{6}P_k + \frac{5}{6}P_{k-2}\).
 \end{proof}
 
 \subsection{Exercise 34}
+Use conditional probability to analyze exercise 20 in Section 9.1. Let X be the event that the prize is not behind door A, 
+and let Y be the event that you switch and choose the door with the prize. Should you switch? Explain why or why not.
+
+{\it Hint:} \(P(Y) = P(Y \cap X) + P(Y \cap X^c)\)
 
 \begin{proof}
+Sticking with door A, I have 1/5 chance to win the prize (this is the original probability that the prize is behind door A).
 
+What about switching? \(P(Y) = P(Y \cap X) + P(Y \cap X^c)\), but \(P(Y \cap X^c) = 0\) because \(Y \cap X^c = \es\), 
+because if the prize is behind door A then I cannot switch and choose A (because I switch from A). So \(P(Y) = P(Y \cap X)\).
+
+By above and definition of conditional probability, \(P(Y) = P(Y \cap X) = P(Y|X)P(X) = \frac{4}{5}P(Y|X)\). Now if the 
+prize is not behind door A, and I switch, I have 1/3 chance of picking the right door. So \(P(Y|X) = 1/3\) and therefore 
+\(P(Y) = 4/15\).
+
+Notice \(\frac{4}{15} > \frac{1}{5}\) therefore I should switch.
 \end{proof}
 
 \end{document}
