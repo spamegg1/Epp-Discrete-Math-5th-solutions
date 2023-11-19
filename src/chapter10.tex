@@ -4,7 +4,7 @@
 \usepackage[normalem]{ulem} % strike through text
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref}
 \usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel}
-\usepackage{minted,tcolorbox,bm}
+\usepackage{tcolorbox,bm}
 
 \newtheorem{defn}{Definition}
 \newtheorem{thm}{Theorem}
@@ -1139,428 +1139,1278 @@ of \(G\).
 
 \section{Exercise Set 10.2}
 \subsection{Exercise 1}
+Find real numbers a, b, and c such that the following are true.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+\[
+\left[ 
+\begin{array}{cc}
+a + b & a - c \\
+c & b - a \\
+\end{array}
+\right] = 
+\left[ 
+\begin{array}{rr}
+1 & 0 \\
+-1 & 3 \\
+\end{array}
+\right]
+\]
 \begin{proof}
+\(c=-1, a=-1, b=2\)
+\end{proof}
 
+\subsubsection{(b)}
+\[
+\left[ 
+\begin{array}{cc}
+2a & b + c \\
+c - a & 2b - a \\
+\end{array}
+\right] = 
+\left[ 
+\begin{array}{rr}
+4 & 3 \\
+1 & -2 \\
+\end{array}
+\right]
+\]
+\begin{proof}
+\(a=2, c=3, b=0\)
 \end{proof}
 
 \subsection{Exercise 2}
+Find the adjacency matrices for the following directed graphs.
 
-\subsubsection{()}
+\subsubsection{(a)}
+\includegraphics[scale=0.6]{../images/10.2.2.a.1.png}
+{\it Proof.}
+\includegraphics[scale=0.6]{../images/10.2.2.a.png}
 
-\begin{proof}
-
-\end{proof}
+\subsubsection{(b)}
+\includegraphics[scale=0.6]{../images/10.2.2.b.1.png}
+{\it Proof.}
+\begin{tabular}{ccccc}
+ & {\cy \(v_1\)} & {\cy \(v_2\)} & {\cy \(v_3\)} & {\cy \(v_4\)} \\
+{\cy \(v_1\)} & 1 & 0 & 1 & 0 \\
+{\cy \(v_2\)} & 0 & 0 & 1 & 0 \\
+{\cy \(v_3\)} & 1 & 0 & 0 & 1 \\
+{\cy \(v_4\)} & 0 & 0 & 1 & 0 \\
+\end{tabular}
 
 \subsection{Exercise 3}
+Find directed graphs that have the following adjacency matrices:
 
-\subsubsection{()}
+\subsubsection{(a)}
+\(
+\left[ 
+\begin{array}{cccc}
+1 & 0 & 1 & 2 \\
+0 & 0 & 1 & 0 \\
+0 & 2 & 1 & 1 \\
+0 & 1 & 1 & 0 \\
+\end{array}
+\right]
+\)
+{\it Proof.} \includegraphics[scale=0.6]{../images/10.2.3.a.png}
 
-\begin{proof}
-
-\end{proof}
+\subsubsection{(b)}
+\(
+\left[ 
+\begin{array}{cccc}
+0 & 1 & 0 & 0 \\
+2 & 0 & 1 & 0 \\
+1 & 2 & 1 & 0 \\
+0 & 0 & 1 & 0 \\
+\end{array}
+\right]
+\)
+{\it Proof.} \includegraphics[scale=0.6]{../images/10.2.3.b.png}
 
 \subsection{Exercise 4}
+Find adjacency matrices for the following (undirected) graphs.
 
-\subsubsection{()}
+\subsubsection{(a)}
+\includegraphics[scale=0.6]{../images/10.2.4.a.1.png}
+{\it Proof.}
+\includegraphics[scale=0.6]{../images/10.2.4.a.png}
 
-\begin{proof}
+\subsubsection{(b)}
+\includegraphics[scale=0.6]{../images/10.2.4.b.1.png}
+{\it Proof.}
+\begin{tabular}{ccccc}
+ & {\cy \(v_1\)} & {\cy \(v_2\)} & {\cy \(v_3\)} & {\cy \(v_4\)} \\
+{\cy \(v_1\)} & 1 & 0 & 0 & 0 \\
+{\cy \(v_2\)} & 0 & 1 & 1 & 2 \\
+{\cy \(v_3\)} & 0 & 1 & 1 & 0 \\
+{\cy \(v_4\)} & 0 & 2 & 0 & 0 \\
+\end{tabular}
 
-\end{proof}
+\subsubsection{(c)}
+\(K_4\), the complete graph on four vertices
+{\it Proof.} \includegraphics[scale=0.6]{../images/10.2.4.c.png}
+
+\subsubsection{(d)}
+\(K_{2,3}\), the complete bipartite graph on (2, 3) vertices
+{\it Proof.}
+\begin{tabular}{cccccc}
+ & {\cy \(v_1\)} & {\cy \(v_2\)} & {\cy \(v_3\)} & {\cy \(w_1\)} & {\cy \(w_2\)} \\
+{\cy \(v_1\)} & 0 & 0 & 0 & 1 & 1 \\
+{\cy \(v_2\)} & 0 & 0 & 0 & 1 & 1 \\
+{\cy \(v_3\)} & 0 & 0 & 0 & 1 & 1 \\
+{\cy \(w_1\)} & 1 & 1 & 1 & 0 & 0 \\
+{\cy \(w_2\)} & 1 & 1 & 1 & 0 & 0 \\
+\end{tabular}
 
 \subsection{Exercise 5}
+Find graphs that have the following adjacency matrices.
 
-\subsubsection{()}
+\subsubsection{(a)}
+\(
+\left[ 
+\begin{array}{ccc}
+1 & 0 & 1 \\
+0 & 1 & 2 \\
+1 & 2 & 0 \\
+\end{array}
+\right]
+\)
+{\it Proof.} \includegraphics[scale=0.6]{../images/10.2.5.a.png}
 
-\begin{proof}
-
-\end{proof}
+\subsubsection{(b)}
+\(
+\left[ 
+\begin{array}{ccc}
+0 & 2 & 0 \\
+2 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array}
+\right]
+\)
+{\it Proof.} \includegraphics[scale=0.6]{../images/10.2.5.b.png}
 
 \subsection{Exercise 6}
+The following are adjacency matrices for graphs. In each case determine whether the graph is connected by analyzing the 
+matrix without drawing the graph.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+\[
+\left[ 
+\begin{array}{ccc}
+0 & 1 & 1 \\
+1 & 1 & 0 \\
+1 & 0 & 0 \\
+\end{array}
+\right]
+\]
 \begin{proof}
+From the first row, we see that \(v_1\) is adjacent to \(v_2\) and \(v_3\). Therefore the graph is connected.
+\end{proof}
 
+\subsubsection{(b)}
+\[
+\left[ 
+\begin{array}{cccc}
+0 & 2 & 0 & 0 \\
+2 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 \\
+\end{array}
+\right]
+\]
+\begin{proof}
+From the first two rows, we can see there are 2 edges between \(v_1\) and \(v_2\). From the last two rows, we can see that
+\(v_3\) and \(v_4\) are adjacent. However, there are no edges between the \(v_1+v_2\) connected component and the 
+\(v_3+v_4\) connected component. Thus the graph is disconnected.
 \end{proof}
 
 \subsection{Exercise 7}
-
-\subsubsection{()}
+Suppose that for every positive integer \(i\), all the entries in the \(i\)th row and \(i\)th column of the adjacency matrix 
+of a graph are 0. What can you conclude about the graph?
 
 \begin{proof}
-
+The \(i\)th row and column defines the edges between \(v_i\) and the other vertices. If the entries are all 0, that means
+there are no edges between \(v_i\) and the other vertices. So the graph is not connected; \(v_i\) is disconnected from the
+rest of the graph.
 \end{proof}
 
 \subsection{Exercise 8}
+Find each of the following products.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+\[
+\left[ 
+\begin{array}{rr}
+2 & -1 \\
+\end{array}
+\right]
+\left[ 
+\begin{array}{c}
+1 \\
+3
+\end{array}
+\right]
+\]
 \begin{proof}
+\(2 \cdot 1 + (-1) \cdot 3 = -1\)
+\end{proof}
 
+\subsubsection{(b)}
+\[
+\left[ 
+\begin{array}{rrr}
+4 & -1 & 7 \\
+\end{array}
+\right]
+\left[ 
+\begin{array}{c}
+1 \\
+2 \\
+0
+\end{array}
+\right]
+\]
+\begin{proof}
+\(4 \cdot 1 + (-1) \cdot 2 + 7 \cdot 0 = 2\)
 \end{proof}
 
 \subsection{Exercise 9}
+Find each of the following products.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+\[
+\left[ 
+\begin{array}{rr}
+3 & 0 \\
+1 & -2 \\
+\end{array}
+\right]
+\left[ 
+\begin{array}{rrr}
+1 & -1 & 4 \\
+0 & 2 & 1 \\
+\end{array}
+\right]
+\]
 \begin{proof}
+\(\left[ 
+\begin{array}{rrr}
+3 & -3 & 12 \\
+1 & -5 & 2 \\
+\end{array}
+\right]\)
+\end{proof}
 
+\subsubsection{(b)}
+\[
+\left[ 
+\begin{array}{rrr}
+2 & 0 & 1 \\
+0 & -1 & 0 \\
+\end{array}
+\right]
+\left[ 
+\begin{array}{rr}
+1 & 3 \\
+5 & -4 \\
+-2 & 2 \\
+\end{array}
+\right]
+\]
+\begin{proof}
+\(\left[ 
+\begin{array}{rr}
+0 & 8 \\
+-5 & 4 \\
+\end{array}
+\right]\)
+\end{proof}
+
+\subsubsection{(c)}
+\[
+\left[ 
+\begin{array}{r}
+-1 \\
+2 \\
+\end{array}
+\right]
+\left[ 
+\begin{array}{rr}
+2 & 3 \\
+\end{array}
+\right]
+\]
+\begin{proof}
+\(\left[ 
+\begin{array}{rr}
+-2 & -3 \\
+4 & 6 \\
+\end{array}
+\right]\)
+\end{proof}
+
+\subsubsection{(d)}
+\[
+\left[ 
+\begin{array}{rr}
+1 & 2 \\
+3 & -1 \\
+\end{array}
+\right]^2
+\]
+\begin{proof}
+\(\left[ 
+\begin{array}{rr}
+7 & 0 \\
+0 & 7 \\
+\end{array}
+\right]\)
 \end{proof}
 
 \subsection{Exercise 10}
+Let \({\bf A} = 
+\left[ 
+\begin{array}{rrr}
+1 & 1 & -1 \\
+0 & -2 & 1 \\
+\end{array}
+\right]
+\), \({\bf B} = 
+\left[ 
+\begin{array}{rr}
+-2 & 0 \\
+1 & 3 \\
+\end{array}
+\right]
+\), and \({\bf C} = 
+\left[ 
+\begin{array}{rr}
+0 & -2 \\
+3 & 1 \\
+1 & 0 \\
+\end{array}
+\right]
+\). For each of the following, determine whether the indicated product exists, and compute it if it does.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+{\bf AB}
 \begin{proof}
+No product. ({\bf A} has three columns, and {\bf B} has two rows.)
+\end{proof}
 
+\subsubsection{(b)}
+{\bf BA}
+\begin{proof}
+\({\bf BA} = 
+\left[ 
+\begin{array}{rrr}
+-2 & -2 & 2 \\
+1 & -5 & 2 \\
+\end{array}
+\right]
+\)
+\end{proof}
+
+\subsubsection{(c)}
+\({\bf A^2}\)
+\begin{proof}
+No product. ({\bf A} has different numbers of rows and columns.)
+\end{proof}
+
+\subsubsection{(d)}
+{\bf BC}
+\begin{proof}
+No product. ({\bf B} has 2 columns, {\bf C} has 3 rows.)
+\end{proof}
+
+\subsubsection{(e)}
+{\bf CB}
+\begin{proof}
+\({\bf CB} = 
+\left[ 
+\begin{array}{rr}
+-2 & -6 \\
+-5 & 3 \\
+-2 & 0 \\
+\end{array}
+\right]
+\)
+\end{proof}
+
+\subsubsection{(f)}
+\({\bf B^2}\)
+\begin{proof}
+\({\bf B^2} = 
+\left[ 
+\begin{array}{rr}
+4 & 0 \\
+1 & 9 \\
+\end{array}
+\right]
+\)
+\end{proof}
+
+\subsubsection{(g)}
+\({\bf B^3}\)
+\begin{proof}
+\({\bf B^3} = 
+\left[ 
+\begin{array}{rr}
+-8 & 0 \\
+7 & 27 \\
+\end{array}
+\right]
+\)
+\end{proof}
+
+\subsubsection{(h)}
+\({\bf C^2}\)
+\begin{proof}
+No product. ({\bf C} has different numbers of rows and columns.)
+\end{proof}
+
+\subsubsection{(i)}
+{\bf AC}
+\begin{proof}
+\({\bf AC} = 
+\left[ 
+\begin{array}{rr}
+2 & -1 \\
+-5 & -2 \\
+\end{array}
+\right]
+\)
+\end{proof}
+
+\subsubsection{(j)}
+{\bf CA}
+\begin{proof}
+\({\bf CA} = 
+\left[ 
+\begin{array}{rrr}
+0 & 4 & -2 \\
+3 & 1 & -2\\
+1 & 1 & -1 \\
+\end{array}
+\right]
+\)
 \end{proof}
 
 \subsection{Exercise 11}
-
-\subsubsection{()}
+Give an example different from that in the text to show that matrix multiplication is not commutative. That is, find 
+\(2 \times 2\) matrices {\bf A}\, and {\bf B}\, such that {\bf AB} and {\bf BA} both exist but \({\bf AB} \neq {\bf BA}\).
 
 \begin{proof}
-
+\({\bf A} = 
+\left[ 
+\begin{array}{rr}
+1 & 2 \\
+3 & 4 \\
+\end{array}
+\right], {\bf B} = 
+\left[ 
+\begin{array}{rr}
+2 & 4 \\
+3 & 6 \\
+\end{array}
+\right], {\bf AB} = 
+\left[ 
+\begin{array}{rr}
+8 & 16 \\
+18 & 36 \\
+\end{array}
+\right], {\bf BA} = 
+\left[ 
+\begin{array}{rr}
+14 & 20 \\
+21 & 30 \\
+\end{array}
+\right], {\bf AB} \neq {\bf BA}.
+\)
 \end{proof}
 
 \subsection{Exercise 12}
-
-\subsubsection{()}
+Let O denote the matrix 
+\(\left[ 
+\begin{array}{rr}
+0 & 0 \\
+0 & 0 \\
+\end{array}
+\right]
+\). Find \(2 \times 2\) matrices {\bf A} and {\bf B} such that {\bf A} \(\neq\) O and {\bf B} \(\neq\) O but {\bf AB} = O.
 
 \begin{proof}
-
+One among many possible examples is 
+\({\bf A} = {\bf B} =
+\left[ 
+\begin{array}{rr}
+0 & 1 \\
+0 & 0 \\
+\end{array}
+\right]
+\).
 \end{proof}
 
 \subsection{Exercise 13}
-
-\subsubsection{()}
+Let O denote the matrix 
+\(\left[ 
+\begin{array}{rr}
+0 & 0 \\
+0 & 0 \\
+\end{array}
+\right]
+\). Find \(2 \times 2\) matrices {\bf A} and {\bf B} such that {\bf A} \(\neq\) {\bf B}, {\bf B} \(\neq\) O and {\bf AB} \(\neq\) O but 
+{\bf BA} = O.
 
 \begin{proof}
-
+\({\bf A} = 
+\left[ 
+\begin{array}{rr}
+1 & 0 \\
+0 & 0 \\
+\end{array}
+\right],
+{\bf B} =
+\left[ 
+\begin{array}{rr}
+0 & 1 \\
+0 & 0 \\
+\end{array}
+\right]
+\). Then {\bf A} \(\neq\) {\bf B} \(\neq\) O, {\bf AB} = {\bf B} \(\neq\) O, but {\bf BA} = O.
 \end{proof}
 
-\subsection{Exercise 14}
+{\bf \cy In \(14-18\), assume the entries of all matrices are real numbers.}
 
-\subsubsection{()}
+\subsection{Exercise 14}
+Prove that if {\bf I} is the \(m \times m\) identity matrix and {\bf A} is any \(m \times n\) matrix, then \({\bf IA = A}\).
 
 \begin{proof}
+We need to show that for all \(1 \leq i \leq m\) and all \(1 \leq j \leq m\), \({\bf (IA)}_{ij} = {\bf A}_{ij}\). In other 
+words, we need to show that {\bf IA} and {\bf A} have the same  entries.
 
+Denote the entries of {\bf I} by \(\delta_{ik}\). The identity matrix has 1's only on the diagonal and 0's elsewhere. Thus
+\(
+\delta_{ik} =
+\left\{
+\begin{tabular}{ll}
+1 & if \(i = k\) \\
+0 & if \(i \neq k\)
+\end{tabular}
+\right.
+\). Now by the multiplication formula, \({\bf(IA)}_{ij} = \sum_{k=1}^m {\bf I}_{ik} {\bf A}_{kj} = \sum_{k=1}^m \delta_{ik} 
+{\bf A}_{kj} = {\bf A}_{ij}\) because all the terms in the sum are 0 except when \(k=i\), {\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 15}
-
-\subsubsection{()}
+Prove that if {\bf A} is an \(m \times m\) symmetric matrix, then \({\bf A^2}\) is symmetric.
 
 \begin{proof}
-
+Suppose {\bf A} is an \(m \times m\) symmetric matrix. Then for all integers \(i\) and \(j\) with \(1 \leq i, j \leq m\),
+\[
+{\bf A}^2_{ij} = \sum_{k=1}^{m} {\bf A}_{ik} {\bf A}_{kj} \text{ and } {\bf A}^2_{ji} = \sum_{k=1}^{m} {\bf A}_{jk} {\bf A}_{ki}
+\]
+But since {\bf A} is symmetric, \({\bf A}_{ik} = {\bf A}_{ki}\) and \({\bf A}_{kj} = {\bf A}_{jk}\) for all \(i, j\), and \(k\), and thus \({\bf A}_{ik}
+{\bf A}_{kj} = {\bf A}_{jk} {\bf A}_{ki}\) {\it [by the commutative law for multiplication of real numbers]}. Hence \(({\bf A}^2)_{ij} = 
+({\bf A}^2)_{ji}\) for all integers \(i\) and \(j\) with \(1 \leq i, j \leq m\).
 \end{proof}
 
 \subsection{Exercise 16}
-
-\subsubsection{()}
+Prove that matrix multiplication is associative: If {\bf A}, {\bf B}, and {\bf C} are any \(m \times k, k \times r\), and 
+\(r \times n\) matrices, respectively, then ({\bf A}{\bf B}){\bf C} = {\bf A}({\bf B}{\bf C}). 
+({\it Hint:} Summation notation is helpful.)
 
 \begin{proof}
+{\bf A}{\bf B} is an \(m \times r\) matrix, where the \(ij^{th}\) entry is \({\bf A}{\bf B}_{ij} = \sum_{x=1}^{k}{\bf A}_{ix}{\bf B}_{xj}\).
 
+{\bf B}{\bf C} is an \(k \times n\) matrix, where the \(ij^{th}\) entry is \({\bf B}{\bf C}_{ij} = \sum_{y=1}^{r}{\bf B}_{iy}{\bf C}_{yj}\).
+
+({\bf A}{\bf B}){\bf C} is an \(m \times n\) matrix, where the \(ij^{th}\) entry is \([({\bf A}{\bf B}){\bf C}]_{ij} = 
+\sum_{y=1}^{r} ({\bf A}{\bf B})_{iy}{\bf C}_{yj} = \)
+\[
+\sum_{y=1}^{r} \left(\sum_{x=1}^{k}{\bf A}_{ix}{\bf B}_{xy}\right) {\bf C}_{yj} 
+= \sum_{y=1}^{r}\left(\sum_{x=1}^{k}{\bf A}_{ix}{\bf B}_{xy} {\bf C}_{yj}\right)
+= \sum_{x=1}^{k}{\bf A}_{ix}\left(\sum_{y=1}^{r}{\bf B}_{xy} {\bf C}_{yj}\right)
+\]
+(notice we are allowed to switch the order of the summation since this is a finite sum).
+
+{{\bf A}({\bf B}{\bf C})} is an \(m \times n\) matrix, where the \(ij^{th}\) entry is \([{\bf A}({\bf B}{\bf C})]_{ij} = 
+\sum_{x=1}^{k} {\bf A}_{ix}({\bf B}{\bf C})_{xj}= \)
+\[
+\sum_{x=1}^{k}{\bf A}_{ix}\left(\sum_{y=1}^{r}{\bf B}_{xy}{\bf C}_{yj}\right)
+\]
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 17}
-
-\subsubsection{()}
+Use mathematical induction and the result of exercise 16 to prove that if {\bf A} is any \(m \times m\) matrix, then \({\bf A^n A = AA^n}\) for each integer \(n \geq 1\).
 
 \begin{proof}
+Let the property \(P(n)\) be the equation \({\bf A}^n {\bf A} = {\bf A}{\bf A}^n\).
 
+{\bf Show that \(P(1)\) is true:} We must show that \({\bf A}^1{\bf A} = {\bf A}{\bf A}^1\). But this is true because 
+\({\bf A}^1 = {\bf A}\) and \({\bf A}{\bf A} = {\bf A}{\bf A}\).
+
+{\bf Show that for every integer \(k \geq 1\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let \(k\) be any integer 
+such that \(k \geq 1\), and suppose that \({\bf A}^k{\bf A} = {\bf A}{\bf A}^k\). {\it [This is the inductive hypothesis.]} 
+We must show that \({\bf A}^{k+1}{\bf A} = {\bf A}{\bf A}^{k+1}\). But
+\begin{center}
+\begin{tabular}{rcll}
+\({\bf A}^{k+1}{\bf A}\) & = & \(({\bf A}{\bf A}^k){\bf A}\) & {\cy by definition of matrix power} \\
+& = & \({\bf A}({\bf A^k}{\bf A})\) & {\cy by exercise 16} \\
+& = & \({\bf A}({\bf A}{\bf A}^k)\) & {\cy by inductive hypothesis} \\
+& = & \({\bf A}{\bf A}^{k+1}\) & {\cy by definition of matrix power} \\
+\end{tabular}
+\end{center}
 \end{proof}
 
 \subsection{Exercise 18}
-
-\subsubsection{()}
+Use mathematical induction to prove that if {\bf A} is an \(m \times m\) symmetric matrix, then for any integer 
+\(n \geq 1\), \({\bf A}^n\) is also symmetric.
 
 \begin{proof}
+Let the property \(P(n)\) be the statement ``\({\bf A}^n\) is symmetric''.
 
+{\bf Show that \(P(1)\) is true:} We must show that \({\bf A}^1\) is symmetric. But this is true because 
+\({\bf A}^1 = {\bf A}\) and {\bf A} is symmetric by assumption.
+
+{\bf Show that for every integer \(k \geq 1\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let \(k\) be any integer 
+such that \(k \geq 1\), and suppose that \({\bf A}^k\) is symmetric. {\it [This is the inductive hypothesis.]} 
+We must show that \({\bf A}^{k+1}\) is symmetric. 
+
+Since \({\bf A}^{k+1} = {\bf A}{\bf A}^k\), the \(ij^{th}\) entry in \({\bf A}^{k+1}\) is, by definition of matrix 
+multiplication \(\sum_{l=1}^m {\bf A}_{il} ({\bf A}^k)_{lj}\). Similarly the \(ji^{th}\) entry in \({\bf A}^{k+1}\) is
+\(\sum_{l=1}^m {\bf A}_{jl} ({\bf A}^k)_{li}\). We need to show these two are equal.
+
+By exercise 17, \({\bf A}{\bf A}^k = {\bf A}^k{\bf A}\). This means that the \(ij^{th}\) entries in both of these products 
+are the same. So \(\sum_{l=1}^m{\bf A}_{il} ({\bf A}^k)_{lj}\) is the same as \(\sum_{l=1}^m ({\bf A}^k)_{il}{\bf A}_{lj}\).
+By the inductive hypothesis \(({\bf A}^k)_{il} = ({\bf A}^k)_{li}\), and since {\bf A} is symmetric, \({\bf A}_{lj} = 
+{\bf A}_{jl}\). Putting all these facts together, we see that \(\sum_{l=1}^m {\bf A}_{il} ({\bf A}^k)_{lj}\) is the same as
+\(\sum_{l=1}^m {\bf A}_{jl} ({\bf A}^k)_{li}\), {\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 19}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Let \({\bf A} = 
+\left[ 
+\begin{array}{rrr}
+1 & 1 & 2 \\
+1 & 0 & 1\\
+2 & 1 & 0 \\
+\end{array}
+\right]
+\). Find \({\bf A}^2\) and \({\bf A}^3\).
 
 \begin{proof}
+\({\bf A}^2 = 
+\left[ 
+\begin{array}{rrr}
+6 & 3 & 3 \\
+3 & 2 & 2 \\
+3 & 2 & 5 \\
+\end{array}
+\right]
+\), 
+\({\bf A}^3 = 
+\left[ 
+\begin{array}{rrr}
+15 & 9 & 15 \\
+9 & 5 & 8 \\
+15 & 8 & 8 \\
+\end{array}
+\right]
+\)
+\end{proof}
 
+\subsubsection{(b)}
+Let \(G\) be the graph with vertices \(v_1, v_2\), and \(v_3\) and with \(A\) as its adjacency matrix. Use the answers to 
+part (a) to find the number of walks of length 2 from \(v_1\) to \(v_3\) and the number of walks of length 3 from \(v_1\) to 
+\(v_3\). Do not draw \(G\) to solve this problem.
+
+\begin{proof}
+By Theorem 10.2.2, there are 3 walks of length 2 and 15 walks of length 3. (top-right or bottom-left entry)
+\end{proof}
+
+\subsubsection{(c)}
+Examine the calculations you performed in answering part (a) to find five walks of length 2 from \(v_3\) to \(v_3\). Then 
+draw \(G\) and find the walks by visual inspection.
+
+\begin{proof}
+In {\bf A} looking at the third row we see there are 2 edges between \(v_1\) and \(v_3\), call them \(e_3, e_4\), and 1 
+edge between \(v_2\) and \(v_3\), call it \(e_2\). We can use these to form length 2 walks from \(v_3\) to \(v_3\): 
+\(v_3e_3v_1e_3v_3\), \(v_3e_3v_1e_4v_3\), \(v_3e_4v_1e_3v_3\), \(v_3e_4v_1e_4v_3\), \(v_3e_2v_2e_2v_3\).
+
+If we draw \(G\) we can see these walks:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.2]{../images/10.2.19.c.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 20}
+The following is an adjacency matrix for a graph: \includegraphics[scale=0.5]{../images/10.2.20.png}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+How many walks of length 2 are there from \(v_2\) to \(v_3\)?
 \begin{proof}
+\({\bf A}^2 = 
+\left[ 
+\begin{array}{rrrr}
+2 & 2 & 2 & 2 \\
+2 & 6 & 2 & 3 \\
+2 & 2 & 6 & 3 \\
+2 & 3 & 3 & 3 \\
+\end{array}
+\right]
+\). 2 since \(({\bf A}^2)_{23} = 2\)
+\end{proof}
 
+\subsubsection{(b)}
+How many walks of length 2 are there from \(v_3\) to \(v_4\)?
+\begin{proof}
+3 since \(({\bf A}^2)_{34} = 3\)
+\end{proof}
+
+\subsubsection{(c)}
+How many walks of length 3 are there from \(v_1\) to \(v_4\)?
+\begin{proof}
+\({\bf A}^3 = 
+\left[ 
+\begin{array}{rrrr}
+4 & 8 & 8 & 6 \\
+8 & 9 & 17 & 11 \\
+8 & 17 & 14 & 11 \\
+6 & 11 & 11 & 9 \\
+\end{array}
+\right]
+\). 6 since \(({\bf A}^3)_{14} = 6\)
+\end{proof}
+
+\subsubsection{(d)}
+How many walks of length 3 are there from \(v_2\) to \(v_3\)?
+\begin{proof}
+17 since \(({\bf A}^3)_{23} = 17\)
 \end{proof}
 
 \subsection{Exercise 21}
-
-\subsubsection{()}
+Let {\bf A} be the adjacency matrix for \(K_3\), the complete graph on three vertices. Use mathematical induction to prove 
+that for each positive integer \(n\), all the entries along the main diagonal of \({\bf A}^n\) are equal to each other and 
+all the entries that do not lie along the main diagonal are equal to each other.
 
 \begin{proof}
+Let \(P(n)\) be the statement ``all the entries along the main diagonal of \({\bf A}^n\) are equal to each other and all the 
+entries that do not lie along the main diagonal are equal to each other.''
 
+{\bf Show that \(P(1)\) is true:}
+\({\bf A} = 
+\left[ 
+\begin{array}{rrr}
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+\end{array}
+\right]
+\), so \(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq 1\) is any
+integer and assume \(P(k)\) is true. So all the entries along the main diagonal of \({\bf A}^k\) are equal to each other, 
+say, to some constant \(B\), and all the entries that do not lie along the main diagonal of  \({\bf A}^k\) are equal to 
+each other, say, to some constant \(C\). {\it [This is the inductive hypothesis.]}
+
+{\it [We want to show that all the entries along the main diagonal of \({\bf A}^{k+1}\) are equal to each other, and 
+all the entries that do not lie along the main diagonal of \({\bf A}^{k+1}\) are equal to each other.]} 
+
+By definition of matrix multiplication, \(\dps {\bf A}^{k+1}_{ij} = \sum_{l=1}^{3} {\bf A}_{il} {\bf A}^k_{lj}\) for all 
+\(1 \leq i, j \leq 3\). 
+
+The diagonal entries of \({\bf A}^{k+1}\) are \(\dps {\bf A}^{k+1}_{11} = \sum_{l=1}^{3} {\bf A}_{1l} {\bf A}^k_{l1}\), 
+\(\dps {\bf A}^{k+1}_{22} = \sum_{l=1}^{3} {\bf A}_{2l} {\bf A}^k_{l2}\), and \\ \(\dps {\bf A}^{k+1}_{33} = \sum_{l=1}^{3} 
+{\bf A}_{3l} {\bf A}^k_{l3}\). 
+
+Let's look closer at \({\bf A}^{k+1}_{11}\): \({\bf A}^{k+1}_{11} = {\bf A}_{11} {\bf A}^k_{11} + {\bf A}_{12} {\bf A}
+^k_{21} + {\bf A}_{13} {\bf A}^k_{31}\). We know \({\bf A}_{11} = 0, {\bf A}_{12} = {\bf A}_{13} = 1\). So \({\bf A}
+^{k+1}_{11} = {\bf A}^k_{21} + {\bf A}^k_{31}\). By the inductive hypothesis, \({\bf A}^k_{21} = {\bf A}^k_{31} = C\), 
+so \({\bf A}^{k+1}_{11} = 2C\).
+
+Doing the same calculation for \({\bf A}^{k+1}_{22} = {\bf A}_{21} {\bf A}^k_{12} + {\bf A}_{22} {\bf A}^k_{22} + {\bf A}
+_{23} {\bf A}^k_{32} = {\bf A}^k_{12} + {\bf A}^k_{32} = 2C\).
+
+Doing the same calculation for \({\bf A}^{k+1}_{33} = {\bf A}_{31} {\bf A}^k_{13} + {\bf A}_{32} {\bf A}^k_{23} + {\bf A}
+_{33} {\bf A}^k_{33} = {\bf A}^k_{13} + {\bf A}^k_{23} = 2C\).
+
+So all the diagonal entries of \({\bf A}^{k+1}\) are equal to \(2C\).
+
+Similarly, let's take a look at one of the off-diagonal entries. For example \(\dps {\bf A}^{k+1}_{12} = \sum_{l=1}^{3} {\bf A}_{1l} {\bf A}^k_{l2} = {\bf A}_{11} {\bf A}^k_{12} 
++ {\bf A}_{12} {\bf A}^k_{22} + {\bf A}_{13} {\bf A}^k_{32} = 
+{\bf A}^k_{22} + {\bf A}^k_{32} = B + C\).
+
+Another one is \(\dps {\bf A}^{k+1}_{23} = \sum_{l=1}^{3} {\bf A}_{2l} {\bf A}^k_{l3} = {\bf A}_{21} {\bf A}^k_{13} + {\bf A}_{22} {\bf A}^k_{23} + {\bf A}_{23} {\bf A}^k_{33} = {\bf A}^k_{13} + {\bf A}^k_{33} = C + B\).
+
+We can repeat similar calculations for the other 4 off-diagonal entries with the same result. So, all the off-
+diagonal entries of \({\bf A}^{k+1}\) are equal to \(B+C\).
 \end{proof}
 
 \subsection{Exercise 22}
+\subsubsection{(a)}
+Draw a graph that has
+\(
+\left[ 
+\begin{array}{rrrrr}
+0 & 0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 2 & 1 \\
+1 & 1 & 2 & 0 & 0 \\
+2 & 1 & 1 & 0 & 0 \\
+\end{array}
+\right]
+\)
+as its adjacency matrix. Is this graph bipartite?
 
-\subsubsection{()}
+{\it Hint:} If \(G\) is bipartite, then its vertices can be partitioned into two sets \(V_1\) and \(V_2\) so that no 
+vertices in \(V_1\) are connected to each other by an edge and no vertices in \(V_2\) are connected to each other by an edge. 
+Label the vertices in \(V_1\) as \(v_1, v_2, \ldots, v_k\) and label the vertices in \(V_2\) as \(v_{k + 1}, v_{k + 2}, 
+\ldots, v_n\). Now look at the matrix of \(G\) formed according to the given vertex labeling.
 
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.2]{../images/10.2.22.a.png}
+\end{figure}
 
+Yes, \(G\) is bipartite: label the vertices \(v_1, v_2, v_3, v_4, v_5\) and let \(V_1 = \{v_1, v_2, v_3\}\) and \(V_2 = 
+\{v_4, v_5\}\). From the adjacency matrix we can see that \(v_1, v_2, v_3\) have no edges between them, and \(v_4, v_5\)
+have no edges between them.
+\end{proof}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Definition:} Given an \(m \times n\) matrix {\bf A} whose \(ij\)th entry is denoted \(a_{ij}\), the {\bf transpose 
+of A} is the matrix \({\bf A}^t\) whose \(ij\)th entry is \(a_{ji}\), for each \(i = 1, \ldots, m\) and \(j = 1, \ldots, n\).
+\end{tcolorbox}
+
+Note that the first row of {\bf A} becomes the first column of \({\bf A}^t\), the second row of {\bf A} becomes the second 
+column of \({\bf A}^t\), and so forth. For instance, if
+\({\bf A} = 
+\left[ 
+\begin{array}{rrr}
+0 & 2 & 1 \\
+1 & 2 & 3 \\
+\end{array}
+\right]
+\) 
+then
+\({\bf A}^t = 
+\left[ 
+\begin{array}{rr}
+0 & 1 \\
+2 & 2 \\
+1 & 3 \\
+\end{array}
+\right]
+\).
+
+\subsubsection{(b)}
+Show that a graph with \(n\) vertices is bipartite if, and only if, for some labeling of its vertices, its adjacency 
+matrix has the form
+\[
+\left[ 
+\begin{array}{rr}
+O & {\bf A} \\
+{\bf A}^t & O \\
+\end{array}
+\right]
+\]
+where {\bf A} is a \(k \times (n - k)\) matrix for some integer \(k\) such that \(0 < k < n\), the top left O 
+represents a \(k \times k\) matrix all of whose entries are 0, \({\bf A}^t\) is the transpose of \(A\), and the bottom right 
+O represents an \((n - k) \times (n - k)\) matrix all of whose entries are 0.
+
+\begin{proof}
+\(\bm{(\impliedby):}\) If the adjacency matrix of \(G\) has the above form, then due to the \(k \times k\) matrix O on the
+top-left, there are no edges among \(v_1, \ldots, v_k\); and due to the \((n-k) \times (n-k)\) matrix O on the bottom-right 
+there are no edges among \(v_{k+1}, \ldots, v_n\). So let \(V_1 = \{v_1, \ldots, v_k\}, V_2 = \{v_{k+1}, \ldots, v_n\}\)
+and therefore \(G\) is bipartite because \((V_1, V_2)\) is a bipartition of \(G\).
+
+\(\bm{(\implies):}\) If \(G\) is bipartite then its vertices can be split into two disjoint sets \(V_1 = \{v_1, \ldots, 
+v_k\}\) and \(V_2 = \{v_{k+1}, \ldots, v_n\}\) where there are no edges among the vertices of \(V_1\) and there are no edges
+among the vertices of \(V_2\). So we can order the vertices like that, \(v_1, \ldots, v_k, v_{k+1}, \ldots, v_n\), and
+the adjacency matrix with respect to this ordering of the vertices will have zeros in the top-left \(k \times k\) and in 
+the bottom-right \((n-k) \times (n-k)\) sub-matrices. The other two sub-matrices will be transposes of each other, 
+since, if there is an edge between \(v_i \in V_1\) and \(v_j \in V_2\) where \(1 \leq i \leq k < j \leq n\), this will be 
+in the \(ij\)th entry in the bottom-left sub-matrix, and the same edge can be viewed as an edge between \(v_j\) and 
+\(v_i\), so it will be in the \(ji\)th entry in the top-right
+sub-matrix, which is the transpose of the bottom-left sub-matrix.
 \end{proof}
 
 \subsection{Exercise 23}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Let \(G\) be a graph with \(n\) vertices, and let \(v\) and \(w\) be distinct vertices of \(G\). Prove that if there is a 
+walk from \(v\) to \(w\), then there is a walk from \(v\) to \(w\) that has length less than or equal to \(n - 1\).
 
 \begin{proof}
+If the walk contains repeated vertices, we can remove all the edges between the repeated vertices (which are circuits), to 
+obtain a walk that has no repeated vertices. Now this circuit-free walk can use at most all the vertices of \(G\). Since 
+there are \(n\) vertices, this walk uses up at most \(n-1\) edges.
+\end{proof}
 
+\subsubsection{(b)}
+If \({\bf A} = (a_{ij})\) and \({\bf B} = (b_{ij})\) are any \(m \times n\) matrices, the matrix \({\bf A} + {\bf B}\) is 
+the \(m \times n\) matrix whose \(ij\)th entry is \(a_{ij} + b_{ij}\) for each \(i = 1, 2, \ldots, m\) and \(j = 1, 2, 
+\ldots, n\). Let \(G\) be a graph with \(n\) vertices where \(n > 1\), and let {\bf A} be the adjacency matrix of \(G\). 
+Prove that \(G\) is connected if, and only if, every entry of \({\bf A} + {\bf A}^2 + \cdots + {\bf A}^{n-1}\) is positive.
+
+{\it Hint:} Consider the \(ij\)th entry of \({\bf A} + {\bf A}^2 + \cdots + {\bf A}^{n-1}\). If \(G\) is connected, then 
+given the vertices \(v_i\) and \(v_j\), there is a walk connecting \(v_i\) and \(v_j\). If this walk has length \(k\), 
+then by Theorem 10.2.2, the \(ij\)th entry of \({\bf A}^k\) is not equal to 0. Use the facts that all entries of each power 
+of \(A\) are nonnegative and that a sum of nonnegative numbers is positive provided that at least one of the numbers is 
+positive.
+
+\begin{proof}
+\(G\) is connected if and only if there is a walk between every pair of its vertices.
+
+By part (a), this is true if and only if there is a walk of length at most \(n-1\) between every pair of its vertices.
+
+By Theorem 10.2.2, this is true if and only if, for every pair of distinct vertices \(v_i, v_j\), there is an integer 
+\(1 \leq k \leq n-1\) (the length of the walk) such that the \(ij\)th entry of \({\bf A}^k\) is at least 1.
+
+This is true if and only if the \(ij\)th entry of \({\bf A} + {\bf A}^2 + \cdots + {\bf A}^{n-1}\) is positive, for every
+pair \(1 \leq i,j \leq n\).
 \end{proof}
 
 \section{Exercise Set 10.3}
-\subsection{Exercise 1}
+{\bf \cy For each pair of graphs \(G\) and \(G'\) in \(1-5\), determine whether \(G\) and \(G'\) are isomorphic. If they 
+are, give functions \(g: V(G) \to V(G')\) and \(h: E(G) \to E(G')\) that define the isomorphism. If they are not, give an 
+invariant for graph isomorphism that they do not share.}
 
-\subsubsection{()}
+\subsection{Exercise 1}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.1.png}
+\end{figure}
 
 \begin{proof}
-
+\includegraphics[scale=0.5]{../images/10.3.1.a.png}
+\includegraphics[scale=0.5]{../images/10.3.1.b.png}
 \end{proof}
 
 \subsection{Exercise 2}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.2.png}
+\end{figure}
 
 \begin{proof}
-
+Not isomorphic. (5 vertices vs. 6 vertices)
 \end{proof}
 
 \subsection{Exercise 3}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.3.png}
+\end{figure}
 
 \begin{proof}
-
+\includegraphics[scale=0.1]{../images/10.3.3.1.png}
+\includegraphics[scale=0.15]{../images/10.3.3.2.png}
 \end{proof}
 
 \subsection{Exercise 4}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.4.png}
+\end{figure}
 
 \begin{proof}
-
+Not isomorphic. The degrees of vertices in \(G\) are, in increasing order: 2, 2, 3, 3, 4; whereas the degrees in \(G'\) 
+are 2, 2, 2, 3, 5.
 \end{proof}
 
 \subsection{Exercise 5}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.5.png}
+\end{figure}
 
 \begin{proof}
-
+Not isomorphic. The degrees of vertices in \(G\) are, in increasing order: 1, 2, 3, 3, 5; whereas the degrees in \(G'\) 
+are 1, 2, 3, 4, 4.
 \end{proof}
 
-\subsection{Exercise 6}
+{\bf \cy For each pair of simple graphs \(G\) and \(G'\) in \(6-13\), determine whether \(G\) and \(G'\) are isomorphic. 
+If they are, give a function \(g: V(G) \to V(G')\) that defines the isomorphism. If they are not, give an invariant 
+for graph isomorphism that they do not share.}
 
-\subsubsection{()}
+\subsection{Exercise 6}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.6.png}
+\end{figure}
 
 \begin{proof}
-
+The graphs are isomorphic. One is the following:
+\includegraphics[scale=0.5]{../images/10.3.6.1.png}
 \end{proof}
 
 \subsection{Exercise 7}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.7.png}
+\end{figure}
 
 \begin{proof}
-
+The graphs are isomorphic. One is the following:
+\includegraphics[scale=0.2]{../images/10.3.7.1.png}
 \end{proof}
 
 \subsection{Exercise 8}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.8.png}
+\end{figure}
 
 \begin{proof}
-
+Not isomorphic. \(G\) has a circuit of length 3 but the shortest circuit in \(G'\) has length 4.
 \end{proof}
 
 \subsection{Exercise 9}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.9.png}
+\end{figure}
 
 \begin{proof}
-
+They are isomorphic:
+\includegraphics[scale=0.2]{../images/10.3.9.1.png}
 \end{proof}
 
 \subsection{Exercise 10}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.10.png}
+\end{figure}
 
 \begin{proof}
-
+They are isomorphic: 
+\includegraphics[scale=0.4]{../images/10.3.10.1.png}
 \end{proof}
 
 \subsection{Exercise 11}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.11.png}
+\end{figure}
 
 \begin{proof}
-
+Not isomorphic. \(G\) is not connected, whereas \(G'\) is.
 \end{proof}
 
 \subsection{Exercise 12}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.12.png}
+\end{figure}
 
 \begin{proof}
-
+They are isomorphic: 
+\includegraphics[scale=0.4]{../images/10.3.12.1.png}
 \end{proof}
 
 \subsection{Exercise 13}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/10.3.13.png}
+\end{figure}
 
 \begin{proof}
-
+Not isomorphic. \(G\) has 4 circuits of length 4: \(abcd\), \(efgh\), \(aehd\), \(bcfg\); whereas \(G'\) has 6 circuits of
+length 4: \(stuv\), \(wxyz\), \(svwz\), \(tuxy\), \(styz\) and \(wxuv\).
 \end{proof}
 
 \subsection{Exercise 14}
-
-\subsubsection{()}
+Draw all nonisomorphic simple graphs with three vertices.
 
 \begin{proof}
-
+\includegraphics[scale=0.5]{../images/10.3.14.a.png}
+\includegraphics[scale=0.5]{../images/10.3.14.b.png}
 \end{proof}
 
 \subsection{Exercise 15}
-
-\subsubsection{()}
+Draw all nonisomorphic simple graphs with four vertices.
 
 \begin{proof}
-
+\includegraphics[scale=0.4]{../images/10.3.15.png}
 \end{proof}
 
 \subsection{Exercise 16}
-
-\subsubsection{()}
+Draw all nonisomorphic graphs with three vertices and no more than two edges.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/10.3.16.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 17}
-
-\subsubsection{()}
+Draw all nonisomorphic graphs with four vertices and no more than two edges.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/10.3.17.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 18}
-
-\subsubsection{()}
+Draw all nonisomorphic graphs with four vertices and three edges.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.45]{../images/10.3.18.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 19}
-
-\subsubsection{()}
+Draw all nonisomorphic graphs with six vertices, all having degree 2.
 
 \begin{proof}
-
+\includegraphics[scale=0.4]{../images/10.3.19.a.png}
+\includegraphics[scale=0.4]{../images/10.3.19.b.png}
 \end{proof}
 
 \subsection{Exercise 20}
-
-\subsubsection{()}
+Draw four nonisomorphic graphs with six vertices, two of degree 4 and four of degree 3.
 
 \begin{proof}
-
+\includegraphics[scale=0.25]{../images/10.3.20.a.png}
+\includegraphics[scale=0.25]{../images/10.3.20.b.png}
 \end{proof}
 
-\subsection{Exercise 21}
+{\bf \cy Prove that each of the properties in \(21-29\) is an invariant for graph isomorphism. assume that \(n, m\), and 
+\(k\) are all nonnegative integers.}
 
-\subsubsection{()}
+\subsection{Exercise 21}
+Has \(n\) vertices
 
 \begin{proof}
-
+Suppose \(G\) and \(G'\) are isomorphic graphs and \(G\) has \(n\) vertices, where \(n\) is a nonnegative integer. {\it [We 
+must show that \(G'\) has \(n\) vertices.]} By definition of graph isomorphism, there is a one-to-one correspondence \(g: 
+V(G) \to V(G')\) sending vertices of \(G\) to vertices of \(G'\). Since \(V(G)\) is a finite set and \(g\) is a one-to-
+one correspondence, the number of vertices in \(V(G')\) equals the number of vertices in \(V(G)\). Hence \(G'\) has \(n\) 
+vertices {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 22}
-
-\subsubsection{()}
+Has \(m\) edges
 
 \begin{proof}
-
+Suppose \(G\) and \(G'\) are isomorphic graphs and \(G\) has \(m\) edges, where \(m\) is a nonnegative integer. {\it [We 
+must show that \(G'\) has \(m\) edges.]} By definition of graph isomorphism, there is a one-to-one correspondence \(h: 
+E(G) \to E(G')\) sending edges of \(G\) to edges of \(G'\). Since \(E(G)\) is a finite set and \(h\) is a one-to-one 
+correspondence, the number of edges in \(E(G')\) equals the number of edges in \(E(G)\). Hence \(G'\) has \(m\) edges 
+{\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 23}
-
-\subsubsection{()}
+Has a circuit of length \(k\)
 
 \begin{proof}
-
+Suppose \(G\) and \(G'\) are isomorphic graphs and suppose \(G\) has a circuit \(C\) of length \(k\), where \(k\) is a 
+nonnegative integer. Let \(C\) be \(v_0e_1v_1e_2 \ldots e_kv_k(=v_0)\). By definition of graph isomorphism, there are 
+one-to-one correspondences \(g: V(G) \to V(G')\) and \(h: E(G) \to E(G')\) that preserve the edge-endpoint functions in the 
+sense that for each \(v\) in \(V(G)\) and each \(e\) in \(E(G)\), \(v\) is an endpoint of \(e \iff g(v)\) is an endpoint of 
+\(h(e)\). Let \(C'\) be \(g(v_0)h(e_1)g(v_1)h(e_2) \ldots h(e_k)g(v_k)(=g(v_0))\). Then \(C'\) is a circuit of length 
+\(k\) in \(G'\). The reasons are that (1) because \(g\) and \(h\) preserve the edge-endpoint functions, both \(g(v_i)\) and 
+\(g(v_{i + 1})\) are incident on \(h(e_{i + 1})\) for each \(i = 0, 1, \ldots, k-1\), and so \(C'\) is a walk from \(g(v_0)\) 
+to \(g(v_0)\), and (2) since \(C\) is a circuit, then \(e_1, e_2, \ldots, e_k\) are distinct, and since \(h\) is a one-to-
+one correspondence, \(h(e_1), h(e_2), \ldots, h(e_k)\) are also distinct, which implies that \(C'\) has \(k\) distinct 
+edges. Therefore, \(G'\) has a circuit \(C\) of length \(k\).
 \end{proof}
 
 \subsection{Exercise 24}
-
-\subsubsection{()}
+Has a simple circuit of length \(k\)
 
 \begin{proof}
-
+The proof is like in Exercise 23, except that additionally the simplicity is also preserved. If \(C\) does not have repeated
+vertices in \(G\) except the first and last, then neither does \(C'\) in \(G'\) because \(g\) is a one-to-one correspondence.
 \end{proof}
 
 \subsection{Exercise 25}
-
-\subsubsection{()}
+Has \(m\) vertices of degree \(k\)
 
 \begin{proof}
+Suppose \(G\) and \(G'\) are isomorphic and \(G\) has \(m\) vertices of degree \(k\); call them \(v_1, v_2, \ldots, v_m\). 
+Since \(G\) and \(G'\) are isomorphic, there are one-to-one correspondences \(g: V(G)\to V(G')\) and \(h: E(G)\to E(G')\). 
+We want to show that \(g(v_1), g(v_2), \ldots, g(v_m)\) are \(m\) distinct vertices of \(G'\), each of which has degree \(k\).
 
+\(g(v_1), g(v_2), \ldots, g(v_m)\) are \(m\) distinct vertices since \(g\) is one-to-one.
+
+Each \(v_i\) is incident to \(k\) edges in \(G\), say \(e_1^i, \ldots, e_k^i\), then by definition of graph isomorphism, each
+\(g(v_i)\) is incident to \(k\) edges \(h(e_1^i), \ldots, h(e_k^i)\) in \(G'\), thus they each have degree \(k\).
 \end{proof}
 
 \subsection{Exercise 26}
-
-\subsubsection{()}
+Has \(m\) simple circuits of length \(k\)
 
 \begin{proof}
-
+This follows from Exercise 24. We can define a function \(K\) from the set of all simple circuits of length \(k\) in \(G\)
+to the set of all simple circuits of length \(k\) in \(G'\) by letting \(K(C) = C'\) as in the proof of Exercise 23. Then 
+\(K\) is a one-to-one correspondence: for each simple circuit \(C\) of length \(k\) there is a unique simple circuit \(C'\) 
+of length \(k\), because \(g\) and \(h\) are one-to-one correspondences that preserve the edge relations. Since \(K\)
+is a one-to-one correspondence and \(G\) has \(m\) simple circuits of length \(k\), so does \(G'\).
 \end{proof}
 
 \subsection{Exercise 27}
-
-\subsubsection{()}
+Is connected
 
 \begin{proof}
-
+Suppose \(G\) and \(G'\) are isomorphic and \(G\) is connected. To show that \(G'\) is connected, suppose \(w\) and 
+\(x\) are any two vertices of \(G'\). Since \(g: V(G) \to V(G')\) is a one-to-one correspondence, there are vertices 
+\(u, v \in G\) such that \(g(u) = w, g(v) = x\). Since \(G\) is connected, there is a walk from \(u\) to \(v\) in \(G\), 
+say \(u = v_0e_1v_1e_2 \ldots e_nv_n = v\). Then since \(h: E(G) \to E(G')\) is a one-to-one correspondence, \(w = g(u) = 
+g(v_0)h(e_1)g(v_1)h(e_2) \ldots h(e_n)g(v_n) = g(v) = x\) is a walk in \(G'\) because of the definition of graph isomorphism. 
+Therefore \(G'\) is connected.
 \end{proof}
 
 \subsection{Exercise 28}
-
-\subsubsection{()}
+Has an Euler circuit
 
 \begin{proof}
-
+Suppose \(G\) and \(G'\) are isomorphic graphs and \(G\) has an Euler circuit \(C\). Let \(m\) be the number of edges in 
+\(G\). Then \(C\) has length \(m\) as it includes every edge of \(G\). By Exercise 23, \(G'\) has a corresponding circuit 
+\(C'\) of length \(m\). Also \(G'\) has \(m\) edges by Exercise 22. As all the edges of the Euler circuit \(C\) are 
+distinct, and the graph isomorphism sends distinct edges in \(G\) to distinct edges in \(G'\), \(C'\) includes all of the 
+\(m\) edges of \(G'\). Thus, \(G'\) has an Euler circuit.
 \end{proof}
 
 \subsection{Exercise 29}
-
-\subsubsection{()}
+Has a Hamiltonian circuit
 
 \begin{proof}
-
+A Hamiltonian circuit for \(G\) is a simple circuit that includes every vertex of \(G\). Therefore this follows from
+Exercises 21 and 24.
 \end{proof}
 
 \subsection{Exercise 30}
+Show that the following two graphs are not isomorphic by supposing they are isomorphic and deriving a contradiction.
 
-\subsubsection{()}
+\includegraphics[scale=0.7]{../images/10.3.30.1.png} \includegraphics[scale=0.7]{../images/10.3.30.2.png}
 
 \begin{proof}
+1. Assume \(G\) and \(G'\) are isomorphic with one-to-one correspondences \(g\) and \(h\).
 
+2. \(v_1\) has degree 1, so \(g(v_1) = w_1\) or \(g(v_1) = w_6\).
+
+3. {\bf Case 1: \(\bm{g(v_1) = w_1}\).} \(v_1\) is connected to \(v_2\), so \(w_1\) is connected to \(g(v_2)\) in \(G'\).
+This forces \(g(v_2) = w_2\).
+
+3.1. \(v_2\) is connected to \(v_3\), so \(w_2\) is connected to \(g(v_3)\) in \(G'\). This forces \(g(v_3) = w_3\). But 
+this is a contradiction, since \(v_3\) has degree 3 and \(w_3\) has degree 2.
+
+4. {\bf Case 2: \(\bm{g(v_1) = w_6}\).} \(v_1\) is connected to \(v_2\), so \(w_1\) is connected to \(g(v_2)\) in \(G'\).
+This forces \(g(v_2) = w_5\). But this is a contradiction, since \(v_2\) has degree 2 and \(w_5\) has degree 3.
+
+5. In both cases we get a contradiction. Therefore our assumption was false and \(G\) and \(G'\) are not isomorphic.
 \end{proof}
 
 \section{Exercise Set 10.4}
