@@ -22,6 +22,7 @@
 \newcommand{\false}{{\bf c}}
 \newcommand{\bic}{\leftrightarrow}
 \newcommand{\da}{\downarrow}
+\newcommand{\ua}{\uparrow}
 \newcommand{\fa}{\forall}
 \newcommand{\te}{\exists}
 \newcommand{\cy}{\color{cyan}}
@@ -35,7 +36,7 @@
 \newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
 
 %\renewcommand{\arraystretch}{1.2}
-%\setlength{\extrarowheight}{10pt}
+%\setlength{\extrarowheight}{11pt}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -1497,347 +1498,1130 @@ integer \(n \geq k'\), we have \(A''g_2(n) \leq f_1(n) + f_2(n) \leq B''g_2(n)\)
 \section{Exercise Set 11.3}
 
 \subsection{Exercise 1}
+Suppose a computer takes 1 nanosecond (\(= 10^{-9}\) second) to execute each operation. Approximately how long will it take 
+the computer to execute the following numbers of operations? Convert your answers into seconds, minutes, hours, days, 
+weeks, or years, as appropriate. For example, instead of \(2^{50}\) nanoseconds, write 13 days.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+\(\log_2 200\)
 \begin{proof}
+\(\log_2(200) = \frac{\ln 200}{\ln 2} \approx 7.6\) nanoseconds = 0.0000000076 second
+\end{proof}
 
+\subsubsection{(b)}
+\(200\)
+\begin{proof}
+\(200 \cdot 10^{-9} = 2 \cdot 10^{-7} = 0.0000002\) seconds
+\end{proof}
+
+\subsubsection{(c)}
+\(200 \log_2 200\)
+\begin{proof}
+\(\approx 200 \cdot 7.6 \cdot 10^{-9} = 0.000001520\) seconds
+\end{proof}
+
+\subsubsection{(d)}
+\(200^2\)
+\begin{proof}
+\(200^2 = 40,000\) nanoseconds = 0.00004 second
+\end{proof}
+
+\subsubsection{(e)}
+\(200^8\)
+\begin{proof}
+\(200^8 = 2.56 \times 10^{18}\) nanoseconds \(\frac{2.56 \times 10^9}{10^9 \cdot 60 \cdot 60 \cdot 24 \cdot (365.25)} 
+\approx 81.1215\) years {\it [because there are \(10^9\) nanoseconds in a second, 60 seconds in a minute, 60 minutes in 
+an hour, 24 hours in a day, and approximately 365.25 days in a year on average].}
+\end{proof}
+
+\subsubsection{(f)}
+\(2^{200}\)
+\begin{proof}
+\(2^{200} = (2^{50})^4 = 13^4\) days (since \(2^{50}\) nanoseconds = 13 days) = 28561 days \(\approx 78.2\) years
 \end{proof}
 
 \subsection{Exercise 2}
+Suppose an algorithm requires \(cn^2\) operations when performed with an input of size \(n\) (where \(c\) is a 
+constant).
 
-\subsubsection{()}
+\subsubsection{(a)}
+How many operations will be required when the input size is increased from \(m\) to \(2m\) (where \(m\) is a positive 
+integer)?
 
 \begin{proof}
+When the input size is increased from \(m\) to \(2m\), the number of operations increases from \(cm^2\) to 
+\(c(2m)^2 = 4cm^2\).
+\end{proof}
 
+\subsubsection{(b)}
+By what factor will the number of operations increase when the input size is doubled?
+
+\begin{proof}
+By part (a), the number of operations increases by a factor of \((4cm^2)/(cm^2) = 4\).
+\end{proof}
+
+\subsubsection{(c)}
+By what factor will the number of operations increase when the input size is increased by a factor of ten?
+
+\begin{proof}
+When the input size is increased by a factor of 10 (from \(m\) to \(10m\)), the number of operations increases by a factor of 
+\((c(10m)^2)/(cm^2) = (100cm^2)/(cm^2) = 100\).
 \end{proof}
 
 \subsection{Exercise 3}
+Suppose an algorithm requires \(cn^3\) operations when performed with an input of size \(n\) (where \(c\) is a 
+constant).
 
-\subsubsection{()}
+\subsubsection{(a)}
+How many operations will be required when the input size is increased from \(m\) to \(2m\) (where \(m\) is a positive 
+integer)?
 
 \begin{proof}
-
+When the input size is increased from \(m\) to \(2m\), the number of operations increases from \(cm^3\) to 
+\(c(2m)^3 = 8cm^2\).
 \end{proof}
 
-\subsection{Exercise 4}
-
-\subsubsection{()}
+\subsubsection{(b)}
+By what factor will the number of operations increase when the input size is doubled?
 
 \begin{proof}
+By part (a), the number of operations increases by a factor of \((8cm^3)/(cm^3) = 8\).
+\end{proof}
 
+\subsubsection{(c)}
+By what factor will the number of operations increase when the input size is increased by a factor of ten?
+
+\begin{proof}
+When the input size is increased by a factor of 10 (from \(m\) to \(10m\)), the number of operations increases by a factor of 
+\((c(10m)^3)/(cm^3) = (1000cm^3)/(cm^3) = 1000\).
+\end{proof}
+
+{\bf \cy Exercises \(4-5\) explore the fact that for relatively small values of \(n\), algorithms with larger 
+orders can be more efficient than algorithms with smaller orders.}
+
+\subsection{Exercise 4}
+Suppose that when run with an input of size \(n\), algorithm \(A\) requires \(2n^2\) operations and algorithm \(B\) requires 
+\(80n^{3/2}\) operations.
+
+\subsubsection{(a)}
+What are orders for algorithms \(A\) and \(B\) from among the set of power functions?
+
+\begin{proof}
+Algorithm \(A\) has order \(n^2\) and algorithm \(B\) has order \(n^{3/2}\).
+\end{proof}
+
+\subsubsection{(b)}
+For what values of \(n\) is algorithm \(A\) more efficient than algorithm \(B\)?
+
+\begin{proof}
+Algorithm \(A\) is more efficient than algorithm \(B\) when \(2n^2 < 80n^{3/2}\). This occurs exactly when
+\[
+n^2 < 40n^{3/2} \iff \frac{n^2}{40n^{3/2}} < 40 \iff n^{1/2} < 40 \iff n < 40^2.
+\]
+Thus, algorithm \(A\) is more efficient than algorithm \(B\) when \(n < 40^2 = 1,600\).
+\end{proof}
+
+\subsubsection{(c)}
+For what values of \(n\) is algorithm \(B\) at least 100 times more efficient than algorithm \(A\)?
+
+\begin{proof}
+Algorithm \(B\) is at least 100 times more efficient than algorithm \(A\) for values of \(n\) with \(100(80n^{3/2}) \leq 
+2n^2\). This occurs exactly when 
+\[
+8,000n^{3/2} \leq 2n^2 \iff 4,000 \leq \frac{n^2}{n^{3/2}} \iff 4,000 \leq \sqrt{n} \iff 16,000,000 \leq n. 
+\]
+Thus, algorithm \(B\) is at least 100 times more efficient than algorithm \(A\) when \(n \geq 16,000,000\).
 \end{proof}
 
 \subsection{Exercise 5}
+Suppose that when run with an input of size \(n\), algorithm \(A\) requires \(10^6 n^2\) operations and algorithm \(B\) 
+requires \(n^3\) operations.
 
-\subsubsection{()}
+\subsubsection{(a)}
+What are orders for algorithms \(A\) and \(B\) from among the set of power functions?
 
 \begin{proof}
-
+Algorithm \(A\) has order \(n^2\) and algorithm \(B\) has order \(n^{3}\).
 \end{proof}
 
-\subsection{Exercise 6}
-
-\subsubsection{()}
+\subsubsection{(b)}
+For what values of \(n\) is algorithm \(A\) more efficient than algorithm \(B\)?
 
 \begin{proof}
+Algorithm \(A\) is more efficient than algorithm \(B\) when \(10^6 n^2 < n^3\). This occurs exactly when
+\[
+10^6 n^2 < n^3 \iff 10^6 < \frac{n^3}{n^2} \iff 10^6 < n.
+\]
+Thus, algorithm \(A\) is more efficient than algorithm \(B\) when \(1,000,000 < n\).
+\end{proof}
 
+\subsubsection{(c)}
+For what values of \(n\) is algorithm \(B\) at least 100 times more efficient than algorithm \(A\)?
+
+\begin{proof}
+Algorithm \(B\) is at least 100 times more efficient than algorithm \(A\) for values of \(n\) with \(100(n^3) \leq 
+10^6 n^2\). This occurs exactly when 
+\[
+100(n^3) \leq 10^6 n^2 \iff \frac{n^3}{n^2} \leq \frac{10^6}{100} \iff n \leq 10^4. 
+\]
+Thus, algorithm \(B\) is at least 100 times more efficient than algorithm \(A\) when \(n \leq 10,000\).
+\end{proof}
+
+{\bf \cy For each of the algorithm segments in \(6-19\), assume that \(n\) is a positive integer. (a) Compute the 
+actual number of elementary operations (additions, subtractions, multiplications, divisions, and comparisons) 
+that are performed when the algorithm segment is executed. For simplicity, however, count only comparisons that occur within 
+if-then statements; ignore those implied by for-next loops. (b) Use the theorem on polynomial orders to find an order for 
+the algorithm segment.}
+
+\subsection{Exercise 6}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 3\) {\bf to} \(n-1\) \\
+          \> \(a \coloneqq 3 \cdot n + 2 \cdot i - 1\) \\
+{\bf next} \(i\)
+\end{tabbing}
+
+\subsubsection{(a)}
+\begin{proof}
+There are two multiplications, one addition, and one subtraction for each iteration of the loop, so there are four 
+times as many operations as there are iterations of the loop. The loop is iterated \((n - 1) - 3 + 1 = n - 3\) times (since 
+the number of iterations equals the top minus the bottom index plus 1). Thus the total number of operations is 
+\(4(n - 3) = 4n - 12\).
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+By the theorem on polynomial orders, \(4n - 12\) is \(\Theta(n)\), so the algorithm segment has order \(n\).
 \end{proof}
 
 \subsection{Exercise 7}
+\begin{tabbing}
+\(max \coloneqq a[1]\) \\
+{\bf for} \= \(i \coloneqq 2\) {\bf to} \(n\) \\
+          \> {\bf if} \(max < a[i]\) {\bf then} \(max \coloneqq a[i]\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There is 1 comparison for every iteration of the loop. The loop is iterated \(n-2+1 = n-1\) times. So the total number of
+operations is \(n-1\).
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+By the theorem on polynomial orders, \(n - 1\) is \(\Theta(n)\), so the algorithm segment has order \(n\).
 \end{proof}
 
 \subsection{Exercise 8}
+\begin{tabbing}
+\(a \coloneqq 0\) \\
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(\floor{n/2}\) \\
+          \> \(a \coloneqq a + 3\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There is one addition for each iteration of the loop, and there are \(\floor{n/2}\) iterations of the loop.
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+Because
+\[
+\floor{n/2} =
+\left\{
+\begin{tabular}{ll}
+\(n/2\) & if \(n\) is even \\
+\((n-1)/2\) & if \(n\) is odd
+\end{tabular}
+\right.
+\]
+\(\floor{n/2}\) is \(\Theta(n)\) by theorem on polynomial orders. So the algorithm segment has order \(n\).
 \end{proof}
 
 \subsection{Exercise 9}
+\begin{tabbing}
+\(s \coloneqq 0\) \\
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(2n\) \\
+          \>           \> \(s \coloneqq s + i \cdot j\) \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+For each iteration of the inner loop, there is one multiplication and one addition. There are \(2n\) iterations 
+of the inner loop for each iteration of the outer loop, and there are \(n\) iterations of the outer loop. Therefore, the 
+number of iterations of the inner loop is \(2n \cdot n = 2n^2\). It follows that the total number of elementary 
+operations that must be performed when the algorithm is executed is \(2 \cdot 2n^2 = 4n^2\).
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+Since \(4n^2\) is \(\Theta(n^2)\) (by the theorem on polynomial orders), the algorithm segment has order \(n^2\).
 \end{proof}
 
 \subsection{Exercise 10}
+\begin{tabbing}
+{\bf for} \= \(k \coloneqq 2\) {\bf to} \(n\) \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(3n\) \\
+          \>           \> \(x \coloneqq a[k] - b[j]\) \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(k\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There is 1 subtraction for each iteration of the inner loop. The inner loop iterates \(3n-1+1 = 3n\) times for each time
+the outer loop iterates. The outer loop iterates \(n-2+1 = n-1\) times. So the total number of operations is 
+\(1 \cdot (n-1) \cdot 3n = 3n^2 - 3n\).
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\(3n^2 - 3n\) is \(\Theta(n^2)\) by theorem on polynomial orders, so the order of the algorithm is \(n^2\).
 \end{proof}
 
 \subsection{Exercise 11}
+\begin{tabbing}
+{\bf for} \= \(k \coloneqq 1\) {\bf to} \(n-1\) \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(k+1\)\\
+          \>           \> \(x \coloneqq a[k] + b[j]\) \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(k\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There is one addition for each iteration of the inner loop. The number of iterations in the inner loop equals the number 
+of columns in the table below, which shows the values of \(k\) and \(j\) for which the inner loop is executed.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.3.11.a.png}
+\end{figure}
+
+Hence the total number of iterations of the inner loop is \(2+3+\cdots+n = (1+2+3+\cdots+n) - 1 = \frac{n(n+1)}{2} - 1 = 
+\frac{1}{2}n^2 + \frac{1}{2}n - 1\) (by Theorem 5.2.1). Because one operation is performed for each iteration of the 
+inner loop, the total number of operations is \(\frac{1}{2}n^2 + \frac{1}{2}n - 1\).
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+By the theorem on polynomial orders, \(\frac{1}{2}n^2 + \frac{1}{2}n - 1\) is \(\Theta(n^2)\), and so the algorithm 
+segment has order \(n^2\).
 \end{proof}
 
 \subsection{Exercise 12}
+\begin{tabbing}
+{\bf for} \= \(k \coloneqq 1\) {\bf to} \(n-1\) \\
+          \> \(max \coloneqq a[k]\) \\
+          \> {\bf for} \= \(i \coloneqq k+1\) {\bf to} \(n\)\\
+          \>           \> {\bf if} \(max < a[i]\) {\bf then} \(max \coloneqq a[i]\) \\
+          \> {\bf next} \(i\) \\
+\(a[k] \coloneqq max\) \\
+{\bf next} \(k\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There is 1 comparison operation in the inner loop. The outer loop iterates \(n-1-1+1 = n-1\) times. But the inner loop
+iterates a variable number of times. When \(k=1\) the inner loop iterates \(n-2+1 = n-1\) times, when \(k=2\) the inner 
+loop iterates \(n-3+1 = n-2\) times, and so on. Finally when \(k=n-1\) the inner loop iterates \(n-(n-1+1)+1 = 1\) times.
+The total number of iterations of the inner loop is \((n-1) + (n-2) + \cdots + 2 + 1 = (1+2+ \cdots + n) - n = 
+\frac{n(n+1)}{2} - n = \frac{1}{2}n^2 - \frac{1}{2}n\), which is also the total number of operations.
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\(\frac{1}{2}n^2 - \frac{1}{2}n\) is \(\Theta(n^2)\) by theorem on polynomial orders, so the algorithm has order 
+\(n^2\).
 \end{proof}
 
 \subsection{Exercise 13}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n-1\) \\
+          \> {\bf for} \= \(j \coloneqq i\) {\bf to} \(n\)\\
+          \>           \> {\bf if} \= \(a[j] > a[i]\) {\bf then do} \\
+          \>           \>          \>\(temp \coloneqq a[i]\)\\
+          \>           \>          \>\(a[i] \coloneqq a[j]\)\\
+          \>           \>          \>\(a[j] \coloneqq temp\)\\
+          \>           \> {\bf end do} \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+The inner loop contains 1 comparison operation. When \(i = 1\) the inner loop iterates \(n-1+1 = n\) times, when \(i = 2\) 
+the inner loop iterates \(n-2+1 = n-1\) times, and so on. Finally when \(i = n-1\) the inner loop iterates \(n-(n-1)+1\)
+= 2 times. The total number of operations is then \(n+(n-1)+ \cdots + 3 + 2 = (1+2+3+ \cdots + n)-1 = \frac{n(n+1)}{2}-1\)
+= \(\frac{1}{2}n^2 + \frac{1}{2}n - 1\).
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\(\frac{1}{2}n^2 + \frac{1}{2}n - 1\) is \(\Theta(n^2)\) by theorem on polynomial orders, so the algorithm has order 
+\(n^2\).
 \end{proof}
 
 \subsection{Exercise 14}
+\begin{tabbing}
+\(t \coloneqq 0\) \\
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> \(s \coloneqq 0\) \\ 
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(i\)\\
+          \>           \> \(s \coloneqq s + a[j]\) \\
+          \> {\bf next} \(j\) \\
+          \> \(t \coloneqq t + s^2\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There is one addition for each iteration of the inner loop, and there is one additional addition and one multiplication 
+for each iteration of the outer loop. The number of iterations in the inner loop equals the number of columns in the 
+following table, which shows the values of \(i\) and \(j\) for which the inner loop is executed.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.3.14.a.png}
+\end{figure}
+
+Hence the total number of iterations of the inner loop is = \(1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2} = \frac{1}{2}n^2 +
+\frac{1}{2}n\) (by Theorem 5.2.1). Because one addition is performed for each iteration of the inner loop, the number of 
+operations performed when the inner loop is executed is \(\frac{1}{2}n^2 + \frac{1}{2}n\). Now an additional two 
+operations are performed each time the outer loop is executed, and because the outer loop is executed \(n\) times, this gives 
+an additional \(2n\) operations. Therefore, the total number of operations is \(\frac{1}{2}n^2 + \frac{1}{2}n + 2n\)
+= \(\frac{1}{2}n^2 + \frac{5}{2}n\).
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+By the theorem on polynomial orders, \(\frac{1}{2}n^2 + \frac{5}{2}n\) is \(\Theta(n^2)\), and so the algorithm 
+segment has order \(n^2\).
 \end{proof}
 
 \subsection{Exercise 15}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n-1\) \\
+          \> \(p \coloneqq 1\) \\ 
+          \> \(q \coloneqq 1\) \\ 
+          \> {\bf for} \= \(j \coloneqq i+1\) {\bf to} \(n\)\\
+          \>           \> \(p \coloneqq p \cdot c[j]\) \\
+          \>           \> \(q \coloneqq q \cdot c[j]^2\) \\
+          \> {\bf next} \(j\) \\
+          \> \(r \coloneqq p + q\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+The inner loop has 3 multiplications, the outer loop has 1 addition.
 
+The inner loop iterates: \(i=1\): \(n-(1+1)+1 = n-1\) times, \(i=2\): \(n-(2+1)+1 = n-2\) times, \(\ldots\), \(i = n-1\):
+\(n-(n-1+1)+1 = 1\) time. Total: \(1+2+\cdots+(n-2)+(n-1) = \frac{n(n+1)}{2}-n = \frac{1}{2}n^2 - \frac{1}{2}n\) times.
+
+The outer loop iterates: \(n-1-1+1 = n-1\) times. So the total number of operations is \(3\left(\frac{1}{2}n^2-\frac{1}{2}
+n\right) + 1 \cdot (n-1) = \frac{3}{2}n^2 - \frac{1}{2}n -1\).
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+\(\frac{3}{2}n^2 - \frac{1}{2}n - 1\) is \(\Theta(n^2)\) by theorem on polynomial orders, so the algorithm has order 
+\(n^2\).
 \end{proof}
 
 \subsection{Exercise 16}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> \(s \coloneqq 0\) \\ 
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(i-1\)\\
+          \>           \> \(s \coloneqq s + j\cdot (i-j+1)\)\\
+          \> {\bf next} \(j\) \\
+          \> \(r \coloneqq s^2\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+The inner loop has 4 operations: 2 additions, 1 subtraction, 1 multiplication. The outer loop has 1 multiplication. The outer
+loop iterates \(n-1=1 = n\) times.
 
+When \(i = 1\), the inner loop runs from \(j = 1\) to \(j = i-1 = 1-1 = 0\), so it cannot run (from 1 to 0). I think this
+might be a typo in the book.
+
+When \(i = 2\), the inner loop runs from \(j = 1\) to \(j = i-1 = 2-1 = 1\), so it iterates \(1 - 1 + 1 = 1\) time.
+
+When \(i = 3\), the inner loop runs from \(j = 1\) to \(j = i-1 = 3-1 = 2\), so it iterates \(2-1+1=2\) times. And so on.
+
+Finally, when \(i = n\) the inner loop iterates \(n-1 - 1 + 1 = n-1\) times. So the total number of iterations of the inner
+loop is \(1+2+\cdots+(n-2)+(n-1) = \frac{(n-1)(n-1+1)}{2} = \frac{1}{2}n^2 - \frac{1}{2}n\).
+
+The total number of operations is: 4 times the inner loop, plus 1 times the outer loop, = \(4\left(\frac{1}{2}n^2-
+\frac{1}{2}n\right) + 1 \cdot n = 2n^2 - 2n + n = 2n^2 - n\).
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+\(2n^2 - n\) is \(\Theta(n^2)\) by theorem on polynomial orders, so the algorithm has order \(n^2\).
 \end{proof}
 
 \subsection{Exercise 17}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(\floor{(i+1)/2}\)\\
+          \>           \> \(a \coloneqq (n-i)\cdot(n-j)\) \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+There are two subtractions and one multiplication for each iteration of the inner loop. If \(n\) is odd, the number of 
+iterations of the inner loop equals the number of columns in the following table, which shows the values of \(i\) and \(j\) 
+for which the inner loop is executed.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.45]{../images/11.3.17.a.png}
+\end{figure}
+
+Thus the number of iterations of the inner loop is
+
+\begin{tabular}{rll}
+= & \(\dps 1+1+2+2+\cdots+\frac{n-1}{2}+\frac{n-1}{2}+\frac{n+1}{2}\) & {\cy }\\
+= & \(\dps 2\left(1+2+3+\cdots+\frac{n-1}{2}\right)+\frac{n+1}{2}\) & {\cy }\\
+= & \(\dps 2 \cdot \frac{\frac{n-1}{2}\left(\frac{n-1}{2}+1\right)}{2} + \frac{n+1}{2}\) & {\cy by Theorem 5.2.1}\\
+= & \(\dps \frac{n^2-2n+1}{4} + \frac{n-1}{2} + \frac{n+1}{2}\) & {\cy }\\
+= & \(\dps \frac{1}{4}n^2+\frac{1}{2}n+\frac{1}{4}\) & {\cy }
+\end{tabular}
+
+By similar reasoning, if \(n\) is even, then the number of iterations of the inner loop is
+
+\begin{tabular}{rll}
+= & \(\dps 1+1+2+2+\cdots+\frac{n}{2}+\frac{n}{2}\) & {\cy }\\
+= & \(\dps 2\left(1+2+3+\cdots+\frac{n}{2}\right)\) & {\cy }\\
+= & \(\dps 2 \cdot \frac{\frac{n}{2}\left(\frac{n}{2} + 1 \right)}{2}\) & {\cy by Theorem 5.2.1}\\
+= & \(\dps \frac{1}{4}n^2+\frac{1}{2}n\) & {\cy }
+\end{tabular}
+
+Because three operations are performed for each iteration of the inner loop, the answer is \(\dps 3 \left(\frac{1}{4}n^2+
+\frac{1}{2}n\right)\) when \(n\) is even, and \(\dps 3 \left(\frac{1}{4}n^2+\frac{1}{2}n+\frac{1}{4}\right)\) when 
+\(n\) is odd.
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+Both \(\dps 3 \left(\frac{1}{4}n^2+\frac{1}{2}n\right)\) and \(\dps 3 \left(\frac{1}{4}n^2+\frac{1}{2}n+\frac{1}{4}\right)\) 
+are \(\Theta(n^2)\) by theorem on polynomial orders, so the algorithm has order \(n^2\).
 \end{proof}
 
 \subsection{Exercise 18}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> {\bf for} \= \(j \coloneqq \floor{(i+1)/2}\) {\bf to} \(n\) \\
+          \>           \> \(x \coloneqq i \cdot j\) \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+When \(i=1\) the inner loop runs from \(j = \floor{(1+1)/2} = 1\) to \(n\), so it iterates \(n-1+1 = n\) times.
 
+When \(i=2\) the inner loop runs from \(j = \floor{(2+1)/2} = 1\) to \(n\), so it iterates \(n-1+1 = n\) times.
+
+When \(i=3\) the inner loop runs from \(j = \floor{(3+1)/2} = 2\) to \(n\), so it iterates \(n-2+1 = n-1\) times.
+
+When \(i=4\) the inner loop runs from \(j = \floor{(4+1)/2} = 2\) to \(n\), so it iterates \(n-2+1 = n-1\) times.
+
+And so on. Finally when \(i = n\) the inner loop runs from \(j = \floor{(n+1)/2}\) to \(n\). If \(n\) is even, this is from
+\(n/2\) to \(n\); and if \(n\) is odd this is from \((n+1)/2\) to \(n\). So it iterates roughly \(n/2\) times.
+
+So the total iterations of the inner loop is \(n+n+(n-1)+(n-1)+ \cdots + (n/2 + n/2) = 2(\frac{n}{2} + \cdots + (n-1) + n)\)
+\(= 2(1+2+ \cdots + n - (1+2+ \cdots \frac{n}{2})) = 2 \left( \frac{n(n+1)}{2}-\frac{\frac{n}{2}(\frac{n}{2}+1)}{2}\right)\)
+\(= n(n+1) - \frac{n}{2}(\frac{n}{2}+1) = n^2 + n - \frac{1}{4}n^2 - \frac{1}{2}n = \frac{3}{4}n^2 - \frac{1}{2}n\).
+
+This is the same as the number of operations, as there is only one multiplication inside the inner loop. 
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+\(\frac{3}{4}n^2 - \frac{1}{2}n\) is \(\Theta(n^2)\) by theorem on polynomial orders. So the algorithm has order 
+\(n^2\).
 \end{proof}
 
 \subsection{Exercise 19}
+\begin{tabbing}
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(i\) \\
+          \>           \> {\bf for} \= \(k \coloneqq 1\) {\bf to} \(j\) \\
+          \>           \>           \> \(x \coloneqq i \cdot j \cdot k\) \\
+          \>           \> {\bf next} \(k\) \\
+          \> {\bf next} \(j\) \\
+{\bf next} \(i\)
+\end{tabbing}
 
-\subsubsection{()}
+{\it Hint:} See Section 9.6 for a discussion of how to count the number of iterations of the innermost loop.
 
+\subsubsection{(a)}
 \begin{proof}
+By Example 9.6.4 there are \([n(n + 1)(n + 2)]/6\) iterations of the innermost loop. There are two multiplications, so the
+total number of operations is \([n(n + 1)(n + 2)]/3 = \frac{1}{3}(n^3 + 3n^2 + 2n)\).
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\(\frac{1}{3}(n^3 + 3n^2 + 2n)\) is \(\Theta(n^3)\) by theorem on polynomial orders. So the algorithm has order \(n^3\).
 \end{proof}
 
 \subsection{Exercise 20}
-
-\subsubsection{()}
+Construct a table showing the result of each step when insertion sort is applied to the array \(a[1] = 6\), 
+\(a[2] = 2, a[3] = 1, a[4] = 8\), and \(a[5] = 4\).
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& \(a[1]\) & \(a[2]\) & \(a[3]\) & \(a[4]\) & \(a[5]\) \\
+\hline
+{\bf Initial order} &6&2&1&8&4 \\
+\hline
+{\bf Step 1 result} &2&6&1&8&4 \\
+\hline
+{\bf Step 2 result} &1&2&6&8&4 \\
+\hline
+{\bf Step 3 result} &1&2&6&8&4 \\
+\hline
+{\bf Final order} &1&2&4&6&8 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 21}
-
-\subsubsection{()}
+Construct a table showing the result of each step when insertion sort is applied to the array \(a[1] = 7\), 
+\(a[2] = 3, a[3] = 6, a[4] = 9\), and \(a[5] = 5\).
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& \(a[1]\) & \(a[2]\) & \(a[3]\) & \(a[4]\) & \(a[5]\) \\
+\hline
+{\bf Initial order} &7&3&6&9&5 \\
+\hline
+{\bf Step 1 result} &3&7&6&9&5 \\
+\hline
+{\bf Step 2 result} &3&6&7&9&5 \\
+\hline
+{\bf Step 3 result} &3&6&7&9&5 \\
+\hline
+{\bf Final order} &3&5&6&7&9 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 22}
-
-\subsubsection{()}
+Construct a trace table showing the action of insertion sort on the array of exercise 20.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\(\bm{n}\) &5&&&&&&&&&& \\
+\hline
+\(\bm{a[1]}\) &6&2&&&1&&&&&& \\
+\hline
+\(\bm{a[2]}\) &2&6&&1&2&&&&&& \\
+\hline
+\(\bm{a[3]}\) &1&&&6&&&&&&4& \\
+\hline
+\(\bm{a[4]}\) &8&&&&&&&&4&6& \\
+\hline
+\(\bm{a[5]}\) &4&&&&&&&&8&& \\
+\hline
+\(\bm{k}\) &2&&3&&&4&&5&&& \\
+\hline
+\(\bm{x}\) &2&&1&&&8&&4&&& \\
+\hline
+\(\bm{j}\) &1&0&2&1&0&3&0&4&3&2&0 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 23}
-
-\subsubsection{()}
+Construct a trace table showing the action of insertion sort on the array of exercise 21.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\(\bm{n}\) &5&&&&&&&&&&& \\
+\hline
+\(\bm{a[1]}\) &7&3&&&&&&&&&& \\
+\hline
+\(\bm{a[2]}\) &3&7&&6&&&&&&&5& \\
+\hline
+\(\bm{a[3]}\) &6&&&7&&&&&&5&6& \\
+\hline
+\(\bm{a[4]}\) &9&&&&&&&&5&7&& \\
+\hline
+\(\bm{a[5]}\) &5&&&&&&&&9&&& \\
+\hline
+\(\bm{k}\) &2&&3&&&4&&5&&&& \\
+\hline
+\(\bm{x}\) &3&&6&&&9&&5&&&& \\
+\hline
+\(\bm{j}\) &1&0&2&1&0&3&0&4&3&2&1&0 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 24}
-
-\subsubsection{()}
+How many comparisons between values of \(a[j]\) and \(x\) actually occur when insertion sort is applied to the array of 
+exercise 20?
 
 \begin{proof}
-
+There are seven comparisons between values of \(x\) and values of \(a[j]\): one when \(k = 2\), two when \(k = 3\), one when 
+\(k = 4\), and three when \(k = 5\).
 \end{proof}
 
 \subsection{Exercise 25}
-
-\subsubsection{()}
+How many comparisons between values of \(a[j]\) and \(x\) actually occur when insertion sort is applied to the array of 
+exercise 21?
 
 \begin{proof}
-
+There are eight comparisons between values of \(x\) and values of \(a[j]\): one when \(k = 2\), two when \(k = 3\), one when 
+\(k = 4\), and four when \(k = 5\).
 \end{proof}
 
 \subsection{Exercise 26}
-
-\subsubsection{()}
+According to Example 11.3.6, the maximum number of comparisons needed to perform insertion sort on an array of length five is 
+\(\frac{1}{2}(5^2 + 5 - 2) = 14\). Find an array of length five that requires the maximum number of comparisons when 
+insertion sort is applied to it.
 
 \begin{proof}
+Example 11.3.6 has a mistake. It says that the maximum number of comparisons for any \(k\) is \(k-1\), then it says that 
+\(k\) goes from 2 to \(n\), so the sum should be: \((2-1) + (3-1) + \cdots + (n-1-1) + (n-1) = 1+2+\cdots+(n-2)+(n-1)\),
+which is equal to \(\dps\frac{(n-1)(n-1+1)}{2} = \frac{1}{2}n^2 - \frac{1}{2}n\).
 
+Let \(a = [5,4,3,2,1]\). When \(k=2\) 4 will be compared to 5 and swapped. When \(k=3\), 3 will be compared to 5 first, and
+swapped with it, then it will be compared to 4 and swapped with it. Similarly there will be 3 comparisons when \(k=4\)
+and finally 4 comparisons when \(k=5\), for a total of \(1+2+3+4 = 10\). This matches the formula above, since 
+\(\dps\frac{1}{2}5^2 - \frac{1}{2}5 = 25/2 - 5/2 = 20/2= 10\).
 \end{proof}
 
 \subsection{Exercise 27}
+Consider the recurrence relation that arose in Example 11.3.7: \(E_1 = 0\) and \(E_k = E_{k-1} + \frac{k+1}{2}\), for each 
+integer \(k \geq 2\).
 
-\subsubsection{()}
+\subsubsection{(a)}
+Use iteration to find an explicit formula for the sequence.
+
+{\it Hint:} \(E_n = \frac{1}{2}[3 + 4 + \cdots + (n + 1)]\), which equals \(\frac{1}{2}[(1 + 2 + 3 + \cdots + (n + 1)) - 
+(1 + 2)]\).
 
 \begin{proof}
+\(E_1 = 0\), \(E_2 = E_1 + \frac{2+1}{2} = 3/2\), \(E_3 = E_2 + \frac{3+1}{2} = 3/2+4/2 = (3+4)/2\), \\
+\(E_4 = E_3 + \frac{4+1}{2} = (3+4)/2 + 5/2 = (3+4+5)/2\), \\
+\(E_5 = E_4 + \frac{5+1}{2} = (3+4+5)/2 + 6/2 = (3+4+5+6)/2\).
 
+We guess \(E_n = (3+4+\cdots+n)/2\).
 \end{proof}
 
-\subsection{Exercise 28}
-
-\subsubsection{()}
+\subsubsection{(b)}
+Use mathematical induction to verify the correctness of the formula.
 
 \begin{proof}
+Let \(P(n)\) be the equation \(E_n = (3+4+\cdots+n)/2\).
 
+{\bf Show that \(P(2)\) is true:} \(E_2 = 3/2\) which agrees with the formula above, so \(P(2)\) is true.
+
+{\bf Show that for any integer \(k \geq 2\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq 2\) is any 
+integer and \(E_k = (3+4+\cdots+k)/2\). {\it [We want to show \(E_{k+1} = (3+4+\cdots+k+(k+1))/2\).]}
+
+\(E_{k+1} = E_k + \frac{k+1}{2} = (3+4+\cdots+k)/2 + \frac{k+1}{2} = (3+4+\cdots+k+(k+1))/2\), so \(P(k+1)\) holds.
+\end{proof}
+
+{\bf \cy Exercises \(28-35\) refer to selection sort, which is another algorithm to arrange the items in an array in 
+ascending order.}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm 11.3.2 Selection Sort}
+
+{\it [Given an array \(a[1], a[2], a[3], \ldots, a[n]\), this algorithm selects the smallest element and places it in the 
+first position, then selects the second smallest element and places it in the second position, and so forth, until the 
+entire array is sorted. In general, for each \(k = 1\) to \(n - 1\), the \(k\)th step of the algorithm selects the index of 
+the array item with minimum value from among \(a[k + 1], a[k + 2], a[k + 3], \ldots, a[n]\). Once this index is found, the 
+value of the corresponding array item is interchanged with the value of \(a[k]\) unless the index already equals \(k\). At 
+the end of execution the array elements are in order.]}
+
+{\bf Input:} \(n\) {\it [a positive integer]}, \(a[1], a[2], a[3], \ldots, a[n]\) {\it [an array of data items capable of 
+being ordered]}
+
+{\bf Algorithm Body:} 
+\begin{tabbing}
+{\bf for} \= \(k \coloneqq 1\) {\bf to} \(n-1\) \\
+          \> \(indexMin \coloneqq k\) \\
+          \> {\bf for} \= \(i \coloneqq k+1\) {\bf to} \(n\)\\
+          \>           \> {\bf if} \(a[i] < a[indexMin]\) \\
+          \>           \> {\bf then} \(indexMin\coloneqq i\)\\
+          \> {\bf next} \(i\) \\
+          \> {\bf if} \(indexMin \neq k\) {\bf then} \\
+          \>           \> \(Temp \coloneqq a[k]\) \\
+          \>           \> \(a[k] \coloneqq a[indexMin]\) \\
+          \>           \> \(a[indexMin] \coloneqq Temp\) \\
+{\bf next} \(k\)
+\end{tabbing}
+
+{\bf Output:} \(a[1], a[2], a[3], \ldots, a[n]\) {\it [in ascending order]}
+
+The action of selection sort can be represented pictorially as follows:
+
+\begin{tabular}{ccccccc}
+\(a[1]\) & \(a[2]\) & \(\cdots\) & \(\boxed{a[k]}\) & \(a[k+1]\) & \(\cdots\) & \(a[n]\) \\
+&&&{\cy \(\ua\)}&&&
+\end{tabular}
+
+{\cy \(k\)th step: Find the index of the array element with minimum value from among \(a[k + 1], \ldots, a[n]\). If the 
+value of this array element is less than the value of \(a[k]\), then its value and the value of \(a[k]\) are 
+interchanged.}
+\end{tcolorbox}
+
+\subsection{Exercise 28}
+Construct a table showing the interchanges that occur when selection sort is applied to the array \(a[1] = 7, a[2] = 3\), 
+\(a[3] = 8, a[4] = 4\), and \(a[5] = 2\).
+
+\begin{proof}
+The top row of the table shows the initial values of the array, and the bottom row shows the final values. The results 
+for executing each step in the for-next loop are shown in separate rows.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/11.3.28.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 29}
-
-\subsubsection{()}
+Construct a table showing the interchanges that occur when selection sort is applied to the array \(a[1] = 6, a[2] = 4\), 
+\(a[3] = 5, a[4] = 8\), and \(a[5] = 1\).
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\(k\)& \(a[1]\) & \(a[2]\) & \(a[3]\) & \(a[4]\) & \(a[5]\) \\
+\hline
+Initial&6&4&5&8&1 \\
+\hline
+1&1&4&5&8&6 \\
+\hline
+2&1&4&5&8&6 \\
+\hline
+3&1&4&5&8&6 \\
+\hline
+4&1&4&5&6&8\\
+\hline
+Final&1&4&5&6&8\\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 30}
-
-\subsubsection{()}
+Construct a trace table showing the action of selection sort on the array of exercise 28.
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/11.3.30.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 31}
-
-\subsubsection{()}
+Construct a trace table showing the action of selection sort on the array of exercise 29.
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\(\bm{n}\)        &5& & & & & & & & & & & & & \\
+\hline
+\(\bm{a[1]}\)     &6& & & & &1& & & & & & & & \\
+\hline
+\(\bm{a[2]}\)     &4& & & & & & & & & & & & & \\
+\hline
+\(\bm{a[3]}\)     &5& & & & & & & & & & & & & \\
+\hline
+\(\bm{a[4]}\)     &8& & & & & & & & & & & & &6 \\
+\hline
+\(\bm{a[5]}\)     &1& & & & &6& & & & & & & &8 \\
+\hline
+\(\bm{k}\)        &1& & & & & &2& & &3& &4& & \\
+\hline
+\(\bm{indexMin}\) &1&2& & &5& &2& & &3& &4&5& \\
+\hline
+\(\bm{i}\)        &2& &3&4&5& &3&4&5&4&5&5& & \\
+\hline
+\(\bm{temp}\)     & & & & & &6& & & & & & & &8 \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 32}
+When selection sort is applied to the array of exercise 28, how many times is the comparison in the if-then statement 
+performed?
 
-\subsubsection{()}
+{\it Note:} The book is not clear about this, but it is referring to the if-then comparison inside the inner for-loop,
+not to the ``{\bf if \(IndexOfMin \neq k\) then}'' after it.
 
 \begin{proof}
-
+There is one comparison for each combination of values of \(k\) and \(i\): namely, \(4 + 3 + 2 + 1 = 10\).
 \end{proof}
 
 \subsection{Exercise 33}
-
-\subsubsection{()}
+When selection sort is applied to the array of exercise 29, how many times is the comparison in the if-then statement 
+performed?
 
 \begin{proof}
-
+There is one comparison for each combination of values of \(k\) and \(i\): namely, \(4 + 3 + 2 + 1 = 10\).
 \end{proof}
 
 \subsection{Exercise 34}
-
-\subsubsection{()}
+When selection sort is applied to an array \(a[1], a[2], a[3], a[4]\), how many times is the comparison in the if-then 
+statement performed?
 
 \begin{proof}
-
+\(k\) ranges from 1 to \(4-1=3\), and for each value of \(k\), \(i\) ranges from \(k+1\) to \(4\). So \(i\) ranges from: 
+2 to 4, then 3 to 4, then 4 to 4. So \((4-2+1) + (4-3+1) + (4-4+1) = 3+2+1 = 6\) comparisons.
 \end{proof}
 
 \subsection{Exercise 35}
+Consider applying selection sort to an array \(a[1], a[2], a[3], \ldots, a[n]\).
 
-\subsubsection{()}
+\subsubsection{(a)}
+How many times is the comparison in the {\bf if-then} statement performed when \(a[1]\) is compared to each of 
+\(a[2], a[3], \ldots, a[n]\)?
 
 \begin{proof}
-
+Since \(k = 1\), \(i\) ranges from \(k=2\) to \(n\), so \(n-2+1 = n-1\) times.
 \end{proof}
 
-\subsection{Exercise 36}
-
-\subsubsection{()}
+\subsubsection{(b)}
+How many times is the comparison in the {\bf if-then} statement performed when \(a[2]\) is compared to each of 
+\(a[3], a[4], \ldots, a[n]\)?
 
 \begin{proof}
+Since \(k = 2\), \(i\) ranges from \(k=3\) to \(n\), so \(n-3+1 = n-2\) times.
+\end{proof}
 
+\subsubsection{(c)}
+How many times is the comparison in the {\bf if-then} statement performed when \(a[k]\) is compared to each of 
+\(a[k+1], a[k+2], \ldots, a[n]\)?
+
+\begin{proof}
+\(i\) ranges from \(k+1\) to \(n\), so \(n-(k+1)+1 = n-k\) times.
+\end{proof}
+
+\subsubsection{(d)}
+Using the number of times the comparison in the if-then statement is performed as a measure of the time efficiency of 
+selection sort, find a worst-case order for selection sort. Use the theorem on polynomial orders.
+
+{\it Hint:} The answer is \(n^2\).
+
+\begin{proof}
+From parts (a), (b), (c) the total number of comparisons is: \((n-1) + (n-2) + \cdots + (n-(n-1)) = 1+2+\cdots+(n-1) =
+\frac{(n-1)(n-1+1)}{2} = \frac{1}{2}n^2 - \frac{1}{2}n\). This is \(\Theta(n^2)\) by theorem on polynomial orders, so the 
+algorithm has order \(n^2\).
+\end{proof}
+
+{\bf \cy Exercises \(36-39\) refer to the following algorithm to compute the value of a real polynomial.}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm 11.3.3 Term-by-Term Polynomial Evaluation}
+
+{\it [This algorithm computes the value of a polynomial \(a[n]x^n + a[n-1]x^{n-1} + \cdots + a[2]x^2 + a[1]x + a[0]\) 
+by computing each term separately, starting with \(a[0]\), and adding it to an accumulating sum.]}
+
+{\bf Input:} \(n\) {\it [a nonnegative integer]}, \(a[0], a[1], a[2], a[3], \ldots, a[n]\) {\it [an array of real 
+numbers]}, \(x\) {\it [a real number]}
+
+{\bf Algorithm Body:} 
+\begin{tabbing}
+\(polyval \coloneqq a[0]\) \\
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> \(term \coloneqq a[i]\) \\
+          \> {\bf for} \= \(j \coloneqq 1\) {\bf to} \(i\)\\
+          \>           \> \(term \coloneqq term \cdot x\)\\
+          \> {\bf next} \(j\) \\
+          \> \(polyval \coloneqq polyval + term\) \\
+{\bf next} \(i\)
+\end{tabbing}
+
+{\it [At this point \(polyval = a[n]x^n + a[n-1]x^{n-1} + \cdots + a[2]x^2 + a[1]^x + a[0]\).]}
+
+{\bf Output:} \(polyval\) {\it [a real number]}
+\end{tcolorbox}
+
+\subsection{Exercise 36}
+Trace Algorithm 11.3.3 for the input \(n = 3, a[0] = 2, a[1] = 1, a[2] = -1, a[3] = 3\), and \(x = 2\).
+
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/11.3.36.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 37}
-
-\subsubsection{()}
+Trace Algorithm 11.3.3 for the input \(n = 2, a[0] = 5, a[1] = -1, a[2] = 2\), and \(x = 3\).
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\(\bm{n}\)       &2&    & & &  &  \\
+\hline
+\(\bm{a[0]}\)    &5&    & & &  &  \\
+\hline
+\(\bm{a[1]}\) &$-1$&    & & &  &  \\
+\hline
+\(\bm{a[2]}\)    &2&    & & &  &  \\
+\hline
+\(\bm{x}\)       &3&    & & &  &  \\
+\hline
+\(\bm{polyval}\) &5&    &2& &  &20\\
+\hline
+\(\bm{i}\)       &1&    &2& &  &  \\
+\hline
+\(\bm{term}\) &$-1$&$-3$&2&6&18&  \\
+\hline
+\(\bm{j}\)       &1&    &1&2&  &  \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 38}
-
-\subsubsection{()}
+Let \(s_n =\) the number of additions and multiplications that are performed when Algorithm 11.3.3 is executed for a 
+polynomial of degree \(n\). Express \(s_n\) as a function of \(n\).
 
 \begin{proof}
-
+Number of multiplications = number of iterations of the inner loop = \(1 +2+ 3 + \cdots + n = n(n + 1)/2\) by Theorem 5.2.1.
+Number of additions = number of iterations of the outer loop = \(n\). Hence the total number of multiplications and additions 
+is \(n(n + 1)/2 + n = n^2/2 + 3n/2\).
 \end{proof}
 
 \subsection{Exercise 39}
-
-\subsubsection{()}
+Use the theorem on polynomial orders to find an order for Algorithm 11.3.3.
 
 \begin{proof}
-
+It's \(n^2\).
 \end{proof}
 
-\subsection{Exercise 40}
+{\bf \cy Exercises \(40-42\) refer to another algorithm, known as Horner’s rule, for finding the value of a polynomial.}
 
-\subsubsection{()}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm 11.3.4 Horner's Rule}
+
+{\it [This algorithm computes the value of a polynomial \(a[n]x^n + a[n-1]x^{n-1} + \cdots + a[2]x^2 + a[1]x + a[0]\) 
+by nesting successive additions and multiplications as indicated in the following parenthesization: \(((\cdots((a[n]x 
++ a[n-1])x + a[n-2])x + \cdots + a[2])x + a[1])x + a[0].\) At each stage, starting with a[n], the current value of polyval 
+is multiplied by \(x\) and the next lower coefficient of the polynomial is added to it.]}
+
+{\bf Input:} \(n\) {\it [a nonnegative integer]}, \(a[0], a[1], a[2], a[3], \ldots, a[n]\) {\it [an array of real 
+numbers]}, \(x\) {\it [a real number]}
+
+{\bf Algorithm Body:} 
+\begin{tabbing}
+\(polyval \coloneqq a[n]\) \\
+{\bf for} \= \(i \coloneqq 1\) {\bf to} \(n\) \\
+          \> \(polyval \coloneqq polyval \cdot x + a[n-i]\) \\
+{\bf next} \(i\)
+\end{tabbing}
+
+{\it [At this point \(polyval = a[n]x^n + a[n-1]x^{n-1} + \cdots + a[2]x^2 + a[1]^x + a[0]\).]}
+
+{\bf Output:} \(polyval\) {\it [a real number]}
+\end{tcolorbox}
+
+\subsection{Exercise 40}
+Trace Algorithm 11.3.4 for the input \(n = 3, a[0] = 2, a[1] = 1, a[2] = -1, a[3] = 3\), and \(x = 2\).
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.6]{../images/11.3.40.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 41}
-
-\subsubsection{()}
+Trace Algorithm 11.3.4 for the input \(n = 2, a[0] = 5, a[1] = -1, a[2] = 2\), and \(x = 3\).
 
 \begin{proof}
-
+\begin{center}
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(\bm{n}\)       &2&  &   \\
+\hline
+\(\bm{a[0]}\)    &5&  &   \\
+\hline
+\(\bm{a[1]}\) &$-1$&  &   \\
+\hline
+\(\bm{a[2]}\)    &2&  &   \\
+\hline
+\(\bm{x}\)       &3&  &   \\
+\hline
+\(\bm{polyval}\) &2& 5&20 \\
+\hline
+\(\bm{i}\)       &1& 2&   \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
+\end{center}
 \end{proof}
 
 \subsection{Exercise 42}
+Let \(t_n =\) the number of additions and multiplications that are performed when Algorithm 11.3.4 is executed for a 
+polynomial of degree \(n\). Express \(t_n\) as a function of \(n\).
 
-\subsubsection{()}
+{\it Hint:} \(t_n = 2n\).
 
 \begin{proof}
-
+There is one multiplication and one subtraction for each iteration of the loop. The loop iterates \(n\) times. 
+Therefore \(t_n = 2n\).
 \end{proof}
 
 \subsection{Exercise 43}
-
-\subsubsection{()}
+Use the theorem on polynomial orders to find an order for Algorithm 11.3.4. How does this order compare with that of 
+Algorithm 11.3.3?
 
 \begin{proof}
-
+The order is \(n\) which is one degree less than the order of Algorithm 11.3.3. So this algorithm runs in the square root of
+the time the other one takes to run.
 \end{proof}
 
 \section{Exercise Set 11.4}
