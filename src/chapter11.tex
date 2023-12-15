@@ -13,6 +13,7 @@
 
 \newcommand{\dps}{\displaystyle}
 \newcommand{\es}{\varnothing}
+\newcommand{\eps}{\varepsilon}
 \newcommand{\fbl}{\underline{\hspace{1cm}}\,\,}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -2625,413 +2626,833 @@ the time the other one takes to run.
 \end{proof}
 
 \section{Exercise Set 11.4}
+{\bf \cy Graph each function defined in \(1-8\).}
 
 \subsection{Exercise 1}
-
-\subsubsection{()}
+\(f(x) = 3^x\) for each real number \(x\)
 
 \begin{proof}
-
+\includegraphics[scale=0.5]{../images/11.4.1.1.png}
+\includegraphics[scale=0.5]{../images/11.4.1.2.png}
 \end{proof}
 
 \subsection{Exercise 2}
-
-\subsubsection{()}
+\(g(x) = \left(\frac{1}{3}\right)^x\) for each real number \(x\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.4.2.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 3}
-
-\subsubsection{()}
+\(h(x) = \log_{10} x\) for each positive real number \(x\)
 
 \begin{proof}
-
+\includegraphics[scale=0.5]{../images/11.4.3.1.png}
+\includegraphics[scale=0.5]{../images/11.4.3.2.png}
 \end{proof}
 
 \subsection{Exercise 4}
-
-\subsubsection{()}
+\(k(x) = \log_2 x\) for each positive real number \(x\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.4.4.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 5}
-
-\subsubsection{()}
+\(F(x) = \floor{\log_2 x}\) for each positive real number \(x\)
 
 \begin{proof}
-
+\includegraphics[scale=0.5]{../images/11.4.5.1.png}
+\includegraphics[scale=0.5]{../images/11.4.5.2.png}
 \end{proof}
 
 \subsection{Exercise 6}
-
-\subsubsection{()}
+\(G(x) = \ceil{\log_2 x}\) for each positive real number \(x\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.4.6.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 7}
-
-\subsubsection{()}
+\(H(x) = x \log_2(x)\) for each positive real number \(x\)
 
 \begin{proof}
-
+\includegraphics[scale=0.5]{../images/11.4.7.1.png}
+\includegraphics[scale=0.5]{../images/11.4.7.2.png}
 \end{proof}
 
 \subsection{Exercise 8}
-
-\subsubsection{()}
+\(K(x) = x \log_{10} x\) for each positive real number \(x\)
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.4.8.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 9}
-
-\subsubsection{()}
+The scale of the graph shown in Figure 11.4.1 is one-fourth inch to each unit. If the point \((2, 2^{64})\) is plotted on 
+the graph of \(y = 2^x\), how many miles will it lie above the horizontal axis? What is the ratio of the height of the point 
+to the distance of the earth from the sun? (There are 12 inches per foot and 5,280 feet per mile. The earth is 
+approximately 93,000,000 miles from the sun on average.) (1/4 inch \(\approx\) 0.635 cm, 1 mile \(\approx\) 0.62 km)
 
 \begin{proof}
-
+The distance above the axis is \(\dps (2^{64} \text{units}) \cdot\left(\frac{1}{4}\frac{\text{inch}}{\text{unit}}\right)\)
+= \(\dps \frac{2^{64}}{4}\) inches = \(\dps \frac{2^{64}}{4 \cdot 12 \cdot 5280}\) miles \(\approx 72,785,448,520,000\)
+miles. The ratio of the height of the point to the average distance of the earth to the sun is approximately 
+72785448520000/93000000 \(\approx\) 782,639. (If you perform the computation using metric units and the approximation 0.635 
+cm \(\approx\) 1/4 inch, the ratio comes out to be approximately 780,912.)
 \end{proof}
 
 \subsection{Exercise 10}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Use the definition of logarithm to show that \(\log_b(b^x) = x\) for every real number \(x\).
 
 \begin{proof}
+By definition of logarithm,  \(\log_b (b^x)\) is the exponent to which \(b\) must be raised to obtain \(b^x\). But, when 
+\(b\) is actually raised to the exponent \(x\), \(b^x\) is obtained. That is, \(\log_b (b^x) = x\).
+\end{proof}
 
+\subsubsection{(b)}
+Use the definition of logarithm to show that \(b\log_b(x) = x\) for every positive real number \(x\).
+
+\begin{proof}
+By definition of logarithm,  \(\log_b x\) is the exponent to which \(b\) must be raised to obtain \(x\). Thus when \(b\) is 
+actually raised to this exponent, \(x\) is obtained. That is, \(b^{\log_b x} = x\).
+\end{proof}
+
+\subsubsection{(c)}
+By the result of exercise 28 in Section 7.3, if \(f: X \to Y\) and \(g: Y \to X\) are functions and \(g \circ f = I_X\) and 
+\(f \circ g = I_Y\), then \(f\) and \(g\) are inverse functions. Use this result to show that \(\log_b\) and 
+\(exp_b\) (the exponential function with base b) are inverse functions.
+
+\begin{proof}
+Let \(X = (0, \infty), Y = \R\), let \(f: X \to Y\) be defined by \(f(x) = \log_b(x)\) and let \(g: Y \to X\) be defined by 
+\(g(y) = exp_b(y) = b^y\). Then by part (a) \(f(g(y)) = \log_b(b^y) = y\) therefore \(f \circ g = I_Y\). By part (b)
+\(g(f(x)) = b^{\log_b(x)} = x\), so \(g \circ f = I_X\). Therefore \(f\) and \(g\) are inverse functions.
 \end{proof}
 
 \subsection{Exercise 11}
+Let \(b > 1\).
 
-\subsubsection{()}
+\subsubsection{(a)}
+Use the fact that \(u = \log_b(v) \iff v = b^u\) to show that a point \((u, v)\) lies on the graph of the logarithmic 
+function with base \(b\) if, and only if, \((v, u)\) lies on the graph of the exponential function with base \(b\).
 
 \begin{proof}
+Assume \((u, v)\) lies on the graph of the logarithmic 
+function with base \(b\). Then by definition of the 
+logarithmic function with base \(b\), \(v = \log_b(u)\). Then \(u = b^v\). Then \((v, u)\) lies on the graph of the 
+exponential function with base \(b\). The other direction of the proof follows the same way by reversing the argument.
+\end{proof}
 
+\subsubsection{(b)}
+Plot several pairs of points of the form \((u, v)\) and \((v, u)\) on a coordinate system. Describe the geometric 
+relationship between the locations of the points in each pair.
+
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.4.11.b.png}
+\end{figure}
+\end{proof}
+
+\subsubsection{(c)}
+Draw the graphs of \(y = \log_2 x\) and \(y = 2^x\). Describe the geometric relationship between these graphs.
+
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.4.11.c.png}
+\end{figure}
+
+They are symmetric across the diagonal line \(y = x\).
 \end{proof}
 
 \subsection{Exercise 12}
-
-\subsubsection{()}
+Give a graphical interpretation for property (11.4.2) in Example 11.4.1(a) for \(0 < x < 1\).
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 13}
-
-\subsubsection{()}
+Suppose a positive real number \(x\) satisfies the inequality \(10^m \leq x < 10^{m+1}\) where \(m\) is an integer. What can 
+be inferred about \(\floor{\log_{10} x}\)? Justify your answer.
 
 \begin{proof}
-
+\(\floor{\log_{10} x} = m\). This is just like Example 11.4.1 (a) but with base 10 instead. Since \(\log_{10}\) is an 
+increasing function, 
+\[
+10^m \leq x < 10^{m+1} \implies \log_{10}(10^m) \leq \log_{10}x < \log_{10}(10^{m+1}) \implies m \leq \log_{10}x < m+1
+\]
+which implies \(\floor{\log_{10} x} = m\) by definition of floor.
 \end{proof}
 
 \subsection{Exercise 14}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Prove that if \(x\) is a positive real number and \(k\) is a nonnegative integer such that \(2^{k-1} < x \leq 2^k\), then 
+\(\ceil{\log_2 x} = k\).
 
 \begin{proof}
+Same as above: since \(\log_{10}\) is increasing,
+\[
+2^{k-1} < x \leq 2^k \implies \log_{2}(2^{k-1}) \log_2 x \leq  \log_2(2^k) \implies k-1 < \log_2 x \leq k
+\]
+which implies \(\ceil{\log_2 x} = k\) by definition of ceiling.
+\end{proof}
 
+\subsubsection{(b)}
+Describe in words the statement proved in part (a).
+
+\begin{proof}
+If \(x\) is a positive number that lies between two consecutive integer powers of 2, the ceiling of the logarithm with base 2 of \(x\) is the exponent of the bigger power of 2. 
 \end{proof}
 
 \subsection{Exercise 15}
-
-\subsubsection{()}
+If \(n\) is an odd integer and \(n > 1\), is \(\ceil{\log_2(n - 1)} = \ceil{\log_2(n)}\)? Justify your answer.
 
 \begin{proof}
-
+No. \underline{Counterexample:} Let \(n = 9\). Then \(\ceil{\log_2 (n - 1)} =  \ceil{\log_2 8} = \ceil{3} = 3\), 
+whereas \(\ceil{\log_2 n} = \ceil{\log_2 9} = \ceil{3.17} = 4\).
 \end{proof}
 
 \subsection{Exercise 16}
+If \(n\) is an odd integer and \(n > 1\), is \(\ceil{\log_2(n + 1)} = \ceil{\log_2(n)}\)? Justify your answer.
 
-\subsubsection{()}
+{\it Hint:} The statement is true.
 
 \begin{proof}
+If \(n\) is an odd integer that is greater than 1, then \(n\) lies strictly between two successive powers of 2: \(2^k < n < 
+2^{k+1}\) for some integer \(k \geq 0\). 
 
+So \(2^k < n+1 \leq 2^{k+1}\) because \(n < 2^{k+1}\) and \(n\) and \(2^{k+1}\) are both integers. Since \(\log_2\) is an 
+increasing function, this implies \(\log_2(2^k) < \log_2(n+1) \leq \log_2(2^{k+1})\) which implies \(k < \log_2(n+1) \leq k + 1\). Therefore by definition of ceiling, \(\log_2(n+1) = 
+k+1\).
+
+Since \(2^k < n < 2^{k+1}\), by the same argument \(\log_2(2^k) < \log_2 n < \log_2(2^{k+1})\) and \(k < \log_2 n 
+< k+1\). So by definition of ceiling \(\log_2 n = k+1\).
+
+Therefore \(\ceil{\log_2(n + 1)} = \ceil{\log_2(n)}\).
 \end{proof}
 
 \subsection{Exercise 17}
-
-\subsubsection{()}
+If \(n\) is an odd integer and \(n > 1\), is \(\floor{\log_2(n + 1)} = \floor{\log_2(n)}\)? Justify your answer.
 
 \begin{proof}
-
+No. \underline{Counterexample:} Let \(n = 3\). Then \(\floor{\log_2 (n + 1)} =  \floor{\log_2 4} = \floor{2} = 2\), 
+whereas \(\floor{\log_2 n} = \floor{\log_2 3} = \floor{1.58} = 1\).
 \end{proof}
 
-\subsection{Exercise 18}
+{\bf \cy In 18 and 19, indicate how many binary digits are needed to represent the numbers in binary notation. Use the 
+method shown in Example 11.4.3.}
 
-\subsubsection{()}
+\subsection{Exercise 18}
+148,206
 
 \begin{proof}
-
+\(\floor{\log_2 148206} + 1 = 18\)
 \end{proof}
 
 \subsection{Exercise 19}
-
-\subsubsection{()}
+5,067,329
 
 \begin{proof}
-
+\(\floor{\log_2 5,067,329} + 1 = 23\)
 \end{proof}
 
 \subsection{Exercise 20}
-
-\subsubsection{()}
+It was shown in the text that the number of binary digits needed to represent a positive integer \(n\) is 
+\(\floor{\log_2 n} + 1\). Can this also be given as \(\ceil{\log_2 n}\)? Why or why not?
 
 \begin{proof}
-
+No: \(\floor{\log_2 2} + 1 = \floor{1} + 1 = 1 + 1 = 2 \neq 1 = \ceil{1} = \ceil{\log_2 2}\).
 \end{proof}
 
+{\bf \cy In each of 21 and 22, a sequence is specified by a recurrence relation and initial conditions. In each case, (a) 
+use iteration to guess an explicit formula for the sequence; (b) use strong mathematical induction to confirm the 
+correctness of the formula you obtained in part (a).}
+
 \subsection{Exercise 21}
+\(a_k = a_{\floor{k/2}} + 2\) for each integer \(k \geq 2\), \(a_1 = 1\)
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+\(a_1 = 1, a_2 = a_{\floor{2/2}} + 2 = a_1 + 2 = 1 + 2, a_3 = a_{\floor{3/2}} + 2 = a_1 + 2 = 1 + 2,\)
 
+\(a_4 = a_{\floor{4/2}} + 2 = a_2 + 2 = 1 + 2 \cdot 2, a_5 = a_{\floor{5/2}} + 2 = a_2 + 2 = 1 + 2 \cdot 2\),
+
+\(a_6 = a_{\floor{6/2}} + 2 = a_3 + 2 = 1 + 2 \cdot 2, a_7 = a_{\floor{7/2}} + 2 = a_3 + 2 = 1 + 2 \cdot 2\),
+
+\(a_8 = a_{\floor{8/2}} + 2 = a_4 + 2 = 1 + 2 \cdot 3, a_9 = a_{\floor{9/2}} + 2 = a_4 + 2 = 1 + 2 \cdot 3\),
+
+\(\vdots\)
+
+\(a_{15} = a_{\floor{15/2}} + 2 = a_7 + 2 = 1 + 2 \cdot 3, a_{16} = a_{\floor{16/2}} + 2 = a_8 + 2 = 1 + 2 \cdot 4\),
+
+Guess: \(a_k = 1 + 2 \cdot \floor{\log_2(k)}\)
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+Suppose the sequence \(a_1, a_2, a_3, \ldots\) is defined recursively as follows: \(a_1 = 1\) and \(a_k = 
+a_{\floor{k/2}} + 2\) for each integer \(k \geq 2\). Let the property \(P(n)\) be the equation \(a_n = 1 + 2 
+\floor{\log_2 n}\). We will show by strong mathematical induction that \(P(n)\) is true for each integer \(n \geq 1\). 
+
+{\bf Show that \(P(1)\) is true:} \(P(1)\) is the equation \(1 + 2 \floor{\log_2 1} = 1 + 2 \cdot 0 = 1\), which is the value 
+of \(a_1\). 
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(i)\) is true for every integer \(i\) from 1 through \(k\), then 
+\(P(k + 1)\) is true:} Let \(k\) be any integer with \(k \geq 1\), and suppose \(a_i = 1 + 2 \floor{\log_2 i}\) for each 
+integer \(i\) from 1 through \(k\). {\it [This is the inductive hypothesis.]} We must show that \(a_{k+1} = 1 + 2 
+\floor{\log_2 (k + 1)}\). 
+
+{\bf Case 1 (\(k\) is odd):} In this case \(k + 1\) is even, and 
+
+\begin{tabular}{rcll}
+\(a_{k+1}\) & = & \(a_{\floor{(k+1)/2}} + 2\) & {\cy by the recursive definition of \(a_1, a_2, a_3, \ldots\)} \\
+& = & \(a_{(k+1)/2} + 2\) & {\cy because \(k + 1\) is even (Theorem 4.6.2)} \\
+& = & \(1 + 2\floor{\log_2((k + 1)/2)} + 2\) & {\cy by inductive hypothesis} \\
+& = & \(3 + 2\floor{\log_2(k + 1) - \log_2 2}\) & {\cy by Theorem 7.2.1(b)} \\
+& = & \(3 + 2\floor{\log_2(k + 1) - 1}\) & {\cy because \(\log_2 2 = 1\)} \\
+& = & \(3 + 2(\floor{\log_2(k + 1)} - 1)\) & {\cy because \(\floor{x-1} = \floor{x}-1\), Exercise 15, 4.6} \\
+& = & \(1 + 2\floor{\log_2(k + 1)}\) & {\cy by algebra} \\
+\end{tabular}
+
+{\bf Case 2 (\(k\) is even):} In this case \(k + 1\) is odd, and 
+
+\begin{tabular}{rcll}
+\(a_{k+1}\) & = & \(a_{\floor{(k+1)/2}} + 2\) & {\cy by the recursive definition of \(a_1, a_2, a_3, \ldots\)} \\
+& = & \(a_{k/2} + 2\) & {\cy because \(k + 1\) is odd (Theorem 4.6.2)} \\
+& = & \(1 + 2\floor{\log_2(k/2)} + 2\) & {\cy by inductive hypothesis} \\
+& = & \(3 + 2\floor{\log_2 k - \log_2 2}\) & {\cy by Theorem 7.2.1(b)} \\
+& = & \(3 + 2\floor{\log_2 k - 1}\) & {\cy because \(\log_2 2 = 1\)} \\
+& = & \(3 + 2(\floor{\log_2 k} - 1)\) & {\cy because \(\floor{x-1} = \floor{x}-1\), Exercise 15, 4.6} \\
+& = & \(1 + 2\floor{\log_2 k}\) & {\cy by algebra} \\
+& = & \(1 + 2\floor{\log_2 (k+1)}\) & {\cy by Property 11.4.3} \\
+\end{tabular}
 \end{proof}
 
 \subsection{Exercise 22}
+\(b_k = b_{\floor{k/2}} + 1\) for each integer \(k \geq 2\), \(b_1 = 1\)
 
-\subsubsection{()}
+\subsubsection{(a)}
+\begin{proof}
+Almost identical to the previous exercise. Guess: \(b_k = 1 + 1 \cdot \floor{\log_2(k)}\).
+\end{proof}
+
+\subsubsection{(b)}
 
 \begin{proof}
-
+Almost identical to the previous exercise.
 \end{proof}
 
 \subsection{Exercise 23}
-
-\subsubsection{()}
+Define a sequence \(c_1, c_2, c_3, \ldots\) recursively as follows: \(c_1 = 0\), \(c_k = 2c_{\floor{k/2}} + k\), for each 
+integer \(k \geq 2\). Use strong mathematical induction to show that \(c_n \leq n^2\) for every integer \(n \geq 1\).
 
 \begin{proof}
+Let \(P(n)\) be the inequality \(c_n \leq n^2\).
 
+{\bf Show that \(P(1)\) is true:} \(c_1 = 0 < 1 = 1^2\) so \(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\), if \(P(i)\) is true for every integer \(i\) from 1 through \(k\), then 
+\(P(k + 1)\) is true:} Let \(k\) be any integer with \(k \geq 1\) and assume that for all \(i\) with \(1 \leq i \leq k\) we
+have \(c_i \leq i^2\). {\it [This is the inductive hypothesis.]} We want to show \(c_{k+1} \leq (k+1)^2\).
+
+{\bf Case 1 (\(k+1\) is odd):} Then \(k+1 = 2n+1\) for some integer \(n\leq k\). Since \(k+1\geq2\) we have \(2n+1\geq 2\) 
+so \(n \geq 1/2\) which forces \(n \geq 1\) because \(n\) is an integer. By inductive hypothesis \(c_n \leq n^2\).
+
+Now \(c_{k+1} = c_{2n+1} = 2c_{\floor{(2n+1)/2}} + (2n+1) = 2c_n + (2n+1) \leq 2n^2 + (2n+1) \leq 2n^2 + 8n + 4 = (2n+2)^2 
+= (k+1)^2\) {\it as was to be shown.}
+
+{\bf Case 2 (\(k+1\) is even):} Then \(k+1 = 2n\) for some integer \(n\leq k\). Since \(k+1\geq2\) we have \(2n \geq 2\) 
+so \(n \geq 1\). By inductive hypothesis \(c_n \leq n^2\).
+
+Now \(c_{k+1} = c_{2n} = 2c_{\floor{2n/2}} + 2n = 2c_n + 2n \leq 2n^2 + 2n \leq 2n^2 + 4n + 1 = (2n+1)^2 = (k+1)^2\) 
+{\it as was to be shown.}
 \end{proof}
 
 \subsection{Exercise 24}
-
-\subsubsection{()}
+Use strong mathematical induction to show that for the sequence of exercise 23,\(c_n \leq n \log_2 n\), for every 
+integer \(n \geq 4\).
 
 \begin{proof}
+Let \(P(n)\) be the inequality \(c_n \leq n \log_2 n\).
 
+{\bf Show that \(P(2), P(3), P(4)\) are true:} \(c_1 = 0\), 
+
+\(c_2 = 2c_{\floor{2/2}} + 2 = 2c_1+ 2 = 2 \cdot 0 + 2 = 2 \leq 2 \cdot 1 = 2 \log_2 2\),
+
+\(c_3 = 2c_{\floor{3/2}} + 3 = 2c_1 + 3 = 2 \cdot 0 + 3 = 3 \leq 3 \log_2 3\) (because \(\log_2 3 > 1\)),
+
+\(c_4 = 2c_{\floor{4/2}} + 4 = 2c_2 + 4 = 2 \cdot 2 + 4 = 8 \leq 4 \cdot 2 = 4 \log_2 4\). 
+
+So \(P(2), P(3), P(4)\) are true.
+
+{\bf Show that for any integer \(k \geq 4\), if \(P(i)\) is true for every integer \(i\) from 2 through \(k\), then 
+\(P(k + 1)\) is true:} Let \(k\) be any integer with \(k \geq 2\) and assume that for all \(i\) with \(2 \leq i \leq k\) we
+have \(c_i \leq i \log_2 i\). {\it [This is the inductive hypothesis.]} We want to show \(c_{k+1}\leq(k+1)\log_2(k+1)\).
+
+{\bf Case 1 (\(k+1\) is odd):} Then \(k+1 = 2n+1\) for some integer \(n\). Since \(k+1 \geq 5\) we have \(2n+1 \geq 5\) so
+\(n \geq 2\). By inductive hypothesis \(c_n \leq n \log_2 n\).
+
+Now \(c_{k+1} = c_{2n+1} = 2c_{\floor{(2n+1)/2}} + (2n+1) = 2c_n + (2n+1) \leq 2n \log_2(n) + (2n+1) \leq (2n+1) 
+\log_2(n) + (2n+1) = (2n+1)(\log_2(n) + 1) \leq (2n+1)(\log_2(n+\frac{1}{2}) + 1) = (2n+1)(\log_2((2n+1)/2) + 1)
+= (2n+1)(\log_2(2n+1) - \log_2(2) + 1) = (2n+1)(\log_2(2n+1) - 1 + 1) = (2n+1)\log_2(2n+1) = (k+1)\log_2(k+1)\), 
+{\it as was to be shown.}
+
+{\bf Case 2 (\(k+1\) is even):} Then \(k+1 = 2n\) for some integer \(n\). Since \(k+1 \geq 5\) we have \(2n \geq 5\) so
+\(n \geq 5/2 > 1\). By inductive hypothesis \(c_n \leq n \log_2 n\).
+
+Now \(c_{k+1} = c_{2n} = 2c_{\floor{2n/2}} + 2n = 2c_n + 2n \leq 2n \log_2(n) + 2n = 2n(\log_2(2n/2) + 1) = 2n(\log_2(2n)
+- \log_2(2) + 1) = 2n \log_2(2n) = (k+1)\log_2(k+1)\), {\it as was to be shown.}
 \end{proof}
 
-\subsection{Exercise 25}
+{\bf \cy Exercises 25 and 26 refer to properties 11.4.9 and 11.4.10. To solve them, think big!}
 
-\subsubsection{()}
+\subsection{Exercise 25}
+Find a real number \(x > 3\) such that \(\log_2 x < x^{1/10}\).
 
 \begin{proof}
+\(\log_2 x < x^{1/10} \iff \log_2(\log_2 x) < \log_2(x^{1/10}) \iff \log_2(\log_2 x) < \frac{1}{10}\log_2 x\). Let \(y = 
+\log_2 x\). Then the last inequality holds \(\iff 10 \log_2 y < y\). Now we can guess values for \(y\) as powers of 2:
 
+\(10 \log_2(2^1) <^? 2^1 \iff 10 \cdot 1 <^? 2\) No. 
+
+\(10 \log_2(2^2) <^? 2^2 \iff 10 \cdot 2 <^? 4\) No. 
+
+Let's guess a bit bigger:
+
+\(10 \log_2(2^5) <^? 2^5 \iff 10 \cdot 5 <^? 32\) No. 
+
+\(10 \log_2(2^6) <^? 2^6 \iff 10 \cdot 6 <^? 64 \iff 60 < 64\) Yes! 
+
+So \(y = 2^6 = 64\) satisfies the inequality \(10 \log_2 y < y\). So \(64 = \log_2 x\) and therefore \(x = 2^{64}\) 
+satisfies the inequality \(\log_2 x < x^{1/10}\).
 \end{proof}
 
 \subsection{Exercise 26}
-
-\subsubsection{()}
+Find a real number \(x > 1\) such that \(x^{50} < 2^x\).
 
 \begin{proof}
+\(x^{50} < 2^x \iff \log_2(x^{50}) < \log_2(2^x) \iff 50 \log_2(x) < x\). Now we can guess values for \(x\) as powers 
+of 2.
 
+\(50 \log_2(2^1) <^? 2^1 \iff 50 \cdot 1 <^? 2\) No. \\
+\(50 \log_2(2^2) <^? 2^2 \iff 50 \cdot 2 <^? 4\) No. \\
+Let's guess a bit bigger:
+\(50 \log_2(2^5) <^? 2^5 \iff 50 \cdot 5 <^? 32\) No. \\
+Let's guess a bit bigger:
+\(50 \log_2(2^{10}) <^? 2^{10} \iff 50 \cdot 10 <^? 1024\) Yes! In fact \(2^9\) also works: \\
+\(50 \log_2(2^9) <^? 2^9 \iff 50 \cdot 9 <^? 512 \iff 450 <^? 512\) Yes!.
+
+So \(x = 2^9 = 512\) satisfies the inequality \(x^{50} < 2^x\).
 \end{proof}
 
-\subsection{Exercise 27}
+{\bf \cy Use Theorems 11.2.7–11.2.9 and properties 11.4.11, 11.4.12, and 11.4.13 to derive each statement in \(27-30\).}
 
-\subsubsection{()}
+\subsection{Exercise 27}
+\(2n + \log_2 n\) is \(\Theta(n)\)
 
 \begin{proof}
-
+By Theorem 11.2.7, \(n\) is \(\Theta(n)\) and \(\log_2 n\) is \(\Theta(\log_2 n)\), and, by Theorem 11.2.8(c), \(2n\) is 
+\(\Theta(n)\). In addition, by property 11.4.9, there is a positive real number \(s\) such that for each integer 
+\(n \geq s, \log_2 n \leq n\). Finally, if \(n\) is any integer with \(n \geq 1\), then \(n \geq 0\). Thus it follows 
+from Theorem 11.2.9(c) that \(2n + \log_2 n\) is \(\Theta(n)\).
 \end{proof}
 
 \subsection{Exercise 28}
-
-\subsubsection{()}
+\(n^2 + 5n\log_2 n\) is \(\Theta(n^2)\)
 
 \begin{proof}
-
+By Theorem 11.2.7, \(n^2\) is \(\Theta(n^2)\) and by Theorem 11.2.7 and 11.2.8(c), \(5n\log_2 n\) is \(\Theta(n\log_2 n)\). 
+In addition, by property 11.4.13, there is a positive real number \(s\) such that for each integer \(n \geq s, n \log_2 n 
+\leq n^2\). Thus it follows from Theorem 11.2.9(c) that \(n^2 + 5n \log_2 n\) is \(\Theta(n^2)\).
 \end{proof}
 
 \subsection{Exercise 29}
-
-\subsubsection{()}
+\(n^2 + 2^n\) is \(\Theta(2^n)\)
 
 \begin{proof}
-
+By Theorem 11.2.7, \(n^2\) is \(\Theta(n^2)\) and \(2^n\) is \(\Theta(2^n)\). In addition, by property 11.4.10, there is a 
+positive real number \(s\) such that for each integer \(n \geq s, n^2 \leq 2^n\). Finally, if \(n\) is any integer, then 
+\(2^n \geq 0\). Thus it follows from Theorem 11.2.9(c) that \(n^2 + 2^n\) is \(\Theta(2^n)\).
 \end{proof}
 
 \subsection{Exercise 30}
-
-\subsubsection{()}
+\(2^{n+1}\) is \(\Theta(2^n)\)
 
 \begin{proof}
-
+By Theorem 11.2.7(a) \(2^n\) is \(\Theta(2^n)\). Since \(2^{n+1} = 2 \cdot 2^n\), by Theorem 11.2.8(c) \(2^{n+1}\) is
+\(\Theta(2^n)\).
 \end{proof}
 
 \subsection{Exercise 31}
-
-\subsubsection{()}
+Show that \(4^n\) is not \(O(2^n)\).
 
 \begin{proof}
-
+Argue by contradiction and suppose that \(4^n\) is \(O(2^n)\). That is, that there are positive real numbers \(B\) and \(b\) 
+such that \(0 \leq 4^n \leq B \cdot 2^n\) for every real number \(n > b\), in other words
+\[
+0 \leq 4^n \leq B \cdot 2^n \implies \frac{0}{2^n} \leq \frac{4^n}{2^n} \leq \frac{B \cdot 2^n}{2^n} \implies 0 \leq
+2^n \leq B
+\]
+for every real number \(n > b\). This is a contradiction since \(B < 2^B\) and therefore letting \(n = \max(b+1, B)\) we get
+\(B < 2^n\) where \(n > b\).
 \end{proof}
 
+{\bf \cy Prove each of the statements in \(32-37\), assuming \(n\) is an integer variable that takes positive integer 
+values. Use identities from Section 5.2 as needed.}
+
 \subsection{Exercise 32}
-
-\subsubsection{()}
-
+\(1 + 2 + 2^2 + 2^3 + \cdots + 2^n\) is \(\Theta(2^n)\).
 \begin{proof}
-
+By Theorem 5.2.2, for each integer \(n \geq 0\),
+\[
+1+2+2^2 + \cdots + 2^n = \frac{2^{n+1} - 1}{2-1} = 2^{n+1} - 1 \leq 2^{n+1} = 2 \cdot 2^n.
+\]
+Moreover, \(2^n \leq 1+2+2^2 + \cdots + 2^n\) for each integer \(n\). Let \(A = 1, B = 2\), and \(k = 1\). Then, for each 
+integer \(n > k\), \(A \cdot 2^n \leq 1 + 2 + 2^2 + \cdots + 2^n \leq B \cdot 2^n\). Thus, by definition of \(\Theta\)-
+notation, \(1 + 2 + 2^2 + \cdots + 2^n\) is \(\Theta(2^n)\).
 \end{proof}
 
 \subsection{Exercise 33}
-
-\subsubsection{()}
-
+\(4 + 4^2 + 4^3 + \cdots + 4^n\) is \(\Theta(4^n)\).
 \begin{proof}
-
+Let \(X = 1 + 4 + 4^2 + \cdots + 4^n\). By Theorem 5.2.2, for each integer \(n \geq 0\), \(\dps X = \frac{4^{n+1} - 1}{4-1} 
+= \frac{4^{n+1} - 1}{3} \leq \frac{4^{n+1}}{3} = \frac{4}{3}\cdot 4^n\). Moreover, \(4^n \leq X\). Let \(A = 1, B = 4/3\), 
+and \(k = 1\). So \(A \cdot 4^n \leq X \leq B \cdot 4^n\) for all \(n > k\). So by definition of \(\Theta\)-notation, \(X\) 
+is \(\Theta(4^n)\).
 \end{proof}
 
 \subsection{Exercise 34}
-
-\subsubsection{()}
+\(2 + 2 \cdot 3^2 + 2 \cdot 3^4 + \cdots + 2 \cdot 3^{2n}\) is \(\Theta(3^{2n})\).
 
 \begin{proof}
-
+This is equal to \(2(1 + 9 + 9^2 + \cdots + 9^n)\) therefore the proof is very similar to exercises 32 and 33. A similar
+argument shows this is \(\Theta(9^n)\) which is the same as \(\Theta(3^{2n})\).
 \end{proof}
 
 \subsection{Exercise 35}
-
-\subsubsection{()}
+\(\dps \frac{1}{5} + \frac{4}{5^2} + \frac{4^2}{5^3} + \cdots + \frac{4^n}{5^{n+1}}\) is \(\Theta(1)\).
 
 \begin{proof}
-
+\[
+\frac{1}{5} \leq \frac{1}{5}\left(1 + \frac{4}{5}+ \left( \frac{4}{5}\right)^2 + \cdots + \left(\frac{4}{5}\right)^n 
+\right) = \frac{1}{5} \cdot \frac{\left(\frac{4}{5}\right)^{n+1} - 1}{\frac{4}{5} - 1} = 1 - \left(\frac{4}{5}
+\right)^{n+1} \leq 1
+\]
+so we can let \(A = 1/5, B = 1, k = 1\). Then for all \(n > k\)
+\[
+A \cdot 1 \leq \frac{1}{5} + \frac{4}{5^2} + \frac{4^2}{5^3} + \cdots + \frac{4^n}{5^{n+1}} \leq B \cdot 1.
+\]
+So by definition of \(\Theta\)-notation, this is \(\Theta(1)\).
 \end{proof}
 
 \subsection{Exercise 36}
-
-\subsubsection{()}
+\(\dps n + \frac{n}{2} + \frac{n}{4} + \cdots + \frac{n}{2^n}\) is \(\Theta(n)\).
 
 \begin{proof}
-
+\[
+n \leq n\left(1 + \frac{1}{2} + \frac{1}{4} + \cdots + \frac{1}{2^n}\right) = n \cdot \frac{(1/2)^{n+1} - 1}{1/2 - 1} 
+= 2n \left(1 - \left(\frac{1}{2}\right)^{n+1}\right) \leq 2n
+\]
+so we can take \(A = 1, B = 2, k = 1\). So for all \(n > k\) we have \(\dps A \cdot n \leq n + \frac{n}{2} + \frac{n}{4} + 
+\cdots + \frac{n}{2^n} \leq B \cdot n\). So by definition of \(\Theta\)-notation, this is \(\Theta(n)\).
 \end{proof}
 
 \subsection{Exercise 37}
-
-\subsubsection{()}
+\(\dps \frac{2n}{3} + \frac{2n}{3^2} + \cdots + \frac{2n}{3^n}\) is \(\Theta(n)\).
 
 \begin{proof}
-
+This is \(\dps 2n \left(\frac{1}{3} + \frac{1}{3^2} + \cdots + \frac{1}{3^n}\right)\) so the proof is very similar to 
+Exercise 36.
 \end{proof}
 
 \subsection{Exercise 38}
-
-\subsubsection{()}
+Quantities of the form \(k_1n + k_2n \log n\) for positive integers \(k_1, k_2\), and \(n\) arise in the analysis of the 
+merge sort algorithm in computer science. Show that for any positive integer \(k, k_1n + k_2n \log_2 n\) is 
+\(\Theta(n \log_2 n)\).
 
 \begin{proof}
-
+This is very similar to Exercise 27. By Theorem 11.2.7(a) and 11.2.8(c), \(k_1n\) is \(\Theta(n)\) and \(k_2 n\log_2 n\) is 
+\(\Theta(n\log_2 n)\). In addition, by property 11.4.13, there is a positive real number \(s\) such that for each integer 
+\(n \geq s\), \(n \leq n\log_2 n\). Thus it follows from Theorem 11.2.9(c) that \(k_1n + k_2 n\log_2 n\) is
+\(\Theta(n \log_2 n)\).
 \end{proof}
 
 \subsection{Exercise 39}
-
-\subsubsection{()}
+Calculate the values of the harmonic sums \(\dps 1 + \frac{1}{2} + \frac{1}{3} + \cdots \frac{1}{n}\) for \(n = 2, 3, 4\), 
+and 5.
 
 \begin{proof}
-
+\(n = 2\) gives \(3/2\), \(n = 3\) gives \(11/6\), \(n = 4\) gives \(50/24 = 25/12\) and \(n = 5\) gives \(137/60\).
 \end{proof}
 
 \subsection{Exercise 40}
-
-\subsubsection{()}
+Use part (d) of Example 11.4.7 to show that \(\dps X = n + \frac{n}{2} + \frac{n}{3} + \cdots \frac{n}{n}\) is 
+\(\Theta(n\log n)\).
 
 \begin{proof}
-
+\(\dps X = n\left(1 + \frac{1}{2} + \frac{1}{3} + \cdots \frac{1}{n}\right)\). By Example 11.4.7 and by Theorem 
+11.2.7(a), \(1 + \frac{1}{2} + \frac{1}{3} + \cdots \frac{1}{n}\) is \(\Theta(\ln n)\) and \(n\) is \(\Theta(n)\).
+Thus, by Theorem 11.2.9(b), \(X\) is \(\Theta(n \ln n)\).
 \end{proof}
 
 \subsection{Exercise 41}
-
-\subsubsection{()}
-
+Show that \(\floor{\log_2 n}\) is \(\Theta(\log_2 n)\).
 \begin{proof}
-
+If \(n\) is any positive integer, then \(\log_2 n\) is defined and by definition of floor, \(\floor{\log_2 n}\leq \log_2 n < 
+\floor{\log_2 n} + 1\). If, in addition, \(n\) is greater than 2, then since the logarithmic function with base 2 is 
+increasing, \(\log_2 n > \log_2 2 = 1\). Thus, by definition of floor, \(1 \leq \floor{\log_2 n}\). Adding \(\floor{\log_2 
+n}\) to both sides of this inequality gives \(\floor{\log_2 n} + 1 \leq 2 \floor{\log_2 n}\). Hence, by the transitive 
+property of order (T18 in Appendix A), \(\log_2 n \leq 2 \floor{\log_2 n}\), and dividing both sides by 2 gives 
+\(\frac{1}{2} \log_2 n \leq \floor{\log_2 n}\). Let \(A = 1/2, B = 1\), and \(k = 2\). Then \(A \log_2 n \leq \floor{\log_2 
+n} \leq B \log_2 n\) for every integer \(n \geq k\). Therefore, by definition of \(\Theta\)-notation, 
+\(\floor{\log_2 n}\) is \(\Theta(\log_2 n)\).
 \end{proof}
 
 \subsection{Exercise 42}
-
-\subsubsection{()}
-
+Show that \(\ceil{\log_2 n}\) is \(\Theta(\log_2 n)\).
 \begin{proof}
-
+If \(n\) is any positive integer, then \(\log_2 n\) is defined and by definition of ceiling, \(\ceil{\log_2 n} - 1 < \log_2 n 
+\leq \ceil{\log_2 n}\). If, in addition, \(n\) is greater than 4, then since the logarithmic function with base 2 is 
+increasing, \(\log_2 n > \log_2 4 = 2\). Thus, by definition of ceiling, \(2<\ceil{\log_2 n}\) so \(0<\ceil{\log_2 n}- 2\). 
+Adding \(\ceil{\log_2 n}\) to both sides of this inequality gives \(\ceil{\log_2 n} < 2 \ceil{\log_2 n}- 2\). Since 
+\(\log_2 n \leq \ceil{\log_2 n}\), we get \(\log_2 n \leq \ceil{\log_2 n} < 2 \ceil{\log_2 n}- 2\). Dividing by 2 gives 
+\(\frac{1}{2}\log_2 n < \ceil{\log_2 n} - 1\). Hence, by the transitive property of order (T18 in Appendix A), 
+\(\frac{1}{2} \log_2 n < \ceil{\log_2 n}\). Let \(A = 1/2, B = 1\), and \(k = 4\). Then \(A \log_2 n \leq \ceil{\log_2 n} 
+\leq B \log_2 n\) for every integer \(n \geq k\). Therefore, by definition of \(\Theta\)-notation,  \(\ceil{\log_2 n}\) is 
+\(\Theta(\log_2 n)\).
 \end{proof}
 
 \subsection{Exercise 43}
-
-\subsubsection{()}
+Prove by mathematical induction that \(n \leq 10^n\) for every integer \(n \geq 1\).
 
 \begin{proof}
+Let the property \(P(n)\) be the inequality \(n \leq 10^n\).
 
+{\bf Show that \(P(1)\) is true:} When \(n = 1\), the inequality is \(1 \leq 10\), which is true. 
+
+{\bf Show that for every integer \(k \geq 1\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let \(k\) be any integer 
+with \(k \geq 1\), and suppose \(k \leq 10^k\). {\it [This is the inductive hypothesis.]} We must show that \(k + 1 \leq 
+10^{k+1}\). By inductive hypothesis, \(k \leq 10^k\). Adding to both sides gives \(k + 1 \leq 10^k + 1\). But when 
+\(k \geq 1, 10^{k + 1} \leq 10^k + 9 \cdot 10^k = 10 \cdot 10^k = 10^{k+1}\). Thus, by transitivity of order, \(k + 1 
+\leq 10^{k+1}\), {\it [as was to be shown].}
 \end{proof}
 
 \subsection{Exercise 44}
-
-\subsubsection{()}
+Prove by mathematical induction that \(\log_2(n) \leq n\) for every integer \(n \geq 1\).
 
 \begin{proof}
+Let \(P(n)\) be the inequality \(\log_2(n) \leq n\).
 
+{\bf Show that \(P(1)\) is true:} \(\log_2(1) = 0 \leq 1\) therefore \(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\) if \(P(k)\) is true then \(P(k+1)\) is true:} Assume \(k \geq 1\) is any
+integer and assume \(\log_2(k) \leq k\). {\it [We want to show \(\log_2(k+1) \leq k+1\).]}
+
+Since \(1 \leq k\) we have \(k+1 \leq 2k\). Applying \(\log_2\) to both sides, since \(\log_2\) is increasing, we 
+get \(\log_2(k+1) \leq \log_2(2k) = \log_2(2) + \log_2(k) = 1 + \log_2(k)\). By inductive hypothesis \(\log_2(k) \leq k\),
+so combining this with the previous inequality we get \(\log_2(k+1) \leq 1 + log_2(k) \leq 1+k\), 
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsection{Exercise 45}
-
-\subsubsection{()}
+Show that if \(n\) is a variable that takes positive integer values, then \(2^n\) is \(O(n!)\).
 
 \begin{proof}
-
+Notice that \(0 \leq 2^n = \underbrace{2 \cdot 2 \ldots \cdot 2}_{n \text{ times}} \leq 2\cdot 3\cdot \ldots \cdot n = n!\).
+So by definition of \(O\)-notation, \(2^n\) is \(O(n!)\).
 \end{proof}
 
 \subsection{Exercise 46}
+Let \(n\) be a variable that takes positive integer values.
 
-\subsubsection{()}
+\subsubsection{(a)}
+Use Example 11.4.6 to show that \(\log_2(n!)\) is \(O(n\log_2 n)\).
 
 \begin{proof}
+Example 11.4.6 showed that if n is any integer with \(n \geq 1\), then \(n! \leq n^n\). So, because the logarithmic 
+function with base 2 is increasing, \(\log_2(n!) \leq \log_2(n^n) = n \log_2 n\). Also, when \(n \geq 1\), then 
+\(\log_2(n!) \geq \log_2 1 \geq 0\). Thus let \(B = 1\) and \(b = 1\). Then \(0 \leq \log_2(n!) \leq B n \log_2 (n)\) for 
+every integer \(n \geq b\). So, by definition of \(O\)-notation, \(\log_2(n!)\) is \(O(n \log_2 n)\).
+\end{proof}
 
+\subsubsection{(b)}
+Show that \(n^n \leq (n!)^2\) for every integer \(n \geq 1\).
+\begin{proof}
+In \((n!)^2 = (1 \cdot 2 \cdot \ldots \cdot n) \cdot (1 \cdot 2 \cdot \ldots \cdot n)\) we can group the factors like this:
+one from the first copy, say 1, and another from the second copy so that they add up to \(n+1\), so in this case \(n\);
+then 2 from the first, and \(n-1\) from the second, and so on:
+\[
+(n!)^2 = (1 \cdot n) \cdot (2 \cdot (n-1)) \cdot (3 \cdot (n-2)) \cdot \ldots = \prod_{r = 1}^n r \cdot (n-r+1)
+\]
+There are \(n\) terms in this product. There are also \(n\) terms in the product \(n^n\). To show \(n^n \leq (n!)^2\), we
+can show that \(n\) is less than or equal to each term in the above product. In other words, we need: \(n \leq r \cdot 
+(n-r+1)\) for all \(r = 1, \ldots, n\).
+
+When \(r = 1\) we have \(r(n-r+1) = 1(n-1+1) = n\) so \(n \leq r(n-r+1)\). Similarly when \(r=n\) we have 
+\(r(n-r+1) = n(n-n+1) = n\) so \(n \leq r(n-r+1)\).
+
+Now assume \(1 < r < n\). Then \(r(n-r+1) \geq n \iff nr - r^2 + r \geq n \iff nr - r^2 + r - n \geq 0 \iff n(r-1) -r(r-1) 
+\geq 0 \iff (n-r)(r-1) \geq 0\). 
+
+The last statement is true because \(r < n\) so \(n - r > 0\) and because \(1 < r\) so \(r - 1 > 0\), and the product of two 
+positive numbers is positive. So \(r(n-r+1) \geq n\) as needed. Then it follows by the argument above that 
+\(n^n \leq (n!)^2\).
+\end{proof}
+
+\subsubsection{(c)}
+Use part (b) to show that \(\log_2(n!)\) is \(\Omega(n\log_2 n)\).
+
+\begin{proof}
+\(n^n \leq (n!)^2\) implies (since \(\log_2\) is increasing) that \(\log_2(n^n) \leq \log_2((n!)^2)\) which implies
+\(n\log_2(n) \leq 2\log_2(n!)\). So by definition of \(\Omega\)-notation, \(\log_2(n!)\) is \(\Omega(n\log_2 n)\).
+\end{proof}
+
+\subsubsection{(d)}
+Use parts (a) and (c) to find an order for \(\log_2(n!)\).
+\begin{proof}
+By parts (a) and (c) and Theorem 11.2.1 \(\log_2(n!)\) is \(\Theta(n\log_2 n)\).
 \end{proof}
 
 \subsection{Exercise 47}
-
-\subsubsection{()}
+For each positive real number \(u\), \(\log_2(u) < u\). Use this fact and the result of exercise 21 in Section 11.1 to 
+prove the following: For every integer \(n \geq 1\), if \(x\) is any real number with \(x > (2n)^{2n}\), then 
+\(\log_2(x) < x^{1/n}\).
 
 \begin{proof}
+Let \(n\) be a positive integer, and suppose that \(x > (2n)^{2n}\). 
 
+By \(2n / (2n) = 1\) and properties of logarithms, \(\log_2 x = \log_2 x^{2n/2n} = 2n \log_2 (x^{1/2n})\). 
+
+Using \(\log_2(u) < u\) with \(u = x^{1/(2n)}\) we get \(2n \log_2 (x^{1/2n}) < 2nx^{1/(2n)}\). 
+
+So \(\log_2 x < 2nx^{1/(2n)}\) (*) by transitivity of order.
+
+Now \(x > (2n)^{2n}\) gives \(x^{1/2} > ((2n)^{2n})^{1/2} = (2n)^n\), so \(x^{1/2}x^{1/2} > x^{1/2}(2n)^n\).
+
+In other words, \(x^{1/2}(2n)^n < x\).
+
+Then, since the power function defined by \(f(x) = x^{1/n}\) is increasing for every \(x > 0\) (see exercise 21 of Section 
+11.1), we can take the nth root of both sides of the inequality and use the laws of exponents to obtain 
+\((x^{1/2}(2n)^n)^{1/n} < x^{1/n}\) or equivalently \((x^{1/(2n)}2n < x^{1/n}\). (**)
+
+Finally by transitivity of order (Appendix A, T18) we combine (*) and (**) and conclude that \(\log_2 x < x^{1/n}\), 
+{\it [as was to be shown]}.
 \end{proof}
 
 \subsection{Exercise 48}
-
-\subsubsection{()}
+Use the result of exercise 47 above to prove the following: For every integer \(n \geq 1\), if \(x\) is any real number 
+with \(x > (2n)^{2n}\), then \(x^n < 2^x\).
 
 \begin{proof}
+Assume \(x > (2n)^{2n}\). Since \(n \geq 1\) and the function \(f(x) = x^n\) is increasing, \(x^n \geq x\). So 
+\(x^n > (2n)^{2n}\) by transitivity of order. 
 
+Using the result of exercise 47 with \(x^n\) instead of \(x\), we get \(\log_2(x^n) < (x^n)^{1/n} = x\). 
+
+Since the function \(g(x) = 2^x\) is increasing, the last inequality gives \(2^{\log_2(x^n)} < 2^x\). Simplifying, we 
+get \(x^n < 2^x\), {\it [as was to be shown.]}
 \end{proof}
 
-\subsection{Exercise 49}
+{\bf \cy Exercises 49 and 50 use L’Hôpital’s rule from calculus.}
 
-\subsubsection{()}
+\subsection{Exercise 49}
+\subsubsection{(a)}
+Let \(b\) be any real number greater than 1. Use L’Hôpital’s rule and mathematical induction to prove that for every integer \(n \geq 1\), \(\dps \lim_{x \to \infty}\frac{x^n}{b^x} = 0\).
 
 \begin{proof}
+Let \(b\) be any real number with \(b > 1\), and let the property \(P(n)\) be the equation \(\dps \lim_{x \to \infty}
+\frac{x^n}{b^x} = 0\).
 
+{\bf Show that \(P(1)\) is true:} By L’Hôpital’s rule, \(\dps \lim_{x \to \infty} \frac{x^1}{b^x} = \lim_{x \to \infty} 
+\frac{1}{b^x \ln b} = 0\). Thus \(P(1)\) is true.
+
+{\bf Show that for every integer \(k \geq 1\), if \(P(k)\) is true, then \(P(k + 1)\) is true:} Let \(k\) be any integer 
+with \(k \geq 1\), and suppose \(\dps \lim_{x \to \infty}
+\frac{x^k}{b^x} = 0\). {\it [This is inductive hypothesis.]} 
+
+We must show that \(\dps \lim_{x \to \infty}\frac{x^{k+1}}{b^x} = 0\).
+
+Now by L’Hôpital’s rule, \(\dps \lim_{x \to \infty}\frac{x^{k+1}}{b^x} = \lim_{x \to \infty}\frac{(k+1)x^k}{b^x 
+\ln(b)} = \frac{k+1}{\ln b}\lim_{x \to \infty}\frac{x^k}{b^x \ln(b)}\).
+
+By inductive hypothesis, the last limit is 0. So \(\dps \frac{k+1}{\ln b}\lim_{x \to \infty}\frac{x^k}{b^x \ln(b)} = 
+\frac{k+1}{\ln b} \cdot 0 = 0\).
+
+Thus \(\dps \lim_{x \to \infty}\frac{x^{k+1}}{b^x} = 0\), {\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(b)}
+Use the result of part (a) and the definitions of limit and of \(O\)-notation to prove that \(x^n\) is \(O(b^x)\) for any 
+integer \(n \geq 1\).
+
+\begin{proof}
+By the result of part (a) and the definition of limit, given any real number \(\eps > 0\), there exists an integer \(N\) 
+such that \(\dps \left|\frac{x^n}{b^x} - 0\right| < \eps\) for every \(x > N\). In this case take \(\eps = 1\). It follows 
+that for every \(x > N\), \(\dps \frac{x^n}{b^x} < 1\) since \(x\) and \(b\) are positive. Multiply both sides by \(b^x\) to 
+obtain \(x^n < b^x\). Let \(B = 1\). Then \(0 < x^n < B \cdot b^x\) for every \(x > N\). 
+Hence, by definition of \(O\)notation, \(x^n\) is \(O(b^x)\).
 \end{proof}
 
 \subsection{Exercise 50}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Let \(b\) be any real number greater than 1. Use L’Hôpital’s rule to prove that for every integer \(n \geq 1\), 
+\(\dps \lim_{x \to \infty}\frac{\log_b x}{x^{1/n}} = 0\).
 
 \begin{proof}
+Let \(b\) be any real number with \(b > 1\). Now by L’Hôpital’s rule, 
+\[
+\lim_{x \to \infty} \frac{\log_b x}{x^{1/n}} = \lim_{x \to \infty} \frac{\frac{1}{x \ln b}}{\frac{1}{n}x^{\frac{1}{n}-1}} 
+= \lim_{x \to \infty} \frac{\frac{n}{\ln b}}{x^{1/n}} = 0
+\]
+because the numerator is constant while the denominator approaches infinity.
+\end{proof}
 
+\subsubsection{(b)}
+Use the result of part (a) and the definitions of limit and of \(O\)-notation to prove that \(\log_b x\) is \(O(x^{1/n})\) 
+for any integer \(n \geq 1\).
+
+\begin{proof}
+By the result of part (a) and the definition of limit, given any real number \(\eps > 0\), there exists an integer \(N>1\) 
+such that \(\dps \left|\frac{\log_b x}{x^{1/n}} - 0\right| < \eps\) for every \(x > N\). In this case take \(\eps = 1\). It 
+follows that for every \(x > N\), \(\dps \frac{\log_b x}{x^{1/n}} < 1\) since \(\log_b x\) and \(x^{1/n}\) are both 
+positive. Multiply both sides by \(x^{1/n}\) to obtain \(\log_b x < x^{1/n}\). Let \(B = 1\). Then \(0 < \log_b x < B 
+\cdot x^{1/n}\) for every \(x > N\). Hence, by definition of \(O\)-notation, \(\log_b x\) is \(O(x^{1/n})\).
 \end{proof}
 
 \subsection{Exercise 51}
-
-\subsubsection{()}
-
+Complete the proof in Example 11.4.4.
 \begin{proof}
-
+{\bf Case 2 (\(k\) is odd):} In this case \(k+1\) is even, so \(k+1 = 2n\) for some integer \(n \geq 1\), and
+\begin{center}
+\begin{tabular}{rcll}
+\(a_{k+1}\) & = & \(2a_{\floor{(k+1)/2}}\) & {\cy by definition} \\
+& = & \(2a_{\floor{2n/2}}\) & {\cy by substitution} \\
+& = & \(2a_{\floor{n}}\) & {\cy by algebra} \\
+& = & \(2a_n\) & {\cy by definition of floor, since \(n\) is an integer} \\
+& = & \(2 \cdot 2^{\floor{\log_2 n}}\) & {\cy by inductive hypothesis, since \(n \geq 1\)} \\
+& = & \(2^{\floor{\log_2 n} + 1}\) & {\cy by laws of exponents} \\
+& = & \(2^{\floor{\log_2 (2n/2)} + 1}\) & {\cy by algebra} \\
+& = & \(2^{\floor{\log_2 (2n) - \log_2 2} + 1}\) & {\cy by properties of logarithms} \\
+& = & \(2^{\floor{\log_2 (k+1) - 1} + 1}\) & {\cy since \(\log_2 2 = 1\) and \(k+1 = 2n\)} \\
+& = & \(2^{\floor{\log_2 (k+1)} - 1 + 1}\) & {\cy by exercise 15 of Section 4.6} \\
+& = & \(2^{\floor{\log_2 (k+1)}}\) & {\cy by algebra}
+\end{tabular}
+\end{center}
 \end{proof}
 
 \section{Exercise Set 11.5}
@@ -3193,7 +3614,10 @@ the time the other one takes to run.
 \subsubsection{()}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.5.20.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 21}
@@ -3209,7 +3633,10 @@ the time the other one takes to run.
 \subsubsection{()}
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.5.20.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 23}
