@@ -37,7 +37,7 @@
 \newcommand\Cbcancel[2][black]{\renewcommand\CancelColor{\color{#1}}\bcancel{#2}}
 
 %\renewcommand{\arraystretch}{1.2}
-%\setlength{\extrarowheight}{11pt}
+\setlength{\extrarowheight}{10pt}
 
 \hypersetup{colorlinks,allcolors=blue,linktoc=all}
 \geometry{a4paper}
@@ -3456,162 +3456,384 @@ Complete the proof in Example 11.4.4.
 \end{proof}
 
 \section{Exercise Set 11.5}
-
 \subsection{Exercise 1}
-
-\subsubsection{()}
+Use the facts that \(\log_2 10 \approx 3.32\) and that for each real number \(a\), \(\log_2(10^a) = a \log_2 10\) to find 
+\(\log_2(1,000), \log_2(1,000,000)\), and \(\log_2(1,000,000,000,000)\).
 
 \begin{proof}
+\(\log_2 1,000 = \log_2(10^3) = 3 \log_2 10 \approx 3(3.32) \approx 9.96\)
 
+\(\log_2(1,000,000) = \log_2(10^6) = 6 \log_2 10 \approx 6(3.32) \approx 19.92\)
+
+\(\log_2(1,000,000,000,000) = \log_2(10^{12}) = 12 \log_2 10 \approx 12(3.32) = 39.84\)
 \end{proof}
 
 \subsection{Exercise 2}
+Suppose an algorithm requires \(c \floor{\log_2 n}\) operations when performed with an input of size \(n\) (where 
+\(c\) is a constant).
 
-\subsubsection{()}
+\subsubsection{(a)}
+By what factor will the number of operations increase when the input size is increased from \(m\) to \(m^2\) (where \(m\) is 
+a positive integer power of 2)?
 
 \begin{proof}
-
+If \(m = 2^k\), where \(k\) is a positive integer, then the algorithm requires \(c \floor{\log_2(2^k)} = c\floor{k} = ck\) 
+operations. If the input size is increased to \(m^2 = (2^k)^2 = 2^{2k}\), then the number of operations required is 
+\(c \floor{\log_2(2^{2k})} = c \floor{2k} = 2(ck)\). Hence the 
+number of operations doubles.
 \end{proof}
 
-\subsection{Exercise 3}
-
-\subsubsection{()}
+\subsubsection{(b)}
+By what factor will the number of operations increase when the input size is increased from \(m\) to \(m^{10}\) (where \(m\) 
+is a positive integer power of 2)?
 
 \begin{proof}
+As in part (a), for an input of size \(m = 2^k\), where \(k\) is a positive integer, the algorithm requires \(ck\) 
+operations. If the input size is increased to \(m^{10} = (2^k)^{10} = 2^{10k}\), then the number of operations required 
+is \(c \floor{\log_2(2^{10k})} = c \floor{10k} = 10(ck)\). Thus the number of operations increases by a factor of 10.
+\end{proof}
 
+\subsubsection{(c)}
+When \(n\) increases from \(128 = 2^7\) to \(268,435,456 = 2^{28}\)), by what factor is \(c \floor{\log_2 n}\) increased?
+
+\begin{proof}
+When the input size is increased from \(2^7\) to \(2^{28}\), the factor by which the number of operations increases is
+\(\dps \frac{c \floor{\log_2 2^{28}}}{c \floor{\log_2 2^7}} = \frac{28c}{7c} = 4\).
+\end{proof}
+
+{\bf \cy Exercises 3 and 4 illustrate that for relatively small values of \(n\), algorithms with larger orders can be 
+more efficient than algorithms with smaller orders. Use a graphing calculator or computer to answer these questions.}
+
+\subsection{Exercise 3}
+For what values of \(n\) is an algorithm that requires \(n\) operations more efficient than an algorithm that requires 
+\(\floor{50 \log_2 n}\) operations?
+
+\begin{proof}
+A little numerical exploration can help find an initial window to use to draw the graphs of \(y = x\) and \(y = \floor{50 
+\log_2 x}\). Note that when \(x = 2^8 = 256\), \(\floor{50 \log_2 x} = \floor{50 \log_2(2^8)} = \floor{50 \cdot 8} = 
+\floor{400} = 400 > 256 = x\). But when \(x = 2^9 = 512\), \(\floor{50 \log_2 x} = \floor{50 \log_2(2^9)} = \floor{50 
+\cdot 9} = \floor{450} = 450 < 512 = x\). So a good choice of initial window would be the interval from 256 to 512. Drawing 
+the graphs, zooming if necessary, and using the trace feature reveal that when \(n < 438\), \(n < \floor{50 \log_2 n}\).
 \end{proof}
 
 \subsection{Exercise 4}
-
-\subsubsection{()}
+For what values of \(n\) is an algorithm that requires \(\floor{n^2/10}\) operations more efficient than an algorithm 
+that requires \(\floor{n \log_2 n}\) operations? 
 
 \begin{proof}
-
+We want \(\floor{n^2/10} < \floor{n \log_2 n}\). Let's ignore the floors and focus on solving \(n^2/10 < n \log_2 n\):
+\[
+n^2/10 < n \log_2 n \iff n/10 < \log_2 n \iff n < 10\log_2 n
+\]
+We can try powers of 2 for \(n\). When \(n = 2^5\) we have \(2^5 = 32 < 50 = 10\log_2(2^5)\) but when \(n = 2^5\) we have 
+\(2^6 = 64 > 60 = 10\log_2(2^6)\). So, somewhere between \(n = 32\) and \(n = 64\) the two functions intersect, after which
+the inequality is false. Using a calculator gives that roughly at \(n \approx 58.76\) the functions are equal. So the 
+inequality holds for \(n \leq 58\).
 \end{proof}
 
+{\bf \cy In 5 and 6, trace the action of the binary search algorithm (Algorithm 11.5.1) on the variables \(index, bot, 
+top, mid\), and the given values of \(x\) for the input array \(a[1]\) = Chia, \(a[2]\) = Doug, \(a[3]\) = Jan, \(a[4]\) = 
+Jim, \(a[5]\) = Jose, \(a[6]\) = Mary, \(a[7]\) = Rob, \(a[8]\) = Roy, \(a[9]\) = Sue, \(a[10]\) = Usha, where alphabetical 
+ordering is used to compare elements of the array.}
+
 \subsection{Exercise 5}
-
-\subsubsection{()}
-
+\subsubsection{(a)}
+\(x\) = Chia
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.5.5.a.png}
+\end{figure}
+\end{proof}
 
+\subsubsection{(b)}
+\(x\) = Max
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.5.5.b.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 6}
-
-\subsubsection{()}
-
+(a) \(x\) = Amanda (b) \(x\) = Roy
 \begin{proof}
-
+\includegraphics[scale=0.3]{../images/11.5.6.a.png}
+\includegraphics[scale=0.3]{../images/11.5.6.b.png}
 \end{proof}
 
 \subsection{Exercise 7}
+Suppose \(bot\) and \(top\) are positive integers with \(bot \leq top\). Consider the array 
+\(a[bot], a[bot + 1], \ldots, a[top]\).
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+How many elements are in this array?
 \begin{proof}
-
+The array has \(top - bot + 1\) elements.
 \end{proof}
 
-\subsection{Exercise 8}
-
-\subsubsection{()}
+\subsubsection{(b)}
+Show that if the number of elements in the array is odd, then the quantity \(bot + top\) is even.
 
 \begin{proof}
+Suppose \(top\) and \(bot\) are particular but arbitrarily chosen positive integers such that \(top - bot + 1\) is an odd 
+number. Then, by definition of odd, there is an integer \(k\) such that \(top - bot + 1 = 2k + 1\). Adding \(2\cdot bot-1\) 
+to both sides gives \(bot + top = 2 \cdot bot - 1 + 2k + 1 = 2(bot + k).\) Now \(bot + k\) is an integer. Hence, by 
+definition of even, \(bot + top\) is even.
+\end{proof}
 
+\subsubsection{(c)}
+Show that if the number of elements in the array is even, then the quantity \(bot + top\) is odd.
+
+\begin{proof}
+The proof is almost identical to part (b), except with the roles of even and odd swapped.
+\end{proof}
+
+{\bf \cy Exercises \(8-11\) refer to the following algorithm segment. For each positive integer \(n\), let \(a_n\) be the 
+number of iterations of the while loop.
+\begin{center}
+{\bf while} \((n > 0)\) \\
+\hspace{2cm} \(n \coloneqq n \,\, div \,\, 2\) \\
+{\bf end while}
+\end{center}
+}
+
+\subsection{Exercise 8}
+Trace the action of this algorithm segment on \(n\) when the initial value of \(n\) is 27.
+
+\begin{proof}
+\(n\): 27, 13, 6, 3, 1, 0
 \end{proof}
 
 \subsection{Exercise 9}
-
-\subsubsection{()}
-
+Find a recurrence relation for \(a_n\).
 \begin{proof}
-
+For each positive integer \(n\), \(n \,\,div\,\, 2 = \floor{n/2}\). Thus when the algorithm segment is run for a particular 
+\(n\) and the while loop has iterated one time, the input to the next iteration is \(\floor{n/2}\). It follows that the 
+number of iterations of the loop for \(n\) is one more than the number of iterations for \(\floor{n/2}\). That is, 
+\(a_n = 1 + a_{\floor{n/2}}\). Also, \(a_1 = 1\).
 \end{proof}
 
 \subsection{Exercise 10}
-
-\subsubsection{()}
-
+Find an explicit formula for \(a_n\).
 \begin{proof}
-
+The recurrence relation and initial condition of \(a_1, a_2, a_3, \ldots\) derived in exercise 9 are the same as those for 
+the sequence \(w_1, w_2, w_3, \ldots\) discussed in the worst-case analysis of the binary search algorithm. Thus the general 
+formulas for the two sequences are the same. That is, \(a_n = 1 + \floor{\log_2 n}\), for each integer \(n \geq 1\).
 \end{proof}
 
 \subsection{Exercise 11}
-
-\subsubsection{()}
+Find an order for this algorithm segment.
 
 \begin{proof}
-
+In the analysis of the binary search algorithm, it was shown that \(1 + \floor{\log_2 n}\) is \(\Theta(\log_2 n)\). Thus 
+the given algorithm segment has order \(\log_2 n\).
 \end{proof}
 
-\subsection{Exercise 12}
+{\bf \cy Exercises \(12-15\) refer to the following algorithm segment. For each positive integer \(n\), let \(b_n\) be the 
+number of iterations of the while loop.
+\begin{center}
+{\bf while} \((n > 0)\) \\
+\hspace{2cm} \(n \coloneqq n \,\, div \,\, 3\) \\
+{\bf end while}
+\end{center}
+}
 
-\subsubsection{()}
+\subsection{Exercise 12}
+Trace the action of this algorithm segment on \(n\) when the initial value of \(n\) is 424.
 
 \begin{proof}
-
+\(n\): 424, 141, 47, 15, 5, 1
 \end{proof}
 
 \subsection{Exercise 13}
-
-\subsubsection{()}
+Find a recurrence relation for \(b_n\).
 
 \begin{proof}
-
+For each positive integer \(n\), \(n \,\,div\,\, 3 = \floor{n/3}\). Thus when the algorithm segment is run for a particular 
+\(n\) and the while loop has iterated one time, the input to the next iteration is \(\floor{n/3}\). It follows that the 
+number of iterations of the loop for \(n\) is one more than the number of iterations for \(\floor{n/3}\). That is, 
+\(b_n = 1 + b_{\floor{n/3}}\). Also, \(b_0 = 0, b_1 = 1\).
 \end{proof}
 
 \subsection{Exercise 14}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Use iteration to guess an explicit formula for \(b_n\).
 
 \begin{proof}
+\(b_1 = 1, b_2 = 1 + b_{\floor{2/3}} = 1 + b_0 = 1, b_3 = 1 + b_{\floor{3/3}} = 1 + b_1 = 1 + 1, \ldots, b_5 = 1+1\),
 
+\(b_6 = 1 + b_{\floor{6/3}} = 1 + b_2 = 1 + 1, \ldots, b_8 = 1 + b_{\floor{8/3}} = 1 + b_2 = 1 + 1\),
+
+\(b_9 = 1 + b_{\floor{9/3}} = 1 + b_3 = 1 + 2 \cdot 1, \ldots, b_{26} = 1 + b_{\floor{26/3}} = 1 + b_8 = 1 + 2 \cdot 1\),
+
+\(b_{27} = 1 + b_{\floor{27/3}} = 1 + b_9 = 1 + 3 \cdot 1\).
+
+Guess: \(b_n = 1 + \floor{\log_3(n)}\).
+\end{proof}
+
+\subsubsection{(b)}
+Prove that if \(k\) is an integer and \(x\) is a real number with \(3^k \leq x < 3^{k+1}\), then \(\floor{\log_3 x} = k\).
+
+\begin{proof}
+Assume \(3^k \leq x < 3^{k+1}\). Since \(\log_3\) is increasing, \(\log_3 3^k \leq \log_3 x < \log_3 3^{k+1}\), or,
+\(k \leq \log_3 x < k+1\) by definition of \(\log_3\). Then by definition of floor, \(\floor{\log_3 x} = k\).
+\end{proof}
+
+\subsubsection{(c)}
+Prove that for every integer \(m \geq1\), \(\floor{\log_3(3m)} = \floor{\log_3(3m + 1)} = \floor{\log_3(3m + 2)}\).
+
+\begin{proof}
+1. There exists an integer \(k \geq 0\) such that \(3^k \leq m < 3^{k+1}\).
+
+2. By 1, \(3^{k+1} \leq 3m < 3^{k+2}\). 
+
+3. Notice that the interval \([3^{k+1}, 3^{k+2})\) has size at least 5 or bigger; since \(3^{k+1} \geq 3\) and 
+\(3^{k+2} \geq 9\).
+
+4. By 2 and 3, \(3^{k+1} \leq 3m + 1 < 3^{k+2}\) and \(3^{k+1} \leq 3m + 2 < 3^{k+2}\).
+
+5. By 4 and part (b), \(\floor{\log_3(3m)} = \floor{\log_3(3m + 1)} = \floor{\log_3(3m + 2)} = k+1\). 
+So they are all equal, {\it [as was to be shown.]}
+\end{proof}
+
+\subsubsection{(d)}
+Prove the correctness of the formula you found in part (a).
+
+\begin{proof}
+Given: \(b_0 = 0, b_1 = 1\), \(b_n = 1 + b_{\floor{n/3}}\), want to prove: \(b_n = 1 + \floor{\log_3(n)}\).
+
+Let \(P(n)\) be the equation: \(b_n = 1 + \floor{\log_3(n)}\).
+
+{\bf Show that \(P(2)\) is true:} \(b_2 = 1 + b_{\floor{2/3}} = 1 + b_0 = 1 + 0 = 1 + \floor{\log_3(2)}\) so \(P(2)\) is 
+true.
+
+{\bf Show that for any integer \(k \geq 2\) if \(P(i)\) is true for all \(0 \leq i \leq k\) then \(P(k+1)\) is true:}
+Assume \(k \geq 2\) is any integer such that \(b_i = 1 + \floor{\log_3(i)}\) for all \(0 \leq i \leq k\). {\it [This 
+is the inductive hypothesis.]} Want to prove: \(b_{k+1} = 1 + \floor{\log_3(k+1)}\).
+
+\(k+1 \geq 3\), so by the quotient-remainder theorem \(k+1 = 3m+j\) for some integers \(1\leq m\geq k\) and \(0\leq j< 3\).
+
+By definition \(b_{k+1} = 1 + b_{\floor{(k+1)/3}} = 1 + b_{\floor{(3m+j)/3}} = 1 + b_{\floor{m + \frac{j}{3}}}\)
+\( = 1 + b_m\). This is because \(0 \leq \frac{j}{3} < 1\) so \(m \leq m+\frac{j}{3} < m+1\) and so it follows from the 
+definition of floor.
+
+By inductive hypothesis \(b_m = 1 + \floor{\log_3 m}\). So \(b_{k+1} = 1 + 1 + \floor{\log_3 m} = 1 + 1 + \floor{\log_3 
+(3m)/3} = 1 + 1 + (\floor{\log_3 (3m) - \log_3 3}) = 1 + 1 + (\floor{\log_3 (3m) - 1}) = 1 + 1 + \floor{\log_3 (3m)} - 1)
+= 1 + \floor{\log_3(3m)} = 1 + \floor{\log_3(3m + j)} = 1 + \floor{\log_3 (k+1)}\). (The second to last step follows by part (c) since \(\floor{\log_3 3m} = \floor{\log_3(3m+j)}\)).
 \end{proof}
 
 \subsection{Exercise 15}
-
-\subsubsection{()}
+Find an order for the algorithm segment.
 
 \begin{proof}
-
+Similar to exercise 11, \(b_n\) is \(\Theta(\log_3 n)\) so the order is \(\log_3 n\).
 \end{proof}
 
 \subsection{Exercise 16}
-
-\subsubsection{()}
+Complete the proof of case 2 of the strong induction argument in Example 11.5.5. In other words, show that if \(k\) is an 
+odd integer and \(w_i = \floor{\log_2 i} + 1\) for every integer \(i\) with \(1 \leq i \leq k\), then \(w_{k+1} = 
+\floor{\log_2 k + 1} + 1\).
 
 \begin{proof}
+We are given \(w_1 = 1\) and \(w_{k+1} = 1 + w_{\floor{k/2}}\) for each \(k > 1\).
 
+We want to prove \(w_k = \floor{\log_2 k} + 1\), in the case when \(k\) is odd. Notice \(k\) is at least 3.
+
+So \(k = 2m+1\) for some integer \(m \geq 1\). So \(w_{k+1} = 1 + w_{\floor{k/2}} = 1 + w_{\floor{(2m+1)/2}} = 1 + 
+w_{\floor{m + 1/2}} = 1 + w_m\).
+
+By inductive hypothesis \(w_m = 1 + \floor{\log_2 m}\). So \(w_{k+1} = 1 + w_m = 1 + 1 + \floor{\log_2 m} = 1 + 1 + 
+\floor{\log_2 (m+1)} = 1 + 1 + \floor{\log_2 (2(m+1)/2)} = 1 + 1 + \floor{\log_2 (2(m+1)) - \log_2 2} = 1 + 1 + \floor{\log_2 
+(2(m+1)) - 1} = 1 + 1 + (\floor{\log_2 (2(m+1))} - 1) = 1 + \floor{\log_2 (2m+2)} = 1 + \floor{\log_2 (k+1)}\).
+
+We are using the facts \(\floor{\log_2 m} = \floor{\log_2 (m+1)}\) (by Property 11.4.3 in Exercise 11.4.2) and 
+\(\floor{x-1} = \floor{x} - 1\) (Exercise 15 of section 4.6).
 \end{proof}
 
-\subsection{Exercise 17}
+{\bf \cy For \(17-19\), modify the binary search algorithm (Algorithm 11.5.1) to take the upper of the two middle array
+elements in case the input array has even length. In other words, in Algorithm 11.5.1 replace \(\dps mid \coloneqq \floor{\frac{bot+top}{2}}\) with \(\dps mid \coloneqq 
+\ceil{\frac{bot+top}{2}}\).}
 
-\subsubsection{()}
+\subsection{Exercise 17}
+Trace the modified binary search algorithm for the same input as was used in Example 11.5.1.
+
+\(a[1]\) = Ann, \(a[2]\) = Dawn, \(a[3] =\) Erik, \(a[4] =\) Gail, \(a[5] =\) Juan, \(a[6] =\) Matt, \(a[7] =\) Max, 
+\(a[8] =\) Rita, \(a[9] =\) Tsuji, \(a[10] =\) Yuen, \,\,\,
+(a) \(x = \) Erik, \,\,\, (b) \(x = \) Sara
 
 \begin{proof}
-
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(index\)& 0& &3 \\
+\hline
+\(bot\)  & 1& &  \\
+\hline
+\(top\)  &10&5&  \\
+\hline
+\(mid\)  &  &6&3 \\
+\hline
+\(x\)  &Erik& &  \\
+\hline
+\end{tabular}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\(index\)&0& & &  \\
+\hline
+\(bot\)  &1&7& &9 \\
+\hline
+\(top\) &10& &8&  \\
+\hline
+\(mid\)  & &6&9&8 \\
+\hline
+\(x\)&Sarah& & &  \\
+\hline
+\end{tabular}
+\arrayrulecolor{black}
 \end{proof}
 
 \subsection{Exercise 18}
-
-\subsubsection{()}
+Suppose an array of length \(k\) is input to the while loop of the modified binary search algorithm. Show that after one 
+iteration of the loop, if \(a[mid] \neq x\), the input to the next iteration is an array of length at most \(\floor{k/2}\).
 
 \begin{proof}
+1. At the beginning of the loop, \(bot = 1, top = k\). 
 
+2. Therefore \(mid = \floor{(1+k)/2}\). 
+
+For simplicity assume \(k\) is odd, so \(k = 2m+1\) for some \(m\), so \(mid = \floor{(1+2m+1)/2} = m+1\).
+
+3. If \(a[mid] \neq x\) then either \(top = mid - 1 = m\), or \(bot = mid + 1 = m+2\).
+
+4. At the next iteration, either \(bot = 1\) and \(top = m\), or \(bot = m+2\) and \(top = k\).
+
+5. So either \(top - bot = m - 1\) or \(top - bot = k - (m+2) = 2m+1 - m - 2 = m-1\). 
+
+6. So in both cases the size of the input to the next iteration is \(m-1+1 = m = \floor{m + 1/2} = \floor{(2m+1)/2}
+= \floor{k/2}\).
+
+7. In later iterations, the interval \([bot, top]\) gets even smaller (because \(bot\) can only increase and \(top\) can 
+only decrease), so the size of the input is at most the size after the first iteration, which is \(\floor{k/2}\).
+
+8. The case where \(k\) is even is similar.
 \end{proof}
 
 \subsection{Exercise 19}
-
-\subsubsection{()}
+Let \(w_n\) be the number of iterations of the while loop in a worst-case execution of the modified binary search algorithm 
+for an input array of length \(n\). Show that \(w_k = 1 + w_{\floor{k/2}}\) for \(k \geq 2\).
 
 \begin{proof}
-
+By exercise 18, after one iteration of the loop, if \(a[mid] \neq x\), the input to the next iteration is an array of 
+length at most \(\floor{k/2}\). So \(w_k\) is one iteration plus the number of iterations of the loop for an input of size
+\(\floor{k/2}\), in other words, \(w_k = 1 + \floor{k/2}\).
 \end{proof}
 
-\subsection{Exercise 20}
+{\bf \cy In 20 and 21, draw a diagram like Figure 11.5.4 to show how to merge the given subarrays into a single array in 
+ascending order.}
 
-\subsubsection{()}
+\subsection{Exercise 20}
+3, 5, 6, 9, 12 and 2, 4, 7, 9, 11
 
 \begin{proof}
 \begin{figure}[ht!]
@@ -3621,54 +3843,137 @@ Complete the proof in Example 11.4.4.
 \end{proof}
 
 \subsection{Exercise 21}
-
-\subsubsection{()}
-
-\begin{proof}
-
-\end{proof}
-
-\subsection{Exercise 22}
-
-\subsubsection{()}
+F, K, L, R, U and C, E, L, P, W (alphabetical order)
 
 \begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/11.5.20.png}
+\includegraphics[scale=0.3]{../images/11.5.21.png}
+\end{figure}
+\end{proof}
+
+{\bf \cy In 22 and 23, draw a diagram like Figure 11.5.5 to show how merge sort works for the given input arrays.}
+
+\subsection{Exercise 22}
+R, G, B, U, C, F, H, G (alphabetical order)
+
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/11.5.22.png}
 \end{figure}
 \end{proof}
 
 \subsection{Exercise 23}
-
-\subsubsection{()}
+5, 2, 3, 9, 7, 4, 3, 2
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/11.5.23.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 24}
+Show that given an array \(a[bot], a[bot + 1], \ldots, a[top]\) of length \(k\), if \(mid = \floor{(bot + top)/2}\) then
 
-\subsubsection{()}
+\subsubsection{(a)}
+the subarray \(a[mid + 1], a[mid + 2], \ldots, a[top]\) has length \(\floor{k/2}\).
 
 \begin{proof}
+Refer to Figure 11.5.3 and observe that the subarray \(a[mid], a[mid + 1], \ldots, a[top]\) has length \(k - (\frac{k}{2} + 
+1) + 1 = \frac{k}{2} = \floor{\frac{k}{2}}\).
+\end{proof}
 
+\subsubsection{(b)}
+the subarray \(a[bot], a[bot + 1], \ldots, a[mid]\) has length \(\ceil{k/2}\).
+
+\begin{proof}
+Refer to Figure 11.5.3 and observe that when \(k\) is even, the subarray \(a[bot], a[bot + 1], \ldots, a[mid]\) has length 
+\(\floor{\frac{k}{2}} = \ceil{\frac{k}{2}}\) and when \(k\) is odd, has length \(\floor{\frac{k}{2}}+1=\ceil{\frac{k}{2}}\).
 \end{proof}
 
 \subsection{Exercise 25}
+The recurrence relation for \(m_1, m_2, m_3, \ldots\), which arises in the calculation of the efficiency of merge sort, is 
+\(m_1 = 0, m_k = m_{\floor{k/2}} + m_{\ceil{k/2}} + k - 1\). Show that for every integer \(n \geq 1\) 
 
-\subsubsection{()}
-
+\subsubsection{(a)}
+\(\frac{1}{2} n \log_2 n \leq m_n\)
 \begin{proof}
+{\bf Show that \(P(1)\) is true:} \(\frac{1}{2} \cdot 1 \log_2 1 = 0 \leq 0 = m_n\), so \(P(1)\) is true.
 
+{\bf Show that for any integer \(k \geq 1\) if \(P(i)\) is true for all \(1 \leq i \leq k\) then \(P(k+1)\) is true:}
+Now if \(k\) is odd and \(k+1\) is even, then \(m_{k+1}\) 
+
+\begin{tabular}{cll}
+= & \(m_{\floor{(k+1)/2}} + m_{\ceil{(k+1)/2}} + (k+1) - 1\) & \\
+= & \(m_{(k+1)/2} + m_{(k+1)/2} + (k+1) - 1\) & {\cy by Theorem 4.6.2 and Exercise 4.6.19} \\
+= & \(2m_{(k+1)/2} + k\) & \\
+\(\geq\) & \(\dps 2 \cdot \left[\frac{1}{2} \cdot \frac{k+1}{2} \cdot \log_2\left(\frac{k+1}{2}\right)\right] + k\) & 
+{\cy by inductive hypothesis} \\
+\(\geq\) & \(\dps \left(\frac{k+1}{2}\right)[\log_2(k+1) - \log_2 2] + k\) & \\
+= & \(\frac{1}{2}(k+1)[\log_2(k+1) - 1] + k\) & \\
+= & \(\frac{1}{2}(k+1)\log_2(k+1) - \frac{1}{2}(k+1) + \frac{2k}{2}\) & \\
+= & \(\frac{1}{2}(k+1)\log_2(k+1) + \frac{1}{2}(k-1)\) & \\
+\(\geq\) & \(\frac{1}{2}(k+1)\log_2(k+1)\) & {\cy by algebra} \\
+\end{tabular}
+
+The other case where \(k\) is even and \(k+1\) is odd is similar.
+\end{proof}
+
+\subsubsection{(b)}
+\(m_n \leq 2n \log_2 n\)
+\begin{proof}
+{\bf Show that \(P(1)\) is true:} \(m_n = 0 = 2(1) \log_2(1)\), so \(P(1)\) is true.
+
+{\bf Show that for any integer \(k \geq 1\) if \(P(i)\) is true for all \(1 \leq i \leq k\) then \(P(k+1)\) is true:}
+Now if \(k\) is odd and \(k+1\) is even, then \(m_{k+1}\)
+
+\begin{tabular}{cll}
+= & \(m_{\floor{(k+1)/2}} + m_{\ceil{(k+1)/2}} + (k+1) - 1\) & \\
+= & \(m_{(k+1)/2} + m_{(k+1)/2} + (k+1) - 1\) & {\cy by Theorem 4.6.2 and Exercise 4.6.19} \\
+= & \(2m_{(k+1)/2} + k\) & \\
+\(\leq\) & \(2[2\frac{k+1}{2} \log_2\left(\frac{k+1}{2}\right)] + k\) & {\cy by inductive hypothesis} \\
+= & \(2(k+1)[\log_2(k+1) - \log_2 2] + k\) &  \\
+= & \(2(k+1)[\log_2(k+1) - 1] + k\) &  \\
+= & \(2(k+1)\log_2(k+1) - 2(k+1) + k\) & \\
+= & \(2(k+1)\log_2(k+1) - k - 2\) &  \\
+\(\leq\) & \(2(k+1)\log_2(k+1)\) & {\cy by algebra} \\
+\end{tabular}
+
+The other case where \(k\) is even and \(k+1\) is odd is similar.
 \end{proof}
 
 \subsection{Exercise 26}
+It might seem that \(n - 1\) multiplications are needed to compute \(x^n = \underbrace{x \cdot \cdots \cdot x}_{\cy n - 1 
+\text{ multiplications}}\). But observe that, for instance, since \(6 = 4 + 2\), \(x^6 = x^4x^2 = (x^2)^2x^2\). Thus 
+\(x^6\) can be computed using three multiplications: one to compute \(x^2\), one to compute \((x^2)^2\), and one to 
+multiply \((x^2)^2\) times \(x^2\). Similarly, since \(11 = 8 + 2 + 1\), \(x^{11} = x^8 x^2 x^1 = ((x^2)^2)^2x^2x\) and so 
+\(x^{11}\) can be computed using five multiplications: one to compute \(x^2\), one to compute \((x^2)^2\), one to compute 
+\(((x^2)^2)^2\), one to multiply \(((x^2)^2)^2\) times \(x^2\), and one to multiply that product by \(x\).
 
-\subsubsection{()}
+\subsubsection{(a)}
+Write an algorithm to take a real number \(x\) and a positive integer \(n\) and compute \(x^n\) by
+
+(i) calling Algorithm 5.1.1 to find the binary representation of \(n\): \((r[k] r[k - 1] \cdots r[0])_2\), where each 
+\(r[i]\) is 0 or 1; 
+
+(ii) computing \(x^2, x^{2^2}, x^{2^3}, \ldots, x^{2^k}\) by squaring, then squaring again, and so forth;
+
+(iii) computing \(x^n\) using the fact that 
+\[
+x^n = x^{r[k]2^k + \cdots + r[1]2^1 + r[0]2^0} = x^{r[k]2^k} \cdot \ldots \cdot x^{r[1]2^2} \cdot x^{r[0]2^0}
+\]
+\begin{proof}
+{\it ???}
+\end{proof}
+
+\subsubsection{(b)}
+Show that the number of multiplications performed by the algorithm of part (a) is less than or equal to 
+\(2\floor{\log_2 n}\).
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \end{document}
