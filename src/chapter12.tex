@@ -475,304 +475,359 @@ Write a regular expression to define the set of strings of 0’s and 1’s with 
 \section{Exercise Set 12.2}
 
 \subsection{Exercise 1}
+Find the state of the vending machine in Example 12.2.1 after each of the following sequences of coins have been input.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.1.png}
+\end{figure}
 
 \subsubsection{(a)}
-
+Quarter, half-dollar, quarter
 \begin{proof}
 \$1 or more deposited
 \end{proof}
 
-\subsection{Exercise 2}
-
-\subsubsection{(a)}
-
-\begin{proof}
-\(s_0, s_1, s_2\)
-\end{proof}
-
 \subsubsection{(b)}
-
+Quarter, half-dollar, half-dollar
 \begin{proof}
-0, 1
+\$1 or more deposited
 \end{proof}
 
 \subsubsection{(c)}
-
+Half-dollar, quarter, quarter, quarter, half-dollar
 \begin{proof}
-\(s_0\)
+75\textcentoldstyle{} or more deposited
 \end{proof}
 
-\subsubsection{(d)}
+{\bf \cy In \(2-7\), a finite-state automaton is given by a transition diagram. For each automaton: \\
+a. Find its states. \\
+b. Find its input symbols. \\
+c. Find its initial state. \\
+d. Find its accepting states. \\
+e. Write its annotated next-state table.}
 
-\begin{proof}
-\(s_2\)
-\end{proof}
-
-\subsubsection{(e)}
-
-\begin{proof}
+\subsection{Exercise 2}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/12.2.2.e.png}
+\includegraphics[scale=0.5]{../images/12.2.2.png}
 \end{figure}
+
+\begin{proof}
+(a) \(s_0, s_1, s_2\) \,\,\, (b) 0, 1 \,\,\, (c) \(s_0\) \,\,\, (d) \(s_2\) 
+(e) \includegraphics[scale=0.5]{../images/12.2.2.e.png}
 \end{proof}
 
 \subsection{Exercise 3}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.2.3.png}
+\end{figure}
 
 \begin{proof}
-
+(a) \(U_0, U_1, U_2, U_3\) \,\, (b) \(a, b\) \,\, (c) \(U_0\) \,\, (d) \(U_3\) \,\, (e) 
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(\) & \(\) & \(a\) & \(b\) \\
+\hline
+\(\to\) & \(U_0\) & \(U_2\) & \(U_1\) \\
+\hline
+\(\) & \(U_1\) & \(U_2\) & \(U_3\) \\
+\hline
+\(\) & \(U_2\) & \(U_2\) & \(U_2\) \\
+\hline
+\(\circ\) & \(U_3\) & \(U_3\) & \(U_3\) \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
 \end{proof}
 
 \subsection{Exercise 4}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.2.4.png}
+\end{figure}
 
 \begin{proof}
-
+(a) \(s_0, s_1, s_2\) \,\, (b) \(0, 1\) \,\, (c) \(s_0\) \,\, (d) \(s_2\) \,\, (e) 
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(\) & \(\) & \(a\) & \(b\) \\
+\hline
+\(\to\) & \(s_0\) & \(s_1\) & \(s_0\) \\
+\hline
+\(\) & \(s_1\) & \(s_2\) & \(s_0\) \\
+\hline
+\(\circ\) & \(s_2\) & \(s_2\) & \(s_0\) \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
 \end{proof}
 
 \subsection{Exercise 5}
-
-\subsubsection{(a)}
-
-\begin{proof}
-\(A, B, C, D, E, F\)
-\end{proof}
-
-\subsubsection{(b)}
-
-\begin{proof}
-\(x, y\)
-\end{proof}
-
-\subsubsection{(c)}
-
-\begin{proof}
-\(A\)
-\end{proof}
-
-\subsubsection{(d)}
-
-\begin{proof}
-\(D, E\)
-\end{proof}
-
-\subsubsection{(e)}
-
-\begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/12.2.5.e.png}
+\includegraphics[scale=0.5]{../images/12.2.5.png}
 \end{figure}
+
+\begin{proof}
+(a) \(A, B, C, D, E, F\) \,\, (b) \(x, y\) \,\, (c) \(A\) \,\, 
+(d) \(D, E\) \,\, (e)
+\includegraphics[scale=0.5]{../images/12.2.5.e.png}
 \end{proof}
 
 \subsection{Exercise 6}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.2.6.png}
+\end{figure}
 
 \begin{proof}
-
+(a) \(s_0, s_1, s_2, s_3\) \,\, (b) \(0, 1\) \,\, (c) \(s_0\) \,\, (d) \(s_0\) \,\, (e) 
+\arrayrulecolor{cyan}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(\) & \(\) & \(0\) & \(1\) \\
+\hline
+\(\to \circ\) & \(s_0\) & \(s_0\) & \(s_1\) \\
+\hline
+\(\) & \(s_1\) & \(s_1\) & \(s_2\) \\
+\hline
+\(\) & \(s_2\) & \(s_2\) & \(s_3\) \\
+\hline
+\(\) & \(s_3\) & \(s_3\) & \(s_0\) \\
+\hline
+\end{tabular}
+\arrayrulecolor{black} % change it back!
 \end{proof}
 
 \subsection{Exercise 7}
-
-\subsubsection{()}
-
-\begin{proof}
-\(s_0, s_1, s_2, s_3\)
-\end{proof}
-
-\subsubsection{(b)}
-
-\begin{proof}
-0, 1 
-\end{proof}
-
-\subsubsection{(c)}
-
-\begin{proof}
-\(s_0\)
-\end{proof}
-
-\subsubsection{(d)}
-
-\begin{proof}
-\(s_0, s_2\)
-\end{proof}
-
-\subsubsection{(e)}
-
-\begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/12.2.7.e.png}
+\includegraphics[scale=0.5]{../images/12.2.7.png}
 \end{figure}
+
+\begin{proof}
+(a) \(s_0, s_1, s_2, s_3\) \,\, (b) 0, 1 \,\, (c) \(s_0\) \,\, 
+(d) \(s_0, s_2\) \,\, (e)
+\includegraphics[scale=0.5]{../images/12.2.7.e.png}
 \end{proof}
+
+{\bf \cy In 8 and 9, a finite-state automaton is given by an annotated next-state table. For each automaton: \\
+a. Find its states. \\
+b. Find its input symbols. \\
+c. Find its initial state. \\
+d. Find its accepting states. \\
+e. Draw its transition diagram.}
 
 \subsection{Exercise 8}
-
-\subsubsection{(a)}
-
-\begin{proof}
-\(s_0, s_1, s_2\)
-\end{proof}
-
-\subsubsection{(b)}
-
-\begin{proof}
-0, 1
-\end{proof}
-
-\subsubsection{(c)}
-
-\begin{proof}
-\(s_0\)
-\end{proof}
-
-\subsubsection{(d)}
-
-\begin{proof}
-\(s_2\)
-\end{proof}
-
-\subsubsection{(e)}
-
-\begin{proof}
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/12.2.8.e.png}
+\includegraphics[scale=0.5]{../images/12.2.8.png}
 \end{figure}
+
+\begin{proof}
+(a) \(s_0, s_1, s_2\) \,\, (b) 0, 1 \,\, (c) \(s_0\) \,\, (d) \(s_2\) \,\, (e)
+\includegraphics[scale=0.5]{../images/12.2.8.e.png}
 \end{proof}
 
 \subsection{Exercise 9}
-
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.2.9.png}
+\end{figure}
 
 \begin{proof}
+(a) \(s_0, s_1, s_2, s_3\) \,\, (b) 0, 1 \,\, (c) \(s_0\) \,\, (d) \(s_1\) \,\, 
 
+(e) \includegraphics[scale=0.4]{../images/12.2.9.e.png}
 \end{proof}
 
 \subsection{Exercise 10}
+A finite-state automaton \(A\), given by the transition diagram below, has next-state function \(N\) and eventual-
+state function \(N^*\).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.2.10.png}
+\end{figure}
 
 \subsubsection{(a)}
-
+Find \(N(s_1, 1)\) and \(N(s_0, 1)\).
 \begin{proof}
 \(N(s_1, 1) = s_2, N(s_0, 1) = s_3\)
 \end{proof}
 
 \subsubsection{(b)}
-
+Find \(N(s_2, 0)\) and \(N(s_1, 0)\).
 \begin{proof}
-
+\(N(s_2, 0) = s_3\) and \(N(s_1, 0) = s_3\)
 \end{proof}
 
 \subsubsection{(c)}
-
+Find \(N^*(s_0, 10011)\) and \(N^*(s_1, 01001)\).
 \begin{proof}
 \(N^*(s_0, 10011) = s_2, N^*(s_1, 01001) = s_2\)
 \end{proof}
 
+
+\subsubsection{(d)}
+Find \(N^*(s_2, 11010)\) and \(N^*(s_0, 01000)\).
+\begin{proof}
+\(N^*(s_2, 11010) = s_3\) and \(N^*(s_0, 01000) = s_3\).
+\end{proof}
+
+
 \subsection{Exercise 11}
+A finite-state automaton \(A\), given by the transition diagram below, has next-state function \(N\) and eventual-
+state function \(N^*\).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.2.11.png}
+\end{figure}
 
 \subsubsection{(a)}
-
+Find \(N(s_3, 0)\) and \(N(s_2, 1)\).
 \begin{proof}
 \(N(s_3, 0) = s_4, N(s_2, 1) = s_4\)
 \end{proof}
 
 \subsubsection{(b)}
-
+Find \(N(s_0, 0)\) and \(N(s_4, 1)\).
 \begin{proof}
-
+\(N(s_0, 0) = s_1\) and \(N(s_4, 1) = s_3\).
 \end{proof}
 
 \subsubsection{(c)}
-
+Find \(N^*(s_0, 010011)\) and \(N^*(s_3, 01101)\).
 \begin{proof}
 \(N^*(s_0, 010011) = s_3, N^*(s_3, 01101) = s_4\)
+\end{proof}
+
+\subsubsection{(d)}
+Find \(N^*(s_0, 1111)\) and \(N^*(s_2, 00111)\).
+\begin{proof}
+\(N^*(s_0, 1111) = s_3\) and \(N^*(s_2, 00111) = s_2\).
 \end{proof}
 
 {\bf \cy Note that multiple correct answers exist for part (d) of exercises 12 and 13, part (b) of exercises \(14-19\), and 
 for exercises \(20-48\).}
 
 \subsection{Exercise 12}
+Consider again the finite-state automaton of exercise 2.
 
 \subsubsection{(a)}
+To what state does the automaton go when the symbols of the following strings are input to it in sequence, starting from 
+the initial state? 
+
+(i) 1110001 (ii) 0001000 (iii) 11110000
 
 \begin{proof}
 (i) \(s_2\) (ii) \(s_2\) (iii) \(s_1\)
 \end{proof}
 
 \subsubsection{(b)}
+Which of the strings in part (a) send the automaton to an accepting state?
 
 \begin{proof}
 those in (i) and (ii) but not (iii)
 \end{proof}
 
 \subsubsection{(c)}
-
+What is the language accepted by the automaton?
 \begin{proof}
 The language accepted by this automaton is the set of all strings of 0’s and 1’s that contain at least one 0 followed 
 (not necessarily immediately) by at least one 1.
 \end{proof}
 
 \subsubsection{(d)}
-
+Find a regular expression that defines the language.
 \begin{proof}
 \(1^*00^*1(0 | 1)^*\)
 \end{proof}
 
 \subsection{Exercise 13}
-
-\subsubsection{()}
-
-\begin{proof}
-
-\end{proof}
-
-\subsection{Exercise 14}
+Consider again the finite-state automaton of exercise 3.
 
 \subsubsection{(a)}
+To what state does the automaton go when the symbols of the following strings are input to it in sequence, starting from 
+the initial state? 
 
+(i) \(bb\) (ii) \(aabbbaba\) (iii) \(babbbbbabaa\) (iv) \(bbaaaabaa\)
+
+\begin{proof}
+(i) \(U_3\) (ii) \(U_2\) (iii) \(U_2\) (iv) \(U_3\)
+\end{proof}
+
+\subsubsection{(b)}
+Which of the strings in part (a) send the automaton to an accepting state?
+
+\begin{proof}
+those in (i) and (iv) but not (ii) or (iii)
+\end{proof}
+
+\subsubsection{(c)}
+What is the language accepted by the automaton?
+
+\begin{proof}
+All strings of \(a\)'s and \(b\)'s starting with at least two \(b\)'s.
+\end{proof}
+
+\subsubsection{(d)}
+Find a regular expression that defines the language.
+
+\begin{proof}
+\(bb(a|b)^*\)
+\end{proof}
+
+{\bf \cy In each of \(14-19\), (a) find the language accepted by the automaton in the referenced exercise, and (b) find a 
+regular expression that defines the same language.}
+
+\subsection{Exercise 14}
+Exercise 4
+
+\subsubsection{(a)}
 \begin{proof}
 The language accepted by this automaton is the set of all strings of 0’s and 1’s that end in 00.
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
 \((0 | 1)^*00\)
 \end{proof}
 
 \subsection{Exercise 15}
-
+Exercise 5
 \subsubsection{(a)}
-
 \begin{proof}
 The language accepted by this automaton is the set of all strings of \(x\)’s and \(y\)’s of length at least two that 
 consist either entirely of \(x\)’s or entirely of \(y\)’s.
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
 \(xxx^* | yyy^*\)
 \end{proof}
 
 \subsection{Exercise 16}
-
-\subsubsection{()}
-
+Exercise 6
+\subsubsection{(a)}
 \begin{proof}
+The language accepted by this automaton is the set of all strings of 0’s and 1’s where the number of 1's is a multiple 
+of 4. (This includes when the number of 1's is zero, i.e. strings consisting only of 0's.)
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\(0^* | (0^*10^*10^*10^*10^*)^*\)
 \end{proof}
 
 \subsection{Exercise 17}
-
+Exercise 7
 \subsubsection{(a)}
-
 \begin{proof}
 The language accepted by this automaton is the set of all strings of 0’s and 1’s with the following property: If \(n\) 
 is the number of 1’s in the string, then \(n \mod 4 = 0\) or \(n \mod 4 = 2\). 
@@ -780,13 +835,12 @@ This is equivalent to saying that \(n\) is even.
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
 \(0^* | (0^*10^*10^*)^*\)
 \end{proof}
 
 \subsection{Exercise 18}
-
+Exercise 8
 \subsubsection{(a)}
 
 \begin{proof}
@@ -800,14 +854,25 @@ The language accepted by this automaton is the set of all strings of 0’s and 1
 \end{proof}
 
 \subsection{Exercise 19}
-
-\subsubsection{()}
+Exercise 9
+\subsubsection{(a)}
 
 \begin{proof}
-
+The language accepted by this automaton is set of all strings of 0’s and 1’s, with the property that if \(n\) is the number
+of 1's in the string, then \(n \mod 4 = 1\).
 \end{proof}
 
+\subsubsection{(b)}
+
+\begin{proof}
+\((0^*10^*10^*10^*1)^*1(0^*10^*10^*10^*1)^*\)
+\end{proof}
+
+{\bf \cy In each of \(20-28\), (a) design an automaton with the given input alphabet that accepts the given set of 
+strings, and (b) find a regular expression that defines the language accepted by the automaton.}
+
 \subsection{Exercise 20}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings for which the final three input symbols are 1.
 
 \subsubsection{(a)}
 
@@ -837,13 +902,13 @@ input of more 1’s. Thus the transition diagram is as follows:
 \end{figure}
 \end{proof}
 
-\subsubsection{()}
-
+\subsubsection{(b)}
 \begin{proof}
-
+\((0|1)*111\)
 \end{proof}
 
 \subsection{Exercise 21}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings that start with 01.
 
 \subsubsection{(a)}
 
@@ -861,35 +926,64 @@ input of more 1’s. Thus the transition diagram is as follows:
 \end{proof}
 
 \subsection{Exercise 22}
+Input alphabet \(= \{a, b\}\); Accepts the set of all strings of length at least 2 for which the final two input symbols are 
+the same.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
 Use five states: \(s_0\) (the initial state), \(s_1\) (the state indicating that the previous input symbol was an \(a\)), 
 \(s_2\) (the state indicating that the previous input symbol was a \(b\)), \(s_3\) (the state indicating that the previous 
 two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the previous two input symbols were \(b\)’s).
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.2.22.a.png}
+\end{figure}
+\end{proof}
+
+\subsubsection{(b)}
+\begin{proof}
+\((a|b)^*(aa|bb)\)
 \end{proof}
 
 \subsection{Exercise 23}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings that start with 01 or 10.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.2.23.a.png}
+\end{figure}
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\((01|10)(0|1)^*\)
 \end{proof}
 
 \subsection{Exercise 24}
-
-\subsubsection{()}
-
-\begin{proof}
-
-\end{proof}
-
-\subsection{Exercise 25}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings that start with 101.
 
 \subsubsection{(a)}
 
+\begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.24.a.png}
+\end{figure}
+\end{proof}
+
+\subsubsection{(b)}
+
+\begin{proof}
+\(101(0|1)^*\)
+\end{proof}
+
+\subsection{Exercise 25}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings that end in 10.
+
+\subsubsection{(a)}
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -898,15 +992,14 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
-
+\((0|1)^*10\)
 \end{proof}
 
 \subsection{Exercise 26}
+Input alphabet \(= \{a, b\}\); Accepts the set of all strings that contain exactly two \(b\)’s.
 
 \subsubsection{(a)}
-
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -915,23 +1008,30 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
-
+\(a^*ba^*ba^*\)
 \end{proof}
 
 \subsection{Exercise 27}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings that start with 0 and contain exactly one 1.
 
-\subsubsection{()}
-
+\subsubsection{(a)}
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.27.a.png}
+\end{figure}
+\end{proof}
 
+\subsubsection{(b)}
+\begin{proof}
+\(00^*10^*\)
 \end{proof}
 
 \subsection{Exercise 28}
+Input alphabet \(= \{0, 1\}\); Accepts the set of all strings that contain the pattern 010.
 
 \subsubsection{(a)}
-
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -940,15 +1040,15 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsubsection{(b)}
-
 \begin{proof}
-
+\((0|1)^*101(0|1)^*\)
 \end{proof}
 
+{\bf \cy In \(29-47\), design a finite-state automaton to accept the language defined by the regular expression in the 
+referenced exercise from Section 12.1.}
+
 \subsection{Exercise 29}
-
-\subsubsection{()}
-
+Exercise 16: \(0^*1(0^*1^*)^*\)
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -957,18 +1057,19 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsection{Exercise 30}
-
-\subsubsection{()}
-
+Exercise 17: \(b^* | b^*ab^*\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.2.30.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 31}
-
-\subsubsection{()}
-
+Exercise 18: \(x^*(yxxy | x)^*\)
 \begin{proof}
+Errata says: add two arrow loops from \(s_4\) to itself, one for \(x\) and one for \(y\).
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.5]{../images/12.2.31.png}
@@ -976,17 +1077,16 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsection{Exercise 32}
-
-\subsubsection{()}
-
+Exercise 19: \(b^*ab^*ab^*a\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.2]{../images/12.2.32.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 33}
-
-\subsubsection{()}
-
+Exercise 20: \(1(0 | 1)^* 00\)
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -995,25 +1095,25 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsection{Exercise 34}
-
-\subsubsection{()}
-
+Exercise 21: \((x | y)y(x | y)^*\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.2]{../images/12.2.34.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 35}
-
-\subsubsection{()}
-
+Exercise 24: \((01^*2)^*\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.2.35.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 36}
-
-\subsubsection{()}
-
+Exercise 25: \(0^*10^*(0^*10^*10^*)^*\).
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -1022,25 +1122,25 @@ two input symbols were \(a\)’s), and \(s_4\) (the state indicating that the pr
 \end{proof}
 
 \subsection{Exercise 37}
-
-\subsubsection{()}
-
+Exercise 26: \((a|b)^*b(aa|ab|ba|bb)\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.2.37.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 38}
-
-\subsubsection{()}
-
+Exercise 27: \(y^*(xyy^*)^*(\lambda | x)\).
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.2.38.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 39}
-
-\subsubsection{()}
-
+Exercise 31:  \(pre[a - z]^+\)
 \begin{proof}
 Let \(\hat{P}\) denote a list of all letters of a lowercase alphabet except \(p\), \(\hat{R}\) denote a list of all the 
 letters of a lowercase alphabet except \(r\), and \(\hat{E}\) denote a list of all the letters of a lowercase alphabet 
@@ -1053,25 +1153,25 @@ except \(e\).
 \end{proof}
 
 \subsection{Exercise 40}
-
-\subsubsection{()}
-
+Exercise 32: \([A-Z]^*(BIO | INFO)[A-Z]^*\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.25]{../images/12.2.40.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 41}
-
-\subsubsection{()}
-
+Exercise 33: \([a-z]^+[a-z]^+[a-z]^+ ly\)
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.41.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 42}
-
-\subsubsection{()}
-
+Exercise 34: \([a - z]^*(a | e | i | o | u)[a - z]^*\)
 \begin{proof}
 Let \(\mathscr{S}\) denote a list of all the consonants in a lowercase alphabet.
 
@@ -1082,25 +1182,19 @@ Let \(\mathscr{S}\) denote a list of all the consonants in a lowercase alphabet.
 \end{proof}
 
 \subsection{Exercise 43}
-
-\subsubsection{()}
-
+Exercise 35: \([\string^ aeiou]^*(a|e|i|o|u)[\string^ aeiou]^*\)
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 44}
-
-\subsubsection{()}
-
+Exercise 36: \([\string^ AEIOU][A-Z]^*[AEIOU]\{2\}[A-Z]^*\)
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 45}
-
-\subsubsection{()}
-
+Exercise 37: \([0 - 9]\{3\} - [0 - 9]\{2\} - 3[0 - 9]\{2\}6\)
 \begin{proof}
 \begin{figure}[ht!]
 \centering
@@ -1109,48 +1203,64 @@ Let \(\mathscr{S}\) denote a list of all the consonants in a lowercase alphabet.
 \end{proof}
 
 \subsection{Exercise 46}
-
-\subsubsection{()}
-
+Exercise 38: \((800|888)-[0-9]\{3\}-2[0-9]\{2\}2\)
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 47}
-
-\subsubsection{()}
-
+Exercise 39: \(([+ -] | \lambda)[0 - 9]^* (\backslash. | \lambda)[0 - 9]^*\)
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 48}
+A simplified telephone switching system allows the following strings as legal telephone numbers. Design a finite-state 
+automaton to recognize all the legal telephone numbers in (a), (b), and (c). Include an “error state” for invalid telephone 
+numbers.
 
-\subsubsection{()}
+\subsubsection{(a)}
+A string of seven digits in which neither of the first two digits is a 0 or 1 (a local call string).
 
 \begin{proof}
+A regular expression is \([2-9]{2}[0-9]{5}\).
+\end{proof}
 
+\subsubsection{(b)}
+A 1 followed by a three-digit area code string (any digit except 0 or 1 followed by a 0 or 1 followed by any digit) 
+followed by a seven-digit local call string.
+
+\begin{proof}
+A regular expression is \(1[2-9](0|1)[0-9][2-9]{2}[0-9]{5}\). Here we are using the regular expression from part (a) for the
+local call string.
+\end{proof}
+
+\subsubsection{(c)}
+A 0 alone or followed by a three-digit area code string plus a seven-digit local call string.
+
+\begin{proof}
+A regular expression is \(0(([2-9](0|1)[0-9])?)[2-9]{2}[0-9]{5}\) (using the local call string and the area code string).
 \end{proof}
 
 \subsection{Exercise 49}
-
-\subsubsection{()}
+Write a computer algorithm that simulates the action of the finite-state automaton of exercise 2 by mimicking the action 
+of the transition diagram.
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 50}
-
-\subsubsection{()}
+Write a computer algorithm that simulates the action of the finite-state automaton of exercise 8 by repeated application 
+of the next-state function.
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 51}
-
-\subsubsection{()}
+Let \(L\) be the language consisting of all strings of the form \(a^mb^n\), where \(m\) and \(n\) are positive integers 
+and \(m \geq n\). Show that there is no finite-state automaton that accepts \(L\).
 
 \begin{proof}
 This proof is virtually identical to that of Example 12.2.8. Just take \(p\) and \(q\) in that proof so that \(p > q\). 
@@ -1159,16 +1269,16 @@ not in \(L\).
 \end{proof}
 
 \subsection{Exercise 52}
-
-\subsubsection{()}
+Let \(L\) be the language consisting of all strings of the form \(a^mb^n\), where \(m\) and \(n\) are positive integers 
+and \(m \leq n\). Show that there is no finite-state automaton that accepts \(L\).
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 53}
-
-\subsubsection{()}
+Let \(L\) be the language consisting of all strings of the form \(a^n\), where \(n = m^2\), for some positive integer 
+\(m\). Show that there is no finite-state automaton that accepts \(L\).
 
 \begin{proof}
 Suppose the automaton \(A\) has \(N\) states. Choose an integer \(m\) such that \((m + 1)^2 - m^2 > N\). Consider 
@@ -1185,15 +1295,27 @@ It follows (by removing the \(a\)’s shown in color) that the automaton must ac
 \end{proof}
 
 \subsection{Exercise 54}
-
-\subsubsection{()}
+\subsubsection{(a)}
+Let \(A\) be a finite-state automaton with input alphabet \(\Sigma\), and suppose \(L(A)\) is the language accepted by 
+\(A\). The complement of \(L(A)\) is the set of all strings over \(\Sigma\) that are not in \(L(A)\). Show that the 
+complement of a regular language is regular by proving the following: If \(L(A)\) is the language accepted by a 
+finite-state automaton \(A\), then there is a finite-state automaton \(A'\) that accepts the complement of \(L(A)\).
 
 \begin{proof}
+{\it ???}
+\end{proof}
 
+\subsubsection{(b)}
+Show that the intersection of any two regular languages is regular as follows: First prove that if \(L(A_1)\) and 
+\(L(A_2)\) are languages accepted by automata \(A_1\) and \(A_2\), respectively, then there is an automaton \(A\) that 
+accepts \((L(A_1))^c \cup (L(A_2))^c\). Then use one of De Morgan’s laws for sets, the double complement law for sets, 
+and the result of part (a) to prove that there is an automaton that accepts \(L(A_1) \cap L(A_2)\).
+
+\begin{proof}
+{\it ???}
 \end{proof}
 
 \section{Exercise Set 12.3}
-
 \subsection{Exercise 1}
 
 \subsubsection{(a)}
