@@ -1317,8 +1317,15 @@ and the result of part (a) to prove that there is an automaton that accepts \(L(
 
 \section{Exercise Set 12.3}
 \subsection{Exercise 1}
+Consider the finite-state automaton \(A\) given by the following transition diagram:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.1.png}
+\end{figure}
 
 \subsubsection{(a)}
+Find the 0-, 1-, and 2-equivalence classes of states of \(A\).
 
 \begin{proof}
 0-equivalence classes: \(\{s_0, s_1, s_3, s_4\}, \{s_2, s_5\}\) \\
@@ -1327,6 +1334,7 @@ and the result of part (a) to prove that there is an automaton that accepts \(L(
 \end{proof}
 
 \subsubsection{(b)}
+Draw the transition diagram for \(\overline{A}\), the quotient automaton of \(A\).
 
 \begin{proof}
 \begin{figure}[ht!]
@@ -1336,24 +1344,66 @@ and the result of part (a) to prove that there is an automaton that accepts \(L(
 \end{proof}
 
 \subsection{Exercise 2}
+Consider the finite-state automaton \(A\) given by the following transition diagram:
 
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.2.png}
+\end{figure}
+
+\subsubsection{(a)}
+Find the 0-, 1-, and 2-equivalence classes of states of \(A\).
+\begin{proof}
+0-equivalence classes: \(\{s_0, s_1, s_3, s_4\}, \{s_2, s_5, s_6\}\) \\
+1-equivalence classes: \(\{s_0, s_1\}, \{s_3\}, \{s_4\}, \{s_2, s_5\}, \{s_6\}\) \\
+2-equivalence classes: \(\{s_0, s_1\}, \{s_3\}, \{s_4\}, \{s_2, s_5\}, \{s_6\}\)
+\end{proof}
+
+\subsubsection{(b)}
+Draw the transition diagram for \(\overline{A}\), the quotient automaton of \(A\).
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.3.2.b.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 3}
+Consider the finite-state automaton \(A\) discussed in Example 12.3.1:
 
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.3.png}
+\end{figure}
+
+\subsubsection{(a)}
+Find the 0- and 1-equivalence classes of states of \(A\).
+\begin{proof}
+0-equivalence classes: \(\{s_0, s_2\}, \{s_1, s_3\}\) \\
+1-equivalence classes: \(\{s_0, s_2\}, \{s_1, s_3\}\)
+\end{proof}
+
+\subsubsection{(b)}
+Draw the transition diagram for \(\overline{A}\), the quotient automaton of \(A\).
 
 \begin{proof}
-
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.3.3.b.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 4}
+Consider the finite-state automaton \(A\) given by the following transition diagram:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.4.png}
+\end{figure}
 
 \subsubsection{(a)}
+Find the 0-, 1-, 2- and 3-equivalence classes of states of \(A\).
 
 \begin{proof}
 0-equivalence classes: \(\{s_0, s_1, s_2\}, \{s_3, s_4, s_5\}\) \\
@@ -1363,6 +1413,7 @@ and the result of part (a) to prove that there is an automaton that accepts \(L(
 \end{proof}
 
 \subsubsection{(b)}
+Draw the transition diagram for \(\overline{A}\), the quotient automaton of \(A\).
 
 \begin{proof}
 \begin{figure}[ht!]
@@ -1372,30 +1423,66 @@ and the result of part (a) to prove that there is an automaton that accepts \(L(
 \end{proof}
 
 \subsection{Exercise 5}
+Consider the finite-state automaton \(A\) given by the following transition diagram:
 
-\subsubsection{()}
-
-\begin{proof}
-
-\end{proof}
-
-\subsection{Exercise 6}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.5.png}
+\end{figure}
 
 \subsubsection{(a)}
+Find the 0-, 1-, 2- and 3-equivalence classes of states of \(A\).
 
 \begin{proof}
-The 3-equivalence classes are \(\{s_0\}, \{s_1\}, \{s_2\}, \{s_3\}, \{s_4\}, \{s_5\}\), and \(\{s_6\}\).
+0-equivalence classes: \(\{s_0, s_1, s_3, s_4\}, \{s_2, s_5\}\) \\
+1-equivalence classes: \(\{s_0, s_3, s_4\}, \{s_1\}, \{s_2, s_5\}\) \\
+2-equivalence classes: \(\{s_0\}, \{s_3\}, \{s_4\}, \{s_1\}, \{s_2, s_5\}\) \\
+3-equivalence classes: \(\{s_0\}, \{s_3\}, \{s_4\}, \{s_1\}, \{s_2, s_5\}\)
 \end{proof}
 
 \subsubsection{(b)}
+Draw the transition diagram for \(\overline{A}\), the quotient automaton of \(A\).
 
 \begin{proof}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{../images/12.3.5.b.png}
+\end{figure}
+\end{proof}
 
+\subsection{Exercise 6}
+Consider the finite-state automaton \(A\) given by the following transition diagram:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.6.png}
+\end{figure}
+
+\subsubsection{(a)}
+Find the 0-, 1-, 2- and 3-equivalence classes of states of \(A\).
+
+\begin{proof}
+0-equivalence classes: \(\{s_0, s_1, s_3, s_4, s_5\}, \{s_2, s_6\}\) \\
+1-equivalence classes: \(\{s_0, s_4, s_5\}, \{s_1, s_3\}, \{s_2\}, \{s_6\}\) \\
+2-equivalence classes: \(\{s_0, s_4\}, \{s_5\}, \{s_1\}, \{s_3\}, \{s_2\}, \{s_6\}\) \\
+3-equivalence classes: \(\{s_0\}, \{s_4\}, \{s_5\}, \{s_1\}, \{s_3\}, \{s_2\}, \{s_6\}\)
+\end{proof}
+
+\subsubsection{(b)}
+Draw the transition diagram for \(\overline{A}\), the quotient automaton of \(A\).
+
+\begin{proof}
+Since the 3- (and higher-) equivalence classes all have 1 state each, the transition diagram for \(\overline{A}\) is the 
+same as the diagram for \(A\), except each state \(s_i\) is replaced by its equivalence class \([s_i]\).
 \end{proof}
 
 \subsection{Exercise 7}
+Are the automata \(A\) and \(A'\) shown below equivalent?
 
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.7.png}
+\end{figure}
 
 \begin{proof}
 Yes. For A: \\
@@ -1407,7 +1494,7 @@ Transition diagram for \(\overline{A}\):
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.5]{../images/12.3.7.a.png}
+\includegraphics[scale=0.4]{../images/12.3.7.a.png}
 \end{figure}
 
 For \(A'\): \\
@@ -1428,16 +1515,24 @@ are equivalent automata.
 \end{proof}
 
 \subsection{Exercise 8}
+Are the automata \(A\) and \(A'\) shown below equivalent?
 
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.8.png}
+\end{figure}
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 9}
+Are the automata \(A\) and \(A'\) shown below equivalent?
 
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.9.png}
+\end{figure}
 
 \begin{proof}
 For \(A\): \\
@@ -1462,17 +1557,19 @@ This result can also be obtained by noting, for example, that the string 11 is a
 \end{proof}
 
 \subsection{Exercise 10}
+Are the automata \(A\) and \(A'\) shown below equivalent?
 
-\subsubsection{()}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{../images/12.3.10.png}
+\end{figure}
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 11}
-
-\subsubsection{()}
-
+Prove property (12.3.1).
 \begin{proof}
 {\it Partial answer:} Suppose \(A\) is a finite-state automaton with set of states \(S\) and relation \(R^*\) of 
 \(*\)-equivalence of states. {\it [To show that \(R^*\) is an equivalence relation, we must show that \(R\) is reflexive, 
@@ -1494,8 +1591,7 @@ Hence \(tR^*s\) {\it [as was to be shown]}, and so \(R^*\) is symmetric.
 \end{proof}
 
 \subsection{Exercise 12}
-
-\subsubsection{()}
+How should the proof of property (12.3.1) be modified to prove property (12.3.2)?
 
 \begin{proof}
 The proof is identical to the proof of property (12.3.1) given in the solution to exercise 11 provided every occurrence of 
@@ -1503,9 +1599,7 @@ The proof is identical to the proof of property (12.3.1) given in the solution t
 \end{proof}
 
 \subsection{Exercise 13}
-
-\subsubsection{()}
-
+Prove property (12.3.3).
 \begin{proof}
 By property (12.3.2), for each integer \(k \geq 0\), \(k\)-equivalence is an equivalence relation. Now by Theorem 10.3.4, 
 the distinct equivalence classes of an equivalence relation form a partition of the set on which the relation is defined. 
@@ -1514,17 +1608,13 @@ partition of the set of all states of the automaton.
 \end{proof}
 
 \subsection{Exercise 14}
-
-\subsubsection{()}
-
+Prove property (12.3.4).
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 15}
-
-\subsubsection{()}
-
+Prove property (12.3.5).
 \begin{proof}
 Hint 1: Suppose Ck is a particular but arbitrarily chosen \(k\)-equivalence class. You must show that there is a 
 \((k - 1)\)-equivalence class \(C_{k-1}\) such that \(C_k \subseteq C_{k-1}\).
@@ -1537,32 +1627,28 @@ To show that \(C_k \subseteq C_{k-1}\), you must show that for any state \(t\), 
 \end{proof}
 
 \subsection{Exercise 16}
-
-\subsubsection{()}
-
+Prove property (12.3.6).
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 17}
-
-\subsubsection{()}
+Prove that if two states of a finite-state automaton are \(k\)-equivalent for some integer \(k\), then those states are 
+\(m\)-equivalent for every nonnegative integer \(m < k\).
 
 \begin{proof}
 If \(m < k\), then every input string of length less than or equal to \(m\) has length less than or equal to \(k\).
 \end{proof}
 
 \subsection{Exercise 18}
-
-\subsubsection{()}
+Write a complete proof of property (12.3.7).
 
 \begin{proof}
-
+{\it ???}
 \end{proof}
 
 \subsection{Exercise 19}
-
-\subsubsection{()}
+Write a complete proof of property (12.3.8).
 
 \begin{proof}
 Suppose two states \(s\) and \(t\) are equivalent. We must show that for any input symbol \(m\), the next-states 
