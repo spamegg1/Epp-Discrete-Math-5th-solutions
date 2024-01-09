@@ -2780,10 +2780,14 @@ They are symmetric across the diagonal line \(y = x\).
 \end{proof}
 
 \subsection{Exercise 12}
-Give a graphical interpretation for property (11.4.2) in Example 11.4.1(a) for \(0 < x < 1\).
+Give a graphical interpretation for property (11.4.2) in Example 11.4.1(a) for \(0 < x < 1\): If \(k\) is an integer 
+and \(x\) is a real number with \(2^k \leq x < 2^{k + 1}\), then \(\floor{\log_2 x} = k\).
 
 \begin{proof}
-{\it ???}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/11.4.12.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 13}
@@ -3958,22 +3962,40 @@ Write an algorithm to take a real number \(x\) and a positive integer \(n\) and 
 (i) calling Algorithm 5.1.1 to find the binary representation of \(n\): \((r[k] r[k - 1] \cdots r[0])_2\), where each 
 \(r[i]\) is 0 or 1; 
 
-(ii) computing \(x^2, x^{2^2}, x^{2^3}, \ldots, x^{2^k}\) by squaring, then squaring again, and so forth;
+(ii) computing \(x^{2^1}, x^{2^2}, x^{2^3}, \ldots, x^{2^k}\) by squaring, then squaring again, and so forth;
 
 (iii) computing \(x^n\) using the fact that 
 \[
-x^n = x^{r[k]2^k + \cdots + r[1]2^1 + r[0]2^0} = x^{r[k]2^k} \cdot \ldots \cdot x^{r[1]2^2} \cdot x^{r[0]2^0}
+x^n = x^{r[k]2^k + \cdots + r[1]2^1 + r[0]2^0} = x^{r[k]2^k} \cdot \ldots \cdot x^{r[1]2^1} \cdot x^{r[0]2^0}
 \]
-\begin{proof}
-{\it ???}
-\end{proof}
+{\it Proof.}
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: Computing a positive integer power of a real number}
+
+{\bf Input:} \(x\) {\it [a real number]}, \(n\) {\it [a positive integer]}
+
+{\bf Algorithm Body:}
+\begin{tabbing}
+\(r[0], r[1], \cdots, r[k] \coloneqq\) {\it obtained by calling Algorithm 5.1.1 with input \(n\)} \\
+\(power \coloneqq x\) \\
+\(result \coloneqq 1\) \\
+\(i \coloneqq 0\) \\ 
+{\bf while} \= \((i \leq k\)) \\
+            \> {\bf if} \(r[i] = 1\) {\bf then} \(result \coloneqq result \cdot power\) \\
+            \> \(power \coloneqq power \cdot power\) \\
+            \> \(i \coloneqq i + 1\) \\
+{\bf end while} \\
+{\bf Output:} \(result\) {\it [a real number, which equals \(x^n\)]}
+\end{tabbing}
+\end{tcolorbox}
 
 \subsubsection{(b)}
 Show that the number of multiplications performed by the algorithm of part (a) is less than or equal to 
 \(2\floor{\log_2 n}\).
 
 \begin{proof}
-{\it ???}
+The number of steps in the while loop is \(k+1\) which is \(\floor{\log_2(n)}\). In each step there are at most 2 
+multiplications. So the number of multiplications is \(\leq 2 \floor{\log_2 n}\).
 \end{proof}
 
 \end{document}
