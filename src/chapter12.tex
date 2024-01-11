@@ -4,7 +4,7 @@
 %\usepackage[normalem]{ulem} % strike through text
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref,mathrsfs}
 \usepackage{parskip,geometry,latexsym,bookmark,mathtools,float,cancel}
-%\usepackage{tcolorbox,bm}
+\usepackage{tcolorbox}
 
 \newtheorem{defn}{Definition}
 \newtheorem{thm}{Theorem}
@@ -1184,13 +1184,17 @@ Let \(\mathscr{S}\) denote a list of all the consonants in a lowercase alphabet.
 \subsection{Exercise 43}
 Exercise 35: \([\string^ aeiou]^*(a|e|i|o|u)[\string^ aeiou]^*\)
 \begin{proof}
-{\it ???}
+Similar to previous exercise, except \(s_1\) has an arrow to itself with \(\mathscr{S}\) instead of \([a-z]\).
 \end{proof}
 
 \subsection{Exercise 44}
 Exercise 36: \([\string^ AEIOU][A-Z]^*[AEIOU]\{2\}[A-Z]^*\)
 \begin{proof}
-{\it ???}
+\(\mathscr{S}\) denotes consonants as before (this time they are all capitalized).
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.44.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 45}
@@ -1205,13 +1209,19 @@ Exercise 37: \([0 - 9]\{3\} - [0 - 9]\{2\} - 3[0 - 9]\{2\}6\)
 \subsection{Exercise 46}
 Exercise 38: \((800|888)-[0-9]\{3\}-2[0-9]\{2\}2\)
 \begin{proof}
-{\it ???}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.46.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 47}
 Exercise 39: \(([+ -] | \lambda)[0 - 9]^* (\backslash. | \lambda)[0 - 9]^*\)
 \begin{proof}
-{\it ???}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.47.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 48}
@@ -1223,7 +1233,12 @@ numbers.
 A string of seven digits in which neither of the first two digits is a 0 or 1 (a local call string).
 
 \begin{proof}
-A regular expression is \([2-9]{2}[0-9]{5}\).
+A regular expression is \([2-9]\{2\}[0-9]\{5\}\). An automaton can be drawn similarly to the following (where \(s_7\) is the
+accepting state):
+\[
+\to s_0 \overset{[2-9]}{\to} s_1 \overset{[2-9]}{\to} s_2 \overset{[0-9]}{\to} s_3 \overset{[0-9]}{\to} s_4 
+\overset{[0-9]}{\to} s_5 \overset{[0-9]}{\to} s_6 \overset{[0-9]}{\to} s_7 
+\]
 \end{proof}
 
 \subsubsection{(b)}
@@ -1231,32 +1246,105 @@ A 1 followed by a three-digit area code string (any digit except 0 or 1 followed
 followed by a seven-digit local call string.
 
 \begin{proof}
-A regular expression is \(1[2-9](0|1)[0-9][2-9]{2}[0-9]{5}\). Here we are using the regular expression from part (a) for the
-local call string.
+A regular expression is \(1[2-9](0|1)[0-9][2-9]\{2\}[0-9]\{5\}\). Here we are using the regular expression from part (a) for 
+the local call string. Again, an automaton can be drawn similarly to the following (where \(A\) is the automaton from
+part (a)):
+\[
+\to t_0 \overset{1}{\to} t_1 \overset{[2-9]}{\to} t_2 \overset{0|1}{\to} t_3 \overset{[0-9]}{\to} t_4 
+\overset{\lambda}{\to} A
+\]
 \end{proof}
 
 \subsubsection{(c)}
 A 0 alone or followed by a three-digit area code string plus a seven-digit local call string.
 
 \begin{proof}
-A regular expression is \(0(([2-9](0|1)[0-9])?)[2-9]{2}[0-9]{5}\) (using the local call string and the area code string).
+A regular expression is \(0(([2-9](0|1)[0-9])?)[2-9]\{2\}[0-9]\{5\}\) (using the local call string and the area code 
+string). We can draw an automaton easily by reusing the automata from parts (a) and (b). 
+
+Let \(A\) be the automaton for \([2-9]\{2\}[0-9]\{5\}\) from part (a). 
+
+Let \(B\) be the automaton for \([2-9](0|1)[0-9]\) which is the middle part of the automaton from part (b).
+
+The only accepting state is inside \(A\) as before.
+
+Then starting from an initial state \(\to u_0\) we can go to \(B\) if the input is \([2-9]\), or directly to \(A\) if the
+input is \(\lambda\):
+
+\(\to u_0 \overset{[2-9]}{\to} t_2 \overset{0|1}{\to} t_3 \overset{[0-9]}{\to} t_4 \overset{\lambda}{\to} A\) \\
+\(.\hspace{1cm}\to\to\to\to\to\underset{\lambda}{\to}\to\to\to\)
+
+We can also be lazy and use a non-deterministic automaton like this:
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{../images/12.2.48.c.png}
+\end{figure}
 \end{proof}
 
 \subsection{Exercise 49}
 Write a computer algorithm that simulates the action of the finite-state automaton of exercise 2 by mimicking the action 
 of the transition diagram.
 
-\begin{proof}
-{\it ???}
-\end{proof}
+{\it Proof.}
+\includegraphics[scale=0.5]{../images/12.2.2.png}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: simulate automaton from Exercise 2}
+
+{\it [This algorithm simulates the action of the finite-state automaton of the figure above by mimicking the functioning of 
+the transition diagram. The states are denoted \(s_0, s_1\), and \(s_2\).]}
+
+{\bf Input:} \(string\) {\it [a string of 0’s and 1’s plus an end marker e]}
+
+{\bf Algorithm Body:} \\
+\(state \coloneqq s_0\) \\
+\(symbol \coloneqq\) first symbol in the input string
+
+\begin{tabbing}
+{\bf while} \= \((symbol \neq e)\) \\
+            \> {\bf if} \(state = s_0\) {\bf then} \= {\bf if} \(symbol = 0\) \\
+            \>                                     \> {\bf then} \(state \coloneqq s_1\) \\
+            \>                                     \> {\bf else} \(state \coloneqq s_0\) \\
+            \> {\bf if} \(state = s_1\) {\bf then} \= {\bf if} \(symbol = 0\) \\
+            \>                                     \> {\bf then} \(state \coloneqq s_1\) \\
+            \>                                     \> {\bf else} \(state \coloneqq s_2\) \\
+            \> {\bf if} \(state = s_2\) {\bf then} \= {\bf if} \(symbol = 0\) \\
+            \>                                     \> {\bf then} \(state \coloneqq s_2\) \\
+            \>                                     \> {\bf else} \(state \coloneqq s_2\) \\
+{\bf end while} \\
+{\bf Output:} state
+\end{tabbing}
+\end{tcolorbox}
 
 \subsection{Exercise 50}
 Write a computer algorithm that simulates the action of the finite-state automaton of exercise 8 by repeated application 
 of the next-state function.
 
-\begin{proof}
-{\it ???}
-\end{proof}
+{\it Proof.}
+\includegraphics[scale=0.5]{../images/12.2.8.png}
+
+\begin{tcolorbox}[colframe=cyan]
+{\bf \cy Algorithm: simulate automaton from Exercise 8}
+
+{\it [This algorithm simulates the action of the finite-state automaton of the figure above by repeated application of the 
+next-state function. The states are denoted \(s_0, s_1\), and \(s_2\).]}
+
+{\bf Input:} \(string\) {\it [a string of 0’s and 1’s plus an end marker e]}
+
+{\bf Algorithm Body:} \\
+\(N(s_0, 0) \coloneqq s_1, N(s_0, 1) \coloneqq s_2, N(s_1, 0) \coloneqq s_1, N(s_1, 1) \coloneqq s_2,\) \\
+\(N(s_2, 0) \coloneqq s_1, N(s_2, 1) \coloneqq s_2\) \\
+\(state \coloneqq s_0\) \\
+\(symbol \coloneqq\) first symbol in the input string
+
+\begin{tabbing}
+{\bf while} \= \((symbol \neq e)\) \\
+            \> \(state \coloneqq N(state, symbol)\) \\
+            \> \(symbol \coloneqq\) next symbol in the input string \\
+{\bf end while} \\
+{\bf Output:} state
+\end{tabbing}
+\end{tcolorbox}
 
 \subsection{Exercise 51}
 Let \(L\) be the language consisting of all strings of the form \(a^mb^n\), where \(m\) and \(n\) are positive integers 
@@ -1273,7 +1361,9 @@ Let \(L\) be the language consisting of all strings of the form \(a^mb^n\), wher
 and \(m \leq n\). Show that there is no finite-state automaton that accepts \(L\).
 
 \begin{proof}
-{\it ???}
+This proof is virtually identical to that of Example 12.2.8. Just take \(p\) and \(q\) in that proof so that \(p < q\). 
+From the fact that \(A\) accepts \(a^pb^p\), you can deduce that \(A\) accepts \(a^qb^p\). Since \(p < q\), this string is 
+not in \(L\).
 \end{proof}
 
 \subsection{Exercise 53}
@@ -1291,7 +1381,7 @@ strings must send \(A\) to the same state \(s_i\):
 \end{figure}
 
 It follows (by removing the \(a\)’s shown in color) that the automaton must accept a string of the form \(a^k\), where 
-\(m^2 < k < (m + 1)^2\).
+\(m^2 < k < (m + 1)^2\). This is a contradiction.
 \end{proof}
 
 \subsection{Exercise 54}
@@ -1302,7 +1392,25 @@ complement of a regular language is regular by proving the following: If \(L(A)\
 finite-state automaton \(A\), then there is a finite-state automaton \(A'\) that accepts the complement of \(L(A)\).
 
 \begin{proof}
-{\it ???}
+The idea is to construct a new automaton out of \(A\) so that, at any state, if an input would be rejected by \(A\), we send
+that input to a new accepting state in \(A'\). We can construct \(A'\) as follows. 
+
+Let \(s_0, \ldots, s_n\) be the states of \(A\).
+
+\(A'\) starts with the same initial state, \(s_0\), as \(A\). It has only one accepting state, say \(z\), that is different 
+than each \(s_0, \ldots, s_n\). Convert all accepting states of \(A\) to non-accepting states in \(A'\).
+
+Now each state in \(A\) has transitions with input characters in \(\Sigma\). For example, say \(s_0\) has transitions to 
+other states with inputs \(c_0^1, c_0^2, \ldots, c_0^{k_0}\). In \(A'\), add a transition from \(s_0\) to the accepting 
+state \(z\) with an arrow for \(\Sigma - \{c_1, \ldots, c_{k_0}\}\). This means that every input that is rejected 
+after the initial state by \(A\) is accepted by \(A'\).
+
+Continue in this manner for the rest of the states \(s_1, \ldots, s_n\), adding a transition from each \(s_i\) to \(z\)
+for all inputs in the complement set \(\Sigma - \{c_i^1, \ldots, c_i^{k_i}\}\) where \(c_i^1, \ldots, c_i^{k_i}\) are 
+inputs that transition from \(s_i\) to another state in \(A\).
+
+Then by construction, \(A'\) accepts exactly the set of inputs that are rejected by \(A\), in other words the complement of
+the set of inputs accepted by \(A\).
 \end{proof}
 
 \subsubsection{(b)}
@@ -1312,7 +1420,14 @@ accepts \((L(A_1))^c \cup (L(A_2))^c\). Then use one of De Morgan’s laws for s
 and the result of part (a) to prove that there is an automaton that accepts \(L(A_1) \cap L(A_2)\).
 
 \begin{proof}
-{\it ???}
+By part (a) there are automata \(A_1', A_2'\) that accept \((L(A_1))^c, (L(A_2))^c\), respectively.
+
+Then there is an automaton \(B\) that accepts \((L(A_1))^c \cup (L(A_2))^c\). {\it Why ???}
+
+Then by part (a) there is an automaton \(C\) that accepts 
+\([(L(A_1))^c \cup (L(A_2))^c]^c\).
+
+So \(C\) accepts \(L(A_1) \cap L(A_2)\) because \(L(A_1) \cap L(A_2) = [(L(A_1))^c \cup (L(A_2))^c]^c\) by De Morgan laws.
 \end{proof}
 
 \section{Exercise Set 12.3}
