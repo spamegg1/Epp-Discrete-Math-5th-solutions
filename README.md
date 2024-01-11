@@ -2,9 +2,9 @@
 
 [Bjarne Stroustrup on the importance of Mathematics and Computer Science fundamentals](https://www.youtube.com/watch?v=-QxI-RP6-HM)
 
-(INCOMPLETE, IN PROGRESS) Solutions to Susanna Epp's [Discrete Mathematics 5th Edition](https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B07M87BWRC)
+Solutions to Susanna Epp's [Discrete Mathematics 5th Edition](https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B07M87BWRC)
 
-**This is much gentler than Math for CS, and covers the same material.**
+**This is much gentler than [MIT Math for CS](https://github.com/spamegg1/Math-for-CS-solutions), and covers the same material.**
 
 Please feel free to [open a discussion](https://github.com/spamegg1/Epp-Discrete-Math-5th-solutions/discussions) if you spot an error or a typo!
 
