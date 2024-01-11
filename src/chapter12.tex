@@ -1600,7 +1600,7 @@ Are the automata \(A\) and \(A'\) shown below equivalent?
 \end{figure}
 
 \begin{proof}
-Yes. For A: \\
+Yes. For \(A\): \\
 0-equivalence classes: \(\{s_0, s_2\}, \{s_1, s_3\}\) \\
 1-equivalence classes: \(\{s_0\}, \{s_2\}, \{s_1, s_3\}\) \\
 2-equivalence classes: \(\{s_0\}, \{s_2\}, \{s_1, s_3\}\)
@@ -1624,9 +1624,9 @@ Transition diagram for \(\overline{A'}\):
 \includegraphics[scale=0.5]{../images/12.3.7.b.png}
 \end{figure}
 
-Except for the labeling of the states, the transition diagrams for \(A\) and \(A'\) are identical. Hence \(A\) and \(A\) 
-accept the same language, and so, by Theorem 12.3.3, \(A\) and \(A'\) also accept the same language. Thus \(A\) and \(A'\) 
-are equivalent automata.
+Except for the labeling of the states, the transition diagrams for \(\overline{A}\) and \(\overline{A'}\) are identical. 
+Hence \(\overline{A}\) and \(\overline{A'}\) accept the same language, and so, by Theorem 12.3.3, \(A\) and \(A'\) also 
+accept the same language. Thus \(A\) and \(A'\) are equivalent automata.
 \end{proof}
 
 \subsection{Exercise 8}
@@ -1638,7 +1638,28 @@ Are the automata \(A\) and \(A'\) shown below equivalent?
 \end{figure}
 
 \begin{proof}
-{\it ???}
+No. For \(A\): \\
+0-equivalence classes: \(\{s_0, s_1, s_3\}, \{s_2, s_4\}\) \\
+1-equivalence classes: \(\{s_0, s_1\}, \{s_3\}, \{s_2, s_4\}\) \\
+2-equivalence classes: \(\{s_0, s_1\}, \{s_3\}, \{s_2, s_4\}\) 
+
+\(\overline{A}\) has three states \([s_0]\) (start), \([s_2]\) (accepting), \([s_3]\). Transitions for \(\overline{A}\): 
+
+\([s_0] \overset{0}{\to} [s_3]\), \([s_0] \overset{1}{\to} [s_2]\), \([s_2] \overset{0}{\to} [s_0]\), 
+\([s_2] \overset{1}{\to} [s_2]\), \([s_3] \overset{0}{\to} [s_2]\), \([s_3] \overset{1}{\to} [s_0]\).
+
+For \(A'\): \\
+0-equivalence classes: \(\{s_0', s_1', s_2', s_3'\}, \{s_4'\}\) \\
+1-equivalence classes: \(\{s_0', s_2'\}, \{s_1', s_3'\}, \{s_4'\}\) \\
+2-equivalence classes: \(\{s_0', s_2'\}, \{s_1', s_3'\}, \{s_4'\}\)
+
+\(\overline{A'}\) has 3 states \([s_0']\) (start), \([s_1'],[s_4']\) (accepting). Transitions for \(\overline{A'}\): 
+
+\([s_0'] \overset{0}{\to} [s_4']\), \([s_0'] \overset{1}{\to} [s_1']\), \([s_1'] \overset{0}{\to} [s_0']\), 
+\([s_1'] \overset{1}{\to} [s_4']\), \([s_4'] \overset{0}{\to} [s_0']\), \([s_4'] \overset{1}{\to} [s_4']\).
+
+The input string 0 is accepted by \(\overline{A'}\) but rejected by \(\overline{A}\). Similarly the input string 1 is 
+accepted by \(\overline{A}\) but rejected by \(\overline{A'}\).
 \end{proof}
 
 \subsection{Exercise 9}
@@ -1680,15 +1701,36 @@ Are the automata \(A\) and \(A'\) shown below equivalent?
 \end{figure}
 
 \begin{proof}
-{\it ???}
+For \(A\): \\
+0-equivalence classes: \(\{s_0, s_1, s_2, s_3\}, \{s_4\}\) \\
+1-equivalence classes: \(\{s_0, s_1, s_2\}, \{s_3\}, \{s_4\}\) \\
+2-equivalence classes: \(\{s_0\}, \{s_1, s_2\}, \{s_3\}, \{s_4\}\) \\
+3-equivalence classes: \(\{s_0\}, \{s_1, s_2\}, \{s_3\}, \{s_4\}\)
+
+Therefore, the states of \(\overline{A}\) are the 2-equivalence classes of \(A\).
+
+For \(A'\): \\
+0-equivalence classes: \(\{s'_0, s'_1, s'_3\}, \{s'_2, s'_4\}\) \\
+1-equivalence classes: \(\{s'_0\}, \{s'_1\}, \{s'_3\}, \{s'_2, s'_4\}\) \\
+2-equivalence classes: \(\{s'_0\}, \{s'_1\}, \{s'_3\}, \{s'_2\}, \{s'_4\}\)
+
+Therefore, the states of \(\overline{A'}\) are the 2-equivalence classes of \(A'\).
+
+\(\overline{A}\) has 4 states while \(\overline{A'}\) has 5 states, so they are not equivalent.
 \end{proof}
 
 \subsection{Exercise 11}
 Prove property (12.3.1).
 \begin{proof}
-{\it Partial answer:} Suppose \(A\) is a finite-state automaton with set of states \(S\) and relation \(R^*\) of 
-\(*\)-equivalence of states. {\it [To show that \(R^*\) is an equivalence relation, we must show that \(R\) is reflexive, 
-symmetric, and transitive.]}
+Suppose \(A\) is a finite-state automaton with set of states \(S\) and relation \(R^*\) of \(*\)-equivalence of states. 
+Let \(N^*\) be the eventual-state function on \(A\).
+
+{\it [To show that \(R^*\) is an equivalence relation, we must show that \(R\) is reflexive, symmetric, and transitive.]}
+
+{\bf Proof that \(R^*\) is reflexive:} {\it [We must show that for all states \(s\), \(sR^*s\).]}
+
+For every input string \(w\), \(N^*(s, w)\) is an accepting state \(\iff\) \(N^*(s, w)\) is an accepting state. Therefore
+\(sR^*s\).
 
 {\bf Proof that \(R^*\) is symmetric:} {\it [We must show that for all states \(s\) and \(t\), if \(sR^*t\) then \(tR^*s\).]}
 
@@ -1697,12 +1739,28 @@ Suppose that \(s\) and \(t\) are any states of \(A\) such that \(sR^*t\). {\it [
 
 \(N^*(s, w)\) is an accepting state \(\iff\) \(N^*(t, w)\) is an accepting state,
 
-where \(N^*\) is the eventual-state function on \(A\). It follows from the symmetry of the \(\iff\) relation that for 
+It follows from the symmetry of the \(\iff\) relation that for 
 every input string \(w\), 
 
 \(N^*(t, w)\) is an accepting state \(\iff\) \(N^*(s, w)\) is an accepting state.
 
 Hence \(tR^*s\) {\it [as was to be shown]}, and so \(R^*\) is symmetric.
+
+{\bf Proof that \(R^*\) is transitive:} {\it [We must show that for all states \(s, t\) and \(u\), if \(sR^*t\) and 
+\(tR^*u\) then \(sR^*u\).]}
+
+Suppose that \(s, t\) and \(u\) are states such that \(sR^*t\) and \(tR^*u\). {\it [We must show that \(sR^*u\).]} Since 
+\(sR^*t\) and \(tR^*u\), then for every input string \(w\),
+
+\(N^*(s, w)\) is an accepting state \(\iff\) \(N^*(t, w)\) is an accepting state, and
+
+\(N^*(t, w)\) is an accepting state \(\iff\) \(N^*(u, w)\) is an accepting state.
+
+It follows from the transitivity of the \(\iff\) relation that for every input string \(w\), 
+
+\(N^*(s, w)\) is an accepting state \(\iff\) \(N^*(u, w)\) is an accepting state.
+
+Hence \(sR^*u\) {\it [as was to be shown]}, and so \(R^*\) is transitive.
 \end{proof}
 
 \subsection{Exercise 12}
@@ -1723,28 +1781,53 @@ partition of the set of all states of the automaton.
 \end{proof}
 
 \subsection{Exercise 14}
-Prove property (12.3.4).
+Prove property (12.3.4): For each integer \(k \geq 1\), if two states are \(k\)-equivalent, then they are also \((k - 1)\) 
+equivalent.
+
 \begin{proof}
-{\it ???}
+1. Assume two states \(s\) and \(t\) are \(k\)-equivalent.
+
+2. By 1 and definition of equivalence, for every input string \(w\) of length less than or equal to \(k\), either 
+\(N^*(s, w)\) and \(N^*(t, w)\) are both accepting states or they are both non-accepting states.
+
+3. By 2, for every input string \(w\) of length less than or equal to \(k-1\), either \(N^*(s, w)\) and \(N^*(t, w)\) are 
+both accepting states or they are both non-accepting states.
+
+4. By 4 and definition of equivalence, \(s\) and \(t\) are \(k - 1\)-equivalent.
 \end{proof}
 
 \subsection{Exercise 15}
-Prove property (12.3.5).
+Prove property (12.3.5): For each integer \(k \geq 1\), each \(k\)-equivalence class is a subset of a 
+\((k - 1)\)-equivalence class.
+
 \begin{proof}
-Hint 1: Suppose Ck is a particular but arbitrarily chosen \(k\)-equivalence class. You must show that there is a 
-\((k - 1)\)-equivalence class \(C_{k-1}\) such that \(C_k \subseteq C_{k-1}\).
+Suppose \(C_k\) is a particular but arbitrarily chosen \(k\)-equivalence class. We must show that there is a \((k - 1)\)-
+equivalence class \(C_{k-1}\) such that \(C_k \subseteq C_{k-1}\).
 
 If \(s\) is any element in \(C_k\), then \(s\) is a state of the automaton. Now the \((k - 1)\)-equivalence classes 
 partition the set of all states of the automaton into a union of mutually disjoint subsets, so \(s \in C_{k-1}\) for some 
 \((k - 1)\)-equivalence class \(C_{k-1}\).
 
-To show that \(C_k \subseteq C_{k-1}\), you must show that for any state \(t\), if \(t \in C_k\), then \(t \in C_{k-1}\).
+To show that \(C_k \subseteq C_{k-1}\), we must show that for any state \(t\), if \(t \in C_k\), then \(t \in C_{k-1}\).
+
+Assume \(t \in C_k\). Then \(t\) is \(k\)-equivalent to \(s\). By the previous exercise, \(t\) is \(k-1\)-equivalent to \(s\)
+so \(t \in C_{k-1}\).
 \end{proof}
 
 \subsection{Exercise 16}
-Prove property (12.3.6).
+Prove property (12.3.6): Any two states that are \(k\)-equivalent for every integer \(k \geq 0\) are *-equivalent.
+
 \begin{proof}
-{\it ???}
+1. Assume \(s\) and \(t\) are two states that are \(k\)-equivalent for every integer \(k \geq 0\).
+
+2. By 1 and definition of equivalence, for every integer \(k \geq 0\), for every input string \(w\) of length less than or 
+equal to \(k\), either \(N^*(s, w)\) and \(N^*(t, w)\) are 
+both accepting states or they are both non-accepting states.
+
+3. By 2, for every input string \(w\) (of any length), either \(N^*(s, w)\) and \(N^*(t, w)\) are both accepting states or 
+they are both non-accepting states.
+
+4. By 3 and definition of \(*\)-equivalence, \(s\) and \(t\) are \(*\)-equivalent.
 \end{proof}
 
 \subsection{Exercise 17}
@@ -1752,23 +1835,52 @@ Prove that if two states of a finite-state automaton are \(k\)-equivalent for so
 \(m\)-equivalent for every nonnegative integer \(m < k\).
 
 \begin{proof}
-If \(m < k\), then every input string of length less than or equal to \(m\) has length less than or equal to \(k\).
+1. Assume two states of a finite-state automaton are \(k\)-equivalent for some integer \(k\).
+
+2. By 1 and exercise 14 above, they are also \(k-1\) equivalent (provided \(k-1 \geq 0\)).
+
+3. By 2 and exercise 14 again, they are also \(k-2\) equivalent (provided \(k-2 \geq 0\)).
+
+4. And so on. So we can see that they are \(m\)-equivalent for every nonnegative integer \(m < k\).
 \end{proof}
 
 \subsection{Exercise 18}
-Write a complete proof of property (12.3.7).
+Write a complete proof of property (12.3.7): No \(*\)-equivalence class of states of \(A\) can contain both 
+accepting and non-accepting states.
 
 \begin{proof}
-{\it ???}
+1. Argue by contradiction and assume a \(*\)-equivalence class \(C\) of \(A\) contains an accepting state \(s\) and a 
+non-accepting state \(t\).
+
+2. By Theorem 12.3.2 there is an integer \(K \geq 0\) such that the \(*\)-equivalence classes of \(A\) are the same as
+the \(K\)-equivalence classes. So \(C\) is a \(K\)-equivalence class of \(A\), and \(s\) and \(t\) are \(K\)-equivalent.
+
+3. By the previous exercise, \(s\) and \(t\) are \(m\)-equivalent for every nonnegative \(m < K\). In particular,
+\(s\) and \(t\) are 0-equivalent.
+
+4. By definition of 0-equivalence, either \(s\) and \(t\) are both accepting or both non-accepting, a contradiction.
+
+5. So our supposition in 1 was false, therefore the claim is true. No \(*\)-equivalence class can contain both an accepting
+and a non-accepting state.
 \end{proof}
 
 \subsection{Exercise 19}
-Write a complete proof of property (12.3.8).
+Write a complete proof of property (12.3.8): If two states are \(*\)-equivalent, then their next-states are also 
+\(*\)-equivalent for each input symbol \(m\).
 
 \begin{proof}
-Suppose two states \(s\) and \(t\) are equivalent. We must show that for any input symbol \(m\), the next-states 
-\(N(s, m)\) and \(N(t, m)\) are equivalent. To do this, use the definition of equivalence and the fact that for any string 
-\(w'\), input symbol \(m\), and state \(s\), \(N^*(N(s, m), w') = N^*(s, mw')\).
+Suppose two states \(s\) and \(t\) are \(*\)-equivalent. We must show that for any input symbol \(m\), the next-states 
+\(N(s, m)\) and \(N(t, m)\) are \(*\)-equivalent. 
+
+By definition of eventual-state function, for any string \(w\) and input symbol \(m\), we have 
+\[
+N^*(N(s, m), w) = N^*(s, mw) \text{ and } N^*(N(t, m), w) = N^*(t, mw).
+\]
+Since \(s\) and \(t\) are \(*\)-equivalent, by definition of equivalence, \(N^*(s, w') = N^*(t, w')\) for all input strings 
+\(w'\). So we can let \(w' = mw\) to get \(N^*(s, mw) = N^*(t, mw)\).
+
+Then by transitivity of equality, \(N^*(N(s, m), w) = N^*(N(t, m), w)\). Since this is true for any string \(w\), we showed
+that \(N(s, m)\) and \(N(t, m)\) are \(*\)-equivalent. 
 \end{proof}
 
 \end{document}
