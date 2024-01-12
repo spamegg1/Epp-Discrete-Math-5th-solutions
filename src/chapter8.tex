@@ -1077,11 +1077,14 @@ Let \(A = \R \times \R\). A relation {\bf S} is defined on \(A\) as follows: For
 \) in \(A, (x_1, y_1) \textbf{S} (x_2, y_2) \iff y_1 = y_2\).
 
 \begin{proof}
-{\bf S is reflexive:}
+{\bf S is reflexive:} \((x, y) \textbf{S} (x, y)\) because \(y = y\).
 
-{\bf S is symmetric:}
+{\bf S is symmetric:} Assume \((x_1, y_1) \textbf{S} (x_2, y_2)\). Then \(y_1 = y_2\). So \(y_2 = y_1\). 
 
-{\bf S is transitive:}
+So \((x_2, y_2) \textbf{S} (x_1, y_1)\).
+
+{\bf S is transitive:} Assume \((x_1, y_1) \textbf{S} (x_2, y_2)\) and \((x_2, y_2) \textbf{S} (x_3, y_3)\). Then
+\(y_1 = y_2\) and \(y_2 = y_3\). So \(y_1 = y_3\). So \((x_1, y_1) \textbf{S} (x_3, y_3)\).
 \end{proof}
 
 \subsection{Exercise 30}
