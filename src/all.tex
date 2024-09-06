@@ -3296,25 +3296,25 @@ $(p \to (q \to r)) \bic ((p \wedge q) \to r)$
 
 \begin{proof}
 $$
-\begin{array}{|ccc|c|c|c|}
+\begin{array}{|ccc|c|c|c|c|c|}
 \hline
-p & q & r & p \to r & q \to r & (p \to r) \bic (q \to r) \\
+p & q & r & q \to r & p \to (q \to r) & (p \wedge q) & (p \wedge q) \to r & (p \to (q \to r)) \bic ((p \wedge q) \to r) \\
 \hline
-T & T & T & T & T & T \\
+T & T & T & T & T & T & T & T\\
 \hline
-T & T & F & F & F & T \\
+T & T & F & F & F & T & F & T\\
 \hline
-T & F & T & T & T & T \\
+T & F & T & T & T & F & T & T\\
 \hline
-T & F & F & F & T & F \\
+T & F & F & T & T & F & T & T\\
 \hline
-F & T & T & T & T & T \\
+F & T & T & T & T & F & T & T\\
 \hline
-F & T & F & T & F & F \\
+F & T & F & F & T & F & T & T\\
 \hline
-F & F & T & T & T & T \\
+F & F & T & T & T & F & T & T\\
 \hline
-F & F & F & T & T & T \\
+F & F & F & T & T & F & T & T\\
 \hline
 \end{array}
 $$
