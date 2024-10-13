@@ -21,7 +21,6 @@ Contact me: `spamegg1` on Discord, or [on Slack](https://join.slack.com/t/spameg
 ## TODO
 
 - Add [Github actions](https://github.com/marketplace/actions/github-action-for-latex)
-- Fix [typo](https://github.com/spamegg1/Epp-Discrete-Math-5th-solutions/discussions/10)
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
