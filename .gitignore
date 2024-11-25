@@ -269,4 +269,5 @@ TSWLatexianTemp*
 
 # other stuff
 src/chapter*
+src/*.pdf
 
