@@ -7,6 +7,12 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: Create tag
+        id: create_tag
+        run: |
+          tag_name="v1.0.${{ github.run_number }}"
+          git tag $tag_name
+          git push origin $tag_name
       - name: Set up Git repository
         uses: actions/checkout@v4
       - name: Compile LaTeX document
@@ -20,12 +26,6 @@ jobs:
       #   with:
       #     name: Epp
       #     path: src/all.pdf
-      # - name: Create tag
-      #   id: create_tag
-      #   run: |
-      #     tag_name="v1.0.${{ github.run_number }}"
-      #     git tag $tag_name
-      #     git push origin $tag_name
       - name: Release
         uses: softprops/action-gh-release@v2.1.0
         if: startsWith(github.ref, 'refs/tags/')
