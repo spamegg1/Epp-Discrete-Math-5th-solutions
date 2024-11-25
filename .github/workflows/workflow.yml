@@ -35,9 +35,12 @@ jobs:
           git tag $tag_name
           git push origin $tag_name
       - name: Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v2.1.0
         if: startsWith(github.ref, 'refs/tags/')
         with:
+          make_latest: true
+          generate_release_notes: true
+          preserve_order: true
           files: |
             src/all.pdf
             src/chapter1.pdf
