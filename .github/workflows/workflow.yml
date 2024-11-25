@@ -25,9 +25,15 @@ jobs:
             chapter11.tex
             chapter12.tex
           latexmk_shell_escape: true
+      - name: Create tag
+        id: create_tag
+        run: |
+          tag_name="v1.0.${{ github.run_number }}"
+          git tag $tag_name
+          git push origin $tag_name
       - name: Release
         uses: softprops/action-gh-release@v2
-        # if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             src/all.pdf
@@ -43,3 +49,5 @@ jobs:
             src/chapter10.pdf
             src/chapter11.pdf
             src/chapter12.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
