@@ -1,0 +1,31 @@
+name: Build LaTeX document
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            src/all.tex
+            src/chapter1.tex
+            src/chapter2.tex
+            src/chapter3.tex
+            src/chapter4.tex
+            src/chapter5.tex
+            src/chapter6.tex
+            src/chapter7.tex
+            src/chapter8.tex
+            src/chapter9.tex
+            src/chapter10.tex
+            src/chapter11.tex
+            src/chapter12.tex
+          latexmk_shell_escape: true
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: main.pdf
