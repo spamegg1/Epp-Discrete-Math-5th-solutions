@@ -28,7 +28,7 @@ jobs:
       #     path: src/all.pdf
       - name: Release
         uses: softprops/action-gh-release@v2.1.0
-        if: startsWith(github.ref, 'refs/tags/')
+        # if: startsWith(github.ref, 'refs/tags/')
         with:
           make_latest: true
           generate_release_notes: true
