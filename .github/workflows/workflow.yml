@@ -7,14 +7,14 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
       - name: Create tag
         id: create_tag
         run: |
           tag_name="v1.0.${{ github.run_number }}"
           git tag $tag_name
           git push origin $tag_name
-      - name: Set up Git repository
-        uses: actions/checkout@v4
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
