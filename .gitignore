@@ -268,5 +268,5 @@ TSWLatexianTemp*
 *.sta
 
 # other stuff
-/src/*.pdf
-/src/__latexindent_temp_all.tex
+src/chapter*
+
