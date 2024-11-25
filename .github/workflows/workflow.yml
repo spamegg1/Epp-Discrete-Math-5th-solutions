@@ -25,8 +25,21 @@ jobs:
             chapter11.tex
             chapter12.tex
           latexmk_shell_escape: true
-      # - name: Upload PDF file
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: PDF
-      #     path: main.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        # if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            src/all.pdf
+            src/chapter1.pdf
+            src/chapter2.pdf
+            src/chapter3.pdf
+            src/chapter4.pdf
+            src/chapter5.pdf
+            src/chapter6.pdf
+            src/chapter7.pdf
+            src/chapter8.pdf
+            src/chapter9.pdf
+            src/chapter10.pdf
+            src/chapter11.pdf
+            src/chapter12.pdf
