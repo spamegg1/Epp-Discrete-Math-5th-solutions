@@ -12,6 +12,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          working_directory: src
           root_file: Epp.tex
           latexmk_shell_escape: true
       - name: Release
@@ -21,6 +22,6 @@ jobs:
           make_latest: true
           generate_release_notes: true
           preserve_order: true
-          files: Epp.pdf
+          files: src/Epp.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
