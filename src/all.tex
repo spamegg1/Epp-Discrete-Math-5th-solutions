@@ -19913,21 +19913,47 @@ A group of people are positioned so that the distance between any two people is 
 {\it Hint:} Let $P(n)$ be the sentence: If (1) $2n + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone. Use mathematical induction to prove that $P(n)$ is true for each integer $n \geq 1$.
 
 \begin{proof}
-(following the Hint) Let $P(n)$ be the sentence: ``If (1) $2n + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone.''
+    (following the Hint) Let $P(n)$ be the sentence: ``If (1) $2n + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone.''
 
-{\bf Show that $P(0)$ is true:} $P(0)$ says: ``If (1) $2 \cdot 0 + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone.''
+    {\bf Show that $P(0)$ is true:} $P(0)$ says: ``If (1) $2 \cdot 0 + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone.''
 
-Now the group has only $2 \cdot 0 + 1 = 1$ person and this person does not receive a message from anyone. So $P(0)$ is true.
+    Now the group has only $2 \cdot 0 + 1 = 1$ person and this person does not receive a message from anyone. So $P(0)$ is true.
 
-{\bf Show that for every integer $k \geq 0$ if $P(k)$ is true then $P(k+1)$ is true:}
+    {\bf Show that for every integer $k \geq 0$ if $P(k)$ is true then $P(k+1)$ is true:}
 
-Suppose $k\geq 0$ is an integer such that $P(k)$ is true: if (1) $2k + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and if (2) each person sends a message to their nearest neighbor, then there is at least one person who does not receive a message from anyone. {\it [We want to show $P(k+1)$ is true.]}
+    To prove that $P(k+1)$, let us first consider the pair in the group of $2k+3$ people with the minimum distance.
 
-To prove $P(k+1)$, suppose (1) $2(k+1) + 1$ people are all positioned so that the distance between any two people is different from the distance between any two other people, and (2) each person sends a message to their nearest neighbor.
+    Let's call this pair Group A, and the other $2k+1$ people Group B.
 
-{\it [Then we want to show there is at least one person who does not receive a message from anyone.]}
+    We know that the pair in Group A will send a message only to each other, because the pair's distance is the minimum among all other possible pairs in both Group A and B.
 
-{\it [how to continue ??? Remove two people, use inductive hypothesis?]}
+    We also know that it's possible that either Group A doesn't receive a message from Group B, or Group A receives at least $1$ and at most $2k+1$ messages from Group B.
+
+    Let us consider each cases.
+
+    {\bf Case 1: Group A doesn't receive a message from Group B}
+
+    Notice that Group B has $2k+1$ people in it, have unique distances between any two people in it, and every people in it sends a message to their nearest neighbor in the same group.
+
+    So, by $P(k)$, we know that Group B has at least one person who doesn't receive a message.
+
+    Therefore, in the entire group of $2k+3$ people, at least one person does not receive a message.
+
+    {\bf Case 2: Group A receives at least $1$ and at most $2k+1$ message from Group B }
+
+    Let $m$ be the number of messages Group A received from Group B.
+
+    If $m$ people in Group B send messages to Group A, then only $2k+1-m$ messages remain for people within Group B.
+
+    Since $1 \leq m \leq 2k+1$, it follows that $2k+1-m < 2k+1$
+
+    Thus, not all $2k+1$ people in Group B can receive messages. At least one person in Group B does not receive a message.
+
+    Therefore, in the entire group of $2k+3$ people, at least one person does not receive a message.
+
+    In both cases, at least one person in the group of $2k+3$ people does not receive a message.
+
+    Hence, $P(k+1)$ is true.
 \end{proof}
 
 \subsubsection{Exercise 42}
