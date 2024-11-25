@@ -13,20 +13,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           working_directory: src
-          root_file: |
-            all.tex
-            chapter1.tex
-            chapter2.tex
-            chapter3.tex
-            chapter4.tex
-            chapter5.tex
-            chapter6.tex
-            chapter7.tex
-            chapter8.tex
-            chapter9.tex
-            chapter10.tex
-            chapter11.tex
-            chapter12.tex
+          root_file: all.tex
           latexmk_shell_escape: true
       - name: Create tag
         id: create_tag
@@ -41,19 +28,6 @@ jobs:
           make_latest: true
           generate_release_notes: true
           preserve_order: true
-          files: |
-            src/all.pdf
-            src/chapter1.pdf
-            src/chapter2.pdf
-            src/chapter3.pdf
-            src/chapter4.pdf
-            src/chapter5.pdf
-            src/chapter6.pdf
-            src/chapter7.pdf
-            src/chapter8.pdf
-            src/chapter9.pdf
-            src/chapter10.pdf
-            src/chapter11.pdf
-            src/chapter12.pdf
+          files: src/all.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
