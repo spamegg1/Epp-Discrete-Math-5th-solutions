@@ -4,6 +4,9 @@
 
 ***You can find the PDF file on the Releases page on the right 👉👉👉👉👉***
 
+(The version numbering got a bit messed up,
+make sure to get the "Latest", not the highest number.)
+
 ## About
 
 > ***It soon became clear that the unconscious instincts for logic and language which had enabled me to succeed were not shared by the large majority of my students.*** - Susanna Epp (author of [Discrete Mathematics with Applications, 5th edition](https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B07M87BWRC))
