@@ -5,6 +5,7 @@
 \usepackage{amsmath,mathtools,amsfonts,amsthm,amssymb,hyperref,cancel}
 \usepackage{geometry,latexsym,parskip,bookmark,mathtools,float}
 \usepackage{minted,tcolorbox,bm,pifont}
+\usepackage{tikz-network}
 
 % for the Power set P
 \usepackage[mathscr]{euscript}
@@ -19960,7 +19961,101 @@ A group of people are positioned so that the distance between any two people is 
 Show that for any (positive) even integer $n$, it is possible to find a group of $n$ people who are all positioned so that the distance between any two people is different from the distance between any other two people, so that each person sends a message to their nearest neighbor, and so that every person in the group receives a message from another person in the group.
 
 \begin{proof}
-{\it ???}
+Suppose $n$ is any {\it [particular but arbitrarily chosen]} even integer such that $n\ge2$. {\it [We must show that it is possible to find a group of n people who are all positioned so that the distance between any two people is different from the distance between any other two people, so that each person sends a message to their nearest neighbor, and so that every person in the group receives a message from another person in the group.]}
+
+Since $n$ is even, we can form $\frac{n}{2}$ pairs from the group of $n$ people.
+
+\begin{center}
+\begin{tikzpicture}
+\Vertex[y=2,label=$p_{1_1}$]{A}
+\Vertex[label=$p_{1_2}$]{B}
+\Vertex[x=1,y=2,label=$p_{2_1}$]{C}
+\Vertex[x=1,label=$p_{2_2}$]{D}
+\Vertex[x=2,y=2,label=$p_{3_1}$]{E}
+\Vertex[x=2,label=$p_{3_2}$]{F}
+\Text[x=3,y=1]{\ldots}
+\Vertex[x=4,y=2,label=$p_{\frac{n}{2}_1}$]{G}
+\Vertex[x=4,label=$p_{\frac{n}{2}_2}$]{H}
+
+\Edge(A)(B)
+\Edge(C)(D)
+\Edge(E)(F)
+\Edge(G)(H)
+\end{tikzpicture}
+\end{center}
+
+For each pair $p_i=(p_{i_1}, p_{i_2})$ in the $\frac{n}{2}$ pairs, where $1\le i \le \frac{n}{2}$, let us assign any distance $d_i$ between them such that we have not assigned that same distance on a different pair previously.
+
+\begin{center}
+\begin{tikzpicture}
+\Vertex[y=2,label=$p_{1_1}$]{A}
+\Vertex[label=$p_{1_2}$]{B}
+\Vertex[x=1,y=2,label=$p_{2_1}$]{C}
+\Vertex[x=1,label=$p_{2_2}$]{D}
+\Vertex[x=2,y=2,label=$p_{3_1}$]{E}
+\Vertex[x=2,label=$p_{3_2}$]{F}
+\Text[x=3,y=1]{\ldots}
+\Vertex[x=4,y=2,label=$p_{\frac{n}{2}_1}$]{G}
+\Vertex[x=4,label=$p_{\frac{n}{2}_2}$]{H}
+
+\Edge[label=$d_1$](A)(B)
+\Edge[label=$d_{2}$](C)(D)
+\Edge[label=$d_{3}$](E)(F)
+\Edge[label=$d_{\frac{n}{2}}$](G)(H)
+\end{tikzpicture}
+\end{center}
+
+We know that for each pair $p_i=(p_{i_1}, p_{i_2})$ in the $\frac{n}{2}$ pairs, where $1\le i \le \frac{n}{2}$, if the assigned distance between $p_{i_1}$ and $p_{i_2}$ is the minimum distance between $p_{i_1}$ and $p_{j_1}$, $p_{i_1}$ and $p_{j_2}$, $p_{i_2}$ and $p_{j_1}$, $p_{i_2}$ and $p_{j_2}$, where $1\le j \le\frac{n}{2}$ and $i\neq j$, then $p_{i_1}$ and $p_{i_2}$ will send messages to each other, and receive messages from each other.
+
+Let $k$ be the number of remaining unassigned pairs, we can make the antecedent of the above conditional statement true by simply assigning the remaining unassigned pairs by any distance $e_i$, where $0\le i\le k$, such that $e_i$ is greater than the maximum distance in the $\frac{n}{2}$ pairs, and we have not assigned $e_i$ on a different pair previously.
+
+\begin{center}
+\begin{tikzpicture}
+\Vertex[y=2,label=$p_{1_1}$]{A}
+\Vertex[label=$p_{1_2}$]{B}
+\Vertex[x=2,y=2,label=$p_{2_1}$]{C}
+\Vertex[x=2,label=$p_{2_2}$]{D}
+\Vertex[x=4,y=2,label=$p_{3_1}$]{E}
+\Vertex[x=4,label=$p_{3_2}$]{F}
+\Text[x=6,y=1]{\ldots}
+\Vertex[x=8,y=2,label=$p_{\frac{n}{2}_1}$]{G}
+\Vertex[x=8,label=$p_{\frac{n}{2}_2}$]{H}
+
+\Edge[label=$e_0$,color=red](A)(C)
+\Edge[label=$e_1$,color=red](A)(D)
+\Edge[label=$e_2$,color=red](A)(E)
+\Edge[label=$e_3$,color=red](A)(F)
+\Edge[label=$e_k$,color=red](A)(G)
+\Edge[label=$e_{k-1}$,color=red](A)(H)
+\Edge[label=$e_4$,color=red](B)(C)
+\Edge[label=$e_5$,color=red](B)(D)
+\Edge[label=$e_6$,color=red](B)(E)
+\Edge[label=$e_7$,color=red](B)(F)
+\Edge[label=$e_{k-2}$,color=red](B)(G)
+\Edge[label=$e_{k-3}$,color=red](B)(H)
+\Edge[label=$e_8$,color=red](C)(E)
+\Edge[label=$e_9$,color=red](C)(F)
+\Edge[label=$e_{k-4}$,color=red](C)(G)
+\Edge[label=$e_{k-5}$,color=red](C)(H)
+\Edge[label=$e_{10}$,color=red](D)(E)
+\Edge[label=$e_{11}$,color=red](D)(F)
+\Edge[label=$e_{k-6}$,color=red](D)(H)
+\Edge[label=$e_{k-7}$,color=red](D)(G)
+\Edge[label=$e_{k-8}$,color=red](E)(G)
+\Edge[label=$e_{k-9}$,color=red](E)(H)
+\Edge[label=$e_{k-10}$,color=red](F)(G)
+\Edge[label=$e_{k-11}$,color=red](F)(H)
+
+\Edge[label=$d_1$](A)(B)
+\Edge[label=$d_2$](C)(D)
+\Edge[label=$d_3$](E)(F)
+\Edge[label=$d_{\frac{n}{2}}$](G)(H)
+
+\Text[x=4,y=-1,fontsize=\small]{assigning $e_i$ $\forall$ $0\le i\le k$ to all remaining unassigned pairs}
+\end{tikzpicture}
+\end{center}
+
+By modus ponens, for all $p_i=(p_{i_1}, p_{i_2})$ in the $\frac{n}{2}$ pairs, where $1\le i \le \frac{n}{2}$, $p_{i_1}$ and $p_{i_2}$ will send messages to each other, and receive messages from each other. {\it[this is what we needed to show]}
 \end{proof}
 
 \subsubsection{Exercise 43}
@@ -19999,26 +20094,119 @@ W & B & W & B \\
 0 & 2 & 0 & 1 \\
 \hline
 \end{tabular}
+
+\begin{tabular}{|ccccc|c|}
+\hline
+\multicolumn{6}{|c|}{\cy Two Balls (2B)} \\
+\hline
+W & B & & W & B & Final Ball \\
+\hline
+2 & 0 & $\xRightarrow{WW}$ & 0 & 1 & B \\
+\hline
+1 & 1 & $\xRightarrow{WW}$ & 1 & 0 & W \\
+\hline
+0 & 2 & $\xRightarrow{WB}$ & 0 & 1 & B \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|ccccc|c|}
+\hline
+\multicolumn{6}{|c|}{\cy Three Balls (3B)} \\
+\hline
+W & B & & W & B & Final Ball (By 2B) \\
+\hline
+3 & 0 & $\xRightarrow{WW}$ & 1 & 1 & W \\
+\hline
+2 & 1 & $\xRightarrow{WW}$ & 0 & 2 & B \\
+  &   & $\xRightarrow{WB}$ & 2 & 0 & B \\
+\hline
+1 & 2 & $\xRightarrow{WB}$ & 1 & 1 & W \\
+  &   & $\xRightarrow{BB}$ & 1 & 1 & W \\
+\hline
+0 & 3 & $\xRightarrow{BB}$& 0 & 2 & B \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|ccccc|c|}
+\hline
+\multicolumn{6}{|c|}{\cy Four Balls} \\
+\hline
+W & B & & W & B & Final Ball (By 3B) \\
+\hline
+4 & 0 & $\xRightarrow{WW}$ & 2 & 1 & B \\
+\hline
+3 & 1 & $\xRightarrow{WW}$ & 1 & 2 & W \\
+  &   & $\xRightarrow{WB}$ & 3 & 0 & W \\
+\hline
+2 & 2 & $\xRightarrow{WW}$ & 0 & 3 & B \\
+  &   & $\xRightarrow{WB}$ & 2 & 1 & B \\
+  &   & $\xRightarrow{BB}$ & 2 & 1 & B \\
+\hline
+1 & 3 & $\xRightarrow{WB}$ & 1 & 2 & W \\
+  &   & $\xRightarrow{BB}$ & 1 & 2 & W \\
+\hline
+0 & 4 & $\xRightarrow{BB}$& 0 & 3 & B \\
+\hline
+\end{tabular}
+
 \arrayrulecolor{black} % change it back!
 
-\begin{proof}
-{\it ???}
-\end{proof}
 
 (b)
 Does the number of white balls seem to be predictive? Does the number of black balls seem to be predictive? Make a conjecture about the color of the ball at the end of the game given the numbers of white and black balls at the beginning.
 
 {\it Hint:} In all three cases when the urn initially contains an odd number of white balls, there is one white ball in the urn at the end of the game, and when the urn initially contains an even number of white balls, there is one black ball (i.e., zero white balls) in the urn at the end of the game.
 
-\begin{proof}
-{\it ???}
-\end{proof}
+{\bf Conjecture: } For an urn that contains $n \ge 1$ mixture of white and black balls, if the number of white balls initially is even, then the remaining ball will be black after the game ends. Otherwise, it will be white.
 
 (c)
 Use mathematical induction to prove the conjecture you made in part (b).
 
 \begin{proof}
-{\it ???}
+Let $S(n)$ be the sentence: For an urn that contains $n \ge 1$ mixture of white and black balls, if the number of white balls initially is even, then the remaining ball will be black after the game ends. Otherwise, it will be white.
+
+{\bf Show that $S(1)$ is true:} The urn contains one ball, this ball might be black or white.
+
+Let us consider each cases.
+
+{\bf Case 1: The ball is black.} Then the number of white balls initially is even (zero), the game ends as there is one ball in the urn, and the remaining ball is black, as expected.
+
+{\bf Case 2: The ball is white.} Then the number of white balls initially is odd (one), the game ends as there is one ball in the urn, and the remaining ball is white, as expected.
+
+For all cases, the remaining ball is consistent with S(1).
+
+Hence, S(1) is true.
+
+{\bf Show that $S(k) \implies S(k+1)$:} Let us first show that for any move, doing that move does not
+    change the parity of the number of white balls in the urn. (*)
+
+We know that in one move, the player randomly removes two balls. and adds one ball back in the urn with its color depending on the color of the two balls removed earlier.
+
+Let us consider all possible color combinations for the removed balls.
+
+{\bf Case 1: Both balls are black.} By the game rules, if player removes same color balls, then we need to put one black ball back in the urn. We did not change the number of white balls in the urn. Thus, we did not change the parity of white balls.
+
+{\bf Case 2: Both balls are white.} By the game rules, if player removes same color balls, then we need to put one black ball back in the urn. We know that removing an even amount to any number, in this case the number of white balls in the urn, doesn't change the parity of that number. Thus, we did not change the parity of white balls.
+
+{\bf Case 3: One ball is black, and the other is white.} By the game rules, if player removes different color balls, then we need to put one white ball back in the urn. We did not change the number of white balls in the urn. Thus, we did not change the parity of white balls.
+
+In all cases, the parity of the number of white balls stayed the same after one move.
+
+So * is true.
+
+Now, to show that $S(k+1)$, let us first note that we are able to do at least one move in the game with $k+1$ balls. Because $k \ge1$, so $k+1 \ge2$, and we need at least two balls to do one move.
+
+We know that $k+1$ balls can either have even or odd white balls.
+
+Let us consider each case.
+
+{\bf Case 1: There are even white balls in the $k+1$ balls.} After one move, we will end up with k balls, and we will end up with even white balls (By *). By $S(k)$, the remaining ball will be black.
+
+{\bf Case 2: There are odd white balls in the $k+1$ balls.} After one move, we will end up with k balls, and we will end up with odd white balls (By *). By $S(k)$, the remaining ball will be white.
+
+In all cases, the remaining ball is consistent with $S(k+1)$.
+
+Hence, $S(k+1)$ is true.
 \end{proof}
 
 \subsubsection{Exercise 44}
