@@ -1,10 +1,14 @@
-name: Build LaTeX document
-on: [push, pull_request]
+name: Release LaTeX document and source
+on:
+  pull_request:
+    types:
+      - closed
 permissions:
   contents: write
 
 jobs:
-  build_latex:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
