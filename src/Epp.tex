@@ -5268,11 +5268,11 @@ P&Q&R\\
 \hline
 1&1&1\\
 \hline
-1&0&0\\
+1&0&1\\
 \hline
-0&1&1\\
+0&1&0\\
 \hline
-0&0&0\\
+0&0&1\\
 \hline
 \end{array}
 $$
@@ -5308,19 +5308,19 @@ $$
 \hline
 P&Q&R&S\\
 \hline
-1&1&1&0\\
+1&1&1&1\\
 \hline
-1&1&0&1\\
+1&1&0&0\\
 \hline
-1&0&1&0\\
+1&0&1&1\\
 \hline
-1&0&0&0\\
+1&0&0&1\\
 \hline
 0&1&1&1\\
 \hline
-0&1&0&1\\
+0&1&0&0\\
 \hline
-0&0&1&0\\
+0&0&1&1\\
 \hline
 0&0&0&0\\
 \hline
@@ -6233,7 +6233,7 @@ $$
 1&0&1&0&1&0&0_\base{2}\\
 -&&1&0&1&1&1_\base{2}\\
 \hline
-& &1&1&0&1&0_\base{2}\\
+&1&1&1&1&0&1_\base{2}\\
 \end{array}
 $$
 \end{proof}
@@ -6364,7 +6364,7 @@ $11110010_\base{2}
 \begin{proof}
 Due to leading 1, this is a negative integer.
 
-$10111010_\base{2} \to $ flip the bits $\to 01000101_\base{2} \to$ add 1 $\to 01000110_\base{2} = 64 + 2 + 1 = 67_\base{10} = |-67|_\base{10}$. So the answer is $-67$.
+$10111010_\base{2} \to $ flip the bits $\to 01000101_\base{2} \to$ add 1 $\to 01000110_\base{2} = 64 + 4 + 2 = 70_\base{10} = |-70|_\base{10}$. So the answer is $-70$.
 \end{proof}
 
 {\bf \color{cyan} Use 8-bit two’s complements to compute the sums in $31-36$.}
