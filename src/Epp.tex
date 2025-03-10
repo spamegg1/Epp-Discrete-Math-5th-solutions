@@ -9382,7 +9382,13 @@ $\equiv \fa x({\sim\text{Circle}(x)} \vee \fa y({\sim\text{Square}(y)} \vee {\si
 There is a circle $x$ and there is a triangle $y$ such that $x$ has the same color as $y$.
 
 \begin{proof}
+a. False. All triangles are blue, and there are no blue circles.
 
+b. Formal version: $\te x(\text{Circle}(x) \wedge \te y(\text{Triangle}(y) \wedge \text{SameColor}(x, y)))$
+
+c. Formal negation: $\fa x({\sim\text{Circle}(x)} \vee {\sim \te y(\text{Triangle}(y) \wedge \text{SameColor}(y, x))})$
+
+$\equiv \fa x({\sim\text{Circle}(x)} \vee \fa y({\sim\text{Triangle}(y)} \vee {\sim\text{SameColor}(y, x)}))$
 \end{proof}
 
 {\bf \color{cyan} Let $P(x)$ and $Q(x)$ be predicates and suppose $D$ is the domain of $x$. In $55-58$, for the statement forms in each pair, determine whether (a) they have the same truth value for every choice of $P(x), Q(x)$, and $D$, or (b) there is a choice of $P(x), Q(x)$, and $D$ for which they have opposite truth values.}
