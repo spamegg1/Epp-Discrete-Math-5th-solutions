@@ -21,13 +21,12 @@ jobs:
           root_file: Epp.tex
           latexmk_shell_escape: true
       - name: Release
-        uses: softprops/action-gh-release@v2.1.0
+        uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: "v1.0.${{ github.run_number }}"
           make_latest: true
           generate_release_notes: true
           preserve_order: true
           files: src/Epp.pdf
-          token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
