@@ -7213,7 +7213,9 @@ $\fa$ equilateral triangles $x$, $x$ is isosceles.
 Every computer science student needs to take data structures.
 
 \begin{proof}
+$\fa x$ if $x$ is a computer science student, then $x$ needs to take data structures.
 
+$\fa$ computer science students $x$, $x$ needs to take data structures.
 \end{proof}
 
 \subsubsection{Exercise 24}
@@ -7356,7 +7358,9 @@ Let the domain of $x$ be the set $D$ of objects discussed in mathematics courses
 Pos(0)
 
 \begin{proof}
-0 is a positive real number. True.
+0 is a positive real number.
+
+This statement is false because 0 is not positive.
 \end{proof}
 
 (b)
@@ -8130,7 +8134,7 @@ Write the contrapositive for each of the following statements.
 If $n$ is prime, then $n$ is not divisible by any prime number from 2 through $\sqrt{n}$. (Assume that $n$ is a fixed integer.)
 
 \begin{proof}
-If $n$ is not divisible by any prime number from 2 through $\sqrt{n}$, then $n$ is not prime.
+If $n$ is divisible by any prime number from 2 through $\sqrt{n}$, then $n$ is not prime.
 \end{proof}
 
 (b)
@@ -8813,6 +8817,17 @@ given square $e$, which is black, you could take either triangle $f$ or $i$, whi
 given square $j$, which is blue, you could take either triangle $f$ or $h$, which are gray, or triangle $d$, which is black.
 
 In each case the chosen triangle has a different color from the given square.
+
+Statement (2) says that there is a triangle such that, no matter what square you choose, it will not be the same color as the triangle.
+
+This is false because the only triangles are $d, f$, and $i$, and
+
+given triangle $d$, which is black, you could take square $e$ which is also black; and
+
+given triangle $f$ or $i$, which are grey, you could take square $g$ or $h$ which are also grey.
+
+There is no triangle for which you cannot find a square of the same color.
+
 \end{proof}
 
 (b)
@@ -9369,7 +9384,13 @@ $\equiv \fa x({\sim\text{Circle}(x)} \vee \fa y({\sim\text{Square}(y)} \vee {\si
 There is a circle $x$ and there is a triangle $y$ such that $x$ has the same color as $y$.
 
 \begin{proof}
+a. False. All triangles are blue, and there are no blue circles.
 
+b. Formal version: $\te x(\text{Circle}(x) \wedge \te y(\text{Triangle}(y) \wedge \text{SameColor}(x, y)))$
+
+c. Formal negation: $\fa x({\sim\text{Circle}(x)} \vee {\sim \te y(\text{Triangle}(y) \wedge \text{SameColor}(y, x))})$
+
+$\equiv \fa x({\sim\text{Circle}(x)} \vee \fa y({\sim\text{Triangle}(y)} \vee {\sim\text{SameColor}(y, x)}))$
 \end{proof}
 
 {\bf \color{cyan} Let $P(x)$ and $Q(x)$ be predicates and suppose $D$ is the domain of $x$. In $55-58$, for the statement forms in each pair, determine whether (a) they have the same truth value for every choice of $P(x), Q(x)$, and $D$, or (b) there is a choice of $P(x), Q(x)$, and $D$ for which they have opposite truth values.}
