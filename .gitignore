@@ -271,3 +271,4 @@ TSWLatexianTemp*
 src/chapter*
 src/*.pdf
 src/__latexindent_temp_Epp.tex
+src/_minted-Epp
