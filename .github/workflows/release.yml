@@ -28,5 +28,6 @@ jobs:
           generate_release_notes: true
           preserve_order: true
           files: src/Epp.pdf
+          token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
