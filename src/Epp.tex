@@ -2236,7 +2236,7 @@ $$
 \hline T & F & F & F \\
 \hline F & T & T & T \\
 \hline F & F & T & F \\
-\hline 
+\hline
 \end{array}
 $$
 \end{proof}
@@ -3765,16 +3765,16 @@ They are converses of each other, therefore not logically equivalent.
 \subsubsection{Exercise 29}
 $p \to (q \vee r) \equiv (p \wedge {\sim q}) \to r$
 \begin{proof}
-The tautology is $(p \to (q \vee r)) \bic ((p \wedge {\sim q}) \to r)$. 
-$$ 
-\begin{array}{|ccc|c|c|c|c|c|c|} 
+The tautology is $(p \to (q \vee r)) \bic ((p \wedge {\sim q}) \to r)$.
+$$
+\begin{array}{|ccc|c|c|c|c|c|c|}
 \hline p & q & r & q \vee r & p \wedge
 {\sim q} & p \to (q \vee r) & p \wedge {\sim q} \to r & (p \to (q \vee r)) \bic
 ((p \wedge {\sim q}) \to r) \\ \hline T & T & T & T & F & T & T & T \\ \hline T
 & T & F & T & F & T & T & T \\ \hline T & F & T & T & T & T & T & T \\ \hline T
 & F & F & F & T & F & F & T \\ \hline F & T & T & T & F & T & T & T \\ \hline F
 & T & F & T & F & T & T & T \\ \hline F & F & T & T & F & T & T & T \\ \hline F
-& F & F & F & F & T & T & T \\ \hline 
+& F & F & F & F & T & T & T \\ \hline
 \end{array}
 $$
 \end{proof}
@@ -14379,19 +14379,32 @@ Let $t = k^2+k+r^2+r-s^2-s$. Now $t$ is an integer because it is a sum, product,
 For all odd integers $a$ and $b$, $b^2 - a^2 \neq 4$. ({\it Hint:} $b^2 - a^2 = (b + a)(b - a)$ and the only way to factor 4 is either $4 = 2\cdot2$ or $4 = 4\cdot1$.)
 
 \begin{proof}
-\underline{Proof by contradiction:} Suppose not. That is, suppose that there exist odd integers $a$ and $b$ such that $b^2 - a^2 = 4$. {\it [We must show that this supposition leads logically to a contradiction.]} Factoring gives that
+\underline{Proof by contradiction:} Suppose not.
+That is, suppose that there exist odd integers $a$ and $b$ such that $b^2 - a^2 = 4$.
+{\it [We must show that this supposition leads logically to a contradiction.]}
+
+By definition of odd, there exist integers \(k, l\) such that \(b = 2k+1\) and \(a = 2l+1\).
+
+Factoring gives that
 \[
-b^2 - a^2 = (b + a)(b - a) = 4.
+b^2 - a^2 = (b + a)(b - a) = (2k+1 + 2l+1)(2k+1 - (2l+1)) = (2(k+l+1))(2(k-l)) = 4(k+l+1)(k-l).
 \]
-Now $b > a$ because $b^2 - a^2 = 4 > 0$, and the only way to factor 4 is either $4 = 2\cdot2$ or $4 = 4\cdot1$. Hence either $b + a = b - a = 2$, or $b + a = 4$ and $b - a = 1$ or $b + a = 1$ and $b - a = 4$.
 
-In case $b + a = b - a = 2$, then $-a = a$ and so $a = 0$, which is not an odd integer.
+Therefore \(4(k+l+1)(k-l) = 4\) and \((k+l+1)(k-l) = 1\).
 
-In case $b + a = 4$ and $b - a = 1$, then $2b = 5$ and so $b = 5/2$, which is not an odd integer.
+Since \(k+l+1\) and \(k-l\) are both integers, there are only two possibilities:
 
-In case $b + a = 1$ and $b - a = 4$, then $2b = 5$ and so $b = 5/2$, which is not an odd integer.
+{\bf Case 1:} \(k+l+1 = 1\) and \(k-l = 1\). The first gives us \(k = -l\),
+substituting this into the second we get \(-2l = 1\) hence \(l = -1/2\)
+which is not an integer, contradiction.
 
-Thus there are no odd integers $a$ and $b$ such that $b^2 - a^2 - 4$, which contradicts the supposition. {\it [Hence the supposition is false and the given statement is true.]}
+{\bf Case 2:} \(k+l+1 = -1\) and \(k-l = -1\). The first gives us \(k = -l-2\),
+substituting this into the second we get \(-2l-2 = -1\) hence \(l = -1/2\)
+which is not an integer, contradiction.
+
+Thus there are no odd integers $a$ and $b$ such that $b^2 - a^2 - 4$,
+which contradicts the supposition.
+{\it [Hence the supposition is false and the given statement is true.]}
 \end{proof}
 
 \subsubsection{Exercise 17}
@@ -21296,8 +21309,8 @@ if $r = 2^n + m$, then given any set of $r$ people arranged in a circle and numb
 if one starts from person \#1 and goes repeatedly around the circle successively eliminating every second person, eventually only person \#$(2m + 1)$ will remain.
 
 \begin{proof}
-We observe that after eliminating $m$ people (every second person, 
-starting from \#1), we will have removed the people numbered 
+We observe that after eliminating $m$ people (every second person,
+starting from \#1), we will have removed the people numbered
 $\#2, \#4, \ldots,\#(2m)$ leaving person \#$(2m+1)$ next in line.
 
 We also know that:
@@ -21308,14 +21321,14 @@ We also know that:
     2m+1 &\le 2^n+m
 \end{align*}
 
-In other words, since $2m+1 \in [1,r]$, the elimination never loops 
-through the circle more than once; it terminates within the first 
-traversal. This means we don’t need to worry about adjusting for shifts 
+In other words, since $2m+1 \in [1,r]$, the elimination never loops
+through the circle more than once; it terminates within the first
+traversal. This means we don’t need to worry about adjusting for shifts
 caused by previously eliminated people in a second pass.
 
-After eliminating $m$ people, there are $2^n$ people remaining. 
-By part (b), when $2^n$ people remain in the circle and we start from 
-the current person — in this case, person \#$(2m + 1)$ — the last 
+After eliminating $m$ people, there are $2^n$ people remaining.
+By part (b), when $2^n$ people remain in the circle and we start from
+the current person — in this case, person \#$(2m + 1)$ — the last
 remaining person will be that same person.
 
 Therefore, the last remaining person is \#$(2m + 1)$, as required.
