@@ -1,15 +1,14 @@
 name: Release LaTeX document and source
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    tags:
+      - v*
 
 permissions:
   contents: write
 
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -23,7 +22,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2.3.2
         with:
-          tag_name: "v1.0.${{ github.run_number }}"
           make_latest: true
           generate_release_notes: true
           preserve_order: true
