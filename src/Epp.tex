@@ -4274,9 +4274,9 @@ $$
 \hline
 p & q & r & {\sim q} & {\sim r} & p \wedge q & p \wedge q \to {\sim r} & p \vee {\sim q} & {\sim q} \to p \\
 \hline
-T & T & T & F & \color{red} F & T & \color{cyan} T & \color{cyan} T & \color{cyan} T \\
+T & T & T & F & F & T & F & T & T \\
 \hline
-T & T & F & F & T & T & F & T & T \\
+T & T & F & F & \color{cyan} T & T & \color{cyan} T & \color{cyan} T & \color{cyan} T \\
 \hline
 T & F & T & T & \color{red} F & F & \color{cyan} T &
 \color{cyan} T & \color{cyan} T \\
@@ -5094,7 +5094,7 @@ Who did kill Sharky?
 \begin{proof}
 \begin{tabular}{rrll}
 (1) & & $p \to t$ & by premise (d) \\
-& & ${\sim p}$ & by premise (c) \\ & $\therefore$ & ${\sim p}$ & by modus tollens \\
+& & ${\sim t}$ & by premise (c) \\ & $\therefore$ & ${\sim p}$ & by modus tollens \\
 (2) & & ${\sim p}$ & by (1) \\
 & $\therefore$ & ${\sim p} \vee q$ & by generalization \\
 (3) & & ${\sim p} \vee q \to r$ & by premise (a) \\
@@ -6804,7 +6804,7 @@ The truth set is the set of all real numbers x with the property that $1 \leq x^
 Predicate: $1 \leq x^2 \leq 4$, domain: $\Z$
 
 \begin{proof}
-The truth set is $\{-2, -1, 0, 1, 2\}$.
+The truth set is $\{-2, -1, 1, 2\}$.
 \end{proof}
 
 \subsubsection{Exercise 6}
@@ -7173,28 +7173,28 @@ Rewrite the following statements so that the quantifier trails the rest of the s
 For any graph $G$, the total degree of $G$ is even.
 
 \begin{proof}
-The total degree of $G$ is even, for any graph $G$.
+The total degree of $G$ is even for any graph $G$.
 \end{proof}
 
 (b)
 For any isosceles triangle $T$, the base angles of $T$ are equal.
 
 \begin{proof}
-The base angles of $T$ are equal, for any isosceles triangle $T$.
+The base angles of $T$ are equal for any isosceles triangle $T$.
 \end{proof}
 
 (c)
 There exists a prime number $p$ such that $p$ is even.
 
 \begin{proof}
-$p$ is even, for some a prime number $p$.
+$p$ is even for some prime number $p$.
 \end{proof}
 
 (d)
 There exists a continuous function $f$ such that $f$ is not differentiable.
 
 \begin{proof}
-$f$ is not differentiable, for some continuous function $f$.
+$f$ is not differentiable for some continuous function $f$.
 \end{proof}
 
 \subsubsection{Exercise 22}
@@ -7204,7 +7204,7 @@ Rewrite each of the following statements in the form “$\fa \fbl x$, if \fbl th
 All Java programs have at least 5 lines.
 
 \begin{proof}
-$\fa x$, if $x$ is a Java program, then $x$ has at least 5 lines.
+$\fa$ program $x$, if $x$ is written in Java, then $x$ has at least 5 lines.
 \end{proof}
 
 (b)
@@ -7221,18 +7221,14 @@ Rewrite each of the following statements in the two forms “$\fa x$, if \fbl th
 All equilateral triangles are isosceles.
 
 \begin{proof}
-$\fa x$ if $x$ is an equilateral triangle, then $x$ is isosceles.
-
-$\fa$ equilateral triangles $x$, $x$ is isosceles.
+$\fa x$, if $x$ is an equilateral triangle, then $x$ is isosceles.
 \end{proof}
 
 (b)
 Every computer science student needs to take data structures.
 
 \begin{proof}
-$\fa x$ if $x$ is a computer science student, then $x$ needs to take data structures.
-
-$\fa$ computer science students $x$, $x$ needs to take data structures.
+$\fa x$, if $x$ is a computer science student, then $x$ needs to take data structures.
 \end{proof}
 
 \subsubsection{Exercise 24}
