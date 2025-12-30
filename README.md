@@ -4,9 +4,6 @@
 
 ***You can find the PDF file on the Releases page on the right 👉👉👉👉👉***
 
-(The version numbering got a bit messed up,
-make sure to get the "Latest", not the highest number.)
-
 ## About
 
 > ***It soon became clear that the unconscious instincts for logic and language which had enabled me to succeed were not shared by the large majority of my students.*** - Susanna Epp (author of [Discrete Mathematics with Applications, 5th edition](https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B07M87BWRC))
@@ -31,7 +28,7 @@ So, you do not have to include your compiled PDF in your pull requests.
 
 ### Compiling locally
 
-You don't need to do this for contributing, Github actions will take care of it for you on pull requests.
+You don't need to do this for contributing, Github Actions will take care of it for you on pull requests.
 
 But if you are compiling locally, you'll need:
 
