@@ -8705,10 +8705,9 @@ those shown.}
 $\fa$ color $C$, $\te$ an animal $A$ such that $A$ is colored $C$.
 
 \begin{proof}
-{\it Statement:} For every color, there is an animal of
-that color.
+{\it Replacing quantifiers:} For every color $C$, there is an animal $A$ such that $A$ is colored $C$.
 
-There are animals of every color.
+{\it Replacing variables (simplest form):} For every color, there is an animal of that color.
 
 {\it Negation:} $\te$ a color $C$ such that $\fa$ animal $A$, $A$ is not colored $C$.
 
@@ -8719,7 +8718,9 @@ For some color, there is no animal of that color.
 $\te$ a book $b$ such that $\fa$ person $p$, $p$ has read $b$.
 
 \begin{proof}
-{\it Statement:} There is a book that every person has read.
+{\it Replacing quantifiers:} There exists a book $b$ such that for every person $p$, $p$ has read $b$.
+
+{\it Replacing variables (simplest form):} There is a book that every person has read.
 
 {\it Negation:} There is no book that every person has read.
 
@@ -8730,15 +8731,9 @@ $\te$ a book $b$ such that $\fa$ person $p$, $p$ has read $b$.
 $\fa$ odd integer $n$, $\te$ an integer $k$ such that $n = 2k + 1$.
 
 \begin{proof}
-{\it Statement:} For every odd integer $n$, there is an integer $k$ such that $n = 2k + 1$.
+{\it Replacing quantifiers:} For every odd integer $n$, there exists an integer $k$ such that $n = 2k + 1$.
 
-Given any odd integer, there is another integer for which the given integer equals twice the other integer plus 1.
-
-Given any odd integer $n$, we can find another integer $k$ so that $n = 2k + 1$.
-
-An odd integer is equal to twice some other integer plus 1.
-
-Every odd integer has the form $2k + 1$ for some integer $k$.
+{\it Replacing variables (simplest form):} Every odd integer equals twice some integer plus 1.
 
 {\it Negation:} $\te$ an odd integer $n$ such that $\fa$ integer $k$, $n \neq 2k + 1$.
 
@@ -8752,9 +8747,9 @@ Some odd integer does not have the form $2k + 1$ for any integer $k$.
 $\te$ a real number $u$ such that $\fa$ real number $v$, $uv = v$.
 
 \begin{proof}
-{\it Statement:} There is a real number such that for every other real number, the product of the first real number and the second real number are equal.
+{\it Replacing quantifiers:} There exists a real number $u$ such that for every real number $v$, $uv = v$.
 
-There is a real number that is the identity element of multiplication.
+{\it Replacing variables (simplest form):} There is a real number which gives the same result when multiplied with any real number.
 
 {\it Negation:} $\fa$ real number $u$, $\te$ a real number $v$ such that $uv \neq v$.
 
@@ -8767,7 +8762,9 @@ Multiplication of real numbers has no identity element.
 $\fa r \in \Q$, $\te$ integers $a$ and $b$ such that $r = a/b$.
 
 \begin{proof}
-{\it Statement:} Every rational number can be written as the ratio of two integers.
+{\it Replacing quantifiers:} For all rational number $r$, there exist two integers $a$ and $b$ such that $r = a/b$.
+
+{\it Replacing variables (simplest form):} Every rational number can be written as the ratio of two integers.
 
 {\it Negation:} There is a rational number that cannot be written as the ratio of any two integers.
 \end{proof}
@@ -8776,14 +8773,9 @@ $\fa r \in \Q$, $\te$ integers $a$ and $b$ such that $r = a/b$.
 $\fa x \in \R$, $\te$ a real number $y$ such that $x + y = 0$.
 
 \begin{proof}
-{\it Statement:}
-For every real number $x$, there is a real number $y$ such that $x + y = 0$.
+{\it Replacing quantifiers:} For every real number $x$, there is a real number $y$ such that $x + y = 0$.
 
-Given any real number $x$, there exists a real number $y$ such that $x + y = 0$.
-
-Given any real number, we can find another real number (possibly the same) such that the sum of the given number plus the other number equals 0.
-
-Every real number can be added to some other real number (possibly itself) to obtain 0.
+{\it Replacing variables (simplest form):} Every real number can be added to some real number to obtain 0.
 
 {\it Negation:} $\te$ a real number $x$ such that $\fa$ real number $y$, $x + y \neq 0$.
 
@@ -8798,7 +8790,9 @@ Some real number has the property that its sum with any other real number is non
 $\te x \in \R$ such that for every real number $y$, $x + y = 0$.
 
 \begin{proof}
-{\it Statement:} There is a real number with the property that its sum with every other real number is zero.
+{\it Replacing quantifiers:} There exists a real number $x$ such that for every real number $y$, $x + y = 0$.
+
+{\it Replacing variables (simplest form):} There is a real number whose sum with every real number is zero.
 
 {\it Negation:} There is no real number with the property that its sum with every other real number is zero.
 
@@ -9114,9 +9108,9 @@ Any even integer equals twice some integer.
 Every action has an equal and opposite reaction.
 
 \begin{proof}
-{\it a. Statement:} $\fa$ action $n$, $\te$ a reaction $k$ such that $k$ is equal to and opposite $n$.
+{\it a. Statement:} $\fa$ action $n$, $\te$ a reaction $k$ such that $k$ is equal to and opposite of $n$.
 
-{\it b. Negation:} $\te$ an action $n$ such that $\fa$ reaction $k$, either $k$ is not equal to $n$ or $k$ is not opposite $n$. There is some action for which there is no equal and opposite reaction.
+{\it b. Negation:} $\te$ an action $n$ such that $\fa$ reaction $k$, either $k$ is not equal to $n$ or $k$ is not opposite of $n$. There is some action for which there is no equal and opposite reaction.
 \end{proof}
 
 \subsubsection{Exercise 39}
