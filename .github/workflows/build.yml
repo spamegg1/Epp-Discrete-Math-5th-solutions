@@ -1,14 +1,19 @@
 name: Build LaTeX document
-on: [push, pull_request]
+on:
+  push:
+    tags-ignore:
+      - v*
+  pull_request:
+
 
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.0
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           working_directory: src
           root_file: Epp.tex
