@@ -11045,12 +11045,12 @@ The mistake in the “proof” is that the same symbol, $k$, is used to represen
 \subsubsection{Exercise 17}
 {\bf Theorem:} For every integer $k$, if $k > 0$ then $k^2 + 2k + 1$ is composite.
 
-{\bf Proof:} Suppose $k$ is any integer such that $k > 0$. If $k^2 + 2k + 1$ is composite, then $k^2 + 2k + 1 = rs$
+“{\bf Proof:} Suppose $k$ is any integer such that $k > 0$. If $k^2 + 2k + 1$ is composite, then $k^2 + 2k + 1 = rs$
 for some integers $r$ and $s$ such that
 
 $1 < r < k^2 + 2k + 1$ and $1 < s < k^2 + 2k + 1$.
 
-Since $k^2 + 2k + 1 = rs$ and both $r$ and $s$ are strictly between 1 and $k^2 + 2k + 1$, then $k^2 + 2k + 1$ is not prime. So $k^2 + 2k + 1$ is composite as was to be shown.
+Since $k^2 + 2k + 1 = rs$ and both $r$ and $s$ are strictly between 1 and $k^2 + 2k + 1$, then $k^2 + 2k + 1$ is not prime. So $k^2 + 2k + 1$ is composite as was to be shown.”
 
 \begin{proof}
 This incorrect proof assumes what is to be proved. The word since in the third sentence is completely unjustified. The second sentence tells only what happens if $k^2 + 2k = 1$ is composite. But at that point in the proof, it has not been established that $k^2 + 2k + 1$ is composite. In fact, that is exactly what is to be proved.
@@ -11316,25 +11316,59 @@ So $b^2 - a^2 = 2k+1$ where $n$ is an integer. Therefore by definition of odd, $
 For all nonnegative real numbers $a$ and $b$, $\sqrt{ab} = \sqrt{a}\sqrt{b}$. (Note that if $x$ is a nonnegative real number, then there is a unique nonnegative real number $y$, denoted $\sqrt{x}$, such that $y^2 = x$.)
 
 \begin{proof}
-True. Assume $a$ and $b$ are any two nonnegative real numbers. By the information given to us in the parentheses:
+{\bf Note:} We are accustomed to thinking of square root as a "function" and just directly
+substitute values into it, but in this problem the square root is just notation for
+the definition that is given inside the parentheses. What we are asked to prove seems
+obvious and trivial, but this simply means that we have to use simpler, lower-level
+arguments to prove it instead. Using only the definition given in the problem, and basic
+algebra axioms from the Appendix. To avoid confusion, I avoided using the square root
+symbol in the proof. I did not spell out each and every axiom or fact, should be clear.
 
-1. There is a unique nonnegative real number denoted $\sqrt{ab}$ such that $(\sqrt{ab})^2 = ab$.
+True.
 
-2. There is a unique nonnegative real number denoted $\sqrt{a}$ such that $(\sqrt{a})^2 = a$.
+Assume \(a\) and \(b\) are any two nonnegative real numbers.
 
-3. There is a unique nonnegative real number denoted $\sqrt{b}$ such that $(\sqrt{b})^2 = b$.
+By the definition of square root given to us in the parentheses, we have:
 
-Since $ab = a \cdot b$, we have by substitution: $(\sqrt{ab})^2 = (\sqrt{a})^2 \cdot (\sqrt{b})^2$.
+1. There is a unique nonnegative real number \(z\) (notated \(\sqrt{ab}\)) such that $z^2 = ab$.
 
-By algebra, $(\sqrt{ab})^2 = [(\sqrt{a}) \cdot (\sqrt{b})]^2 = (\sqrt{a}\sqrt{b})^2$. Therefore $(\sqrt{ab})^2 - (\sqrt{a}\sqrt{b})^2 = 0$.
+2. There is a unique nonnegative real number \(x\) (notated \(\sqrt{a}\)) such that $x^2 = a$.
 
-By factoring we get $(\sqrt{ab} - \sqrt{a}\sqrt{b})(\sqrt{ab} + \sqrt{a}\sqrt{b}) = 0$.
+3. There is a unique nonnegative real number \(y\) (notated \(\sqrt{b}\)) such that $y^2 = b$.
 
-So: either $\sqrt{ab} - \sqrt{a}\sqrt{b} = 0$, or $\sqrt{ab} + \sqrt{a}\sqrt{b} = 0$ (by the Zero Product Property T11).
+Since $ab = a \cdot b$, we have by substitution: $z^2 = x^2 \cdot y^2$.
 
-If $\sqrt{ab} - \sqrt{a}\sqrt{b} = 0$, then $\sqrt{ab} = \sqrt{a}\sqrt{b}$ {\it [as was to be shown.]}
+By algebra, $x^2 \cdot y^2 = (xy)^2$. Combined with the above, $z^2 = (xy)^2$.
 
-If $\sqrt{ab} + \sqrt{a}\sqrt{b} = 0$, then since both $\sqrt{ab}$ and $\sqrt{a}\sqrt{b}$ are nonnegative, they must be both 0, hence $\sqrt{ab} = \sqrt{a}\sqrt{b}$ again {\it [as was to be shown.]}
+For the remainder of the proof, we could take one of two approaches:
+
+{\bf Approach 1 (using the uniqueness in the definition):}
+
+We have \(z^2 = ab\) and \(z^2 = (xy)^2\) therefore \((xy)^2 = ab\).
+
+Notice that since \(x\) and \(y\) are both nonnegative, \(xy\) is also nonnegative.
+
+So we have two nonnegative real numbers, \(z\) and \(xy\), both with the property
+that their square equals \(ab\): \(z^2 = ab\) and \((xy)^2 = ab\).
+
+By the uniqueness of such a number, it must be that \(z = xy\).
+
+If we use the notation, we get \(\sqrt{ab} = \sqrt{a}\sqrt{b}\) {\it [as was to be shown.]}
+
+{\bf Approach 2 (using algebra):}
+
+Therefore $z^2 - (xy)^2 = 0$.
+
+By factoring we get $(z - xy)(z + xy) = 0$.
+
+So: either $z - xy = 0$, or $z + xy = 0$ (by the Zero Product Property T11).
+
+If $z - xy = 0$, then \(z = xy\).
+Using the notation, $\sqrt{ab} = \sqrt{a}\sqrt{b}$ {\it [as was to be shown.]}
+
+If $z + xy = 0$, then since both $z$ and $xy$ are nonnegative,
+they must be both 0, hence \(z = xy\).
+Using the notation, $\sqrt{ab} = \sqrt{a}\sqrt{b}$ again {\it [as was to be shown.]}
 \end{proof}
 
 \subsubsection{Exercise 38}
@@ -45359,8 +45393,8 @@ of pastry.)
 How many different selections of twenty pastries are there?
 
 \begin{proof}
-\(N(E_{\leq 10}) = N(T) - N(E_{\geq 10}) = 53130 - \binom{(20-10)+6-1}{20-10} = 53130 - \binom{15}{10} = 53130 -
-3003 = 50127\).
+\(N(E_{\leq 10}) = N(T) - N(E_{\geq 11}) = 53130 - \binom{(20-11)+6-1}{20-11} = 53130 - \binom{14}{9} = 53130 -
+2002 = 51128\).
 \end{proof}
 
 (b)
@@ -45379,7 +45413,7 @@ S_{\geq 9} = S_{\geq 9} \cap T = S_{\geq 9} \cap (E_{\leq 10} \cup E_{\geq 11}) 
 \]
 So \(N(S_{\geq 9} \cap E_{\leq 10}) = N(S_{\geq 9}) - N(S_{\geq 9} \cap E_{\geq 11}) = \binom{(20-9)+6-1}{20-9} -
 \binom{(20-(9+11))+6-1}{20-(9+11)} = \binom{16}{11} - \binom{5}{0} = 4368-1 = 4367\). Finally \(N(E_{\leq 10} \cap
-S_{\leq 8}) = 50127 - 4367 = 45760\).
+S_{\leq 8}) = 51128 - 4367 = 46761\).
 \end{proof}
 
 \subsubsection{Exercise 20}
