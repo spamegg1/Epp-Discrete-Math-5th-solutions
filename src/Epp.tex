@@ -11820,11 +11820,11 @@ Rewriting:
 \]
 Getting a common denominator, then adding:
 \[
-\frac{ac}{2abc}+\frac{bc}{2abc}-\frac{ab}{2abc} = \frac{ac + bc - ac}{2abc} = \frac{1}{x}
+\frac{ac}{2abc}+\frac{bc}{2abc}-\frac{ab}{2abc} = \frac{ac + bc - ab}{2abc} = \frac{1}{x}
 \]
 Finally, taking reciprocals of both sides, we get $x$ as a ratio of two integers:
 \[
-\frac{2abc}{ac + bc - ac} = x
+\frac{2abc}{ac + bc - ab} = x
 \]
 \end{proof}
 
@@ -11981,23 +11981,36 @@ This “proof” argues from a single example. It does not establish the result 
 
 \subsubsection{Exercise 37}
 “{\bf Proof:} Suppose $r$ and $s$ are rational numbers. By
-definition of rational, $r = a/b$ for some integers $a$ and $b$ with $b \neq 0$, and $s = a/b$ for some integers $a$ and $b$ with $b \neq 0$. Then $r+s = \dps\frac{a}{b} + \frac{a}{b} = \frac{2a}{b}$.
+definition of rational, $r = a/b$ for some integers $a$ and $b$ with $b \neq 0$,
+and $s = a/b$ for some integers $a$ and $b$ with $b \neq 0$.
+Then $r+s = \dps\frac{a}{b} + \frac{a}{b} = \frac{2a}{b}$.
 
-Let $p = 2a$. Then p is an integer since it is a product of integers. Hence $r + s = p/b$, where $p$ and $b$ are integers and $b \neq 0$. Thus $r + s$ is a rational number by definition of rational. This is what was to be shown.”
+Let $p = 2a$. Then p is an integer since it is a product of integers.
+Hence $r + s = p/b$, where $p$ and $b$ are integers and $b \neq 0$.
+Thus $r + s$ is a rational number by definition of rational.
+This is what was to be shown.”
 
 \begin{proof}
-By setting both $r$ and $s$ equal to $a/b$, this incorrect proof violates the requirement that $r$ and $s$ be arbitrarily chosen rational numbers. If both $r$ and $s$ equal $a/b$, then $r=s$.
+By setting both $r$ and $s$ equal to $a/b$, this incorrect proof violates the requirement
+that $r$ and $s$ are arbitrarily chosen rational numbers.
+If both $r$ and $s$ equal $a/b$, then $r=s$.
 \end{proof}
 
 \subsubsection{Exercise 38}
-“{\bf Proof:} Suppose $r$ and $s$ are rational numbers. Then $r = a/b$ and $s = c/d$ for some integers $a, b, c$, and $d$ with $b \neq 0$ and $d \neq 0$ (by definition of rational). Then
+“{\bf Proof:} Suppose $r$ and $s$ are rational numbers.
+Then $r = a/b$ and $s = c/d$ for some integers $a, b, c$,
+and $d$ with $b \neq 0$ and $d \neq 0$ (by definition of rational). Then
 \[
-r = \frac{a}{b}+\frac{c}{d}
+r + s = \frac{a}{b}+\frac{c}{d}
 \]
-But this is a sum of two fractions, which is a fraction. So $r + s$ is a rational number since a rational number is a fraction.”
+But this is a sum of two fractions, which is a fraction.
+So $r + s$ is a rational number since a rational number is a fraction.”
 
 \begin{proof}
-This ``proof'' does not establish that ``the sum of two fractions is a fraction''. Also, ``a rational number is a fraction'' is ambiguous. A rational number is a quotient of two integers (with nonzero denominator). But ``a fraction'' could be a fraction of non-integer numbers too.
+This ``proof'' does not establish that ``the sum of two fractions is a fraction''.
+Also, ``a rational number is a fraction'' is ambiguous.
+A rational number is a quotient of two integers (with nonzero denominator).
+But ``a fraction'' could be a fraction of non-integer numbers too.
 \end{proof}
 
 \subsubsection{Exercise 39}
@@ -12558,10 +12571,13 @@ Let $t = 2d_k \cdot 10^{k-1} + 2d_{k-1} \cdot 10^{k-2} + \cdots + 2d_2 \cdot 10 
 \end{proof}
 
 \subsubsection{Exercise 46}
-Prove that if the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$ and if $4 \mid (10d_1 + d0)$, then $4\mid n$. (Hint: If the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$, then there is an integer $s$ such that $n = 100s + 10d_1 + d_0$.)
+Prove that if the decimal representation of a nonnegative integer $n$ ends in
+$d_1d_0$ and if $4 \mid (10d_1 + d_0)$, then $4\mid n$.
+(Hint: If the decimal representation of a nonnegative integer $n$ ends in
+$d_1d_0$, then there is an integer $s$ such that $n = 100s + 10d_1 + d_0$.)
 
 \begin{proof}
-Assume the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$ and assume $4 \mid (10d_1 + d0)$. Let
+Assume the decimal representation of a nonnegative integer $n$ ends in $d_1d_0$ and assume $4 \mid (10d_1 + d_0)$. Let
 \[
 n = d_k \cdot 10^k + d_{k-1} \cdot 10^{k-1} + \cdots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0.
 \]
@@ -12571,7 +12587,7 @@ n = 10^2(d_k \cdot 10^{k-2} + d_{k-1} \cdot 10^{k-3} + \cdots + d_2 \cdot 10^{2-
 \]
 Let $s = d_k \cdot 10^{k-2} + d_{k-1} \cdot 10^{k-3} + \cdots + d_2 \cdot 10^{2-2}$, which is an integer (being a sum of products of integers).
 
-So $n = 100s + 10d_1 + d_0$. Since $4 \mid (10d_1 + d0)$, we have $10d_1 + d0 = 4t$ for some integer $t$. Therefore $n = 100s + 10d_1 + d_0 = 100s + 4t = 4(25s+t)$.
+So $n = 100s + 10d_1 + d_0$. Since $4 \mid (10d_1 + d_0)$, we have $10d_1 + d_0 = 4t$ for some integer $t$. Therefore $n = 100s + 10d_1 + d_0 = 100s + 4t = 4(25s+t)$.
 
 Let $r = 25s+t$, which is an integer (being a sum of products of integers). So $n = 4r$ where $r$ is an integer. So $4 \mid n$ by definition of divides.
 \end{proof}
