@@ -12733,7 +12733,7 @@ $q = -4, r = 5$
 \end{proof}
 
 (b)
-$43 \mod 9$
+$43 \bmod 9$
 
 \begin{proof}
 7
@@ -12749,7 +12749,7 @@ $43 \mod 9$
 \end{proof}
 
 (b)
-$50 \mod 7$
+$50 \bmod 7$
 
 \begin{proof}
 1
@@ -12765,7 +12765,7 @@ $50 \mod 7$
 \end{proof}
 
 (b)
-$28 \mod 5$
+$28 \bmod 5$
 
 \begin{proof}
 3
@@ -12781,7 +12781,7 @@ $28 \mod 5$
 \end{proof}
 
 (b)
-$30 \mod 2$
+$30 \bmod 2$
 
 \begin{proof}
 0
@@ -12797,9 +12797,9 @@ $DayT = 6$ (Saturday) and $N = 15$
 When today is Saturday, 15 days from today is two weeks (which is Saturday) plus one day (which is Sunday). Hence $DayN$ should be 0. According to the formula, when today is Saturday, $DayT = 6$, and so when $N = 15$,
 \[
 \begin{array}{rcl}
-DayN &=& (DayT + N) \mod 7 \\
-&=& (6 + 15) \mod 7 \\
-&=& 21 \mod 7 \\
+DayN &=& (DayT + N) \bmod 7 \\
+&=& (6 + 15) \bmod 7 \\
+&=& 21 \bmod 7 \\
 &=& 0,
 \end{array}
 \]
@@ -12813,9 +12813,9 @@ $DayT = 0$ (Sunday) and $N = 7$
 When today is Sunday, 7 days from today is one week (which is Sunday). Hence $DayN$ should be 0. According to the formula, when today is Sunday, $DayT = 0$, and so when $N = 7$,
 \[
 \begin{array}{rcl}
-DayN &=& (DayT + N) \mod 7 \\
-&=& (0 + 7) \mod 7 \\
-&=& 7 \mod 7 \\
+DayN &=& (DayT + N) \bmod 7 \\
+&=& (0 + 7) \bmod 7 \\
+&=& 7 \bmod 7 \\
 &=& 0,
 \end{array}
 \]
@@ -12829,9 +12829,9 @@ $DayT = 4$ (Thursday) and $N = 12$
 When today is Thursday, 12 days from today is one week (which is Thursday) plus 5 days (which is Tuesday). Hence $DayN$ should be 2. According to the formula, when today is Thursday, $DayT = 4$, and so when $N = 12$,
 \[
 \begin{array}{rcl}
-DayN &=& (DayT + N) \mod 7 \\
-&=& (4 + 12) \mod 7 \\
-&=& 16 \mod 7 \\
+DayN &=& (DayT + N) \bmod 7 \\
+&=& (4 + 12) \bmod 7 \\
+&=& 16 \bmod 7 \\
 &=& 2,
 \end{array}
 \]
@@ -12841,18 +12841,18 @@ which agrees.
 \subsubsection{Exercise 12}
 Justify formula (4.5.1) for general values of $DayT$ and $N$.
 
-Formula 4.5.1 says: if $DayT$ is the day of the week today and $DayN$ is the day of the week in $N$ days, then $DayN = (DayT + N) \mod 7$, where Sunday = 0, Monday = 1, $\ldots$, Saturday = 6.
+Formula 4.5.1 says: if $DayT$ is the day of the week today and $DayN$ is the day of the week in $N$ days, then $DayN = (DayT + N) \bmod 7$, where Sunday = 0, Monday = 1, $\ldots$, Saturday = 6.
 
 \begin{proof}
 By the quotient-remainder theorem, $N = 7q + r$ for some integers $q$ and $r$ where $0 \leq r < 7$.
 
 If we start counting from Monday (assuming that today is Monday), then $N$ days later, the day of the week will be $r$ days after Monday.
 
-If, instead, we start counting from another day of the week (assume today is $DayT$ days after Monday, then $N$ days later, the day of the week will be $r+DayT$ days away from Monday.
+If, instead, we start counting from another day of the week (assume today is $DayT$ days after Monday), then $N$ days later, the day of the week will be $r+DayT$ days away from Monday.
 
 Since $0 \leq r \leq 6$ and $0 \leq DayT \leq 6$, we have $0 \leq r + DayT \leq 12$. So, to find the day of the week that is $r+DayT$ days after Monday, we have to take its remainder mod 7. (If $r+DayT \geq 7$ then we would have to subtract 7.)
 
-Therefore $DayN = (r+DayT) \mod 7 = (N + DayT) \mod 7$ (because $N = r \mod 7$).
+Therefore $DayN = (r+DayT) \bmod 7 = (N + DayT) \bmod 7$ (because $r = N \bmod 7$).
 \end{proof}
 
 \subsubsection{Exercise 13}
@@ -12861,8 +12861,8 @@ On a Monday a friend says he will meet you again in 30 days. What day of the wee
 \begin{proof}
 Solution 1: $30 = 4\cdot 7 + 2$. Hence the answer is two days after Monday, which is Wednesday.
 
-Solution 2: By the formula, the answer is $(1 + 30) \mod
-7 = 31 \mod 7 = 3$, which is Wednesday.
+Solution 2: By the formula, the answer is $(1 + 30) \bmod
+7 = 31 \bmod 7 = 3$, which is Wednesday.
 \end{proof}
 
 \subsubsection{Exercise 14}
@@ -12870,10 +12870,10 @@ If today is Tuesday, what day of the week will it be 1,000 days from today?
 
 {\it Hint:} There are two ways to solve this problem. One is to find that $1,000 = 7\cdot 142 + 6$ and note that if today is Tuesday, then 1,000 days from today is 142 weeks plus 6 days from today.
 
-The other way is to use the formula $DayN = (DayT + N) \mod 7$, with $DayT = 2$ (Tuesday) and $N = 1,000$.
+The other way is to use the formula $DayN = (DayT + N) \bmod 7$, with $DayT = 2$ (Tuesday) and $N = 1,000$.
 
 \begin{proof}
-For Tuesday, $DayT = 2$. According to the formula, when $N  = 1000$, $DayN = (DayT + N) \mod 7 = 1002 \mod 7 = 1$, which is Monday.
+For Tuesday, $DayT = 2$. According to the formula, when $N  = 1000$, $DayN = (DayT + N) \bmod 7 = 1002 \bmod 7 = 1$, which is Monday.
 \end{proof}
 
 \subsubsection{Exercise 15}
@@ -12882,11 +12882,11 @@ January 1, 2000, was a Saturday, and 2000 was a leap year. What day of the week 
 \begin{proof}
 There are 13 leap years 2000-2050: 2000, 2004, 2008, $\ldots$, 2044, 2048. These 13 years contribute 366 days, one more than the usual 365. There are 50 years. So the total number of days between January 1, 2000 and January 1, 2050 is $365 \cdot 50 + 13 = 18263$.
 
-By the formula, where $DayT = 6$ for Saturday and $N = 18263$, we have $DayN = (DayT + N) \mod 7 = (6 + 18263) \mod 7$ $= 18269 \mod 7 = 6$ so it will be Saturday.
+By the formula, where $DayT = 6$ for Saturday and $N = 18263$, we have $DayN = (DayT + N) \bmod 7 = (6 + 18263) \bmod 7$ $= 18269 \bmod 7 = 6$ so it will be Saturday.
 
 (Another way to approach this problem is as follows: there are 52 weeks in every year, which add up to $52 \cdot 7 = 364$ days, which is 1 less than 365. So every non-leap year advances the day of the week by only 1 day, and every leap year advances the day of the week by 2 days, because they have 366 days.
 
-There are 37 non-leap years, which advance the day of the week by $37 \cdot 1 = 37$ days, and there are 13 leap years which advance the day of the week by $13 \cdot 2 = 26$ days. So the 50 years will advance the day of the week by $37 + 26 = 63$ days. Then we can use the formula with $N = 63$ instead: $DayN = (DayT + 63) \mod 7 = (6 + 63) \mod 7 = 6$, which is Saturday, as before.)
+There are 37 non-leap years, which advance the day of the week by $37 \cdot 1 = 37$ days, and there are 13 leap years which advance the day of the week by $13 \cdot 2 = 26$ days. So the 50 years will advance the day of the week by $37 + 26 = 63$ days. Then we can use the formula with $N = 63$ instead: $DayN = (DayT + 63) \bmod 7 = (6 + 63) \bmod 7 = 6$, which is Saturday, as before.)
 \end{proof}
 
 \subsubsection{Exercise 16}
@@ -12912,11 +12912,11 @@ Let $t = 2k^2 - k + 1$, which is an integer because it is a sum and product of i
 
 {\bf Case 2:} $n$ is odd.
 
-By definition of even, $n = 2k + 1$ for some integer $k$.
+By definition of odd, $n = 2k + 1$ for some integer $k$.
 
-Then $n^2-n + 3 = (2k+1)^2 - (2k+1) + 3 = 4k^2 + 4k + 4 - 2k - 2 + 3 = 4k^2 + 2k + 5 = 2(2k^2 + k + 2) + 1$.
+Then $n^2-n + 3 = (2k+1)^2 - (2k+1) + 3 = 4k^2 + 4k + 1 - 2k - 1 + 3 = 4k^2 + 2k + 3 = 2(2k^2 + k + 1) + 1$.
 
-Let $t = 2k^2 + k + 2$, which is an integer because it is a sum and product of integers. So $n^2 - n + 3 = 2t+1$ where $t$ is an integer. So by definition of odd, $n^2 - n + 3$ is odd.
+Let $t = 2k^2 + k + 1$, which is an integer because it is a sum and product of integers. So $n^2 - n + 3 = 2t+1$ where $t$ is an integer. So by definition of odd, $n^2 - n + 3$ is odd.
 \end{proof}
 
 \subsubsection{Exercise 18}
@@ -12965,80 +12965,80 @@ Then $5m+7n = 5(2r+1) + 7(2s+1) = 10r+5+14s+7 = 2(5r+7s+6)$ where $5r+7s+6$ is a
 \end{proof}
 
 \subsubsection{Exercise 20}
-Suppose $a$ is any integer. If $a \mod 7 = 4$, what is $5a \mod 7$? In other words, if division of $a$ by $7$ gives a remainder of 4, what is the remainder when $5a$ is divided by 7? Your solution should show that you obtain the same answer no matter what integer you start with.
+Suppose $a$ is any integer. If $a \bmod 7 = 4$, what is $5a \bmod 7$? In other words, if division of $a$ by $7$ gives a remainder of 4, what is the remainder when $5a$ is divided by 7? Your solution should show that you obtain the same answer no matter what integer you start with.
 
 \begin{proof}
-Because $a \mod 7 = 4$, the remainder obtained when $a$ is divided by 7 is 4, and so $a = 7q + 4$ for some integer $q$. Multiplying this equation through by 5 gives that $5a = 35q + 20 = 35q + 14 + 6 = 7(5q + 2) + 6$. Because $q$ is an integer, $5q + 2$ is also an integer, and so $5a = 7\cdot$(an integer) $+ 6$. Thus, because $0 \leq 6 < 7$, the remainder obtained when $5a$ is divided by 7 is 6, and so $5a \mod 7 = 6$.
+Because $a \bmod 7 = 4$, the remainder obtained when $a$ is divided by 7 is 4, and so $a = 7q + 4$ for some integer $q$. Multiplying this equation through by 5 gives that $5a = 35q + 20 = 35q + 14 + 6 = 7(5q + 2) + 6$. Because $q$ is an integer, $5q + 2$ is also an integer. Thus, because $0 \leq 6 < 7$, the remainder obtained when $5a$ is divided by 7 is 6, and so $5a \bmod 7 = 6$.
 \end{proof}
 
 \subsubsection{Exercise 21}
-Suppose $b$ is any integer. If $b \mod 12 = 5$, what is $8b \mod 12$? In other words, if division of $b$ by 12 gives a remainder of 5, what is the remainder when $8b$ is divided by 12? Your solution should show that you obtain the same answer no matter what integer you start with.
+Suppose $b$ is any integer. If $b \bmod 12 = 5$, what is $8b \bmod 12$? In other words, if division of $b$ by 12 gives a remainder of 5, what is the remainder when $8b$ is divided by 12? Your solution should show that you obtain the same answer no matter what integer you start with.
 
 \begin{proof}
-Because $b \mod 12 = 5$, the remainder obtained when $b$ is divided by 12 is 5, and so $b = 12q + 5$ for some integer $q$. Multiplying this equation through by 8 gives that $8b = 96q + 40 = 96q + 36 + 4 = 12(8q + 3) + 4$. Because $q$ is an integer, $8q + 3$ is also an integer, and so $8b = 12\cdot$(an integer) $+ 4$. Thus, because $0 \leq 4 < 12$, the remainder obtained when $8b$ is divided by 12 is 4, and so $8b \mod 12 = 4$.
+Because $b \bmod 12 = 5$, the remainder obtained when $b$ is divided by 12 is 5, and so $b = 12q + 5$ for some integer $q$. Multiplying this equation through by 8 gives that $8b = 96q + 40 = 96q + 36 + 4 = 12(8q + 3) + 4$. Because $q$ is an integer, $8q + 3$ is also an integer. Thus, because $0 \leq 4 < 12$, the remainder obtained when $8b$ is divided by 12 is 4, and so $8b \bmod 12 = 4$.
 \end{proof}
 
 \subsubsection{Exercise 22}
-Suppose $c$ is any integer. If $c \mod 15 = 3$, what is $10c \mod 15$? In other words, if division of $c$ by 15 gives a remainder of 3, what is the remainder when $10c$ is divided by 15? Your solution should show that you obtain the same answer no matter what integer you start with.
+Suppose $c$ is any integer. If $c \bmod 15 = 3$, what is $10c \bmod 15$? In other words, if division of $c$ by 15 gives a remainder of 3, what is the remainder when $10c$ is divided by 15? Your solution should show that you obtain the same answer no matter what integer you start with.
 
 \begin{proof}
-Because $c \mod 15 = 3$, the remainder obtained when $c$ is divided by 15 is 3, and so $c = 15q + 3$ for some integer $q$. Multiplying this equation through by 10 gives that $10c = 150q + 30 = 15(10q + 2) + 0$. Because $q$ is an integer, $10q + 2$ is also an integer, and so $10c = 15\cdot$(an integer) $+ 0$. Thus, because $0 \leq 0 < 15$, the remainder obtained when $10c$ is divided by 15 is 0, and so $10c \mod 15 = 0$.
+Because $c \bmod 15 = 3$, the remainder obtained when $c$ is divided by 15 is 3, and so $c = 15q + 3$ for some integer $q$. Multiplying this equation through by 10 gives that $10c = 150q + 30 = 15(10q + 2) + 0$. Because $q$ is an integer, $10q + 2$ is also an integer. Thus, because $0 \leq 0 < 15$, the remainder obtained when $10c$ is divided by 15 is 0, and so $10c \bmod 15 = 0$.
 \end{proof}
 
 \subsubsection{Exercise 23}
-Prove that for every integer $n$, if $n \mod 5 = 3$ then
-$n^2 \mod 5 = 4$.
+Prove that for every integer $n$, if $n \bmod 5 = 3$ then
+$n^2 \bmod 5 = 4$.
 
 \begin{proof}
-Suppose $n$ is any {\it [particular but arbitrarily chosen]} integer such that $n \mod 5 = 3$. Then the remainder obtained when $n$ is divided by 5 is 3, and so $n = 5q + 3$ for some integer $q$. By substitution,
+Suppose $n$ is any {\it [particular but arbitrarily chosen]} integer such that $n \bmod 5 = 3$. Then the remainder obtained when $n$ is divided by 5 is 3, and so $n = 5q + 3$ for some integer $q$. By substitution,
 
 $n^2 = (5q + 3)^2 = 25q^2 + 30q + 9 = 25q^2 + 30q + 5 + 4 = 5(5q^2 + 6q + 1) + 4$.
 
-Because products and sums of integers are integers, $5q^2 + 6q + 1$ is an integer, and hence $n^2 = 5\cdot$ (an integer) $+ 4$. Thus, since $0 \leq 4 < 5$, the remainder obtained when $n^2$ is divided by 5 is 4, and so $n^2 \mod 5 = 4$.
+Because products and sums of integers are integers, $5q^2 + 6q + 1$ is an integer. Thus, since $0 \leq 4 < 5$, the remainder obtained when $n^2$ is divided by 5 is 4, and so $n^2 \bmod 5 = 4$.
 \end{proof}
 
 \subsubsection{Exercise 24}
-Prove that for all integers $m$ and $n$, if $m \mod 5 = 2$
-and $n \mod 5 = 1$ then $mn \mod 5 = 2$.
+Prove that for all integers $m$ and $n$, if $m \bmod 5 = 2$
+and $n \bmod 5 = 1$ then $mn \bmod 5 = 2$.
 
 \begin{proof}
-Suppose $m,n$ are any {\it [particular but arbitrarily chosen]} integers such that $m \mod 5 = 2$ and $n \mod 5 = 1$.
+Suppose $m,n$ are any {\it [particular but arbitrarily chosen]} integers such that $m \bmod 5 = 2$ and $n \bmod 5 = 1$.
 
 Then $m = 5q + 2$ and $n = 5s + 1$ for some integers $q,s$. By substitution,
 
 $mn = (5q + 2)(5s+1) = 25qs + 5q + 10s + 2 = 5(5qs + q + 2s) + 2$.
 
-Because products and sums of integers are integers, $5qs + q + 2s$ is an integer, and hence $mn = 5\cdot$ (an integer) $+ 2$. Thus, since $0 \leq 2 < 5$, the remainder obtained when $mn$ is divided by 5 is 2, and so $mn \mod 5 = 2$.
+Because products and sums of integers are integers, $5qs + q + 2s$ is an integer. Thus, since $0 \leq 2 < 5$, the remainder obtained when $mn$ is divided by 5 is 2, and so $mn \bmod 5 = 2$.
 \end{proof}
 
 \subsubsection{Exercise 25}
-Prove that for all integers $a$ and $b$, if $a \mod 7 = 5$ and $b \mod 7 = 6$ then $ab \mod 7 = 2$.
+Prove that for all integers $a$ and $b$, if $a \bmod 7 = 5$ and $b \bmod 7 = 6$ then $ab \bmod 7 = 2$.
 
 \begin{proof}
-Suppose $a,b$ are any {\it [particular but arbitrarily chosen]} integers such that $a \mod 7 = 5$ and $b \mod 7 = 6$.
+Suppose $a,b$ are any {\it [particular but arbitrarily chosen]} integers such that $a \bmod 7 = 5$ and $b \bmod 7 = 6$.
 
 Then $a = 7q + 5$ and $b = 7s + 6$ for some integers $q,s$. By substitution,
 
 $ab = (7q + 5)(7s+6) = 49qs + 42q + 35s + 30 = 7(7qs + 6q + 5s + 4) + 2$.
 
-Because products and sums of integers are integers, $7qs + 6q + 5s + 4$ is an integer, and hence $ab = 7\cdot$ (an integer) $+ 2$. Thus, since $0 \leq 2 < 7$, the remainder obtained when $ab$ is divided by 7 is 2, and so $ab \mod 7 = 2$.
+Because products and sums of integers are integers, $7qs + 6q + 5s + 4$ is an integer. Thus, since $0 \leq 2 < 7$, the remainder obtained when $ab$ is divided by 7 is 2, and so $ab \bmod 7 = 2$.
 \end{proof}
 
 \subsubsection{Exercise 26}
-Prove that a necessary and sufficient condition for an integer $n$ to be divisible by a positive integer $d$ is that $n \mod d = 0$.
+Prove that a necessary and sufficient condition for an integer $n$ to be divisible by a positive integer $d$ is that $n \bmod d = 0$.
 
-{\it Hint:} You need to show that (1) for each integer $n$ and positive integer $d$, if $n$ is divisible by $d$ then $n \mod d = 0$; and (2) for each integer $n$ and positive integer $d$, if $n \mod d = 0$ then $n$ is divisible by $d$.
+{\it Hint:} You need to show that (1) for each integer $n$ and positive integer $d$, if $n$ is divisible by $d$ then $n \bmod d = 0$; and (2) for each integer $n$ and positive integer $d$, if $n \bmod d = 0$ then $n$ is divisible by $d$.
 
 \begin{proof}
 Assume $n$ is any integer and $d$ is any positive integer.
 
-(1) Assume $n$ is divisible by $d$. {\it Want to prove $n \mod d = 0$.}
+(1) Assume $n$ is divisible by $d$. {\it Want to prove $n \bmod d = 0$.}
 
-By definition of divisible, $n = ad$ for some integer $a$. So $n = ad + 0$. This means that dividing $n$ by $d$ results in a remainder of $0$ where $0 \leq 0 < d$. By definition of $\mod$, we have $n \mod d = 0$.
+By definition of divisible, $n = ad$ for some integer $a$. So $n = ad + 0$. This means that dividing $n$ by $d$ results in a remainder of $0$ where $0 \leq 0 < d$. By definition of $\bmod$, we have $n \bmod d = 0$.
 
-(2) Assume $n \mod d = 0$. {\it Want to prove $n$ is divisible by $d$.}
+(2) Assume $n \bmod d = 0$. {\it Want to prove $n$ is divisible by $d$.}
 
-By definition of $\mod$, $n = qd + 0$ for some integer $q$. So $n = qd$, where $q$ is an integer. By definition of divisible, $n$ is divisible by $d$.
+By definition of $\bmod$, $n = qd + 0$ for some integer $q$. So $n = qd$, where $q$ is an integer. By definition of divisible, $n$ is divisible by $d$.
 \end{proof}
 
 \subsubsection{Exercise 27}
@@ -13068,7 +13068,7 @@ Since these two cases exhaust all the possibilities, we proved what was to be sh
 Prove: Given any set of three consecutive integers, one of the integers is a multiple of 3.
 
 \begin{proof}
-(using the {\it Hint}:)
+(using the {\it Hint} in Appendix B, page A-28:)
 
 Suppose that $n, n + 1$, and $n + 2$ are any three consecutive integers. Then by the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ where $0 \leq r < 3$.
 
@@ -13104,7 +13104,7 @@ Since these cases exhaust all possibilities, in all possible cases their product
 Use the quotient-remainder theorem with divisor equal to 3 to prove that the square of any integer has the form $3k$ or $3k + 1$ for some integer $k$.
 
 \begin{proof}
-(using the {\it Hint})
+(using the {\it Hint} in Appendix B, page A-28)
 
 Assume $n$ is any integer. By the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ with $0 \leq r < 3$. There are 3 cases depending on the value of $r$:
 
@@ -13127,9 +13127,9 @@ Since these exhaust all the possibilities, in all cases $n = 3k$ or $n = 3k+1$ f
 Use the mod notation to rewrite the result of part (a).
 
 \begin{proof}
-The square of any integer $\mod 3$ is either 0 or 1.
+The square of any integer $\bmod 3$ is either 0 or 1.
 
-If $n$ is any integer, then $n^2 = 0 \mod 3$ or $n^2 = 1 \mod 3$.
+If $n$ is any integer, then $n^2 \bmod 3 = 0$ or $n^2 \bmod 3 = 1$.
 \end{proof}
 
 \subsubsection{Exercise 30}
@@ -13138,28 +13138,37 @@ If $n$ is any integer, then $n^2 = 0 \mod 3$ or $n^2 = 1 \mod 3$.
 Use the quotient-remainder theorem with divisor equal to 3 to prove that the product of any two consecutive integers has the form $3k$ or $3k + 2$ for some integer $k$.
 
 \begin{proof}
-Assume $n$ and $n+1$ are any two consecutive integers. By the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ with $0 \leq r < 3$. There are 3 cases depending on the value of $r$:
+Assume $n$ and $n+1$ are any two consecutive integers.
+By the quotient-remainder theorem $n = 3q+r$ for some integers $q,r$ with $0 \leq r < 3$.
+There are 3 cases depending on the value of $r$:
 
 {\bf Case 1:} $n = 3q$.
 
-Then $n(n+1) = (3q)(3q+1) = 9q^2 + 3q = 3(3q^2 + q)$. Let $k = 3q^2 + q$, which is an integer since it's a sum and product of integers. Therefore $n(n+1) = 3k$ for some integer $k$.
+Then $n(n+1) = (3q)(3q+1) = 9q^2 + 3q = 3(3q^2 + q)$.
+Let $k = 3q^2 + q$, which is an integer since it's a sum and product of integers.
+Therefore $n(n+1) = 3k$ for some integer $k$.
 
 {\bf Case 2:} $n = 3q + 1$.
 
-Then $n(n+1) = (3q+1)(3q+2) = 9q^2 + 9q + 2 = 3(3q^2 + 3q) + 2$. Let $k = 3q^2 + 3q$, which is an integer since it's a sum and product of integers. Therefore $n = 3k + 2$ for some integer $k$.
+Then $n(n+1) = (3q+1)(3q+2) = 9q^2 + 9q + 2 = 3(3q^2 + 3q) + 2$.
+Let $k = 3q^2 + 3q$, which is an integer since it's a sum and product of integers.
+Therefore $n = 3k + 2$ for some integer $k$.
 
 {\bf Case 3:} $n = 3q + 2$
 
-Then $n(n+1) = (3q+2)(3q+3) = 9q^2 + 15q + 6 = 3(3q^2 + 5q + 2)$. Let $k = 3q^2 + 5q + 2$, which is an integer since it's a sum and product of integers. Therefore $n = 3k$ for some integer $k$.
+Then $n(n+1) = (3q+2)(3q+3) = 9q^2 + 15q + 6 = 3(3q^2 + 5q + 2)$.
+Let $k = 3q^2 + 5q + 2$, which is an integer since it's a sum and product of integers.
+Therefore $n = 3k$ for some integer $k$.
 
-Since these exhaust all the possibilities, in all cases $n(n+1) = 3k$ or $n(n+1) = 3k+2$ for some integer $k$.
+Since these exhaust all the possibilities,
+in all cases $n(n+1) = 3k$ or $n(n+1) = 3k+2$ for some integer $k$.
 \end{proof}
 
 (b)
 Use the $mod$ notation to rewrite the result of part (a).
 
 \begin{proof}
-For any integer $n$, $n(n+1) = 0 \mod 3$ or $n(n+1) = 2 \mod 3$.
+For any integer $n$, $n(n+1) \bmod 3 = 0$ or $n(n+1) \bmod 3 = 2$.
 \end{proof}
 
 {\bf \cy In $31-33$, you may use the properties listed in example 4.3.3.}
@@ -13203,14 +13212,40 @@ Since these cases exhaust all possibilities, we proved that $m+n$ and $m-n$ are 
 Find all solutions to the equation $m^2 - n^2 = 56$ for which both $m$ and $n$ are positive integers.
 
 \begin{proof}
-If $m^2 - n^2 = 56$, then $56 = (m + n)(m - n)$. Now $56 = 2^3 \cdot 7$, and by the unique factorization theorem, this factorization is unique. Hence the only representation of 56 as a product of two positive integers are $56 = 7\cdot8 = 14\cdot4 = 28\cdot2 = 56\cdot1$. By part (a), $m$ and $n$ must both be odd or both be even. Thus the only solutions are either $m + n = 14$ and $m - n = 4$ or $m + n = 28$ and $m - n = 2$. It follows that the only solutions are either $m = 9$ and $n = 5$ or $m = 15$ and $n = 13$.
+If $m^2 - n^2 = 56$, then $56 = (m + n)(m - n)$.
+Now $56 = 2^3 \cdot 7$, and by the unique factorization theorem, this factorization is unique.
+Hence the only representation of 56 as a product of two positive integers are
+$56 = 7\cdot 8 = 14\cdot 4 = 28\cdot 2 = 56\cdot 1$.
+By part (a), $m$ and $n$ must both be odd or both be even.
+Thus the only solutions are either:
+
+$m + n = 14$ and $m - n = 4$,
+
+or
+
+$m + n = 28$ and $m - n = 2$.
+
+It follows that the only solutions are either: ($m = 9$ and $n = 5$) or ($m = 15$ and $n = 13$).
 \end{proof}
 
 (c)
 Find all solutions to the equation $m^2 - n^2 = 88$ for which both $m$ and $n$ are positive integers.
 
 \begin{proof}
-If $m^2 - n^2 = 88$, then $88 = (m + n)(m - n)$. Now $88 = 2^3 \cdot 11$, and by the unique factorization theorem, this factorization is unique. Hence the only representation of 88 as a product of two positive integers are $88 = 11\cdot8 = 22\cdot4 = 44\cdot2 = 88\cdot1$. By part (a), $m$ and $n$ must both be odd or both be even. Thus the only solutions are either $m + n = 22$ and $m - n = 4$ or $m + n = 44$ and $m - n = 2$. It follows that the only solutions are either $m = 13$ and $n = 9$ or $m = 23$ and $n = 21$.
+If $m^2 - n^2 = 88$, then $88 = (m + n)(m - n)$.
+Now $88 = 2^3 \cdot 11$, and by the unique factorization theorem, this factorization is unique.
+Hence the only representation of 88 as a product of two positive integers are
+$88 = 11\cdot 8 = 22\cdot 4 = 44\cdot 2 = 88\cdot 1$.
+By part (a), $m$ and $n$ must both be odd or both be even.
+Thus the only solutions are either:
+
+$m + n = 22$ and $m - n = 4$,
+
+or
+
+$m + n = 44$ and $m - n = 2$.
+
+It follows that the only solutions are either: ($m = 13$ and $n = 9$), or ($m = 23$ and $n = 21$).
 \end{proof}
 
 \subsubsection{Exercise 32}
@@ -13231,10 +13266,10 @@ $b - c$ is even, what can you say about the parity of
 $a - c$? Prove your answer.
 
 \begin{proof}
-Under the given conditions, $a - c$ is even.
+Under the given conditions, $a - c$ is odd.
 
 Suppose $a, b$, and $c$ are any integers such that $a - b$
-is odd and $b - c$ is even. [We must show that $a - c$ is even.]
+is odd and $b - c$ is even. [We must show that $a - c$ is odd.]
 
 Note first that $a - c = (a - b) + (b - c)$. Also note that $(a - b) + (b - c)$ is a sum of an odd integer and an even integer and hence is odd by Example 4.3.3 \#5. Hence $a - c$ is odd {\it [as was to be shown].}
 \end{proof}
@@ -13337,11 +13372,11 @@ Assume $n$ is any integer. {\it [Want to prove $n^2+5$ is not divisible by 4.]}
 
 {\bf Case 1.} $n$ is even. Then $n = 2k$ for some integer $k$.
 
-Then $n^2+5 = (2k)^2+5 = 4k^2+5 = 4(k^2+1)+1$ where $k^2+1$ is an integer. Therefore $n \mod 4 = 1$ which means $4 \nmid n$ by Exercise 26.
+Then $n^2+5 = (2k)^2+5 = 4k^2+5 = 4(k^2+1)+1$ where $k^2+1$ is an integer. Therefore $n \bmod 4 = 1$ which means $4 \nmid n$ by Exercise 26.
 
 {\bf Case 2.} $n$ is odd. Then $n = 2k+1$ for some integer $k$.
 
-Then $n^2+5 = (2k+1)^2+5 = 4k^2+4k+1+5 = 4(k^2+k+1)+2$ where $k^2+k+1$ is an integer. Therefore $n \mod 4 = 2$ which means $4 \nmid n$ by Exercise 26.
+Then $n^2+5 = (2k+1)^2+5 = 4k^2+4k+1+5 = 4(k^2+k+1)+2$ where $k^2+k+1$ is an integer. Therefore $n \bmod 4 = 2$ which means $4 \nmid n$ by Exercise 26.
 
 Since these cases exhaust all possibilities, we have proved that $n^2+5$ is not divisible by 4.
 \end{proof}
@@ -13409,7 +13444,7 @@ Since these cases exhaust all possibilities, we proved that $p = 6q+1$ or $p = 6
 \end{proof}
 
 \subsubsection{Exercise 40}
-If $n$ is any odd integer, then $n^4 \mod 16 = 1$.
+If $n$ is any odd integer, then $n^4 \bmod 16 = 1$.
 
 \begin{proof}
 Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$.
@@ -13422,7 +13457,7 @@ By an earlier Exercise, the product of any two consecutive integers is even. So 
 
 $n^4 = 16(k^4 + 2k^3+ k^2) + 8(2s) + 1 = 16(k^4 + 2k^3+ k^2 + s) + 1$.
 
-Let $t = k^4 + 2k^3+ k^2 + s$ which is an integer because it's a sum and product of integers. Therefore $n^4 = 16t + 1$ for some integer $t$. Since $0 \leq 1 < 16$, the remainder of dividing $n^4$ by 16 is 1. So by definition of mod, $n^4 \mod = 1$.
+Let $t = k^4 + 2k^3+ k^2 + s$ which is an integer because it's a sum and product of integers. Therefore $n^4 = 16t + 1$ for some integer $t$. Since $0 \leq 1 < 16$, the remainder of dividing $n^4$ by 16 is 1. So by definition of mod, $n^4 \bmod = 1$.
 \end{proof}
 
 \subsubsection{Exercise 41}
@@ -13527,32 +13562,32 @@ $n = 4\cdot (i-1) + j - 1$
 Find formulas (in $n$) for $r$ and $s$ so that $a_{rs}$ is stored in location $7,609 + n$.
 
 \begin{proof}
-$r = 1 + (n$ div $4), s = 1 + (n \mod 4)$
+$r = 1 + (n$ div $4), s = 1 + (n \bmod 4)$
 \end{proof}
 
 \subsubsection{Exercise 45}
 Let {\bf M} be a matrix with $m$ rows and $n$ columns, and suppose that the entries of {\bf M} are stored in a computer’s memory in row major form (see exercise 44) in locations $N, N + 1, N + 2, \ldots, N + mn - 1$. Find formulas in $k$ for $r$ and $s$ so that $a_{rs}$ is stored in location $N + k$.
 
 \begin{proof}
-$r = 1 + (k$ div $n), s = 1 + (k \mod n)$
+$r = 1 + (k$ div $n), s = 1 + (k \bmod n)$
 \end{proof}
 
 \subsubsection{Exercise 46}
-If $m, n$, and $d$ are integers, $d > 0$, and $m \mod d = n \mod d$, does it necessarily follow that $m = n$? That $m - n$ is divisible by $d$? Prove your answers.
+If $m, n$, and $d$ are integers, $d > 0$, and $m \bmod d = n \bmod d$, does it necessarily follow that $m = n$? That $m - n$ is divisible by $d$? Prove your answers.
 
 \begin{proof}
-{\it Answer to first question:} No. Counterexample: Let $m = 1, n = 3$, and $d = 2$. Then $m \mod d = 1$ and $n \mod d = 1$ but $m \neq n$.
+{\it Answer to first question:} No. Counterexample: Let $m = 1, n = 3$, and $d = 2$. Then $m \bmod d = 1$ and $n \bmod d = 1$ but $m \neq n$.
 
-{\it Answer to second question:} Yes. Proof: Suppose $m, n$, and $d$ are integers such that $m \mod d = n \mod d$. Let $r = m \mod d = n mod d$. By definition of mod, $m = dp + r$ and $n = dq + r$ for some integers $p$ and $q$. Then $m - n = (dp + r) - (dq + r) = d(p - q)$. But $p - q$ is an integer (being a difference of integers), and so $m - n$ is divisible by $d$ by definition of divisible.
+{\it Answer to second question:} Yes. Proof: Suppose $m, n$, and $d$ are integers such that $m \bmod d = n \bmod d$. Let $r = m \bmod d = n mod d$. By definition of mod, $m = dp + r$ and $n = dq + r$ for some integers $p$ and $q$. Then $m - n = (dp + r) - (dq + r) = d(p - q)$. But $p - q$ is an integer (being a difference of integers), and so $m - n$ is divisible by $d$ by definition of divisible.
 \end{proof}
 
 \subsubsection{Exercise 47}
-If $m$, $n$, and $d$ are integers, $d > 0$, and $d \mid (m - n)$, what is the relation between \\ $m \mod d$ and $n \mod d$? Prove your answer.
+If $m$, $n$, and $d$ are integers, $d > 0$, and $d \mid (m - n)$, what is the relation between \\ $m \bmod d$ and $n \bmod d$? Prove your answer.
 
 \begin{proof}
 {\it Answer:} They are equal. Let's prove the answer.
 
-Let $r = m \mod d$ and $s = n \mod d$.
+Let $r = m \bmod d$ and $s = n \bmod d$.
 
 By definition of mod, $m = da+r$ and $n = db+s$ for some integers $a,b$, where $0 \leq r < d$ and $0 \leq s < d$.
 
@@ -13564,46 +13599,46 @@ So $da+r-db-s-dq = 0$. Organizing, we get $d(a-b-q) + r-s = 0$. So $r-s = d(q-a+
 
 Since $0 \leq r < d$ and $0 \leq s < d$, the range of possible values of $r-s$ is: $-d+1, -d+2, \ldots, -2, -1, 0, 1, 2, \ldots, d-2, d-1$. Among these values, the only multiple of $d$ is 0.
 
-Therefore $r-s = 0$. So $r = s$, in other words $m \mod d = n \mod d$.
+Therefore $r-s = 0$. So $r = s$, in other words $m \bmod d = n \bmod d$.
 \end{proof}
 
 \subsubsection{Exercise 48}
-If $m, n, a, b$, and $d$ are integers, $d > 0$, and $m \mod d = a$ and $n \mod d = b$, is $(m + n) \mod d = a + b$? Is $(m + n) \mod d = (a + b) \mod d$? Prove your answers.
+If $m, n, a, b$, and $d$ are integers, $d > 0$, and $m \bmod d = a$ and $n \bmod d = b$, is $(m + n) \bmod d = a + b$? Is $(m + n) \bmod d = (a + b) \bmod d$? Prove your answers.
 
 \begin{proof}
-{\it Answer to the first question:} No. Let $m = 1, n = 2, d = 3, a = 1, b = 2$. Then $1 \mod 3 = 1$ and $2 \mod 3 = 2$ but $(1+2) \mod 3 = 3 \mod 3 = 0 \neq 1+2$.
+{\it Answer to the first question:} No. Let $m = 1, n = 2, d = 3, a = 1, b = 2$. Then $1 \bmod 3 = 1$ and $2 \bmod 3 = 2$ but $(1+2) \bmod 3 = 3 \bmod 3 = 0 \neq 1+2$.
 
-{\it Answer to the first question:} Yes. Let $r = (a+b) \mod d$. By definition of mod, $m = pd+a$ and $n = qd+b$ and $(a+b) = sd+r$ for some integers $p,q,s$, where $0 \leq a < d$ and $0 \leq b < d$ and $0 \leq r < d$. Then
+{\it Answer to the first question:} Yes. Let $r = (a+b) \bmod d$. By definition of mod, $m = pd+a$ and $n = qd+b$ and $(a+b) = sd+r$ for some integers $p,q,s$, where $0 \leq a < d$ and $0 \leq b < d$ and $0 \leq r < d$. Then
 
 $m+n = pd+a+qd+b = d(p+q)+(a+b) = d(p+q) + sd+r = d(p+q+s)+r$.
 
-Let $t = p+q+s$ which is an integer (being a sum of integers). So $m+n = dt + r$ where $t$ is an integer and $0 \leq r < d$. Therefore by definition of mod, $(m+n) \mod d = r$, in other words, $(m + n) \mod d = (a + b) \mod d$.
+Let $t = p+q+s$ which is an integer (being a sum of integers). So $m+n = dt + r$ where $t$ is an integer and $0 \leq r < d$. Therefore by definition of mod, $(m+n) \bmod d = r$, in other words, $(m + n) \bmod d = (a + b) \bmod d$.
 \end{proof}
 
 \subsubsection{Exercise 49}
-If $m, n, a, b$, and $d$ are integers, $d > 0$, and $m \mod d = a$ and $n \mod d = b$, is $(mn) \mod d = ab$? Is $(mn) \mod d = ab \mod d$? Prove your answers.
+If $m, n, a, b$, and $d$ are integers, $d > 0$, and $m \bmod d = a$ and $n \bmod d = b$, is $(mn) \bmod d = ab$? Is $(mn) \bmod d = ab \bmod d$? Prove your answers.
 
 \begin{proof}
-{\it Answer to the first question:} No. Let $m = 2, n = 3, d = 6, a = 2, b = 3$. Then $2 \mod 6 = 2$ and $3 \mod 6 = 3$ but $(2\cdot3) \mod 6 = 6 \mod 6 = 0 \neq 6 = 2\cdot3$.
+{\it Answer to the first question:} No. Let $m = 2, n = 3, d = 6, a = 2, b = 3$. Then $2 \bmod 6 = 2$ and $3 \bmod 6 = 3$ but $(2\cdot3) \bmod 6 = 6 \bmod 6 = 0 \neq 6 = 2\cdot3$.
 
-{\it Answer to the first question:} Yes. Let $r = ab \mod d$. By definition of mod, $m = pd+a$ and $n = qd+b$ and $(ab) = sd+r$ for some integers $p,q,s$, where $0 \leq a < d$ and $0 \leq b < d$ and $0 \leq r < d$. Then
+{\it Answer to the first question:} Yes. Let $r = ab \bmod d$. By definition of mod, $m = pd+a$ and $n = qd+b$ and $(ab) = sd+r$ for some integers $p,q,s$, where $0 \leq a < d$ and $0 \leq b < d$ and $0 \leq r < d$. Then
 
 $mn = (pd+a)(qd+b) = pqd^2 + pbd + qad + ab = pqd^2 + pbd + qad + (sd + r)$
 
 $ = d(pqd+pb+qa+s) + r$
 
-Let $t = pqd+pb+qa+s$ which is an integer (being a sum and product of integers). So $mn = dt + r$ where $t$ is an integer and $0 \leq r < d$. Therefore by definition of mod, $(mn) \mod d = r$, in other words, $(mn) \mod d = (ab) \mod d$.
+Let $t = pqd+pb+qa+s$ which is an integer (being a sum and product of integers). So $mn = dt + r$ where $t$ is an integer and $0 \leq r < d$. Therefore by definition of mod, $(mn) \bmod d = r$, in other words, $(mn) \bmod d = (ab) \bmod d$.
 \end{proof}
 
 \subsubsection{Exercise 50}
-Prove that if $m, d$, and $k$ are integers and $d > 0$, then $(m + dk) \mod d = m \mod d$.
+Prove that if $m, d$, and $k$ are integers and $d > 0$, then $(m + dk) \bmod d = m \bmod d$.
 
 \begin{proof}
-Let $r = m \mod d$. By definition of mod, $m = qd+r$ for some integer $q$ where $0 \leq r < d$.
+Let $r = m \bmod d$. By definition of mod, $m = qd+r$ for some integer $q$ where $0 \leq r < d$.
 
 Then $m + dk = qd+r+dk = d(q+k)+r$.
 
-Let $t = q+k$ which is an integer (being a sum of integers). Then $m+dk = dt + r$ where $t,r$ are integers with $0 \leq r < d$. So by definition of mod, $(m+dk) \mod d = r$. In other words, $(m + dk) \mod d = m \mod d$.
+Let $t = q+k$ which is an integer (being a sum of integers). Then $m+dk = dt + r$ where $t,r$ are integers with $0 \leq r < d$. So by definition of mod, $(m+dk) \bmod d = r$. In other words, $(m + dk) \bmod d = m \bmod d$.
 \end{proof}
 
 \subsection{Exercise Set 4.6}
@@ -13638,10 +13673,10 @@ $-32/5 = -6.4$, so $\floor{-32/5} = -7, \ceil{-32/5} = -6$
 \end{proof}
 
 \subsubsection{Exercise 5}
-Use the floor notation to express 259 div 11 and $259 \mod 11$.
+Use the floor notation to express 259 div 11 and $259 \bmod 11$.
 
 \begin{proof}
-259 div 11 = $\floor{259/11}$ and $259 \mod 11 = 259 - 11 \cdot \floor{259/11}$.
+259 div 11 = $\floor{259/11}$ and $259 \bmod 11 = 259 - 11 \cdot \floor{259/11}$.
 \end{proof}
 
 \subsubsection{Exercise 6}
@@ -13675,7 +13710,7 @@ $\ceil{n/36}$. The ceiling notation is more appropriate. If the floor notation i
 \subsubsection{Exercise 10}
 If 0 = Sunday, 1 = Monday, 2 = Tuesday, $\ldots$, 6 = Saturday, then January 1 of year $n$ occurs on the day of the week given by the following formula:
 \[
-\left(n + \floor{\frac{n-1}{4}} - \floor{\frac{n-1}{100}} + \floor{\frac{n-1}{400}}\right) \mod 7
+\left(n + \floor{\frac{n-1}{4}} - \floor{\frac{n-1}{100}} + \floor{\frac{n-1}{400}}\right) \bmod 7
 \]
 (a)
 Use this formula to find January 1 of {\cy i.} 2050 {\cy ii.} 2100 {\cy iii.} the year of your birth.
@@ -13683,21 +13718,21 @@ Use this formula to find January 1 of {\cy i.} 2050 {\cy ii.} 2100 {\cy iii.} th
 \begin{proof}
 {\cy i.}
 \[
-\left(2050 + \floor{\frac{2049}{4}} - \floor{\frac{2049}{100}} + \floor{\frac{2049}{400}}\right) \mod 7 = (2050+512-20+5) \mod 7
+\left(2050 + \floor{\frac{2049}{4}} - \floor{\frac{2049}{100}} + \floor{\frac{2049}{400}}\right) \bmod 7 = (2050+512-20+5) \bmod 7
 \]
-which is $2547 \mod 7 = 6$, which corresponds to a Saturday.
+which is $2547 \bmod 7 = 6$, which corresponds to a Saturday.
 
 {\cy ii.}
 \[
-\left(2100 + \floor{\frac{2099}{4}} - \floor{\frac{2099}{100}} + \floor{\frac{2099}{400}}\right) \mod 7 = (2100+524-20+5) \mod 7
+\left(2100 + \floor{\frac{2099}{4}} - \floor{\frac{2099}{100}} + \floor{\frac{2099}{400}}\right) \bmod 7 = (2100+524-20+5) \bmod 7
 \]
-which is $2609 \mod 7 = 5$, which corresponds to a Friday.
+which is $2609 \bmod 7 = 5$, which corresponds to a Friday.
 
 {\cy iii.}
 \[
-\left(1970 + \floor{\frac{1969}{4}} - \floor{\frac{1969}{100}} + \floor{\frac{1969}{400}}\right) \mod 7 = (1970+492-19+4) \mod 7
+\left(1970 + \floor{\frac{1969}{4}} - \floor{\frac{1969}{100}} + \floor{\frac{1969}{400}}\right) \bmod 7 = (1970+492-19+4) \bmod 7
 \]
-which is $2447 \mod 7 = 4$, which corresponds to a Thursday.
+which is $2447 \bmod 7 = 4$, which corresponds to a Thursday.
 \end{proof}
 
 (b)
@@ -13790,14 +13825,14 @@ For every integer $n$,
 \floor{n/3} =
 \left\{
 \begin{array}{lr}
-n/3 & \text{if } n \mod 3 = 0\\
-(n-1)/3 & \text{if } n \mod 3 = 1\\
-(n-2)/3 & \text{if } n \mod 3 = 2\\
+n/3 & \text{if } n \bmod 3 = 0\\
+(n-1)/3 & \text{if } n \bmod 3 = 1\\
+(n-2)/3 & \text{if } n \bmod 3 = 2\\
 \end{array}
 \right.
 \]
 \begin{proof}
-Assume $n$ is any integer. Let $r = n \mod 3$. There are 3 cases.
+Assume $n$ is any integer. Let $r = n \bmod 3$. There are 3 cases.
 
 {\bf Case 1:} $r = 0$. By definition of mod, $n = 3q$ for some integer $q$. So $n/3 = q$ is an integer. By Exercise 11, $\floor{q} = q$. Therefore $\floor{n/3} = \floor{q} = q = n / 3$.
 
@@ -14360,28 +14395,28 @@ Now $cd$ and $ab$ are integers (being products of integers) and $ad \neq 0$ by t
 \end{proof}
 
 \subsubsection{Exercise 14}
-Let $T$ be the statement: For every integer $a$, if $a \mod 6 = 3$, then $a \mod 3 \neq 2$.
+Let $T$ be the statement: For every integer $a$, if $a \bmod 6 = 3$, then $a \bmod 3 \neq 2$.
 
 (a)
 Write a negation for $T$.
 
 \begin{proof}
-$\te$ an integer $a$ such that $a \mod 6 = 3$ and $a \mod 3 = 2$.
+$\te$ an integer $a$ such that $a \bmod 6 = 3$ and $a \bmod 3 = 2$.
 \end{proof}
 
 (b)
 Prove $T$ by contradiction.
 
-{\it Hint:} Recall that to say $a \mod 6 = 3$ means that there exists an integer $r$ such that $a = 6r + 3$.
+{\it Hint:} Recall that to say $a \bmod 6 = 3$ means that there exists an integer $r$ such that $a = 6r + 3$.
 
 \begin{proof}
 Argue by contradiction and assume the negation of $T$.
 
-So $\te$ an integer $a$ such that $a \mod 6 = 3$ and $a \mod 3 = 2$.
+So $\te$ an integer $a$ such that $a \bmod 6 = 3$ and $a \bmod 3 = 2$.
 
-By definition of mod used with $a \mod 6 = 3$, there exists an integer $r$ such that $a = 6r + 3$.
+By definition of mod used with $a \bmod 6 = 3$, there exists an integer $r$ such that $a = 6r + 3$.
 
-By definition of mod used with $a \mod 3 = 2$, there exists an integer $s$ such that $a = 3s + 2$.
+By definition of mod used with $a \bmod 3 = 2$, there exists an integer $s$ such that $a = 3s + 2$.
 
 So $6r + 3 = 3s + 2$. Therefore $1 = 3s - 6r = 3(s - 2r)$. Therefore $s-2r = \frac{1}{3}$. But $s-2r$ is an integer (being a difference of integers) while $\frac{1}{3}$ is not an integer, contradiction!
 
@@ -16416,7 +16451,7 @@ Suppose $a, d, q$, and $r$ are integers such that $a = dq + r$ and $0 \leq r < d
 \end{proof}
 
 (b)
-In a computer language with a built-in-floor function, div and mod can be calculated as follows: $a$ $div$ $d = \floor{a/d}$ and $a \mod d = a - \floor{a/d} \cdot d$. Rewrite the steps of Algorithm 4.10.2 for a computer language with a built-in floor function but without div and mod.
+In a computer language with a built-in-floor function, div and mod can be calculated as follows: $a$ $div$ $d = \floor{a/d}$ and $a \bmod d = a - \floor{a/d} \cdot d$. Rewrite the steps of Algorithm 4.10.2 for a computer language with a built-in floor function but without div and mod.
 
 \begin{proof}
 {\bf \cy Input:} $A, B$ {\it [integers with $A > B \geq 0$]}
@@ -17572,7 +17607,7 @@ Write a formal version of the algorithm you developed for exercise 87.\\
 {\bf\cy Alg}\={\bf\cy orithm Body:} \\
          \> $q \coloneqq a, i \coloneqq 0$ \\
          \> {\bf wh}\={\bf ile} ($i = 0$ or $q \neq 0$) \\
-         \>          \> $r[i] \coloneqq q \mod 16$ \\
+         \>          \> $r[i] \coloneqq q \bmod 16$ \\
          \>          \> $q \coloneqq q \text{ div } 16$ \\
          \>          \> {\it [$r[i]$ and $q$ can be obtained by calling the division algorithm.]} \\
          \> {\bf end while} \\
@@ -22189,7 +22224,7 @@ Then as execution reaches the top of the loop, since $G$ is true we have $y \neq
 so the guard is passed and the statement is executed.
 
 Now before execution of the statement, since $I(k)$ is true we have $x_{old}y_{old} + product_{old} = AB$.
-Then $r \coloneqq y \mod 2$ is executed. There are two cases:
+Then $r \coloneqq y \bmod 2$ is executed. There are two cases:
 
 {\bf Case 1: $r = 0$.} Then the first branch is executed. So we have $x_{new} = 2x_{old}$,
 $y_{new} = y_{old} \, div \, 2$, and $product_{new} = product_{old}$ (because product does not get modified).
@@ -22231,7 +22266,7 @@ There exist integers $u, v, s$, and $t$ such that $a = uA + vB$ and $b = sA + tB
 Show that this sentence is a loop invariant for
 \begin{tabbing}
 {\bf while} \= ($b \neq 0$) \\
-\> $r \coloneqq a \mod b$ \\
+\> $r \coloneqq a \bmod b$ \\
 \> $a \coloneqq b$ \\
 \> $b \coloneqq r$ \\
 {\bf end while}
@@ -22243,11 +22278,11 @@ Assume $G \wedge I(k)$ is true for some nonnegative integer $k$. {\it [We want t
 Since $I(k)$ is true, there exist integers $u', v', s'$, and $t'$ such that $a_{old} = u'A + v'B$ and $b_{old} = s'A + t'B$.
 
 Since $G$ is true, $b \neq 0$ so the guard is passed that the statements are executed. After execution we get
-$a_{new} = b_{old}$ and $b_{new} = a_{old} \mod b_{old}$.
+$a_{new} = b_{old}$ and $b_{new} = a_{old} \bmod b_{old}$.
 
 So $a_{new} = b_{old} = s'A + t'B$. Let $u = s', v = t'$.
 
-Now let's work on $b_{new} = a_{old} \mod b_{old}$. By definition of mod, \(a_{old} = b_{old} \cdot m + b_{new}\)
+Now let's work on $b_{new} = a_{old} \bmod b_{old}$. By definition of mod, \(a_{old} = b_{old} \cdot m + b_{new}\)
 for some integers $m,n$. We have $a_{old} = u'A + v'B$ and $b_{old} = s'A + t'B$, so
 \[
 u'A + v'B = (s'A + t'B)m + b_{new}, \text{ so } (u'-s'm)A + (v'-t'm)B = b_{new}.
@@ -25834,35 +25869,35 @@ III. & Restriction: No integers are in $S$ other than those derived from rules I
      & above.
 \end{tabular}
 
-Use structural induction to prove that for every integer $n$ in $S$, $n \mod 2 = 1$.
+Use structural induction to prove that for every integer $n$ in $S$, $n \bmod 2 = 1$.
 
 \begin{proof}
 By the definition of $S$ in exercise 6, the only integer in the base for $S$ is 5, and the recursion rule states that
 for every integer $n$ in $S$, \(n + 4\) is in $S$. Given any integer $n$ in $S$, let property $P(n)$ be the
-sentence, “\(n \mod 2 = 1\).”
+sentence, “\(n \bmod 2 = 1\).”
 
 {\bf Show that $P(n)$ is true for each integer $n$ in the base for $S$:}
 
-The only integer in the base for $S$ is 5, and $P(5)$ is true because \(5 \mod 2 = 1\) since \(5 = 2 \cdot 2 + 1\).
+The only integer in the base for $S$ is 5, and $P(5)$ is true because \(5 \bmod 2 = 1\) since \(5 = 2 \cdot 2 + 1\).
 
 {\bf Show that for each integer $n$ in $S$, if $P(n)$ is true and if $m$ is obtained from $n$ by applying a rule
 from the recursion for $S$, then $P(m)$ is true:}
 
-Suppose $n$ is any integer in $S$ such that $P(n)$ is true, or, in other words, \(n \mod 2 = 1\). {\it [This is the
+Suppose $n$ is any integer in $S$ such that $P(n)$ is true, or, in other words, \(n \bmod 2 = 1\). {\it [This is the
 inductive hypothesis.]} The recursion for $S$ consists of only one rule, and when the rule is applied to $n$, the
 result is \(n + 4\). To complete the inductive step, we must show that \(P(n + 4)\) is true, or, equivalently, that
-\((n + 4) \mod 2 = 1\). Now since \(n \mod 2 = 1\), then \(n = 2k + 1\) for some integer $k$. Hence
+\((n + 4) \bmod 2 = 1\). Now since \(n \bmod 2 = 1\), then \(n = 2k + 1\) for some integer $k$. Hence
 \begin{center}
 \begin{tabular}{rcll}
-\((n + 4) \mod 2\) & = & \([(2k + 1) + 4] \mod 2\) & {\cy by substitution} \\
-& = & \([2(k + 2) + 1] \mod 2\) & {\cy by basic algebra} \\
+\((n + 4) \bmod 2\) & = & \([(2k + 1) + 4] \bmod 2\) & {\cy by substitution} \\
+& = & \([2(k + 2) + 1] \bmod 2\) & {\cy by basic algebra} \\
 & = & 1 & {\cy because $k + 2$ is an integer}
 \end{tabular}
 \end{center}
 and so $P(n + 4)$ is true {\it [as was to be shown].}
 
 {\bf Conclusion:} Because there are no integers in $S$ other than those obtained from the base and the recursion
-for $S$, we conclude that every integer $n$ in $S$ satisfies the equation \(n \mod 2 = 1\).
+for $S$, we conclude that every integer $n$ in $S$ satisfies the equation \(n \bmod 2 = 1\).
 \end{proof}
 
 \subsubsection{Exercise 7}
@@ -26739,10 +26774,10 @@ is in $B$, but \(B \nsubseteq A\) because \(\{\{2\}\} \in B\) but \(\{\{2\}\} \n
 \end{proof}
 
 (b)
-\(A = \{3, \sqrt{5^2 - 4^2}, 24 \mod 7\}, B = \{8 \mod 5\}\)
+\(A = \{3, \sqrt{5^2 - 4^2}, 24 \bmod 7\}, B = \{8 \bmod 5\}\)
 
 \begin{proof}
-\(A = \{3, \sqrt{5^2 - 4^2}, 24 \mod 7\} = \{3, 3, 3\} = \{3\}, B = \{8 \mod 5\} = \{3\}\). So $A = B$, which means
+\(A = \{3, \sqrt{5^2 - 4^2}, 24 \bmod 7\} = \{3, 3, 3\} = \{3\}, B = \{8 \bmod 5\} = \{3\}\). So $A = B$, which means
 both \(A \subseteq B\) and \(B \subseteq A\).
 \end{proof}
 
@@ -31746,13 +31781,13 @@ Find the following:
 
 \subsubsection{Exercise 8}
 Let \(J_5 = \{0, 1, 2, 3, 4\}\), and define a function \(F: J_5 \to J_5\) as follows: For each \(x \in J_5, F(x) = (x^3
-+ 2x + 4) \mod 5\). Find the following:
++ 2x + 4) \bmod 5\). Find the following:
 
 (a)
 $F(0)$
 
 \begin{proof}
-\(F(0) = (0^3 + 2 \cdot 0 + 4) \mod 5 = 4 \mod 5 = 4\)
+\(F(0) = (0^3 + 2 \cdot 0 + 4) \bmod 5 = 4 \bmod 5 = 4\)
 
 \end{proof}
 
@@ -31760,28 +31795,28 @@ $F(0)$
 $F(1)$
 
 \begin{proof}
-\(F(1) = (1^3 + 2 \cdot 1 + 4) \mod 5 = 7 \mod 5 = 2\)
+\(F(1) = (1^3 + 2 \cdot 1 + 4) \bmod 5 = 7 \bmod 5 = 2\)
 \end{proof}
 
 (c)
 $F(2)$
 
 \begin{proof}
-\(F(2) = (2^3 + 2 \cdot 2 + 4) \mod 5 = 16 \mod 5 = 1\)
+\(F(2) = (2^3 + 2 \cdot 2 + 4) \bmod 5 = 16 \bmod 5 = 1\)
 \end{proof}
 
 (d)
 $F(3)$
 
 \begin{proof}
-\(F(3) = (3^3 + 2 \cdot 3 + 4) \mod 5 = 37 \mod 5 = 2\)
+\(F(3) = (3^3 + 2 \cdot 3 + 4) \bmod 5 = 37 \bmod 5 = 2\)
 \end{proof}
 
 (e)
 $F(4)$
 
 \begin{proof}
-\(F(4) = (4^3 + 2 \cdot 4 + 4) \mod 5 = 76 \mod 5 = 1\)
+\(F(4) = (4^3 + 2 \cdot 4 + 4) \bmod 5 = 76 \bmod 5 = 1\)
 \end{proof}
 
 \subsubsection{Exercise 9}
@@ -31912,39 +31947,39 @@ $F(1,5)$
 
 \subsubsection{Exercise 12}
 Let \(J_5 = \{0, 1, 2, 3, 4\}\), and define \(G: J_5 \times J_5 \to J_5 \times J_5\) as follows: For each \((a,b) \in
-J_5 \times J_5, G(a,b) = ((2a+1) \mod 5, (3b-2) \mod 5)\). Find the following:
+J_5 \times J_5, G(a,b) = ((2a+1) \bmod 5, (3b-2) \bmod 5)\). Find the following:
 
 (a)
 $G(4,4)$
 
 \begin{proof}
-\(G(4, 4) = ((2 \cdot 4 + 1) \mod 5, (3 \cdot 4 - 2) \mod 5) = (9 \mod 5, 10 \mod 5) = (4, 0)\)
+\(G(4, 4) = ((2 \cdot 4 + 1) \bmod 5, (3 \cdot 4 - 2) \bmod 5) = (9 \bmod 5, 10 \bmod 5) = (4, 0)\)
 \end{proof}
 
 (b)
 $G(2,1)$
 
 \begin{proof}
-\(G(2, 1) = ((2 \cdot 2 + 1) \mod 5, (3 \cdot 1 - 2) \mod 5) = (5 \mod 5, 1 \mod 5) = (0, 1)\)
+\(G(2, 1) = ((2 \cdot 2 + 1) \bmod 5, (3 \cdot 1 - 2) \bmod 5) = (5 \bmod 5, 1 \bmod 5) = (0, 1)\)
 \end{proof}
 
 (c)
 $G(3,2)$
 
 \begin{proof}
-\(G(3, 2) = ((2 \cdot 3 + 1) \mod 5, (3 \cdot 2 - 2) \mod 5) = (7 \mod 5, 4 \mod 5) = (2, 4)\)
+\(G(3, 2) = ((2 \cdot 3 + 1) \bmod 5, (3 \cdot 2 - 2) \bmod 5) = (7 \bmod 5, 4 \bmod 5) = (2, 4)\)
 \end{proof}
 
 (d)
 $G(1,5)$
 
 \begin{proof}
-\(G(1, 5) = ((2 \cdot 1 + 1) \mod 5, (3 \cdot 5 - 2) \mod 5) = (3 \mod 5, 13 \mod 5) = (3, 3)\)
+\(G(1, 5) = ((2 \cdot 1 + 1) \bmod 5, (3 \cdot 5 - 2) \bmod 5) = (3 \bmod 5, 13 \bmod 5) = (3, 3)\)
 \end{proof}
 
 \subsubsection{Exercise 13}
 Let \(J_5 = \{0, 1, 2, 3, 4\}\), and define functions \(f: J_5 \to J_5\) and \(g: J_5 \to J_5\) as follows: For each
-\(x \in J_5, f(x) = (x + 4)^2 \mod 5\) and \(g(x) = (x^2 + 3x + 1) \mod 5\). Is $f = g$? Explain.
+\(x \in J_5, f(x) = (x + 4)^2 \bmod 5\) and \(g(x) = (x^2 + 3x + 1) \bmod 5\). Is $f = g$? Explain.
 
 \begin{proof}
 \begin{center}
@@ -31953,15 +31988,15 @@ Let \(J_5 = \{0, 1, 2, 3, 4\}\), and define functions \(f: J_5 \to J_5\) and \(g
 \hline
 $x$ & $f(x)$ & $g(x)$ \\
 \hline
-0 & \(4^2 \mod 5 = 1\) & \((0^2 + 3 \cdot 0 + 1) \mod 5 = 1\) \\
+0 & \(4^2 \bmod 5 = 1\) & \((0^2 + 3 \cdot 0 + 1) \bmod 5 = 1\) \\
 \hline
-1 & \(5^2 \mod 5 = 0\) & \((1^2 + 3 \cdot 1 + 1) \mod 5 = 0\) \\
+1 & \(5^2 \bmod 5 = 0\) & \((1^2 + 3 \cdot 1 + 1) \bmod 5 = 0\) \\
 \hline
-2 & \(6^2 \mod 5 = 1\) & \((2^2 + 3 \cdot 2 + 1) \mod 5 = 1\) \\
+2 & \(6^2 \bmod 5 = 1\) & \((2^2 + 3 \cdot 2 + 1) \bmod 5 = 1\) \\
 \hline
-3 & \(7^2 \mod 5 = 4\) & \((3^2 + 3 \cdot 3 + 1) \mod 5 = 4\) \\
+3 & \(7^2 \bmod 5 = 4\) & \((3^2 + 3 \cdot 3 + 1) \bmod 5 = 4\) \\
 \hline
-4 & \(8^2 \mod 5 = 4\) & \((4^2 + 3 \cdot 4 + 1) \mod 5 = 4\) \\
+4 & \(8^2 \bmod 5 = 4\) & \((4^2 + 3 \cdot 4 + 1) \bmod 5 = 4\) \\
 \hline
 \end{tabular}
 \arrayrulecolor{black}
@@ -32192,7 +32227,7 @@ Find \(p_2(2, y)\) and \(p_2(5, x)\). What is the range of $p_2$?
 Observe that mod and div can be defined as functions from \(\Z^{nonneg} \times \Z^+\) to $\Z$. For each ordered pair
 \((n, d)\) consisting of a nonnegative integer $n$ and a positive integer $d$, let
 
-\(mod(n, d) = n \mod d\) (the nonnegative remainder obtained when $n$ is divided by $d$).
+\(mod(n, d) = n \bmod d\) (the nonnegative remainder obtained when $n$ is divided by $d$).
 
 \(div(n, d) = n \text{ div } d\) (the integer quotient obtained when $n$ is divided by $d$).
 
@@ -32387,15 +32422,15 @@ Fill in the following table to show the values of all possible two-place Boolean
 Consider the three-place Boolean function $f$ defined by the following rule: For each triple \((x_1, x_2, x_3)\) of
 0’s and 1’s,
 \[
-f(x_1, x_2, x_3) = (4x_1 + 3x_2 + 2x_3) \mod 2.
+f(x_1, x_2, x_3) = (4x_1 + 3x_2 + 2x_3) \bmod 2.
 \]
 (a)
 Find $f(1, 1, 1)$ and $f(0, 0, 1)$.
 
 \begin{proof}
-\(f(1, 1, 1) = (4 \cdot 1 + 3 \cdot 1 + 2 \cdot 1) \mod 2 = 9 \mod 2 = 1\)
+\(f(1, 1, 1) = (4 \cdot 1 + 3 \cdot 1 + 2 \cdot 1) \bmod 2 = 9 \bmod 2 = 1\)
 
-\(f(0, 0, 1) = (4 \cdot 0 + 3 \cdot 0 + 2 \cdot 1) \mod 2 = 2 \mod 2 = 0\)
+\(f(0, 0, 1) = (4 \cdot 0 + 3 \cdot 0 + 2 \cdot 1) \bmod 2 = 2 \bmod 2 = 0\)
 \end{proof}
 
 (b)
@@ -32460,23 +32495,23 @@ h(2) = h\left(\frac{4}{2}\right) = \frac{4^2}{2} = 8 \neq 4 = \frac{2^2}{1} = h\
 
 \subsubsection{Exercise 35}
 Let \(U = \{1, 2, 3, 4\}\). Student $A$ tries to define a function \(R: U \to \Z\) as follows: For each \(x \in U\),
-\(R(x)\) is the integer $y$ so that \((xy) \mod 5 = 1\). Student $B$ claims that $R$ is not well defined. Who is
+\(R(x)\) is the integer $y$ so that \((xy) \bmod 5 = 1\). Student $B$ claims that $R$ is not well defined. Who is
 right: student $A$ or student $B$? Justify your answer.
 
 \begin{proof}
 Student $B$ is correct. If $R$ were well defined, then $R(3)$ would have a uniquely determined value. However, on
-the one hand, \(R(3) = 2\) because \((3 \cdot 2) \mod 5 = 1\), and, on the other hand, \(R(3) = 7\) because
-\((3 \cdot 7) \mod 5 = 1\). Hence \(R(3)\) does not have a uniquely determined value, and so $R$ is not well defined.
+the one hand, \(R(3) = 2\) because \((3 \cdot 2) \bmod 5 = 1\), and, on the other hand, \(R(3) = 7\) because
+\((3 \cdot 7) \bmod 5 = 1\). Hence \(R(3)\) does not have a uniquely determined value, and so $R$ is not well defined.
 \end{proof}
 
 \subsubsection{Exercise 36}
 Let \(V = \{1, 2, 3\}\). Student $C$ tries to define a function \(S: V \to V\) as follows: For each \(x \in V\),
-\(S(x)\) is the integer $y$ in $V$ so that \((xy) \mod 4 = 1\). Student $D$ claims that $S$ is not well defined. Who
+\(S(x)\) is the integer $y$ in $V$ so that \((xy) \bmod 4 = 1\). Student $D$ claims that $S$ is not well defined. Who
 is right: student $C$ or student $D$? Justify your answer.
 
 \begin{proof}
-Student $D$ is right, because $S(2)$ is not defined. \(2 \cdot 1 \mod 4 = 2, 2 \cdot 2 \mod 4 = 0\), and
-\(2 \cdot 3 \mod 4 = 2\). So when $x = 2$ there is no $y$ in $V$ such that \(xy \mod 4 = 1\).
+Student $D$ is right, because $S(2)$ is not defined. \(2 \cdot 1 \bmod 4 = 2, 2 \cdot 2 \bmod 4 = 0\), and
+\(2 \cdot 3 \bmod 4 = 2\). So when $x = 2$ there is no $y$ in $V$ such that \(xy \bmod 4 = 1\).
 \end{proof}
 
 \subsubsection{Exercise 37}
@@ -33261,7 +33296,7 @@ Table 7.2.1. Find the position into which each record is placed.
 417302072
 
 \begin{proof}
-When 417302072 is divided by 11, the remainder is 0. So, \(417302072 \mod 11 = H(417302072) = 0\).
+When 417302072 is divided by 11, the remainder is 0. So, \(417302072 \bmod 11 = H(417302072) = 0\).
 Since position 0 is unoccupied, the record is placed there.
 \end{proof}
 
@@ -33269,7 +33304,7 @@ Since position 0 is unoccupied, the record is placed there.
 364981703
 
 \begin{proof}
-When 364981703 is divided by 11, the remainder is 9. So, \(364981703 \mod 11 = H(364981703) = 9\).
+When 364981703 is divided by 11, the remainder is 9. So, \(364981703 \bmod 11 = H(364981703) = 9\).
 Since position 9 is unoccupied, the record is placed there.
 \end{proof}
 
@@ -33277,7 +33312,7 @@ Since position 9 is unoccupied, the record is placed there.
 283090787
 
 \begin{proof}
-When 283090787 is divided by 11, the remainder is 1. So, \(283090787 \mod 11 = H(283090787) = 1\). Since position 1
+When 283090787 is divided by 11, the remainder is 1. So, \(283090787 \bmod 11 = H(283090787) = 1\). Since position 1
 is occupied, the record is placed in position 3.
 \end{proof}
 
@@ -34095,35 +34130,35 @@ Define \(f: \R \to \R\) by the rule \(f(x) = -x\) for every real number $x$. Fin
 \end{proof}
 
 \subsubsection{Exercise 6}
-Define \(F: \Z \to \Z\) and \(G: \Z \to \Z\) by the rules \(F(a) = 7a\) and \(G(a) = a \mod 5\) for each integer $a$.
+Define \(F: \Z \to \Z\) and \(G: \Z \to \Z\) by the rules \(F(a) = 7a\) and \(G(a) = a \bmod 5\) for each integer $a$.
 Find \((G \circ F)(0), (G \circ F)(1), (G \circ F)(2), (G \circ F)(3)\), and \((G \circ F)(4)\).
 
 \begin{proof}
-\((G \circ F)(0) = G(F(0)) = G(7 \cdot 0) = 0 \mod 5 = 0\),
+\((G \circ F)(0) = G(F(0)) = G(7 \cdot 0) = 0 \bmod 5 = 0\),
 
-\((G \circ F)(1) = G(F(1)) = G(7 \cdot 1) = 7 \mod 5 = 2\),
+\((G \circ F)(1) = G(F(1)) = G(7 \cdot 1) = 7 \bmod 5 = 2\),
 
-\((G \circ F)(2) = G(F(2)) = G(7 \cdot 2) = 14 \mod 5 = 4\),
+\((G \circ F)(2) = G(F(2)) = G(7 \cdot 2) = 14 \bmod 5 = 4\),
 
-\((G \circ F)(3) = G(F(3)) = G(7 \cdot 3) = 21 \mod 5 = 1\),
+\((G \circ F)(3) = G(F(3)) = G(7 \cdot 3) = 21 \bmod 5 = 1\),
 
-\((G \circ F)(4) = G(F(4)) = G(7 \cdot 4) = 28 \mod 5 = 3\).
+\((G \circ F)(4) = G(F(4)) = G(7 \cdot 4) = 28 \bmod 5 = 3\).
 \end{proof}
 
 \subsubsection{Exercise 7}
-Define \(L: \Z \to \Z\) and \(M: \Z \to \Z\) by the rules \(L(a) = a^2\) and \(M(a) = a \mod 5\) for each integer $a$.
+Define \(L: \Z \to \Z\) and \(M: \Z \to \Z\) by the rules \(L(a) = a^2\) and \(M(a) = a \bmod 5\) for each integer $a$.
 
 (a)
 Find \((L \circ M)(12), (M \circ L)(12), (L \circ M)(9)\), and \((M \circ L)(9)\).
 
 \begin{proof}
-\((L \circ M)(12) = L(M(12)) = L(12 \mod 5) = L(2) = 2^2 = 4\).
+\((L \circ M)(12) = L(M(12)) = L(12 \bmod 5) = L(2) = 2^2 = 4\).
 
-\((M \circ L)(12) = M(L(12)) = M(12^2) = M(144) = 144 \mod 5 = 4\).
+\((M \circ L)(12) = M(L(12)) = M(12^2) = M(144) = 144 \bmod 5 = 4\).
 
-\((L \circ M)(9) = L(M(9)) = L(9 \mod 5) = L(4) = 4^2 = 16\).
+\((L \circ M)(9) = L(M(9)) = L(9 \bmod 5) = L(4) = 4^2 = 16\).
 
-\((M \circ L)(9) = M(L(9)) = M(9^2) = M(81) = 81 \mod 5 = 1\).
+\((M \circ L)(9) = M(L(9)) = M(9^2) = M(81) = 81 \bmod 5 = 1\).
 \end{proof}
 
 (b)
@@ -34135,28 +34170,28 @@ No, because \((L \circ M)(9) \neq (M \circ L)(9)\).
 
 \subsubsection{Exercise 8}
 Let $S$ be the set of all strings in $a$’s and $b$’s and let \(L: S \to \Z\) be the length function: For all strings
-\(s \in S, L(s) =\) the number of characters in $s$. Let \(T: \Z \to \{0, 1, 2\}\) be the $\mod 3$ function: For
-every integer \(n, T(n) = n \mod 3\).
+\(s \in S, L(s) =\) the number of characters in $s$. Let \(T: \Z \to \{0, 1, 2\}\) be the $\bmod 3$ function: For
+every integer \(n, T(n) = n \bmod 3\).
 
 (a)
 \((T \circ L)(abaa) = ?\)
 
 \begin{proof}
-\((T \circ L)(abaa) = T(L(abaa)) = T(4) = 4 \mod 3 = 1\)
+\((T \circ L)(abaa) = T(L(abaa)) = T(4) = 4 \bmod 3 = 1\)
 \end{proof}
 
 (b)
 \((T \circ L)(baaab) = ?\)
 
 \begin{proof}
-\((T \circ L)(baaab) = T(L(baaab)) = T(5) = 5 \mod 3 = 2\)
+\((T \circ L)(baaab) = T(L(baaab)) = T(5) = 5 \bmod 3 = 2\)
 \end{proof}
 
 (c)
 \((T \circ L)(aaa) = ?\)
 
 \begin{proof}
-\((T \circ L)(aaa) = T(L(aaa)) = T(3) = 3 \mod 3 = 0\)
+\((T \circ L)(aaa) = T(L(aaa)) = T(3) = 3 \bmod 3 = 0\)
 \end{proof}
 
 \subsubsection{Exercise 9}
@@ -37003,23 +37038,23 @@ Let \(R\) be the relation of congruence modulo 7. Which of the following equival
 
 \subsubsection{Exercise 17}
 (a)
-Prove that for all integers $m$ and $n$, \(m \equiv n \pmod 3\) iff \(m \mod 3 = n \mod 3\).
+Prove that for all integers $m$ and $n$, \(m \equiv n \pmod 3\) iff \(m \bmod 3 = n \bmod 3\).
 
 \begin{proof}
-\(\bm{(\implies)}\) Suppose $m, n$ are integers such that \(m \equiv n \pmod 3\). {\it [We want to show that \(m \mod
-3 = n \mod 3\)].} By definition of congruence, \(3 \mid (m-n)\), and so, by definition of divisibility, \(m - n = 3a\)
-for some integer $a$. Let \(r = m \mod 3\). Then \(m = 3b + r\) for some integer $b$. Since \(m - n = 3a\), it follows
+\(\bm{(\implies)}\) Suppose $m, n$ are integers such that \(m \equiv n \pmod 3\). {\it [We want to show that \(m \bmod
+3 = n \bmod 3\)].} By definition of congruence, \(3 \mid (m-n)\), and so, by definition of divisibility, \(m - n = 3a\)
+for some integer $a$. Let \(r = m \bmod 3\). Then \(m = 3b + r\) for some integer $b$. Since \(m - n = 3a\), it follows
 that \(m - n = (3b + r) - n = 3a\), or, equivalently, \(n = 3(b - a) + r\). Now \(b - a\) is an integer and \(0 \leq r
-< 3\). So, by definition of mod, \(n \mod 3 = r\), which equals \(m \mod 3\).
+< 3\). So, by definition of mod, \(n \bmod 3 = r\), which equals \(m \bmod 3\).
 
-\(\bm{(\impliedby)}\) Suppose $m, n$ are integers such that \(m \mod 3 = n \mod 3\). {\it [We want to show that \(m
-\equiv n \pmod 3\)].} Let \(r = m \mod 3 = n \mod 3\). Then, by definition of mod, \(m = 3p + r\) and \(n = 3q +
+\(\bm{(\impliedby)}\) Suppose $m, n$ are integers such that \(m \bmod 3 = n \bmod 3\). {\it [We want to show that \(m
+\equiv n \pmod 3\)].} Let \(r = m \bmod 3 = n \bmod 3\). Then, by definition of mod, \(m = 3p + r\) and \(n = 3q +
 r\) for some integers $p$ and $q$. By substitution, \(m - n = (3p + r) - (3q + r) = 3(p - q)\). Since \(p - q\) is an
 integer, it follows that \(3 \mid (m - n)\), and so, by definition of congruence, \(m \equiv n \pmod 3\).
 \end{proof}
 
 (b)
-Prove for all integers $d>0$ and $m,n$, \(m \equiv n \pmod d\) iff \(m \mod d = n \mod d\).
+Prove for all integers $d>0$ and $m,n$, \(m \equiv n \pmod d\) iff \(m \bmod d = n \bmod d\).
 
 \begin{proof}
 Assume $m,n,d$ are integers with $d > 0$.
@@ -37031,14 +37066,14 @@ Assume $m,n,d$ are integers with $d > 0$.
 
 3. By 2 and definition of divisibility, \(m-n = da\) for some integer $a$.
 
-4. Let \(r = m \mod d\). Then by definition of mod, \(m = db + r\) for some integer $b$ and \(0 \leq r < d\).
+4. Let \(r = m \bmod d\). Then by definition of mod, \(m = db + r\) for some integer $b$ and \(0 \leq r < d\).
 
 5. By 3 and 4, \(m-n = (db+r) - n = da\), so \(n = (db+r) - da = d(b-a)+r\) where $b-a$ is an integer and \(0 \leq r < d\).
 
-6. By 5 and definition of mod, \(r = n \mod d\). Therefore \(n \mod d = r = m \mod d\).
+6. By 5 and definition of mod, \(r = n \bmod d\). Therefore \(n \bmod d = r = m \bmod d\).
 
 \(\bm{(\impliedby)}\)
-1. Assume \(m \mod d = n \mod d\). Let \(r = m \mod d = n \mod d\).
+1. Assume \(m \bmod d = n \bmod d\). Let \(r = m \bmod d = n \bmod d\).
 
 2. By 1 and definition of mod, \(m = da+r\) and \(n = db+r\) for some integers $a,b$.
 
@@ -37821,10 +37856,10 @@ also 1 because \(19 = 3 \cdot 6 + 1\). Thus 25 and 19 have the same remainder wh
 \end{proof}
 
 (e)
-Explain why \(25 \mod 3 = 19 \mod 3\).
+Explain why \(25 \bmod 3 = 19 \bmod 3\).
 
 \begin{proof}
-By definition, \(25 \mod 3\) is the remainder obtained when 25 is divided by 3, and \(19 \mod 3\) is the remainder
+By definition, \(25 \bmod 3\) is the remainder obtained when 25 is divided by 3, and \(19 \bmod 3\) is the remainder
 obtained when 19 is divided by 3. In part (d) these two numbers were shown to be equal.
 \end{proof}
 
@@ -37863,10 +37898,10 @@ also 5 because \(33 = 7 \cdot 4 + 5\). Thus 68 and 33 have the same remainder wh
 \end{proof}
 
 (e)
-Explain why \(68 \mod 7 = 33 \mod 7\).
+Explain why \(68 \bmod 7 = 33 \bmod 7\).
 
 \begin{proof}
-By definition, \(68 \mod 7\) is the remainder obtained when 68 is divided by 7, and \(33 \mod 7\) is the remainder
+By definition, \(68 \bmod 7\) is the remainder obtained when 68 is divided by 7, and \(33 \bmod 7\) is the remainder
 obtained when 33 is divided by 7. In part (d) these two numbers were shown to be equal.
 \end{proof}
 
@@ -38126,99 +38161,99 @@ divisible by 11 by the same reasoning.
 \end{proof}
 
 \subsubsection{Exercise 14}
-Use the technique of Example 8.4.4 to find \(14^2 \mod 55, 14^4 \mod 55, 14^8 \mod 55\), and \(14^{16} \mod 55\).
+Use the technique of Example 8.4.4 to find \(14^2 \bmod 55, 14^4 \bmod 55, 14^8 \bmod 55\), and \(14^{16} \bmod 55\).
 
 \begin{proof}
 \begin{tabular}{lclclcl}
-\(14^1 \mod 55\) & = & \(14\) \\
-\(14^2 \mod 55\) & = & \(196 \mod 55\) & = & \(31\) \\
-\(14^4 \mod 55\) & = & \((14^2 \mod 55)^2 \mod 55\) & = & \(31^2 \mod 55\) & = & \(26\) \\
-\(14^8 \mod 55\) & = & \((14^4 \mod 55)^2 \mod 55\) & = & \(26^2 \mod 55\) & = & \(16\) \\
-\(14^{16} \mod 55\) & = & \((14^8 \mod 55)^2 \mod 55\) & = & \(16^2 \mod 55\) & = & \(36\)
+\(14^1 \bmod 55\) & = & \(14\) \\
+\(14^2 \bmod 55\) & = & \(196 \bmod 55\) & = & \(31\) \\
+\(14^4 \bmod 55\) & = & \((14^2 \bmod 55)^2 \bmod 55\) & = & \(31^2 \bmod 55\) & = & \(26\) \\
+\(14^8 \bmod 55\) & = & \((14^4 \bmod 55)^2 \bmod 55\) & = & \(26^2 \bmod 55\) & = & \(16\) \\
+\(14^{16} \bmod 55\) & = & \((14^8 \bmod 55)^2 \bmod 55\) & = & \(16^2 \bmod 55\) & = & \(36\)
 \end{tabular}
 \end{proof}
 
 \subsubsection{Exercise 15}
-Use the result of exercise 14 and the technique of Example 8.4.5 to find \(14^{27} \mod 55\).
+Use the result of exercise 14 and the technique of Example 8.4.5 to find \(14^{27} \bmod 55\).
 
 \begin{proof}
-\(14^{27} \mod 55 = 14^{16+8+2+1} \mod 55\)
+\(14^{27} \bmod 55 = 14^{16+8+2+1} \bmod 55\)
 
 \begin{tabular}{rcl}
-& = & \((14^{16} \mod 55)(14^8 \mod 55)(14^2 \mod 55)(14 \mod 55) \mod 55\) \\
-& = & \(36 \cdot 16 \cdot 31 \cdot 14 \mod 55 = 249985 \mod 55 = 9\)
+& = & \((14^{16} \bmod 55)(14^8 \bmod 55)(14^2 \bmod 55)(14 \bmod 55) \bmod 55\) \\
+& = & \(36 \cdot 16 \cdot 31 \cdot 14 \bmod 55 = 249985 \bmod 55 = 9\)
 \end{tabular}
 \end{proof}
 
 {\bf \cy In $16-18$, use the techniques of example 8.4.4 and example 8.4.5 to find the given numbers.}
 
 \subsubsection{Exercise 16}
-\(675^{307} \mod 713\)
+\(675^{307} \bmod 713\)
 
 \begin{proof}
 Note that \(307 = 256 + 32 + 16 + 2 + 1\).
 
 \begin{tabular}{lclclcl}
-\(675^1 \mod 713\) & = & \(675\) \\
-\(675^2 \mod 713\) & = & \(455625 \mod 713\) & = & \(18\)\\
-\(675^4 \mod 713\) & = & \(18^2 \mod 713\) & = & \(324\) \\
-\(675^8 \mod 713\) & = & \(324^2 \mod 713\) & = & \(104976 \mod 713\) & = & \(165\) \\
-\(675^{16} \mod 713\) & = & \(165^2 \mod 713\) & = & \(27225 \mod 713\) & = & \(131\) \\
-\(675^{32} \mod 713\) & = & \(131^2 \mod 713\) & = & \(17161 \mod 713\) & = & \(49\) \\
-\(675^{64} \mod 713\) & = & \(49^2 \mod 713\) & = & \(2401 \mod 713\) & = & \(262\) \\
-\(675^{128} \mod 713\) & = & \(262^2 \mod 713\) & = & \(68644 \mod 713\) & = & \(196\) \\
-\(675^{256} \mod 713\) & = & \(196^2 \mod 713\) & = & \(38416 \mod 713\) & = & \(627\)
+\(675^1 \bmod 713\) & = & \(675\) \\
+\(675^2 \bmod 713\) & = & \(455625 \bmod 713\) & = & \(18\)\\
+\(675^4 \bmod 713\) & = & \(18^2 \bmod 713\) & = & \(324\) \\
+\(675^8 \bmod 713\) & = & \(324^2 \bmod 713\) & = & \(104976 \bmod 713\) & = & \(165\) \\
+\(675^{16} \bmod 713\) & = & \(165^2 \bmod 713\) & = & \(27225 \bmod 713\) & = & \(131\) \\
+\(675^{32} \bmod 713\) & = & \(131^2 \bmod 713\) & = & \(17161 \bmod 713\) & = & \(49\) \\
+\(675^{64} \bmod 713\) & = & \(49^2 \bmod 713\) & = & \(2401 \bmod 713\) & = & \(262\) \\
+\(675^{128} \bmod 713\) & = & \(262^2 \bmod 713\) & = & \(68644 \bmod 713\) & = & \(196\) \\
+\(675^{256} \bmod 713\) & = & \(196^2 \bmod 713\) & = & \(38416 \bmod 713\) & = & \(627\)
 \end{tabular}
 
-So \(675^{307} \mod 713\) = \(675^{256 + 32 + 16 + 2 + 1} \mod 713\) = \((675^{256} \cdot 675^{32} \cdot 675^{16}
-\cdot 675^{2} \cdot 675^{1}) \mod 713\) = \((627 \cdot 49 \cdot 131 \cdot 18 \cdot 675) \mod 713\) = \(48900262950
-\mod 713 = 3\)
+So \(675^{307} \bmod 713\) = \(675^{256 + 32 + 16 + 2 + 1} \bmod 713\) = \((675^{256} \cdot 675^{32} \cdot 675^{16}
+\cdot 675^{2} \cdot 675^{1}) \bmod 713\) = \((627 \cdot 49 \cdot 131 \cdot 18 \cdot 675) \bmod 713\) = \(48900262950
+\bmod 713 = 3\)
 \end{proof}
 
 \subsubsection{Exercise 17}
-\(89^{307} \mod 713\)
+\(89^{307} \bmod 713\)
 
 \begin{proof}
 Note that \(307 = 256 + 32 + 16 + 2 + 1\).
 
 \begin{tabular}{lclclcl}
-\(89^1 \mod 713\) & = & \(89\) \\
-\(89^2 \mod 713\) & = & \(7921 \mod 713\) & = & \(78\)\\
-\(89^4 \mod 713\) & = & \(78^2 \mod 713\) & = & \(380\) \\
-\(89^8 \mod 713\) & = & \(380^2 \mod 713\) & = & \(144400 \mod 713\) & = & \(374\) \\
-\(89^{16} \mod 713\) & = & \(374^2 \mod 713\) & = & \(139876 \mod 713\) & = & \(128\) \\
-\(89^{32} \mod 713\) & = & \(128^2 \mod 713\) & = & \(16384 \mod 713\) & = & \(698\) \\
-\(89^{64} \mod 713\) & = & \(698^2 \mod 713\) & = & \(487204 \mod 713\) & = & \(225\) \\
-\(89^{128} \mod 713\) & = & \(225^2 \mod 713\) & = & \(50625 \mod 713\) & = & \(2\) \\
-\(89^{256} \mod 713\) & = & \(2^2 \mod 713\) & = & \(4\)
+\(89^1 \bmod 713\) & = & \(89\) \\
+\(89^2 \bmod 713\) & = & \(7921 \bmod 713\) & = & \(78\)\\
+\(89^4 \bmod 713\) & = & \(78^2 \bmod 713\) & = & \(380\) \\
+\(89^8 \bmod 713\) & = & \(380^2 \bmod 713\) & = & \(144400 \bmod 713\) & = & \(374\) \\
+\(89^{16} \bmod 713\) & = & \(374^2 \bmod 713\) & = & \(139876 \bmod 713\) & = & \(128\) \\
+\(89^{32} \bmod 713\) & = & \(128^2 \bmod 713\) & = & \(16384 \bmod 713\) & = & \(698\) \\
+\(89^{64} \bmod 713\) & = & \(698^2 \bmod 713\) & = & \(487204 \bmod 713\) & = & \(225\) \\
+\(89^{128} \bmod 713\) & = & \(225^2 \bmod 713\) & = & \(50625 \bmod 713\) & = & \(2\) \\
+\(89^{256} \bmod 713\) & = & \(2^2 \bmod 713\) & = & \(4\)
 \end{tabular}
 
-So \(89^{307} \mod 713\) = \(89^{256 + 32 + 16 + 2 + 1} \mod 713\) = \((89^{256} \cdot 89^{32} \cdot 89^{16}
-\cdot 89^{2} \cdot 89^{1}) \mod 713\) = \((4 \cdot 698 \cdot 128 \cdot 78 \cdot 89) \mod 713\) = \(2480904192 \mod
+So \(89^{307} \bmod 713\) = \(89^{256 + 32 + 16 + 2 + 1} \bmod 713\) = \((89^{256} \cdot 89^{32} \cdot 89^{16}
+\cdot 89^{2} \cdot 89^{1}) \bmod 713\) = \((4 \cdot 698 \cdot 128 \cdot 78 \cdot 89) \bmod 713\) = \(2480904192 \bmod
 713 = 15\)
 \end{proof}
 
 \subsubsection{Exercise 18}
-\(48^{307} \mod 713\)
+\(48^{307} \bmod 713\)
 
 \begin{proof}
 Note that \(307 = 256 + 32 + 16 + 2 + 1\).
 
 \begin{tabular}{lclclcl}
-\(48^1 \mod 713\) & = & \(48\) \\
-\(48^2 \mod 713\) & = & \(2304 \mod 713\) & = & \(165\)\\
-\(48^4 \mod 713\) & = & \(165^2 \mod 713\) & = & \(131\) \\
-\(48^8 \mod 713\) & = & \(131^2 \mod 713\) & = & \(17161 \mod 713\) & = & \(49\) \\
-\(48^{16} \mod 713\) & = & \(49^2 \mod 713\) & = & \(2401 \mod 713\) & = & \(262\) \\
-\(48^{32} \mod 713\) & = & \(262^2 \mod 713\) & = & \(68644 \mod 713\) & = & \(196\) \\
-\(48^{64} \mod 713\) & = & \(196^2 \mod 713\) & = & \(38416 \mod 713\) & = & \(627\) \\
-\(48^{128} \mod 713\) & = & \(627^2 \mod 713\) & = & \(393129 \mod 713\) & = & \(266\) \\
-\(48^{256} \mod 713\) & = & \(266^2 \mod 713\) & = & \(70756 \mod 713\) & = & \(169\)
+\(48^1 \bmod 713\) & = & \(48\) \\
+\(48^2 \bmod 713\) & = & \(2304 \bmod 713\) & = & \(165\)\\
+\(48^4 \bmod 713\) & = & \(165^2 \bmod 713\) & = & \(131\) \\
+\(48^8 \bmod 713\) & = & \(131^2 \bmod 713\) & = & \(17161 \bmod 713\) & = & \(49\) \\
+\(48^{16} \bmod 713\) & = & \(49^2 \bmod 713\) & = & \(2401 \bmod 713\) & = & \(262\) \\
+\(48^{32} \bmod 713\) & = & \(262^2 \bmod 713\) & = & \(68644 \bmod 713\) & = & \(196\) \\
+\(48^{64} \bmod 713\) & = & \(196^2 \bmod 713\) & = & \(38416 \bmod 713\) & = & \(627\) \\
+\(48^{128} \bmod 713\) & = & \(627^2 \bmod 713\) & = & \(393129 \bmod 713\) & = & \(266\) \\
+\(48^{256} \bmod 713\) & = & \(266^2 \bmod 713\) & = & \(70756 \bmod 713\) & = & \(169\)
 \end{tabular}
 
-So \(48^{307} \mod 713\) = \(48^{256 + 32 + 16 + 2 + 1} \mod 713\) = \((48^{256} \cdot 48^{32} \cdot 48^{16}
-\cdot 48^{2} \cdot 48^{1}) \mod 713\) = \((169 \cdot 196 \cdot 262 \cdot 165 \cdot 48) \mod 713\) = \(68733624960
-\mod 713 = 12\)
+So \(48^{307} \bmod 713\) = \(48^{256 + 32 + 16 + 2 + 1} \bmod 713\) = \((48^{256} \cdot 48^{32} \cdot 48^{16}
+\cdot 48^{2} \cdot 48^{1}) \bmod 713\) = \((169 \cdot 196 \cdot 262 \cdot 165 \cdot 48) \bmod 713\) = \(68733624960
+\bmod 713 = 12\)
 \end{proof}
 
 {\bf \cy In $19-24$, use the RSA cipher from examples 8.4.9 and 8.4.10. In $19-21$, translate the message into its
@@ -38230,8 +38265,8 @@ HELLO
 
 \begin{proof}
 The letters in HELLO translate numerically into 08, 05, 12, 12, and 15. By Example 8.4.9, the H is encrypted as 17. To
-encrypt E, we compute \(5^3 \mod 55 = 15\). To encrypt L, we compute \(12^3 \mod 55 = 23\). And to encrypt O, we
-compute \(15^3 \mod 55 = 20\). Thus the ciphertext is 17 15 23 23 20. (In practice, individual letters of the alphabet
+encrypt E, we compute \(5^3 \bmod 55 = 15\). To encrypt L, we compute \(12^3 \bmod 55 = 23\). And to encrypt O, we
+compute \(15^3 \bmod 55 = 20\). Thus the ciphertext is 17 15 23 23 20. (In practice, individual letters of the alphabet
 are grouped together in blocks during encryption so that deciphering cannot be accomplished through knowledge of
 frequency patterns of letters or words.)
 \end{proof}
@@ -38240,10 +38275,10 @@ frequency patterns of letters or words.)
 WELCOME
 
 \begin{proof}
-The letters in WELCOME translate numerically into 23, 05, 12, 03, 15, 13 and 05. To encrypt W, we compute \(23^3 \mod
-55 = 12\). To encrypt E, we compute \(5^3 \mod 55 = 15\). To encrypt L, we compute \(12^3 \mod 55 = 23\). To encrypt
-C, we compute \(3^3 \mod 55 = 27\). To encrypt O, we compute \(15^3 \mod 55 = 20\). And to encrypt M, we compute
-\(13^3 \mod 55 = 52\). Thus the ciphertext is 12 15 23 27 20 52 15.
+The letters in WELCOME translate numerically into 23, 05, 12, 03, 15, 13 and 05. To encrypt W, we compute \(23^3 \bmod
+55 = 12\). To encrypt E, we compute \(5^3 \bmod 55 = 15\). To encrypt L, we compute \(12^3 \bmod 55 = 23\). To encrypt
+C, we compute \(3^3 \bmod 55 = 27\). To encrypt O, we compute \(15^3 \bmod 55 = 20\). And to encrypt M, we compute
+\(13^3 \bmod 55 = 52\). Thus the ciphertext is 12 15 23 27 20 52 15.
 \end{proof}
 
 \subsubsection{Exercise 21}
@@ -38251,9 +38286,9 @@ EXCELLENT
 
 \begin{proof}
 The letters in EXCELLENT translate numerically into 05, 24,  03, 05, 12, 12, 05, 14 and 20. To encrypt E, we compute
-\(5^3 \mod 55 = 15\). To encrypt X, we compute \(24^3 \mod 55 = 19\). To encrypt C, we compute \(3^3 \mod 55 = 27\).
-To encrypt L, we compute \(12^3 \mod 55 = 23\). To encrypt N, we compute \(14^3 \mod 55 = 49\). To encrypt T, we
-compute \(20^3 \mod 55 = 25\). Thus the ciphertext is 15 19 27 15 23 23 15 49 25.
+\(5^3 \bmod 55 = 15\). To encrypt X, we compute \(24^3 \bmod 55 = 19\). To encrypt C, we compute \(3^3 \bmod 55 = 27\).
+To encrypt L, we compute \(12^3 \bmod 55 = 23\). To encrypt N, we compute \(14^3 \bmod 55 = 49\). To encrypt T, we
+compute \(20^3 \bmod 55 = 25\). Thus the ciphertext is 15 19 27 15 23 23 15 49 25.
 \end{proof}
 
 \subsubsection{Exercise 22}
@@ -38278,9 +38313,9 @@ Then we compute
 
 \begin{center}
 \begin{tabular}{lclcl}
-\(13^{27} \mod 55\) & = & \((31 \cdot 36 \cdot 4 \cdot 13) \mod 55\) & = & 7 \\
-\(20^{27} \mod 55\) & = & \((20 \cdot 25 \cdot 15 \cdot 20) \mod 55\) & = & 15 \\
-\(9^{27} \mod 55\) & = & \((31 \cdot 36 \cdot 26 \cdot 9) \mod 55\) & = & 4
+\(13^{27} \bmod 55\) & = & \((31 \cdot 36 \cdot 4 \cdot 13) \bmod 55\) & = & 7 \\
+\(20^{27} \bmod 55\) & = & \((20 \cdot 25 \cdot 15 \cdot 20) \bmod 55\) & = & 15 \\
+\(9^{27} \bmod 55\) & = & \((31 \cdot 36 \cdot 26 \cdot 9) \bmod 55\) & = & 4
 \end{tabular}
 \end{center}
 
@@ -38308,9 +38343,9 @@ Then we compute
 
 \begin{center}
 \begin{tabular}{lclcl}
-\(8^{27} \mod 55\) & = & \((36 \cdot 16 \cdot 9 \cdot 8) \mod 55\) & = & 2 \\
-\(5^{27} \mod 55\) & = & \((5 \cdot 15 \cdot 25 \cdot 5) \mod 55\) & = & 25 \\
-\(15^{27} \mod 55\) & = & \((15 \cdot 20 \cdot 5 \cdot 15) \mod 55\) & = & 5
+\(8^{27} \bmod 55\) & = & \((36 \cdot 16 \cdot 9 \cdot 8) \bmod 55\) & = & 2 \\
+\(5^{27} \bmod 55\) & = & \((5 \cdot 15 \cdot 25 \cdot 5) \bmod 55\) & = & 25 \\
+\(15^{27} \bmod 55\) & = & \((15 \cdot 20 \cdot 5 \cdot 15) \bmod 55\) & = & 5
 \end{tabular}
 \end{center}
 
@@ -38338,9 +38373,9 @@ Then we compute
 
 \begin{center}
 \begin{tabular}{lclcl}
-\(51^{27} \mod 55\) & = & \((26 \cdot 31 \cdot 16 \cdot 51) \mod 55\) & = & 6 \\
-\(14^{27} \mod 55\) & = & \((36 \cdot 16 \cdot 31 \cdot 14) \mod 55\) & = & 9 \\
-\(49^{27} \mod 55\) & = & \((16 \cdot 26 \cdot 36 \cdot 49) \mod 55\) & = & 14
+\(51^{27} \bmod 55\) & = & \((26 \cdot 31 \cdot 16 \cdot 51) \bmod 55\) & = & 6 \\
+\(14^{27} \bmod 55\) & = & \((36 \cdot 16 \cdot 31 \cdot 14) \bmod 55\) & = & 9 \\
+\(49^{27} \bmod 55\) & = & \((16 \cdot 26 \cdot 36 \cdot 49) \bmod 55\) & = & 14
 \end{tabular}
 \end{center}
 
@@ -38440,7 +38475,7 @@ through steps $7-1$ to express 14 as a linear combination of 4158 and 1568:
 \(a \coloneqq A, b \coloneqq B, s \coloneqq 1, t \coloneqq 0, u \coloneqq 0, v \coloneqq 1\) \\
 {\it [pre-condition: \(a = sA + tB\) and \(b = uA + vB\)]} \\
 {\bf wh}\={\bf ile} (\(b \neq 0\)) {\it [loop invariant: \(a = sA + tB, b = uA + vB, gcd(a,b) = gcd(A,B)\)]} \\
-        \> \(r \coloneqq a \mod b, q \coloneqq a \text{ div } b, a \coloneqq b, b \coloneqq r\) \\
+        \> \(r \coloneqq a \bmod b, q \coloneqq a \text{ div } b, a \coloneqq b, b \coloneqq r\) \\
         \> \(u_{new} \coloneqq s-uq, v_{new} \coloneqq t-vq\) \\
         \> \(s \coloneqq u, t \coloneqq v, u \coloneqq u_{new}, v \coloneqq v_{new}\) \\
 {\bf end while} \\
@@ -38640,52 +38675,52 @@ ciphertext and find the original messages.}
 HELP
 \begin{proof}
 The numeric equivalents of H, E, L, and P are 08, 05, 12, and 16. To encrypt these letters, the following quantities
-must be computed: \(8^{43} \mod 713, 5^{43} \mod 713, 12^{43} \mod 713\), and \(16^{43} \mod 713\). We use the
+must be computed: \(8^{43} \bmod 713, 5^{43} \bmod 713, 12^{43} \bmod 713\), and \(16^{43} \bmod 713\). We use the
 fact that 43 = 32 + 8 + 2 + 1.
 
 \begin{tabular}{lclcll}
-\(8^1\)&=&\(8\)&=&\(\)&\(\mod 713\) \\
-\(8^2\)&=&\(64\)&=&\(\)&\(\mod 713\) \\
-\(8^4\)&=&\(64^2\)&=&\(531\)&\(\mod 713\) \\
-\(8^8\)&=&\(531^2\)&=&\(326\)&\(\mod 713\) \\
-\(8^{16}\)&=&\(326^2\)&=&\(39\)&\(\mod 713\) \\
-\(8^{32}\)&=&\(39^2\)&=&\(95\)&\(\mod 713\)
+\(8^1\)&=&\(8\)&=&\(\)&\(\bmod 713\) \\
+\(8^2\)&=&\(64\)&=&\(\)&\(\bmod 713\) \\
+\(8^4\)&=&\(64^2\)&=&\(531\)&\(\bmod 713\) \\
+\(8^8\)&=&\(531^2\)&=&\(326\)&\(\bmod 713\) \\
+\(8^{16}\)&=&\(326^2\)&=&\(39\)&\(\bmod 713\) \\
+\(8^{32}\)&=&\(39^2\)&=&\(95\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(8^{43} \mod 713 = (95 \cdot 326 \cdot 64 \cdot 8) \mod 713 = 233\).
+Thus the ciphertext is \(8^{43} \bmod 713 = (95 \cdot 326 \cdot 64 \cdot 8) \bmod 713 = 233\).
 
 \begin{tabular}{lclcll}
-\(5^1\)&=&\(5\)&=&\(\)&\(\mod 713\) \\
-\(5^2\)&=&\(25\)&=&\(\)&\(\mod 713\) \\
-\(5^4\)&=&\(625\)&=&\(\)&\(\mod 713\) \\
-\(5^8\)&=&\(625^2\)&=&\(614\)&\(\mod 713\) \\
-\(5^{16}\)&=&\(614^2\)&=&\(532\)&\(\mod 713\) \\
-\(5^{32}\)&=&\(532^2\)&=&\(676\)&\(\mod 713\)
+\(5^1\)&=&\(5\)&=&\(\)&\(\bmod 713\) \\
+\(5^2\)&=&\(25\)&=&\(\)&\(\bmod 713\) \\
+\(5^4\)&=&\(625\)&=&\(\)&\(\bmod 713\) \\
+\(5^8\)&=&\(625^2\)&=&\(614\)&\(\bmod 713\) \\
+\(5^{16}\)&=&\(614^2\)&=&\(532\)&\(\bmod 713\) \\
+\(5^{32}\)&=&\(532^2\)&=&\(676\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(5^{43} \mod 713 = (676 \cdot 614 \cdot 25 \cdot 5) \mod 713 = 129\).
+Thus the ciphertext is \(5^{43} \bmod 713 = (676 \cdot 614 \cdot 25 \cdot 5) \bmod 713 = 129\).
 
 \begin{tabular}{lclcll}
-\(12^1\)&=&\(12\)&=&\(\)&\(\mod 713\) \\
-\(12^2\)&=&\(144\)&=&\(\)&\(\mod 713\) \\
-\(12^4\)&=&\(144^2\)&=&\(59\)&\(\mod 713\) \\
-\(12^8\)&=&\(59^2\)&=&\(629\)&\(\mod 713\) \\
-\(12^{16}\)&=&\(629^2\)&=&\(639\)&\(\mod 713\) \\
-\(12^{32}\)&=&\(639^2\)&=&\(485\)&\(\mod 713\)
+\(12^1\)&=&\(12\)&=&\(\)&\(\bmod 713\) \\
+\(12^2\)&=&\(144\)&=&\(\)&\(\bmod 713\) \\
+\(12^4\)&=&\(144^2\)&=&\(59\)&\(\bmod 713\) \\
+\(12^8\)&=&\(59^2\)&=&\(629\)&\(\bmod 713\) \\
+\(12^{16}\)&=&\(629^2\)&=&\(639\)&\(\bmod 713\) \\
+\(12^{32}\)&=&\(639^2\)&=&\(485\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(12^{43} \mod 713 = (485 \cdot 629 \cdot 144 \cdot 12) \mod 713 = 48\).
+Thus the ciphertext is \(12^{43} \bmod 713 = (485 \cdot 629 \cdot 144 \cdot 12) \bmod 713 = 48\).
 
 \begin{tabular}{lclcll}
-\(16^1\)&=&\(16\)&=&\(\)&\(\mod 713\) \\
-\(16^2\)&=&\(256\)&=&\(\)&\(\mod 713\) \\
-\(16^4\)&=&\(256^2\)&=&\(653\)&\(\mod 713\) \\
-\(16^8\)&=&\(653^2\)&=&\(35\)&\(\mod 713\) \\
-\(16^{16}\)&=&\(35^2\)&=&\(512\)&\(\mod 713\) \\
-\(16^{32}\)&=&\(512^2\)&=&\(473\)&\(\mod 713\)
+\(16^1\)&=&\(16\)&=&\(\)&\(\bmod 713\) \\
+\(16^2\)&=&\(256\)&=&\(\)&\(\bmod 713\) \\
+\(16^4\)&=&\(256^2\)&=&\(653\)&\(\bmod 713\) \\
+\(16^8\)&=&\(653^2\)&=&\(35\)&\(\bmod 713\) \\
+\(16^{16}\)&=&\(35^2\)&=&\(512\)&\(\bmod 713\) \\
+\(16^{32}\)&=&\(512^2\)&=&\(473\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(12^{43} \mod 713 = (473 \cdot 35 \cdot 256 \cdot 16) \mod 713 = 128\).
+Thus the ciphertext is \(12^{43} \bmod 713 = (473 \cdot 35 \cdot 256 \cdot 16) \bmod 713 = 128\).
 
 Therefore, the encrypted message is 233 129 048 128. (Again, note that in practice, individual letters of the
 alphabet are grouped together in blocks during encryption so that deciphering cannot be accomplished through
@@ -38697,44 +38732,44 @@ would be smaller and easier to work with.)
 COME
 \begin{proof}
 The numeric equivalents of C, O, M, and E are 03, 15, 13, and 05. The letter E was encrypted in Exercise 36 as 129.
-To encrypt the other letters, the following quantities must be computed: \(3^{43} \mod 713, 15^{43} \mod 713\), and
-\(13^{43} \mod 713\). We use the fact that 43 = 32 + 8 + 2 + 1.
+To encrypt the other letters, the following quantities must be computed: \(3^{43} \bmod 713, 15^{43} \bmod 713\), and
+\(13^{43} \bmod 713\). We use the fact that 43 = 32 + 8 + 2 + 1.
 
 \begin{tabular}{lclcll}
-\(3^1\)&=&\(3\)&=&\(\)&\(\mod 713\) \\
-\(3^2\)&=&\(9\)&=&\(\)&\(\mod 713\) \\
-\(3^4\)&=&\(9^2\)&=&\(81\)&\(\mod 713\) \\
-\(3^8\)&=&\(81^2\)&=&\(144\)&\(\mod 713\) \\
-\(3^{16}\)&=&\(144^2\)&=&\(59\)&\(\mod 713\) \\
-\(3^{32}\)&=&\(59^2\)&=&\(629\)&\(\mod 713\)
+\(3^1\)&=&\(3\)&=&\(\)&\(\bmod 713\) \\
+\(3^2\)&=&\(9\)&=&\(\)&\(\bmod 713\) \\
+\(3^4\)&=&\(9^2\)&=&\(81\)&\(\bmod 713\) \\
+\(3^8\)&=&\(81^2\)&=&\(144\)&\(\bmod 713\) \\
+\(3^{16}\)&=&\(144^2\)&=&\(59\)&\(\bmod 713\) \\
+\(3^{32}\)&=&\(59^2\)&=&\(629\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(3^{43} \mod 713 = (629 \cdot 144 \cdot 9 \cdot 3) \mod 713 = 675\).
+Thus the ciphertext is \(3^{43} \bmod 713 = (629 \cdot 144 \cdot 9 \cdot 3) \bmod 713 = 675\).
 
 \begin{tabular}{lclcll}
-\(15^1\)&=&\(15\)&=&\(\)&\(\mod 713\) \\
-\(15^2\)&=&\(225\)&=&\(\)&\(\mod 713\) \\
-\(15^4\)&=&\(225^2\)&=&\(2\)&\(\mod 713\) \\
-\(15^8\)&=&\(2^2\)&=&\(4\)&\(\mod 713\) \\
-\(15^{16}\)&=&\(4^2\)&=&\(16\)&\(\mod 713\) \\
-\(15^{32}\)&=&\(16^2\)&=&\(256\)&\(\mod 713\)
+\(15^1\)&=&\(15\)&=&\(\)&\(\bmod 713\) \\
+\(15^2\)&=&\(225\)&=&\(\)&\(\bmod 713\) \\
+\(15^4\)&=&\(225^2\)&=&\(2\)&\(\bmod 713\) \\
+\(15^8\)&=&\(2^2\)&=&\(4\)&\(\bmod 713\) \\
+\(15^{16}\)&=&\(4^2\)&=&\(16\)&\(\bmod 713\) \\
+\(15^{32}\)&=&\(16^2\)&=&\(256\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(15^{43} \mod 713 = (256 \cdot 4 \cdot 225 \cdot 15) \mod 713 = 89\).
+Thus the ciphertext is \(15^{43} \bmod 713 = (256 \cdot 4 \cdot 225 \cdot 15) \bmod 713 = 89\).
 
 \begin{tabular}{lclcll}
-\(13^1\)&=&\(13\)&=&\(\)&\(\mod 713\) \\
-\(13^2\)&=&\(169\)&=&\(\)&\(\mod 713\) \\
-\(13^4\)&=&\(169^2\)&=&\(41\)&\(\mod 713\) \\
+\(13^1\)&=&\(13\)&=&\(\)&\(\bmod 713\) \\
+\(13^2\)&=&\(169\)&=&\(\)&\(\bmod 713\) \\
+\(13^4\)&=&\(169^2\)&=&\(41\)&\(\bmod 713\) \\
 \end{tabular}
 
 \begin{tabular}{lclcll}
-\(13^8\)&=&\(41^2\)&=&\(255\)&\(\mod 713\) \\
-\(13^{16}\)&=&\(255^2\)&=&\(142\)&\(\mod 713\) \\
-\(13^{32}\)&=&\(142^2\)&=&\(200\)&\(\mod 713\)
+\(13^8\)&=&\(41^2\)&=&\(255\)&\(\bmod 713\) \\
+\(13^{16}\)&=&\(255^2\)&=&\(142\)&\(\bmod 713\) \\
+\(13^{32}\)&=&\(142^2\)&=&\(200\)&\(\bmod 713\)
 \end{tabular}
 
-Thus the ciphertext is \(13^{43} \mod 713 = (200 \cdot 255 \cdot 169 \cdot 13) \mod 713 = 476\).
+Thus the ciphertext is \(13^{43} \bmod 713 = (200 \cdot 255 \cdot 169 \cdot 13) \bmod 713 = 476\).
 
 Therefore, the encrypted message is 675 089 476 129.
 \end{proof}
@@ -38774,35 +38809,35 @@ By Exercise 37, 675 decrypts to C and 089 decrypts to O. By Exercise 36, 048 dec
 
 \begin{proof}
 Similarly, 675 = C, 129 = E. We must decrypt 028 and 018. By exercise 38, the decryption key, $d$, is 307. So we must
-compute \(28^{307} \mod 713\) and \(18^{307} \mod 713\). We use the fact 307 = 256 + 32 + 16 + 2 + 1.
+compute \(28^{307} \bmod 713\) and \(18^{307} \bmod 713\). We use the fact 307 = 256 + 32 + 16 + 2 + 1.
 
 \begin{tabular}{lclcll}
-\(28^1\)&=&\(28\)&=&\(\)&\(\mod 713\) \\
-\(28^2\)&=&\(784\)&=&\(71\)&\(\mod 713\) \\
-\(28^4\)&=&\(71^2\)&=&\(50\)&\(\mod 713\) \\
-\(28^8\)&=&\(50^2\)&=&\(361\)&\(\mod 713\) \\
-\(28^{16}\)&=&\(361^2\)&=&\(555\)&\(\mod 713\) \\
-\(28^{32}\)&=&\(555^2\)&=&\(9\)&\(\mod 713\) \\
-\(28^{64}\)&=&\(9^2\)&=&\(81\)&\(\mod 713\) \\
-\(28^{128}\)&=&\(81^2\)&=&\(144\)&\(\mod 713\) \\
-\(28^{256}\)&=&\(144^2\)&=&\(59\)&\(\mod 713\) \\
+\(28^1\)&=&\(28\)&=&\(\)&\(\bmod 713\) \\
+\(28^2\)&=&\(784\)&=&\(71\)&\(\bmod 713\) \\
+\(28^4\)&=&\(71^2\)&=&\(50\)&\(\bmod 713\) \\
+\(28^8\)&=&\(50^2\)&=&\(361\)&\(\bmod 713\) \\
+\(28^{16}\)&=&\(361^2\)&=&\(555\)&\(\bmod 713\) \\
+\(28^{32}\)&=&\(555^2\)&=&\(9\)&\(\bmod 713\) \\
+\(28^{64}\)&=&\(9^2\)&=&\(81\)&\(\bmod 713\) \\
+\(28^{128}\)&=&\(81^2\)&=&\(144\)&\(\bmod 713\) \\
+\(28^{256}\)&=&\(144^2\)&=&\(59\)&\(\bmod 713\) \\
 \end{tabular}
 
-Thus the ciphertext is \(28^{307} \mod 713 = (59 \cdot 9 \cdot 555 \cdot 71 \cdot 28) \mod 713 = 14\), which is N.
+Thus the ciphertext is \(28^{307} \bmod 713 = (59 \cdot 9 \cdot 555 \cdot 71 \cdot 28) \bmod 713 = 14\), which is N.
 
 \begin{tabular}{lclcll}
-\(18^1\)&=&\(18\)&=&\(\)&\(\mod 713\) \\
-\(18^2\)&=&\(324\)&=&\(\)&\(\mod 713\) \\
-\(18^4\)&=&\(324^2\)&=&\(165\)&\(\mod 713\) \\
-\(18^8\)&=&\(165^2\)&=&\(131\)&\(\mod 713\) \\
-\(18^{16}\)&=&\(131^2\)&=&\(49\)&\(\mod 713\) \\
-\(18^{32}\)&=&\(49^2\)&=&\(262\)&\(\mod 713\) \\
-\(18^{64}\)&=&\(262^2\)&=&\(196\)&\(\mod 713\) \\
-\(18^{128}\)&=&\(196^2\)&=&\(627\)&\(\mod 713\) \\
-\(18^{256}\)&=&\(627^2\)&=&\(266\)&\(\mod 713\) \\
+\(18^1\)&=&\(18\)&=&\(\)&\(\bmod 713\) \\
+\(18^2\)&=&\(324\)&=&\(\)&\(\bmod 713\) \\
+\(18^4\)&=&\(324^2\)&=&\(165\)&\(\bmod 713\) \\
+\(18^8\)&=&\(165^2\)&=&\(131\)&\(\bmod 713\) \\
+\(18^{16}\)&=&\(131^2\)&=&\(49\)&\(\bmod 713\) \\
+\(18^{32}\)&=&\(49^2\)&=&\(262\)&\(\bmod 713\) \\
+\(18^{64}\)&=&\(262^2\)&=&\(196\)&\(\bmod 713\) \\
+\(18^{128}\)&=&\(196^2\)&=&\(627\)&\(\bmod 713\) \\
+\(18^{256}\)&=&\(627^2\)&=&\(266\)&\(\bmod 713\) \\
 \end{tabular}
 
-Thus the ciphertext is \(18^{307} \mod 713 = (266 \cdot 262 \cdot 49 \cdot 324 \cdot 18) \mod 713 = 9\), which is I.
+Thus the ciphertext is \(18^{307} \bmod 713 = (266 \cdot 262 \cdot 49 \cdot 324 \cdot 18) \bmod 713 = 9\), which is I.
 
 So the plaintext is NICE.
 \end{proof}
@@ -43442,7 +43477,7 @@ Given any set of seven integers, must there be two that have the same remainder 
 
 \begin{proof}
 Yes. The possible remainders are 0, 1, 2, 3, 4, 5 and there are 6 possibilities. Since \(7 > 6\), by the Pigeonhole
-Principle at least two of the seven integers must have the same remainder. More formally we can think of \(\mod 6\) as
+Principle at least two of the seven integers must have the same remainder. More formally we can think of \(\bmod 6\) as
 a function defined on the set of seven integers: \(M: \{x_1 ,x_2,x_3,x_4 , x_5 , x_6 , x_7\} \to \{0, 1, 2, 3, 4, 5\}\)
 and \(M\) is not one-to-one because the domain has 7 elements while the range only has 6.
 \end{proof}
@@ -55787,7 +55822,7 @@ Exercise 7
 (a)
 \begin{proof}
 The language accepted by this automaton is the set of all strings of 0’s and 1’s with the following property: If \(n\)
-is the number of 1’s in the string, then \(n \mod 4 = 0\) or \(n \mod 4 = 2\).
+is the number of 1’s in the string, then \(n \bmod 4 = 0\) or \(n \bmod 4 = 2\).
 This is equivalent to saying that \(n\) is even.
 \end{proof}
 
@@ -55816,7 +55851,7 @@ Exercise 9
 
 \begin{proof}
 The language accepted by this automaton is set of all strings of 0’s and 1’s, with the property that if \(n\) is the number
-of 1's in the string, then \(n \mod 4 = 1\).
+of 1's in the string, then \(n \bmod 4 = 1\).
 \end{proof}
 
 (b)
