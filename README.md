@@ -2,6 +2,8 @@
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
+Latest update: March 5, 2026
+
 ***You can find the PDF file on the Releases page on the right 👉👉👉👉👉***
 
 ## About
