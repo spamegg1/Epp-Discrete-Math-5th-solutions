@@ -13127,7 +13127,7 @@ Since these exhaust all the possibilities, in all cases $n = 3k$ or $n = 3k+1$ f
 Use the mod notation to rewrite the result of part (a).
 
 \begin{proof}
-The square of any integer $\bmod 3$ is either 0 or 1.
+The square of any integer mod 3 is either 0 or 1.
 
 If $n$ is any integer, then $n^2 \bmod 3 = 0$ or $n^2 \bmod 3 = 1$.
 \end{proof}
@@ -13368,15 +13368,15 @@ For any integer $n$, $n^2 + 5$ is not divisible by 4.
 {\it Hint:} Given any integer $n$, consider the two cases where $n$ is even and where $n$ is odd.
 
 \begin{proof}
-Assume $n$ is any integer. {\it [Want to prove $n^2+5$ is not divisible by 4.]}
+Assume $n$ is any integer. {\it [Want to prove $n^2+5$ is not divisible by \(4\).]}
 
 {\bf Case 1.} $n$ is even. Then $n = 2k$ for some integer $k$.
 
-Then $n^2+5 = (2k)^2+5 = 4k^2+5 = 4(k^2+1)+1$ where $k^2+1$ is an integer. Therefore $n \bmod 4 = 1$ which means $4 \nmid n$ by Exercise 26.
+Then $n^2+5 = (2k)^2+5 = 4k^2+5 = 4(k^2+1)+1$ where $k^2+1$ is an integer. Therefore $(n^2+5) \bmod 4 = 1$ which means $4 \nmid (n^2+5)$ by Exercise 26.
 
 {\bf Case 2.} $n$ is odd. Then $n = 2k+1$ for some integer $k$.
 
-Then $n^2+5 = (2k+1)^2+5 = 4k^2+4k+1+5 = 4(k^2+k+1)+2$ where $k^2+k+1$ is an integer. Therefore $n \bmod 4 = 2$ which means $4 \nmid n$ by Exercise 26.
+Then $n^2+5 = (2k+1)^2+5 = 4k^2+4k+1+5 = 4(k^2+k+1)+2$ where $k^2+k+1$ is an integer. Therefore $(n^2+5) \bmod 4 = 2$ which means $4 \nmid (n^2+5)$ by Exercise 26.
 
 Since these cases exhaust all possibilities, we have proved that $n^2+5$ is not divisible by 4.
 \end{proof}
@@ -13457,7 +13457,7 @@ By an earlier Exercise, the product of any two consecutive integers is even. So 
 
 $n^4 = 16(k^4 + 2k^3+ k^2) + 8(2s) + 1 = 16(k^4 + 2k^3+ k^2 + s) + 1$.
 
-Let $t = k^4 + 2k^3+ k^2 + s$ which is an integer because it's a sum and product of integers. Therefore $n^4 = 16t + 1$ for some integer $t$. Since $0 \leq 1 < 16$, the remainder of dividing $n^4$ by 16 is 1. So by definition of mod, $n^4 \bmod = 1$.
+Let $t = k^4 + 2k^3+ k^2 + s$ which is an integer because it's a sum and product of integers. Therefore $n^4 = 16t + 1$ for some integer $t$. Since $0 \leq 1 < 16$, the remainder of dividing $n^4$ by 16 is 1. So by definition of mod, $n^4 \bmod 16 = 1$.
 \end{proof}
 
 \subsubsection{Exercise 41}
@@ -13578,7 +13578,7 @@ If $m, n$, and $d$ are integers, $d > 0$, and $m \bmod d = n \bmod d$, does it n
 \begin{proof}
 {\it Answer to first question:} No. Counterexample: Let $m = 1, n = 3$, and $d = 2$. Then $m \bmod d = 1$ and $n \bmod d = 1$ but $m \neq n$.
 
-{\it Answer to second question:} Yes. Proof: Suppose $m, n$, and $d$ are integers such that $m \bmod d = n \bmod d$. Let $r = m \bmod d = n mod d$. By definition of mod, $m = dp + r$ and $n = dq + r$ for some integers $p$ and $q$. Then $m - n = (dp + r) - (dq + r) = d(p - q)$. But $p - q$ is an integer (being a difference of integers), and so $m - n$ is divisible by $d$ by definition of divisible.
+{\it Answer to second question:} Yes. Proof: Suppose $m, n$, and $d$ are integers such that $m \bmod d = n \bmod d$. Let $r = m \bmod d = n \mod d$. By definition of mod, $m = dp + r$ and $n = dq + r$ for some integers $p$ and $q$. Then $m - n = (dp + r) - (dq + r) = d(p - q)$. But $p - q$ is an integer (being a difference of integers), and so $m - n$ is divisible by $d$ by definition of divisible.
 \end{proof}
 
 \subsubsection{Exercise 47}
@@ -13800,7 +13800,7 @@ For all real numbers $x$ and $y$, $\floor{x-y} = \floor{x} - \floor{y}$.
 For every real number $x$, $\floor{x - 1} = \floor{x} - 1$.
 
 \begin{proof}
-Suppose $x$ is any real number. Let $m = \floor{x}$. By definition of floor,\\ $m \leq x < m + 1$. Subtracting 1 from
+True. Suppose $x$ is any real number. Let $m = \floor{x}$. By definition of floor,\\ $m \leq x < m + 1$. Subtracting 1 from
 all parts of the inequality gives that
 \[
 m - 1 \leq x - 1 < m,
@@ -13813,7 +13813,7 @@ and so, by definition of floor, $\floor{x - 1} = m - 1$. It follows by substitut
 For every real number $x$, $\floor{x^2} = \floor{x}^2$.
 
 \begin{proof}
-\underline{Counterexample:} Let $x = -2.1$. Then $\floor{x} = -3$ and $x^2 = 4.41$. So
+False. \underline{Counterexample:} Let $x = -2.1$. Then $\floor{x} = -3$ and $x^2 = 4.41$. So
 \[
 \floor{x^2} = \floor{4.41} = 4 \neq 9 = (-3)^2 = \floor{x}^2.
 \]
@@ -13832,7 +13832,7 @@ n/3 & \text{if } n \bmod 3 = 0\\
 \right.
 \]
 \begin{proof}
-Assume $n$ is any integer. Let $r = n \bmod 3$. There are 3 cases.
+True. Assume $n$ is any integer. Let $r = n \bmod 3$. There are 3 cases.
 
 {\bf Case 1:} $r = 0$. By definition of mod, $n = 3q$ for some integer $q$. So $n/3 = q$ is an integer. By Exercise 11, $\floor{q} = q$. Therefore $\floor{n/3} = \floor{q} = q = n / 3$.
 
@@ -13855,7 +13855,7 @@ Putting these cases together, we see that the formula given in the problem for $
 For all real numbers $x$ and $y$, $\ceil{x + y} = \ceil{x} + \ceil{y}$.
 
 \begin{proof}
-\underline{Counterexample:} Let $x = -0.5$ and $y = -0.6$. Then
+False. \underline{Counterexample:} Let $x = -0.5$ and $y = -0.6$. Then
 \[
 \ceil{x+y} = \ceil{-0.5-0.6} = \ceil{-1.1} = -1 \neq 0+0 = \ceil{-0.5} + \ceil{-0.6} = \ceil{x} + \ceil{y}
 \]
@@ -13865,25 +13865,25 @@ For all real numbers $x$ and $y$, $\ceil{x + y} = \ceil{x} + \ceil{y}$.
 For every real number $x$, $\ceil{x - 1} = \ceil{x} - 1$.
 
 \begin{proof}
-Assume $x$ is any real number. Let $n = \ceil{x}$. By definition of ceiling, $n$ is the unique integer such that $n-1 < x \leq n$.
+True. Assume $x$ is any real number. Let $n = \ceil{x}$. By definition of ceiling, $n$ is the unique integer such that $n-1 < x \leq n$.
 
 Subtracting 1 from all sides of the inequality we get $n-2 < x-1 \leq n-1$. So we see that $n-1$ is the unique integer which satisfies these inequalities.
 
-Therefore by definition of ceiling, $\ceil{x-1} = n-1 = \ceil{x}-1$, {\it [as was to be shown.]}
+Therefore by definition of ceiling, $\ceil{x-1} = n-1 = \ceil{x}-1$ {\it [as was to be shown].}
 \end{proof}
 
 \subsubsection{Exercise 20}
 For all real numbers $x$ and $y$, $\ceil{x \cdot y} = \ceil{x} \cdot \ceil{y}$.
 
 \begin{proof}
-{\it Counterexample:} Let $x = -0.5$ and $y = -4$. Then $x\cdot y = 2$. So $\ceil{x\cdot y} = 2$. But $\ceil{x} = 0$ and $\ceil{y} = -4$, so $\ceil{x} \cdot \ceil{y} = 0\cdot(-4) = 0$ which is different than 2.
+False. {\it Counterexample:} Let $x = -0.5$ and $y = -4$. Then $x\cdot y = 2$. So $\ceil{x\cdot y} = 2$. But $\ceil{x} = 0$ and $\ceil{y} = -4$, so $\ceil{x} \cdot \ceil{y} = 0\cdot(-4) = 0$ which is different than 2.
 \end{proof}
 
 \subsubsection{Exercise 21}
 For every odd integer $n$, $\ceil{n/2} = (n + 1) / 2$.
 
 \begin{proof}
-Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Now $n/2 = (2k+1)/2 = k+\frac{1}{2}$.
+True. Assume $n$ is any odd integer. By definition of odd, $n = 2k+1$ for some integer $k$. Now $n/2 = (2k+1)/2 = k+\frac{1}{2}$.
 
 Since $(k+1)-1 = k < k+\frac{1}{2} \leq k+1$, by definition of ceiling we have $\ceil{k+\frac{1}{2}} = k+1$.
 
@@ -13891,7 +13891,7 @@ Also we have $(n+1)/2 = (2k+1+1)/2 = (2k+2)/2 = k+1$.
 
 Putting these facts together we have
 \[
-\ceil{n/2} = \ceil{(2k+1)/2} = \ceil{k+\frac{1}{2}} = k+1 = (n+1)/2,
+\ceil{n/2} = \ceil{(2k+1)/2} = \ceil{k+\frac{1}{2}} = k+1 = (n+1)/2
 \]
 {\it[as was to be shown.]}
 \end{proof}
@@ -13900,7 +13900,7 @@ Putting these facts together we have
 For all real numbers $x$ and $y$, $\ceil{x \cdot y} = \ceil{x} \cdot \floor{y}$.
 
 \begin{proof}
-{\it Counterexample:} Let $x = -0.5, y = 4$. Then $x\cdot y = -2$, $\ceil{x\cdot y} = \ceil{-2} = -2$, $\ceil{x} = \ceil{-0.5} = 0$ and $\floor{y} = \floor{4} = 4$. So $\ceil{x\cdot y} = -2 \neq 0 = 0 \cdot 4 = \ceil{x} \cdot \floor{y}$.
+False. {\it Counterexample:} Let $x = -0.5, y = 4$. Then $x\cdot y = -2$, $\ceil{x\cdot y} = \ceil{-2} = -2$, $\ceil{x} = \ceil{-0.5} = 0$ and $\floor{y} = \floor{4} = 4$. So $\ceil{x\cdot y} = -2 \neq 0 = 0 \cdot 4 = \ceil{x} \cdot \floor{y}$.
 \end{proof}
 
 {\bf \cy Prove each of the statements in $23-33$.}
@@ -14136,9 +14136,9 @@ On the other hand
 \[
 \ceil{\frac{n}{6}} = \ceil{\frac{6q+1}{6}} = \ceil{q+\frac{1}{6}} = q+1
 \]
-by definition of floor (because $q < q+\frac{1}{6} < q+1$ and $q+1$ is an integer).
+by definition of ceiling (because $q < q+\frac{1}{6} < q+1$ and $q+1$ is an integer).
 
-Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
+Combining the two results we get $ \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
 
 {\bf Subcase 2.2:} $r = 3$.
 
@@ -14150,9 +14150,9 @@ On the other hand
 \[
 \ceil{\frac{n}{6}} = \ceil{\frac{6q+3}{6}} = \ceil{q+\frac{1}{2}} = q+1
 \]
-by definition of floor (because $q < q+\frac{1}{2} < q+1$ and $q+1$ is an integer).
+by definition of ceiling (because $q < q+\frac{1}{2} < q+1$ and $q+1$ is an integer).
 
-Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
+Combining the two results we get $ \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
 
 {\bf Subcase 2.3:} $r = 5$.
 
@@ -14164,9 +14164,9 @@ On the other hand
 \[
 \ceil{\frac{n}{6}} = \ceil{\frac{6q+5}{6}} = \ceil{q+\frac{5}{6}} = q+1
 \]
-by definition of floor (because $q < q+\frac{5}{6} < q+1$ and $q+1$ is an integer).
+by definition of ceiling (because $q < q+\frac{5}{6} < q+1$ and $q+1$ is an integer).
 
-Combining the two results we get $ \floor{\frac{\floor{\frac{n}{2}}}{3}} = \floor{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
+Combining the two results we get $ \ceil{\frac{\ceil{\frac{n}{2}}}{3}} = \ceil{\frac{n}{6}}$ (they are both equal to $q+1$ so they are equal to each other), as was to be shown.
 \end{proof}
 
 \subsubsection{Exercise 33}
@@ -14461,9 +14461,13 @@ That is, suppose that there exist odd integers $a$ and $b$ such that $b^2 - a^2 
 By definition of odd, there exist integers \(k, l\) such that \(b = 2k+1\) and \(a = 2l+1\).
 
 Factoring gives that
-\[
-b^2 - a^2 = (b + a)(b - a) = (2k+1 + 2l+1)(2k+1 - (2l+1)) = (2(k+l+1))(2(k-l)) = 4(k+l+1)(k-l).
-\]
+
+\begin{tabular}{lcll}
+    \(b^2 - a^2\) & = & \((b + a)(b - a)\) \\
+    & = & \((2k+1 + 2l+1)(2k+1 - (2l+1))\) \\
+    & = & \((2(k+l+1))(2(k-l))\) \\
+    & = & \(4(k+l+1)(k-l)\) \\
+\end{tabular}
 
 Therefore \(4(k+l+1)(k-l) = 4\) and \((k+l+1)(k-l) = 1\).
 
@@ -14636,7 +14640,16 @@ For every integer $n$, if $n^2$ is odd then $n$ is odd.
 \begin{proof}
 \underline{Proof by contraposition:} Suppose $n$ is any integer such that $n$ is not odd (in other words, even). Show that $n^2$ is not odd (in other words, even).
 
-By definition of even, $n = 2k$ for some integer $k$. Then $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$, and $2k^2$ is an integer (being a product of integers). Therefore by definition of even, $n^2$ is even, {\it [as was to be shown.]}
+By definition of even, $n = 2k$ for some integer $k$. Then $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$, and $2k^2$ is an integer (being a product of integers). Therefore by definition of even, $n^2$ is even {\it [as was to be shown].}
+
+\underline{Proof by contradiction:}
+Suppose there exists an integer $n$ such that $n^2$ is odd but $n$ is not odd.
+{\it [We must show that this supposition leads logically to a contradiction.]}
+Since \(n\) is not odd, it is even; by definition of even, $n = 2k$ for some integer $k$.
+Then $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$, and $2k^2$ is an integer (being a product of integers).
+Therefore by definition of even, $n^2$ is even, which contradicts the fact that \(n^2\) is odd.
+{\it [This shows that the negation is false and therefore that the statement to be proved is true].}
+
 \end{proof}
 
 {\bf \cy Use any method to prove the statements in $26-29$.}
