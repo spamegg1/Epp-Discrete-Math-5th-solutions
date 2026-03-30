@@ -1781,7 +1781,7 @@ The two winning sequences only differ in the first two moves:
 
 (2) $vvvcccB/ \overset{cc}{\to} vvvc/Bcc \overset{c}{\from} vvvccB/c$
 
-After that, they are the same, because there is always only one legal move:
+After that, they are the same:
 
 $
 vvvccB/c \overset{cc}{\to} vvv/cccB \overset{c}{\from} vvvcB/cc
@@ -14864,7 +14864,7 @@ $\sqrt{8,623} \approx 92.8$, and so the possible prime factors to be checked are
 7,917
 
 \begin{proof}
-$\sqrt{7,917}$ has the sum of its digits divisible by 3, therefore it's divisible by 3. Therefore, 7,917 is not prime.
+7,917 has the sum of its digits divisible by 3, therefore it's divisible by 3. Therefore, 7,917 is not prime.
 \end{proof}
 
 \subsubsection{Exercise 35}
@@ -14937,7 +14937,11 @@ decimal digits in the calculator display. In particular, every number in a calcu
 Example 4.3.1(h) illustrates a technique for showing that any repeating decimal number is rational. A calculator display shows the result of a certain calculation as \\ 40.72727272727. Can you be sure that the result of the calculation is a rational number? Explain.
 
 \begin{proof}
-Yes. Since the digits have an infinitely repeating pattern, we can solve it: let $x = 40.7272\ldots$. Then $100x = 4072.7272\ldots$. Subtracting, we get $99x = 4032$ so $x = \frac{4032}{99}$.
+It is possible that the the real result goes haywire in the digits that have been cut off.
+For example 40.7272727272748946811896434...
+
+
+If we assume that the digits have an infinitely repeating pattern, we can solve it: let $x = 40.7272\ldots$. Then $100x = 4072.7272\ldots$. Subtracting, we get $99x = 4032$ so $x = \frac{4032}{99}$.
 \end{proof}
 
 \subsubsection{Exercise 3}
@@ -14952,7 +14956,12 @@ with the same first trillion digits as $\sqrt{2}$. For instance, if you end the 
 A calculator display shows that the result of a certain calculation is 0.2. Can you be sure that the result of the calculation is a rational number?
 
 \begin{proof}
-Yes.
+It might not be true if the calculator rounds the answer.
+For example, some calculators will round a number like 0.2000000000000000001 to 0.2.
+This is often just a correction of a typical floating point error, in which case
+0.2 is the correct answer and it is safe to say that it is rational.
+Some calculators work based on an assumption that "if it's not repeating digits beyond the display,
+then it's rational". So for such a calculator 0.2 would be rational.
 \end{proof}
 
 \subsubsection{Exercise 5}
@@ -15136,7 +15145,17 @@ Therefore our supposition was false, and $\sqrt[3]{2}$ is irrational.
 Use proof by contradiction to show that for any integer $n$, it is impossible for $n$ to equal both $3q_1 + r_1$ and $3q_2 + r_2$, where $q_1, q_2, r_1$, and $r_2$ are integers, $0 \leq r_1 < 3, 0 \leq r_2 < 3$, and $r_1 \neq r_2$.
 
 \begin{proof}
-\underline{By contradiction:} Suppose not. That is, suppose there is an integer $n$ such that $n = 3q_1 + r_1 = 3q_2 + r_2$, where $q_1, q_2, r_1$, and $r_2$ are integers, $0 \leq r1$, 3, $0 \leq r2$, 3, and $r1 \neq r2$. By interchanging the labels for $r_1$ and $r_2$ if necessary, we may assume that $r_2 > r_1$. Then $3(q_1 - q2) = r_2 - r_1 > 0$, and because both $r_1$ and $r_2$ are less than 3, either $r_2 - r1 = 1$ or $r_2 - r_1 = 2$. So either $3(q_1 - q_2) = 1$ or $3(q_1 - q_2) = 2$. The first case implies that $3 \mid 1$, and hence, by Theorem 4.4.1, that $3 \leq 1$, and the second case implies that $3 \mid 2$, and hence, by Theorem 4.4.1, that $3 \leq 2$. These results contradict the fact that 3 is greater than both 1 and 2. Thus in either case we have reached a contradiction, which shows that the supposition is false and the given statement is true.
+\underline{By contradiction:} Suppose not. That is, suppose there is an integer $n$ such
+that $n = 3q_1 + r_1 = 3q_2 + r_2$, where $q_1, q_2, r_1$, and $r_2$ are integers,
+$0 \leq r_1 < 3, 0 \leq r_2 < 3$, and $r_1 \neq r_2$. By interchanging the labels for
+$r_1$ and $r_2$ if necessary, we may assume that $r_2 > r_1$.
+Then $3(q_1 - q2) = r_2 - r_1 > 0$, and because both $r_1$ and $r_2$ are less than 3,
+either $r_2 - r1 = 1$ or $r_2 - r_1 = 2$. So either $3(q_1 - q_2) = 1$ or
+$3(q_1 - q_2) = 2$. The first case implies that $3 \mid 1$, and hence,
+by Theorem 4.4.1, that $3 \leq 1$, and the second case implies that $3 \mid 2$,
+and hence, by Theorem 4.4.1, that $3 \leq 2$. These results contradict the fact that
+3 is greater than both 1 and 2. Thus in either case we have reached a contradiction,
+which shows that the supposition is false and the given statement is true.
 \end{proof}
 
 (b)
@@ -15340,7 +15359,8 @@ Since $p$ divides both $a+3$ and $a$, $p$ also divides their difference $a+3 - a
 \end{proof}
 
 \subsubsection{Exercise 30}
-Let $p_1, p_2, p_3, \ldots$ be a list of all prime numbers in ascending order. Here is a table of the first six:
+Let $p_1, p_2, p_3, \ldots$ be a list of all prime numbers in ascending order.
+Here is a table of the first six:
 
 \begin{center}
 \arrayrulecolor{cyan}
@@ -15355,7 +15375,9 @@ $\cy p_1$ & $\cy p_2$ & $\cy p_3$ & $\cy p_4$ & $\cy p_5$ & $\cy p_6$\\
 \end{center}
 
 (a)
-Let $N_1 = p_1, N_2 = p_1 \cdot p_2, N_3 = p_1 \cdot p_2 \cdot p_3, \ldots, N_6 = p_1 \cdot p_2 \cdot p_3 \cdot p_4 \cdot p_5 \cdot p_6$. Calculate $N_1, N_2, N_3, N_4, N_5$, and $N_6$.
+Let $N_1 = p_1 + 1, N_2 = p_1 \cdot p_2 + 1, N_3 = p_1 \cdot p_2 \cdot p_3 + 1, \ldots,
+N_6 = p_1 \cdot p_2 \cdot p_3 \cdot p_4 \cdot p_5 \cdot p_6 + 1$.
+Calculate $N_1, N_2, N_3, N_4, N_5$, and $N_6$.
 
 {\it Hint:} For example, $N_4 = 2\cdot3\cdot5\cdot7 + 1 = 211$.
 
@@ -15635,7 +15657,7 @@ If there were a graph with four vertices of degree 1, 1, 1, and 4, then its tota
 Graph with four vertices of degrees 1, 2, 3, and 4.
 
 \begin{proof}
-The graph given in Example 4.9.1 satisfies this (parallel edges and self-loops are required to make this happen):
+The graph given in Example 4.9.1 satisfies this:
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.5]{../images/4.9.8.png}
@@ -15653,7 +15675,7 @@ Suppose there were a simple graph with four vertices of degrees 1, 2, 3, and 4. 
 Simple graph with five vertices of degrees 2, 3, 3, 3, and 5.
 
 \begin{proof}
-Similar to Exercise 10, since the graph in question is simple and has 5 vertices, the maximum degree of any vertex is $5 - 1 = 4$, contradicting the fact that a vertex of degree 5 exists. So, such a graph does not exist.
+Similar to Exercise 9, since the graph in question is simple and has 5 vertices, the maximum degree of any vertex is $5 - 1 = 4$, contradicting the fact that a vertex of degree 5 exists. So, such a graph does not exist.
 \end{proof}
 
 \subsubsection{Exercise 11}
@@ -15669,6 +15691,9 @@ Simple graph with five vertices of degrees 1, 1, 1, 2, and 3.
 Simple graph with six edges and all vertices of degree 3.
 
 \begin{proof}
+Since there are 6 edges, the total degree of such a graph has to be \(6 \cdot 2 = 12\).
+Since all vertices have degree 3, there are \(12 / 3 = 4\) vertices.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.5]{../images/4.9.12.png}
