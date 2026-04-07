@@ -16,7 +16,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v6.0.2
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v4.1.0
+        uses: xu-cheng/latex-action@v4
         with:
           working_directory: src
           root_file: Epp.tex
