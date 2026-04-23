@@ -15862,8 +15862,15 @@ In a group of two or more people, must there always be at least two people who a
 {\it Hint:} Use the result of exercise 21, part (c).
 
 \begin{proof}
-Yes. If we represent people with vertices and acquaintances with edges, we obtain a simple graph: no person is counted as being ``acquainted with themselves'' but only with others, so there are no self-loops; and if two people are acquainted, then only one edge is enough to represent this (it is only counted once), so there are no parallel edges.
-By Exercise 21 part (c), it is impossible for all vertices in a simple graph to have different degrees. Therefore there are at least two people who are acquainted with t he same number of people within the group.
+Yes. If we represent people with vertices and acquaintances with edges,
+we obtain a simple graph: no person is counted as being ``acquainted with themselves''
+but only with others, so there are no self-loops; and if two people are acquainted,
+then only one edge is enough to represent this (it is only counted once),
+so there are no parallel edges.
+
+By Exercise 21 part (c), it is impossible for all vertices in a simple graph
+to have different degrees. Therefore there are at least two people who are
+acquainted with the same number of people within the group.
 \end{proof}
 
 \subsubsection{Exercise 23}
@@ -15928,7 +15935,9 @@ Since the total degree is equal to twice the number of edges, $e = 2mn / 2 = mn$
 
 A (general) bipartite graph G is a simple graph whose vertex set can be partitioned into two disjoint nonempty subsets $V_1$ and $V_2$ such that vertices in $V_1$ may be connected to vertices in $V_2$, but no vertices in $V_1$ are connected to other vertices in $V_1$ and no vertices in $V_2$ are connected to other vertices in $V_2$. For example, the bipartite graph $G$ illustrated in (i) can be redrawn as shown in (ii). From the drawing in (ii), you can see that $G$ is bipartite with mutually disjoint vertex sets $V_1 = \{v_1, v_3, v_5\}$ and $V_2 = \{v_2, v_4, v_6\}$.
 
-Find which of the following graphs are bipartite. Redraw the bipartite graphs so that their bipartite nature is evident.
+See the image with the 6 graphs labeled a-f (you might need to check the next page).
+Find which of the following graphs are bipartite. Redraw the bipartite graphs so that
+their bipartite nature is evident.
 
 \begin{figure}[ht!]
 \centering
@@ -15936,9 +15945,11 @@ Find which of the following graphs are bipartite. Redraw the bipartite graphs so
 \end{figure}
 
 (a)
-Graph a. above
 
 \begin{proof}
+We can place \(v_1\) and \(v_3\) on one side, \(v_2\) and \(v_4\) on the other side.
+See the corresponding image (you might have to check the next page).
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.4]{../images/4.9.24.a.png}
@@ -15946,16 +15957,26 @@ Graph a. above
 \end{proof}
 
 (b)
-Graph b. above
 
 \begin{proof}
-Suppose this graph is a bipartite. Then the vertex set can be partitioned into two mutually disjoint subsets such that vertices in each subset are connected by edges only to vertices in the other subset and not to vertices in the same subset. Now $v_1$ is in one subset of the partition, say, $V_1$. Since $v_1$ is connected by edges to $v_2$ and $v_3$ both $v_2$ and $v_3$ must be in the other subset, $V_2$. But $v_2$ and $v_3$ are connected by an edge to each other. This contradicts the fact that no vertices in $V_2$ are connected by edges to other vertices in $V_2$. Hence the supposition is false, and so the graph is not bipartite.
+Suppose this graph is a bipartite.
+Then the vertex set can be partitioned into two mutually disjoint subsets
+such that vertices in each subset are connected by edges only to vertices
+in the other subset and not to vertices in the same subset.
+Now $v_1$ is in one subset of the partition, say, $V_1$.
+Since $v_1$ is connected by edges to $v_2$ and $v_3$ both $v_2$ and $v_3$
+must be in the other subset, $V_2$. But $v_2$ and $v_3$ are connected by an
+edge to each other. This contradicts the fact that no vertices in $V_2$ are
+connected by edges to other vertices in $V_2$.
+Hence the supposition is false, and so the graph is not bipartite.
 \end{proof}
 
 (c)
-Graph c. above
 
 \begin{proof}
+We can place \(v_1, v_3\) and \(v_5\) on one side, \(v_2, v_4\) and \(v_6\)
+on the other side. See the corresponding image.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.4]{../images/4.9.24.c.png}
@@ -15963,16 +15984,25 @@ Graph c. above
 \end{proof}
 
 (d)
-Graph d. above
 
 \begin{proof}
-This graph is not bipartite due to the triangle formed by $v_2, v_4, v_5$. Argue by contradiction and assume it is bipartite, with disjoint vertex sets $V_1, V_2$. Then either $v_2 \in V_1$ or $v_2 \in V_2$. If $v_2 \in V_1$, then since $v_2$ is connected to both $v_4$ and $v_5$, we must have $v_4 \in V_2$ and $v_5 \in V_2$. But $v_4$ and $v_5$ are also connected, contradicting the definition of bipartite. Similarly if $v_2 \in V_2$ then $v_4 \in V_1$ and $v_5 \in V_1$ and we get a similar contradiction. Therefore the graph is not bipartite.
+This graph is not bipartite due to the triangle formed by $v_2, v_4, v_5$.
+Argue by contradiction and assume it is bipartite,
+with disjoint vertex sets $V_1, V_2$.
+Then either $v_2 \in V_1$ or $v_2 \in V_2$. If $v_2 \in V_1$,
+then since $v_2$ is connected to both $v_4$ and $v_5$,
+we must have $v_4 \in V_2$ and $v_5 \in V_2$.
+But $v_4$ and $v_5$ are also connected, contradicting the definition of bipartite.
+Similarly if $v_2 \in V_2$ then $v_4 \in V_1$ and $v_5 \in V_1$ and
+we get a similar contradiction. Therefore the graph is not bipartite.
 \end{proof}
 
 (e)
-Graph e. above
 
 \begin{proof}
+We can place \(v_2\) and \(v_5\) on one side, \(v_1, v_3\) and \(v_4\)
+on the other side. See the corresponding image.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.4]{../images/4.9.24.e.png}
@@ -15980,10 +16010,19 @@ Graph e. above
 \end{proof}
 
 (f)
-Graph f. above
 
 \begin{proof}
-This graph is not bipartite. Argue by contradiction and assume it is bipartite, with disjoint vertex sets $V_1, V_2$. Then either $v_1 \in V_1$ or $v_1 \in V_2$. If $v_1 \in V_1$, then since $v_1$ is connected to both $v_2$ and $v_5$, we must have $v_2 \in V_2$ and $v_5 \in V_2$. So $v_3 \in V_1$ and $v_4 \in V_1$. But $v_3$ is connected to $v_4$, contradicting the definition of bipartite. Similarly if $v_1 \in V_2$ then $v_2 \in V_1$ and $v_5 \in V_1$ and $v_3 \in V_2$ and $v_4 \in V_2$ and we get a similar contradiction. Therefore the graph is not bipartite.
+This graph is not bipartite.
+Argue by contradiction and assume it is bipartite,
+with disjoint vertex sets $V_1, V_2$.
+Then either $v_1 \in V_1$ or $v_1 \in V_2$.
+If $v_1 \in V_1$, then since $v_1$ is connected to both $v_2$ and $v_5$,
+we must have $v_2 \in V_2$ and $v_5 \in V_2$.
+So $v_3 \in V_1$ and $v_4 \in V_1$.
+But $v_3$ is connected to $v_4$, contradicting the definition of bipartite.
+Similarly if $v_1 \in V_2$ then $v_2 \in V_1$ and $v_5 \in V_1$ and
+$v_3 \in V_2$ and $v_4 \in V_2$ and we get a similar contradiction.
+Therefore the graph is not bipartite.
 \end{proof}
 
 \subsubsection{Exercise 25}
@@ -16000,8 +16039,8 @@ Yes. Let $G = K_{r,s}$. Then by the solution to Exercise 23 (d) every vertex has
 \begin{tabbing}
 $i \coloneqq 2$ \\
 {\bf if} \= ($i > 3$ or $i \leq 0$) \\
-         \> {\bf then} $z \Coloneqq 1$ \\
-         \> {\bf else} $z \Coloneqq 0$
+         \> {\bf then} $z \coloneqq 1$ \\
+         \> {\bf else} $z \coloneqq 0$
 \end{tabbing}
 
 \begin{proof}
@@ -16012,8 +16051,8 @@ $z = 0$
 \begin{tabbing}
 $i \coloneqq 3$ \\
 {\bf if} \= ($i \leq 3$ or $i > 6$) \\
-         \> {\bf then} $z \Coloneqq 2$ \\
-         \> {\bf else} $z \Coloneqq 0$
+         \> {\bf then} $z \coloneqq 2$ \\
+         \> {\bf else} $z \coloneqq 0$
 \end{tabbing}
 
 \begin{proof}
@@ -16055,12 +16094,16 @@ $a \coloneqq 2$ \\
 \end{tabbing}
 
 \begin{proof}
-After execution: $a = 67$
+After execution: $a = 67$.
+The \(i, a\) values in the table are the values at the end of each iteration.
+
 \begin{center}
 \arrayrulecolor{cyan}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-$i$ & 0 & 1 & 2 & 3 \\
+$iteration$ & 0 & 1 & 2 & 3 \\
+\hline
+$i$ & 1 & 2 & 3 & 4 \\
 \hline
 $a$ & 2 & 7 & 22 & 67 \\
 \hline
@@ -16080,11 +16123,15 @@ $e \coloneqq 2, f \coloneqq 0$ \\
 
 \begin{proof}
 After execution: $e = 12$
+The \(k, f, e\) values in the table are the values at the end of each iteration.
+
 \begin{center}
 \arrayrulecolor{cyan}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-$k$ & 0 & 1 & 2 & 3 \\
+$iteration$ & 0 & 1 & 2 & 3 \\
+\hline
+$k$ & 1 & 2 & 3 & 4 \\
 \hline
 $f$ & 0 & 2 & 6 & 18 \\
 \hline
@@ -16757,7 +16804,12 @@ $g_9 = \floor{\log_2 9} = 3, g_{10} = \floor{\log_2 10} = 3, g_{11} = \floor{\lo
 
 $g_{13} = \floor{\log_2 13} = 3, g_{14} = \floor{\log_2 14} = 3, g_{15} = \floor{\log_2 15} = 3$.
 
-When $n$ is an integral power of 2, $g_n$ is the exponent of that power. For instance, $8 = 2^3$ and $g_8 = 3$. More generally, if $n = 2k$, where $k$ is an integer, then $g_n = k$. All terms of the sequence from $g_{2^k}$ up to, but not including, $g_{2^{k+1}}$ have the same value, namely $k$. For instance, all terms of the sequence from $g_8$ through $g_{15}$ have the value 3.
+When $n$ is an integral power of 2, $g_n$ is the exponent of that power.
+For instance, $8 = 2^3$ and $g_8 = 3$.
+More generally, if $n = 2^k$, where $k$ is an integer, then $g_n = k$.
+All terms of the sequence from $g_{2^k}$ up to, but not including,
+$g_{2^{k+1}}$ have the same value, namely $k$.
+For instance, all terms of the sequence from $g_8$ through $g_{15}$ have the value 3.
 \end{proof}
 
 \subsubsection{Exercise 9}
@@ -16879,7 +16931,7 @@ $2 \cdot 3 \cdot (-2) \cdot 1 \cdot 0 \cdot (-1) \cdot (-2) = 0$
 $\dps\prod_{k=2}^{2}a_k$
 
 \begin{proof}
-
+\(a_2 = -2\)
 \end{proof}
 
 {\bf\cy Compute the summations and products in $19-28$.}
@@ -17015,7 +17067,7 @@ $\dps \left(\frac{1}{1+1}\right)\left(\frac{2}{2+1}\right)\left(\frac{3}{3+1}\ri
 $\dps \left(\frac{1\cdot2}{3\cdot4}\right)\left(\frac{2\cdot3}{4\cdot5}\right)\left(\frac{3\cdot4}{5\cdot6}\right)\cdots\left(\frac{m\cdot(m+1)}{(m+2)\cdot(m+3)}\right); m = 1$
 
 \begin{proof}
-$\dps \frac{1\cdot2}{3\cdot4} = \frac{3}{8}$
+$\dps \frac{1\cdot 2}{3\cdot 4} = \frac{1}{6}$
 \end{proof}
 
 {\bf\cy Write each of $37-39$ as a single summation.}
@@ -17035,10 +17087,10 @@ $\dps\sum_{k=1}^{m+1}\frac{k}{k+1}$
 \end{proof}
 
 \subsubsection{Exercise 39}
-$\dps\sum_{m=0}^{n}(m+1)2^n + (n+2)2^{n+1}$
+$\dps\sum_{m=0}^{n}(m+1)2^m + (n+2)2^{n+1}$
 
 \begin{proof}
-$\dps\sum_{m=0}^{n+1}(m+1)2^n$
+$\dps\sum_{m=0}^{n+1}(m+1)2^m$
 \end{proof}
 
 {\bf\cy Rewrite $40-42$ by separating off the final term.}
@@ -17080,7 +17132,7 @@ $\dps \sum_{k=1}^{7}(-1)^{k+1}k^2$ or $\dps \sum_{k=0}^{6}(-1)^{k}(k+1)^2$
 $(1^3 - 1) - (2^3 - 1) + (3^3 - 1) - (4^3 - 1) + (5^3 - 1)$
 
 \begin{proof}
-$\dps\sum_{k=1}^{5}(k^3-1)$
+$\dps\sum_{k=1}^{5} (-1)^{k+1}(k^3-1)$
 \end{proof}
 
 \subsubsection{Exercise 45}
