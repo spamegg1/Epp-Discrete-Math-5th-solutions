@@ -17733,7 +17733,7 @@ If $\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac
 $\dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right)\left(1 - \frac{1}{7}\right) = \frac{1}{7}$.
 
 \begin{proof}
-The statement in part (a) is true because if
+The statement in part (b) is true because if
 \[
 \dps \left(1 - \frac{1}{2}\right)\left(1 - \frac{1}{3}\right)\left(1 - \frac{1}{4}\right)\left(1 - \frac{1}{5}\right)\left(1 - \frac{1}{6}\right) = \frac{1}{6}
 \]
@@ -17791,21 +17791,23 @@ $P(1)$ is ``$1^2 = \frac{1(1+1)(2\cdot 1 + 1)}{6}$.'' $P(1)$ is true because the
 Write $P(k)$.
 
 \begin{proof}
-$P(k)$ is ``$\dps k^2 = \frac{k(k+1)(2k + 1)}{6}$.''
+$P(k)$ is ``$\dps 1^2 + 2^2 + \ldots + k^2 = \frac{k(k+1)(2k + 1)}{6}$.''
 \end{proof}
 
 (c)
 Write $P(k + 1)$.
 
 \begin{proof}
-$P(k+1)$ is ``$\dps (k+1)^2 = \frac{(k+1)(k+2)(2k + 3)}{6}$.''
+$P(k+1)$ is ``$\dps 1^2 + 2^2 + \ldots + (k+1)^2 = \frac{(k+1)(k+2)(2k + 3)}{6}$.''
 \end{proof}
 
 (d)
 In a proof by mathematical induction that the formula holds for every integer $n \geq 1$, what must be shown in the inductive step?
 
 \begin{proof}
-In the inductive step, show that if $k$ is any integer for which $k \geq 1$ and $\dps k^2 = \frac{k(k+1)(2k + 1)}{6}$ is true, then $\dps (k+1)^2 = \frac{(k+1)(k+2)(2k + 3)}{6}$ is also true.
+In the inductive step, show that if $k$ is any integer for which $k \geq 1$ and
+$\dps 1^2 + 2^2 + \ldots + k^2 = \frac{k(k+1)(2k + 1)}{6}$ is true, then
+$\dps 1^2 + 2^2 + \ldots + (k+1)^2 = \frac{(k+1)(k+2)(2k + 3)}{6}$ is also true.
 \end{proof}
 
 \subsubsection{Exercise 4}
@@ -18332,7 +18334,7 @@ Now the left-hand side of $P(k + 1)$ is $\dps \prod_{i=0}^{k+1}\left(\frac{1}{2i
 
 \[
 \begin{array}{lll}
-= & \dps \prod_{i=0}^{k}\left(\frac{1}{2i+1} \frac{1}{2i+2}\right) \left(\frac{1}{2(k+1)+1} \frac{1}{2(k+1)+2}\right) & \text{\cy make next-to-last term explicit} \\
+= & \dps \prod_{i=0}^{k}\left(\frac{1}{2i+1} \cdot \frac{1}{2i+2}\right) \left(\frac{1}{2(k+1)+1} \cdot \frac{1}{2(k+1)+2}\right) & \text{\cy make next-to-last term explicit} \\
 = & \dps \frac{1}{(2k+2)!} \cdot \left(\frac{1}{2(k+1)+1} \cdot \frac{1}{2(k+1)+2}\right) & \text{\cy by inductive hypothesis} \\
 = & \dps \frac{1}{(2k+2)!} \cdot \frac{1}{2k+3} \cdot \frac{1}{2k+4} & \text{\cy by algebra} \\
 = & \dps \frac{1}{(2k+2)!\cdot(2k+3)\cdot(2k+4)} & \text{\cy by multiplying fractions} \\
@@ -18503,7 +18505,9 @@ $\dps 3 + 3^2 + 3^3 + \cdots + 3^n = 1 + 3 + 3^2 + 3^3 + \cdots + 3^n - 1 = \fra
 $5^3 + 5^4 + 5^5 + \cdots + 5^k$, where $k$ is any integer with $k \geq 3$.
 
 \begin{proof}
-$5^3 + 5^4 + 5^5 + \cdots + 5^k = 1 + 5 + 5^2 + 5^3 + 5^4 + 5^5 + \cdots + 5^k - (1 + 5 + 5^2) = (5^{k+1} - 1) - 31 = 5^{k+1} - 32$
+$5^3 + 5^4 + 5^5 + \cdots + 5^k =
+1 + 5 + 5^2 + 5^3 + 5^4 + 5^5 + \cdots + 5^k - (1 + 5 + 5^2) =
+\frac{5^{k+1} - 1}{4} - 31$
 \end{proof}
 
 \subsubsection{Exercise 28}
@@ -18811,7 +18815,10 @@ $n^2 + (n+1)^2 + (n+2)^2 + \cdots + (n+p-1)^2$
 = & \dps pn^2 + n(p-1)p + \frac{(p-1)p(2p-1)}{6}
 \end{array}
 \]
-We know that the sum of squares formula gives us an integer, so $\dps \frac{(p-1)p(2p-1)}{6}$ is an integer. Since $p \geq 5$ is a prime, it is not divisible by 6, therefore $\dps\frac{(p-1)(2p-1)}{6}$ is an integer. So
+We know that the sum of squares formula gives us an integer,
+so $\dps \frac{(p-1)p(2p-1)}{6}$ is an integer.
+Since $p \geq 5$ is a prime, it is not divisible by 2 or 3,
+therefore $\dps\frac{(p-1)(2p-1)}{6}$ is an integer. So
 \[
 \begin{array}{lll}
 = & \dps pn^2 + n(p-1)p + p\frac{(p-1)(2p-1)}{6} \\
@@ -18985,7 +18992,7 @@ Write $P(1)$. Is $P(1)$ true?
 
 \begin{proof}
 P(1) is the sentence “Any checkerboard with
-dimensions 2 3 3 can be completely covered with
+dimensions $2 \times 3$ can be completely covered with
 L-shaped trominoes.” The following diagram shows
 that P(1) is true:
 \begin{figure}[ht!]
@@ -20005,18 +20012,40 @@ which equals $180(k-2) + 180 = 180(k+1-2)$ {\it [as was to be shown.]}
 Prove that in an $8 \times 8$ checkerboard with alternating black and white squares, if the squares in the top right and bottom left corners are removed the remaining board cannot be covered with dominoes. ({\it Hint:} Mathematical induction is not needed for this proof.)
 
 \begin{proof}
-Let us consider an $8 \times 8$ checkerboard with alternating black and white squares. Thus, the checkerboard has total 64 squares, with 32 black and 32 white in color. Now, if the squares in the top right and bottom left corners are removed, both the removed ones are either black or white in color. Therefore, out of the remaining 62 squares, 30 squares are of one color and 32 are of other. Now a domino always covers one black and one white square. Thus, the board with 30 of one color and 32 of other cannot be covered with dominoes.
+Let us consider an $8 \times 8$ checkerboard with alternating black and white squares.
+Thus, the checkerboard has total 64 squares, with 32 black and 32 white in color.
+Now, if the squares in the top right and bottom left corners are removed,
+both the removed ones are either black or white in color.
+Therefore, out of the remaining 62 squares, 30 squares are of one color and 32
+are of other. Now a domino always covers one black and one white square.
+Thus, the board with 30 of one color and 32 of other cannot be covered with dominoes.
 \end{proof}
 
 (b)
-Use mathematical induction to prove that for each positive integer $n$, if a $2n \times 2n$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.
+Use mathematical induction to prove that for each positive integer $n$,
+if a $2n \times 2n$ checkerboard with alternating black and white squares
+has one white square and one black square removed anywhere on the board,
+the remaining squares can be covered with dominoes.
 
-{\it Hint:} In the inductive step, imagine dividing a $2(k + 1) \times 2(k + 1)$ checkerboard into two subsections: a center checkerboard of dimensions $2k \times 2k$ and an outer perimeter of single, adjacent squares. Then examine three cases: case 1 is where both removed squares are in the central $2k \times 2k$ checkerboard, case 2 is where one removed square is in the central $2k \times 2k$ checkerboard and the other is on the perimeter, and case 3 is where both removed squares are on the perimeter.
+{\it Hint:} In the inductive step, imagine dividing a $2(k + 1) \times 2(k + 1)$
+checkerboard into two subsections:
+a center checkerboard of dimensions $2k \times 2k$ and
+an outer perimeter of single, adjacent squares.
+Then examine three cases: case 1 is where both removed squares are in the central
+$2k \times 2k$ checkerboard, case 2 is where one removed square is in the central
+$2k \times 2k$ checkerboard and the other is on the perimeter,
+and case 3 is where both removed squares are on the perimeter.
 
 \begin{proof}
-Let the property $P(n)$ be: ``if a $2n \times 2n$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.''
+Let the property $P(n)$ be:
+``if a $2n \times 2n$ checkerboard with alternating black and white squares
+has one white square and one black square removed anywhere on the board,
+the remaining squares can be covered with dominoes.''
 
-{\bf Show that $P(1)$ is true:} $P(1)$ says ``if a $2 \times 2$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.''
+{\bf Show that $P(1)$ is true:}
+$P(1)$ says ``if a $2 \times 2$ checkerboard with alternating black and white squares
+has one white square and one black square removed anywhere on the board,
+the remaining squares can be covered with dominoes.''
 
 A $2 \times 2$ alternating B \& W board looks like this:
 \begin{tabular}{|c|c|}
@@ -20026,13 +20055,26 @@ A $2 \times 2$ alternating B \& W board looks like this:
 \colsq{lightgray} & \colsq{black} \\
 \hline
 \end{tabular}
-This means that, if one white square and one black square are removed, then either a row or a column is removed. So the remaining row or column can be covered with one domino. So $P(1)$ is true.
+This means that, if one white square and one black square are removed,
+then either a row or a column is removed.
+So the remaining row or column can be covered with one domino.
+So $P(1)$ is true.
 
-{\bf Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:} Assume $k \geq 1$ is an integer such that if a $2k \times 2k$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.
+{\bf Show that for every integer $k \geq 1$,
+if $P(k)$ is true then $P(k+1)$ is true:}
+Assume $k \geq 1$ is an integer such that if a $2k \times 2k$ checkerboard with
+alternating black and white squares has one white square and one black square removed
+anywhere on the board, the remaining squares can be covered with dominoes.
 
-{\it [We want to show that if a $2(k+1) \times 2(k+1)$ checkerboard with alternating black and white squares has one white square and one black square removed anywhere on the board, the remaining squares can be covered with dominoes.]}
+{\it [We want to show that if a $2(k+1) \times 2(k+1)$
+checkerboard with alternating black and white squares has one white square
+and one black square removed anywhere on the board,
+the remaining squares can be covered with dominoes.]}
 
-(following the Hint) Split the $2(k+1) \times 2(k+1)$ board into two subsections: a $2k \times 2k$ center, and the remaining perimeter surrounding it. For example, if $k = 3$ then it looks like this (for demonstration purposes, I colored the center yellow and the perimeter blue):
+(following the Hint) Split the $2(k+1) \times 2(k+1)$ board into two subsections:
+a $2k \times 2k$ center, and the remaining perimeter surrounding it.
+For example, if $k = 3$ then it looks like this
+(for demonstration purposes, I colored the center yellow and the perimeter blue):
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -20058,15 +20100,28 @@ This means that, if one white square and one black square are removed, then eith
 
 Now consider the possibilities for the two removed squares.
 
-{\bf Case 1: both removed squares are in the center.} Then by the inductive hypothesis, the $2k \times 2k$ center part with two squares removed (one white, one black) can be completely covered with dominoes.
+{\bf Case 1: both removed squares are in the center.}
+Then by the inductive hypothesis, the $2k \times 2k$ center part with two squares
+removed (one white, one black) can be completely covered with dominoes.
 
-The perimeter can also be covered with dominoes: the top and bottom rows each have length $2(k+1)$ consisting of $k+1$ white squares and $k+1$ black squares, so they can be covered with $k+1$ dominoes each, and the remaining sides each have length $2k$ with $k$ white and $k$ black squares, which can be covered with $k$ dominoes each.
+The perimeter can also be covered with dominoes:
+the top and bottom rows each have length $2(k+1)$
+consisting of $k+1$ white squares and $k+1$ black squares,
+so they can be covered with $k+1$ dominoes each,
+and the remaining sides each have length $2k$ with $k$ white and $k$ black squares,
+which can be covered with $k$ dominoes each.
 
-Therefore the whole $2(k+1) \times 2(k+1)$ board (with one black, one white square removed) can be covered with dominoes, {\it [as was to be shown.]}
+Therefore the whole $2(k+1) \times 2(k+1)$ board (with one black,
+one white square removed) can be covered with dominoes, {\it [as was to be shown.]}
 
-{\bf Case 2: both removed squares are on the perimeter.} The center $2k \times 2k$ part can be covered with dominoes since it has nothing removed. Now since one black and one white square are removed from the perimeter, the two ``paths'' along the perimeter between the two removed squares must each have even lengths, each containing equal numbers of white and black squares.
+{\bf Case 2: both removed squares are on the perimeter.}
+The center $2k \times 2k$ part can be covered with dominoes since it has nothing removed.
+Now since one black and one white square are removed from the perimeter,
+the two ``paths'' along the perimeter between the two removed squares must each
+have even lengths, each containing equal numbers of white and black squares.
 
-For example, in the following picture the removed squares are shown as ``B'' and ``W'' and the others are shown in black and white, except the center which is not shown:
+For example, in the following picture the removed squares are shown as ``B'' and ``W''
+and the others are shown in black and white, except the center which is not shown:
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -20090,38 +20145,56 @@ B &  &  &  &  &  &  & \colsq{lightgray} \\
 \end{tabular}
 \end{center}
 
-So both of those ``paths'' can be covered by dominoes, since they have even lengths, no gaps, and equal numbers of white and black squares. Hence the whole $2(k+1) \times 2(k+1)$ board can be covered, {\it [as was to be shown.]}
+So both of those ``paths'' can be covered by dominoes,
+since they have even lengths, no gaps, and equal numbers of white and black squares.
+Hence the whole $2(k+1) \times 2(k+1)$ board can be covered,
+{\it [as was to be shown.]}
 
-{\bf Case 3: one removed square is in the center, the other on the perimeter.} Consider the two squares removed, say P is removed from the perimeter, and C is removed from the center.
+{\bf Case 3: one removed square is in the center, the other on the perimeter.}
+Consider the two squares removed, say P is removed from the perimeter,
+and C is removed from the center.
 
-If P and C are close enough to each other, so that they are both inside a $2k \times 2k$ square (not the center but some other $2k \times 2k$ square), then by the inductive hypothesis, that $2k \times 2k$ square can be covered with dominoes, and the remaining portion of the $2(k+1) \times 2(k+1)$ square can also be covered with dominoes since it has equal numbers of white and black squares, and no gaps. Here is an example with $k = 3$:
+Place a domino that covers one square next to P and one square not on the perimeter.
+For example, here we mark the domino with D1 and D2:
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[scale=0.5]{../images/5.3.40.b.1.png}
-\end{figure}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\colsq{blue} & \colsq{blue} & P & D1 & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & D2 & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & C & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{yellow} & \colsq{blue}\\
+\hline
+\colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue} & \colsq{blue}\\
+\hline
+\end{tabular}
+\end{center}
 
-So we may assume that P and C do not fall into a $2k \times 2k$ square. In other words, we may assume that C is at the opposite end of the center from P, so that either horizontally or vertically, there are $2k-1$ squares between P and C.
+(If P is next to a corner, there is one such possible domino; otherwise, we'll have 2.
+But we'll always have at least one, since D2 is the same color as P,
+so C can't be at the position of D2.)
 
-Since P and C have different colors, they cannot be on the same diagonal, so P and C always fit inside a $2k \times (2k+1)$ or a $(2k+1) \times 2k$ rectangle. Here are some examples for $k = 1$ to illustrate this. They always fit into either a $2 \times 3$ or a $3 \times 2$ rectangle:
+Now, we have:
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[scale=0.6]{../images/5.3.40.b.2.png}
-\end{figure}
+an inside $2k \times 2k$ checkerboard with one white and one black square removed,
+which can be covered by dominoes by the inductive hypothesis; and
 
-We cannot apply the inductive hypothesis to this $2k \times (2k+1)$ or $(2k+1) \times 2k$ rectangle. So we have to move C closer to P by one diagonal, so that the horizontal or vertical distance is $2k-2$ and hence they fall into a $2k \times 2k$ square. Here is an example for $k = 2$:
+a perimeter with one white and one black square removed,
+which can be covered by dominoes by Case 2.
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[scale=0.5]{../images/5.3.40.b.3.png}
-\end{figure}
+Adding these two, the entire checkerboard can be covered with dominoes.
 
-(Of course, depending on the position of P, we might have to move C in any one of the 4 diagonal directions. The picture above is only one example.)
-
-Now we have to show that, this $2k \times (2k+1)$ or $(2k+1) \times 2k$ rectangle can be covered by dominoes, if and only if, the $2k \times 2k$ square obtained by moving C diagonally closer to P can be covered by dominoes. (This is possible but the proof is annoying and complicated, so I'll skip it here.)
-
-By the inductive hypothesis, any $2k \times 2k$ board with one white and one black square removed can be covered with dominoes. Thus, by the above ``if and only if'' equivalence, the $2k \times (2k+1)$ or $(2k+1) \times 2k$ board can also be covered by dominoes. The remaining portion of the $2(k+1) \times 2(k+1)$ board can also be covered by dominoes, like before. So the whole $2(k+1) \times 2(k+1)$ board can be covered by dominoes, {\it [as was to be shown.]}
+Hence the whole $2(k+1) \times 2(k+1)$ board can be covered by dominoes,
+{\it [as was to be shown.]}
 \end{proof}
 
 \subsubsection{Exercise 41}
@@ -20426,19 +20499,71 @@ Hence, $S(k+1)$ is true.
 \end{proof}
 
 \subsubsection{Exercise 44}
-Let $P(n)$ be the following sentence: Given any graph $G$ with $n$ vertices satisfying the condition that every vertex of $G$ has degree at most $M$, then the vertices of $G$ can be colored with at most $M + 1$ colors in such a way that no two adjacent vertices have the same color. Use mathematical induction to prove this statement is true for every integer $n \geq 1$.
+Let $P(n)$ be the following sentence:
+Given any graph $G$ with $n$ vertices satisfying the condition that every vertex
+of $G$ has degree at most $M$, then the vertices of $G$ can be colored with
+at most $M + 1$ colors in such a way that no two adjacent vertices have the same color.
+Use mathematical induction to prove this statement is true for every integer $n \geq 1$.
 
-{\it Hint:} Given a graph $G$ satisfying the given condition, form a new graph $G'$ by deleting one vertex $v$ of $G$ and all the edges that are incident on $v$. Then apply the inductive hypothesis to $G'$.
+{\it Hint:} Given a graph $G$ satisfying the given condition,
+form a new graph $G'$ by deleting one vertex $v$ of $G$ and
+all the edges that are incident on $v$.
+Then apply the inductive hypothesis to $G'$.
 
 \begin{proof}
-{\bf Show that $P(1)$ is true:} Given any graph $G$ with 1 vertex satisfying the given condition, we can color this vertex with only 1 color (which is $\leq M+1$) so that no two adjacent vertices have the same color (since there are no two adjacent vertices at all). So $P(1)$ is true.
+{\bf Show that $P(1)$ is true:} Given any graph $G$ with 1 vertex satisfying
+the given condition, we can color this vertex with only 1 color (which is $\leq M+1$)
+so that no two adjacent vertices have the same color
+(since there are no two adjacent vertices at all). So $P(1)$ is true.
 
-{\bf Show that for any integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:} Assume $P(k)$ is true, {\it [we want to prove $P(k+1)$ is true].} To prove $P(k+1)$ assume $G$ is any graph with $k+1$ vertices with degree at most $M$. {\it [We want to show that the vertices of $G$ can be colored with at most $M+1$ colors so that no two adjacent vertices have the same color.]}
+{\bf Show that for any integer $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is true:}
+Assume $P(k)$ is true, {\it [we want to prove $P(k+1)$ is true].}
+To prove $P(k+1)$ assume $G$ is any graph with $k+1$ vertices with degree at most $M$.
+{\it [We want to show that the vertices of $G$ can be colored with at most $M+1$
+colors so that no two adjacent vertices have the same color.]}
 
+First, note that parallel edges add redundant degrees to the vertices,
+which makes \(M\) higher, making it easier to color them with \(M + 1\) colors.
+Therefore, WLOG we may assume \(G\) has no parallel edges.
 
-Form a new graph $G'$ by deleting one vertex $v$ of $G$ and all the edges that are incident on $v$. Now $G'$ has $k$ vertices with degree at most $M$. By the inductive hypothesis we can color the vertices of $G'$ with at most $M+1$ colors so that no two adjacent vertices have the same color.
+Also note that \(G\) cannot have self-loops, otherwise it would fail to satisfy
+the condition that it can be colored in such a way that no two adjacent vertices
+have the same color. So WLOG we may assume \(G\) is a simple graph.
 
-{\it ???}
+Form a new graph $G'$ by deleting one vertex $v$ of $G$ and all the edges that
+are incident on $v$. $G'$ has $k$ vertices. Since \(G'\) is simple,
+the highest possible degree in \(G'\) is \(k-1\).
+
+Let \(M'\) be the highest degree of all vertices in \(G'\);
+so \(M' \leq M\), \(M' \leq k - 1\) and thus \(M'+ 1 \leq k\).
+
+By the inductive hypothesis, \(G'\) can be colored with at most \(M'+ 1 \leq k\) colors.
+Since \(G\) is a simple graph with \(k+1\) vertices,
+\(k\) is the highest degree possible, so \(deg(v) \leq k\) in \(G\).
+There are 3 possible cases:
+
+{\bf Case 1:} \(deg(v) = 0\).
+So we can color \(v\) with any one of the \(M'+ 1\) colors that are used to
+color \(G'\) from the inductive hypothesis. No new color is required,
+and we have a coloring of \(G\) with \(M'+ 1 \leq M + 1\) colors.
+
+{\bf Case 2:} \(1 \leq deg(v) < k\).
+So there is at least one vertex \(w\) in \(G'\) that is not connected to \(v\).
+We can use any color that was used to color any edge incident to \(w\) in \(G'\)
+from the inductive hypothesis. No new color is required,
+and we have a coloring of \(G\) with \(M'+ 1 \leq M + 1\) colors.
+
+{\bf Case 3:} \(deg(v) = k\) in \(G\).
+This means that \(v\) is connected to all \(k\) edges in \(G'\).
+Note that by definition of highest degree in \(G\) we have \(M = k\).
+Choose a new color different than the at most \(M' + 1 \leq k = M\)
+colors used to color \(G'\) from the inductive hypothesis.
+Use this color to color \(v\).
+This gives us a coloring of the vertices of \(G\) with at most
+\(M' + 2 \leq k + 1 = M + 1\) colors where no two adjacent vertices have the same color.
+
+In all three cases, it's possible to color \(G\) with at most \(M + 1\) colors,
+as was to be shown.
 \end{proof}
 
 {\bf \cy In order for a proof by mathematical induction to be valid, the basis statement must be true for $n = a$ and the argument of the inductive step must be correct for every integer $k \geq a$. In 45 and 46 find the mistakes in the “proofs” by mathematical induction.}
@@ -21395,7 +21520,7 @@ Assume $k \geq 1$ is an integer and assume that for all integers $i$ with $1 \le
 starting $i$ stones, no matter how you split the piles in various moves, your final score is $i(i-1)/2$.
 
 {\it [We want to show that in a game played with $k+1$ starting stones, no matter how you split the piles in
-various moves, your final score is $(k+1)(k+2)/2$.]}
+various moves, your final score is $k(k+1)/2$.]}
 
 Starting with $k+1$ stones, there are $\dps \floor{\frac{k + 1}{2}}$ different ways to split the stones: 1 and $k$,
 2 and $k-1$, 3 and $k-2, \ldots$, and $k/2$ and $k/2 + 1$ if $k+1$ is odd, $(k+1) / 2$ and $(k+1) / 2$ if $k+1$ is even.
@@ -21406,19 +21531,19 @@ The score of this first move is $i(k+1-i) = ki + i - i^2$.
 Then the rest of the game consists of two sub-games with starting piles of $i$ and $(k+1)-i$. By the inductive
 hypothesis, no matter how you split the stones in these sub-games, the final scores are
 \[
-\frac{i(i+1)}{2} = \frac{i^2 + i}{2}
+\frac{i(i-1)}{2} = \frac{i^2 - i}{2}
 \]
-and $\dps \frac{(k+1-i)(k+1-i+1)}{2}$
+and $\dps \frac{(k+1-i)(k-i)}{2}$
 \[
-= \frac{(k+1-i)(k+2-i)}{2} = \frac{k^2 + 2k - ik + k + 2 - i - ik - 2i + i^2}{2}
+= \frac{k^2 - ik + k - i - ik + i^2}{2}
 \]
-$\dps = \frac{k^2 + (3 - 2i)k + 2 - 3i + i^2}{2}$, respectively.
+$\dps = \frac{k^2 + (1 - 2i)k - i + i^2}{2}$, respectively.
 
 Then the total final score of the $k+1$ stone game is:
 \[
-ki + i - i^2 + \frac{i^2 + i}{2} + \frac{k^2 + (3 - 2i)k + 2 - 3i + i^2}{2} = \frac{k^2 + 3k + 2}{2}
+ki + i - i^2 + \frac{i^2 - i}{2} + \frac{k^2 + (1 - 2i)k - i + i^2}{2} = \frac{k^2 + k}{2}
 \]
-which is the same as the formula $(k+1)(k+2)/2$ that we claimed, {\it [as was to be shown.]}
+which is the same as the formula $k(k+1)/2$ that we claimed, {\it [as was to be shown.]}
 \end{proof}
 
 \subsubsection{Exercise 24}
@@ -21657,7 +21782,7 @@ Multiply everything by 2 and add missing powers of 2:
 \[
 26 = 13 \cdot 2 = 16 + 8 + 2 = 1 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 11010_\base{2}.
 \]
-Let $k = 14$ so $k+1 = 15$ is even. By the inductive hypothesis $k/2 = 7$ has a binary representation:
+Let $k = 14$ so $k+1 = 15$ is odd. By the inductive hypothesis $k/2 = 7$ has a binary representation:
 \[
 7 = 4 + 2 + 1 = 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 111_\base{2}.
 \]
@@ -21757,7 +21882,7 @@ $k + 1 = 3x+2$: Similar, but start by using inductive hypothesis applied to $(k-
 Use mathematical induction to prove the existence part of the quotient-remainder theorem. In other words, use mathematical induction to prove that given any integer $n$ and any positive integer $d$, there exist integers $q$ and $r$ such that $n = dq + r$ and $0 \leq r < d$.
 
 {\it Hint:} In the inductive step, let an integer $k \geq 0$ be given and suppose that there exist integers $q'$ and
-$r'$ such that $k = dq' + r'$ and $0 \leq r' < d'.$ You must show that there exist integers $q$ and $r$ such that
+$r'$ such that $k = dq' + r'$ and $0 \leq r' < d.$ You must show that there exist integers $q$ and $r$ such that
 \[
 k + 1 = dq + r \text{ and } 0 \leq r < d.
 \]
@@ -22038,8 +22163,8 @@ that of Example 5.5.2.]}
 
 {\bf I. Basis Property:} {\it [$I(0)$ is true before the first iteration of the loop.]}
 
-$I(0)$ is “$exp = x_0$ and $i = 0$.” According to the pre-condition, before the first iteration of the loop
-$exp = 1$ and $i = 0$. Since $x_0 = 1$, $I(0)$ is evidently true.
+$I(0)$ is “$exp = x^0$ and $i = 0$.” According to the pre-condition, before the first iteration of the loop
+$exp = 1$ and $i = 0$. Since $x^0 = 1$, $I(0)$ is evidently true.
 
 {\bf II. Inductive Property:} {\it [If $G \wedge I(k)$ is true before a loop iteration (where $k \geq 0$), then
 $I(k + 1)$ is true after the loop iteration.]}
@@ -22065,8 +22190,8 @@ iterations of the loop, $i = m$. Thus $G$ becomes false after $m$ iterations of 
 {\bf IV. Correctness of the Post-Condition:} {\it [If $N$ is the least number of iterations after which $G$ is false
 and $I(N)$ is true, then the value of the algorithm variables will be as specified in the post-condition of the
 loop.]} According to the post-condition, the value of $exp$ after execution of the loop should be $x^m$. But when $G$
-is false, $i = m$. And when $I(N)$ is true, $i = N$ and $exp = x^N$. Since both conditions ($G$ false and $I(N)$
-true) are satisfied, $m = i = N$ and $exp = x^m$, as required.
+is false, $i = m$. And when $I(N)$ is true, $i = N$ and $exp = x^N$. Since both conditions
+are satisfied ($G$ is false and $I(N)$ is true), $m = i = N$ and $exp = x^m$, as required.
 \end{proof}
 
 \subsubsection{Exercise 7}
@@ -22145,7 +22270,11 @@ loop invariant: $I(n)$ is ``$i = n + 1$ and sum = $A[1] + \cdots + A[n+1]$.''
 
 {\bf II. Inductive Property:} Suppose $k$ is a nonnegative integer such that $G \wedge I(k)$ is true before an iteration of the loop. Then as execution reaches the top of the loop, $i \neq m, i = k + 1$, and $sum = A[1] + A[2] + \cdots + A[k+1]$. Since $i \neq m$, the guard is passed and statement 1 is executed. Now before execution of statement 1, $i_{\text{old}} = k + 1$. So after execution of statement 1, $i_{\text{new}} = i_{\text{old}} + 1 = (k + 1) + 1 = k + 2$. Also before statement 2 is executed, $sum_{\text{old}} = A[1] + A[2] + \cdots + A[k+1]$. Execution of statement 2 adds $A[k + 2]$ to this sum, and so after statement 2 is executed, $sum_{\text{new}} = A[1] + A[2] + \cdots + A[k + 1] + A[k + 2]$. Thus after the loop iteration, $I(k + 1)$ is true.
 
-{\bf III. Eventual Falsity of Guard:} The guard $G$ is the condition $i \neq m$. By I and II, it is known that for every integer $n \geq 1$, after $n$ iterations of the loop, $I(n)$ is true. Hence, after $m - 1$ iterations of the loop, $I(m)$ is true, which implies that $i = m$ and $G$ is false.
+{\bf III. Eventual Falsity of Guard:} The guard $G$ is the condition $i \neq m$.
+By I and II, it is known that for every integer $n \geq 1$,
+after $n$ iterations of the loop, $I(n)$ is true.
+Hence, after $m - 1$ iterations of the loop, $I(m-1)$ is true,
+which implies that $i = m$ and $G$ is false.
 
 {\bf IV. Correctness of the Post-Condition:} Suppose that $N$ is the least number of iterations after which $G$ is false and $I(N)$ is true. Then (since $G$ is false) $i = m$ and (since $I(N)$ is true) $i = N + 1$ and $sum = A[1] + A[2] + \cdots + A[N+1]$. Putting these together gives $m = N + 1$, and so $sum = A[1] + A[2] + \cdots + A[m]$, which is the post-condition.
 \end{proof}
