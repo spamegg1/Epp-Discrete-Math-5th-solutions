@@ -4999,24 +4999,160 @@ $Y$ says: Exactly two of us are knights.
 
 $Z$ says: Exactly one of us is a knight.
 
+(A) (Background assumption: everyone is either a knight or a knave.)
+
 Which are knights and which are knaves?
 
 \begin{proof}
-$U$ cannot be a knight: if $U$ is a knight, what $U$ says must be true, so nobody is a knight, which is a contradiction. So $U$ is a knave.
+Let us alphabetically check if each letter can be a knight or not.
+We proceed as follows: "Assume LETTER is a knight..." then check to see
+if we can reach a contradiction, and conclude it must be a knave.
+Once we concluded that a letter is knight or knave, we add it to our
+assumptions in the later arguments.
 
-Assume $V$ is a knight. Then what $V$ says is true: there are at least 3 knights. So, there are at least 2 knights among $W, X, Y, Z$.
+1. {\bf Assume $U$ is a knight.}
 
-Then $Y$ and $Z$ are knaves, because what they say contradict what $V$ says. So $W$ and $X$ both have to be knights, but again we have a contradiction, because $W$ says there are at most 3 knights, but $X$ says there are exactly 5.
+2. By (1) and definition of knight, (U) is true.
 
-Therefore $V$ is a knave. So there can be at most 4 knights (among $W, X, Y, Z$). Then it follows that $X$ is also a knave, because $X$ says there are 5 knights.
+3. By (2) and (U), nobody is a knight, which is a contradiction.
 
-So there are at most 3 knights (among $W, Y, Z$). So what $W$ says is true. Therefore $W$ is a knight.
+4. By (1) and (3), $U$ is not a knight.
 
-$Z$ cannot be a knight: if $Z$ is a knight, then there are at least 2 knights (namely $W$ and $Z$) which contradicts what $Z$ says. Therefore $Z$ is a knave.
+5. By (4) and (A), $U$ is a knave.
 
-$Y$ must be a knight: if $Y$ is a knave, then what $Y$ says is false, so there is exactly 1 knight ($W$), which is what $Z$ says, but we already established that $Z$ is a knave, so that's false.
+{\bf We have a new fact (Uv): $U$ is a knave.}
 
-In conclusion: $W$ and $Y$ are knights, $U,V,X,Z$ are knaves. \end{proof}
+{\bf We are now done with $U$. Moving on to $V$.}
+
+1. {\bf Assume $V$ is a knight.}
+
+2. By definition of knight, (V) is true.
+
+3. By (2) and (V), there are at least 3 knights.
+
+4. By (Uv), $U$ is not a knight, and by (3) $V$ is a knight,
+so there are at least 3 - 1 = 2 knights among $W, X, Y, Z$.
+
+5. Now we can do a process of elimination for $W, X, Y, Z$.
+
+6. (Y) contradicts (V), therefore (Y) is false.
+
+7. By (6) and definition of knight, $Y$ is not a knight.
+
+8. By (7) and (A), $Y$ is a knave.
+
+9. Similar argument shows that $Z$ is a knave.
+
+10. By (8), (9) and (V), $W$ and $X$ both must be knights.
+
+11. By (10) and definition of knight, (W) and (X) are true.
+
+12. (W) and (X) contradict each other, so we have a contradiction.
+
+13. Therefore (1) is false, so $V$ is not a knight.
+
+14. By (13) and (A) $V$ must be a knave.
+
+{\bf We have a new fact (Vv): $V$ is a knave.}
+
+{\bf We are now done with $V$. Moving on to $W$.}
+
+1. Assume $W$ is a knight.
+
+2. By definition of knight, (W) is true.
+
+3. By (W) there are at most 3 knights.
+
+4. By (1) $W$ is a knight, and by (Uv) and (Vv) $U$ and $V$ are not knights.
+
+5. By (4) there are at most 3 - 1 = 2 knights among $X, Y, Z$.
+
+6. (X) contradicts (W), therefore (X) is false.
+
+7. By (6), $X$ is not a knight, and by (A) $X$ must be a knave.
+
+8. Now there are 4 cases corresponding to whether $Y$ and $Z$ are knights.
+
+8.1. Case 1: $Y$ and $Z$ are both knights.
+Then by definition of knight (Y) and (Z) are both true,
+which is a contradiction. This case is impossible.
+
+8.2. Case 2: $Y$ is a knight and $Z$ is a knave.
+By definition of knight and knave, (Y) is true and (Z) is false,
+so there are exactly 2 knights. Therefore $Y$ and $W$ are knights.
+
+8.3. Case 3: $Y$ is a knave and $Z$ is a knight.
+By definition of knight and knave, (Y) is false and (Z) is true,
+so there is exactly 1 knight, but this is a contradiction
+since $W$ and $Z$ are both knights. This case is impossible.
+
+8.4. Case 4: $Y$ and $Z$ are both knaves.
+By definition of knave, (Y) is false and (Z) is false.
+Therefore the number of knights is not 1 or 2.
+But $W$ is the only knight, so there is exactly 1 knight, contradiction.
+This case is impossible.
+
+So, under the assumption (1) that $W$ is a knight,
+the only possibility is that $Y$ and $W$ are knights.
+But we haven't proved the assumption (1) yet. To prove this,
+we still have to eliminate the possibility that $W$ might be a knave.
+
+1. Assume $W$ is a knave.
+
+2. By definition of knave, (W) is false.
+
+3. By (2), it is not the case that at most 3 are knights.
+
+4. By (3), there are at least 4 knights.
+
+5. By (Uv), (Vv) and (1), $U,V,W$ are all knaves.
+So there can be at most 3 knights ($X, Y, Z$).
+
+6. (4) and (5) contradict each other.
+Therefore (1) is false, and $W$ is not a knave.
+
+7. By (A) and (6), $W$ is a knight.
+
+So now the earlier argument's assumption is proved,
+and $Y$ and $W$ are both knights.
+
+{\bf We have two new facts:
+(Wg): $W$ is a knight.
+(Yg): $Y$ is a knight.}
+
+{\bf We are now done with $W$. Moving on to $X$.}
+
+1. Assume $X$ is a knight.
+
+2. By definition of knight, (X) is true.
+
+3. By (2), exactly 5 are knights.
+
+4. By (Uv) and (Vv), $U$ and $V$ are knaves, so there can be at most
+4 knights ($W, X, Y, Z$), which contradicts (3).
+
+5. Therefore (1) is false, and by (A) $X$ is a knave.
+
+{\bf We have a new fact: (Xv) $X$ is a knave.}
+
+{\bf We are done with $X$. Moving on to $Y$.}
+
+Earlier we showed (Yg): $Y$ must be a knight.
+
+{\bf We are done with $Y$. Moving on to $Z$.}
+
+1. Assume $Z$ is a knight.
+
+2. By definition of knight, (Z) is true.
+
+3. By (2) there is exactly 1 knight.
+
+4. By (Wg) and (Yg) there are at least 2 knights, which contradicts (3).
+
+5. Therefore (1) is false, and by (A) $Z$ must be a knave.
+
+In conclusion: $W$ and $Y$ are knights, $U,V,X,Z$ are knaves.
+\end{proof}
 
 \subsubsection{Exercise 39}
 The famous detective Percule Hoirot was called in to solve a baffling murder mystery. He determined the following facts:
