@@ -23155,21 +23155,45 @@ of the same size. Let $t_n$ be the minimum number of moves needed to transfer a 
 Find $t_1$ and $t_2$.
 
 \begin{proof}
-{\it ???} I'm a bit tired of these Hanoi problems.
+$t_1 = 1 + 1 = 2, t_2 = 1 + 1 + 2 * t_1 = 6$
 \end{proof}
 
 (b)
 Find $t_3$.
 
 \begin{proof}
-$t_3 = 14$
+$t_3 = 1 + 1 + 2 * t_2 = 14$
 \end{proof}
 
 (c)
 Find a recurrence relation for $t_1, t_2, t_3, \ldots$.
 
 \begin{proof}
-{\it ???}
+Label the poles A, B, and C, and suppose we have to move from A to C.
+
+Consider the two largest disks.
+
+One possible solution is this:
+
+\begin{tabular}{cc}
+$t_{k - 1}$ & (move to transfer the top $2k - 2$ disks from A to B) \\
++ 1 & (move to transfer the second from bottom disk from A to C) \\
++ 1 & (move to transfer the bottom disk from A to C) \\
++ $t_{k - 1}$ & (move to transfer the top $2k - 2$ disks from B to C).
+\end{tabular}
+
+This is also the most optimal solution, because the top $2k - 2$ disks have to be transferred first before we can move the bottom two, and two identical disks take two moves to transfer. So,
+
+$t_k = 2t_{k - 1} + 2$ for every integer $k \geq 2$.
+
+{\it Another approach:} Since identical disks don't interfere with each other, we can "bundle" them together into pairs, and move those pairs as if they were individual disks. Then, we'll get a regular tower of Hanoi with k disks (say, $r_k$), which takes $2r_{k - 1} + 1$ moves to solve. And because one pair needs 2 moves to move once, we can double that result, and we get:
+
+$t_k = 2r_k = 2*(2r_{k - 1} + 1) = 4r_{k - 1} + 2$
+
+Which, since $4r_{k - 1} = 2t_{k - 1}$, equals
+
+$t_k = 2t_{k - 1} + 2$ for every integer $k \geq 2$.
+
 \end{proof}
 
 \subsubsection{Exercise 22}
